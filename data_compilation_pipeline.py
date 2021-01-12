@@ -22,8 +22,8 @@
 
 import os
 import json
-from docx import Document
-from pptx import Presentation
+from docx import Document # pip install python-docx
+from pptx import Presentation # pip install python-pptx
 
 # Raw data location
 loc_transcript = "data/Non-SRT Transcript/"
