@@ -1,0 +1,28 @@
+1
+00:00:00,399 --> 00:00:04,310
+We’ll now pick up from the MIPS mnemonic
+notation and start discussing some aspects
+
+2
+00:00:04,310 --> 00:00:06,050
+of CPU execution.
+
+3
+00:00:06,050 --> 00:00:12,589
+We will use a table to show how the CPU updates
+registers and memory when executing each instruction.
+
+4
+00:00:12,589 --> 00:00:16,960
+We will then discuss the three instructions
+we have covered so far and detail their fields
+
+5
+00:00:16,960 --> 00:00:18,420
+and how they work.
+
+6
+00:00:18,420 --> 00:00:23,050
+Finally, we will review the 32 MIPS general
+purpose registers and what their roles are.
+

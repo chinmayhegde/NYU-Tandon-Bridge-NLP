@@ -1,0 +1,65 @@
+1
+00:00:00,599 --> 00:00:05,830
+So if we do this, we’re going to consider
+that we would either use a linked list again
+
+2
+00:00:05,830 --> 00:00:09,600
+or an array and we'll talk about the performance
+differences between those in just a minute.
+
+3
+00:00:09,600 --> 00:00:15,130
+But what we'll do is we'll add to one end
+of the data structure and we’ll remove from
+
+4
+00:00:15,130 --> 00:00:16,610
+the other end of the data structure.
+
+5
+00:00:16,610 --> 00:00:21,810
+So, let's say enqueue is going to add to the
+end of the list or of the array, and dequeue
+
+6
+00:00:21,810 --> 00:00:23,619
+is going to remove from the front of the array.
+
+7
+00:00:23,619 --> 00:00:28,060
+Of course, we can do that backwards doesn't
+matter which way we choose, it's a personal
+
+8
+00:00:28,060 --> 00:00:29,140
+preference thing.
+
+9
+00:00:29,140 --> 00:00:32,392
+But for the purposes of demonstration we're
+going to say that enqueue adds the end and
+
+10
+00:00:32,392 --> 00:00:34,629
+dequeue removes from the front.
+
+11
+00:00:34,629 --> 00:00:38,120
+The supplemental functions, of course, we
+need to write those and we need to provide
+
+12
+00:00:38,120 --> 00:00:39,600
+the big three.
+
+13
+00:00:39,600 --> 00:00:44,999
+And again we'll use whatever STL structures
+are available either the vector of the list.
+
+14
+00:00:44,999 --> 00:00:47,140
+So we don't have to write all these functions
+ourselves.
+

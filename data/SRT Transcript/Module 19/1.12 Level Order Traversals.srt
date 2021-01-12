@@ -1,0 +1,95 @@
+1
+00:00:00,530 --> 00:00:04,970
+The level order traversal gets even more complex
+and I'm going to tie this into the previous
+
+2
+00:00:04,970 --> 00:00:08,360
+module that we did which was talking about
+stacks and queue's.
+
+3
+00:00:08,360 --> 00:00:16,139
+And here we're using a queue to store the
+binary search tree pointers, the node pointers.
+
+4
+00:00:16,139 --> 00:00:20,630
+So what we're doing is we start off with the
+level order traversal by pushing the root
+
+5
+00:00:20,630 --> 00:00:26,900
+node pointer so we push the root node pointer
+on to the tree, onto the queue excuse me,
+
+6
+00:00:26,900 --> 00:00:31,570
+and then as long as the queue is not empty
+what we do is look at the front node look
+
+7
+00:00:31,570 --> 00:00:33,670
+at the top of the of the queue.
+
+8
+00:00:33,670 --> 00:00:39,219
+And then pop that off process that node and
+then push the left and push the right as long
+
+9
+00:00:39,219 --> 00:00:40,760
+as there are not know.
+
+10
+00:00:40,760 --> 00:00:46,920
+What that does is process the root node first
+of course but then a process is the left child.
+
+11
+00:00:46,920 --> 00:00:52,890
+And if the left child of the root has any
+children those get pushed onto the queue after
+
+12
+00:00:52,890 --> 00:00:54,750
+the right child of the root.
+
+13
+00:00:54,750 --> 00:01:00,729
+So what we're doing is processing the tree
+from the top down and outwards.
+
+14
+00:01:00,729 --> 00:01:05,110
+Which is known as a breadth first search,
+we're going to breadth of the tree first before
+
+15
+00:01:05,110 --> 00:01:06,340
+we go to the next level.
+
+16
+00:01:06,340 --> 00:01:11,960
+So, you can see that this level order traversal
+tends to operate on the higher nodes the nodes
+
+17
+00:01:11,960 --> 00:01:15,479
+with the less depth first.
+
+18
+00:01:15,479 --> 00:01:19,490
+And it's just another way of going through
+the same tree and it might help us if we're
+
+19
+00:01:19,490 --> 00:01:24,070
+searching a very, very large tree or for doing
+some operation on a very, very large tree;
+
+20
+00:01:24,070 --> 00:01:28,400
+it might help us get the nodes that we care
+about most done first.
+

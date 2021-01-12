@@ -1,0 +1,67 @@
+1
+00:00:00,880 --> 00:00:03,650
+Here I'd like to demonstrate that we can actually
+do this two different ways.
+
+2
+00:00:03,650 --> 00:00:10,790
+In the previous slide, you saw the method
+that we used was creating a value for the
+
+3
+00:00:10,790 --> 00:00:14,650
+day, month, and year, and what I'd like to
+show you here is that we can use what's called
+
+4
+00:00:14,650 --> 00:00:16,590
+the member initialization list.
+
+5
+00:00:16,590 --> 00:00:22,489
+So the constructor, if we put a colon at the
+end of it and then we have a list of the data
+
+6
+00:00:22,489 --> 00:00:26,640
+members, and we don't have to have all of
+them we can have some inside the member initialization
+
+7
+00:00:26,640 --> 00:00:29,980
+list and some initial-ised inside the code.
+
+8
+00:00:29,980 --> 00:00:37,060
+This allows us to construct the member variables
+using whatever values we'd like.
+
+9
+00:00:37,060 --> 00:00:42,710
+But I'd also like you to take a look at the
+other method, which is creating the data inside
+
+10
+00:00:42,710 --> 00:00:47,060
+the code for the class, without the use of
+a member initialization list.
+
+11
+00:00:47,060 --> 00:00:49,500
+At this point it's really up to you which
+you like to do.
+
+12
+00:00:49,500 --> 00:00:51,440
+I just want you to see both.
+
+13
+00:00:51,440 --> 00:00:57,520
+Later on there will be a situation where we
+can only use the member initialization list,
+
+14
+00:00:57,520 --> 00:00:59,579
+but for now it's entirely up to you which
+you'd like to use.
+

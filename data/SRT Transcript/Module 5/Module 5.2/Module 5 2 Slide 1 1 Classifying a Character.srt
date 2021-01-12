@@ -1,0 +1,29 @@
+0:00:00.580,0:00:07.340
+Let's use all of these statements in order
+to implement the following problem; let's
+
+0:00:07.340,0:00:12.480
+write a program that reads from the user a
+character and classifies it to one of the
+
+0:00:12.480,0:00:18.340
+following: either lower case letter, or an
+uppercase letter, a digit, or a character
+
+0:00:18.340,0:00:23.950
+that is not alphanumeric So, in the execution
+of the program could behave something like
+
+0:00:23.950,0:00:28.550
+that first the user's prompted to enter a
+character, the user then says, I don't know
+
+0:00:28.550,0:00:34.740
+says upper-case D. and then the program would
+respond by saying uppercase D is an uppercase
+
+0:00:34.740,0:00:36.610
+letter.
+
+0:00:36.610,0:00:37.950
+Let's try to implement.

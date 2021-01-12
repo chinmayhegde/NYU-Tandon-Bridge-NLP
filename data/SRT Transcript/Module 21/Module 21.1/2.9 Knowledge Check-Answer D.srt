@@ -1,0 +1,14 @@
+1
+00:00:00,570 --> 00:00:06,300
+Remember, the value of the Zero flag is raised
+to one when the result of the last ALU operation
+
+2
+00:00:06,300 --> 00:00:07,470
+is one.
+
+3
+00:00:07,470 --> 00:00:13,490
+The last ALU operation performed was for the
+comparison of R5 and R0 for the BEQZ instruction.
+

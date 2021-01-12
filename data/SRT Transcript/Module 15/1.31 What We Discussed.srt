@@ -1,0 +1,72 @@
+1
+00:00:00,539 --> 00:00:05,640
+We went over a lot in this module; and I know
+it's like drinking from a fire hose right
+
+2
+00:00:05,640 --> 00:00:06,640
+now.
+
+3
+00:00:06,640 --> 00:00:09,940
+But we did talk about the definition of the
+object in class; we talked about the whole
+
+4
+00:00:09,940 --> 00:00:12,030
+concept of encapsulation.
+
+5
+00:00:12,030 --> 00:00:16,630
+We talked about creation of a class and the
+enforcement of protections on the class.
+
+6
+00:00:16,630 --> 00:00:20,040
+We talked about accessors and mutators, and
+the const modifier.
+
+7
+00:00:20,040 --> 00:00:24,540
+We talked about constructors and how to guarantee
+that they were constructed properly.
+
+8
+00:00:24,540 --> 00:00:29,300
+We talked about using operators on classes
+and we talked about classes that contain dynamic
+
+9
+00:00:29,300 --> 00:00:32,200
+memory, and then we went into inheritance
+and polymorphism.
+
+10
+00:00:32,200 --> 00:00:38,060
+There's a lot having to do with object orientation
+and the amount that you have to capture for
+
+11
+00:00:38,060 --> 00:00:44,210
+this module is really significant, but once
+you kind of get your head around the whole
+
+12
+00:00:44,210 --> 00:00:50,380
+idea that we're working with data and the
+functions to work on that data as a single
+
+13
+00:00:50,380 --> 00:00:53,510
+entity, it really starts to become a little
+bit obvious.
+
+14
+00:00:53,510 --> 00:00:58,620
+So I hope you are able to follow along with
+it and if not e-mail us with any questions.
+
+15
+00:00:58,620 --> 00:00:59,110
+Thanks.
+

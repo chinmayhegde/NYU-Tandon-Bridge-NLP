@@ -1,0 +1,5 @@
+1
+00:00:00,669 --> 00:00:05,600
+Remember the first part of the formula of
+func2 is to do PC+4.
+

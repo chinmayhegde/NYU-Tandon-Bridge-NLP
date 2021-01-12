@@ -1,0 +1,18 @@
+1
+00:00:00,480 --> 00:00:03,650
+Pay close attention to the semantics of the
+instruction.
+
+2
+00:00:03,650 --> 00:00:09,919
+The register at the Rt position is the destination
+and the register at the Rs position is the
+
+3
+00:00:09,919 --> 00:00:10,919
+source.
+
+4
+00:00:10,919 --> 00:00:13,389
+For our case, the source is R8.
+

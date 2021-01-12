@@ -1,0 +1,51 @@
+1
+00:00:00,819 --> 00:00:07,700
+Ok so let’s try to use all the syntax we
+talked about integers to implement a simple
+
+2
+00:00:07,700 --> 00:00:09,349
+problem.
+
+3
+00:00:09,349 --> 00:00:11,610
+We name it weeks and days problem.
+
+4
+00:00:11,610 --> 00:00:16,980
+So let’s write a program that reads from
+the user number of days they traveled.
+
+5
+00:00:16,980 --> 00:00:22,220
+And then the program would print what’s
+the travelling time in the format of how many
+
+6
+00:00:22,220 --> 00:00:28,279
+full weeks they traveled and how many additional
+days are there.
+
+7
+00:00:28,279 --> 00:00:33,180
+For example if we executed this program the
+program would ask the user please enter the
+
+8
+00:00:33,180 --> 00:00:36,140
+number of days you traveled.
+
+9
+00:00:36,140 --> 00:00:43,140
+The user would say for example 19 and then
+the program would respond 19 days or two weeks
+
+10
+00:00:43,140 --> 00:00:44,270
+and five days.
+
+11
+00:00:44,270 --> 00:00:49,989
+Because 19 days are two full weeks and extra
+five days.
+

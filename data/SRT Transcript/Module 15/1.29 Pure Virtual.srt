@@ -1,0 +1,207 @@
+1
+00:00:00,669 --> 00:00:05,170
+There are some situations as you can see where
+we might not know what the base class should
+
+2
+00:00:05,170 --> 00:00:08,590
+do, but we know that the function should exist.
+
+3
+00:00:08,590 --> 00:00:10,900
+What kind of noise does a pet make?
+
+4
+00:00:10,900 --> 00:00:15,960
+It's a question we really can't answer; until
+we know what type of pet this is we can ask
+
+5
+00:00:15,960 --> 00:00:19,110
+the pet to speak although all pets can speak.
+
+6
+00:00:19,110 --> 00:00:22,370
+Alright fish make some sort of “blub blub”
+noise; I don't know.
+
+7
+00:00:22,370 --> 00:00:28,500
+But the point is that the pet class should
+have a speak member function we don't know
+
+8
+00:00:28,500 --> 00:00:31,090
+how to make a pet speak.
+
+9
+00:00:31,090 --> 00:00:35,269
+All the pets that we're going to create cats
+and dogs and fish and turtles, and I don't
+
+10
+00:00:35,269 --> 00:00:38,960
+know what else, are going to have a function
+called speak.
+
+11
+00:00:38,960 --> 00:00:45,609
+And we want to be able to use the base class
+pointer to access that speak function.
+
+12
+00:00:45,609 --> 00:00:49,749
+So if the base class should contain a function
+but it doesn't know what the function should
+
+13
+00:00:49,749 --> 00:00:54,709
+actually do, the function can be marked as
+pure virtual with the equals zero.
+
+14
+00:00:54,709 --> 00:00:56,980
+So here's the code that we're going to look
+at.
+
+15
+00:00:56,980 --> 00:01:01,420
+The idea here is that we have the best pet
+class and we have the speak function.
+
+16
+00:01:01,420 --> 00:01:06,380
+And speak function is going to be virtual,
+of course, but we don't know what the speak
+
+17
+00:01:06,380 --> 00:01:07,820
+function should do.
+
+18
+00:01:07,820 --> 00:01:11,640
+So we'll make it pure virtual; we'll set it
+equal zero.
+
+19
+00:01:11,640 --> 00:01:17,659
+And in doing so, it allows us to use the pet
+class pointer to call the speak function,
+
+20
+00:01:17,659 --> 00:01:23,880
+in fact inside the pet class itself we could
+even call the speak function.
+
+21
+00:01:23,880 --> 00:01:27,810
+But we don't know how to actually perform
+the code for the speak function until it's
+
+22
+00:01:27,810 --> 00:01:30,840
+defined later inside the cat class.
+
+23
+00:01:30,840 --> 00:01:39,009
+So if you see the cat will override the speak
+function and print out meow in this case,
+
+24
+00:01:39,009 --> 00:01:46,340
+and what we've got is the ability to have
+a pet pointer pointing to a cat object and
+
+25
+00:01:46,340 --> 00:01:48,799
+call the speak function of that cat object.
+
+26
+00:01:48,799 --> 00:01:56,090
+Now there are some restrictions though: because
+the speak function is pure virtual it causes
+
+27
+00:01:56,090 --> 00:02:00,859
+the pet class to become what we call an abstract
+class.
+
+28
+00:02:00,859 --> 00:02:04,619
+Abstract classes have a lot of restrictions
+on them whereas we can create pointers to
+
+29
+00:02:04,619 --> 00:02:08,369
+an abstract class; we can never instantiate
+an abstract class.
+
+30
+00:02:08,369 --> 00:02:13,730
+We can't create an object of type pet, because
+if we were allowed to create an object of
+
+31
+00:02:13,730 --> 00:02:18,200
+type pet then we could possibly call the speak
+function and then we don't know how to do
+
+32
+00:02:18,200 --> 00:02:19,200
+that.
+
+33
+00:02:19,200 --> 00:02:25,879
+So C++ says if you have even one pure virtual
+function you can't create an object of this
+
+34
+00:02:25,879 --> 00:02:26,879
+class.
+
+35
+00:02:26,879 --> 00:02:28,340
+So what can we do?
+
+36
+00:02:28,340 --> 00:02:31,120
+We can create pointers and we can derive from
+this class.
+
+37
+00:02:31,120 --> 00:02:36,550
+So that pet becomes useful as a base class
+but we can never create an object of it; we
+
+38
+00:02:36,550 --> 00:02:42,791
+can create pointers to lots of pets and they
+can point to objects which override the speaker
+
+39
+00:02:42,791 --> 00:02:44,870
+function and provide the code.
+
+40
+00:02:44,870 --> 00:02:49,150
+But if any of the derived classes contain
+pure virtual functions, because the either
+
+41
+00:02:49,150 --> 00:02:54,189
+have it overridden or they've created new
+pure virtual functions, then they too are
+
+42
+00:02:54,189 --> 00:02:55,800
+abstract classes.
+
+43
+00:02:55,800 --> 00:03:02,170
+In this case the cat class is perfectly fine;
+we can create an object of the cat class and
+
+44
+00:03:02,170 --> 00:03:03,610
+have a pet pointer point to it.
+

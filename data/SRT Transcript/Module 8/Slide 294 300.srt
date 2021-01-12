@@ -1,0 +1,51 @@
+0:00:00.510,0:00:05.180
+One last thing we have to do here is just
+implement a linear function that is very easy.
+
+0:00:05.180,0:00:10.120
+So in case we have an equation A x plus B
+equals zero.
+
+0:00:10.120,0:00:17.800
+So basically if A is not zero we can safely
+say that the solution would be again move
+
+0:00:17.800,0:00:25.949
+B to the other hand of the equation and divide
+by A so X would be negative B over A. And
+
+0:00:25.949,0:00:30.850
+then we’ll set out x to be x and return
+one real solution.
+
+0:00:30.850,0:00:38.069
+In case both A and B are zero that means that
+all reals are solutions.
+
+0:00:38.069,0:00:45.989
+In this case I’ve also updated out x to
+be zero just as an example of A solution.
+
+0:00:45.989,0:00:55.100
+And otherwise basically meaning that it is
+not or A is not different than zero it is
+
+0:00:55.100,0:00:56.100
+zero.
+
+0:00:56.100,0:00:58.799
+But it is not the case that both A and B are
+zeroes.
+
+0:00:58.799,0:01:07.110
+So A is zero and B is not zero in this case
+we have zero x plus b equals zero there aren’t
+
+0:01:07.110,0:01:08.110
+solutions there.
+
+0:01:08.110,0:01:10.290
+It’s like zero x plus five equals zero.
+
+0:01:10.290,0:01:12.230
+So in this case we just return no solutions.

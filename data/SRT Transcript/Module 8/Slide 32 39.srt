@@ -1,0 +1,161 @@
+0:00:00.570,0:00:07.350
+We want to create or define the function of
+fork Tauriel so we can use it three times
+
+0:00:07.350,0:00:09.460
+here.
+
+0:00:09.460,0:00:16.090
+No no we've already used functions we've been
+callers of function quite a few times already.
+
+0:00:16.090,0:00:18.640
+We've called the square root function.
+
+0:00:18.640,0:00:23.029
+You've called Also some other functions as
+well but that's going to be our first time
+
+0:00:23.029,0:00:28.130
+that we're going to define our own function
+in this case it's going to be the fork Tauriel
+
+0:00:28.130,0:00:29.220
+function.
+
+0:00:29.220,0:00:36.410
+So we want to define a function named fork
+Tauriel this function should get an integer
+
+0:00:36.410,0:00:42.559
+as an input a number as an input should do
+some stuff and eventually return the fork
+
+0:00:42.559,0:00:47.469
+Tauriel of number which is also an integer
+value in order to define this thing here a
+
+0:00:47.469,0:00:54.100
+function that gets an integer and returns
+some integer we first defined the header of
+
+0:00:54.100,0:01:00.210
+the function in a simple slot it looks like
+that in fact Oriya and then and closing parenthesis
+
+0:01:00.210,0:01:01.309
+in parenthesis.
+
+0:01:01.309,0:01:03.320
+We have in numb.
+
+0:01:03.320,0:01:10.420
+Basically the name of the function is factorial
+the second word here in this line that's the
+
+0:01:10.420,0:01:17.030
+place where we have the name of the function
+in the prentices we say what are the variables
+
+0:01:17.030,0:01:22.040
+of this function in this case a number which
+is of type integer.
+
+0:01:22.040,0:01:29.200
+So we are expecting to get an integer value
+locally will name it numb and on the left
+
+0:01:29.200,0:01:36.880
+here we have the integer which is the type
+of the value returned by this function the
+
+0:01:36.880,0:01:39.860
+calculation result of this function is an
+integer.
+
+0:01:39.860,0:01:44.460
+So you have like if you read it in order.
+
+0:01:44.460,0:01:49.899
+It starts this function is evaluated to be
+in into the return an int its name is for
+
+0:01:49.899,0:01:57.789
+Korea and it would get a numb as an input
+and then you have a block of curly braces
+
+0:01:57.789,0:02:00.159
+that basically init you have to say what.
+
+0:02:00.159,0:02:06.619
+Is the implementation how do you take this
+input numb and calculate the fork Tauriel
+
+0:02:06.619,0:02:07.619
+of numb.
+
+0:02:07.619,0:02:14.690
+Out of it and here we have to write the code
+to calculate numb for Victoria given a value
+
+0:02:14.690,0:02:16.030
+to numb.
+
+0:02:16.030,0:02:22.100
+So the code is very similar to what we had
+previously Let's have two local variables
+
+0:02:22.100,0:02:28.600
+factor is and I initially the factor as the
+cumulate are here would be set to one and
+
+0:02:28.600,0:02:34.330
+then we'll iterate over the range from one
+to Naam right we want to calculate number
+
+0:02:34.330,0:02:38.440
+for Tauriel So we'll have to rate from one
+to numb.
+
+0:02:38.440,0:02:44.580
+Each time Multiplying factor is by the current
+value that we are iterating over.
+
+0:02:44.580,0:02:49.970
+So first will multiply by one and then by
+two than by three than before and so on up
+
+0:02:49.970,0:02:51.370
+to number.
+
+0:02:51.370,0:02:58.760
+So after having these few lines executed factories
+would hold the factorial of numb.
+
+0:02:58.760,0:03:08.610
+We want to return that as a result for that
+we use the keyword return that basically announces
+
+0:03:08.610,0:03:15.500
+that as the output of the function so return
+fact or is that is the value the integer there
+
+0:03:15.500,0:03:21.690
+is returned from this function so that is
+the definition of the factorial function.
+
+0:03:21.690,0:03:28.950
+First we say that interface how to use this
+function call it for Tauriel pass an integer
+
+0:03:28.950,0:03:35.830
+to it and then it should return an integer
+inside the curly braces we say what the implementation
+
+0:03:35.830,0:03:42.990
+he is or basically how to calculate how to
+create this factorial resource for total integer
+
+0:03:42.990,0:03:46.810
+out of the input number using this for loop
+eventually returning that value.

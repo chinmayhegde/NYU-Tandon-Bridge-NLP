@@ -1,0 +1,104 @@
+1
+00:00:00,380 --> 00:00:06,009
+Let's go over the func2 formula that calculates
+the target addresses for branch instructions.
+
+2
+00:00:06,009 --> 00:00:11,130
+Since branches use relative address calculation,
+the formula uses the program counter of the
+
+3
+00:00:11,130 --> 00:00:13,000
+branch instruction.
+
+4
+00:00:13,000 --> 00:00:19,680
+In addition, the formula uses a 16-bit immediate
+parameter that we label as do immediate.
+
+5
+00:00:19,680 --> 00:00:23,199
+Here is a little bit more detail on the formula
+for func2.
+
+6
+00:00:23,199 --> 00:00:26,529
+It first takes the program counter and increments
+it by 4.
+
+7
+00:00:26,529 --> 00:00:31,050
+Recall that in this situation, the value of
+the program counter is the address of the
+
+8
+00:00:31,050 --> 00:00:32,890
+branch instruction.
+
+9
+00:00:32,890 --> 00:00:38,430
+It then takes the 16-bit immediate value and
+sign-extend it to 32 bits.
+
+10
+00:00:38,430 --> 00:00:43,100
+In the third step, the formula takes the sign
+extended immediate value and shift it left
+
+11
+00:00:43,100 --> 00:00:44,400
+by two.
+
+12
+00:00:44,400 --> 00:00:47,160
+This has the same effect as multiplying it
+by 4.
+
+13
+00:00:47,160 --> 00:00:54,350
+The final step adds the results from step
+1 and 3 to get a 32-bit target address.
+
+14
+00:00:54,350 --> 00:01:00,440
+Here is an example to illustrate how func2
+works.
+
+15
+00:01:00,440 --> 00:01:05,500
+We have a branch if equal instruction with
+the program counter and the do immediate parameter
+
+16
+00:01:05,500 --> 00:01:07,170
+given.
+
+17
+00:01:07,170 --> 00:01:12,680
+The first step adds 4 to the program counter
+and the second step sign extends the do immediate
+
+18
+00:01:12,680 --> 00:01:14,270
+value.
+
+19
+00:01:14,270 --> 00:01:20,479
+Since the Do Immediate is a positive value,
+the sign extension simply pads zeroes to make
+
+20
+00:01:20,479 --> 00:01:22,460
+it 32 bits.
+
+21
+00:01:22,460 --> 00:01:28,549
+The third step takes the sign-extended Do
+Immediate and multiplies it by four, and the
+
+22
+00:01:28,549 --> 00:01:34,939
+last step adds the results of step 1 and step
+3 to get the target address highlighted
+

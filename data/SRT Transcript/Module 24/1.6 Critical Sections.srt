@@ -1,0 +1,187 @@
+1
+00:00:01,069 --> 00:00:05,940
+So sometimes code is going to be written with
+the expectation that once we start running
+
+2
+00:00:05,940 --> 00:00:12,049
+a particular piece of code it's going to run
+through with to completion without being interrupted
+
+3
+00:00:12,049 --> 00:00:18,000
+and we know from our discussion just a minute
+ago that that's a fallacy we know that.
+
+4
+00:00:18,000 --> 00:00:21,310
+It's not going to be run as an atomic element.
+
+5
+00:00:21,310 --> 00:00:25,630
+It's not going to be run from start to finish
+without interruption that interrupts are going
+
+6
+00:00:25,630 --> 00:00:29,720
+to happen in the system and that we're going
+to stop this thread and started up again at
+
+7
+00:00:29,720 --> 00:00:35,020
+almost random intervals and in fact I would
+say that we would consider the worst case
+
+8
+00:00:35,020 --> 00:00:40,890
+scenario and the worst case scenario is where
+we have a real bad luck situation where we
+
+9
+00:00:40,890 --> 00:00:46,149
+run some piece of code stop at a really bad
+place and choose a different piece of code
+
+10
+00:00:46,149 --> 00:00:49,649
+that conflicts with exactly the first piece
+of code.
+
+11
+00:00:49,649 --> 00:00:55,160
+So the code is going to be interrupted and
+we know that asynchrony can occur during interruption.
+
+12
+00:00:55,160 --> 00:00:58,050
+So we have to take that into account.
+
+13
+00:00:58,050 --> 00:01:02,660
+What we do is we identify those pieces of
+code that have to be run atomically In other
+
+14
+00:01:02,660 --> 00:01:08,530
+words we identify those pieces of code that
+once we start doing this code we can't be
+
+15
+00:01:08,530 --> 00:01:09,840
+interrupted.
+
+16
+00:01:09,840 --> 00:01:13,640
+Now unfortunately we can never say that we
+can't be interrupted.
+
+17
+00:01:13,640 --> 00:01:19,630
+So the better solution is to say that we if
+we are interrupted that no other thread is
+
+18
+00:01:19,630 --> 00:01:24,390
+allowed to go into that piece of code that
+could conflict with us and what we're trying
+
+19
+00:01:24,390 --> 00:01:29,590
+to do is identify something known as a critical
+section and a critical section is a piece
+
+20
+00:01:29,590 --> 00:01:34,600
+of code that once entered you have to prohibit
+all other threads from entering the critical
+
+21
+00:01:34,600 --> 00:01:36,049
+section on the same resource.
+
+22
+00:01:36,049 --> 00:01:39,759
+If we have two different resources and two
+different critical sections.
+
+23
+00:01:39,759 --> 00:01:44,250
+We can run both those critical sections at
+the same time because the two different resources
+
+24
+00:01:44,250 --> 00:01:48,880
+don't conflict with one another but if we
+have a critical section that operates on a
+
+25
+00:01:48,880 --> 00:01:53,630
+particular resource then we can't run one
+critical section in conjunction with another
+
+26
+00:01:53,630 --> 00:01:56,180
+critical section or else we have asynchrony.
+
+27
+00:01:56,180 --> 00:02:03,659
+So, if we reach a critical section in thread
+one for example then if thread one is interrupted
+
+28
+00:02:03,659 --> 00:02:08,180
+thread two can't enter its critical section
+until thread one is allowed to complete.
+
+29
+00:02:08,180 --> 00:02:12,630
+So, if thread two wants to enter it's critical
+section it has to be blocked it has to be
+
+30
+00:02:12,630 --> 00:02:13,800
+paused.
+
+31
+00:02:13,800 --> 00:02:17,940
+The critical section should be as small as
+is possible because we don't want to spend
+
+32
+00:02:17,940 --> 00:02:23,660
+a lot of time blocking all the other processes
+from accessing sections of code, their critical
+
+33
+00:02:23,660 --> 00:02:25,900
+sections if we don't have to.
+
+34
+00:02:25,900 --> 00:02:31,680
+So, we want this these pieces of code to be
+absolutely as small as possible but we do
+
+35
+00:02:31,680 --> 00:02:34,610
+recognize that they exist and that they'll
+have to be there.
+
+36
+00:02:34,610 --> 00:02:40,010
+So, there will be situations in which we block
+other threads from running because we don't
+
+37
+00:02:40,010 --> 00:02:44,570
+want to have the possibility that those threads
+are going to interfere with what we're doing
+
+38
+00:02:44,570 --> 00:02:48,490
+and once we're complete with that critical
+section we’ll allow all the other threads
+
+39
+00:02:48,490 --> 00:02:48,860
+to continue running.
+

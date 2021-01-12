@@ -1,0 +1,201 @@
+1
+00:00:00,570 --> 00:00:04,350
+One of the algorithms for resident set management
+that we're going to talk about is the page
+
+2
+00:00:04,350 --> 00:00:08,010
+fault frequency algorithm or the PFF algorithm.
+
+3
+00:00:08,010 --> 00:00:13,710
+The PFF algorithm tries to look at the frequency
+of the page faults by looking at the time
+
+4
+00:00:13,710 --> 00:00:17,230
+between the current page fault and the last
+page fault.
+
+5
+00:00:17,230 --> 00:00:23,630
+And we have some value that we'd like to hit,
+we have some value we call F. And the F says
+
+6
+00:00:23,630 --> 00:00:29,080
+if we're page faulting more frequently than
+F, in other words, if the time between page
+
+7
+00:00:29,080 --> 00:00:33,980
+faults is less than F, then the solution is
+to add a frame.
+
+8
+00:00:33,980 --> 00:00:38,620
+And what that's going to do is if we're page
+faulting too often it should decrease the
+
+9
+00:00:38,620 --> 00:00:42,530
+page fault rate because now we've given it
+more memory.
+
+10
+00:00:42,530 --> 00:00:47,739
+But if the page fault rate is greater than
+F, then we can use those use bits look at
+
+11
+00:00:47,739 --> 00:00:53,559
+all the used bits of zero discard those pages
+they're not use anymore, reset all the used
+
+12
+00:00:53,559 --> 00:01:00,480
+bits of the remaining pages to zero and load
+up the the frame, the page, that we need into
+
+13
+00:01:00,480 --> 00:01:02,220
+an available frame.
+
+14
+00:01:02,220 --> 00:01:07,881
+So one of the points of the PFF algorithm
+is that we can manage the resident set, how
+
+15
+00:01:07,881 --> 00:01:14,800
+many pages are loaded into main memory, by
+I looking at how often the algorithm is or
+
+16
+00:01:14,800 --> 00:01:17,689
+how often the process is page faulting.
+
+17
+00:01:17,689 --> 00:01:22,810
+One of course the difficult values is how
+to figure out a value for F. One of the difficult
+
+18
+00:01:22,810 --> 00:01:26,921
+things is how to figure out a value for F.
+How do we set a value for F?
+
+19
+00:01:26,921 --> 00:01:29,530
+How do we know what a reasonable F is?
+
+20
+00:01:29,530 --> 00:01:33,659
+And in fact there isn't a reasonable value
+for F. As you saw in the previous slide it
+
+21
+00:01:33,659 --> 00:01:37,490
+would be better to have an upper bounds and
+a lower bounds, so that we're not looking
+
+22
+00:01:37,490 --> 00:01:43,450
+for a moving target, we're not looking for
+F and deciding whether it's too frequent or
+
+23
+00:01:43,450 --> 00:01:44,729
+too infrequent.
+
+24
+00:01:44,729 --> 00:01:49,480
+We can use an upper bounds and lower bounds
+to say we might add a frame, or we might steal
+
+25
+00:01:49,480 --> 00:01:52,970
+from the current process, or we might steal
+from the global set.
+
+26
+00:01:52,970 --> 00:01:58,439
+So, there's a number of different variations
+on the PFF algorithm that we can use to to
+
+27
+00:01:58,439 --> 00:02:00,189
+make it more effective.
+
+28
+00:02:00,189 --> 00:02:05,320
+One problems of PFF though is that when the
+process moves from one locality to a completely
+
+29
+00:02:05,320 --> 00:02:12,280
+different locality; so, it's starting in one
+area of its code and it jumps very far to
+
+30
+00:02:12,280 --> 00:02:14,220
+do some other work.
+
+31
+00:02:14,220 --> 00:02:19,120
+And it's going to be in the new locality for
+a long period of time, during a locality shift
+
+32
+00:02:19,120 --> 00:02:23,940
+those pages in the new locality probably are
+not loaded.
+
+33
+00:02:23,940 --> 00:02:30,030
+So, we'll have to load all those pages from
+the new locality and then when we're in the
+
+34
+00:02:30,030 --> 00:02:34,900
+new locality, the page fault rate will decrease
+significantly because we have all the pages
+
+35
+00:02:34,900 --> 00:02:36,210
+that we want.
+
+36
+00:02:36,210 --> 00:02:42,250
+And so now we would, the next time try to
+unload those old pages from the old locality
+
+37
+00:02:42,250 --> 00:02:45,400
+but unfortunately if we never fault again,
+for example, unlikely.
+
+38
+00:02:45,400 --> 00:02:49,320
+But if we never fault again we're never going
+to clear out those old pages.
+
+39
+00:02:49,320 --> 00:02:54,850
+So, the page fault frequency during a locality
+shift can result in both the old locality
+
+40
+00:02:54,850 --> 00:02:59,420
+and the new locality using memory and that
+means double the memory and that's a huge
+
+41
+00:02:59,420 --> 00:03:00,420
+waste.
+
+42
+00:03:00,420 --> 00:03:02,510
+So, there are some downsides to using the
+PFF algorithm.
+

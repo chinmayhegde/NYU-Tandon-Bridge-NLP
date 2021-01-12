@@ -1,0 +1,254 @@
+1
+00:00:00,549 --> 00:00:05,210
+The harder obstruction layer is a magic little
+layer that Microsoft built in, and to understand
+
+2
+00:00:05,210 --> 00:00:11,000
+why Microsoft even needed the HAL in the first
+place you have to look back again in history.
+
+3
+00:00:11,000 --> 00:00:13,860
+Sorry, but we're going to dial the clock back
+again.
+
+4
+00:00:13,860 --> 00:00:17,769
+And go back to the mid, maybe the early 1990’s.
+
+5
+00:00:17,769 --> 00:00:24,429
+In the early 1990’s, Microsoft was not the
+big player in the market that they are today.
+
+6
+00:00:24,429 --> 00:00:31,550
+If you look today, most computers and I say
+most I mean almost all computers run Windows,
+
+7
+00:00:31,550 --> 00:00:35,180
+run Microsoft, some version of Microsoft Windows.
+
+8
+00:00:35,180 --> 00:00:43,940
+The latest indications that I have here in
+2016 are that Microsoft Windows runs on between
+
+9
+00:00:43,940 --> 00:00:48,000
+91 and 92 percent of the hardware that's out
+there.
+
+10
+00:00:48,000 --> 00:00:54,239
+So as far as computers are concerned, Apple's
+market share is around seven to eight percent,
+
+11
+00:00:54,239 --> 00:00:58,699
+at least those among the numbers that I have
+today; seventy to eight percent, whereas Microsoft
+
+12
+00:00:58,699 --> 00:01:01,000
+is ninety-one to ninety-two percent.
+
+13
+00:01:01,000 --> 00:01:05,260
+And there's that one-percent/two-percent other
+which includes Linux and some Unix's.
+
+14
+00:01:05,260 --> 00:01:11,500
+In any case, back in the day, back in the
+1990’s, early 1990's, that wasn't the case
+
+15
+00:01:11,500 --> 00:01:12,900
+at all.
+
+16
+00:01:12,900 --> 00:01:19,510
+The operating systems were broken down much
+more towards about thirty percent was windows,
+
+17
+00:01:19,510 --> 00:01:25,890
+about thirty percent was Mac, and by Mac I
+mean a completely different hardware architecture,
+
+18
+00:01:25,890 --> 00:01:32,430
+and then there was also thirty percent other
+things like Unix's in these sorts of hardware.
+
+19
+00:01:32,430 --> 00:01:37,110
+And Microsoft wanted an operating system which
+they could market literally to everybody,
+
+20
+00:01:37,110 --> 00:01:41,290
+and so what they did was they designed the
+architecture in a modular fashion so that
+
+21
+00:01:41,290 --> 00:01:46,490
+the lowest level, the level that actually
+communicates with the hardware.
+
+22
+00:01:46,490 --> 00:01:53,390
+Not manages things like running processes
+and scheduling and dividing up memory and
+
+23
+00:01:53,390 --> 00:01:59,250
+allocating it, not that thing but the code
+that actually communicates directly with the
+
+24
+00:01:59,250 --> 00:02:04,020
+DMA controller, the interrupt controller,
+the hard drive, things like this that are
+
+25
+00:02:04,020 --> 00:02:05,920
+very, very, very low level.
+
+26
+00:02:05,920 --> 00:02:10,050
+Microsoft designed them into a component they
+called the hardware abstraction layer.
+
+27
+00:02:10,050 --> 00:02:15,060
+And the hardware abstraction layer was a set
+of functions that the kernel could call on
+
+28
+00:02:15,060 --> 00:02:18,340
+to perform tasks on different, on the various
+hardware.
+
+29
+00:02:18,340 --> 00:02:25,160
+So, rather than directly programming the timer
+in the system to say: let this process run
+
+30
+00:02:25,160 --> 00:02:27,210
+for twenty milliseconds.
+
+31
+00:02:27,210 --> 00:02:31,550
+The hardware abstraction, the operating system
+would call a function inside the hardware
+
+32
+00:02:31,550 --> 00:02:37,760
+abstraction layer to say program the timer
+to let this process run for twenty milliseconds.
+
+33
+00:02:37,760 --> 00:02:43,480
+And the reason that that's essential is because
+Microsoft can change out the HAL and produce
+
+34
+00:02:43,480 --> 00:02:46,770
+an operating system that can now run on a
+completely different hardware.
+
+35
+00:02:46,770 --> 00:02:51,350
+Without making any other changes to the operating
+system, it can change just the functions inside
+
+36
+00:02:51,350 --> 00:02:57,350
+the HAL and those functions will, those features
+will take effect on the new hardware.
+
+37
+00:02:57,350 --> 00:03:02,010
+And Microsoft did this in the early 90’s
+and produced five different operating systems,
+
+38
+00:03:02,010 --> 00:03:07,310
+now they were all Windows NT 4 0 but they
+were five different versions of Windows NT
+
+39
+00:03:07,310 --> 00:03:08,310
+4 0.
+
+40
+00:03:08,310 --> 00:03:12,770
+One for the Intel architecture, one for the
+Power PC architecture, and there were various
+
+41
+00:03:12,770 --> 00:03:16,140
+other architectures that Microsoft could support.
+
+42
+00:03:16,140 --> 00:03:21,200
+Now over the course of the next five/ten years,
+all of the other architectures disappeared.
+
+43
+00:03:21,200 --> 00:03:26,720
+Even Apple; now if you go and buy an Apple
+Macintosh, you're going to buy a MacBook let's
+
+44
+00:03:26,720 --> 00:03:28,420
+call it, let's say a MacBook.
+
+45
+00:03:28,420 --> 00:03:33,510
+You're going to buy something that runs on
+the Intel architecture, and that means that
+
+46
+00:03:33,510 --> 00:03:37,270
+it could run Windows just as well as it could
+run MacOS.
+
+47
+00:03:37,270 --> 00:03:42,550
+And that's to our benefit of course because
+we want to do that we want to do exactly that.
+
+48
+00:03:42,550 --> 00:03:49,020
+But Windows has the support for the HAL which
+has support for multiple hardware, and when
+
+49
+00:03:49,020 --> 00:03:52,990
+Microsoft, for example, released Windows RT.
+
+50
+00:03:52,990 --> 00:03:57,540
+When it came out, Microsoft said we can now
+support ARM architecture and the way that
+
+51
+00:03:57,540 --> 00:04:00,750
+they did that was in part changing the HAL.
+
+52
+00:04:00,750 --> 00:04:06,470
+So, any changes that we make to hardware,
+really only require changing the HAL and that
+
+53
+00:04:06,470 --> 00:04:10,379
+saves us from having to rewrite the whole
+operating system; it's a very effective tool.
+

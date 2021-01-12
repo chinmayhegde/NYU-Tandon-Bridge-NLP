@@ -1,0 +1,210 @@
+1
+00:00:00,950 --> 00:00:06,479
+The operating system understands physical
+addresses, and the computer system, of course,
+
+2
+00:00:06,479 --> 00:00:10,610
+understands, as you saw back when we were
+talking about instruction sets, the computer
+
+3
+00:00:10,610 --> 00:00:13,110
+system understands physical addresses.
+
+4
+00:00:13,110 --> 00:00:16,280
+main memory is broken down in physical addresses.
+
+5
+00:00:16,280 --> 00:00:21,680
+so if you have four gigabytes of main memory,
+for example, you have adverse zero through
+
+6
+00:00:21,680 --> 00:00:23,780
+Agis four point two billion.
+
+7
+00:00:23,780 --> 00:00:30,870
+So, the computer system understands a physical
+address and expects to be communicated with
+
+8
+00:00:30,870 --> 00:00:32,020
+physical addresses.
+
+9
+00:00:32,020 --> 00:00:37,770
+Unfortunately, the programs will only be able
+to use logical addresses.
+
+10
+00:00:37,770 --> 00:00:42,950
+And that's because the program has no idea
+where it will be loaded physically.
+
+11
+00:00:42,950 --> 00:00:50,010
+So, we can do this quite simply, we can think
+of this quite simply, as a relocation problem.
+
+12
+00:00:50,010 --> 00:00:55,310
+If we can use the offset from the beginning
+of the program, since the program should have
+
+13
+00:00:55,310 --> 00:00:58,800
+no access outside of its own memory space.
+
+14
+00:00:58,800 --> 00:01:03,240
+If the addresses that the program is going
+to use for all the pointers, and all the code,
+
+15
+00:01:03,240 --> 00:01:08,090
+and all the jumps, and everything that it's
+going to do, if those addresses could be logical
+
+16
+00:01:08,090 --> 00:01:13,770
+addresses relative to the offset from the
+beginning of the program, then the program
+
+17
+00:01:13,770 --> 00:01:18,170
+doesn't really need to know where it's physically
+loaded in main memory.
+
+18
+00:01:18,170 --> 00:01:25,200
+So, if we have that then we're going to recognize
+that those logical addresses need to be converted
+
+19
+00:01:25,200 --> 00:01:29,899
+dynamically at run time into physical addresses.
+
+20
+00:01:29,899 --> 00:01:34,829
+And so what we can do is use what's called
+the hardware memory management unit, CPUs
+
+21
+00:01:34,829 --> 00:01:41,209
+have now created they were evolved in the
+1980’s to have this hardware memory management
+
+22
+00:01:41,209 --> 00:01:46,959
+unit, and that would be responsible for converting
+during run time the logical address to the
+
+23
+00:01:46,959 --> 00:01:47,959
+physical address.
+
+24
+00:01:47,959 --> 00:01:52,960
+And it's not a difficult calculation, in a
+very simple example, we can say that the hardware
+
+25
+00:01:52,960 --> 00:01:57,710
+memory management unit can know the starting
+address of the program.
+
+26
+00:01:57,710 --> 00:02:01,759
+and then when it sees a memory reference,
+when it sees a pointer, when it sees it jump
+
+27
+00:02:01,759 --> 00:02:08,009
+to code, or anything like that, when we see
+that logical memory reference the hardware
+
+28
+00:02:08,009 --> 00:02:13,409
+memory management unit will convert it by
+adding the base address of the program into
+
+29
+00:02:13,409 --> 00:02:18,200
+the logical address that the program is trying
+to reference to produce a physical address.
+
+30
+00:02:18,200 --> 00:02:22,790
+And then the CPU will actually access that
+physical address, rather than accessing a
+
+31
+00:02:22,790 --> 00:02:25,459
+logical address that the program is asking
+for.
+
+32
+00:02:25,459 --> 00:02:30,540
+So, at run time without the operating systems
+intervention because remember the operating
+
+33
+00:02:30,540 --> 00:02:36,670
+system is asleep while the program is running,
+the program will make a reference to a logical
+
+34
+00:02:36,670 --> 00:02:42,930
+address and then the OP, the hardware memory
+management unit, will convert that logical
+
+35
+00:02:42,930 --> 00:02:45,909
+address into a physical address and make the
+appropriate reference.
+
+36
+00:02:45,909 --> 00:02:50,870
+So, the program doesn't have to know anything
+more about where things are physically located,
+
+37
+00:02:50,870 --> 00:02:55,750
+and it meets our relocation and protection
+requirements because we can now physically
+
+38
+00:02:55,750 --> 00:03:01,519
+move the entire process to a completely different
+location, while it's not running and then
+
+39
+00:03:01,519 --> 00:03:06,180
+update the hardware memory management unit
+the next time it runs to tell it where the
+
+40
+00:03:06,180 --> 00:03:08,350
+new, where the process is now.
+
+41
+00:03:08,350 --> 00:03:11,470
+And then the hardware memory management and
+of course will do that calculation at run
+
+42
+00:03:11,470 --> 00:03:12,470
+time.
+
+43
+00:03:12,470 --> 00:03:16,370
+So it doesn't require a lot of work it meets
+our protection and relocation requirements;
+
+44
+00:03:16,370 --> 00:03:16,950
+this is a perfect solution.
+

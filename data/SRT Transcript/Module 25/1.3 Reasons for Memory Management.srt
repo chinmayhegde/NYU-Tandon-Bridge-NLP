@@ -1,0 +1,132 @@
+1
+00:00:00,500 --> 00:00:05,540
+When we look at the operating system, we're
+looking at a multiprogramming system.
+
+2
+00:00:05,540 --> 00:00:09,520
+And in a multiprogramming system, obviously,
+we're going to have a lot of processes running
+
+3
+00:00:09,520 --> 00:00:11,210
+all at the same time.
+
+4
+00:00:11,210 --> 00:00:15,360
+And since we're going to have a lot of processes
+running all the same time, there's never going
+
+5
+00:00:15,360 --> 00:00:17,030
+to be enough main memory.
+
+6
+00:00:17,030 --> 00:00:21,390
+And I've been in this industry now for over
+twenty years and I can tell you that the problems
+
+7
+00:00:21,390 --> 00:00:23,080
+never change.
+
+8
+00:00:23,080 --> 00:00:28,140
+The sizes certainly do change; when we started
+out, when I started out in this industry we
+
+9
+00:00:28,140 --> 00:00:33,870
+were talking about main memory sizes of probably
+around one-hundred twenty-eight megabytes
+
+10
+00:00:33,870 --> 00:00:35,630
+or two-hundred fifty-six megabytes.
+
+11
+00:00:35,630 --> 00:00:40,300
+So, your average system might have two-hundred
+fifty-six megabytes of main memory and if
+
+12
+00:00:40,300 --> 00:00:44,590
+you bought a system like that today it would
+be absolutely useless.
+
+13
+00:00:44,590 --> 00:00:49,890
+And we look at more common systems today of
+eight gigabytes, sixteen gigabytes, probably
+
+14
+00:00:49,890 --> 00:00:55,201
+thirty-two gigabytes is not in the very far
+distant future, and we think that the problem
+
+15
+00:00:55,201 --> 00:00:58,609
+is solved by adding more memory and it isn't.
+
+16
+00:00:58,609 --> 00:01:01,059
+There will never be enough main memory.
+
+17
+00:01:01,059 --> 00:01:05,700
+Wherever we add memory, programmers tend to
+use that memory.
+
+18
+00:01:05,700 --> 00:01:10,970
+So, it's always a little bit of a battle between
+hardware and software with the hardware trying
+
+19
+00:01:10,970 --> 00:01:15,001
+to keep up, usually, and the software trying
+to use more and more memory to do more and
+
+20
+00:01:15,001 --> 00:01:16,330
+more work.
+
+21
+00:01:16,330 --> 00:01:20,909
+The operating system is going to be responsible
+for allocating memory to lots of programs
+
+22
+00:01:20,909 --> 00:01:26,009
+running in the system all at the same time,
+and the operating system is going to need
+
+23
+00:01:26,009 --> 00:01:29,470
+to move parts between main memory and secondary
+memory.
+
+24
+00:01:29,470 --> 00:01:34,040
+So, there's a lot of work that the operating
+system has to do even though we have main
+
+25
+00:01:34,040 --> 00:01:38,060
+memory and main memory just looks like a very
+large array.
+
+26
+00:01:38,060 --> 00:01:42,250
+We're going to have to divide that up and
+share it among a lot of different programs
+
+27
+00:01:42,250 --> 00:01:46,500
+that are all running at the same time; that
+all want access to that main memory, and that
+
+28
+00:01:46,500 --> 00:01:48,780
+all want to use more and more and more.
+

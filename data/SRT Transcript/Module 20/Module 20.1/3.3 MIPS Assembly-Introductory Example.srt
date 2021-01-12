@@ -1,0 +1,135 @@
+1
+00:00:00,550 --> 00:00:05,750
+So at the end of this instruction, we see
+the value of R9 has been updated as desired
+
+2
+00:00:05,750 --> 00:00:10,720
+by the Load double word and the program counter
+points to the next instruction.
+
+3
+00:00:10,720 --> 00:00:14,790
+The next instruction is also a load double
+word and we see that the memory access column
+
+4
+00:00:14,790 --> 00:00:19,349
+indicates an instruction read to fetch the
+instructions from the code segment, and a
+
+5
+00:00:19,349 --> 00:00:23,269
+data read, to read the double word data from
+the data segment.
+
+6
+00:00:23,269 --> 00:00:27,489
+In addition, we see that the Program Counter
+is incremented by four to point to the next
+
+7
+00:00:27,489 --> 00:00:32,800
+instruction to execute and we see that the
+destination register R10 of the load doubleword
+
+8
+00:00:32,800 --> 00:00:35,129
+is updated with the appropriate value.
+
+9
+00:00:35,129 --> 00:00:38,100
+Everything else remains unchanged.
+
+10
+00:00:38,100 --> 00:00:41,329
+The next instruction is a Doubleword add.
+
+11
+00:00:41,329 --> 00:00:47,579
+This instruction takes the content of registers
+R9 and R10, sends them to the ALU for addition,
+
+12
+00:00:47,579 --> 00:00:50,949
+and puts the result in the destination register
+R11.
+
+13
+00:00:50,949 --> 00:00:55,910
+The instruction only does an instruction read
+because it doesn’t access the data segment.
+
+14
+00:00:55,910 --> 00:00:58,079
+Its operands are only registers.
+
+15
+00:00:58,079 --> 00:01:03,769
+We see that the Program Counter is incremented
+to point to the next instruction and R11 has
+
+16
+00:01:03,769 --> 00:01:06,110
+the result of the addition in hexadecimal.
+
+17
+00:01:06,110 --> 00:01:09,360
+The last instruction is a store doubleword.
+
+18
+00:01:09,360 --> 00:01:14,980
+It works in a similar fashion to load doubleword,
+except that instead of loading memory to register,
+
+19
+00:01:14,980 --> 00:01:18,040
+it stores from register to memory.
+
+20
+00:01:18,040 --> 00:01:22,390
+Store doubleword uses its base register and
+offset to calculate the target address of
+
+21
+00:01:22,390 --> 00:01:28,000
+the memory, then writes the content of the
+register operands to the memory location indicated
+
+22
+00:01:28,000 --> 00:01:29,880
+by the calculated address.
+
+23
+00:01:29,880 --> 00:01:35,140
+As a Store doubleword, the CPU does an instruction
+read and data write for this instruction.
+
+24
+00:01:35,140 --> 00:01:40,700
+We also see that the PC is incremented by
+4, even if there is no such instruction at
+
+25
+00:01:40,700 --> 00:01:43,140
+address F10 in our code segment.
+
+26
+00:01:43,140 --> 00:01:46,880
+This is because the CPU does this increment
+automatically.
+
+27
+00:01:46,880 --> 00:01:50,090
+At the end, this is content of the table.
+
+28
+00:01:50,090 --> 00:01:53,520
+It illustrates the different registers and
+memory locations that are relevant to the
+
+29
+00:01:53,520 --> 00:01:57,600
+code and how they are impacted by each instruction
+in said code.
+

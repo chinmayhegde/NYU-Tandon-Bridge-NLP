@@ -1,0 +1,221 @@
+0:00:00.560,0:00:04.819
+Let’s try to solve another program using
+iterative statements.
+
+0:00:04.819,0:00:12.020
+Let’s try to solve a problem that we first
+read a positive integer from the user.
+
+0:00:12.020,0:00:19.000
+And then try to calculate the number of digits
+in this number and what the sum of these digits.
+
+0:00:19.000,0:00:22.519
+For example we can ask the user to enter a
+positive integer.
+
+0:00:22.519,0:00:29.609
+The user would enter let’s say 375 and the
+program would respond by saying that 375 has
+
+0:00:29.609,0:00:30.609
+three digits.
+
+0:00:30.609,0:00:36.970
+Yea because 375 has three digits and their
+sum is 15 and that’s because 3 plus 7 plus
+
+0:00:36.970,0:00:38.500
+5 equals 15.
+
+0:00:38.500,0:00:43.400
+So given a positive integer we would have
+to figure out how many digits are there in
+
+0:00:43.400,0:00:46.650
+this number and what their sum is.
+
+0:00:46.650,0:00:51.140
+Let’s try to think how we can do that kind
+of a thing.
+
+0:00:51.140,0:01:01.280
+So for that I think we should try to iterate
+over the digits each time we can count a digit
+
+0:01:01.280,0:01:07.469
+and add it to some accumulator that would
+hold the total sum.
+
+0:01:07.469,0:01:14.049
+So we would need two variables count digits
+variable and a sum digits variable.
+
+0:01:14.049,0:01:20.850
+We would initialize both of them to zero and
+then we would start iterating over the digits
+
+0:01:20.850,0:01:21.850
+one by one.
+
+0:01:21.850,0:01:28.930
+We will start let’s say with 5 and for each
+digit we will count it and we will add it.
+
+0:01:28.930,0:01:36.060
+So counting 5 would turn count digits to 1
+and adding 5 would turn sum digits into 5.
+
+0:01:36.060,0:01:44.100
+And then we would go over the next digit 7
+we will count it and add it would make count
+
+0:01:44.100,0:01:46.710
+digits 2 and sum digits would be 12.
+
+0:01:46.710,0:01:48.469
+Five plus seven.
+
+0:01:48.469,0:01:55.600
+Next digit we will count it makes count digit
+3 and we will add it makes sum digits 15.
+
+0:01:55.600,0:02:02.329
+We will repeat this process over the digits
+each time counting it and adding it.
+
+0:02:02.329,0:02:05.179
+Two things that are basically repeated.
+
+0:02:05.179,0:02:11.980
+That’s the basic idea of counting and summing
+up digits in the number.
+
+0:02:11.980,0:02:19.030
+The only challenge we have left is figuring
+out how to iterate over the digits.
+
+0:02:19.030,0:02:28.480
+We can’t access each digit separately so
+we can think of mathematical property of integer
+
+0:02:28.480,0:02:32.280
+numbers that can come in handy for this.
+
+0:02:32.280,0:02:39.790
+And that’s for example if we take 375 and
+divide it by 10 we will get 37 and the remainder
+
+0:02:39.790,0:02:42.750
+of 5.
+
+0:02:42.750,0:02:53.430
+We can then take 35 mod it by 10 to get the
+5 and 375 div 10 would give us the 37.
+
+0:02:53.430,0:02:58.260
+Basically splitting the ones digit from the
+rest of the digits.
+
+0:02:58.260,0:03:06.959
+This way we can isolate the ones digit work
+and accumulate its data and then remove it
+
+0:03:06.959,0:03:09.670
+and keep working with the rest of the digits.
+
+0:03:09.670,0:03:16.010
+This trick here works not only for three digit
+numbers it works for any length of a number.
+
+0:03:16.010,0:03:24.480
+For example let’s take a four digit number
+2375 divided by 10 we will get 237 and the
+
+0:03:24.480,0:03:25.739
+remainder of 5.
+
+0:03:25.739,0:03:33.430
+Once again 2375 mod 10 would give us the ones
+digit the 5.
+
+0:03:33.430,0:03:40.659
+2375 div 10 would remove this 5 would of the
+number and we will be left with 237.
+
+0:03:40.659,0:03:46.129
+This thing here as we said works for any length
+of a number.
+
+0:03:46.129,0:03:54.420
+Taking n plus 1 digit number an to a zero
+mod 10 would isolate the ones digit a0.
+
+0:03:54.420,0:04:00.050
+And div it then by 10 would isolate the rest
+of the digits basically removing a zero from
+
+0:04:00.050,0:04:04.689
+the number keeping us left with an to a1.
+
+0:04:04.689,0:04:13.239
+Let’s take all of that together in order
+to better explain or better understand the
+
+0:04:13.239,0:04:17.269
+process of counting and summing up the digits.
+
+0:04:17.269,0:04:24.500
+So we said we have our number 375 both accumulators
+count digits and sum digits that would be
+
+0:04:24.500,0:04:26.259
+initialized to zero.
+
+0:04:26.259,0:04:31.280
+We would also maintain the current digit for
+each iteration.
+
+0:04:31.280,0:04:38.000
+And then each iteration we would isolate the
+digit count it add it and remove it.
+
+0:04:38.000,0:04:43.770
+For example first iteration we would isolate
+ones digit the 5 we will count it into the
+
+0:04:43.770,0:04:51.889
+count digit we will add it to the sum digits
+and we will remove it from the 375.
+
+0:04:51.889,0:04:54.990
+Keeping us or having us left with 37.
+
+0:04:54.990,0:04:58.340
+And then again these four statements would
+be repeated.
+
+0:04:58.340,0:05:02.169
+Isolating the ones digit the current digit
+would be 7.
+
+0:05:02.169,0:05:05.449
+Counting it adding it and removing it.
+
+0:05:05.449,0:05:12.680
+And the four statements would be repeated
+again taking out the ones digit counting it
+
+0:05:12.680,0:05:15.330
+summing it and removing it.
+
+0:05:15.330,0:05:21.669
+If we keep on the repeating these four statements
+over and over basically we are iterating over
+
+0:05:21.669,0:05:26.949
+the digits one by one counting each digit
+and accumulating its sum.
+
+0:05:26.949,0:05:30.569
+Let’s try to implement that using C++.

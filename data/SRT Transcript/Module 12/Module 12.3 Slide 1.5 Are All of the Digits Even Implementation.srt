@@ -1,0 +1,322 @@
+1
+00:00:00,280 --> 00:00:05,930
+Okay. So let's implement this function are
+all even so let’s write first the prototype,
+
+2
+00:00:05,930 --> 00:00:13,950
+Bool are all even, and it should get an array
+and it's logical size N. and let's start since
+
+3
+00:00:13,950 --> 00:00:18,970
+we are looking for a recursive implementation,
+let's start with the base case. Base case
+
+4
+00:00:18,970 --> 00:00:23,610
+we're basically trying to solve the problem
+for the smallest possible input. In this case
+
+5
+00:00:23,610 --> 00:00:28,870
+the size of the problem would be the number
+of elements in the array.
+
+6
+00:00:28,870 --> 00:00:33,519
+So the more the elements are in the array
+the bigger the problem is, the less elements
+
+7
+00:00:33,519 --> 00:00:38,170
+in the array the smaller the problem is the
+smallest. The problem can be is when there
+
+8
+00:00:38,170 --> 00:00:45,079
+is a single element in the rate. So let's
+check for this case: if we have, and N basically
+
+9
+00:00:45,079 --> 00:00:51,510
+tells us the number of elements in the array
+so if N equals one that identifies the smallest
+
+10
+00:00:51,510 --> 00:00:57,350
+possible input. Now, let's have the solution
+for this case; let's return the right value
+
+11
+00:00:57,350 --> 00:01:02,839
+in case that it is a single element array.
+So in this case we just need to check whether
+
+12
+00:01:02,839 --> 00:01:08,280
+this single element is even or not, we can
+use an IF statement modding it by two and
+
+13
+00:01:08,280 --> 00:01:13,549
+checking whether it's zero and returning true
+or false. We can do the same in return statement
+
+14
+00:01:13,549 --> 00:01:23,079
+in the return line, so we can return the value
+of A R R zero mod two equals zero. So if when
+
+15
+00:01:23,079 --> 00:01:29,240
+we're dividing the single element by two and
+the remainder is zero, then this expression
+
+16
+00:01:29,240 --> 00:01:34,330
+here would be true and we would pass; this
+true is a return value. But if the remainder
+
+17
+00:01:34,330 --> 00:01:39,250
+when we're dividing A R R zero by two would
+not be zero, therefore it would be one, this
+
+18
+00:01:39,250 --> 00:01:44,789
+expression would be false and then we would
+return the value false. So, that these two
+
+19
+00:01:44,789 --> 00:01:51,509
+lines of code here basically solve correctly
+the base case, the scenario when we have the
+
+20
+00:01:51,509 --> 00:01:57,020
+smallest possible input. the recursive step
+we are supposed to give the right value, the
+
+21
+00:01:57,020 --> 00:02:03,759
+right output for all other inputs for basically
+arrays that are not single element arrays.
+
+22
+00:02:03,759 --> 00:02:08,390
+and we should use our induction assumption
+that make it explicit, our assumption would
+
+23
+00:02:08,390 --> 00:02:14,980
+be if we call this function, if we call are
+all even, this function, with a smaller instance
+
+24
+00:02:14,980 --> 00:02:20,780
+basically within an array of less elements
+in it, then it would decide correctly it will
+
+25
+00:02:20,780 --> 00:02:25,760
+return correctly whether all of the elements
+in this smaller array are all even or not.
+
+26
+00:02:25,760 --> 00:02:31,370
+In order to create a smaller instance, we
+can just pass logically the first and minus
+
+27
+00:02:31,370 --> 00:02:32,629
+one elements.
+
+28
+00:02:32,629 --> 00:02:41,630
+So let's create a temp variable here: result.
+And let's set result to be the result of calling
+
+29
+00:02:41,630 --> 00:02:48,531
+this function with the same starting address
+but logically only N minus one elements. That
+
+30
+00:02:48,531 --> 00:02:56,090
+is obviously a smaller instance for this problem;
+it is an N minus one array. And given this
+
+31
+00:02:56,090 --> 00:03:01,650
+assumption here calling the function on a
+smaller instance would return the appropriate
+
+32
+00:03:01,650 --> 00:03:07,569
+value so res would be true if all of the first
+and N minus one elements are all even, and
+
+33
+00:03:07,569 --> 00:03:13,030
+it would be false otherwise. So res almost
+has all of the values we need here; all of
+
+34
+00:03:13,030 --> 00:03:17,220
+the result we need here. We just need to check
+the last element; we need to check the last
+
+35
+00:03:17,220 --> 00:03:20,590
+element actually only in case that res is
+true.
+
+36
+00:03:20,590 --> 00:03:27,200
+So, let's check if res is true then we're
+not sure yet whether our result should be
+
+37
+00:03:27,200 --> 00:03:32,290
+true or false; we need to figure that out.
+But if resists is not true, basically if res
+
+38
+00:03:32,290 --> 00:03:38,519
+is false, if not all of the elements in this
+first N minus one elements of array are all
+
+39
+00:03:38,519 --> 00:03:44,049
+even that means that obviously not all of
+the elements in the entire array are all even.
+
+40
+00:03:44,049 --> 00:03:50,280
+Therefore, we should return false. So if res
+itself is false, if this smaller instance
+
+41
+00:03:50,280 --> 00:03:55,879
+is already false, obviously our value should
+be false. Only the case where the first N
+
+42
+00:03:55,879 --> 00:04:01,629
+minus one elements are true is the case where
+we need to figure out whether or were entire
+
+43
+00:04:01,629 --> 00:04:07,719
+array is also filled up with even elements.
+So in this case we should just check the last
+
+44
+00:04:07,719 --> 00:04:12,220
+element and see whether it's even or not.
+We should do something very similar to what
+
+45
+00:04:12,220 --> 00:04:17,620
+we've done for the single element array, but
+instead of going for the first element we’ll
+
+46
+00:04:17,620 --> 00:04:23,360
+check the last element. So, we'll check whether
+the last element A R R in the minus one index
+
+47
+00:04:23,360 --> 00:04:30,289
+mod two equals zero; if the remainder is zero
+it means the last element is even, and since
+
+48
+00:04:30,289 --> 00:04:36,240
+all the rest of the elements are also evens
+we would return that true. But if the last
+
+49
+00:04:36,240 --> 00:04:41,330
+element is not even, even though all the rest
+of the elements are, we would still would
+
+50
+00:04:41,330 --> 00:04:42,810
+return the false.
+
+51
+00:04:42,810 --> 00:04:48,440
+So, it seems like this implementation here
+is okay. Let's write a main program to test
+
+52
+00:04:48,440 --> 00:04:55,280
+it. First, let's declare this function and
+our main, Let's keep it simple; let's create
+
+53
+00:04:55,280 --> 00:05:06,740
+an array in A R R, int A R R size 4, let's
+put it in a few elements, two, twenty, forty
+
+54
+00:05:06,740 --> 00:05:15,000
+six, fourteen. And then let's just call this
+function. So if are all even for this array
+
+55
+00:05:15,000 --> 00:05:24,840
+and four equals true then let’s print are
+all even. Otherwise, let’s print not all
+
+56
+00:05:24,840 --> 00:05:29,820
+are even. We're expecting, obviously, that
+all of them would be even in this case. Let’s
+
+57
+00:05:29,820 --> 00:05:33,080
+try to execute it; yeah, all are even.
+
+58
+00:05:33,080 --> 00:05:37,710
+Let's change it out; you know twenty three
+see that it still works. Not all are even;
+
+59
+00:05:37,710 --> 00:05:42,280
+okay, good. Seems like our implementation
+is fine. Let's take a final look here at this
+
+60
+00:05:42,280 --> 00:05:47,150
+implementation, as you can see we have the
+base case where we solve the problem for the
+
+61
+00:05:47,150 --> 00:05:52,101
+smallest possible input, for a single sized
+array. and then we have our inductive, or
+
+62
+00:05:52,101 --> 00:05:56,800
+recursive step, where we used our assumption
+that calling this function on the smaller
+
+63
+00:05:56,800 --> 00:06:02,120
+instance would do the job would return true,
+if the smaller instance contains only even
+
+64
+00:06:02,120 --> 00:06:08,539
+numbers. And we combine that for our original
+input just by you checking for the last element
+
+65
+00:06:08,539 --> 00:06:14,229
+whether it's even or not. And that basically
+is our recursive implementation for this function.
+

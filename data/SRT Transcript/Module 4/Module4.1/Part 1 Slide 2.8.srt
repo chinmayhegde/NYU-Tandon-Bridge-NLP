@@ -1,0 +1,354 @@
+1
+00:00:00,240 --> 00:00:05,930
+Let’s implement this program so first let’s
+ask the user to enter the number of days they
+
+2
+00:00:05,930 --> 00:00:14,389
+travel so cout. And then please enter number
+of days you traveled. Let’s break the line
+
+3
+00:00:14,389 --> 00:00:21,700
+end line. And then let’s read whatever the
+user enters into a variable. Since it is number
+
+4
+00:00:21,700 --> 00:00:26,990
+of days int is the type we want to use here.
+We first have to declare this variable so
+
+5
+00:00:26,990 --> 00:00:31,400
+int. And then we have to decide what the name
+of this variable would be. In my previous
+
+6
+00:00:31,400 --> 00:00:37,580
+examples I just used x y z whatever because
+they had no meaning just to show you the syntax
+
+7
+00:00:37,580 --> 00:00:43,230
+of integers. But here in this program this
+variable would be used to store some significant
+
+8
+00:00:43,230 --> 00:00:48,140
+kind of data. It is going to store the days
+user traveled. So let’s give it meaningful
+
+9
+00:00:48,140 --> 00:00:54,410
+name in this case I would name it days traveled.
+But then I can’t have a variable name days
+
+10
+00:00:54,410 --> 00:01:01,910
+traveled made of two words. So I need to somehow
+create a single word that would be made of
+
+11
+00:01:01,910 --> 00:01:07,221
+more than one word in it. So there are a few
+common conventions on how to do that. One
+
+12
+00:01:07,221 --> 00:01:12,270
+way is to separate the word something like
+underscore symbol something like that into
+
+13
+00:01:12,270 --> 00:01:18,140
+days traveled. Another convention could be
+something like to capitalize the beginning
+
+14
+00:01:18,140 --> 00:01:24,670
+of each word days traveled and then easily
+you can see what this long sequence of characters
+
+15
+00:01:24,670 --> 00:01:30,499
+basically mean. Third convention is to start
+capitalizing only from the second word so
+
+16
+00:01:30,499 --> 00:01:36,880
+the first d is lower case then the t for the
+travel is uppercase. For variable names the
+
+17
+00:01:36,880 --> 00:01:42,979
+common C++ convention is something like that.
+Capitalizing each word starting with the second
+
+18
+00:01:42,979 --> 00:01:50,460
+word so int days traveled this is the variable
+name we will choose here. And then cin days
+
+19
+00:01:50,460 --> 00:01:55,460
+traveled that’s the variable we are going
+to read into. Now that we have the input from
+
+20
+00:01:55,460 --> 00:02:01,109
+the user so we ask the user to enter the number
+of days they traveled. We read these days
+
+21
+00:02:01,109 --> 00:02:05,890
+into this variable now we should calculate
+how many full weeks and what’s the remaining
+
+22
+00:02:05,890 --> 00:02:12,680
+days. So just as I spoke it the variable names
+should be probably full weeks and remaining
+
+23
+00:02:12,680 --> 00:02:19,000
+days. So let’s declare two additional variables
+one I would name full weeks. Note that I am
+
+24
+00:02:19,000 --> 00:02:26,610
+using this convention lower case f upper case
+w. And remaining days once again lower case
+
+25
+00:02:26,610 --> 00:02:32,420
+r upper case d. You can also note that when
+you declare more than one variable of the
+
+26
+00:02:32,420 --> 00:02:37,630
+same type you can do it in a single line of
+code and separate the variables with a comma.
+
+27
+00:02:37,630 --> 00:02:43,070
+In this case I declared two variables in this
+line both of them are of type int. One named
+
+28
+00:02:43,070 --> 00:02:48,950
+full weeks and the other remaining days. So
+right here after we have the number of days
+
+29
+00:02:48,950 --> 00:02:54,550
+traveled in order to figure out the number
+of full weeks we said we should div it by
+
+30
+00:02:54,550 --> 00:03:04,530
+7. So we do full weeks equals days traveled
+div 7 right. That’s the number of full weeks
+
+31
+00:03:04,530 --> 00:03:11,470
+and the remaining days would be numbers of
+days traveled mod 7. So remaining days equals
+
+32
+00:03:11,470 --> 00:03:17,900
+day traveled mod 7. So I am using the percent
+sign here. So I have these values so now that
+
+33
+00:03:17,900 --> 00:03:24,170
+I have calculated the amount of full days
+and how many days are remaining I can output
+
+34
+00:03:24,170 --> 00:03:30,120
+the message to the user cout. And I want it
+to be in the format of in the case of the
+
+35
+00:03:30,120 --> 00:03:37,470
+input of 19 19 days or two weeks and five
+days. So let’s start with days traveled
+
+36
+00:03:37,470 --> 00:03:47,340
+which would be our 19 and then days are which
+would be full weeks as a string. And then
+
+37
+00:03:47,340 --> 00:03:52,260
+the remaining days days. After that we want
+to break the line something like that. So
+
+38
+00:03:52,260 --> 00:04:00,110
+we have in the case of the input of 19 19
+days are two weeks and five days. This should
+
+39
+00:04:00,110 --> 00:04:05,200
+be fine let’s execute it and see if we need
+to make some minor changes. So I am compiling
+
+40
+00:04:05,200 --> 00:04:11,340
+it I am just pressing the play button here.
+And please enter the number of days you traveled.
+
+41
+00:04:11,340 --> 00:04:16,850
+I entered 19 and then it says 19 days are
+two weeks and five days. There is a spacing
+
+42
+00:04:16,850 --> 00:04:23,110
+issue here and actually it makes sense because
+we printed days traveled and then the text
+
+43
+00:04:23,110 --> 00:04:29,770
+days are with no spaces. So if we want to
+space 19 and days we have to add a space over
+
+44
+00:04:29,770 --> 00:04:37,169
+here. We should also add a space here before
+the two so there would be 19 space days space
+
+45
+00:04:37,169 --> 00:04:45,300
+are space and then two and then again we need
+to add a space here and a space here and also
+
+46
+00:04:45,300 --> 00:04:50,379
+space here. Now it should look better let’s
+execute it. Once again let’s enter the input
+
+47
+00:04:50,379 --> 00:04:56,389
+19 and then it would say 19 days are two weeks
+and five days. Seems to work perfectly fine.
+
+48
+00:04:56,389 --> 00:05:02,830
+One last thing that I want to update here
+is the use of 7 here. So as you can see we
+
+49
+00:05:02,830 --> 00:05:08,550
+have the variables days traveled full weeks
+remaining days. They are all variables with
+
+50
+00:05:08,550 --> 00:05:14,320
+type int they are all data of type int they
+are all integers. And then we use 7 here and
+
+51
+00:05:14,320 --> 00:05:20,919
+7 here are also integers because they are
+C++ literals but this 7 is not an arbitrary
+
+52
+00:05:20,919 --> 00:05:26,009
+numbers. We use 7 because 7 is the number
+of days in a week. A lot of times we prefer
+
+53
+00:05:26,009 --> 00:05:31,599
+to define our own constant to represent this
+value. To make our code more clear. We typically
+
+54
+00:05:31,599 --> 00:05:37,120
+define constants above the main. We can define
+it just next to the variables as well. Maybe
+
+55
+00:05:37,120 --> 00:05:41,900
+later on we will discuss what’s the difference
+of the location where we define our variables
+
+56
+00:05:41,900 --> 00:05:46,550
+and constants. But for now let’s define
+constants before the main. So up here I will
+
+57
+00:05:46,550 --> 00:05:52,110
+do constant int and now I want to define a
+constant that the value would be 7. I am trying
+
+58
+00:05:52,110 --> 00:05:58,490
+to think what I should name this integer constant
+and typically I choose the name by what it
+
+59
+00:05:58,490 --> 00:06:04,509
+represents by describe what it represents.
+So 7 represents the number of days in a week.
+
+60
+00:06:04,509 --> 00:06:11,449
+For constants the common convention for constant
+name is using all upper case and separating
+
+61
+00:06:11,449 --> 00:06:18,500
+t he words with underscore. So it would be
+days in a week and then I would set it to
+
+62
+00:06:18,500 --> 00:06:25,520
+7. So not like variables where we define the
+variable all lower case and separate the words
+
+63
+00:06:25,520 --> 00:06:30,939
+starting with the second one with upper case.
+In constants we have a different naming convention
+
+64
+00:06:30,939 --> 00:06:36,949
+where we type the entire text as uppercase
+and separates the words with underscore. So
+
+65
+00:06:36,949 --> 00:06:42,960
+days in a week equals 7 and then instead of
+just typing 7 here I would just divide it
+
+66
+00:06:42,960 --> 00:06:49,720
+by days in a week and I would mod it by days
+in a week. So when someone reads our code
+
+67
+00:06:49,720 --> 00:06:56,129
+now they can see that full weeks are basically
+days traveled div the numbers of days in a
+
+68
+00:06:56,129 --> 00:07:00,949
+week. And the remaining days are days traveled
+mod the number of days in a week. There is
+
+69
+00:07:00,949 --> 00:07:06,630
+no supposed to be any effect on the execution
+just instead of writing the literal 7 we define
+
+70
+00:07:06,630 --> 00:07:13,650
+our own constant with the value of 7. So here
+when we type 19 we just get once again two
+
+71
+00:07:13,650 --> 00:07:14,239
+weeks then five days.
+

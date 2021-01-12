@@ -1,0 +1,74 @@
+1
+00:00:00,870 --> 00:00:07,230
+The common solution that a programmer would
+use today as a high-level solution would be
+
+2
+00:00:07,230 --> 00:00:08,230
+the semaphores.
+
+3
+00:00:08,230 --> 00:00:12,450
+Now semaphores of course are going to have
+some issues internally to them, so they're
+
+4
+00:00:12,450 --> 00:00:15,910
+going to use some of the hardware level instructions
+that we just talked about.
+
+5
+00:00:15,910 --> 00:00:20,690
+But the semaphore will provide for mutual
+exclusion.
+
+6
+00:00:20,690 --> 00:00:26,430
+Now the word semaphore actually comes from
+a nautical term; I think it's needs a flag
+
+7
+00:00:26,430 --> 00:00:30,190
+that used to be flown on top of the ship and
+it's very much similar.
+
+8
+00:00:30,190 --> 00:00:35,660
+So, what we have here is two functions that
+we generally use inside the semaphore, we
+
+9
+00:00:35,660 --> 00:00:39,719
+construct the semaphore and then we send it
+a signal.
+
+10
+00:00:39,719 --> 00:00:45,640
+The idea of a semaphore is that it's a message
+passing structure, so one thread could send
+
+11
+00:00:45,640 --> 00:00:48,989
+a signal and the other thread could receive
+that signal.
+
+12
+00:00:48,989 --> 00:00:52,420
+Now the way we receive the signal is by calling
+wait.
+
+13
+00:00:52,420 --> 00:00:56,989
+But here's where this is very useful for mutual
+exclusion, the wait function is blocking.
+
+14
+00:00:56,989 --> 00:01:03,890
+So, if there is no signal that has been sent,
+then the wait function causes a block to wait
+
+15
+00:01:03,890 --> 00:01:08,580
+for the signal to be sent, and that's where
+we can really use it for mutual exclusion.
+

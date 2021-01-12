@@ -1,0 +1,48 @@
+0:00:00.590,0:00:02.889
+Let's try to write another program now.
+
+0:00:02.889,0:00:07.430
+Let's try to write a program that reads from
+the user a positive integer and determines
+
+0:00:07.430,0:00:10.160
+its parity: whether it's even or odd.
+
+0:00:10.160,0:00:15.429
+So, for example the program can prompt for
+the user to enter a positive integer, the
+
+0:00:15.429,0:00:22.480
+user would I know say seven, and then the
+program would respond by saying seven is odd.
+
+0:00:22.480,0:00:26.619
+Let's see how we can, how we can implement
+this program.
+
+0:00:26.619,0:00:33.220
+So, now that we have if statements it seems
+much more reasonable we can use the one way
+
+0:00:33.220,0:00:36.110
+if statement in order to implement this program.
+
+0:00:36.110,0:00:43.399
+But it would be better to use a two-way if
+statement in this case.
+
+0:00:43.399,0:00:49.290
+I’ll talk about the if else statement which
+is a two-way if.
+
+0:00:49.290,0:00:55.219
+We’ll implement this program and afterwards
+with a compare the if else implementation
+
+0:00:55.219,0:00:59.600
+verses of a one-way if implementation of the
+same program.
+
+0:00:59.600,0:01:04.820
+But let me first introduce you to the two-way
+if statement, the if else statement.

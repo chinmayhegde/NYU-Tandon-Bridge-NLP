@@ -1,0 +1,104 @@
+1
+00:00:00,560 --> 00:00:04,330
+So we see how the two extremes of cache associativity
+work.
+
+2
+00:00:04,330 --> 00:00:07,379
+What we want to do is to get the best from
+both extremes.
+
+3
+00:00:07,379 --> 00:00:10,010
+This is where set associativity comes in.
+
+4
+00:00:10,010 --> 00:00:15,940
+In a set associative cache, the cache is broken
+down into sets of N equal blocks.
+
+5
+00:00:15,940 --> 00:00:20,279
+In the figure we have here, the cache is broken
+down into sets of 2 blocks.
+
+6
+00:00:20,279 --> 00:00:26,019
+The idea is to make the cache direct-mapped
+with respect to the sets, but fully associative
+
+7
+00:00:26,019 --> 00:00:27,310
+within a given set.
+
+8
+00:00:27,310 --> 00:00:32,390
+Here is what we mean; each DRAM block can
+only go to a specific cache set.
+
+9
+00:00:32,390 --> 00:00:38,290
+For example, the D RAM blocks in blue can
+only go the set 0 of the cache, and all D
+
+10
+00:00:38,290 --> 00:00:41,640
+RAM blocks in yellow can only go cache set
+1.
+
+11
+00:00:41,640 --> 00:00:47,300
+In this respect, the cache is direct-mapped
+with respect to which set the D RAM blocks
+
+12
+00:00:47,300 --> 00:00:48,530
+can go to.
+
+13
+00:00:48,530 --> 00:00:54,300
+However, within a set, a D RAM block can go
+to any free cache block of that set.
+
+14
+00:00:54,300 --> 00:00:59,940
+For example, with 2 blocks in each set, a
+blue D RAM block can go to any block that
+
+15
+00:00:59,940 --> 00:01:01,520
+is free in set 0.
+
+16
+00:01:01,520 --> 00:01:07,159
+Similarly, a yellow D RAM block can go to
+any block in set 1.
+
+17
+00:01:07,159 --> 00:01:12,750
+So with this hybrid design, the set associativity
+principle attempts to find the middle ground
+
+18
+00:01:12,750 --> 00:01:15,799
+between direct mapped and fully-associative.
+
+19
+00:01:15,799 --> 00:01:20,439
+Though we use 2 blocks per set in our example,
+this number can be different.
+
+20
+00:01:20,439 --> 00:01:26,899
+Usually, a set-associative cache in modern
+processors has 4 or 8 blocks per set.
+
+21
+00:01:26,899 --> 00:01:32,950
+The general label for a set associative cache
+is N-way set associative, where N is the number
+
+22
+00:01:32,950 --> 00:01:33,830
+of blocks per set.
+

@@ -1,0 +1,57 @@
+0:00:00.599,0:00:07.319
+But let’s add an assumption as we said to
+say that what’s the behavior in case there
+
+0:00:07.319,0:00:09.520
+aren’t just two real solutions.
+
+0:00:09.520,0:00:12.150
+So let’s add these two assumptions.
+
+0:00:12.150,0:00:18.180
+We’ll write these assumptions right here
+in documentation so the user would know what
+
+0:00:18.180,0:00:20.640
+kind of behavior to expect from the function.
+
+0:00:20.640,0:00:28.540
+So the assumptions we are adding is if equation
+has one solution it would show in out x one.
+
+0:00:28.540,0:00:35.239
+So when we in the main said that in case of
+one real solution we are printing x one we
+
+0:00:35.239,0:00:42.170
+can be we can feel safe that x one would be
+the variable that would contain that single
+
+0:00:42.170,0:00:43.449
+solution.
+
+0:00:43.449,0:00:50.269
+Also we are saying that in case there if equation
+has no real solutions or no solutions at all
+
+0:00:50.269,0:00:55.920
+the values of the output parameters are not
+defined.
+
+0:00:55.920,0:00:57.949
+So we don’t care what they have.
+
+0:00:57.949,0:01:05.869
+And again in our main when there weren’t
+no solutions we didn’t access these output
+
+0:01:05.869,0:01:06.869
+parameters.
+
+0:01:06.869,0:01:14.100
+So by adding these assumptions to our documentation
+we basically tell our caller what type of
+
+0:01:14.100,0:01:19.689
+behavior they should expect from our function
+to when they use it.

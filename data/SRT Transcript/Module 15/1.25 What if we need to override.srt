@@ -1,0 +1,118 @@
+1
+00:00:00,810 --> 00:00:06,290
+So we want to look at the set name function
+because the set name function inside cat is
+
+2
+00:00:06,290 --> 00:00:09,570
+going to do something different then just
+set the name.
+
+3
+00:00:09,570 --> 00:00:13,590
+We have a rule that says if we change the
+name of our cats we have to cut off their
+
+4
+00:00:13,590 --> 00:00:17,400
+whiskers; I don't know this is a crazy rule,
+but that's what it is.
+
+5
+00:00:17,400 --> 00:00:22,550
+And so we have to set that whisker length
+back to zero any time somebody changes the
+
+6
+00:00:22,550 --> 00:00:23,669
+name of a pet.
+
+7
+00:00:23,669 --> 00:00:25,460
+Now how do we do that?
+
+8
+00:00:25,460 --> 00:00:30,710
+Whisker length is a member of the cat class;
+only cat can change the whisker length.
+
+9
+00:00:30,710 --> 00:00:37,340
+But name is a member of the pet class and
+only pet can change the name; so how do we
+
+10
+00:00:37,340 --> 00:00:38,340
+do it?
+
+11
+00:00:38,340 --> 00:00:43,320
+Well, we override the set name function so
+that if anybody has a cat and sets its name
+
+12
+00:00:43,320 --> 00:00:47,830
+the first thing we're going to do is change
+the whisker line but we also have to go back
+
+13
+00:00:47,830 --> 00:00:52,660
+and actually set the name because at this
+point we've overridden the function.
+
+14
+00:00:52,660 --> 00:00:58,740
+This is the new version of the function sequence;
+C++ will not automatically go and call pets
+
+15
+00:00:58,740 --> 00:01:02,870
+set name if what we're working on is a cat
+object.
+
+16
+00:01:02,870 --> 00:01:07,310
+So what we do is use the scope resolution
+operator and indicate the name of the base
+
+17
+00:01:07,310 --> 00:01:14,479
+class function, in this case pet, to indicate
+that what we're calling is the set name function
+
+18
+00:01:14,479 --> 00:01:16,270
+inside the pet class.
+
+19
+00:01:16,270 --> 00:01:19,149
+If we didn't have this we'd have recursion.
+
+20
+00:01:19,149 --> 00:01:23,479
+If we just said set name; we would be the
+function calling itself would be calling cats
+
+21
+00:01:23,479 --> 00:01:27,770
+set name function which would be a horrible
+loop that we'd never get out of.
+
+22
+00:01:27,770 --> 00:01:32,880
+So what we do is we indicate that we're calling
+the pets set name function and then we pass
+
+23
+00:01:32,880 --> 00:01:34,149
+in the name.
+
+24
+00:01:34,149 --> 00:01:39,210
+We effectively have the solution of solving
+both problems, setting the whisker length
+
+25
+00:01:39,210 --> 00:01:43,070
+and changing the name, in one easy function.
+

@@ -1,0 +1,85 @@
+1
+00:00:00,310 --> 00:00:04,410
+In the modern operating system, we load a
+lot of programs and they’re load all of
+
+2
+00:00:04,410 --> 00:00:06,640
+the same time all in main memory.
+
+3
+00:00:06,640 --> 00:00:13,710
+And if we take that into a bigger account,
+you may even run chrome multiple times on
+
+4
+00:00:13,710 --> 00:00:14,710
+the same system.
+
+5
+00:00:14,710 --> 00:00:22,330
+So, now we've got two copies of Chrome loaded
+into loaded into the operating system; how
+
+6
+00:00:22,330 --> 00:00:29,730
+do we keep track of which version of Chrome
+is running and really which instance, if you
+
+7
+00:00:29,730 --> 00:00:31,050
+will, of Chrome is running?
+
+8
+00:00:31,050 --> 00:00:34,330
+And the way we do that is called a process
+and we're going to talk about this extensively;
+
+9
+00:00:34,330 --> 00:00:39,570
+in fact, we have an entire module on processes
+that's coming up next.
+
+10
+00:00:39,570 --> 00:00:45,620
+But what I need to know understand is that
+when we load a program into main memory, we
+
+11
+00:00:45,620 --> 00:00:52,050
+create an object (if you will) called a process
+to keep track of that program to see how long
+
+12
+00:00:52,050 --> 00:00:58,800
+it's been running to record when it's ready
+to record when it's busy to record when a
+
+13
+00:00:58,800 --> 00:01:02,240
+file opened for this for this process.
+
+14
+00:01:02,240 --> 00:01:07,360
+We keep track of it by creating a process
+and then we have struck the idea that this
+
+15
+00:01:07,360 --> 00:01:09,880
+is a program and instead it becomes a process.
+
+16
+00:01:09,880 --> 00:01:15,970
+The code for the program can be loaded multiple
+times or not depending on how we how we implement
+
+17
+00:01:15,970 --> 00:01:21,569
+the operating system, but we can consider
+that this process is a unique object all to
+
+18
+00:01:21,569 --> 00:01:24,970
+itself and doesn't interact with any other
+process in the system.
+

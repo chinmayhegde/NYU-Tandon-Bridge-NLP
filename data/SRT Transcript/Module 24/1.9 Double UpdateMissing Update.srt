@@ -1,0 +1,112 @@
+1
+00:00:00,550 --> 00:00:05,021
+Another example that we've got of a concurrency
+control problem is one of a double update/missing
+
+2
+00:00:05,021 --> 00:00:07,610
+update situation.
+
+3
+00:00:07,610 --> 00:00:13,100
+And in this scenario what we have is two pieces
+of code: just a deposit function and it withdraw
+
+4
+00:00:13,100 --> 00:00:14,100
+function.
+
+5
+00:00:14,100 --> 00:00:20,230
+So you can imagine a situation where you have
+two ATM cards for the exact same bank account
+
+6
+00:00:20,230 --> 00:00:24,189
+and you go to the bank, not at not at nearly
+the same time but literally at exactly the
+
+7
+00:00:24,189 --> 00:00:29,859
+same microsecond in time, and one person is
+doing a deposit and the other person is doing
+
+8
+00:00:29,859 --> 00:00:30,919
+withdrawal.
+
+9
+00:00:30,919 --> 00:00:35,690
+And when we do that, we have two transactions
+that are happening at the same time on different
+
+10
+00:00:35,690 --> 00:00:36,690
+processors.
+
+11
+00:00:36,690 --> 00:00:40,730
+So, now we have the possibility of asynchrony
+because we're dealing with this with separate
+
+12
+00:00:40,730 --> 00:00:43,210
+processors and symmetric multiprocessing.
+
+13
+00:00:43,210 --> 00:00:46,700
+We're going to assume that the bank has a
+good enough system that we have more than
+
+14
+00:00:46,700 --> 00:00:51,309
+one CPU, so we can expect that this these
+pieces of code are running on two separate
+
+15
+00:00:51,309 --> 00:00:53,719
+processors at exactly the same time.
+
+16
+00:00:53,719 --> 00:00:57,719
+The biggest issue is that they share a balance,
+and the balance starts out at one hundred
+
+17
+00:00:57,719 --> 00:01:03,620
+dollars and the first transaction is the deposit
+which is fifty dollars and the second transaction
+
+18
+00:01:03,620 --> 00:01:05,610
+is the withdrawal of a hundred dollars.
+
+19
+00:01:05,610 --> 00:01:11,500
+So, we can imagine a situation where two people
+go to the bank at same time and one is depositing
+
+20
+00:01:11,500 --> 00:01:14,010
+fifty dollars, and the other is withdrawing
+one hundred dollars.
+
+21
+00:01:14,010 --> 00:01:17,720
+Ultimately, what we should see is that the
+bank balance is fifty dollars because we had
+
+22
+00:01:17,720 --> 00:01:23,050
+one hundred plus fifty minus one hundred and
+I'm not great at math but that's pretty easy
+
+23
+00:01:23,050 --> 00:01:25,270
+to do and we'll say that that's fifty dollars.
+
+24
+00:01:25,270 --> 00:01:27,210
+So let's go out and see if that's really the
+case.
+

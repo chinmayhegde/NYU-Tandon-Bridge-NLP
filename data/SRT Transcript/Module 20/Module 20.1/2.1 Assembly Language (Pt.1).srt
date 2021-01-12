@@ -1,0 +1,29 @@
+1
+00:00:00,350 --> 00:00:05,610
+In this module, we will introduce some basic
+concepts of assembly programming and then
+
+2
+00:00:05,610 --> 00:00:09,710
+correlate it to machine-level instruction
+using a mnemonic format.
+
+3
+00:00:09,710 --> 00:00:15,490
+More specifically, we will introduce some
+basic assembly instructions in the MIPS architecture.
+
+4
+00:00:15,490 --> 00:00:20,660
+We will then go in detail on how to map MIPS
+assembly into MIPS mnemonic format, which
+
+5
+00:00:20,660 --> 00:00:25,480
+is the format we will be focusing on throughout
+the class, and we will cover some registers
+
+6
+00:00:25,480 --> 00:00:27,539
+available in a typical MIPS architecture.
+

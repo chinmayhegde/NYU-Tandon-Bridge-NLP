@@ -1,0 +1,143 @@
+1
+00:00:00,240 --> 00:00:06,410
+Let us now go over the list of general purpose
+registers in the MIPS CPU.
+
+2
+00:00:06,410 --> 00:00:09,389
+Remember there are 32 of them, labeled R0-R31.
+
+3
+00:00:09,389 --> 00:00:12,260
+R0 always contain the value 0 and it’s read-only.
+
+4
+00:00:12,260 --> 00:00:14,651
+That is, no code can write to it.
+
+5
+00:00:14,651 --> 00:00:18,130
+It is only used whenever we want to use the
+value 0.
+
+6
+00:00:18,130 --> 00:00:19,550
+R1 is reserved for the assembler.
+
+7
+00:00:19,550 --> 00:00:24,029
+R2 and R3 are used to return results of function
+calls.
+
+8
+00:00:24,029 --> 00:00:28,790
+If you have a function that returns an integer,
+then it will be stored in either R2 or R3
+
+9
+00:00:28,790 --> 00:00:30,689
+after the function completes.
+
+10
+00:00:30,689 --> 00:00:35,660
+One interesting question is if we have a function
+that returns something like a struc of 20
+
+11
+00:00:35,660 --> 00:00:40,540
+integers, how does MIPS return the 20 values
+when it only has 2 registers.
+
+12
+00:00:40,540 --> 00:00:43,410
+I will leave it to you guys to find out.
+
+13
+00:00:43,410 --> 00:00:48,670
+R4 to R7 are used to pass parameters of a
+function call.
+
+14
+00:00:48,670 --> 00:00:53,290
+Similarly, I will let you guys find out how
+to call a function that passes more than four
+
+15
+00:00:53,290 --> 00:00:54,340
+parameters.
+
+16
+00:00:54,340 --> 00:01:02,600
+R8 to R15 and R24 to R25 are used to store
+temporary values that are declared in a function.
+
+17
+00:01:02,600 --> 00:01:05,939
+So when then function completes, the values
+of these registers are not saved.
+
+18
+00:01:05,939 --> 00:01:10,710
+We will primarily use these registers in our
+MIPS mnemonic codes.
+
+19
+00:01:10,710 --> 00:01:18,119
+R16 to R23 are also used to store values in
+functions, but they are stored and saved when
+
+20
+00:01:18,119 --> 00:01:19,509
+the function completes.
+
+21
+00:01:19,509 --> 00:01:22,689
+So they can be used across multiple functions.
+
+22
+00:01:22,689 --> 00:01:26,780
+R26 and R27 are reserved for the O.S.
+
+23
+00:01:26,780 --> 00:01:31,299
+R28 is the global pointer and it points to
+the static data segment of the code.
+
+24
+00:01:31,299 --> 00:01:36,920
+R29 and R30 point to the stack and frame pointers
+respectively.
+
+25
+00:01:36,920 --> 00:01:41,039
+The stack and frames are structures in the
+CPU that store local variables of a given
+
+26
+00:01:41,039 --> 00:01:42,189
+function.
+
+27
+00:01:42,189 --> 00:01:47,780
+R31 holds the address to return from a function
+call.
+
+28
+00:01:47,780 --> 00:01:54,999
+For our course, we will primarily use R0,
+R8 to R15, R24, R25, and R31.
+
+29
+00:01:54,999 --> 00:02:00,009
+Note that we do not include the Program Counter
+in this list because it is not a general-purpose
+
+30
+00:02:00,009 --> 00:02:01,009
+register.
+
+31
+00:02:01,009 --> 00:02:04,390
+It is a special register and cannot be accessed
+by any user-level code.
+

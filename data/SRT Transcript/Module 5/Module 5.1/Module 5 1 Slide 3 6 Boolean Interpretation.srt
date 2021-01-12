@@ -1,0 +1,194 @@
+0:00:00.700,0:00:07.729
+Before we move on to another control flow,
+I want to give you another note regarding
+
+0:00:07.729,0:00:12.019
+the syntax of an IF statement in C ++.
+
+0:00:12.019,0:00:15.099
+Let's take a look at this few lines of code
+here.
+
+0:00:15.099,0:00:22.210
+So we have our main, we have an integer variable
+named val assigned or initialized to zero
+
+0:00:22.210,0:00:29.060
+and then we check if val equals zero we say
+that val is zero, otherwise we say that val
+
+0:00:29.060,0:00:31.670
+is not zero.
+
+0:00:31.670,0:00:36.660
+Obviously, when we execute this code I would
+expect it to print that value zero, because
+
+0:00:36.660,0:00:41.550
+val was initialized to zero and then it would
+say that value zero.
+
+0:00:41.550,0:00:48.060
+But you can see that we didn't use the relation
+operator of double equals in this case value
+
+0:00:48.060,0:00:51.280
+equals equals zero so.
+
+0:00:51.280,0:00:58.970
+I'm kind of wondering what would happen whether
+it would be a compilation error, using an
+
+0:00:58.970,0:01:04.000
+expression that is formally an arithmetic
+expression, it's not a Boolean expression
+
+0:01:04.000,0:01:10.600
+its value is not true or false, it's not a
+double equal operator here, it's a single
+
+0:01:10.600,0:01:13.750
+equals sign so it's basically an assignment.
+
+0:01:13.750,0:01:20.439
+So in case we put an arithmetic expression
+inside our parenthesis, in the place of a
+
+0:01:20.439,0:01:25.979
+Boolean expression in the place of our condition,
+I'm kind of wondering what would happen whether;
+
+0:01:25.979,0:01:34.560
+first the compiler would say that this expression
+or this if expression is illegal, or maybe
+
+0:01:34.560,0:01:41.569
+it would somehow understand and interpret
+this kind of an expression and would create
+
+0:01:41.569,0:01:45.929
+some kind of a behavior that, I don't know,
+let's try to think what would happen.
+
+0:01:45.929,0:01:51.929
+So, the first question is whether to try and
+figure out whether this thing is valid or
+
+0:01:51.929,0:01:56.649
+invalid, is it legal or illegal in C++.
+
+0:01:56.649,0:02:04.340
+So surprisingly actually I would say that
+this expression here this if Val equals zero
+
+0:02:04.340,0:02:08.380
+do one thing else do another thing is valid
+in C++.
+
+0:02:08.380,0:02:14.650
+And it's kind of surprising because when I
+defined the syntax of an if else statement,
+
+0:02:14.650,0:02:20.220
+we said that in the parenthesis should come
+a Boolean expression and once again Val equals
+
+0:02:20.220,0:02:22.670
+zero is not a Boolean expression.
+
+0:02:22.670,0:02:28.579
+So, it is surprising that is a valid expression
+in C++ it is valid.
+
+0:02:28.579,0:02:35.631
+In other programming languages the equivalent
+syntax would not be considered valid, for
+
+0:02:35.631,0:02:40.659
+example in Java I think it's not valid in
+other programming languages, it's also more
+
+0:02:40.659,0:02:43.360
+valid but in C++ it is valid.
+
+0:02:43.360,0:02:48.200
+And now let's try to guess what would be the
+behavior in this case.
+
+0:02:48.200,0:02:55.010
+So, obviously it's not checking whether val
+equals zero it assigns val with the value
+
+0:02:55.010,0:03:03.810
+of zero, but then we can wonder whether this
+assignment expression is considered to be
+
+0:03:03.810,0:03:09.990
+true or false whether we would execute the
+IF body or would execute the ELSE body.
+
+0:03:09.990,0:03:19.290
+So, if you recall what we talked about the
+bool data type we said that false is represented
+
+0:03:19.290,0:03:24.730
+by a zero and true is represented by values
+that are non-zero.
+
+0:03:24.730,0:03:31.909
+In this case, val equals zero is an expression
+that first assigns zero to val but its value
+
+0:03:31.909,0:03:35.580
+is the value that was assigned in this case
+zero.
+
+0:03:35.580,0:03:41.930
+So Val equals zero is evaluated to zero, to
+the integer zero, but the value is zero.
+
+0:03:41.930,0:03:49.450
+The C++ compiler gives a Boolean interpretation
+even to expressions that are not Boolean expressions
+
+0:03:49.450,0:03:53.769
+even two arithmetic expressions and the logic
+is basically the same.
+
+0:03:53.769,0:04:01.939
+If the value is zero it would be considered
+as false, if the value is non-zero then the
+
+0:04:01.939,0:04:04.310
+Boolean interpretation would be true.
+
+0:04:04.310,0:04:11.349
+In this case, since Val equals zero then the
+Boolean interpretation of this expression
+
+0:04:11.349,0:04:12.420
+is false.
+
+0:04:12.420,0:04:21.600
+Therefore, the else body would be executed
+and we would print that val is not zero.
+
+0:04:21.600,0:04:28.290
+Before we end this note I just want to advise
+you not to use the syntax I showed you it
+
+0:04:28.290,0:04:34.100
+because sometimes we make mistakes and we
+want to understand the behavior of our program
+
+0:04:34.100,0:04:37.600
+but obviously, it is not a good programming
+style.
+
+0:04:37.600,0:04:43.860
+In an IF statement we want to have the condition
+to be a Boolean expression and not an arithmetic
+
+0:04:43.860,0:04:47.090
+expression that is interpreted to a Boolean
+value.

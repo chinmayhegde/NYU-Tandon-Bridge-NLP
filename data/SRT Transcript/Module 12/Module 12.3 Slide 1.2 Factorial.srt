@@ -1,0 +1,93 @@
+1
+00:00:00,620 --> 00:00:04,920
+Let’s write another function using recursion.
+
+2
+00:00:04,930 --> 00:00:08,540
+This time let’s write a recursive implementation
+for the function: factorial.
+
+3
+00:00:08,540 --> 00:00:15,349
+This function, we already had an iterative
+version of it, this time we’ll write a recursive
+
+4
+00:00:15,349 --> 00:00:16,349
+implementation.
+
+5
+00:00:16,349 --> 00:00:22,470
+Factorial, as you probably remember, should
+get a positive integer as a parameter and
+
+6
+00:00:22,470 --> 00:00:25,110
+then it should return the factorial of that
+value.
+
+7
+00:00:25,110 --> 00:00:30,790
+For example, if we’ll call factorial of
+four, we’re expected to twenty four back.
+
+8
+00:00:30,790 --> 00:00:35,210
+That’s because one times two times three
+times four is twenty four; four factorial
+
+9
+00:00:35,210 --> 00:00:36,210
+is twenty four.
+
+10
+00:00:36,210 --> 00:00:43,879
+Let’s take a look at factorial of N; so
+factorial of N is N times N minus one, times
+
+11
+00:00:43,879 --> 00:00:47,230
+N minus two, and so on up to one.
+
+12
+00:00:47,230 --> 00:00:53,769
+We can definitely have an iterative implementation
+for the factorial, as we already have, but
+
+13
+00:00:53,769 --> 00:00:59,230
+when we’re thinking or trying to implement
+some sort of recursive implementation.
+
+14
+00:00:59,230 --> 00:01:05,270
+We should try to see how we can combine or
+how we can define the factorial of N, with
+
+15
+00:01:05,270 --> 00:01:08,230
+smaller instances of the factorial problem.
+
+16
+00:01:08,230 --> 00:01:15,610
+In this case, we will probably see that one
+times two times up to N minus one, is basically
+
+17
+00:01:15,610 --> 00:01:17,090
+N minus one factorial.
+
+18
+00:01:17,090 --> 00:01:23,720
+So, factorial of N is basically N times the
+factorial of N minus one.
+
+19
+00:01:23,720 --> 00:01:32,120
+So given that observation in mind, we can
+create a very easy recursive implementation.
+
+20
+00:01:32,120 --> 00:01:34,180
+Let’s go ahead to the computer and do that.
+

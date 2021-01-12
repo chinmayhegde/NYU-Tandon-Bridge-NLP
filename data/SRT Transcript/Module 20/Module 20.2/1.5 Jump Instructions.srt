@@ -1,0 +1,128 @@
+1
+00:00:00,599 --> 00:00:03,250
+We will now discuss Jump instructions.
+
+2
+00:00:03,250 --> 00:00:08,160
+So far, the instructions we have covered only
+allow us to write sequential code.
+
+3
+00:00:08,160 --> 00:00:14,320
+But what happens if we have function calls,
+conditional statements, and loops in our code.
+
+4
+00:00:14,320 --> 00:00:19,230
+As we know, code that we write generally involves
+these situations.
+
+5
+00:00:19,230 --> 00:00:22,400
+This is where jump instructions come into
+play.
+
+6
+00:00:22,400 --> 00:00:28,420
+These instructions allow the CPU to skip chunks
+of sequential code in the binary and to jump
+
+7
+00:00:28,420 --> 00:00:33,910
+to locations specific… to jump to locations
+of specific instructions in that binary.
+
+8
+00:00:33,910 --> 00:00:37,360
+We call these locations target instructions.
+
+9
+00:00:37,360 --> 00:00:41,890
+There are two types of jump instructions:
+unconditional jumps, where we always jump
+
+10
+00:00:41,890 --> 00:00:47,489
+to the target instructions, and conditional
+jumps, where we branch to the target instructions
+
+11
+00:00:47,489 --> 00:00:50,190
+based on a given condition.
+
+12
+00:00:50,190 --> 00:00:56,499
+From now on, we will refer to unconditional
+jumps simply as jumps and conditional jump
+
+13
+00:00:56,499 --> 00:00:58,410
+as branches.
+
+14
+00:00:58,410 --> 00:01:04,430
+Jump instructions are generally used for calling
+functions and returning from them, whereas
+
+15
+00:01:04,430 --> 00:01:09,720
+branch instructions are used for if/else statements
+and conditional loops
+
+16
+00:01:09,720 --> 00:01:14,990
+Another important factor in jump and branch
+instructions is how far can the instructions
+
+17
+00:01:14,990 --> 00:01:20,500
+jump and how to calculate the target address
+of that instruction we are jumping or branching
+
+18
+00:01:20,500 --> 00:01:21,640
+to.
+
+19
+00:01:21,640 --> 00:01:26,869
+There are generally two methods: one is called
+relative branch or jump.
+
+20
+00:01:26,869 --> 00:01:31,979
+In this method, the target address is a function
+of the program counter of the branch or jump
+
+21
+00:01:31,979 --> 00:01:33,509
+instruction.
+
+22
+00:01:33,509 --> 00:01:38,530
+The other method is called indirect branch,
+where the target address is independent of
+
+23
+00:01:38,530 --> 00:01:40,670
+the program counter.
+
+24
+00:01:40,670 --> 00:01:47,009
+Relative branch and jump instructions restrict
+how far the target addresses can be, usually
+
+25
+00:01:47,009 --> 00:01:52,749
+it is bounded within a few kilobytes of the
+program counter.
+
+26
+00:01:52,749 --> 00:01:58,369
+On the other hand, indirect branch and jump
+instructions obtain their target addresses
+
+27
+00:01:58,369 --> 00:02:02,710
+from registers or a memory and can, in theory,
+take any value.
+

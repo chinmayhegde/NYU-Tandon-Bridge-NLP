@@ -1,0 +1,14 @@
+1
+00:00:00,580 --> 00:00:01,780
+That is correct.
+
+2
+00:00:01,780 --> 00:00:08,660
+Using the inverse formula f12, we first do
+PC plus 4 subtract it from the target address.
+
+3
+00:00:08,660 --> 00:00:14,670
+And then we either shift it right by 2 or
+divided by 4 to give us the immediate value.
+

@@ -1,0 +1,74 @@
+0:00:00.780,0:00:04.680
+So when we first create a pointer just like
+when we first create any variable. We don't
+
+0:00:04.680,0:00:09.570
+know the value that’s in it. And that's
+a bad thing if we're talking about an integer.
+
+0:00:09.570,0:00:14.419
+But it's a really bad thing if we're talking
+about a pointer because when we create a pointer
+
+0:00:14.419,0:00:19.580
+it has some garbage value it has something
+in it it's not zero it's not unknown value.
+
+0:00:19.580,0:00:24.650
+It's something and we don't know what that
+something is so effectively the pointer is
+
+0:00:24.650,0:00:29.800
+now pointing somewhere where we didn't decide
+where it's pointing. And if we use that we
+
+0:00:29.800,0:00:33.850
+have the potential for crashing our program
+or doing horrible horrible things inside the
+
+0:00:33.850,0:00:39.039
+computer. So we don't want to do that. So
+whenever we create a pointer or whatever we
+
+0:00:39.039,0:00:44.829
+have a pointer that's not pointing at something
+valid we should make that pointer point to
+
+0:00:44.829,0:00:50.129
+a special place. And that special place is
+known as NULL or null ptr. It's capital N
+
+0:00:50.129,0:00:56.999
+U L L or null ptr all lowercase. But it's
+really important that we always make sure
+
+0:00:56.999,0:01:02.260
+that the pointer is either pointing at somewhere
+valid like a variable or somewhere on the
+
+0:01:02.260,0:01:07.640
+heap or it's pointing at NULL or null ptr.
+If it's ever pointing somewhere else then
+
+0:01:07.640,0:01:12.579
+we're never going to be able to check to see
+if it is pointing at something valid because
+
+0:01:12.579,0:01:17.500
+some arbitrary location in main memory will
+look exactly like a variable on the heap or
+
+0:01:17.500,0:01:21.560
+a variable in the stack. There will be no
+way to differentiate between something that's
+
+0:01:21.560,0:01:26.350
+valid and something that's invalid.
+So we use null ptr as a safety mechanism.
+
+0:01:26.350,0:01:30.170
+Whenever we have a pointer and it's not pointing
+at somewhere that we know we make it point
+
+0:01:30.170,0:01:31.609
+to NULL or null ptr.

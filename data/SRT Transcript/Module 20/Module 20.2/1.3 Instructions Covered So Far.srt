@@ -1,0 +1,89 @@
+1
+00:00:00,689 --> 00:00:05,000
+So far, we have covered basic instructions
+such as Load and store instructions to get
+
+2
+00:00:05,000 --> 00:00:10,840
+data from and to memory, as well as some arithmetic
+and logic instructions. The arithmetic and
+
+3
+00:00:10,840 --> 00:00:15,669
+logic instructions we have covered so far
+require that all operands to be first put
+
+4
+00:00:15,669 --> 00:00:23,140
+in registers. However, there are cases when
+we write code and we use hardcoded values,
+
+5
+00:00:23,140 --> 00:00:27,710
+instead of variables, to perform arithmetic
+and logic operations.
+
+6
+00:00:27,710 --> 00:00:36,890
+As the high-level code example highlights,
+the second variable is hardcoded as 17. MIPS64
+
+7
+00:00:36,890 --> 00:00:42,980
+provides Immediate Arithmetic and Logic Instructions
+for such high-level code. The basic idea of
+
+8
+00:00:42,980 --> 00:00:48,790
+an immediate ALU instruction is to store the
+value of the hardcoded operand as part of
+
+9
+00:00:48,790 --> 00:00:56,339
+the 32-bit instruction. Several immediate
+ALU instructions are provided including doubleword
+
+10
+00:00:56,339 --> 00:01:03,549
+ADD I, for addition, doubleword OR I for OR
+operation, and doubleword AND I for AND operation.
+
+11
+00:01:03,549 --> 00:01:08,300
+The I at the end of each of these instructions
+stands for immediate
+
+12
+00:01:08,300 --> 00:01:14,950
+Each immediate ALU instruction has a 16-bit
+immediate value to store the hardcoded operand.
+
+13
+00:01:14,950 --> 00:01:22,701
+This 16-bit immediate is labeled, do I M M,
+for Do Immediate in the semantics. For an
+
+14
+00:01:22,701 --> 00:01:28,730
+immediate arithmetic instruction such as doubleword
+ADD I, this do immediate value must first
+
+15
+00:01:28,730 --> 00:01:34,630
+be sign-extended before the arithmetic operation
+is performed. However, for an immediate logic
+
+16
+00:01:34,630 --> 00:01:42,070
+instruction such as D OR I or D AND I, the
+do immediate value does not need to be extended.
+
+17
+00:01:42,070 --> 00:01:47,620
+It simply needs to be padded with zeroes to
+reach 64 bits before the logic operation is
+
+18
+00:01:47,620 --> 00:01:48,100
+performed.
+

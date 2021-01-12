@@ -1,0 +1,142 @@
+0:00:00.789,0:00:05.980
+Ok so we said that when we are analyzing a
+runtime of an algorithm basically we compare
+
+0:00:05.980,0:00:13.330
+the asymptotic order of the number of primitive
+operations as a function of the input size.
+
+0:00:13.330,0:00:22.340
+So if T of N that represents the number of
+primitive operations is three N squared plus
+
+0:00:22.340,0:00:24.410
+six N minus fifteen.
+
+0:00:24.410,0:00:29.640
+In order to figure out the asymptotic order
+of it as a rule of thumb we said we are dropping
+
+0:00:29.640,0:00:35.450
+lower terms and we are ignoring the constants
+and that would give us theta of N squared.
+
+0:00:35.450,0:00:42.390
+Let’s make the asymptotic order the definition
+of theta a bit more formal.
+
+0:00:42.390,0:00:45.530
+So it goes something like that.
+
+0:00:45.530,0:00:51.350
+Assuming we have two functions F of N and
+G of N that basically represents running time
+
+0:00:51.350,0:00:58.060
+means it goes from positive integers to positive
+real numbers.
+
+0:00:58.060,0:01:09.350
+We say that F of N is theta of G of N if there
+exists two real constants c1 and c2 and another
+
+0:01:09.350,0:01:13.530
+positive integer constant named n0.
+
+0:01:13.530,0:01:22.630
+Where for all N greater or equal to n0 F of
+N is bounded in between two multiplicands
+
+0:01:22.630,0:01:31.159
+of G of N it is bounded in c1 G of N and c2
+G of N. And that should be for all N greater
+
+0:01:31.159,0:01:33.240
+or equal to n0.
+
+0:01:33.240,0:01:41.120
+Now you should take a very close look at this
+definition let’s try to look at it visually.
+
+0:01:41.120,0:01:46.170
+So for example if you have F of N that is
+the function we are trying to figure out the
+
+0:01:46.170,0:01:47.260
+order of right.
+
+0:01:47.260,0:01:50.650
+We are trying to say F of N is theta of G
+of N.
+
+0:01:50.650,0:01:58.060
+So assuming you have a function F of N and
+assuming you look at two multiplicands of
+
+0:01:58.060,0:02:03.720
+G of N. One of them is four times G of N this
+green line here the other is a third times
+
+0:02:03.720,0:02:08.700
+G of N this kind of blue line here.
+
+0:02:08.700,0:02:12.159
+And let’s look at this point here eight.
+
+0:02:12.159,0:02:20.719
+And you can see that when you look over eight
+all the values of F the black line here is
+
+0:02:20.719,0:02:23.740
+in between these two multiplicands of G.
+
+0:02:23.740,0:02:28.159
+In between four times G and a third times
+G.
+
+0:02:28.159,0:02:36.549
+So you have three constants here you have
+n0 as eight that’s the position from where
+
+0:02:36.549,0:02:39.879
+it is all this inequality here is true.
+
+0:02:39.879,0:02:47.439
+So starting at zero F of N is less or equal
+to four times G of N and it is greater or
+
+0:02:47.439,0:02:50.150
+equal to a third times G of N.
+
+0:02:50.150,0:02:54.459
+So our c1 would be four and our c2 would be
+a third.
+
+0:02:54.459,0:03:02.870
+So we have these three constants two multiplicands
+of G that bound F of N starting at a specific
+
+0:03:02.870,0:03:05.450
+point in this case at eight.
+
+0:03:05.450,0:03:12.290
+Therefore we can say that F of N is theta
+of G of N that is what this definition is
+
+0:03:12.290,0:03:13.540
+trying to say.
+
+0:03:13.540,0:03:21.329
+In order to argue that F is theta of G you
+should show that starting at this specific
+
+0:03:21.329,0:03:27.329
+point starting at n0 F of N is in between
+two multiplicands of G.
+
+0:03:27.329,0:03:34.330
+And you have to show these two or you have
+to give these two multiplicands these c1 and
+
+0:03:34.330,0:03:34.830
+c2.

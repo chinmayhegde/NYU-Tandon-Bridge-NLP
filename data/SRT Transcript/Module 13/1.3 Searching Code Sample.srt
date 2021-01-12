@@ -1,0 +1,120 @@
+1
+00:00:00,599 --> 00:00:09,540
+Very intuitively we should basically iterate
+over the elements of the array. And check
+
+2
+00:00:09,540 --> 00:00:16,320
+each one whether its value is valid or not.
+Since we're not sure how many iterations we're
+
+3
+00:00:16,320 --> 00:00:25,130
+going to have, cause may be not all we won't
+need to go over the entire array, we’ll
+
+4
+00:00:25,130 --> 00:00:30,010
+see val somewhere in the middle, we can just
+break out. I think it's better to use a while
+
+5
+00:00:30,010 --> 00:00:36,499
+loop, in this case. Let's use a while loop
+and have indexes I, in this case, iterating
+
+6
+00:00:36,499 --> 00:00:43,310
+over the array, let's initialize I to zero.
+Each iteration will increment I by one, I
+
+7
+00:00:43,310 --> 00:00:50,420
+plus plus, and we’ll go while I is still
+inside the logical portion of the array the
+
+8
+00:00:50,420 --> 00:00:56,449
+while I is less then there A R R’s size.
+And then for each element let's check if there
+
+9
+00:00:56,449 --> 00:01:03,710
+A R R I is value is val, in this case let's
+break the function and return this index,
+
+10
+00:01:03,710 --> 00:01:11,119
+let's return I. if will go over the entire
+array in none of the elements match value,
+
+11
+00:01:11,119 --> 00:01:16,939
+in this case outside of the a while loop we'll
+return negative one. Basically meaning we've
+
+12
+00:01:16,939 --> 00:01:22,770
+gone over the entire range and none of the
+elements are val, so valid doesn't appear
+
+13
+00:01:22,770 --> 00:01:29,960
+negative one should be the return value. Very
+basic implementation so let's try to analyze
+
+14
+00:01:29,960 --> 00:01:36,920
+the running time. So, the instructions, we
+have the expressions we have before and after
+
+15
+00:01:36,920 --> 00:01:44,330
+the while loop or constants, so they each
+take a Taito of one. The while loop cost;
+
+16
+00:01:44,330 --> 00:01:50,370
+let's try to figure out. So, the body of the
+while loop is a constant, an if statement
+
+17
+00:01:50,370 --> 00:02:00,219
+and the I plus plus are one, two, three statements
+each iteration, so let's say Taito of a one.
+
+18
+00:02:00,219 --> 00:02:07,940
+Then the entire while loop, since we're either
+iterating, so let's figure out how many iterations
+
+19
+00:02:07,940 --> 00:02:14,760
+we have for the while loop. So, it would cost
+us as the order of the number of iterations.
+
+20
+00:02:14,760 --> 00:02:23,440
+So, if T of N, is as we said Taito of number
+of iterations, we notice that the worst case
+
+21
+00:02:23,440 --> 00:02:27,800
+scenario is when the number of iterations
+is basically the size of the array, basically
+
+22
+00:02:27,800 --> 00:02:35,110
+N. So, in this case, T of N for worst case
+would be paid over. So, this search as you
+
+23
+00:02:35,110 --> 00:02:41,770
+can see is a linear search; we're going over
+the entire set of elements of the array and
+
+24
+00:02:41,770 --> 00:02:45,320
+it is in a linear time, so T of N is Taito
+of N.
+

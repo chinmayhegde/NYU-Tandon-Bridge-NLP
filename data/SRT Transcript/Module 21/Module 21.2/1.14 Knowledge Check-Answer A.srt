@@ -1,0 +1,27 @@
+1
+00:00:00,789 --> 00:00:01,789
+That is correct.
+
+2
+00:00:01,789 --> 00:00:06,440
+In a fully associative cache, the new DRAM
+block can go anywhere in the cache as long
+
+3
+00:00:06,440 --> 00:00:08,170
+as there is a free block.
+
+4
+00:00:08,170 --> 00:00:13,139
+So regardless of the replacement policy, if
+there is a cache block that is available,
+
+5
+00:00:13,139 --> 00:00:16,000
+the DRAM block is put in that available cache
+block.
+
+6
+00:00:16,000 --> 00:00:19,090
+In our example, the 32nd block is free
+

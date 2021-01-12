@@ -1,0 +1,60 @@
+1
+00:00:00,659 --> 00:00:06,950
+Let's talk about two fundamental searching
+algorithms. The first one is the most general
+
+2
+00:00:06,950 --> 00:00:12,490
+searching algorithm; it will implement a function
+search that is given an array, basically the
+
+3
+00:00:12,490 --> 00:00:17,609
+starting address when of an array and its
+logical size, and in addition it would also
+
+4
+00:00:17,609 --> 00:00:25,949
+get value, an integer value, val. And this
+function should return an index inside this
+
+5
+00:00:25,949 --> 00:00:32,840
+array where val first appears. Or if val doesn't
+appear as one of the elements in A R R this
+
+6
+00:00:32,840 --> 00:00:38,950
+function would just return a negative one.
+So, for example, if array contains five, eight,
+
+7
+00:00:38,950 --> 00:00:45,239
+twelve, seven, eight, and ten; for example,
+if we call the search function with this array
+
+8
+00:00:45,239 --> 00:00:50,790
+of size six searching for the value eight,
+we're expecting to get the index of the first
+
+9
+00:00:50,790 --> 00:00:56,289
+time where eight appears. That's the second
+position so the index would be one; this function
+
+10
+00:00:56,289 --> 00:01:03,480
+in this case should return one. If we call
+the search function on the same array of size
+
+11
+00:01:03,480 --> 00:01:09,590
+six searching for four, which as you can see
+doesn't show in the array, the function should
+
+12
+00:01:09,590 --> 00:01:14,360
+then return a negative one. So let's implement
+the search function.
+

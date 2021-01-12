@@ -1,0 +1,73 @@
+1
+00:00:00,669 --> 00:00:04,230
+So the two fundamental functions again are
+push and pop and of course we'll have top
+
+2
+00:00:04,230 --> 00:00:07,360
+and that just accesses the highest element
+on the stack.
+
+3
+00:00:07,360 --> 00:00:13,150
+But the push function is going to add to the
+front of the stack and the pop simply removes
+
+4
+00:00:13,150 --> 00:00:17,270
+from the front of the stack and you can do
+this for the back also it really doesn't matter.
+
+5
+00:00:17,270 --> 00:00:22,420
+But the point is that the push and the pop
+are inserting and removing from the same place
+
+6
+00:00:22,420 --> 00:00:28,039
+so that means that when we do the latest push
+the next pop is going to cause that item to
+
+7
+00:00:28,039 --> 00:00:29,939
+be to come out immediately.
+
+8
+00:00:29,939 --> 00:00:35,129
+So we don't have to or we are not looking
+at further information down in the stack now
+
+9
+00:00:35,129 --> 00:00:38,760
+of course when we implement it will have to
+implement all those supplemental functions
+
+10
+00:00:38,760 --> 00:00:42,620
+like clear and is empty and size.
+
+11
+00:00:42,620 --> 00:00:47,159
+And we'll also have to implement the big three
+if we're talking about using an array.
+
+12
+00:00:47,159 --> 00:00:49,420
+Now for this demonstration we're not going
+to use an array.
+
+13
+00:00:49,420 --> 00:00:53,889
+We'll actually use the STL list class which
+already has the big three already built but
+
+14
+00:00:53,889 --> 00:00:56,929
+I just did that so that it's a little bit
+easier for us to understand we don't have
+
+15
+00:00:56,929 --> 00:00:59,149
+to worry about the complexity of building
+the big three.
+

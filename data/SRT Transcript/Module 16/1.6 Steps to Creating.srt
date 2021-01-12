@@ -1,0 +1,82 @@
+1
+00:00:01,160 --> 00:00:03,909
+To get this to work, first you have to include
+fstream.
+
+2
+00:00:03,909 --> 00:00:07,559
+So we put at the top of any program that we're
+going to use files we're going to put pounding
+
+3
+00:00:07,559 --> 00:00:11,299
+include fstream as you have seen it here.
+
+4
+00:00:11,299 --> 00:00:16,970
+Once we've done that, we have the ability
+to create those objects of type ifstream and
+
+5
+00:00:16,970 --> 00:00:20,650
+ofstream which is appropriate to the action
+that we're going to perform.
+
+6
+00:00:20,650 --> 00:00:24,599
+And then we have to open the connection to
+the file in the file system.
+
+7
+00:00:24,599 --> 00:00:28,880
+So it's not enough to just create the object,
+we have to actually connect that object to
+
+8
+00:00:28,880 --> 00:00:30,730
+the file in the file system.
+
+9
+00:00:30,730 --> 00:00:34,800
+Now be very cautious, because opening a file
+could fail.
+
+10
+00:00:34,800 --> 00:00:39,940
+There's a lot of situations which could cause
+either an output or an input file to fail
+
+11
+00:00:39,940 --> 00:00:44,420
+so it's really important that we check that
+with an if statement after we've made the
+
+12
+00:00:44,420 --> 00:00:46,880
+attempt to open the file.
+
+13
+00:00:46,880 --> 00:00:51,170
+Once the files open the object can be used
+for import now put in really the same way
+
+14
+00:00:51,170 --> 00:00:54,570
+that we've been using the cin and the cout
+variables.
+
+15
+00:00:54,570 --> 00:00:59,590
+We can use the output operator and the input
+operator appropriately for whatever the data
+
+16
+00:00:59,590 --> 00:01:03,109
+type is we're working with, whether we're
+doing input or output.
+
+17
+00:01:03,109 --> 00:01:05,140
+And in reality it works very much the same
+way.
+

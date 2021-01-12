@@ -1,0 +1,47 @@
+1
+00:00:00,470 --> 00:00:04,270
+In this module, we're going to learn about
+linked lists and what a linked list is and
+
+2
+00:00:04,270 --> 00:00:05,649
+why we need linked lists.
+
+3
+00:00:05,649 --> 00:00:10,230
+And then we're going to talk about templates
+for classes and functions, so that we can
+
+4
+00:00:10,230 --> 00:00:12,220
+work with any data type.
+
+5
+00:00:12,220 --> 00:00:16,270
+And then we're going to talk about how a linked
+list is designed and what we use linked lists
+
+6
+00:00:16,270 --> 00:00:17,270
+for.
+
+7
+00:00:17,270 --> 00:00:22,949
+And we're going to use linked list extensively
+for the rest of the semester here.
+
+8
+00:00:22,949 --> 00:00:26,300
+In the later modules, you're going to see
+a lot of implementations of linked list; so
+
+9
+00:00:26,300 --> 00:00:30,239
+we just want you to have a background for
+understanding what a linked list is and how
+
+10
+00:00:30,239 --> 00:00:32,009
+you would use it and when you would work with
+it.
+

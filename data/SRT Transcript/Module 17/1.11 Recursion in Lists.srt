@@ -1,0 +1,160 @@
+1
+00:00:00,640 --> 00:00:04,700
+Going back to discussion on recursion that
+we had a few modules ago; you're going to
+
+2
+00:00:04,700 --> 00:00:06,919
+see a lot of recursion here in linked lists.
+
+3
+00:00:06,919 --> 00:00:11,440
+It's often used in linked lists because if
+we look at a sub list, if you look at a list
+
+4
+00:00:11,440 --> 00:00:16,340
+that doesn't necessarily start at the original
+head, you're going to see that it looks exactly
+
+5
+00:00:16,340 --> 00:00:22,240
+like the larger list and in fact, even the
+empty list at the very end will look like
+
+6
+00:00:22,240 --> 00:00:24,109
+a regular old list.
+
+7
+00:00:24,109 --> 00:00:29,880
+So recursion is a real big popular topic here
+in linked lists because everything can be
+
+8
+00:00:29,880 --> 00:00:35,329
+done using recursion or almost everything
+can be done using recursion.
+
+9
+00:00:35,329 --> 00:00:40,000
+So here what I'd like to demonstrate is the
+recursive copy function and what I did was
+
+10
+00:00:40,000 --> 00:00:42,020
+I just simply have a pointer.
+
+11
+00:00:42,020 --> 00:00:47,109
+So for example the assignment operator or
+the copy constructor might call this to make
+
+12
+00:00:47,109 --> 00:00:52,579
+a copy of the right hand side list and it
+would be passed the right hand side head node
+
+13
+00:00:52,579 --> 00:00:53,579
+pointer.
+
+14
+00:00:53,579 --> 00:00:56,289
+And if you look at the only thing it does
+is check to see if the right hand side had
+
+15
+00:00:56,289 --> 00:00:58,539
+nodes pointer is null.
+
+16
+00:00:58,539 --> 00:01:01,589
+If it is then we return know it's an empty
+list we're done.
+
+17
+00:01:01,589 --> 00:01:07,750
+And if not we can construct a new node based
+on the right hand sides data, of course, so
+
+18
+00:01:07,750 --> 00:01:12,820
+that makes the actual copy of the data and
+then call recursive copy for the right hand
+
+19
+00:01:12,820 --> 00:01:13,890
+sides next.
+
+20
+00:01:13,890 --> 00:01:20,570
+So we're using the constructor here, that
+we created in the list node class to our benefit,
+
+21
+00:01:20,570 --> 00:01:27,430
+so we can construct a list node based on the
+data and the copy of the right hand side next.
+
+22
+00:01:27,430 --> 00:01:31,470
+So in fact if we look at this, if you look
+at the recursive algorithm, this copies the
+
+23
+00:01:31,470 --> 00:01:36,909
+null pointer first we get the null pointer
+back and then it copies the last node and
+
+24
+00:01:36,909 --> 00:01:38,960
+returns the pointer to the last node.
+
+25
+00:01:38,960 --> 00:01:44,270
+So the recursive copy function which is copying
+the next to last node and on and on and on
+
+26
+00:01:44,270 --> 00:01:46,110
+and on at the end.
+
+27
+00:01:46,110 --> 00:01:50,820
+When we finish copying we finish copying the
+first node in the list and we return back
+
+28
+00:01:50,820 --> 00:01:57,259
+the pointer, which is then stored as head
+and we've got the list copied.
+
+29
+00:01:57,259 --> 00:02:03,399
+So ultimately this makes what would be a very
+complex or very time consuming algorithm,
+
+30
+00:02:03,399 --> 00:02:08,200
+because remember even if we didn't insert
+an end that would be a linear time problem
+
+31
+00:02:08,200 --> 00:02:10,720
+just to find the end.
+
+32
+00:02:10,720 --> 00:02:15,020
+So we dealt them at least have a big O of
+N squared algorithm to find and search all
+
+33
+00:02:15,020 --> 00:02:20,530
+the nodes which would be horrible but here
+we can do a recursive copy in linear time
+
+34
+00:02:20,530 --> 00:02:21,420
+and be done with it.
+

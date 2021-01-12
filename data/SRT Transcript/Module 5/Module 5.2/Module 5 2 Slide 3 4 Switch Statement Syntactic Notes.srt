@@ -1,0 +1,197 @@
+0:00:00.680,0:00:06.359
+Before we end this module, I want to say a
+few additional syntactic notes regarding switch
+
+0:00:06.359,0:00:08.580
+statements.
+
+0:00:08.580,0:00:14.770
+Switch statements are less powerful than the
+if else if else statement.
+
+0:00:14.770,0:00:19.590
+Everything we can do with the switch statement,
+we can do with the if else if else statement
+
+0:00:19.590,0:00:21.100
+but not the other way around.
+
+0:00:21.100,0:00:26.490
+There are stuff that we can implement using
+the multi- way if that are not possible to
+
+0:00:26.490,0:00:30.870
+implement using switch statements.
+
+0:00:30.870,0:00:36.500
+Basically that's because the if else if, or
+the condition in an IF statement can be a
+
+0:00:36.500,0:00:40.830
+very complex Boolean expression, where in
+the switch statement we're only comparing
+
+0:00:40.830,0:00:48.270
+a numeric value to some constant so we can
+only compare equivalence of some values not
+
+0:00:48.270,0:00:49.760
+more than that.
+
+0:00:49.760,0:00:56.530
+But then there are cases when we do want to
+use switch statements, basically when we want
+
+0:00:56.530,0:00:59.090
+to implement menus.
+
+0:00:59.090,0:01:04.489
+When we can, when you'll get some more experience
+in programming, you'll see you can get the
+
+0:01:04.489,0:01:09.870
+hang of whether to choose to use a switch
+statement over multi- way if.
+
+0:01:09.870,0:01:17.761
+But before we do that, let me say some additional
+notes syntactic notes regarding this switch
+
+0:01:17.761,0:01:18.761
+statement.
+
+0:01:18.761,0:01:26.560
+The first thing I want to say is that the
+numeric expression, that comes after the switch
+
+0:01:26.560,0:01:35.140
+keyword, must be of one of these three types:
+either an int, a char, or a bool.
+
+0:01:35.140,0:01:42.600
+The numeric expression cannot be, let's say,
+a float or a double, cannot be more complex
+
+0:01:42.600,0:01:48.850
+types that are built in or can be defined
+later on by programmers, it can only be one
+
+0:01:48.850,0:01:53.490
+of either an int, a char, or a bool.
+
+0:01:53.490,0:02:00.049
+That's a restriction we will have to live
+with but it's good to know that we have to
+
+0:02:00.049,0:02:04.020
+create a numeric expression of one of these
+types.
+
+0:02:04.020,0:02:12.340
+The next thing we want to make explicit here,
+is that the case labels, these constants with
+
+0:02:12.340,0:02:18.209
+we set case constant one, case constant two,
+and so on must be constants.
+
+0:02:18.209,0:02:24.939
+It's not a coincidence that we named it constant
+one constant two and so on there are really
+
+0:02:24.939,0:02:25.939
+constants.
+
+0:02:25.939,0:02:32.689
+So basically means there are either C++ literals
+of type int, char, or bool or named constants
+
+0:02:32.689,0:02:39.989
+basically constants, we as programmer defines
+constant X. equals whatever.
+
+0:02:39.989,0:02:47.939
+But if they cannot be expressions, four plus
+five, we can do case four plus five.
+
+0:02:47.939,0:02:55.760
+It cannot be using variable names, we cannot
+define int N and then say case N.
+
+0:02:55.760,0:03:03.310
+So the case labels must be constants; that's
+another restriction you must follow when you
+
+0:03:03.310,0:03:06.809
+use switch statements.
+
+0:03:06.809,0:03:16.709
+The next thing I want to note here is, when
+we reach a switch statement we first evaluate
+
+0:03:16.709,0:03:23.159
+the numeric expression and then we start comparing
+it to the different constants in the case
+
+0:03:23.159,0:03:24.629
+clauses.
+
+0:03:24.629,0:03:31.650
+So if no case label matches the value of the
+numeric expression, the control branches to
+
+0:03:31.650,0:03:39.049
+the default label and these expressions are
+basically executed, we've already said that.
+
+0:03:39.049,0:03:50.430
+But what I want to add now is that the default
+is not, doesn't really have to appear there,
+
+0:03:50.430,0:03:57.230
+if there is no different branch then nothing
+basically is executed inside the switch statement
+
+0:03:57.230,0:04:00.029
+and the program just continues to move on.
+
+0:04:00.029,0:04:05.669
+So in case the numeric expression doesn't
+match either one of the constants in the case
+
+0:04:05.669,0:04:13.579
+branches and there is no default branch, then
+in this case the program just continues on.
+
+0:04:13.579,0:04:24.159
+The last thing I want to say is that the break
+keyword also is not mandatory.
+
+0:04:24.159,0:04:28.689
+We don't really need to have a break statement.
+
+0:04:28.689,0:04:34.689
+If we have, let's say case constant one and
+then some expression we said that the break
+
+0:04:34.689,0:04:39.930
+basically says this is where the execution
+should stop and breaks out of the switch statement.
+
+0:04:39.930,0:04:48.699
+But if there is no break statement after these
+few statements then the control basically
+
+0:04:48.699,0:04:57.280
+falls through the next case, even though the
+constant doesn't match the expressions would
+
+0:04:57.280,0:05:01.880
+be executed till we reach the next break statement.
+
+0:05:01.880,0:05:09.300
+Again try to avoid needing break statements,
+but just in case you by mistake do that that
+
+0:05:09.300,0:05:12.659
+is how the execution is going to behave.

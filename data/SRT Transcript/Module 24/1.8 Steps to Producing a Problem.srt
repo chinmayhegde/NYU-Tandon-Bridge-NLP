@@ -1,0 +1,183 @@
+1
+00:00:00,760 --> 00:00:05,550
+So here we can see the steps that we can run
+through to produce this problem.
+
+2
+00:00:05,550 --> 00:00:10,330
+What we see here is that we're running the
+supplier thread the buffer count is already
+
+3
+00:00:10,330 --> 00:00:14,430
+at four hundred ninety nine which means there's
+only one slot left in the buffer that we can
+
+4
+00:00:14,430 --> 00:00:15,450
+fill up.
+
+5
+00:00:15,450 --> 00:00:21,660
+So at this point in the code the supplier
+thread let's call it thread number one supplier
+
+6
+00:00:21,660 --> 00:00:24,220
+thread number one is going to be running.
+
+7
+00:00:24,220 --> 00:00:28,690
+It checks to make sure it's not done, it checks
+to make sure that the buffer count is less
+
+8
+00:00:28,690 --> 00:00:31,320
+than five hundred, and the buffer count is
+less than five hundred.
+
+9
+00:00:31,320 --> 00:00:35,260
+It's four hundred ninety nine so that thread
+is allowed to enter that if statement.
+
+10
+00:00:35,260 --> 00:00:40,739
+It goes past that if statement and then out
+in thread one right at that point for whatever
+
+11
+00:00:40,739 --> 00:00:46,909
+reason either because of preemption or because
+of a hardware interrupt we get an interrupt
+
+12
+00:00:46,909 --> 00:00:51,420
+and after entering the if statement we haven't
+made any changes but interrupts.
+
+13
+00:00:51,420 --> 00:00:57,269
+So, now we have an interrupt and when we run
+from the interrupt, when we return from the
+
+14
+00:00:57,269 --> 00:01:02,660
+interrupt the operating system has to choose
+a thread to run and it's not guaranteed that
+
+15
+00:01:02,660 --> 00:01:04,489
+it's going to choose thread one again.
+
+16
+00:01:04,489 --> 00:01:05,730
+So, what does it choose?
+
+17
+00:01:05,730 --> 00:01:10,510
+Unfortunately in this example it chooses to
+run thread two.
+
+18
+00:01:10,510 --> 00:01:14,120
+So now Thread two is allowed to run and what
+does thread two do?
+
+19
+00:01:14,120 --> 00:01:18,760
+The first thing it does of course is say while
+not done is equal to while not done so it
+
+20
+00:01:18,760 --> 00:01:24,210
+says Yeah I'm not done checks the buffer count
+buffer count is four hundred ninety nine.
+
+21
+00:01:24,210 --> 00:01:27,600
+So that's allowed, we enter into the if statement.
+
+22
+00:01:27,600 --> 00:01:33,880
+It adds the element to the buffer it increments
+the buffer count now to five hundred so effectively
+
+23
+00:01:33,880 --> 00:01:39,960
+at this point the buffer is completely full
+so thread two is finished thread two ends
+
+24
+00:01:39,960 --> 00:01:43,350
+and we're going to go back now and finish
+out thread one.
+
+25
+00:01:43,350 --> 00:01:47,770
+But what's already happened is thread one
+checked to make sure the buffer count was
+
+26
+00:01:47,770 --> 00:01:52,110
+less than five hundred and buffer count was
+less than five hundred it was four ninety
+
+27
+00:01:52,110 --> 00:01:57,020
+nine the last time thread one ran but we didn't
+take into account the critical section.
+
+28
+00:01:57,020 --> 00:02:01,490
+we didn't take into account the possibility
+for asynchrony, so now we don't go back and
+
+29
+00:02:01,490 --> 00:02:07,390
+recheck the buffer count so the buffer count
+now is five hundred but thread one the last
+
+30
+00:02:07,390 --> 00:02:12,810
+time it ran checked it was for ninety nine
+so we left off at that opening curly brace
+
+31
+00:02:12,810 --> 00:02:16,640
+and that's what we're going to pick up from
+and the first thing it does is increment buffer
+
+32
+00:02:16,640 --> 00:02:18,500
+count to five hundred and one.
+
+33
+00:02:18,500 --> 00:02:22,889
+How do we get to five hundred and one when
+we only have five hundred positions in the
+
+34
+00:02:22,889 --> 00:02:24,040
+buffer.
+
+35
+00:02:24,040 --> 00:02:29,310
+So this is really the problem that we're going
+to run into we don't have that extra one space
+
+36
+00:02:29,310 --> 00:02:33,749
+and it can get much much worse than this in
+a real scenario but I'm just demonstrating
+
+37
+00:02:33,749 --> 00:02:40,069
+simply that we can run out of buffer space
+and continue on if we don't take into account
+
+38
+00:02:40,069 --> 00:02:42,500
+the asynchrony that can happen between these
+two threads.
+

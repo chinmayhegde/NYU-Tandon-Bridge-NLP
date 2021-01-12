@@ -1,0 +1,48 @@
+1
+00:00:00,700 --> 00:00:04,580
+In this Module, we're going to talk about
+sorting algorithms.
+
+2
+00:00:04,580 --> 00:00:09,210
+Let's start first by stating the problem,
+kind of obvious by the name you can probably
+
+3
+00:00:09,210 --> 00:00:13,330
+guess what this problem is trying to solve,
+but let's be formal here.
+
+4
+00:00:13,330 --> 00:00:18,380
+So given an array, AR of numbers, let's change
+their order.
+
+5
+00:00:18,380 --> 00:00:22,510
+So at the end they would show in an increasing
+order.
+
+6
+00:00:22,510 --> 00:00:28,800
+So for example if our original array contains
+some values: five, eight, twelve, seven, and
+
+7
+00:00:28,800 --> 00:00:29,800
+so on.
+
+8
+00:00:29,800 --> 00:00:34,510
+After sorting, the array elements would change
+their order.
+
+9
+00:00:34,510 --> 00:00:40,230
+So, they are now there would be: five, seven,
+eight, eight, ten, twelve, again in increasing
+
+10
+00:00:40,230 --> 00:00:40,550
+order.
+

@@ -1,0 +1,113 @@
+1
+00:00:00,640 --> 00:00:03,840
+So one of the nice features of having multiple
+threads of course is that they can communicate
+
+2
+00:00:03,840 --> 00:00:04,840
+with one another.
+
+3
+00:00:04,840 --> 00:00:10,430
+Very easily we can have a lot of threads created
+and all of the threads are accessing the same
+
+4
+00:00:10,430 --> 00:00:11,980
+memory in the same resources.
+
+5
+00:00:11,980 --> 00:00:17,220
+So, if we just for example created a buffer
+in main memory and had all the threads have
+
+6
+00:00:17,220 --> 00:00:21,519
+access to the buffer then we wouldn't need
+the operating system to intervene as we would
+
+7
+00:00:21,519 --> 00:00:23,039
+if we had multiple processes.
+
+8
+00:00:23,039 --> 00:00:27,710
+So, multiple processes can only communicate
+with each other via IPC via the interprocess
+
+9
+00:00:27,710 --> 00:00:32,450
+communication system, but multiple threads
+can communicate with one another directly
+
+10
+00:00:32,450 --> 00:00:36,719
+because they're both accessing or they're
+all accessing the same amount of memory.
+
+11
+00:00:36,719 --> 00:00:38,969
+So this is a really effective solution.
+
+12
+00:00:38,969 --> 00:00:43,670
+For example when we’re reading in data from
+an IO device we could have two threads one
+
+13
+00:00:43,670 --> 00:00:48,059
+that processes data that's already been read
+in and another thread that's actually doing
+
+14
+00:00:48,059 --> 00:00:49,539
+the read operation.
+
+15
+00:00:49,539 --> 00:00:55,309
+So when the thread that's doing the read operation
+performs a blocking system call to actually
+
+16
+00:00:55,309 --> 00:01:00,800
+bring in the data from the secondary storage
+device the operating system blocks the thread,
+
+17
+00:01:00,800 --> 00:01:05,250
+but the other thread that's processing the
+data is allowed to continue operating.
+
+18
+00:01:05,250 --> 00:01:12,340
+So, we have the ability to do a read in operation
+while we're doing some processing on data
+
+19
+00:01:12,340 --> 00:01:14,659
+that's already been read in.
+
+20
+00:01:14,659 --> 00:01:18,720
+The other nice feature about having a thread
+is that it's relatively easy to create.
+
+21
+00:01:18,720 --> 00:01:23,770
+It takes a very very little memory and we
+can create it very quickly and easily as compared
+
+22
+00:01:23,770 --> 00:01:28,460
+to a process but the big downside of having
+multiple threads is that we run the risk of
+
+23
+00:01:28,460 --> 00:01:33,500
+asynchrony we run the risk of these threads
+doing something out of a normal order and
+
+24
+00:01:33,500 --> 00:01:34,800
+we're going to see that in this module.
+

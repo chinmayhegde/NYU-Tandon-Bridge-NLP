@@ -1,0 +1,48 @@
+1
+00:00:00,590 --> 00:00:05,650
+One instruction that is strongly correlated
+with branch instructions is SLT or Set less
+
+2
+00:00:05,650 --> 00:00:07,050
+than instruction.
+
+3
+00:00:07,050 --> 00:00:11,180
+SLT uses three registers, Rd, Rs and Rt.
+
+4
+00:00:11,180 --> 00:00:14,080
+It checks if Rs is less than Rt.
+
+5
+00:00:14,080 --> 00:00:17,070
+If so, it sets Rd to 1.
+
+6
+00:00:17,070 --> 00:00:19,910
+Otherwise, it sets Rd to 0
+
+7
+00:00:19,910 --> 00:00:25,220
+Several branch instructions in MIPS64 are
+formed by combining SLT with either branch
+
+8
+00:00:25,220 --> 00:00:27,640
+if equal or branch if not equal.
+
+9
+00:00:27,640 --> 00:00:32,790
+For example, Branch if less than zero can
+be formed by SLT and branch if equal as the
+
+10
+00:00:32,790 --> 00:00:34,380
+example here shows.
+
+11
+00:00:34,380 --> 00:00:37,950
+A similar method can be used for Branch if
+greater than zero instruction.
+

@@ -1,0 +1,22 @@
+1
+00:00:00,399 --> 00:00:02,210
+First, we compare the branch condition.
+
+2
+00:00:02,210 --> 00:00:04,730
+Is R8 not equal to zero?
+
+3
+00:00:04,730 --> 00:00:05,730
+Yes.
+
+4
+00:00:05,730 --> 00:00:09,660
+So the branch is taken and the CPU branches
+to the target address.
+
+5
+00:00:09,660 --> 00:00:15,639
+Now use the formula in func2 to see if the
+target address is the end of the application
+

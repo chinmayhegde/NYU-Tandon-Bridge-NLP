@@ -1,0 +1,39 @@
+0:00:00.609,0:00:06.930
+So far we’ve seen that in order to use the
+string type we need to include the string
+
+0:00:06.930,0:00:14.549
+library. Then we can declare a string variable
+in this case string str. And then we can initialize
+
+0:00:14.549,0:00:24.510
+str with some textual data which is basically
+a line of text or a string enclosed in double
+
+0:00:24.510,0:00:34.620
+quotes. Formally the double quote ABC is not
+a class string type it is formally a c string
+
+0:00:34.620,0:00:46.399
+type. But C++ has a default an implicit cast
+from c string to the string class. So for
+
+0:00:46.399,0:00:54.290
+us it would be considered to be just a string
+so we would have str equals ABC. And then
+
+0:00:54.290,0:01:00.719
+we can also use the plus operator that’s
+also a thing that we’ve seen about strings.
+
+0:01:00.719,0:01:08.810
+Plus basically let’s us concatenate strings
+one after the other. So we’ll do for example
+
+0:01:08.810,0:01:18.100
+str plus DEF since str is ABC str plus DEF
+basically concatenates ABC and DEF giving
+
+0:01:18.100,0:01:24.370
+us the text ABCDEF. So when we print it we
+just get ABCDEF.

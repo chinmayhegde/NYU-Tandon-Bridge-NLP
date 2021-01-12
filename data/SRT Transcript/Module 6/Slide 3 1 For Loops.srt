@@ -1,0 +1,114 @@
+0:00:00.599,0:00:05.529
+Ok so that was kind of cool being able to
+repeat stuff over and over.
+
+0:00:05.529,0:00:08.860
+We can do that using a while statement.
+
+0:00:08.860,0:00:15.070
+There is another control flow for iterative
+statements which is called the for statement.
+
+0:00:15.070,0:00:20.080
+Let me again show you the syntax and the semantics
+of for statements.
+
+0:00:20.080,0:00:25.289
+So syntactically it goes something like that
+you have your program and then you have the
+
+0:00:25.289,0:00:28.510
+for key word.
+
+0:00:28.510,0:00:35.730
+Enclosed in parentheses you have three parts
+that are separated by semi colons.
+
+0:00:35.730,0:00:43.329
+You have the initialization statement semi
+colon condition statement and semi colon and
+
+0:00:43.329,0:00:44.510
+increment statement.
+
+0:00:44.510,0:00:50.370
+So you have these three parts that are enclosed
+in parentheses.
+
+0:00:50.370,0:00:58.429
+After that you have compound statement of
+the body of the for loop which is again spaced
+
+0:00:58.429,0:01:04.390
+one tab to the right that’s basically the
+for statement.
+
+0:01:04.390,0:01:11.909
+After that we have our program that continues
+at the original alignment.
+
+0:01:11.909,0:01:17.000
+Semantically the way a for loop basically
+works is something like that.
+
+0:01:17.000,0:01:24.770
+You execute your program up to for statement
+and then when the execution reaches the for
+
+0:01:24.770,0:01:31.570
+statement first thing it does is executes
+the initialization statement one time.
+
+0:01:31.570,0:01:38.750
+After executing this statement the condition
+is evaluated two options either it is true
+
+0:01:38.750,0:01:39.750
+or false.
+
+0:01:39.750,0:01:46.500
+If the condition is true the body is executed
+followed by the increment statement.
+
+0:01:46.500,0:01:49.420
+Once again the condition would be evaluated.
+
+0:01:49.420,0:01:53.280
+If it is true body increment.
+
+0:01:53.280,0:01:57.890
+Condition is evaluated if it is true body
+increment.
+
+0:01:57.890,0:02:06.359
+Condition is evaluated if it is false the
+for basically ends and the program just continues
+
+0:02:06.359,0:02:12.320
+with its original execution.
+
+0:02:12.320,0:02:19.470
+So that’s for syntax we have the simplified
+for where you don’t need the compound statement
+
+0:02:19.470,0:02:24.030
+you can have a single statement that would
+be repeated each iteration.
+
+0:02:24.030,0:02:27.600
+Then you won’t need the curly braces.
+
+0:02:27.600,0:02:34.330
+At first it seems like for statement are much
+more complex than while as we practice to
+
+0:02:34.330,0:02:37.960
+use fors you will see that they have their
+advantages.
+
+0:02:37.960,0:02:43.050
+They are sometimes more readable and preferred
+over whiles.
+
+0:02:43.050,0:02:45.230
+But we will have to get used to that.

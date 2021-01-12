@@ -1,0 +1,22 @@
+1
+00:00:00,399 --> 00:00:01,589
+That is correct.
+
+2
+00:00:01,589 --> 00:00:06,400
+The fetch step only increments the counter
+by 4, under the assumption that the next instruction
+
+3
+00:00:06,400 --> 00:00:09,550
+to be executed is the sequential one.
+
+4
+00:00:09,550 --> 00:00:13,019
+The CPU doesn't yet know if the instruction
+is a branch.
+
+5
+00:00:13,019 --> 00:00:14,579
+That is what the decode step is for.
+

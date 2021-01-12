@@ -1,0 +1,324 @@
+1
+00:00:00,520 --> 00:00:04,500
+So let's take a look back at the old days
+and see what used to happen, and that's going
+
+2
+00:00:04,500 --> 00:00:08,190
+to help us (bring us) up to speed on what
+we do today.
+
+3
+00:00:08,190 --> 00:00:11,950
+And what I want to do is dial the clock back
+to the era when mainframes really dominated
+
+4
+00:00:11,950 --> 00:00:17,240
+the computing industry, and what we're talking
+about is the late maybe 1950’s, early 1960’s,
+
+5
+00:00:17,240 --> 00:00:21,000
+maybe even into the seventy's.
+
+6
+00:00:21,000 --> 00:00:25,840
+We generally had one computer and by that
+I don't mean, we as an individual had one
+
+7
+00:00:25,840 --> 00:00:31,140
+computer, I mean the whole company, or the
+whole university or the whole organization
+
+8
+00:00:31,140 --> 00:00:34,690
+would have one computer for the entire organization.
+
+9
+00:00:34,690 --> 00:00:40,720
+So, computing time was very, very limited
+and we had to allocate that computing time
+
+10
+00:00:40,720 --> 00:00:42,120
+effectively.
+
+11
+00:00:42,120 --> 00:00:47,430
+The computer ran only one program at a time;
+there's only ever one program running on the
+
+12
+00:00:47,430 --> 00:00:49,610
+computer at any given time.
+
+13
+00:00:49,610 --> 00:00:55,800
+We would not flip flop; we would not open
+Chrome to view a web page, as well as, Excel
+
+14
+00:00:55,800 --> 00:00:58,969
+to start typing things into a worksheet or
+so on and so forth.
+
+15
+00:00:58,969 --> 00:01:03,239
+We would not have two programs open at the
+same time; there would be one program doing
+
+16
+00:01:03,239 --> 00:01:08,090
+some complex calculus, because it was almost
+always math based, doing some complex calculus
+
+17
+00:01:08,090 --> 00:01:12,079
+to try and figure out the solution and when
+it finished and found that solution it was
+
+18
+00:01:12,079 --> 00:01:16,969
+done and it would move on to another solution,
+another program.
+
+19
+00:01:16,969 --> 00:01:22,329
+One program had complete access to all of
+the system resources; it had access to all
+
+20
+00:01:22,329 --> 00:01:26,459
+of system memory, save for a small little
+area for the operating system.
+
+21
+00:01:26,459 --> 00:01:29,450
+It had access to all of the CPU time.
+
+22
+00:01:29,450 --> 00:01:35,209
+This one program was started, processed all
+of its data, ran through to completion, and
+
+23
+00:01:35,209 --> 00:01:38,490
+when it ended another program was started.
+
+24
+00:01:38,490 --> 00:01:45,619
+Now there was always a mainframe operator;
+it was always a human being who decided which
+
+25
+00:01:45,619 --> 00:01:47,669
+order to run programs.
+
+26
+00:01:47,669 --> 00:01:52,490
+So, this was somebody who if you wanted your
+program to run, if you knew your program had
+
+27
+00:01:52,490 --> 00:01:57,259
+to run early in the morning, you went to Dunkin
+Donuts and got a dozen donuts and gave it
+
+28
+00:01:57,259 --> 00:02:01,479
+to the mainframe operator and he pushed your
+program up a little further up in the stack;
+
+29
+00:02:01,479 --> 00:02:04,880
+make sure that you get that guy on your good
+side or else your program is going to be the
+
+30
+00:02:04,880 --> 00:02:07,119
+last one to run in the day.
+
+31
+00:02:07,119 --> 00:02:11,830
+When one program finished the operating system
+had to be ready with the next program.
+
+32
+00:02:11,830 --> 00:02:16,860
+So, the next program had to be ready to be
+loaded into main memory and start executing
+
+33
+00:02:16,860 --> 00:02:18,420
+almost immediately.
+
+34
+00:02:18,420 --> 00:02:24,370
+The processor was really the limiting factor
+in these older computers, so you'd bring in
+
+35
+00:02:24,370 --> 00:02:28,820
+everything that was needed for the one program
+to run and then you'd put that program on
+
+36
+00:02:28,820 --> 00:02:33,390
+the processor and let it do whatever it wanted
+to do until it said it was finished.
+
+37
+00:02:33,390 --> 00:02:39,280
+In order to do that you require some JCL and
+JCL is what we call Job Control Language.
+
+38
+00:02:39,280 --> 00:02:46,140
+Job Control Language tells the operating system
+what facilities: what printers, what files,
+
+39
+00:02:46,140 --> 00:02:50,450
+what network connections, anything that the
+program needed.
+
+40
+00:02:50,450 --> 00:02:56,690
+The JCL would indicate that that program needed
+it before even the program started.
+
+41
+00:02:56,690 --> 00:03:01,980
+So, imagine opening up Word and when you start
+Word, it says list all the things that you're
+
+42
+00:03:01,980 --> 00:03:05,970
+going to need for this run of word and you
+have to say I need these three files, and
+
+43
+00:03:05,970 --> 00:03:10,450
+I need this printer, and I'm going to need
+this to save, and I'm going to need the spell
+
+44
+00:03:10,450 --> 00:03:12,820
+checker, and the grammar checker and all of
+that.
+
+45
+00:03:12,820 --> 00:03:17,460
+You had to say that at the beginning of the
+program, even in some cases you had to say
+
+46
+00:03:17,460 --> 00:03:22,450
+that before the program was compiled; so that
+when you're creating a program you would have
+
+47
+00:03:22,450 --> 00:03:25,120
+to say what resources were going to be needed.
+
+48
+00:03:25,120 --> 00:03:29,350
+So that the operating system could make sure
+that all of those resources were loaded and
+
+49
+00:03:29,350 --> 00:03:33,140
+ready to go immediately rather than having
+to pick and choose.
+
+50
+00:03:33,140 --> 00:03:38,960
+So, if you didn't have JCL and your program
+goes to open a file, the whole system has
+
+51
+00:03:38,960 --> 00:03:43,310
+to stop and wait until the file is actually
+open and ready because you're the only program
+
+52
+00:03:43,310 --> 00:03:45,370
+that can run, and you only run…
+
+53
+00:03:45,370 --> 00:03:48,900
+You only stop when you're when you indicate
+that you're completely done.
+
+54
+00:03:48,900 --> 00:03:54,610
+So JCL was a way for the operating system
+to sort of pre-load some of the material.
+
+55
+00:03:54,610 --> 00:03:58,870
+And what we do is call this batch multiprogramming;
+this is called batch multi programming because
+
+56
+00:03:58,870 --> 00:04:05,500
+we're getting things ready in main memory
+and batching them creating a back of programs.
+
+57
+00:04:05,500 --> 00:04:10,480
+So, when one finished, the next program was
+right there in the operating system and gets
+
+58
+00:04:10,480 --> 00:04:11,610
+it going immediately.
+
+59
+00:04:11,610 --> 00:04:13,760
+That's the olden days; we don't do that anymore.
+
+60
+00:04:13,760 --> 00:04:18,279
+And the reason that we can't do that anymore;
+there's a lot of reasons actually, but we
+
+61
+00:04:18,279 --> 00:04:20,090
+don't think this way anymore.
+
+62
+00:04:20,090 --> 00:04:24,219
+We don't we don't think about getting one
+job done and then moving on to the next job.
+
+63
+00:04:24,219 --> 00:04:29,419
+We'd like to do a lot of jobs at the same
+time and the other downfall of this environment
+
+64
+00:04:29,419 --> 00:04:33,810
+is the JCL, that when the program starts we
+might not know everything that we're going
+
+65
+00:04:33,810 --> 00:04:37,400
+to need; it might not be until we do some
+processing that we finally know what we're
+
+66
+00:04:37,400 --> 00:04:38,400
+going to need.
+
+67
+00:04:38,400 --> 00:04:41,199
+So, this doesn't get done anymore and in just
+a minute we're going to look at what we're
+
+68
+00:04:41,199 --> 00:04:41,549
+doing today.
+

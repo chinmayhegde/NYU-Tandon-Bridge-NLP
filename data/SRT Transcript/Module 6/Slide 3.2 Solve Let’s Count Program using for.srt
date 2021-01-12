@@ -1,0 +1,6 @@
+0:00:00.510,0:00:06.290
+Ok so now let’s try to solve the same problem
+here of counting from 1 to N but this time
+
+0:00:06.290,0:00:07.810
+let’s do it using a for loop.

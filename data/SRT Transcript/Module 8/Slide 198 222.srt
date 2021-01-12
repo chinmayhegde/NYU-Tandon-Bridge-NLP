@@ -1,0 +1,219 @@
+0:00:00.470,0:00:06.560
+I think it would be much easier to understand
+if we’ll take a look at the swap example.
+
+0:00:06.560,0:00:14.560
+So as we initially wrote it as you can see
+A and B these two parameter of the swap function
+
+0:00:14.560,0:00:21.980
+were passed by value right. We have int A
+int B. Let’s see what happens if we pass
+
+0:00:21.980,0:00:30.529
+A and B by refenrece. Note that I added the
+ampersand sign symbol just for both A and
+
+0:00:30.529,0:00:38.610
+B so now we have void swap and int ampersand
+A int ampersand B. Basically saying both our
+
+0:00:38.610,0:00:44.210
+parameters would be called by reference. And
+let’s see what the execution would look
+
+0:00:44.210,0:00:52.490
+like. I would need to update the runtime stack
+model to support or to explain also call by
+
+0:00:52.490,0:00:58.330
+reference. So it looks something like that.
+Again we start with the main frame containing
+
+0:00:58.330,0:01:04.540
+the local variables A and B. Line number two
+assigns A to three and B to four. Line number
+
+0:01:04.540,0:01:11.330
+three prints before A is three and B is four
+just as we had before. Then we have the call
+
+0:01:11.330,0:01:19.111
+for swap and see what is different here when
+we call by reference ok. So again there are
+
+0:01:19.111,0:01:27.330
+going to be a few steps. First step same thing
+we create a frame containing the parameters
+
+0:01:27.330,0:01:34.360
+in this case A and B. Local variables in this
+case temp. And return address. Step two is
+
+0:01:34.360,0:01:43.340
+a bit different in step two basically we evaluated
+the arguments. But since now we have two types
+
+0:01:43.340,0:01:50.850
+of passing the arguments or two ways to pass
+the argument it matters whether we are passing
+
+0:01:50.850,0:01:57.450
+an argument by value or by reference. In case
+we pass an argument by value we evaluate in
+
+0:01:57.450,0:02:03.420
+step two the value of the argument. In case
+we are passing an argument by reference we
+
+0:02:03.420,0:02:10.020
+won’t evaluate the value we would evaluate
+the position the reference of the variable.
+
+0:02:10.020,0:02:15.900
+In this case A and B are called by reference
+right so we won’t evaluate the values of
+
+0:02:15.900,0:02:22.310
+A and B which are three and four. We’ll
+evaluate references links positions to A and
+
+0:02:22.310,0:02:33.760
+B. The places where A and B are. And when
+step three we assign the parameters with the
+
+0:02:33.760,0:02:42.380
+arguments we will assign a link to the main’s
+A for A and a link to the main’s B for B.
+
+0:02:42.380,0:02:50.880
+So we are passing the references to the variables
+A and B to main’s A and B. So the parameters
+
+0:02:50.880,0:02:57.250
+the local parameters A and B of the function
+swap contain references basically links that’s
+
+0:02:57.250,0:03:05.900
+why I colored them in blue just to make it
+look like a link. We are passing a link a
+
+0:03:05.900,0:03:13.140
+reference to the main’s A and B. Which when
+we look at this image now it seems that the
+
+0:03:13.140,0:03:22.959
+swap function by using the local data in the
+frame of swap that has A B the local A B and
+
+0:03:22.959,0:03:30.300
+temp. Now A and B have access to the main’s
+A and B and maybe do the swapping the changes
+
+0:03:30.300,0:03:36.490
+over there. So it seems to be good right.
+So again step one was creating the frame.
+
+0:03:36.490,0:03:42.890
+Step two was evaluating the arguments in this
+case since they were called by reference the
+
+0:03:42.890,0:03:49.020
+references to the variables to A and B. Step
+three is assigning the local variable the
+
+0:03:49.020,0:03:56.590
+local parameters to these references. And
+step four the return address would be five.
+
+0:03:56.590,0:04:05.440
+But step four would be jumping to the body
+of the function. And then we have first instruction
+
+0:04:05.440,0:04:13.440
+temp equals A. What do you think would happen?
+Would temp contain a reference to the main’s
+
+0:04:13.440,0:04:24.240
+A or temp would contain the value pointed
+by the reference to A? So the semantics of
+
+0:04:24.240,0:04:32.940
+C++ says that when you use reference variable
+in this case A and B. When you look at the
+
+0:04:32.940,0:04:38.940
+value of this variable you always follow the
+reference. So temp equals A the value of A
+
+0:04:38.940,0:04:44.830
+would be three. So temp would get the value
+of three. When we say in line twelve A equals
+
+0:04:44.830,0:04:51.130
+B. What do you think would happen? Would the
+local A obviously it would affect the local
+
+0:04:51.130,0:05:01.210
+A the swap A the swap’s A. Would the local
+A contain a reference a link to B or would
+
+0:05:01.210,0:05:09.710
+the main’s A followed by the reference would
+contain the value four followed by the reference
+
+0:05:09.710,0:05:17.250
+of B? So once again the semantics of C++ when
+we use referenced variables we affect the
+
+0:05:17.250,0:05:27.320
+variables referenced by these variables. So
+the main’s A would get the value of main’s
+
+0:05:27.320,0:05:34.419
+B that would set the main’s A to be four.
+Again by using the local references we affect
+
+0:05:34.419,0:05:39.290
+variables that are out of our scope. Which
+is great that’s exactly what we wanted to
+
+0:05:39.290,0:05:47.790
+do. And eventually line number thirteen would
+change the referenced B basically the main’s
+
+0:05:47.790,0:05:55.509
+B to be the value of temp which is three.
+So these few lines of code updated swapped
+
+0:05:55.509,0:06:04.340
+the main’s A and B values to be four and
+three. Obviously the fact that both the main’s
+
+0:06:04.340,0:06:12.070
+variables names are A and B and the local
+swap function variables A and B are the same
+
+0:06:12.070,0:06:19.289
+that is just a coincident. It doesn’t have
+to be like that. When the swap function ends
+
+0:06:19.289,0:06:29.140
+this frame is popped out but when we go back
+to line number five we print that after the
+
+0:06:29.140,0:06:38.160
+function call the value of A now is four and
+the value of B is now three. So it is a very
+
+0:06:38.160,0:06:47.950
+powerful tool now that we have that passing
+by reference that when doing that would basically
+
+0:06:47.950,0:06:59.080
+give the function permission to access variables
+and data that originally it doesn’t have
+
+0:06:59.080,0:07:04.919
+access to. Right when the main ends that pops
+out and everything basically ends.

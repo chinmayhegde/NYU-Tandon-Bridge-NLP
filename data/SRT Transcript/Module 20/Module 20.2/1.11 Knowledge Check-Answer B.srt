@@ -1,0 +1,22 @@
+1
+00:00:00,530 --> 00:00:01,719
+That is correct.
+
+2
+00:00:01,719 --> 00:00:07,059
+The branch not equal instruction checks if
+the two registers are not equal; in our case
+
+3
+00:00:07,059 --> 00:00:10,730
+r8 is 3 and R0 is always 0.
+
+4
+00:00:10,730 --> 00:00:16,129
+So the two registers are indeed not equal,
+so the branch condition is true and the branch
+
+5
+00:00:16,129 --> 00:00:16,700
+is taken.
+

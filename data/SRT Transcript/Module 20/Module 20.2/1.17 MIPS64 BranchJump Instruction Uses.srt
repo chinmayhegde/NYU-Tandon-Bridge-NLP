@@ -1,0 +1,42 @@
+1
+00:00:00,669 --> 00:00:02,580
+The code is still not complete.
+
+2
+00:00:02,580 --> 00:00:06,810
+More specifically, we need to replace the
+Do immediate parameter with its correct value
+
+3
+00:00:06,810 --> 00:00:09,450
+in the branch if equal instruction.
+
+4
+00:00:09,450 --> 00:00:13,920
+And we need to set the correct value of Rs
+in the jump register instruction.
+
+5
+00:00:13,920 --> 00:00:19,160
+To calculate Do immediate, we can simply use
+the inverse of the func2 formula.
+
+6
+00:00:19,160 --> 00:00:24,070
+This is the formula that we use to calculate
+the target address of branch instructions.
+
+7
+00:00:24,070 --> 00:00:29,060
+Based on the inverse formula of func2, we
+use the values of the target address and the
+
+8
+00:00:29,060 --> 00:00:33,399
+address of the branch instruction to calculate
+the do immediate.
+
+9
+00:00:33,399 --> 00:00:36,109
+Our result shows that Do immediate is 1.
+

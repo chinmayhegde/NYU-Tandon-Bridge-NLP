@@ -1,0 +1,129 @@
+1
+00:00:00,489 --> 00:00:05,690
+So now that we've got the idea of a process
+down, let's make it a little bit more complex.
+
+2
+00:00:05,690 --> 00:00:12,679
+Because while a simple program might be running
+one cohesive execution cycle, or execution
+
+3
+00:00:12,679 --> 00:00:21,130
+unit, the idea of having a large program run
+as only one execution thread just doesn't
+
+4
+00:00:21,130 --> 00:00:22,539
+make sense anymore.
+
+5
+00:00:22,539 --> 00:00:27,279
+So, it was invented and we now use this concept
+known as a thread.
+
+6
+00:00:27,279 --> 00:00:32,950
+Now we recognize that there are still going
+to be processes in the system, but the idea,
+
+7
+00:00:32,950 --> 00:00:39,910
+the definition of a process, will doubt change
+to mean a unit of resource ownership.
+
+8
+00:00:39,910 --> 00:00:45,410
+The idea of a process now no longer means
+an execution path, we're now talking about
+
+9
+00:00:45,410 --> 00:00:47,210
+a unit of resource ownership.
+
+10
+00:00:47,210 --> 00:00:52,400
+So, all the files that are open inside the
+process, all the memory that's owned by the
+
+11
+00:00:52,400 --> 00:00:58,780
+process, all the IO devices for the process,
+all of that that can be owned is owned by
+
+12
+00:00:58,780 --> 00:01:00,440
+the process.
+
+13
+00:01:00,440 --> 00:01:06,259
+But there's no real execution happening in
+the process, and what I mean by that is the
+
+14
+00:01:06,259 --> 00:01:10,130
+execution is offloaded to a concept known
+as a thread.
+
+15
+00:01:10,130 --> 00:01:15,310
+So, the process becomes the unit of resource
+ownership but the thread becomes the unit
+
+16
+00:01:15,310 --> 00:01:17,070
+of execution.
+
+17
+00:01:17,070 --> 00:01:23,570
+And we might have multiple threads that run
+inside a single process and each thread has
+
+18
+00:01:23,570 --> 00:01:26,219
+its own code.
+
+19
+00:01:26,219 --> 00:01:30,420
+Although the code is memory and the memory
+is owned by the process.
+
+20
+00:01:30,420 --> 00:01:34,420
+So, there might be multiple threads that are
+running the same code, or the threads might
+
+21
+00:01:34,420 --> 00:01:36,429
+be running different code.
+
+22
+00:01:36,429 --> 00:01:40,979
+All the threads inside a process share all
+the resources of the process and that includes
+
+23
+00:01:40,979 --> 00:01:47,179
+all the memory, so threads can share the same
+memory unlike processes; processes can't share
+
+24
+00:01:47,179 --> 00:01:50,280
+memory they're restricted because they're
+in user mode.
+
+25
+00:01:50,280 --> 00:01:57,499
+But threads all exist inside of a process
+and the operating system is going to recognize
+
+26
+00:01:57,499 --> 00:02:02,569
+that multiple threads are running inside a
+process, and it's going to be able to execute
+
+27
+00:02:02,569 --> 00:02:05,649
+any one of the individual threads inside the
+process.
+

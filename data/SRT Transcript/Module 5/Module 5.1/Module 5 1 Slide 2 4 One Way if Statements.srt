@@ -1,0 +1,44 @@
+0:00:00.710,0:00:06.870
+So, we have the syntax of a one way IF statement,
+I want to show you an extension of the syntax.
+
+0:00:06.870,0:00:13.370
+So originally or formally, we can condition
+the execution of a single expression.
+
+0:00:13.370,0:00:16.360
+You can see that the body here contains a
+single expression.
+
+0:00:16.360,0:00:22.560
+In case we want to condition the execution
+of several extensions, we use this syntax
+
+0:00:22.560,0:00:29.980
+here: where we have a compound expression
+that is basically a set of instructions that
+
+0:00:29.980,0:00:32.460
+are enclosed in curly braces.
+
+0:00:32.460,0:00:40.440
+So, the syntax would go IF parenthesis and
+the condition in it, and then open the curly
+
+0:00:40.440,0:00:48.879
+brace, we have a set of instructions, again
+pushed one tab to the right and close curly
+
+0:00:48.879,0:00:51.510
+brace and then the program just continues.
+
+0:00:51.510,0:00:58.640
+So, we kind of group together a set of instructions
+into a single compound expression using these
+
+0:00:58.640,0:01:06.680
+curly braces syntax and this way we can condition
+the execution of a set of instructions.
+
+0:01:06.680,0:01:10.280
+A lot of times we use this kind of syntax.

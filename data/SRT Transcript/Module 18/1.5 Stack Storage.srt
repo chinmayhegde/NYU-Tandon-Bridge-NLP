@@ -1,0 +1,216 @@
+1
+00:00:00,669 --> 00:00:04,520
+So we're going to have to store all the information
+from the stack so the user is going to give
+
+2
+00:00:04,520 --> 00:00:10,000
+us a ton of information through push operations
+and we're going to have to put that information
+
+3
+00:00:10,000 --> 00:00:14,519
+somewhere and the two data structures that
+we've worked with so far that we can use as
+
+4
+00:00:14,519 --> 00:00:17,850
+fundamental storage are the list and the array.
+
+5
+00:00:17,850 --> 00:00:23,220
+So we have to decide if we want to store the
+information that's given to us as a list in
+
+6
+00:00:23,220 --> 00:00:27,269
+which case we have a linked list with each
+node pointing to the next node or as an array
+
+7
+00:00:27,269 --> 00:00:33,320
+in which case we have sequential storage of
+a limited size where we can add on.
+
+8
+00:00:33,320 --> 00:00:38,600
+So if we take a look at the comparison between
+the two methods that we could use and we look
+
+9
+00:00:38,600 --> 00:00:40,719
+at each individual function.
+
+10
+00:00:40,719 --> 00:00:46,760
+You'll see that the list for example the push
+operation is a constant time operation big
+
+11
+00:00:46,760 --> 00:00:47,989
+O of one.
+
+12
+00:00:47,989 --> 00:00:52,339
+Because every time you add to the list all
+we're going to do is create a new node we
+
+13
+00:00:52,339 --> 00:00:55,120
+are just going to put it on the front of the
+list and we're going to link it to the next
+
+14
+00:00:55,120 --> 00:00:56,280
+node in the list.
+
+15
+00:00:56,280 --> 00:01:01,899
+So a push operation is actually very simple
+and it doesn't take anything more than constant
+
+16
+00:01:01,899 --> 00:01:06,119
+time we don't care if there's ten thousand
+of these elements already on the stack the
+
+17
+00:01:06,119 --> 00:01:09,850
+next one that we're going to push isn’t
+going to take any additional amount of time.
+
+18
+00:01:09,850 --> 00:01:16,340
+As a comparison we have the array and if we
+do a push on an array sometimes it's constant
+
+19
+00:01:16,340 --> 00:01:23,080
+time if we have enough space left on the array
+and sometimes it's going to be a linear time
+
+20
+00:01:23,080 --> 00:01:28,159
+of the big O of N. And that's because we may
+have to expand that array if we ran out of
+
+21
+00:01:28,159 --> 00:01:33,090
+space we may have to expand that array to
+create more space.
+
+22
+00:01:33,090 --> 00:01:37,359
+So sometimes it's going to be constant time
+and sometimes it's going to be linear time
+
+23
+00:01:37,359 --> 00:01:39,670
+which creates a little bit of inconsistency.
+
+24
+00:01:39,670 --> 00:01:44,080
+If we need that consistency then that would
+negate the possibility of using an array.
+
+25
+00:01:44,080 --> 00:01:48,200
+As far as a pop it's always going to be a
+big O of one it is always going to be a constant
+
+26
+00:01:48,200 --> 00:01:52,579
+time removal from the list we just throw away
+the top node.
+
+27
+00:01:52,579 --> 00:01:57,740
+From the array we could just reduce the size
+by one the top element accessing the top element
+
+28
+00:01:57,740 --> 00:02:01,520
+should always be constant time and that's
+really fundamental that’s important we want
+
+29
+00:02:01,520 --> 00:02:02,600
+that.
+
+30
+00:02:02,600 --> 00:02:06,520
+From the list we would just access that top
+element through the head pointer from the
+
+31
+00:02:06,520 --> 00:02:13,319
+array we would just access the zero element
+or if we wanted to size minus one element.
+
+32
+00:02:13,319 --> 00:02:19,310
+For clear it's always going to be constant
+time for the array but it's going to be linear
+
+33
+00:02:19,310 --> 00:02:25,390
+time for the linked list and then with is
+empty we always have just the size parameter
+
+34
+00:02:25,390 --> 00:02:27,560
+we can always check to see if the size zero.
+
+35
+00:02:27,560 --> 00:02:32,080
+And for the size well the array of course
+is going to be a constant time.
+
+36
+00:02:32,080 --> 00:02:35,180
+How can we make the linked list be constant
+time?
+
+37
+00:02:35,180 --> 00:02:40,590
+Well since we know how many push operations
+there is going to be we can simply use the
+
+38
+00:02:40,590 --> 00:02:45,989
+size parameter we can create an integer and
+store that size parameter so that we always
+
+39
+00:02:45,989 --> 00:02:50,420
+have it in a constant time access so we won't
+have to run through the list and actually
+
+40
+00:02:50,420 --> 00:02:52,590
+calculate how many elements are on the list.
+
+41
+00:02:52,590 --> 00:02:57,209
+We’ll just keep an integer in the in the
+class that records how many elements are actually
+
+42
+00:02:57,209 --> 00:02:59,030
+in the list at any given time.
+
+43
+00:02:59,030 --> 00:03:05,760
+So if you take a look at these we can compare
+easily how the list works with how the array
+
+44
+00:03:05,760 --> 00:03:10,410
+works and we have now the tools to understand
+the performance benefits.
+
+45
+00:03:10,410 --> 00:03:14,319
+So we can choose between either the list or
+the array.
+

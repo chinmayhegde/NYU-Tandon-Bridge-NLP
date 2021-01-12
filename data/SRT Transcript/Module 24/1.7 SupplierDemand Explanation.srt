@@ -1,0 +1,210 @@
+1
+00:00:00,840 --> 00:00:06,280
+So the code that I'm going to show you right
+now is what we call a supplier demander example
+
+2
+00:00:06,280 --> 00:00:12,670
+and the supplier demander example really just
+has multiple threads running of either a supplier
+
+3
+00:00:12,670 --> 00:00:14,440
+thread or demander thread.
+
+4
+00:00:14,440 --> 00:00:18,380
+In fact we're going to have multiple instances
+of both suppliers and demanders.
+
+5
+00:00:18,380 --> 00:00:22,000
+So, think about a factory for example where
+things are coming off the production line
+
+6
+00:00:22,000 --> 00:00:25,440
+there's a lot of people producing things,
+there's a lot of people taking those things
+
+7
+00:00:25,440 --> 00:00:28,090
+and moving them on to the next stage in the
+production.
+
+8
+00:00:28,090 --> 00:00:33,170
+So, we have both supplier and demander one
+of the important considerations here and why
+
+9
+00:00:33,170 --> 00:00:37,970
+this has a critical section is that there
+is a shared variable there what we're calling
+
+10
+00:00:37,970 --> 00:00:41,510
+the buffer and the buffer count is actually
+two shared variables there.
+
+11
+00:00:41,510 --> 00:00:45,470
+The buffer count tells us how many items there
+really are in the buffer.
+
+12
+00:00:45,470 --> 00:00:49,110
+Now you recognize from the code that the buffer
+can store five hundred items.
+
+13
+00:00:49,110 --> 00:00:52,900
+The buffer count let's say it's initialized
+at zero there's nothing in the buffer when
+
+14
+00:00:52,900 --> 00:00:58,590
+the morning starts the suppliers come in and
+they start producing things that go into the
+
+15
+00:00:58,590 --> 00:00:59,590
+buffer.
+
+16
+00:00:59,590 --> 00:01:03,710
+Now the supplier just has a simple piece of
+code that says as long as I'm not finished
+
+17
+00:01:03,710 --> 00:01:06,700
+then I'll put something in the buffer.
+
+18
+00:01:06,700 --> 00:01:12,299
+Now the reason that we have that while not
+done is because it's possible that the buffer
+
+19
+00:01:12,299 --> 00:01:16,579
+is full and if the buffer is full we want
+this thread to just kind of pause, pause for
+
+20
+00:01:16,579 --> 00:01:21,340
+maybe half a second and let one of the demanders
+take something out of the buffer so it makes
+
+21
+00:01:21,340 --> 00:01:24,240
+space and then we can put this thing in the
+buffer.
+
+22
+00:01:24,240 --> 00:01:27,889
+We can update the buffer count and then we
+can be finished.
+
+23
+00:01:27,889 --> 00:01:32,079
+So the suppliers a very simple piece of code
+the demander is almost the same thing except
+
+24
+00:01:32,079 --> 00:01:34,670
+it checks to see that there's actually something
+in the buffer.
+
+25
+00:01:34,670 --> 00:01:38,860
+So the while not done here is for checking
+to make sure that there actually is something
+
+26
+00:01:38,860 --> 00:01:43,180
+in the buffer rather than making sure that
+the buffer is full as long as there is something
+
+27
+00:01:43,180 --> 00:01:46,960
+in the buffer we’ll decrement the buffer
+count and return the item that was in the
+
+28
+00:01:46,960 --> 00:01:48,469
+buffer at the position.
+
+29
+00:01:48,469 --> 00:01:51,739
+So that's the supplier demander idea.
+
+30
+00:01:51,739 --> 00:01:56,239
+Now we do have multiple supplier threads and
+multiple demander threads they're all active
+
+31
+00:01:56,239 --> 00:01:57,809
+they're all running in the system.
+
+32
+00:01:57,809 --> 00:02:03,459
+However we've got a uni processor system so
+we can only run one thread at a time we choose
+
+33
+00:02:03,459 --> 00:02:08,099
+either supplier or we choose demander and
+we have to remember that there are still going
+
+34
+00:02:08,099 --> 00:02:11,739
+to be interrupts they're still going to be
+preemption there still going to be situations
+
+35
+00:02:11,739 --> 00:02:16,569
+where the thread is interrupted and we don't
+know when it's going to be interrupted.
+
+36
+00:02:16,569 --> 00:02:22,989
+Now the core idea of this is that the buffer
+count should never exceed five hundred.
+
+37
+00:02:22,989 --> 00:02:26,909
+We should never exceed five hundred because
+there are only five hundred places to store
+
+38
+00:02:26,909 --> 00:02:28,100
+in the buffer.
+
+39
+00:02:28,100 --> 00:02:34,489
+So we can recognize that the buffer count
+can get as high as five hundred but it can't
+
+40
+00:02:34,489 --> 00:02:37,069
+ever exceed five hundred.
+
+41
+00:02:37,069 --> 00:02:41,849
+Unfortunately as we'll see because of asynchrony
+because we haven't taken care of the fact
+
+42
+00:02:41,849 --> 00:02:46,690
+that the code is protected by a critical section
+that buffer count can easily go higher than
+
+43
+00:02:46,690 --> 00:02:47,690
+five hundred.
+
+44
+00:02:47,690 --> 00:02:47,694
+So we'll see that.
+

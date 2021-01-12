@@ -1,0 +1,105 @@
+0:00:00.640,0:00:03.190
+Hi there hope you are having a great day.
+
+0:00:03.190,0:00:08.029
+Let’s recap what we’ve seen so far.
+
+0:00:08.029,0:00:13.970
+So we’ve talked about three fundamental
+constructs of C++.
+
+0:00:13.970,0:00:17.820
+We’ve talked about data expressions control
+flow.
+
+0:00:17.820,0:00:24.820
+Regarding data we’ve covered a few built
+in data types such as int unsigned int float
+
+0:00:24.820,0:00:27.519
+double char bool all of that.
+
+0:00:27.519,0:00:31.560
+Regarding expressions we’ve talked about
+arithmetic expressions we’ve talked about
+
+0:00:31.560,0:00:33.350
+Boolean expressions.
+
+0:00:33.350,0:00:41.160
+And when talking about control flow so we’ve
+seen the default sequential flow where statements
+
+0:00:41.160,0:00:47.609
+are executed one after the other and we’ve
+also talked about branching such as IFs IF
+
+0:00:47.609,0:00:49.800
+ELSE and so on.
+
+0:00:49.800,0:01:00.000
+Let’s try to use all of that in order to
+solve actually it seems a very simple problem.
+
+0:01:00.000,0:01:06.880
+We would read positive int n from the user
+and print the numbers from one up to n.
+
+0:01:06.880,0:01:15.020
+So for instance if the user enters I don’t
+know 4 then the program would respond by printing
+
+0:01:15.020,0:01:18.500
+1 2 3 4.
+
+0:01:18.500,0:01:23.119
+Ok let’s try thinking how we can do all
+of that.
+
+0:01:23.119,0:01:32.049
+So it seems like sequential flow can’t really
+work so we can’t do cout 1 cout 2 cout 3
+
+0:01:32.049,0:01:35.369
+cout because we don’t know where to stop.
+
+0:01:35.369,0:01:39.460
+And actually branching also seems kind of
+impractical.
+
+0:01:39.460,0:01:45.700
+I don’t know maybe we can do something like
+if n equals 1 cout 1.
+
+0:01:45.700,0:01:49.409
+Else if n equals 2 cout 1 and 2.
+
+0:01:49.409,0:01:58.369
+Else if n equals 3 cout 1 2 and 3 and so on
+but since our program needs to have a finite
+
+0:01:58.369,0:02:06.479
+amount of lines of code we can’t make it
+work for all inputs.
+
+0:02:06.479,0:02:17.390
+So what we have so far seems not enough in
+order to implement this kind of simple requirement.
+
+0:02:17.390,0:02:24.459
+And to do that we would need a new kind of
+control flow that would help us iterate and
+
+0:02:24.459,0:02:26.980
+repeat statements over and over.
+
+0:02:26.980,0:02:31.569
+And that’s basically what we are going to
+be talking about today.
+
+0:02:31.569,0:02:41.510
+I am going to show you two statements for
+repetitive executions for iterative executions.
+
+0:02:41.510,0:02:43.360
+The first one is going to be a while.

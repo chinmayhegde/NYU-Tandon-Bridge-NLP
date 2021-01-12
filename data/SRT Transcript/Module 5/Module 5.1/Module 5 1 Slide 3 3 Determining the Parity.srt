@@ -1,0 +1,10 @@
+0:00:00.510,0:00:06.010
+So, now that we have the if-else statement
+let's try to implement our program here.
+
+0:00:06.010,0:00:12.030
+Again, we'll read a positive integer and figure
+out whether it's even or odd.
+
+0:00:12.030,0:00:12.950
+Let's go and implement it.

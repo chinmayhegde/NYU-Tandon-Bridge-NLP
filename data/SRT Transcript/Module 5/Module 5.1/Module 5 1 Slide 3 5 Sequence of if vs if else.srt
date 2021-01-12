@@ -1,0 +1,140 @@
+0:00:00.550,0:00:05.910
+In our previous implementation, when we wanted
+to determine whether the input was an even
+
+0:00:05.910,0:00:12.100
+or an odd number, we basically read the input
+and then divided it by two, looked to the
+
+0:00:12.100,0:00:20.519
+remainder and checked whether it's zero or
+non-zero and printed even or odd respectively.
+
+0:00:20.519,0:00:28.189
+We used the if else statement and it makes
+a lot of sense because if the remainder equals
+
+0:00:28.189,0:00:34.579
+to zero, it means it's even and if it's not
+equal to zero, if it's not even, than it is
+
+0:00:34.579,0:00:35.780
+odd.
+
+0:00:35.780,0:00:40.670
+I think I said at the beginning that we can,
+we don't really have to use the if- else,
+
+0:00:40.670,0:00:46.199
+the two-way if statement we can use of a one
+way if as well.
+
+0:00:46.199,0:00:49.699
+So, take a look at this implementation here.
+
+0:00:49.699,0:00:56.980
+So, once again we read the user input and
+then we kind of check if user input mod two
+
+0:00:56.980,0:01:03.790
+equals zero, we print even after that we check
+if the user input mod two equals one, we print
+
+0:01:03.790,0:01:04.790
+odd.
+
+0:01:04.790,0:01:12.030
+So, instead of having an if else statement,
+we have a sequence of two one way if statement;
+
+0:01:12.030,0:01:19.620
+If user input mod two equals zero, print even,
+if user input mod two equals one print or
+
+0:01:19.620,0:01:21.510
+C- out is odd.
+
+0:01:21.510,0:01:29.940
+So, first I would say that both of these versions
+are good, they would both work, but then when
+
+0:01:29.940,0:01:39.700
+we have to choose either to implement the
+first or the second, I strongly for the first
+
+0:01:39.700,0:01:41.600
+version of the if else.
+
+0:01:41.600,0:01:48.250
+And let me try to say few things why that
+IF ELSE version is better than the sequence
+
+0:01:48.250,0:01:50.000
+of two if.
+
+0:01:50.000,0:01:58.060
+So in an if else statement, we can assure
+that exactly one of the bodies would be executed;
+
+0:01:58.060,0:02:02.951
+if the Boolean condition is true the first
+body would be executed, if the Boolean expression
+
+0:02:02.951,0:02:05.530
+is false then the second body would be executed.
+
+0:02:05.530,0:02:10.420
+So exactly one of the bodies would be executed
+in an IF-else statement.
+
+0:02:10.420,0:02:18.220
+We cannot say the same when we have a sequence
+of ifs, now in this case it would work and
+
+0:02:18.220,0:02:24.710
+there is not any issue in exactly one of the
+bodies would be executed too, but formally
+
+0:02:24.710,0:02:32.440
+or generally if we have a sequence of two
+IF than maybe none of the Boolean expressions
+
+0:02:32.440,0:02:33.440
+would be true.
+
+0:02:33.440,0:02:38.890
+In that case, nobody would be executed zero
+bodies would be executed.
+
+0:02:38.890,0:02:45.750
+If both Boolean expressions in a sequence
+of IF are true then both bodies would be executed,
+
+0:02:45.750,0:02:49.370
+so two bodies would be executed.
+
+0:02:49.370,0:02:55.970
+And obviously if one of the Boolean expressions
+is true then a single body would be executed.
+
+0:02:55.970,0:03:04.650
+So if we have a sequence of ifs, there could
+be cases where not exactly one body would
+
+0:03:04.650,0:03:05.670
+be executed.
+
+0:03:05.670,0:03:08.550
+That's not the same in an IF-else statement.
+
+0:03:08.550,0:03:16.070
+Now if we want to express a computation, a
+process where we want to assure that one thing
+
+0:03:16.070,0:03:20.990
+would happen, an if-else statement would be
+a better choice.
+
+0:03:20.990,0:03:25.400
+That's why I would choose an if-else statement
+here in order to implement this program.

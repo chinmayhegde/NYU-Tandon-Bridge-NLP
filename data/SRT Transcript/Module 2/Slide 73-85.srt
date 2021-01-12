@@ -1,0 +1,95 @@
+1
+00:00:00,650 --> 00:00:08,910
+You can see that since our computer uses zeros
+and ones, different number systems use different
+
+2
+00:00:08,910 --> 00:00:10,219
+symbols for the digits.
+
+3
+00:00:10,219 --> 00:00:15,879
+If we want to use only zeros and ones, base
+two would do exactly that.
+
+4
+00:00:15,879 --> 00:00:20,699
+For base two, the only digits we would need
+to use is two and one, because two objects
+
+5
+00:00:20,699 --> 00:00:21,789
+are grouped together.
+
+6
+00:00:21,789 --> 00:00:28,419
+Let’s start counting in base two, in the
+binary base system, and so it's zero, one
+
+7
+00:00:28,419 --> 00:00:30,810
+after that would come ten.
+
+8
+00:00:30,810 --> 00:00:37,000
+We're grouping the two ones into a single
+binary ten and no additional ones, after that
+
+9
+00:00:37,000 --> 00:00:38,450
+we would have eleven.
+
+10
+00:00:38,450 --> 00:00:40,040
+What comes after eleven?
+
+11
+00:00:40,040 --> 00:00:46,370
+100 right, because we're grouping two ones
+into a ten then we would have two ten's that
+
+12
+00:00:46,370 --> 00:00:48,370
+would be grouped into one hundred.
+
+13
+00:00:48,370 --> 00:00:54,980
+After that we would have 101, 110, 111 and
+then 1,000.
+
+14
+00:00:54,980 --> 00:00:58,760
+See how fast we got to 1,000.
+
+15
+00:00:58,760 --> 00:01:03,820
+Actually it makes sense because we group much
+more often; every two elements are grouped
+
+16
+00:01:03,820 --> 00:01:04,820
+together.
+
+17
+00:01:04,820 --> 00:01:09,830
+Not like in the decimal number system that
+ten objects would be needed to grouped together
+
+18
+00:01:09,830 --> 00:01:14,500
+to a ten and then only 10 tens would be grouped
+to a hundred in only 10 hundreds would be
+
+19
+00:01:14,500 --> 00:01:15,610
+grouped to a thousand.
+
+20
+00:01:15,610 --> 00:01:22,960
+Here, much more often we are groupings, our
+numbers grow along much faster.
+
+21
+00:01:22,960 --> 00:01:26,170
+So, we can keep on counting in binary.
+

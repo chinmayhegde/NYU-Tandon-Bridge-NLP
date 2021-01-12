@@ -1,0 +1,14 @@
+1
+00:00:00,510 --> 00:00:07,080
+Remember: A is just a register within the
+CPU that holds the value of Rs.
+
+2
+00:00:07,080 --> 00:00:12,820
+And Zero is a single-bit flag that is raised
+to one when the result of an ALU operation
+
+3
+00:00:12,820 --> 00:00:13,440
+is zero.
+

@@ -1,0 +1,14 @@
+1
+00:00:00,570 --> 00:00:05,740
+Remember, in a fully associative cache, a
+cache block is replaced only if all the cache
+
+2
+00:00:05,740 --> 00:00:08,040
+blocks are occupied.
+
+3
+00:00:08,040 --> 00:00:11,290
+If there is a free block, we can put it in
+there.
+

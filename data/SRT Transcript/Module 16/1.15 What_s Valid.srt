@@ -1,0 +1,120 @@
+1
+00:00:00,700 --> 00:00:04,779
+So we understand that now we're going to do
+this three step process of skipping leading
+
+2
+00:00:04,779 --> 00:00:09,870
+whitespace characters, reading invalid characters,
+and stopping when we reach trailing whitespace
+
+3
+00:00:09,870 --> 00:00:14,700
+or an invalid character and the input operator
+is going to do that for you automatically;
+
+4
+00:00:14,700 --> 00:00:19,110
+We just need to know and understand what's
+happening internally inside that operator.
+
+5
+00:00:19,110 --> 00:00:24,280
+So what constitutes a valid character really
+depends on the data type that we're trying
+
+6
+00:00:24,280 --> 00:00:25,450
+to read into.
+
+7
+00:00:25,450 --> 00:00:29,480
+Remember the operation is something like in
+file our temp.
+
+8
+00:00:29,480 --> 00:00:34,580
+So what's the data type of temp and that really
+defines what valid characters are.
+
+9
+00:00:34,580 --> 00:00:39,700
+Now temp is a string then anything goes any
+characters a valid character and we're going
+
+10
+00:00:39,700 --> 00:00:46,420
+to read in a word at a time if you will, so
+effectively if we had a somebodies name on
+
+11
+00:00:46,420 --> 00:00:51,700
+a line it would read in something like Daniel
+and then stop at the space between the first
+
+12
+00:00:51,700 --> 00:00:52,700
+in the last name.
+
+13
+00:00:52,700 --> 00:00:57,010
+And then the second read in operation would
+read the last name like Katz then that's my
+
+14
+00:00:57,010 --> 00:00:58,010
+name.
+
+15
+00:00:58,010 --> 00:01:03,200
+So we need two read in operations to read
+that in; that's for strings.
+
+16
+00:01:03,200 --> 00:01:08,250
+Now what about integers; we can't read in
+letters into an integer so a letter would
+
+17
+00:01:08,250 --> 00:01:12,639
+be constituting an invalid character for an
+integer.
+
+18
+00:01:12,639 --> 00:01:14,920
+Integers can only accept whole numbers.
+
+19
+00:01:14,920 --> 00:01:20,709
+There's no period a period is an invalid character
+if we're expecting to read in is an integer.
+
+20
+00:01:20,709 --> 00:01:26,420
+But for a double, a period is a valid character
+but if we have two periods that second period
+
+21
+00:01:26,420 --> 00:01:28,939
+constitutes an invalid character.
+
+22
+00:01:28,939 --> 00:01:35,959
+And for a character, a char the first character
+is valid but a second character is invalid.
+
+23
+00:01:35,959 --> 00:01:42,639
+So whatever the data type is C++, will process
+the data type appropriately, will process
+
+24
+00:01:42,639 --> 00:01:48,720
+the input appropriate for that data type and
+its skips over only the invalid characters
+
+25
+00:01:48,720 --> 00:01:51,369
+rather it's stops when it reads the invalid
+characters.
+

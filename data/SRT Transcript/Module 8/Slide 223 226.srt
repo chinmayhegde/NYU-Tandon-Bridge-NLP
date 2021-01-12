@@ -1,0 +1,35 @@
+0:00:00.640,0:00:02.600
+Let’s try to write another program.
+
+0:00:02.600,0:00:09.830
+Let’s write a program that reads a positive
+integer num and prints both the numbers of
+
+0:00:09.830,0:00:12.200
+digits in num how many digits.
+
+0:00:12.200,0:00:15.710
+And what’s the total sum of all of these
+digits.
+
+0:00:15.710,0:00:19.990
+We’ve done that a few times but now let’s
+try to do it using functions.
+
+0:00:19.990,0:00:24.510
+For example an execution could look something
+like please enter a positive integer.
+
+0:00:24.510,0:00:30.390
+So user says three seventy five and then the
+program would respond by saying three seventy
+
+0:00:30.390,0:00:32.710
+five has three digits right.
+
+0:00:32.710,0:00:34.480
+Three seven five three digits.
+
+0:00:34.480,0:00:37.010
+And their sum is fifteen three plus seven
+plus five.

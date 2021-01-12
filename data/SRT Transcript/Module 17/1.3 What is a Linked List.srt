@@ -1,0 +1,146 @@
+1
+00:00:00,750 --> 00:00:05,720
+The linked list data structure is one of the
+fundamental data structures in computer science.
+
+2
+00:00:05,720 --> 00:00:11,530
+It’s basic idea is that it has two parts
+each: it's made up of nodes and each node
+
+3
+00:00:11,530 --> 00:00:13,320
+has two parts.
+
+4
+00:00:13,320 --> 00:00:18,230
+The first part is a data section which could
+be any data type, but that's the component,
+
+5
+00:00:18,230 --> 00:00:20,450
+that's the element that we're going to store.
+
+6
+00:00:20,450 --> 00:00:24,590
+If we were talking about an array this would
+be the individual item in an array but it's
+
+7
+00:00:24,590 --> 00:00:26,620
+not so keep that in mind.
+
+8
+00:00:26,620 --> 00:00:31,429
+So we've got this node that has a data section
+and it also has at least one pointer, if not
+
+9
+00:00:31,429 --> 00:00:36,520
+multiple pointers to the next sections or
+to the rest of the list.
+
+10
+00:00:36,520 --> 00:00:44,250
+And the idea is that the pointers are connected
+in a form of a chain, so that we have a pointer
+
+11
+00:00:44,250 --> 00:00:47,690
+to the first node in the list and we call
+that the head pointer.
+
+12
+00:00:47,690 --> 00:00:52,570
+We record the head pointer to the first node
+of the list and then the first node of the
+
+13
+00:00:52,570 --> 00:00:57,000
+list’s next pointer will point to the second
+node of the list, and the second node of the
+
+14
+00:00:57,000 --> 00:01:00,930
+list’s next pointer will point to the third
+node of the list, and so on and so forth and
+
+15
+00:01:00,930 --> 00:01:02,239
+so on and so forth.
+
+16
+00:01:02,239 --> 00:01:06,840
+When we get to the end, we have what's called
+a null pointer; so we have the null which
+
+17
+00:01:06,840 --> 00:01:08,390
+is an indication.
+
+18
+00:01:08,390 --> 00:01:12,220
+So when the next pointers pointing at null
+that's an indication, that this is the last
+
+19
+00:01:12,220 --> 00:01:13,500
+node on the list.
+
+20
+00:01:13,500 --> 00:01:20,880
+So these nodes are tied together through one
+direction at least, where each node points
+
+21
+00:01:20,880 --> 00:01:22,750
+to the next node.
+
+22
+00:01:22,750 --> 00:01:27,900
+Now since this is only the most basic form
+of the linked list, in reality what's usually
+
+23
+00:01:27,900 --> 00:01:33,009
+stored is both the next pointer and a previous
+pointer; so you may end up having two pointers
+
+24
+00:01:33,009 --> 00:01:36,840
+in the in the linked list structure and of
+course the previous pointer just points at
+
+25
+00:01:36,840 --> 00:01:42,700
+the node before this node, and of course the
+before the first node would be a null pointer.
+
+26
+00:01:42,700 --> 00:01:47,040
+So it's sort of like a linked list in reverse:
+we've got the head pointer that points of
+
+27
+00:01:47,040 --> 00:01:50,382
+the first node, the first node points at the
+second node, the second node points at the
+
+28
+00:01:50,382 --> 00:01:52,380
+third node and so on and so forth.
+
+29
+00:01:52,380 --> 00:01:57,930
+So this is the idea of how we can store a
+large amount of data in a linked list and
+
+30
+00:01:57,930 --> 00:02:02,689
+we're keeping them in individual nodes; remember
+these are node pointers and they're pointing
+
+31
+00:02:02,689 --> 00:02:04,100
+at individual nodes.
+

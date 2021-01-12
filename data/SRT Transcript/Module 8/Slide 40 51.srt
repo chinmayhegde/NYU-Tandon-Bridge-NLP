@@ -1,0 +1,227 @@
+0:00:00.470,0:00:06.450
+If we have our main here in addition to the
+main since we are calling factorial in this
+
+0:00:06.450,0:00:08.139
+case even three times.
+
+0:00:08.139,0:00:13.160
+We will need to give the implementation of
+factorial the function factorial.
+
+0:00:13.160,0:00:16.279
+So now we have two things in our program.
+
+0:00:16.279,0:00:21.759
+The main which is by the way seems very much
+syntactically as a function we will see a
+
+0:00:21.759,0:00:25.009
+few words about it in one of our future modules.
+
+0:00:25.009,0:00:30.779
+So we have the main function and then we have
+the factorial function.
+
+0:00:30.779,0:00:33.320
+And let’s see how this program basically
+executes.
+
+0:00:33.320,0:00:41.070
+So first we read n and k from the user cout
+please enter n and k cin n and k.
+
+0:00:41.070,0:00:50.300
+And then we have a call to factorial basically
+jumping to the code of factorial assigning
+
+0:00:50.300,0:00:57.530
+num the local variable num with the value
+of n doing the calculation of n factorial.
+
+0:00:57.530,0:01:02.560
+And returning res back to the main back to
+n fact.
+
+0:01:02.560,0:01:09.130
+After doing that we call factorial again with
+the value of k associated to num.
+
+0:01:09.130,0:01:16.640
+Jumping to the factorial call doing the calculations
+and going back to assigning the resulted value
+
+0:01:16.640,0:01:21.690
+to the factRes back to k fact.
+
+0:01:21.690,0:01:27.580
+And then we are calling factorial for n minus
+k jumping to factorial calculating the for
+
+0:01:27.580,0:01:33.030
+loop a third time now and returning the result
+back to n minus k fact.
+
+0:01:33.030,0:01:39.960
+And then we can calculate the combination
+there of n fact over k fact times n minus
+
+0:01:39.960,0:01:44.200
+k fact into k combinations and printing the
+output.
+
+0:01:44.200,0:01:50.869
+So you can see that we are calling this function
+factorial several times.
+
+0:01:50.869,0:01:56.100
+Makes it very tempting to define this factorial
+function.
+
+0:01:56.100,0:02:03.210
+We implement the algorithm of calculating
+factorial only once but we can use it over
+
+0:02:03.210,0:02:04.210
+and over.
+
+0:02:04.210,0:02:06.909
+One of the advantages of using a function.
+
+0:02:06.909,0:02:13.260
+Also the name factorial is another great advantage
+here because instead of having a for loop
+
+0:02:13.260,0:02:19.030
+three times we are having word name factorial
+appear three times.
+
+0:02:19.030,0:02:24.700
+Make it much more readable and clear exactly
+what we are doing here.
+
+0:02:24.700,0:02:33.560
+And this way we call this function over and
+over and calculate the factorial of n of k
+
+0:02:33.560,0:02:35.060
+and of n minus k.
+
+0:02:35.060,0:02:38.900
+Let’s take a closer look here at this program.
+
+0:02:38.900,0:02:44.459
+It seems like we are calling factorial over
+and over which is a great thing.
+
+0:02:44.459,0:02:48.770
+Each time passing a different value as our
+local num.
+
+0:02:48.770,0:02:53.160
+First time we are calling factorial for n
+second time factorial with k third time factorial
+
+0:02:53.160,0:02:54.209
+with n minus k.
+
+0:02:54.209,0:03:00.489
+So each time num our local variable and the
+factorial function gets a different value.
+
+0:03:00.489,0:03:05.300
+For example if n and k are five and three
+first time we will call factorial with num
+
+0:03:05.300,0:03:06.459
+equals five.
+
+0:03:06.459,0:03:10.540
+Second time we will call factorial with num
+equals three and next in the third time we
+
+0:03:10.540,0:03:14.300
+will call factorial with num equals five minus
+three which is two.
+
+0:03:14.300,0:03:23.690
+And the factorial would be executed the right
+amount of iterations and each time when factorial
+
+0:03:23.690,0:03:29.450
+is done it goes back to where we called it
+from and do the assignment.
+
+0:03:29.450,0:03:35.580
+So basically each time we call factorial we
+jump to the beginning of the factorial function
+
+0:03:35.580,0:03:36.820
+same position.
+
+0:03:36.820,0:03:40.560
+And each time we return from factorial we
+go back to where we came from.
+
+0:03:40.560,0:03:45.290
+So first time we called factorial we came
+back to the first assignment.
+
+0:03:45.290,0:03:48.420
+Second time we called factorial we went back
+to the second assignment.
+
+0:03:48.420,0:03:51.620
+And third time we called factorial we went
+back to the third assignment.
+
+0:03:51.620,0:04:03.480
+You can see that using functions calling functions
+is some other way of controlling the flow
+
+0:04:03.480,0:04:04.590
+of our program.
+
+0:04:04.590,0:04:09.950
+It is not sequential right so when we are
+calling factorial we are not going right back
+
+0:04:09.950,0:04:12.450
+or right to the next instructions.
+
+0:04:12.450,0:04:18.470
+We are jumping to a totally different position
+in our code doing some instructions over there
+
+0:04:18.470,0:04:21.030
+and then jumping back to where we came from.
+
+0:04:21.030,0:04:27.780
+That happens or in order to do that we would
+need to figure out a way to manage this kind
+
+0:04:27.780,0:04:29.380
+of control flow.
+
+0:04:29.380,0:04:32.460
+So jumping to the beginning of the function
+that’s easy.
+
+0:04:32.460,0:04:36.320
+We always each call jumps to the exact same
+position in the code to the beginning of the
+
+0:04:36.320,0:04:37.320
+function.
+
+0:04:37.320,0:04:43.940
+But in order to return to the right place
+we would need some kind of mechanism to save
+
+0:04:43.940,0:04:49.020
+and to store the position where we would need
+to jump back to.
+
+0:04:49.020,0:04:50.780
+In a few minutes we will see exactly how we
+do that.

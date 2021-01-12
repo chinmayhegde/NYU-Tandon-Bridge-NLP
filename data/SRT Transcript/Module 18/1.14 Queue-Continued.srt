@@ -1,0 +1,140 @@
+1
+00:00:00,870 --> 00:00:04,600
+So we’ve come to the conclusion, I think,
+that we are going to use a linked list again
+
+2
+00:00:04,600 --> 00:00:06,790
+for this data structure.
+
+3
+00:00:06,790 --> 00:00:11,240
+And the implementation here is going to be
+really similar to that of a stack; we're going
+
+4
+00:00:11,240 --> 00:00:12,840
+to have just a couple of minor changes.
+
+5
+00:00:12,840 --> 00:00:18,160
+Now, instead of inserting into and removing
+from the same point, either the front of the
+
+6
+00:00:18,160 --> 00:00:20,720
+back, we're going to be removing or inserting
+from different points.
+
+7
+00:00:20,720 --> 00:00:24,490
+So enqueue is going to insert on to the end
+of the dequeue is going to remove from the
+
+8
+00:00:24,490 --> 00:00:25,490
+front of the queue.
+
+9
+00:00:25,490 --> 00:00:29,430
+We really have to make sure that the underlying
+data structure of the linked list has both
+
+10
+00:00:29,430 --> 00:00:34,390
+head and tail pointers, so that way we can
+do those constant time insertions.
+
+11
+00:00:34,390 --> 00:00:39,640
+If we have something simple like a singularly
+linked list where we only have a head pointer,
+
+12
+00:00:39,640 --> 00:00:46,100
+then insertion is going to require us to iterate
+or recursively go through the entire linked
+
+13
+00:00:46,100 --> 00:00:50,999
+list so that we can find the end and insert
+on to the end and that's too costly.
+
+14
+00:00:50,999 --> 00:00:55,710
+It's far simpler to keep a tail pointer in
+addition to the head pointer so that we know
+
+15
+00:00:55,710 --> 00:01:00,149
+where the end of the list is and then we can
+insert on to the end of the list, and we can
+
+16
+00:01:00,149 --> 00:01:01,499
+remove from the front of the list.
+
+17
+00:01:01,499 --> 00:01:06,720
+So it's very possible to use a singularly
+linked list in this structure.
+
+18
+00:01:06,720 --> 00:01:10,900
+We're going to just, again, use the STL list
+class to make it easy.
+
+19
+00:01:10,900 --> 00:01:15,220
+But the STL list class is a doubly linked
+list and of course there's overhead in that.
+
+20
+00:01:15,220 --> 00:01:19,400
+If we want to save some memory, we could create
+a singularly linked list where we have the
+
+21
+00:01:19,400 --> 00:01:24,720
+head pointer pointing to the next element,
+in other words the oldest element in the list,
+
+22
+00:01:24,720 --> 00:01:27,720
+and we can have the tail pointer pointing
+at the last element.
+
+23
+00:01:27,720 --> 00:01:32,920
+When we do a removal, we just advance the
+head pointer to the next element remove that
+
+24
+00:01:32,920 --> 00:01:37,170
+first element and when we do an insertion
+we just make the tail pointer point to the
+
+25
+00:01:37,170 --> 00:01:42,140
+new node and then we can connect the previous
+last node to the new node.
+
+26
+00:01:42,140 --> 00:01:47,380
+So we have options for doing the queue as
+a singularly linked list.
+
+27
+00:01:47,380 --> 00:01:51,171
+But for our purposes we're just going to use
+the STL list class, so that it's easier and
+
+28
+00:01:51,171 --> 00:01:55,210
+we can demonstrate it and it has all the big
+three already built into it so we're not really
+
+29
+00:01:55,210 --> 00:01:55,229
+worried.
+

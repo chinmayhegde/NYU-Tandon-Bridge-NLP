@@ -1,0 +1,33 @@
+1
+00:00:00,799 --> 00:00:07,720
+There are a lot of sorting techniques; one
+is selection-sort, insertion-sort, bubble-sort,
+
+2
+00:00:07,720 --> 00:00:11,500
+merge-sort, quick-sort, heap-sort, and many,
+many more.
+
+3
+00:00:11,500 --> 00:00:18,249
+In this model we're going to focus on only
+two of them: the selection sort and merge
+
+4
+00:00:18,249 --> 00:00:19,249
+sort.
+
+5
+00:00:19,249 --> 00:00:23,080
+Selection-sort is a very basic naive sorting
+algorithm.
+
+6
+00:00:23,080 --> 00:00:28,830
+Merge-sort is a more sophisticated one but
+a very nice one as well.
+
+7
+00:00:28,830 --> 00:00:31,409
+Let's go ahead and start with a selection-sort.
+

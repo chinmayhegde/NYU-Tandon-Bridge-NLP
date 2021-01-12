@@ -1,0 +1,23 @@
+1
+00:00:00,450 --> 00:00:03,690
+Here, you have to keep the size of the operands
+consistent.
+
+2
+00:00:03,690 --> 00:00:11,309
+Remember, this is a DADDI instruction, so
+the ALU is going to use double word, or 64-bit
+
+3
+00:00:11,309 --> 00:00:12,490
+values.
+
+4
+00:00:12,490 --> 00:00:18,580
+Therefore, you must sign-extended both the
+register R8 and the immediate value to 64
+
+5
+00:00:18,580 --> 00:00:20,090
+bits before you do the addition.
+

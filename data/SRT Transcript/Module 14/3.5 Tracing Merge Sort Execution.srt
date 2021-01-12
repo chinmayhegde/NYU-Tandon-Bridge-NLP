@@ -1,0 +1,323 @@
+1
+00:00:00,659 --> 00:00:03,280
+Let's trace the execution of the merge-sort
+algorithm.
+
+2
+00:00:03,280 --> 00:00:09,360
+So at first I want to make sure that all of
+you get inductive idea here, where we have
+
+3
+00:00:09,360 --> 00:00:13,660
+three steps first sorting the first and then
+sort of the second half and then merging them
+
+4
+00:00:13,660 --> 00:00:19,920
+together and logically understand why these
+three steps, in that order, basically soars
+
+5
+00:00:19,920 --> 00:00:21,740
+the entire sequence.
+
+6
+00:00:21,740 --> 00:00:27,490
+But I think it would be even more convincing
+if in addition to that we would also trace
+
+7
+00:00:27,490 --> 00:00:30,730
+one execution from start to end.
+
+8
+00:00:30,730 --> 00:00:37,640
+My suggestion is don't do it too many times
+because understanding the inductive idea for
+
+9
+00:00:37,640 --> 00:00:40,329
+recursive algorithm, that’s the important
+thing.
+
+10
+00:00:40,329 --> 00:00:41,440
+But let's do it for merge-sort.
+
+11
+00:00:41,440 --> 00:00:48,590
+So, we have eight elements sequence: fourteen,
+five, eight, ten, thirteen, and so on, which
+
+12
+00:00:48,590 --> 00:00:50,390
+we want to sort.
+
+13
+00:00:50,390 --> 00:00:56,050
+So we are basically sorting the first half
+and the second half and then, since it's a
+
+14
+00:00:56,050 --> 00:01:00,190
+recursive call each one of them is going to
+sort its first half and second half.
+
+15
+00:01:00,190 --> 00:01:10,380
+So we have calls for two element array and
+each one of them also would call two sorting
+
+16
+00:01:10,380 --> 00:01:13,930
+halves of one element and that would be the
+base condition.
+
+17
+00:01:13,930 --> 00:01:19,790
+But that's not the order that these calls
+are called; let's try tracing the merge-sort
+
+18
+00:01:19,790 --> 00:01:21,930
+algorithm now in order.
+
+19
+00:01:21,930 --> 00:01:22,930
+Okay.
+
+20
+00:01:22,930 --> 00:01:27,330
+So we're first calling the original eight
+element array.
+
+21
+00:01:27,330 --> 00:01:33,530
+It, as step one, calls to sort the first half
+of the elements; the first four elements,
+
+22
+00:01:33,530 --> 00:01:34,530
+right.
+
+23
+00:01:34,530 --> 00:01:39,650
+And then when this function executes, it's
+also a recursive call.
+
+24
+00:01:39,650 --> 00:01:45,700
+That's not the base condition so we also called
+to sort the first half of the elements; basically
+
+25
+00:01:45,700 --> 00:01:51,270
+sorting fourteen and five, and fourteen and
+five is also not the base case so it also
+
+26
+00:01:51,270 --> 00:01:54,720
+calls to sort the first half of the elements,
+which is fourteen.
+
+27
+00:01:54,720 --> 00:02:01,500
+Fourteen: that's a single element array that
+is already sorted, so nothing to do here just
+
+28
+00:02:01,500 --> 00:02:02,500
+return.
+
+29
+00:02:02,500 --> 00:02:08,670
+And then fourteen five calls to sort the second
+half, which is five, so now fourteen and five
+
+30
+00:02:08,670 --> 00:02:16,110
+after having two halves that are sorted it
+should merge them together to a sorted sequence.
+
+31
+00:02:16,110 --> 00:02:20,940
+Basically reordering them to be five fourteen;
+that's the merge.
+
+32
+00:02:20,940 --> 00:02:25,670
+And then the four elements: fourteen, five,
+eight, ten, now need to call to sort the second
+
+33
+00:02:25,670 --> 00:02:28,230
+half, basically eight and ten.
+
+34
+00:02:28,230 --> 00:02:33,170
+Eight and ten, that's not the base, so it
+calls to sort the first half of eight which
+
+35
+00:02:33,170 --> 00:02:37,410
+is sorted. and then it calls to store the
+second half of ten, which is sorted and then
+
+36
+00:02:37,410 --> 00:02:38,660
+it merges them together.
+
+37
+00:02:38,660 --> 00:02:44,170
+In this case no reordering is needed the assorted
+sequence is eight and ten.
+
+38
+00:02:44,170 --> 00:02:50,630
+Now the four element array has two halves
+that are sorted by fourteen and a ten.
+
+39
+00:02:50,630 --> 00:02:55,840
+We need to merge them together in order to
+get a four element sorted sequence: five,
+
+40
+00:02:55,840 --> 00:02:57,600
+eight, ten, fourteen.
+
+41
+00:02:57,600 --> 00:03:05,150
+So that's basically the end of the first step
+in the original call; merge sort of the first
+
+42
+00:03:05,150 --> 00:03:10,250
+half it would recursively merge-sort that
+half.
+
+43
+00:03:10,250 --> 00:03:15,980
+And eventually would have the elements, five,
+eight, ten, fourteen, in the sorted order.
+
+44
+00:03:15,980 --> 00:03:22,430
+And now would come the second step, basically
+sorting the second half of: thirteen, one,
+
+45
+00:03:22,430 --> 00:03:24,020
+eighteen, and three.
+
+46
+00:03:24,020 --> 00:03:28,290
+That's not the base case so we would start
+by sorting the first half of that, which is
+
+47
+00:03:28,290 --> 00:03:29,810
+thirteen and one.
+
+48
+00:03:29,810 --> 00:03:34,160
+That's not the base case so it starts by sorting
+the first half of that, thirteen which is
+
+49
+00:03:34,160 --> 00:03:38,510
+sorted, and then sorting the second half of
+that, one which is also sorted.
+
+50
+00:03:38,510 --> 00:03:41,840
+And then we need to merge them into: one,
+thirteen.
+
+51
+00:03:41,840 --> 00:03:47,100
+And now we need to sort the second half of
+the four element, which is eighteen and three.
+
+52
+00:03:47,100 --> 00:03:52,340
+Not base case, so let's recursively sort the
+first half: eighteen which is sorted.
+
+53
+00:03:52,340 --> 00:03:55,770
+Let’s recursively sort the second half:
+three which is sorted.
+
+54
+00:03:55,770 --> 00:03:58,200
+Let's merge them together to three, eighteen.
+
+55
+00:03:58,200 --> 00:04:03,730
+Now we have two sorted halves of the four
+element array.
+
+56
+00:04:03,730 --> 00:04:11,430
+We need to merge them together into one sequence
+of four elements that are sorted: one, three,
+
+57
+00:04:11,430 --> 00:04:12,590
+thirteen, eighteen.
+
+58
+00:04:12,590 --> 00:04:19,040
+That’s the end of the second step of the
+original sort of eight elements.
+
+59
+00:04:19,040 --> 00:04:24,670
+We've sorted the first half recursively; we've
+sorted the second half recursively.
+
+60
+00:04:24,670 --> 00:04:31,590
+And now comes step three, where we have the
+two halves sorted that are needed to be merged
+
+61
+00:04:31,590 --> 00:04:32,590
+together.
+
+62
+00:04:32,590 --> 00:04:38,000
+And that’s step three of the merge function,
+basically merging them into one sorted sequence:
+
+63
+00:04:38,000 --> 00:04:41,420
+one, three, five, eight, ten and so on.
+
+64
+00:04:41,420 --> 00:04:47,700
+It's a bit crazy way to trace this execution,
+but that's how basically it was.
+
+65
+00:04:47,700 --> 00:04:51,700
+I think it's easier and more understandable
+to think of it inductively.
+
+66
+00:04:51,700 --> 00:04:57,980
+Basically, thinking step one would do the
+job basically sort the first half, step two
+
+67
+00:04:57,980 --> 00:05:02,949
+would do the job basically sort the second
+half, and then we just need to merge them
+
+68
+00:05:02,949 --> 00:05:08,400
+together to get the entire job done, basically
+sort the entire sequence.
+

@@ -1,0 +1,114 @@
+1
+00:00:00,550 --> 00:00:02,230
+Let's try to do the same.
+
+2
+00:00:02,230 --> 00:00:05,500
+Now let's try counting in base five.
+
+3
+00:00:05,500 --> 00:00:13,970
+So it would start zero, one, two, three, four,
+and now in base five, we are grouping five
+
+4
+00:00:13,970 --> 00:00:15,360
+objects together.
+
+5
+00:00:15,360 --> 00:00:22,079
+In base ten, ten objects (ten ones) were grouped
+into a ten, ten tens were grouped into a hundred,
+
+6
+00:00:22,079 --> 00:00:24,820
+and so on in base five were grouping more
+often.
+
+7
+00:00:24,820 --> 00:00:33,360
+We're grouping five objects together so five
+ones would be grouped into a base five-ten,
+
+8
+00:00:33,360 --> 00:00:36,850
+and five tens would be grouped to one hundred
+and so on.
+
+9
+00:00:36,850 --> 00:00:42,100
+So now that we are counting the fifth object,
+instead of having the single symbol a single
+
+10
+00:00:42,100 --> 00:00:49,370
+digit to represent five objects, we are using
+one group of five objects and base five-ten
+
+11
+00:00:49,370 --> 00:00:51,500
+and zero additional ones.
+
+12
+00:00:51,500 --> 00:00:56,219
+After that, we have eleven, twelve, thirteen,
+and fourteen, and the next object would give
+
+13
+00:00:56,219 --> 00:01:00,760
+us, again, five ones, that would group to
+another group of ten.
+
+14
+00:01:00,760 --> 00:01:05,910
+So, we would have two groups of base five-ten
+and zero additional ones.
+
+15
+00:01:05,910 --> 00:01:10,340
+And so on: twenty one, twenty two, up to one
+hundred.
+
+16
+00:01:10,340 --> 00:01:15,040
+Can you think what comes before hundred?
+
+17
+00:01:15,040 --> 00:01:20,570
+I hope you said forty four, because after
+forty four the next object would be five ones
+
+18
+00:01:20,570 --> 00:01:24,780
+that would be grouped to another ten, and
+then we would have five tens that would be
+
+19
+00:01:24,780 --> 00:01:26,790
+Group to one base five-hundred.
+
+20
+00:01:26,790 --> 00:01:32,700
+No tens, no ones, and hundred and one, hundred
+two, and so on.
+
+21
+00:01:32,700 --> 00:01:39,090
+In this case, the digits we needed to use
+are only zero to four, because we don't need
+
+22
+00:01:39,090 --> 00:01:45,570
+any other symbols to represent numbers in
+this kind of representation.
+
+23
+00:01:45,570 --> 00:01:51,100
+We are grouping the five objects together
+so we only need to represent quantities of
+
+24
+00:01:51,100 --> 00:01:54,070
+zero, one, two, three, and four, as a single
+object.
+

@@ -1,0 +1,45 @@
+1
+00:00:00,729 --> 00:00:03,310
+So we can create objects just like any other
+data type.
+
+2
+00:00:03,310 --> 00:00:09,299
+it's now a new data type that we have access
+to and we can create and we can use.
+
+3
+00:00:09,299 --> 00:00:13,559
+Working with an object requires the use of
+the dot operator, and you may have seen this
+
+4
+00:00:13,559 --> 00:00:19,710
+before in your work with structs but here
+it's much more common to use it.
+
+5
+00:00:19,710 --> 00:00:23,200
+Remember that we're not going to have any
+access to the private information, but for
+
+6
+00:00:23,200 --> 00:00:27,960
+example if we want to set the day, the month,
+and the year, we can have this code to show
+
+7
+00:00:27,960 --> 00:00:36,410
+you how to set a date to for example the sixth,
+set the month to August, set the year to one
+
+8
+00:00:36,410 --> 00:00:40,390
+nine hundred ninety one and then print out
+the fact that this is a very important date.
+
+9
+00:00:40,390 --> 00:00:42,930
+And if you're interested, google that and
+see what date it is.
+

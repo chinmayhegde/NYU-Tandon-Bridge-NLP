@@ -1,0 +1,25 @@
+1
+00:00:00,450 --> 00:00:05,729
+As an exercise, I am encouraging you guys
+to try the following exercise. First, write
+
+2
+00:00:05,729 --> 00:00:12,290
+the MIPS Mnemonic code that performs the high-level
+code above. This code does A = B or C. Note
+
+3
+00:00:12,290 --> 00:00:17,860
+that this is a logic or operation. Once you
+have written the mnemonic code, show its execution
+
+4
+00:00:17,860 --> 00:00:24,770
+in the table as we did before for A = B+C
+example. The code and data segment addresses
+
+5
+00:00:24,770 --> 00:00:29,210
+are specified, as well as the original values
+of A, B, and C.
+

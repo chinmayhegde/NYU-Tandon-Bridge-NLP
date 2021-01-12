@@ -1,0 +1,118 @@
+0:00:00.659,0:00:06.629
+Ok so we have integers we have float and doubles
+we have char for a single character. The next
+
+0:00:06.629,0:00:13.059
+type I want to talk about is called string.
+Actually the string type is not a built in
+
+0:00:13.059,0:00:21.699
+type in C++. In order to use the string type
+we would need to include to extend our language
+
+0:00:21.699,0:00:29.060
+with the string library. So before using the
+string type we have to pound include and then
+
+0:00:29.060,0:00:37.660
+string. Just as we’ve extended our language
+for the c math and for the iostream things
+
+0:00:37.660,0:00:46.160
+that are not built in in C++ we use external
+libraries to use this kind of syntax. Same
+
+0:00:46.160,0:00:51.770
+thing with string here since it is a very
+useful type it is important for me to show
+
+0:00:51.770,0:01:02.140
+it to you right here in the beginning of your
+experience with C++. So after including this
+
+0:01:02.140,0:01:10.191
+string class the data that is represented
+using this type is a string or a text. In
+
+0:01:10.191,0:01:14.950
+a representation we won’t get too much into
+the details maybe later modules we will talk
+
+0:01:14.950,0:01:20.660
+about strings in more detail. For now all
+I want you to know is that strings are basically
+
+0:01:20.660,0:01:29.560
+sequences of characters just characters coming
+up in the memory one after the other. Literals
+
+0:01:29.560,0:01:39.830
+built in C++ strings again not C++ but the
+string library strings are quotes and then
+
+0:01:39.830,0:01:45.840
+a sequence of characters. So quote double
+quotes ABC or double quotes this is a string
+
+0:01:45.840,0:01:52.650
+back slash each of them is of type string
+or could be considered of type string though
+
+0:01:52.650,0:02:00.340
+formally they are not. Arithmetic operators
+in this case there are plus and assignment.
+
+0:02:00.340,0:02:06.480
+Plus is a very useful operator that basically
+concatenates string. Let’s see a few lines
+
+0:02:06.480,0:02:13.600
+of code to get the hang of this syntax. So
+for example if we have an int variable x a
+
+0:02:13.600,0:02:21.180
+double variable y obviously we can assign
+x with 5 and y with 7.3. In order to create
+
+0:02:21.180,0:02:27.210
+a string variable as we said first we need
+to include string. And then we can declare
+
+0:02:27.210,0:02:35.580
+a string s variable and we can set it with
+a literal for example hello. So s equals double
+
+0:02:35.580,0:02:43.850
+quote hello. We can then cout s that would
+print hello and break the line endl. We can
+
+0:02:43.850,0:02:51.910
+also use the concatenation operator the plus
+operator to for example cout s plus the string
+
+0:02:51.910,0:02:58.840
+world. So s is a string double quotes word
+is a string and we can add a string to a string
+
+0:02:58.840,0:03:05.120
+that would concatenate the text. So we would
+print hello world back slash or in this case
+
+0:03:05.120,0:03:13.680
+enter. We can also assign s with s plus world
+that would turn s instead of having text hello
+
+0:03:13.680,0:03:19.380
+the string hello to have the string hello
+world. Then we can cout s that would print
+
+0:03:19.380,0:03:25.760
+hello world. So it is a very easy syntax to
+use but then it is very useful because there
+
+0:03:25.760,0:03:32.980
+is a lot of programs would need to communicate
+with humans and strings and texts are the
+
+0:03:32.980,0:03:33.480
+way to do that.

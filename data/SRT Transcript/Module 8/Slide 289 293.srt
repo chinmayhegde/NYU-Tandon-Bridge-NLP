@@ -1,0 +1,60 @@
+0:00:00.640,0:00:07.130
+Assuming we have this function our quadratic
+function would now use this function.
+
+0:00:07.130,0:00:15.630
+So in the else clause in case A is equal to
+zero then we just call the linear passing
+
+0:00:15.630,0:00:19.710
+what would be the inputs for linear?
+
+0:00:19.710,0:00:30.230
+So yeah so the quadratic B and C coefficients
+become the A and B coefficients for the linear.
+
+0:00:30.230,0:00:43.660
+So we’ll pass B and C and then out x one
+would be our reference to where we write the
+
+0:00:43.660,0:00:47.540
+solution in case there is a solution.
+
+0:00:47.540,0:00:53.871
+Maybe I’d note here that we are passing
+like out x one is already a reference to a
+
+0:00:53.871,0:00:56.019
+variable x one in our main.
+
+0:00:56.019,0:01:03.089
+And now we are passing it to another function
+by reference so we won’t get a reference
+
+0:01:03.089,0:01:07.560
+to the reference that would give us a reference
+to the original value in the main.
+
+0:01:07.560,0:01:15.780
+So when linear updates out x one it basically
+updates the original reference we’ve passed
+
+0:01:15.780,0:01:17.200
+from the main.
+
+0:01:17.200,0:01:26.490
+So yeah so we’re passing out x one and basically
+we are just rolling out the return value of
+
+0:01:26.490,0:01:29.120
+linear as the return value of quadratic.
+
+0:01:29.120,0:01:35.330
+So if linear returns no solution or one real
+solution or all reals we’ll just keep on
+
+0:01:35.330,0:01:37.960
+returning it as a return value of quadratic.
+
+0:01:37.960,0:01:40.539
+That’s why we are saying return linear.

@@ -1,0 +1,119 @@
+0:00:01.490,0:00:06.170
+Ok so we’ve talked about ints that represent
+integers.
+
+0:00:06.170,0:00:08.889
+Float and double that represent real numbers.
+
+0:00:08.889,0:00:13.130
+Let’s talk about the char type.
+
+0:00:13.130,0:00:20.320
+Chars are used to represent characters each
+char data represents a single character.
+
+0:00:20.320,0:00:26.950
+Let’s see how we represent internally a
+character in the memory.
+
+0:00:26.950,0:00:33.520
+So for example if we want to represent the
+letter A which is a character inside the memory
+
+0:00:33.520,0:00:39.270
+obviously we won’t just write a curly A
+inside the memory because the memory contains
+
+0:00:39.270,0:00:41.570
+only zeroes and ones.
+
+0:00:41.570,0:00:48.460
+So we should figure out a way to represent
+textual information in this case a character
+
+0:00:48.460,0:00:51.960
+with only zeroes and ones.
+
+0:00:51.960,0:00:58.900
+A common way to do that is to map a letter
+to a number that corresponds to it.
+
+0:00:58.900,0:01:04.239
+So there would be a number mapped to the letter
+A a number mapped to the letter B a number
+
+0:01:04.239,0:01:10.850
+mapped to actually lower case letters upper
+case letter digits some symbols the dollar
+
+0:01:10.850,0:01:15.170
+sign question mark all the other punctuation
+marks and so on.
+
+0:01:15.170,0:01:21.369
+Let’s see how many different numbers we
+would need to in order to represent these
+
+0:01:21.369,0:01:28.330
+characters that would give us how big should
+be each character data.
+
+0:01:28.330,0:01:37.020
+So it seems like one byte that contains 8
+bits actually contains 2 to the 8 different
+
+0:01:37.020,0:01:40.189
+values 2 to the 8 is 256.
+
+0:01:40.189,0:01:46.210
+And 256 seems more than enough to represent
+all the lower case letters upper case letters
+
+0:01:46.210,0:01:49.950
+digits punctuations and stuff like that.
+
+0:01:49.950,0:01:59.810
+So a character data each is takes one byte
+in the memory.
+
+0:01:59.810,0:02:08.420
+Now the mapping the mapping function that
+gives each character its number its value
+
+0:02:08.420,0:02:18.020
+is called the ASCII table you can see here
+that upper case a is mapped to 65 upper case
+
+0:02:18.020,0:02:26.620
+b is mapped to 66 lower case a is mapped to
+97 lower case b is mapped to 98.
+
+0:02:26.620,0:02:35.480
+The dollar sign is mapped to 36 you can see
+that each symbol has its own value that is
+
+0:02:35.480,0:02:36.480
+mapped to it.
+
+0:02:36.480,0:02:42.580
+So for example if we want to write the data
+A inside the memory using the ASCII table
+
+0:02:42.580,0:02:53.290
+the ASCII value corresponds to A is 97 and
+then we write 97 in a binary representation
+
+0:02:53.290,0:02:57.730
+in this case would look like 011 four zeroes
+and a 1.
+
+0:02:57.730,0:03:05.180
+And these 8 bits are now stored in the memory
+representing the letter A. So characters are
+
+0:03:05.180,0:03:11.230
+mapped to numbers by the ASCII table which
+are then represented in binary and stored
+
+0:03:11.230,0:03:12.440
+in the memory.

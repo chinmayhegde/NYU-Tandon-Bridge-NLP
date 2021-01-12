@@ -1,0 +1,182 @@
+0:00:00.659,0:00:07.120
+Ok so the first solution we suggested basically
+went over the entire range of numbers one
+
+0:00:07.120,0:00:14.370
+through num. I want to suggest another an
+alternative implementation an alternative
+
+0:00:14.370,0:00:20.200
+solution here. Where now instead of going
+with the entire range one through num we will
+
+0:00:20.200,0:00:26.349
+go only on the first half of the range. One
+through num by two and we will skip iterating
+
+0:00:26.349,0:00:33.600
+over the rest of the numbers. How come can
+we do how come are we allowed to do that?
+
+0:00:33.600,0:00:39.930
+Let’s take a look at a simpler example.
+For example if num is one hundred the factors
+
+0:00:39.930,0:00:47.890
+of num are one two four five and so on. You
+can see that num by two which is fifty actually
+
+0:00:47.890,0:00:54.840
+that’s the last factor of 100 besides 100
+itself. So in the case of 100 it was safe
+
+0:00:54.840,0:01:03.530
+to go only on the first half of the range
+and skipping the second half. So it makes
+
+0:01:03.530,0:01:12.830
+sense to do that kind of an algorithm. The
+question is is it a coincident that there
+
+0:01:12.830,0:01:21.270
+aren’t any dividers past 50 for 100 or can
+we say safely that no matter what the value
+
+0:01:21.270,0:01:26.820
+of num is all the dividers are in the first
+half of the range and there are none dividers
+
+0:01:26.820,0:01:31.380
+besides the number itself on the second half.
+And that’s exactly what we are trying to
+
+0:01:31.380,0:01:38.830
+show in order to show the correctness of this
+strategy. So let’s try to argue that thing.
+
+0:01:38.830,0:01:46.420
+So let’s assume we have a divider in the
+second half of the range. Let k be such divider
+
+0:01:46.420,0:01:54.350
+of num in the second half of the range therefore
+k is greater than num by two. And we will
+
+0:01:54.350,0:02:01.780
+have to argue that k does not exist or maybe
+we should show that k basically equals to
+
+0:02:01.780,0:02:07.860
+num. That’s the only possible divider on
+the second half of the range. So let’s have
+
+0:02:07.860,0:02:14.780
+this k. Now let’s take a look at k’s complimentary
+divider. Let’s say d is k’s complimentary
+
+0:02:14.780,0:02:22.560
+divider so basically it means that d times
+k equals num. Or in other words d is num over
+
+0:02:22.560,0:02:30.970
+k. So let’s take a look at what we have.
+So d is num over k and let’s try to compare
+
+0:02:30.970,0:02:39.280
+num over k to num over num by two. Now we
+know that k is greater than num by two so
+
+0:02:39.280,0:02:46.500
+these two expressions are basically dividing
+num by either k or num by two. So when we
+
+0:02:46.500,0:02:54.750
+are dividing num by k since k is greater than
+num by two the result of num by k is less
+
+0:02:54.750,0:03:01.290
+than num by num a two. Right when you are
+dividing a number by a greater value you will
+
+0:03:01.290,0:03:06.730
+result with a small amount than when you are
+dividing the same number with a smaller value.
+
+0:03:06.730,0:03:14.350
+So altogether we can say since k is greater
+than num a two num a k is less than num by
+
+0:03:14.350,0:03:23.440
+num by two. Simple arithmetic num by num by
+two would be equal to two. Altogether we get
+
+0:03:23.440,0:03:31.400
+taking that thing together we see that d is
+less than two. Now these are complimentary
+
+0:03:31.400,0:03:39.510
+divider of num specifically it means that
+d is a divider of num. Now a divider that
+
+0:03:39.510,0:03:46.970
+is less than two that leaves us with d must
+equal to one right. The only divider that
+
+0:03:46.970,0:03:56.330
+is less than two is one itself. So d is we
+had it before num over k equals one basically
+
+0:03:56.330,0:04:02.970
+meaning that k equals num. That’s what we
+wanted to show. So the only divider in the
+
+0:04:02.970,0:04:08.141
+second half k was a divider in the second
+half is num itself. There aren’t any divider
+
+0:04:08.141,0:04:15.819
+in the second half. So we can feel safe iterating
+over the first half of the numbers and skipping
+
+0:04:15.819,0:04:22.290
+the second half. That would make our algorithm
+faster I believe. So if we take a look at
+
+0:04:22.290,0:04:27.139
+the previous implementation let’s see what
+changes we need to do here. So basically we
+
+0:04:27.139,0:04:32.850
+will still have the counter variable counting
+how many dividers we are going to have. But
+
+0:04:32.850,0:04:39.100
+instead of ranging from one to num we will
+range from one to num by two. And then at
+
+0:04:39.100,0:04:45.720
+the end a prime number we are not expecting
+to have two dividers right we are not going
+
+0:04:45.720,0:04:52.310
+up to the end so num won’t be tested. So
+a prime number would have only one divider
+
+0:04:52.310,0:04:57.990
+in the first half of the range only one actually
+that’s the only divider we are expecting
+
+0:04:57.990,0:05:04.910
+for a prime number. If our num has more than
+one dividers it means that it is not a prime
+
+0:05:04.910,0:05:10.250
+value. If count divs equals one we are going
+to return true otherwise we will return false.
+
+0:05:10.250,0:05:18.110
+So that is it seems like a better version
+or a better implementation for the function
+
+0:05:18.110,0:05:18.610
+isPrime.

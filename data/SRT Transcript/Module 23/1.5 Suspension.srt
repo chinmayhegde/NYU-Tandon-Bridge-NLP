@@ -1,0 +1,193 @@
+1
+00:00:00,580 --> 00:00:08,420
+We also add to the concept of the states with
+the idea that the process may be suspended.
+
+2
+00:00:08,420 --> 00:00:15,099
+Now suspension is a bit of an odd notion in
+that the process is sort of still ready to
+
+3
+00:00:15,099 --> 00:00:18,939
+run but it isn't actually running or runnable
+yet.
+
+4
+00:00:18,939 --> 00:00:23,930
+In suspension, the process will be completely
+removed from main memory; so, obviously its
+
+5
+00:00:23,930 --> 00:00:27,019
+code can't run because this code isn't loaded
+in main memory.
+
+6
+00:00:27,019 --> 00:00:32,930
+So, in suspension we completely take the process
+out of main memory and move it to a secondary
+
+7
+00:00:32,930 --> 00:00:38,200
+storage device or even maybe a tertiary storage
+device, if we really don't have any memory.
+
+8
+00:00:38,200 --> 00:00:39,430
+Why would we have this?
+
+9
+00:00:39,430 --> 00:00:44,800
+Well one of the biggest reasons for having
+a concept of suspension is that we can free
+
+10
+00:00:44,800 --> 00:00:46,500
+up main memory.
+
+11
+00:00:46,500 --> 00:00:51,820
+If we get to the point where main memory is
+starting to fill up, with so many processes
+
+12
+00:00:51,820 --> 00:00:56,280
+or with such large processes, that we no longer
+have a lot of processes that are ready to
+
+13
+00:00:56,280 --> 00:01:04,620
+run we might get into a condition where the
+process list has nothing on the ready state;
+
+14
+00:01:04,620 --> 00:01:10,540
+everything is in the block state and there's
+no more memory available to allocate to new
+
+15
+00:01:10,540 --> 00:01:11,540
+processes.
+
+16
+00:01:11,540 --> 00:01:17,180
+So, we aim to free up that memory by suspending
+one or more processes and this is done by
+
+17
+00:01:17,180 --> 00:01:20,020
+what's known as the medium term scheduling
+algorithm.
+
+18
+00:01:20,020 --> 00:01:24,720
+And the medium term scheduling algorithm will
+choose which process to suspend, and then
+
+19
+00:01:24,720 --> 00:01:27,960
+it will take that process and put it on the
+secondary storage device.
+
+20
+00:01:27,960 --> 00:01:32,130
+Now, this doesn't mean that the process is
+terminated because we can certainly reload
+
+21
+00:01:32,130 --> 00:01:37,060
+all the code data and context from the secondary
+storage device back into main memory at a
+
+22
+00:01:37,060 --> 00:01:41,760
+later time and then run that process, just
+as if nothing ever happened.
+
+23
+00:01:41,760 --> 00:01:47,400
+So it's very possible for any of your programs
+your ‘Hello World’ style programs from
+
+24
+00:01:47,400 --> 00:01:52,350
+previous modules, that could have been suspended
+at some point.
+
+25
+00:01:52,350 --> 00:01:56,860
+We might have suspended the process just simply
+for debugging purposes; we might have suspended
+
+26
+00:01:56,860 --> 00:02:02,050
+the proper process at the request of the user
+doing a control Z on a Unix system.
+
+27
+00:02:02,050 --> 00:02:07,550
+But the point is that we need to add States
+to our five state process model to recognize
+
+28
+00:02:07,550 --> 00:02:12,260
+the possibility that the process is suspended.
+
+29
+00:02:12,260 --> 00:02:16,620
+And we actually need to add two different
+suspended states, because we need to recognize
+
+30
+00:02:16,620 --> 00:02:21,920
+if a process is suspended and ready to run
+or if it's suspended and blocked for some
+
+31
+00:02:21,920 --> 00:02:22,959
+reason.
+
+32
+00:02:22,959 --> 00:02:28,270
+And the movement into and out of the suspended
+states is relatively easy.
+
+33
+00:02:28,270 --> 00:02:33,660
+If the process was in the block state than
+during suspension it would be moved to the
+
+34
+00:02:33,660 --> 00:02:37,420
+block suspended state, and if it was in the
+ready state during suspension it would be
+
+35
+00:02:37,420 --> 00:02:39,750
+moved to the ready suspended state.
+
+36
+00:02:39,750 --> 00:02:44,500
+If it some point in time in the block suspended
+state, the event that we were waiting for
+
+37
+00:02:44,500 --> 00:02:48,830
+occurs then the process would be moved from
+the block suspended state to the ready suspended
+
+38
+00:02:48,830 --> 00:02:49,830
+state.
+
+39
+00:02:49,830 --> 00:02:55,290
+So, we evolve our concept of the process model
+from a five state process model into a seven
+
+40
+00:02:55,290 --> 00:02:59,459
+state process model, where we add these two
+suspended states.
+

@@ -1,0 +1,46 @@
+1
+00:00:00,919 --> 00:00:07,529
+For that the cache uses two locality principles
+known as temporal and spatial locality principles
+
+2
+00:00:07,529 --> 00:00:08,529
+of temporal and spatial locality.
+
+3
+00:00:08,529 --> 00:00:13,840
+Temporal locality basically states that if
+a data or instructions is used once, it is
+
+4
+00:00:13,840 --> 00:00:16,299
+likely to be used again soon.
+
+5
+00:00:16,299 --> 00:00:21,430
+Therefore, once an instruction or data is
+brought into the cache, temporal locality
+
+6
+00:00:21,430 --> 00:00:25,210
+suggests to keep it the cache as long as possible.
+
+7
+00:00:25,210 --> 00:00:28,600
+One of the best examples of temporal locality
+is loop code.
+
+8
+00:00:28,600 --> 00:00:32,160
+When we go in a loop once, we are very likely
+to go through it again.
+
+9
+00:00:32,160 --> 00:00:36,510
+Therefore, it is best to keep the loop code
+in the cache, rather than overwrite it or
+
+10
+00:00:36,510 --> 00:00:38,019
+move it back in the main memory.
+

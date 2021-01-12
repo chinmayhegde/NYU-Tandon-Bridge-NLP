@@ -1,0 +1,178 @@
+1
+00:00:00,710 --> 00:00:04,640
+Now that we understand what a binary search
+tree is and how it's created, let's talk about
+
+2
+00:00:04,640 --> 00:00:05,800
+what we need it for.
+
+3
+00:00:05,800 --> 00:00:10,620
+The best thing that we can do with binary
+search tree, the benefit, the huge benefit
+
+4
+00:00:10,620 --> 00:00:17,109
+that we get is that a binary search tree provides
+in best case scenario that searching the binary
+
+5
+00:00:17,109 --> 00:00:19,710
+search tree will take Log of N time.
+
+6
+00:00:19,710 --> 00:00:25,920
+So, we can go through a binary search tree
+in Log N times because what we've done is
+
+7
+00:00:25,920 --> 00:00:34,620
+spread out the accesses, so that each level
+creates a doubling effect of how many nodes
+
+8
+00:00:34,620 --> 00:00:36,579
+we can have on that level.
+
+9
+00:00:36,579 --> 00:00:43,339
+So for example, if we take a search which
+would have let's say an array of a million
+
+10
+00:00:43,339 --> 00:00:44,539
+elements.
+
+11
+00:00:44,539 --> 00:00:49,379
+If we were to have a linear search through
+that on average it would take five hundred
+
+12
+00:00:49,379 --> 00:00:53,550
+thousand accesses through the array to find
+it; we have to go through half of the array
+
+13
+00:00:53,550 --> 00:00:56,309
+before we find the thing that we're looking
+for.
+
+14
+00:00:56,309 --> 00:01:00,769
+But if we have it inside of a binary search
+tree the magic number there, the number of
+
+15
+00:01:00,769 --> 00:01:06,159
+searches that it takes is twenty, not five
+hundred thousand and twenty because the log
+
+16
+00:01:06,159 --> 00:01:08,500
+of a million is twenty.
+
+17
+00:01:08,500 --> 00:01:13,560
+Each time we look at her node we're saying
+whether we should go to the left or go to
+
+18
+00:01:13,560 --> 00:01:19,940
+the right or if we're lucky we found it inside
+the node, so inside the node once we make
+
+19
+00:01:19,940 --> 00:01:23,020
+the decision to go to the left and go to the
+right or go to the right we've eliminated
+
+20
+00:01:23,020 --> 00:01:24,310
+half of the possibilities.
+
+21
+00:01:24,310 --> 00:01:30,090
+So, every iteration through this searching
+algorithm eliminates half of the possibilities
+
+22
+00:01:30,090 --> 00:01:34,270
+from the from the set and that means that
+we have a log N problem.
+
+23
+00:01:34,270 --> 00:01:39,080
+So searching in a right of a million elements
+would take five hundred thousand accesses;
+
+24
+00:01:39,080 --> 00:01:43,770
+searching a binary search tree of a million
+elements takes twenty, which is a huge difference
+
+25
+00:01:43,770 --> 00:01:44,780
+of course.
+
+26
+00:01:44,780 --> 00:01:47,390
+Insertions also should take Log of N time.
+
+27
+00:01:47,390 --> 00:01:52,409
+Deletion should take a log of N time or close
+to that we're going to see that it's not exactly
+
+28
+00:01:52,409 --> 00:01:55,549
+that in a later slide but it's pretty close.
+
+29
+00:01:55,549 --> 00:02:00,719
+So, the benefit here is that we get for large
+sets, we get a really significant savings
+
+30
+00:02:00,719 --> 00:02:05,100
+in time when we use a binary search tree to
+keep this in order.
+
+31
+00:02:05,100 --> 00:02:10,210
+We can use these for in order storage of any
+items which can be compared using a less than
+
+32
+00:02:10,210 --> 00:02:14,170
+operators, as long as the less than operators
+overloaded for that class, you can go ahead
+
+33
+00:02:14,170 --> 00:02:15,300
+and use that.
+
+34
+00:02:15,300 --> 00:02:20,530
+for in order storage of elements the binary
+search tree is a really effective and efficient
+
+35
+00:02:20,530 --> 00:02:22,770
+solution for the storage.
+
+36
+00:02:22,770 --> 00:02:26,860
+If we don't need to keep it in order then
+it's not so much a concern, we can keep it
+
+37
+00:02:26,860 --> 00:02:31,640
+in an array, but if we do need to keep water
+on these values than a binary search tree
+
+38
+00:02:31,640 --> 00:02:32,130
+is really beneficial.
+

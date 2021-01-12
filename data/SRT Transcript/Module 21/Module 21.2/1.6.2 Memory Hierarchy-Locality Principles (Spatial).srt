@@ -1,0 +1,80 @@
+1
+00:00:00,979 --> 00:00:05,770
+Spatial locality states that if a data or
+instruction is used, then the instruction
+
+2
+00:00:05,770 --> 00:00:09,509
+or data next to it is also likely to be accessed
+soon.
+
+3
+00:00:09,509 --> 00:00:14,289
+The clearest example to illustrate spatial
+locality is with arrays; once you access the
+
+4
+00:00:14,289 --> 00:00:18,609
+elements in the one cell of an array, you
+are likely to access the elements in the next
+
+5
+00:00:18,609 --> 00:00:19,750
+cells.
+
+6
+00:00:19,750 --> 00:00:24,830
+Using this spatial locality, when a data or
+instruction is accessed, instead of bringing
+
+7
+00:00:24,830 --> 00:00:30,160
+only data or instruction from the memory to
+the cache, the whole block that holds this
+
+8
+00:00:30,160 --> 00:00:32,950
+instruction or data is brought in.
+
+9
+00:00:32,950 --> 00:00:34,350
+Consider the example here.
+
+10
+00:00:34,350 --> 00:00:38,770
+We have a code that accumulates the numbers
+of an array.
+
+11
+00:00:38,770 --> 00:00:44,760
+Let us assume that we have 32-byte cache and
+DRAM blocks and the elements of the array
+
+12
+00:00:44,760 --> 00:00:46,540
+are 8 bytes.
+
+13
+00:00:46,540 --> 00:00:51,680
+Once we go to the main memory to get eight
+bytes for the first elements of the array,
+
+14
+00:00:51,680 --> 00:00:56,730
+we bring the 8 bytes for that element as well
+as the 24 bytes next to it.
+
+15
+00:00:56,730 --> 00:01:02,199
+In this case, if the second, third, and fourth
+elements of the array are needed, they are
+
+16
+00:01:02,199 --> 00:01:07,001
+already in the cache and are faster to access
+from there than if we had to go back to the
+
+17
+00:01:07,001 --> 00:01:08,200
+main memory to get them.
+

@@ -1,0 +1,147 @@
+1
+00:00:00,760 --> 00:00:01,760
+Ok.
+
+2
+00:00:01,760 --> 00:00:05,980
+So we have covered the different parameters
+for cache organization.
+
+3
+00:00:05,980 --> 00:00:10,740
+Now let us see how exactly the cache is accessed
+when the CPU gives it an address during the
+
+4
+00:00:10,740 --> 00:00:15,640
+instruction fetch stage or during the memory
+stage.
+
+5
+00:00:15,640 --> 00:00:20,020
+This figure here shows how the cache controller
+breaks down a physical memory address into
+
+6
+00:00:20,020 --> 00:00:24,910
+different fields to find where in the cache
+is the data or instruction associated to that
+
+7
+00:00:24,910 --> 00:00:27,150
+address is.
+
+8
+00:00:27,150 --> 00:00:29,580
+All of these field are in bits.
+
+9
+00:00:29,580 --> 00:00:32,730
+The rightmost field of the address is the
+cache block offset.
+
+10
+00:00:32,730 --> 00:00:36,539
+We will explain the role of the cache block
+offset later.
+
+11
+00:00:36,539 --> 00:00:41,139
+The middle field of the address is the cache
+block number if the cache is direct mapped,
+
+12
+00:00:41,139 --> 00:00:45,570
+or the cache set number if the cache is set
+associative.
+
+13
+00:00:45,570 --> 00:00:51,190
+Therefore, this field indicates which cache
+block number or set block number that the
+
+14
+00:00:51,190 --> 00:00:55,569
+content of this physical address must be in
+if it in the cache.
+
+15
+00:00:55,569 --> 00:01:00,039
+The last field is the cache, address, is the
+cache tag.
+
+16
+00:01:00,039 --> 00:01:03,890
+We will explain the role of the cache tag
+later.
+
+17
+00:01:03,890 --> 00:01:09,190
+The D RAM block number is the concatenation
+of the cache tag and either the cache set
+
+18
+00:01:09,190 --> 00:01:14,830
+number or the cache block number, depending
+on the associativity of the cache.
+
+19
+00:01:14,830 --> 00:01:19,220
+Here we see the different formulas to obtain
+the size of the different fields.
+
+20
+00:01:19,220 --> 00:01:22,260
+Note that all results of the formulas are
+in bits.
+
+21
+00:01:22,260 --> 00:01:26,120
+Let us consider an example.
+
+22
+00:01:26,120 --> 00:01:32,420
+Assume that we have a memory hierarchy with
+16-byte blocks, a 16-megabyte D RAM and with
+
+23
+00:01:32,420 --> 00:01:34,820
+Level 1 caches.
+
+24
+00:01:34,820 --> 00:01:40,040
+Each Level 1 cache is 16 kilobyte and is 2-way
+set associative.
+
+25
+00:01:40,040 --> 00:01:44,830
+Based on this configuration, we can calculate
+use our formulas to calculate the size of
+
+26
+00:01:44,830 --> 00:01:47,790
+each field for the physical addresses.
+
+27
+00:01:47,790 --> 00:01:52,950
+Note that here when we say physical address
+what we mean the location of the data or instruction
+
+28
+00:01:52,950 --> 00:01:54,770
+in D RAM.
+
+29
+00:01:54,770 --> 00:01:59,750
+Also note that it is simpler to calculate
+the size of the fields by using the two to
+
+30
+00:01:59,750 --> 00:02:01,090
+the power notation.
+
+31
+00:02:01,090 --> 00:02:09,280
+For example, 16 megabyte is 2 to the power
+of 24, therefore, the address is 24 bits.
+

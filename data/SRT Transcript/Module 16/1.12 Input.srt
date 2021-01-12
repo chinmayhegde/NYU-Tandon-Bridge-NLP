@@ -1,0 +1,215 @@
+1
+00:00:00,760 --> 00:00:06,470
+Just like the ofstream object, we have an
+ifstream object which we can use to read information.
+
+2
+00:00:06,470 --> 00:00:11,090
+And we can use the dot open or we can use
+the constructor for the object to open the
+
+3
+00:00:11,090 --> 00:00:12,550
+file.
+
+4
+00:00:12,550 --> 00:00:16,730
+Unfortunately, input files are a lot more
+likely to fail when they're opening and the
+
+5
+00:00:16,730 --> 00:00:21,170
+reason for that is more than likely somebody
+inputted a bad filename.
+
+6
+00:00:21,170 --> 00:00:27,039
+Remember that we're not selecting the file
+graphically for through a graphical user interface,
+
+7
+00:00:27,039 --> 00:00:28,570
+we're writing in the filename.
+
+8
+00:00:28,570 --> 00:00:32,850
+So if you miss typed the file name, what should
+the program do.
+
+9
+00:00:32,850 --> 00:00:40,069
+Well when you try and open the file using
+the ifstream dot open or using the constructor,
+
+10
+00:00:40,069 --> 00:00:44,649
+if the file doesn't exist opening that file
+will fail.
+
+11
+00:00:44,649 --> 00:00:51,049
+And we won't get a message back from C++;
+we have to check actively on whether that
+
+12
+00:00:51,049 --> 00:00:53,399
+succeeded or did not succeed.
+
+13
+00:00:53,399 --> 00:00:57,539
+So there's really no response from the dot
+open function, we just make the attempt to
+
+14
+00:00:57,539 --> 00:01:02,170
+open the file and then it's our responsibility
+to use an IF statement to check to see if
+
+15
+00:01:02,170 --> 00:01:04,680
+opening that file succeeded.
+
+16
+00:01:04,680 --> 00:01:12,560
+Now we can use a simple bool member function
+inside the ifstream class which allows us
+
+17
+00:01:12,560 --> 00:01:18,120
+to simply say if in file and that's enough
+to check to see if the file is open and connected
+
+18
+00:01:18,120 --> 00:01:23,250
+properly or if it rather if the ifstream object
+is open and connected to the file properly;
+
+19
+00:01:23,250 --> 00:01:28,860
+but if we attempt to open it once and it fails
+then who's to say that the second time we
+
+20
+00:01:28,860 --> 00:01:31,000
+try to open it will succeed.
+
+21
+00:01:31,000 --> 00:01:34,800
+So the problem of course with an if statement
+is that we're only going to check it once,
+
+22
+00:01:34,800 --> 00:01:41,580
+it's actually better to use a while statement
+and put all the code for opening the file
+
+23
+00:01:41,580 --> 00:01:46,790
+connection inside the while statement because
+if the while statement doesn't succeed we
+
+24
+00:01:46,790 --> 00:01:48,340
+won't continue on.
+
+25
+00:01:48,340 --> 00:01:54,320
+So doing while in file, as you'll see in just
+a minute, is actually a better solution because
+
+26
+00:01:54,320 --> 00:01:59,600
+it allows us to prohibit continue continuing
+the program until the file actually is opened
+
+27
+00:01:59,600 --> 00:02:04,700
+successfully; whereas, if will only try once
+and then whether it succeeds or doesn't succeed
+
+28
+00:02:04,700 --> 00:02:06,360
+it's going to continue on.
+
+29
+00:02:06,360 --> 00:02:11,760
+If you are going to try opening the file again
+as in a while statement or an if statement
+
+30
+00:02:11,760 --> 00:02:16,659
+and not just fail out and say we've got a
+problem, then you have to understand how the
+
+31
+00:02:16,659 --> 00:02:20,560
+flags operate inside the if stream object.
+
+32
+00:02:20,560 --> 00:02:27,810
+When we try to open that file and the file
+openings fails then a flag is set up inside
+
+33
+00:02:27,810 --> 00:02:32,299
+the stream object to tell us that something
+has failed.
+
+34
+00:02:32,299 --> 00:02:38,069
+Now unfortunately with the ifstream object
+even if we have a successful opening later,
+
+35
+00:02:38,069 --> 00:02:42,690
+the flag to tell us that a failure has occurred
+will still be set.
+
+36
+00:02:42,690 --> 00:02:47,980
+So the solution to this is to do a clear inside
+the stream object; there's a function called
+
+37
+00:02:47,980 --> 00:02:53,360
+Dot clear and when we before we attempt the
+opening again we're going to call dot clear.
+
+38
+00:02:53,360 --> 00:02:59,250
+So to just walk you through the process, we'll
+try to attempt to open the file once.
+
+39
+00:02:59,250 --> 00:03:03,999
+If it fails we'll enter into the While statement
+to say that it has failed.
+
+40
+00:03:03,999 --> 00:03:09,529
+Then we can check to see that the file has
+failed to open and then we can call clear
+
+41
+00:03:09,529 --> 00:03:13,319
+to clear the flags and open to open it again.
+
+42
+00:03:13,319 --> 00:03:19,189
+That way if the file succeeds in opening the
+second time than the flags will now be clear
+
+43
+00:03:19,189 --> 00:03:20,189
+appropriately so.
+
+44
+00:03:20,189 --> 00:03:26,980
+So we have this multistep process towards
+checking how to open a file, and then once
+
+45
+00:03:26,980 --> 00:03:31,680
+that process is complete we know for sure
+that the file is actually open.
+

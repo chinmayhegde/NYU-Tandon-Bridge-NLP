@@ -1,0 +1,171 @@
+1
+00:00:00,610 --> 00:00:05,850
+Let us now discuss how to calculate the target
+addresses of the different jump instructions.
+
+2
+00:00:05,850 --> 00:00:10,630
+As mentioned before, Jump register uses indirect
+jump, where it gets the target address from
+
+3
+00:00:10,630 --> 00:00:12,019
+a register.
+
+4
+00:00:12,019 --> 00:00:16,500
+Therefore, there is no calculation done, as
+the address of the target instruction is simply
+
+5
+00:00:16,500 --> 00:00:20,280
+copied from the register RS to the program
+counter
+
+6
+00:00:20,280 --> 00:00:26,160
+On the other hand, both Jump and Jump and
+Link use the same function to calculate the
+
+7
+00:00:26,160 --> 00:00:27,820
+target address.
+
+8
+00:00:27,820 --> 00:00:32,980
+We label this function func1 and it uses the
+program counter of the jump instruction and
+
+9
+00:00:32,980 --> 00:00:36,590
+another 26-bit parameter that we call address.
+
+10
+00:00:36,590 --> 00:00:41,230
+Note that this address parameter is not the
+target address we are looking for.
+
+11
+00:00:41,230 --> 00:00:44,690
+Let's take a close look at the formula for
+func1.
+
+12
+00:00:44,690 --> 00:00:48,540
+The first step is to increment the program
+counter by 4.
+
+13
+00:00:48,540 --> 00:00:55,489
+In this instance, the program counter is the
+address of the jump or the jump and link instruction.
+
+14
+00:00:55,489 --> 00:01:00,989
+The next step is to take the most significant
+4 bits of the result from step 1.
+
+15
+00:01:00,989 --> 00:01:05,220
+This assumes that the program counter is 32
+bits.
+
+16
+00:01:05,220 --> 00:01:10,700
+If we encounter a case where the program counter
+is less than 32 bits, then we have to pad
+
+17
+00:01:10,700 --> 00:01:14,750
+it with zeroes to make it 32.
+
+18
+00:01:14,750 --> 00:01:20,640
+The third step is to take the address parameter…
+to shift the address parameter left by 2,
+
+19
+00:01:20,640 --> 00:01:24,040
+which has the same effect as multiplying it
+by 4.
+
+20
+00:01:24,040 --> 00:01:28,850
+This turns the 26-bit parameter to a 28-bit
+parameter.
+
+21
+00:01:28,850 --> 00:01:35,430
+The last step is to concatenate the most significant
+4 bits from step 2 with the 28 bits from step
+
+22
+00:01:35,430 --> 00:01:36,430
+3.
+
+23
+00:01:36,430 --> 00:01:40,780
+The result is the 32-bit address of the target
+instruction.
+
+24
+00:01:40,780 --> 00:01:47,350
+Let us take a look at an example of how calculate
+a target address for jump and link instructions.
+
+25
+00:01:47,350 --> 00:01:54,410
+Here we have a jump, where the program counter
+is 4DC and the address parameter is 13B.
+
+26
+00:01:54,410 --> 00:01:57,280
+Note that all numbers are in hexadecimal.
+
+27
+00:01:57,280 --> 00:02:03,880
+We expand the program counter to 32 bits because
+the formula for func2 expects 32-bit program
+
+28
+00:02:03,880 --> 00:02:04,880
+counters.
+
+29
+00:02:04,880 --> 00:02:10,660
+The first and second steps are straightforward;
+this is because even after we do PC+4, the
+
+30
+00:02:10,660 --> 00:02:14,730
+most significant 4 bits of the program counter
+are still 0.
+
+31
+00:02:14,730 --> 00:02:19,900
+For step 3, we multiply the address parameter
+13B by 4.
+
+32
+00:02:19,900 --> 00:02:26,450
+Remember that this is a hexadecimal multiplication,
+so the correct answer should be 4EC.
+
+33
+00:02:26,450 --> 00:02:31,450
+Then we expand the multiplication result to
+make it 28 bits.
+
+34
+00:02:31,450 --> 00:02:35,430
+This is done by padding the result with zeroes.
+
+35
+00:02:35,430 --> 00:02:41,640
+The last step concatenates the results from
+steps two and 3 respectively, giving us the
+
+36
+00:02:41,640 --> 00:02:43,150
+target address highlighted.
+

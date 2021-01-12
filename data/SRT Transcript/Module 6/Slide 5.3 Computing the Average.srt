@@ -1,0 +1,198 @@
+0:00:00.580,0:00:04.680
+We’ve calculated the average which was a
+cool thing.
+
+0:00:04.680,0:00:10.680
+But taking a closer look here the behavior
+of this program we can see that we are asking
+
+0:00:10.680,0:00:16.340
+the user to say in advance how many numbers
+are going to be in the sequence.
+
+0:00:16.340,0:00:22.410
+Which is maybe fine in this case but in a
+lot of other cases it is a not so user friendly
+
+0:00:22.410,0:00:28.820
+and sometimes it is basically impractical
+for the user to know in advance how many or
+
+0:00:28.820,0:00:30.400
+how large it is the input.
+
+0:00:30.400,0:00:38.380
+A lot of times we just want the user to keep
+on entering the input as they find it and
+
+0:00:38.380,0:00:42.390
+to signal in some way that they are done entering
+the input.
+
+0:00:42.390,0:00:47.750
+Let’s revise our program a bit to allow
+this kind of behavior.
+
+0:00:47.750,0:00:55.440
+Let’s ask the user to enter a sequence of
+grades and just type negative one which is
+
+0:00:55.440,0:01:01.410
+obviously not a valid grade to signal that
+the input is over.
+
+0:01:01.410,0:01:04.400
+So the behavior should be something like that.
+
+0:01:04.400,0:01:08.040
+First the program would say what the instructions
+are.
+
+0:01:08.040,0:01:12.340
+Enter the grades separated by space and your
+sequence by typing negative one.
+
+0:01:12.340,0:01:20.620
+Then the user would start entering the sequence
+of grades in this case 71 space 86 space 68
+
+0:01:20.620,0:01:27.120
+and so on 94 and then negative one which is
+just saying I am done entering the grades.
+
+0:01:27.120,0:01:34.970
+The program would then know to announce the
+average which is in this case 79.75.
+
+0:01:34.970,0:01:43.990
+Let’s take a minute and think how we can
+implement this kind of a behavior.
+
+0:01:43.990,0:01:50.770
+It seems like we can’t use a simple for
+loop here as we have used before going with
+
+0:01:50.770,0:01:54.990
+a count from one to the amount of numbers
+in our sequence.
+
+0:01:54.990,0:02:01.850
+Just because we don’t know how many numbers
+there are going to be in the sequence.
+
+0:02:01.850,0:02:08.119
+But we still want to do some kind of repetitive
+process of reading and accumulating reading
+
+0:02:08.119,0:02:10.280
+and adding reading and adding.
+
+0:02:10.280,0:02:13.090
+In order to calculate the total sum of the
+numbers.
+
+0:02:13.090,0:02:20.810
+So it seems like a for loop won’t be the
+control flow we are going to choose.
+
+0:02:20.810,0:02:23.590
+In this case we are going to choose a while
+loop.
+
+0:02:23.590,0:02:32.150
+And another technique I want to show you here
+is the use of variables which are named flag
+
+0:02:32.150,0:02:33.870
+variables.
+
+0:02:33.870,0:02:40.470
+Flags are basically two state variables they
+are either down or raised or up.
+
+0:02:40.470,0:02:45.470
+We can use them in this type of situation
+something like that.
+
+0:02:45.470,0:02:53.501
+We will initialize the flag to be down and
+then each time we read an input we will add
+
+0:02:53.501,0:03:01.330
+it by the way we also need to count the number
+of elements in order to or be able to divide
+
+0:03:01.330,0:03:03.820
+the sum by the amount.
+
+0:03:03.820,0:03:10.570
+In this case we would need to accumulate both
+the sum and a count of how many elements there
+
+0:03:10.570,0:03:11.570
+are.
+
+0:03:11.570,0:03:16.220
+So each iteration we will read a number add
+it and count it.
+
+0:03:16.220,0:03:18.110
+Read a number add it and count it.
+
+0:03:18.110,0:03:21.900
+The flag would remain down as long as we read
+grades.
+
+0:03:21.900,0:03:24.489
+We read a grade add it and count it.
+
+0:03:24.489,0:03:26.560
+Read a grade add it and count it.
+
+0:03:26.560,0:03:33.569
+As we see negative one we just raise the flag
+basically signally to break out of this repetitive
+
+0:03:33.569,0:03:36.300
+process and to calculate the average.
+
+0:03:36.300,0:03:41.959
+At that point in time we would have accumulated
+the total sum we would have accumulated the
+
+0:03:41.959,0:03:45.450
+number of elements that the user entered.
+
+0:03:45.450,0:03:49.540
+And then we would be able to divide them one
+by the other.
+
+0:03:49.540,0:03:54.080
+So that would be the big idea here of our
+implementation.
+
+0:03:54.080,0:04:03.880
+Just one thing before we move on really implementing
+is how to implement this two state variable.
+
+0:04:03.880,0:04:12.750
+And it seems very reasonable to use Boolean
+typed variable because a Boolean also has
+
+0:04:12.750,0:04:16.329
+two states false and true.
+
+0:04:16.329,0:04:21.630
+Basically corresponding to the two states
+of a flag, down and up.
+
+0:04:21.630,0:04:27.919
+So the down would be let’s say false and
+up would be true and then using this Boolean
+
+0:04:27.919,0:04:36.099
+variable we can use it in the while condition
+to control this repetitive process.
+
+0:04:36.099,0:04:39.300
+Let’s go down and implement this here.

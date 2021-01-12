@@ -1,0 +1,197 @@
+1
+00:00:00,680 --> 00:00:04,270
+Before we get too deep into linked lists,
+I have to talk to you about something else
+
+2
+00:00:04,270 --> 00:00:06,910
+that we need to go over first.
+
+3
+00:00:06,910 --> 00:00:11,940
+C++ has this idea of templates and a lot of
+languages have these now; they might call
+
+4
+00:00:11,940 --> 00:00:14,310
+them generics, they might call them templates.
+
+5
+00:00:14,310 --> 00:00:19,420
+But the idea is that we don't really know
+what data type we're going to be working with.
+
+6
+00:00:19,420 --> 00:00:24,360
+So in C++ we can template; we can use a template
+when we don't know what the data type is of
+
+7
+00:00:24,360 --> 00:00:25,820
+one or more elements.
+
+8
+00:00:25,820 --> 00:00:30,369
+Before each function or class that we're going
+to be working with, we have to put this indicator
+
+9
+00:00:30,369 --> 00:00:35,390
+this is a template class T. And T is just
+my individual use, you can really use any
+
+10
+00:00:35,390 --> 00:00:40,090
+name but I just used to see all the time so
+that's what I normally consider.
+
+11
+00:00:40,090 --> 00:00:44,650
+And that's a data type that we don't know
+which data type it's actually going to be
+
+12
+00:00:44,650 --> 00:00:45,650
+in the end.
+
+13
+00:00:45,650 --> 00:00:51,230
+What C++ plus does is basically a find and
+replace through that function to replace T
+
+14
+00:00:51,230 --> 00:00:54,879
+with the appropriate data type, whatever the
+data type is.
+
+15
+00:00:54,879 --> 00:01:00,850
+So I've got here a function called my swap,
+which is going to be a templated function
+
+16
+00:01:00,850 --> 00:01:05,400
+and it takes in two items and I don't know
+what data type the items are.
+
+17
+00:01:05,400 --> 00:01:06,520
+It could be two integers.
+
+18
+00:01:06,520 --> 00:01:07,520
+It could be two doubles.
+
+19
+00:01:07,520 --> 00:01:08,520
+It could be two floats.
+
+20
+00:01:08,520 --> 00:01:09,520
+It could be two strings.
+
+21
+00:01:09,520 --> 00:01:10,830
+It could be two elephants.
+
+22
+00:01:10,830 --> 00:01:15,380
+What it can't be is one int and one elephant,
+so we can't mix and match data type.
+
+23
+00:01:15,380 --> 00:01:19,700
+T has to be T consistently whatever the data
+type is.
+
+24
+00:01:19,700 --> 00:01:23,740
+So here we're going to swap two items, meaning
+we're going to make the value that was in
+
+25
+00:01:23,740 --> 00:01:28,500
+A into B. And we're going to take the value
+that was in B and store it in A, and the code
+
+26
+00:01:28,500 --> 00:01:32,360
+for that is overly simplistic; it's just three
+copy operations.
+
+27
+00:01:32,360 --> 00:01:38,500
+But the real takeaway here is that you can
+use any data type for this my swap function.
+
+28
+00:01:38,500 --> 00:01:42,799
+And in C++ you would just call my swap and
+give it two integers or two elephants, it
+
+29
+00:01:42,799 --> 00:01:48,000
+would be fine with that and you don't need
+to rewrite this function numerous times simply
+
+30
+00:01:48,000 --> 00:01:49,659
+to change the data type.
+
+31
+00:01:49,659 --> 00:01:54,960
+And that's a huge benefit when we get to working
+with larger classes, particularly with storage
+
+32
+00:01:54,960 --> 00:01:58,640
+of items where we don't know what data type
+is going to be stored in really we don't care
+
+33
+00:01:58,640 --> 00:02:03,410
+what data type is going to be store; our job
+is to simply store the data type.
+
+34
+00:02:03,410 --> 00:02:08,450
+And I imagine this the way I tell my students
+to envision this is, imagine if you're running
+
+35
+00:02:08,450 --> 00:02:13,849
+a storage company, like the big the big storage
+companies here in New York where you can rent
+
+36
+00:02:13,849 --> 00:02:14,909
+out a room.
+
+37
+00:02:14,909 --> 00:02:17,419
+The company doesn't care what you put into
+your room.
+
+38
+00:02:17,419 --> 00:02:20,940
+I guess they might care if it's going to be
+dangerous but they don't care what you're
+
+39
+00:02:20,940 --> 00:02:24,239
+going to put into that room; they simply care
+that you own the room.
+
+40
+00:02:24,239 --> 00:02:25,980
+And that's exactly what we're doing here.
+
+41
+00:02:25,980 --> 00:02:31,040
+We're saying we'd like to the ability to swap
+two things and don't worry about what those
+
+42
+00:02:31,040 --> 00:02:31,579
+two things are.
+

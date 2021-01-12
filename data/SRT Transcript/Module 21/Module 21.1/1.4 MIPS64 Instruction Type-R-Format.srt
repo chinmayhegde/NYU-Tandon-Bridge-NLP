@@ -1,0 +1,125 @@
+1
+00:00:00,880 --> 00:00:03,910
+R-format instructions have only registers
+as operands.
+
+2
+00:00:03,910 --> 00:00:08,790
+An R-format can have between one and three
+registers and one of the registers can be
+
+3
+00:00:08,790 --> 00:00:10,360
+a destination register.
+
+4
+00:00:10,360 --> 00:00:14,720
+Another interesting aspect of R-format instructions
+is that that they all have the same opcode
+
+5
+00:00:14,720 --> 00:00:15,750
+of 0.
+
+6
+00:00:15,750 --> 00:00:20,189
+Therefore, each R-format instruction needs
+a second opcode, or a function, to detail
+
+7
+00:00:20,189 --> 00:00:22,259
+its unique operation
+
+8
+00:00:22,259 --> 00:00:25,589
+The figure illustrates the layout of R-format
+instructions.
+
+9
+00:00:25,589 --> 00:00:28,149
+The opcode for each R-format is the same.
+
+10
+00:00:28,149 --> 00:00:35,330
+The instruction has three 5-bit fields for
+at most three registers, Rs, Rt, and Rd respectively.
+
+11
+00:00:35,330 --> 00:00:39,310
+Another field of R-format instructions is
+the shift amount field.
+
+12
+00:00:39,310 --> 00:00:44,940
+This field is only valid when the instruction
+is shift left logical or shift right logical.
+
+13
+00:00:44,940 --> 00:00:47,870
+Otherwise, the shift mount field is zero.
+
+14
+00:00:47,870 --> 00:00:52,700
+The last field of the instruction is the 6-bit
+second opcode or function.
+
+15
+00:00:52,700 --> 00:00:58,620
+As we see, when we add the size of each field,
+we get 32 bits.
+
+16
+00:00:58,620 --> 00:01:04,920
+Let us illustrate how the processor determines
+what to do when it fetches an R-format instruction.
+
+17
+00:01:04,920 --> 00:01:06,950
+Consider the example of this figure.
+
+18
+00:01:06,950 --> 00:01:13,759
+The processor first reads the opcode and it
+sees it is all zeroes, meaning it is an R-format.
+
+19
+00:01:13,759 --> 00:01:18,899
+The processor then reads the function field,
+which is the least significant 6 bits, to
+
+20
+00:01:18,899 --> 00:01:21,719
+determine the operation of that R-format instruction.
+
+21
+00:01:21,719 --> 00:01:29,689
+The function 101100 is for the D ADD instruction.
+
+22
+00:01:29,689 --> 00:01:34,380
+The MIPS64 manual details the function field
+for each R-format instruction.
+
+23
+00:01:34,380 --> 00:01:41,850
+Once the CPU knows the instruction is a doubleword
+ADD, it knows that it needs the operands Rs,
+
+24
+00:01:41,850 --> 00:01:44,040
+Rt and Rd.
+
+25
+00:01:44,040 --> 00:01:49,640
+Moreover, since it is not a shift instruction,
+the shift amount field is not used.
+
+26
+00:01:49,640 --> 00:01:55,600
+The processor then converts the register numbers
+for the operands of the instruction and can
+
+27
+00:01:55,600 --> 00:01:56,889
+form the complete instruction.
+

@@ -1,0 +1,86 @@
+1
+00:00:00,799 --> 00:00:05,550
+So, initially when we create the semaphore
+we send a signal in the semaphore, so that's
+
+2
+00:00:05,550 --> 00:00:07,830
+an initial cueing of the signal.
+
+3
+00:00:07,830 --> 00:00:12,620
+Now assuming that we just created it I'm going
+to assume that nobody's waiting on the semaphore,
+
+4
+00:00:12,620 --> 00:00:17,939
+so the signal is just going to sit there and
+wait to be received.
+
+5
+00:00:17,939 --> 00:00:21,339
+When we enter a critical section the first
+thing that we do is call wait.
+
+6
+00:00:21,339 --> 00:00:27,339
+Now as long as there's a signal already there,
+then wait is non-blocking and the thread is
+
+7
+00:00:27,339 --> 00:00:29,609
+just going to be allowed to enter its critical
+section.
+
+8
+00:00:29,609 --> 00:00:35,470
+But the key feature is that the wait will
+consume the signal that's queued, so now there's
+
+9
+00:00:35,470 --> 00:00:37,739
+no signal that's queued.
+
+10
+00:00:37,739 --> 00:00:43,270
+If another thread calls wait to enter its
+critical section then it will not have a signal
+
+11
+00:00:43,270 --> 00:00:48,750
+and it will be blocked and the operating system
+will keep a queue of the blocked processes
+
+12
+00:00:48,750 --> 00:00:53,019
+so that it can start those processes again
+as the signals come in.
+
+13
+00:00:53,019 --> 00:00:56,449
+When we're done, when the thread is finished
+with its critical section, it’s going to
+
+14
+00:00:56,449 --> 00:01:02,469
+call signal and signal is going to either
+queue up the signal if there's no threads
+
+15
+00:01:02,469 --> 00:01:08,050
+waiting or if there is a thread waiting then
+the signal is going to release the next thread
+
+16
+00:01:08,050 --> 00:01:09,170
+from the queue.
+
+17
+00:01:09,170 --> 00:01:16,160
+So, this allows us to create a mutual exclusion
+protection mechanism using just a simple signal
+
+18
+00:01:16,160 --> 00:01:17,500
+passing routine
+

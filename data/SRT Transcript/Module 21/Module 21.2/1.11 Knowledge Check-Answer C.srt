@@ -1,0 +1,9 @@
+1
+00:00:00,440 --> 00:00:05,320
+A direct-mapped cache uses a one-to-one approach,
+where there is only one location in the cache
+
+2
+00:00:05,320 --> 00:00:06,690
+that a DRAM block can go.
+

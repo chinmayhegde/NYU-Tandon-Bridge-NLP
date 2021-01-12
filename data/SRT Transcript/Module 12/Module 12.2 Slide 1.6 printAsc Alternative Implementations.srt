@@ -1,0 +1,184 @@
+1
+00:00:00,660 --> 00:00:01,260
+Okay.
+
+2
+00:00:01,260 --> 00:00:07,180
+So we are now convinced that our implementation
+really works.
+
+3
+00:00:07,180 --> 00:00:12,410
+As we said we use the smaller instance of
+this problem, print ascending start and N minus
+
+4
+00:00:12,410 --> 00:00:13,410
+one.
+
+5
+00:00:13,410 --> 00:00:18,840
+That would print in entire elements in the
+range from start to N minus one and followed
+
+6
+00:00:18,840 --> 00:00:23,029
+by the end would basically print the entire
+range from start to end.
+
+7
+00:00:23,029 --> 00:00:28,439
+We can think of some other ways to use this
+assumption of calling print ascending on a
+
+8
+00:00:28,439 --> 00:00:33,559
+smaller range and combining it in order to
+print from start to end.
+
+9
+00:00:33,559 --> 00:00:39,140
+So given the range start and end taking the
+range start to end minus one is obviously
+
+10
+00:00:39,140 --> 00:00:44,480
+a smaller range and calling this print ascending
+really worked as we did.
+
+11
+00:00:44,480 --> 00:00:50,820
+But we can also, for example, call print ascending
+not from start to end minus one but from start
+
+12
+00:00:50,820 --> 00:00:52,840
+plus one to end.
+
+13
+00:00:52,840 --> 00:00:59,649
+This call is also a call for a function on
+an interval with a smaller range than the
+
+14
+00:00:59,649 --> 00:01:01,629
+original start and end.
+
+15
+00:01:01,629 --> 00:01:08,010
+By our assumption, this call should also do
+its job or in fact it should print the numbers
+
+16
+00:01:08,010 --> 00:01:11,160
+from start plus one to end.
+
+17
+00:01:11,160 --> 00:01:17,340
+that is great because all we have left to
+do here is just print start before we print
+
+18
+00:01:17,340 --> 00:01:21,330
+from start plus one to end; so that's another
+version here.
+
+19
+00:01:21,330 --> 00:01:26,670
+Another implementation, another recursive
+implementation, for the print ascending function.
+
+20
+00:01:26,670 --> 00:01:32,390
+We are first printing the value of start and
+then calling the recursive function to do
+
+21
+00:01:32,390 --> 00:01:36,470
+the rest of the job: to print from start plus
+one to end.
+
+22
+00:01:36,470 --> 00:01:44,390
+So if we have the range from start to end,
+we can reduce it by calling start and end
+
+23
+00:01:44,390 --> 00:01:48,220
+minus one or by calling start plus one to
+end.
+
+24
+00:01:48,220 --> 00:01:53,950
+Actually, we can think of another way or a
+lot of other ways, but in another very interesting
+
+25
+00:01:53,950 --> 00:02:01,210
+way would say, instead of just reducing it
+by one maybe we can take half the size of
+
+26
+00:02:01,210 --> 00:02:02,210
+the range.
+
+27
+00:02:02,210 --> 00:02:07,220
+So let's print the first half of the numbers
+and after that we'll print the second half
+
+28
+00:02:07,220 --> 00:02:13,010
+of the numbers, for that let's first, I don't
+know, calculate the middle point, which is
+
+29
+00:02:13,010 --> 00:02:15,150
+basically the average of starts and ends.
+
+30
+00:02:15,150 --> 00:02:21,810
+So, mid would be start plus end div to and
+then we'll make two recursive calls: one to
+
+31
+00:02:21,810 --> 00:02:26,720
+print ascending from start up to the middle,
+and the second to print from the middle plus
+
+32
+00:02:26,720 --> 00:02:30,140
+one, one after the middle, to end.
+
+33
+00:02:30,140 --> 00:02:35,590
+The first call by our assumption since it's
+a smaller sized range; it would do the job
+
+34
+00:02:35,590 --> 00:02:40,310
+it would print from start to the middle all
+of the numbers in ascending order.
+
+35
+00:02:40,310 --> 00:02:45,880
+and the second call since it is also a call
+with a smaller size range, would bring the
+
+36
+00:02:45,880 --> 00:02:49,010
+numbers from mid plus one up to end.
+
+37
+00:02:49,010 --> 00:02:54,510
+Combining these two lines one after the other
+would print the entire set of elements from
+
+38
+00:02:54,510 --> 00:02:57,710
+start to end in ascending order.
+
+39
+00:02:57,710 --> 00:02:59,239
+That's kind of cool; you must say?
+

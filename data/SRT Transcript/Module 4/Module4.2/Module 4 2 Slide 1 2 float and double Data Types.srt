@@ -1,0 +1,59 @@
+0:00:01.280,0:00:05.600
+Ok so we talked in quite a detail about the
+int data type.
+
+0:00:05.600,0:00:08.320
+Let’s start talking about float and double.
+
+0:00:08.320,0:00:15.730
+These two types are quite similar to one another
+so we will talk about both of them together.
+
+0:00:15.730,0:00:19.600
+And we will just say the small differences
+between them are.
+
+0:00:19.600,0:00:26.730
+So float and doubles are used both to store
+real numbers in them.
+
+0:00:26.730,0:00:31.600
+Real numbers meaning number that can have
+fractional parts.
+
+0:00:31.600,0:00:38.550
+Let’s say 7.5 or 3.65 some decimal point
+in them.
+
+0:00:38.550,0:00:46.210
+Let’s try and think about the inner representation
+in of a data that can have fractional part.
+
+0:00:46.210,0:00:52.569
+So as integers both float and doubles also
+have a fixed size it is not that their size
+
+0:00:52.569,0:00:55.820
+changes depending on the number they are represented.
+
+0:00:55.820,0:01:00.190
+Each float has a size of its own and each
+double has a size of its own.
+
+0:01:00.190,0:01:02.859
+They differ from one another with their sizes.
+
+0:01:02.859,0:01:10.719
+So for doubles each double data takes 8 bytes
+where each float data takes only 4 bytes.
+
+0:01:10.719,0:01:17.600
+So double is double the size of a float but
+again each double data takes 8 bytes no matter
+
+0:01:17.600,0:01:23.860
+what’s represented in it and each float
+data takes 4 bytes no matter what represented
+
+0:01:23.860,0:01:24.360
+in it.

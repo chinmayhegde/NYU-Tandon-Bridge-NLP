@@ -1,0 +1,24 @@
+1
+00:00:00,700 --> 00:00:04,640
+In this module, we're going to be talking
+about processes and threads and what is needed
+
+2
+00:00:04,640 --> 00:00:08,130
+for an operating system to manage the processes
+and the threads.
+
+3
+00:00:08,130 --> 00:00:10,150
+We're going to take a look at some concurrency
+issues.
+
+4
+00:00:10,150 --> 00:00:11,679
+We're going to take a look at some deadlocks.
+
+5
+00:00:11,679 --> 00:00:14,589
+And we're going to talk about how to take
+care of all those issues.
+

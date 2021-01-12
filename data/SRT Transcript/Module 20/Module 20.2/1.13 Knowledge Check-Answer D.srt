@@ -1,0 +1,17 @@
+1
+00:00:00,380 --> 00:00:04,170
+The branch condition can be determined from
+the information available.
+
+2
+00:00:04,170 --> 00:00:08,390
+We know that R8 is 3 and R0 is always zero.
+
+3
+00:00:08,390 --> 00:00:11,110
+The branch checks if R8 is not equal to R0.
+
+4
+00:00:11,110 --> 00:00:14,340
+In our case, the branch condition is true.
+

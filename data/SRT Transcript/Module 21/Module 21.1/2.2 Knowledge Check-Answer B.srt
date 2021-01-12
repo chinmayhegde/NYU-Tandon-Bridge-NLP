@@ -1,0 +1,10 @@
+1
+00:00:00,520 --> 00:00:05,350
+The WriteBack step is only used to write to
+general-purpose registers R0-R31.
+
+2
+00:00:05,350 --> 00:00:09,170
+The program counter is not a general-purpose
+register.
+

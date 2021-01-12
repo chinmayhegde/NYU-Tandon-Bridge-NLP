@@ -1,0 +1,154 @@
+1
+00:00:00,810 --> 00:00:05,980
+If we go back to our previous example of having
+a base class pointer point to a derived class
+
+2
+00:00:05,980 --> 00:00:09,250
+object; C++ makes some interesting assumptions.
+
+3
+00:00:09,250 --> 00:00:15,920
+First off, by default C++ assumes that a base
+class pointer points to a base class object.
+
+4
+00:00:15,920 --> 00:00:22,330
+And that is not at all true because polymorphism
+tells us that we can make a base class pointer
+
+5
+00:00:22,330 --> 00:00:24,090
+point to a derived class object.
+
+6
+00:00:24,090 --> 00:00:30,130
+But C++, for good reason, tries to optimize
+things and say that if we have a base class
+
+7
+00:00:30,130 --> 00:00:33,530
+pointer we can assume that it's pointing to
+a base class object.
+
+8
+00:00:33,530 --> 00:00:39,020
+Unfortunately, that means that if we call
+any functions via that base class pointer,
+
+9
+00:00:39,020 --> 00:00:44,400
+the function version that we're going to be
+calling is that of the base class even if
+
+10
+00:00:44,400 --> 00:00:48,600
+the pointer actually points to the derived
+class object.
+
+11
+00:00:48,600 --> 00:00:52,800
+So if we, for example in our previous example
+if you want to take a look at the code going
+
+12
+00:00:52,800 --> 00:00:57,590
+back, if you take a look at the code for the
+pet object there is a function called speak.
+
+13
+00:00:57,590 --> 00:01:05,409
+And if we call that function on a base pointer,
+on a pet pointer, we will get no output even
+
+14
+00:01:05,409 --> 00:01:09,200
+if the pointer is pointing in a clear cat
+object.
+
+15
+00:01:09,200 --> 00:01:16,549
+So by default, we've got this issue where
+the base class pointer might be pointing to
+
+16
+00:01:16,549 --> 00:01:21,659
+a derived class object and we call the wrong
+version of the function; that could be catastrophic.
+
+17
+00:01:21,659 --> 00:01:28,119
+Imagine if the destructor for the base class
+was called but what we wanted to destroy was
+
+18
+00:01:28,119 --> 00:01:30,130
+the derived class.
+
+19
+00:01:30,130 --> 00:01:33,280
+That would be absolutely catastrophic; we'd
+have a memory leak.
+
+20
+00:01:33,280 --> 00:01:37,939
+The solution to this is to mark the function
+as virtual in the base class.
+
+21
+00:01:37,939 --> 00:01:44,930
+If we put virtual in the base class then C++
+waits until run time to make the decision
+
+22
+00:01:44,930 --> 00:01:47,509
+on what your version of the function to call.
+
+23
+00:01:47,509 --> 00:01:52,229
+So if we have a base class pointer and were
+accessing a function which is marked as virtual
+
+24
+00:01:52,229 --> 00:01:59,320
+C++ stops and says: I don't know which version
+to call, I'll wait until I can actually see
+
+25
+00:01:59,320 --> 00:02:04,859
+what object I'm working on and then I'll call
+the version appropriate for that object.
+
+26
+00:02:04,859 --> 00:02:10,929
+So rather than make the static binding decision,
+rather than decide which version of the function
+
+27
+00:02:10,929 --> 00:02:16,620
+we're going to call at compile time, we do
+what's called late or dynamic binding at run
+
+28
+00:02:16,620 --> 00:02:23,099
+time when we actually see the object that's
+when C++ will make the decision of which version
+
+29
+00:02:23,099 --> 00:02:24,840
+of the function to call.
+
+30
+00:02:24,840 --> 00:02:31,900
+The version of the function call depends on
+the type of object not the type of pointer.
+
+31
+00:02:31,900 --> 00:02:37,390
+And that's the way that we can get around
+the problem of accessing derived classes functions
+
+32
+00:02:37,390 --> 00:02:38,420
+via the base class pointer.
+

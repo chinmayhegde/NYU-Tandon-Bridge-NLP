@@ -1,0 +1,62 @@
+1
+00:00:02,100 --> 00:00:06,050
+As you can see from the images, what we have
+here on the top is a spinning hard drive and
+
+2
+00:00:06,050 --> 00:00:09,320
+you can see that magnetic disk that I was
+talking about there.
+
+3
+00:00:09,320 --> 00:00:13,760
+The head is the component that looks like
+a straight line and that one is in what's
+
+4
+00:00:13,760 --> 00:00:16,870
+known as a parking location right now once
+the disk spins up.
+
+5
+00:00:16,870 --> 00:00:22,910
+It would come off that parking location and
+move to different radii along the disk and
+
+6
+00:00:22,910 --> 00:00:30,160
+that this would just continue spinning along
+until the read operation was complete or until
+
+7
+00:00:30,160 --> 00:00:32,870
+the drive was shut down completely.
+
+8
+00:00:32,870 --> 00:00:37,899
+So one of the issues that come up with a hard
+disk drive is that it does waste a lot of
+
+9
+00:00:37,899 --> 00:00:43,210
+energy to move that disk physically, so there
+is quite a bit of energy savings in in going
+
+10
+00:00:43,210 --> 00:00:48,300
+with the solid state disk drive, which is
+along the bottom, and there's a performance
+
+11
+00:00:48,300 --> 00:00:50,890
+benefit also for solid state disks.
+
+12
+00:00:50,890 --> 00:00:55,530
+Unfortunately the downside is with a solid
+state disk you get significantly less storage
+
+13
+00:00:55,530 --> 00:00:56,569
+than with a hard disk drive.
+

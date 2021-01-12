@@ -1,0 +1,153 @@
+1
+00:00:00,810 --> 00:00:03,360
+So the mutual exclusion rules are real simple.
+
+2
+00:00:03,360 --> 00:00:09,031
+No two threads may be in a critical section
+at the same time; it just means that we can
+
+3
+00:00:09,031 --> 00:00:11,560
+have two threads that are in the critical
+section at the same time.
+
+4
+00:00:11,560 --> 00:00:16,129
+I know we said before that that is possible
+if we're talking about two threads that are
+
+5
+00:00:16,129 --> 00:00:19,669
+working in critical sections on completely
+different resources, and that's fine we're
+
+6
+00:00:19,669 --> 00:00:20,869
+not talking about that.
+
+7
+00:00:20,869 --> 00:00:25,140
+What we're talking about is when we have a
+shared resource, we have to protect that shared
+
+8
+00:00:25,140 --> 00:00:31,640
+resource by not allowing any threads that
+have that are in their critical section to
+
+9
+00:00:31,640 --> 00:00:32,900
+access that resource.
+
+10
+00:00:32,900 --> 00:00:38,760
+So, when no thread is in a critical section,
+any thread that requests entry has to be allowed
+
+11
+00:00:38,760 --> 00:00:41,080
+in without delay.
+
+12
+00:00:41,080 --> 00:00:46,120
+And that means that we can't as the operating
+system to act as a traffic cop; we can't say
+
+13
+00:00:46,120 --> 00:00:50,570
+to the operating system every time we want
+to access a critical section: are we allowed
+
+14
+00:00:50,570 --> 00:00:52,460
+to access the critical section?
+
+15
+00:00:52,460 --> 00:00:55,900
+Because that would be a call to the operating
+system and then the operating system is going
+
+16
+00:00:55,900 --> 00:01:00,580
+to have to stop and check and then run the
+thread again, which requires context switching
+
+17
+00:01:00,580 --> 00:01:02,850
+in we talked about how expensive that is.
+
+18
+00:01:02,850 --> 00:01:08,390
+So, we'd rather have is the way for the thread
+to check itself to see if it can go into its
+
+19
+00:01:08,390 --> 00:01:12,689
+critical section, to see if it's allowed to
+go into its critical section, and if it is
+
+20
+00:01:12,689 --> 00:01:16,789
+to just go straight in and not stop.
+
+21
+00:01:16,789 --> 00:01:21,021
+If the thread is not allowed into its critical
+section, of course, we're going to have to
+
+22
+00:01:21,021 --> 00:01:24,390
+have the thread pause, we’re gonna have
+to have block and of course that's going to
+
+23
+00:01:24,390 --> 00:01:28,740
+involve the operating system because the thread
+is going to move from the running state into
+
+24
+00:01:28,740 --> 00:01:32,859
+the block state and that means the operating
+system has to be invoked.
+
+25
+00:01:32,859 --> 00:01:38,610
+But really we want to avoid any unnecessary
+delay from the thread if it has to enter its
+
+26
+00:01:38,610 --> 00:01:41,990
+critical section; let it in as long as nobody
+else is.
+
+27
+00:01:41,990 --> 00:01:46,910
+The other part about this is that the thread
+can really only remain in its critical section
+
+28
+00:01:46,910 --> 00:01:52,630
+for a very small amount of time; we don't
+want to have large sets of functions very
+
+29
+00:01:52,630 --> 00:01:58,270
+large functions with a lot of work in a critical
+section, or in considered to be a critical
+
+30
+00:01:58,270 --> 00:02:02,390
+section, when all we need is a couple of lines
+of code to be in that critical section.
+
+31
+00:02:02,390 --> 00:02:06,880
+So, we want to have that is minimal as possible;
+we want to allow the thread to enter into
+
+32
+00:02:06,880 --> 00:02:10,450
+its critical section, do its work and then
+get out as quickly as possible.
+

@@ -1,0 +1,165 @@
+1
+00:00:00,429 --> 00:00:05,110
+So this is a very simple view of what the
+clock page replacement algorithm here is.
+
+2
+00:00:05,110 --> 00:00:11,190
+We have just end pages, end frames available,
+and what we're going to do is keep a pointer
+
+3
+00:00:11,190 --> 00:00:15,650
+that goes around and that's why we call it
+the clock page replacement algorithm.
+
+4
+00:00:15,650 --> 00:00:20,789
+Now when we load up a page, we're going to
+set it’s use bit equal to one and that's
+
+5
+00:00:20,789 --> 00:00:21,789
+fine.
+
+6
+00:00:21,789 --> 00:00:25,990
+So, we're going to have N frames and let's
+just say it's ten frames, just for easy math.
+
+7
+00:00:25,990 --> 00:00:31,911
+We have ten frames and as the frames, as the
+pages are loaded up into those frames, we
+
+8
+00:00:31,911 --> 00:00:38,250
+said all their use bits equal to zero and
+the pointer is pointing at let's say a page,
+
+9
+00:00:38,250 --> 00:00:41,899
+frame number two, as you see it in the the
+left side image.
+
+10
+00:00:41,899 --> 00:00:46,790
+When it's pointing at page number two, you
+can see that the use bit for frame number
+
+11
+00:00:46,790 --> 00:00:52,920
+two page forty-five is set to one, the use
+bit for frame number three page one-ninety-one
+
+12
+00:00:52,920 --> 00:00:58,380
+is set equal to one but the use bit for frame
+number four page five-hundred fifty-six to
+
+13
+00:00:58,380 --> 00:00:59,649
+set equal to zero.
+
+14
+00:00:59,649 --> 00:01:05,280
+So, what happens now when we have a page fault,
+we’re going to have to remove a page and
+
+15
+00:01:05,280 --> 00:01:07,360
+we're going to have to load up the new page.
+
+16
+00:01:07,360 --> 00:01:13,420
+So, to do that what we do is real look for
+advancing the pointer; we’re looking for
+
+17
+00:01:13,420 --> 00:01:14,979
+use bits of zero.
+
+18
+00:01:14,979 --> 00:01:20,450
+But if we find a use bit of one, we’re going
+to reset its value back to zero.
+
+19
+00:01:20,450 --> 00:01:22,080
+We're not going to steal it quite yet.
+
+20
+00:01:22,080 --> 00:01:24,890
+We just set the use bit back zero.
+
+21
+00:01:24,890 --> 00:01:30,320
+So, frame two and frame three as you can see
+they their page numbers didn't change but
+
+22
+00:01:30,320 --> 00:01:33,000
+their use bits didn't change to zero.
+
+23
+00:01:33,000 --> 00:01:38,080
+Now we need to load page seven-hundred twenty-seven
+but page five-hundred fifty-six, which is
+
+24
+00:01:38,080 --> 00:01:40,650
+loaded in frame four is unused.
+
+25
+00:01:40,650 --> 00:01:45,751
+So, when the pointer gets around to that point,
+we're going to remove that page stored in
+
+26
+00:01:45,751 --> 00:01:51,460
+a second or a storage device if the modify
+bit or whatever, and load up page seven twenty-seven
+
+27
+00:01:51,460 --> 00:01:53,670
+and set its use bit equal to one.
+
+28
+00:01:53,670 --> 00:02:00,020
+The reason that this is effective is because
+if page forty-five is no longer in use, then
+
+29
+00:02:00,020 --> 00:02:05,590
+next time the clock pointer comes around to
+frame two, the use bit will still be set to
+
+30
+00:02:05,590 --> 00:02:09,989
+zero because it's not in use and page forty-five
+will be stolen now.
+
+31
+00:02:09,989 --> 00:02:15,549
+So, the clock page replacement algorithm does
+have a very high efficacy rate; it's very
+
+32
+00:02:15,549 --> 00:02:21,689
+effective in not throwing out pages which
+are actively in use, and it does have a pretty
+
+33
+00:02:21,689 --> 00:02:24,500
+good rate of throwing out pages which aren't
+in use.
+
+34
+00:02:24,500 --> 00:02:29,639
+So, we can save a lot of memory using this
+and it's really very simple to implement doesn't
+
+35
+00:02:29,639 --> 00:02:30,799
+require a lot of effort to implement.
+

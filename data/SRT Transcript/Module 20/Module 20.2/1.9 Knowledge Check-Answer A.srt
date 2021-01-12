@@ -1,0 +1,13 @@
+1
+00:00:00,500 --> 00:00:03,380
+Pay close attention to the formula for func1.
+
+2
+00:00:03,380 --> 00:00:07,259
+Note that the PC+4 addition is a hexadecimal
+addition.
+
+3
+00:00:07,259 --> 00:00:10,480
+Also, the PC is assumed to be 32 bits
+

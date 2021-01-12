@@ -1,0 +1,9 @@
+1
+00:00:00,489 --> 00:00:06,180
+A fully-associative cache uses a one-to-any
+policy, where a DRAM block can go to any available
+
+2
+00:00:06,180 --> 00:00:06,939
+cache block.
+

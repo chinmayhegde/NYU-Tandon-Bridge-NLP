@@ -1,0 +1,10 @@
+0:00:00.770,0:00:04.029
+Today we're going to talk in more detail about
+the class string.
+
+0:00:04.029,0:00:07.000
+We’ve already seen the string data type.
+
+0:00:07.000,0:00:11.629
+Today we are going to see some more abilities
+of this class.

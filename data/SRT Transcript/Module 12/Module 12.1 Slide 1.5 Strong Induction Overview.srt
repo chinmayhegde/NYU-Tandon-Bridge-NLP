@@ -1,0 +1,164 @@
+1
+00:00:00,530 --> 00:00:07,920
+Let's talk about a variation, a more general
+form of induction, called strong induction.
+
+2
+00:00:07,920 --> 00:00:13,339
+Strong induction is also a mathematical technique
+to prove universal statements of the same
+
+3
+00:00:13,339 --> 00:00:19,340
+form, P of N is true for any natural number
+N, but then the technique is a bit different.
+
+4
+00:00:19,340 --> 00:00:24,520
+This technique also has two steps: the base
+case and the inductive step.
+
+5
+00:00:24,520 --> 00:00:31,580
+Base case, same as the regular mathematical
+induction, we prove that P of one is true.
+
+6
+00:00:31,580 --> 00:00:38,940
+But the inductive step would be a bit different:
+in regular induction we just prove that a
+
+7
+00:00:38,940 --> 00:00:47,620
+P of N minus one implies P of N, in the strong
+induction we prove that if P is true for all
+
+8
+00:00:47,620 --> 00:00:52,170
+values more than N, that implies that P of
+N is true.
+
+9
+00:00:52,170 --> 00:00:58,539
+So, our assumption here is stronger instead
+of just assuming P of N minus one and using
+
+10
+00:00:58,539 --> 00:01:05,820
+that a single assumption to prove that P of
+N is true, here we assume that P is true for
+
+11
+00:01:05,820 --> 00:01:10,390
+all values smaller than N. Basically that
+P of N minus one is true, and P of N minus
+
+12
+00:01:10,390 --> 00:01:16,001
+two is true, and P of N minus three is true
+and all values of P are true up to N; all
+
+13
+00:01:16,001 --> 00:01:19,390
+of that together should imply that P of N
+is true.
+
+14
+00:01:19,390 --> 00:01:25,369
+We have a much stronger assumption here to
+show that P of N is true; that's why it's
+
+15
+00:01:25,369 --> 00:01:27,899
+named strong induction.
+
+16
+00:01:27,899 --> 00:01:33,840
+Let's see why this technique basically can
+be used in order to show that P of N is true
+
+17
+00:01:33,840 --> 00:01:35,250
+for all natural numbers N.
+
+18
+00:01:35,250 --> 00:01:42,829
+So, once again we prove that P of one is true,
+in our base case, that means that we can conclude
+
+19
+00:01:42,829 --> 00:01:44,609
+that P of one and is true.
+
+20
+00:01:44,609 --> 00:01:51,860
+And then we show that P of one implies P of
+two all values smaller than two are true,
+
+21
+00:01:51,860 --> 00:01:58,060
+basically P of one, means P of two is true
+by showing this statement using the fact that
+
+22
+00:01:58,060 --> 00:02:02,899
+P of one is already true, we can conclude
+that P. of two is true.
+
+23
+00:02:02,899 --> 00:02:09,009
+Then we also show that if P of one and P of
+two are true, then P three is true.
+
+24
+00:02:09,009 --> 00:02:14,010
+Our assumption, the stronger assumption for
+P of three was that all values smaller than
+
+25
+00:02:14,010 --> 00:02:16,459
+three are true; P of one and two are true.
+
+26
+00:02:16,459 --> 00:02:22,640
+That implies P of three is true and, in this
+point of time, we already know that P of one
+
+27
+00:02:22,640 --> 00:02:25,540
+is true and that P of two is also true.
+
+28
+00:02:25,540 --> 00:02:30,010
+And therefore, we can say that P of three
+is true.
+
+29
+00:02:30,010 --> 00:02:35,610
+Moving on, we showed that P of one, P of two,
+and P of three, all of them together are true
+
+30
+00:02:35,610 --> 00:02:37,629
+that implies P of four.
+
+31
+00:02:37,629 --> 00:02:42,129
+Again, we already know that P of one and P
+of two and P of three are all true.
+
+32
+00:02:42,129 --> 00:02:46,730
+Therefore, we can say safely that P of four
+is true.
+
+33
+00:02:46,730 --> 00:02:53,810
+I believe you see that these things can go
+on, and that way we basically show that all
+
+34
+00:02:53,810 --> 00:02:56,560
+P of N’s are true for all natural number
+N’s.
+

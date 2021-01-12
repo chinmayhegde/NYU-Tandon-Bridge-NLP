@@ -1,0 +1,176 @@
+1
+00:00:00,570 --> 00:00:06,920
+If it worth emphasizing the write-back policy
+of a cache and the write-back stage of a CPU
+
+2
+00:00:06,920 --> 00:00:07,920
+pipeline.
+
+3
+00:00:07,920 --> 00:00:11,849
+The write-back policy of a cache deals with
+synchronizing data between the cache and the
+
+4
+00:00:11,849 --> 00:00:12,849
+D RAM.
+
+5
+00:00:12,849 --> 00:00:17,760
+Whereas, the write-back stage of a CPU is
+for writing registers at the end of instruction
+
+6
+00:00:17,760 --> 00:00:20,660
+execution.
+
+7
+00:00:20,660 --> 00:00:27,289
+So how is the data in the write-back cache
+synchronized with the DRAM?
+
+8
+00:00:27,289 --> 00:00:32,140
+The Write-Back policy synchronizes the DRAM
+when it has to evict the cache block that
+
+9
+00:00:32,140 --> 00:00:35,660
+a store instruction was performed on.
+
+10
+00:00:35,660 --> 00:00:38,199
+Let us take a look at an example.
+
+11
+00:00:38,199 --> 00:00:44,000
+Assume we have 2-way set associative LRU cache
+with the write-back policy.
+
+12
+00:00:44,000 --> 00:00:48,770
+Each block of a write-back cache has what
+we call a dirty bit.
+
+13
+00:00:48,770 --> 00:00:52,980
+The role of the dirty bit is to indicate that
+a store instruction has been performed on
+
+14
+00:00:52,980 --> 00:00:54,469
+the block.
+
+15
+00:00:54,469 --> 00:00:59,679
+So on a store instruction, the data is written
+into the cache block only and the dirty bit
+
+16
+00:00:59,679 --> 00:01:02,360
+for that cache block is set to one.
+
+17
+00:01:02,360 --> 00:01:07,650
+In addition, the age bits of the block are
+updated to reflect the current time.
+
+18
+00:01:07,650 --> 00:01:13,780
+So in our example, the last block of the cache
+is being written to on the store instruction.
+
+19
+00:01:13,780 --> 00:01:18,479
+Later in the execution, a new D RAM block
+needs to be brought into the cache.
+
+20
+00:01:18,479 --> 00:01:24,470
+Since the cache uses a 2-way set associative
+policy, we go to the set only set that the
+
+21
+00:01:24,470 --> 00:01:27,310
+new DR AM block can be moved to.
+
+22
+00:01:27,310 --> 00:01:32,160
+The new D RAM block is yellow, so it can only
+go to set 1 in the cache.
+
+23
+00:01:32,160 --> 00:01:38,090
+The cache controller realizes that all blocks
+in the set are occupied, so one of them must
+
+24
+00:01:38,090 --> 00:01:39,800
+be evicted.
+
+25
+00:01:39,800 --> 00:01:44,890
+Since the cache replacement policy is LRU,
+the cache controller looks at the age bits
+
+26
+00:01:44,890 --> 00:01:47,369
+of the two blocks in set 1.
+
+27
+00:01:47,369 --> 00:01:51,259
+The last block is the oldest and thus must
+be evicted.
+
+28
+00:01:51,259 --> 00:01:55,020
+Before evicting it, the cache controller checks
+its dirty bit.
+
+29
+00:01:55,020 --> 00:02:00,369
+If the dirty bit is one, this means that a
+store instruction was performed on that block
+
+30
+00:02:00,369 --> 00:02:03,310
+and the DRAM doesn’t have the new data.
+
+31
+00:02:03,310 --> 00:02:08,250
+So the cache controller writes the data of
+that block in the DRAM to updated the DRAM
+
+32
+00:02:08,250 --> 00:02:09,720
+and clears the dirty bit.
+
+33
+00:02:09,720 --> 00:02:13,750
+Then, the new block can be brought in that
+cache.
+
+34
+00:02:13,750 --> 00:02:19,090
+In this example here, the content of the dirty
+cache block is written to the D RAM to synchronize
+
+35
+00:02:19,090 --> 00:02:22,610
+it and the dirty bit for that cache is clear.
+
+36
+00:02:22,610 --> 00:02:27,940
+At this point, the D RAM has the must up to
+date information for the block.
+
+37
+00:02:27,940 --> 00:02:33,690
+Then the new DRAM block is brought in the
+recently evicted cache block and its age bits
+
+38
+00:02:33,690 --> 00:02:35,970
+are updated to reflect the current time.
+

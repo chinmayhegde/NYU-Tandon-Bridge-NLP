@@ -1,0 +1,71 @@
+1
+00:00:00,610 --> 00:00:02,570
+We covered a lot of material in this module.
+
+2
+00:00:02,570 --> 00:00:05,570
+We’ve looked at what is a linked list.
+
+3
+00:00:05,570 --> 00:00:08,740
+We’ve looked at why do we need linked lists.
+
+4
+00:00:08,740 --> 00:00:11,679
+We also talked about templates, and templates
+are something that are going to keep coming
+
+5
+00:00:11,679 --> 00:00:13,829
+up time and time again throughout the rest
+of the semester.
+
+6
+00:00:13,829 --> 00:00:17,750
+And in the data structures that we're going
+to talk about because we never know what they
+
+7
+00:00:17,750 --> 00:00:20,290
+the type are storing inside of a data structure.
+
+8
+00:00:20,290 --> 00:00:23,260
+We talked about the design of a linked list
+and you should definitely take a look at the
+
+9
+00:00:23,260 --> 00:00:29,000
+code that we've posted in the CPP file for
+this module associated with this, so take
+
+10
+00:00:29,000 --> 00:00:32,529
+a look at that because that is very useful
+resource.
+
+11
+00:00:32,529 --> 00:00:36,520
+And then we talked about what linked lists
+are used for and get some real world example.
+
+12
+00:00:36,520 --> 00:00:40,640
+So going forward you should understand linked
+lists and you should be able to make a judgment
+
+13
+00:00:40,640 --> 00:00:45,170
+call of whether you want to use an array or
+vector or a linked list because that's going
+
+14
+00:00:45,170 --> 00:00:49,930
+to make a very big difference in terms of
+your performance of your program.
+
+15
+00:00:49,930 --> 00:00:52,190
+And it's an important distinction that you
+should understand.
+

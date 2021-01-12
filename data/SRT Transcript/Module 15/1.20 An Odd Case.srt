@@ -1,0 +1,134 @@
+1
+00:00:00,590 --> 00:00:05,210
+One interesting thing about C++ is it has
+both the pre and the post increment operator;
+
+2
+00:00:05,210 --> 00:00:07,250
+of course we've used these before.
+
+3
+00:00:07,250 --> 00:00:12,540
+But we need a special case to differentiate
+between the pre and the post increment operators
+
+4
+00:00:12,540 --> 00:00:15,070
+because they're both unary operators.
+
+5
+00:00:15,070 --> 00:00:19,720
+So since, if they’re members it's not going
+to have any parameters; how do we differentiate
+
+6
+00:00:19,720 --> 00:00:22,890
+between the pre increment and the post increment
+operators.
+
+7
+00:00:22,890 --> 00:00:30,520
+Well C++ resolves this by passing an int to
+the post increment operator; the pre increment
+
+8
+00:00:30,520 --> 00:00:34,000
+operator is just going to change the value
+and then it's going to return a reference
+
+9
+00:00:34,000 --> 00:00:37,230
+to the existing operator, it’s going to
+return star this.
+
+10
+00:00:37,230 --> 00:00:42,180
+So the format for that looks exactly like
+you see on the screen: it's just date ampersand
+
+11
+00:00:42,180 --> 00:00:47,899
+operator plus plus with nothing in the parameter
+list, returned by reference because we are
+
+12
+00:00:47,899 --> 00:00:49,210
+returning star this.
+
+13
+00:00:49,210 --> 00:00:53,980
+But the posting current operators going to
+create a copy of the object, it's creating
+
+14
+00:00:53,980 --> 00:00:59,649
+something inside the function, and then is
+going to change the value of the object, not
+
+15
+00:00:59,649 --> 00:01:02,650
+of the copy, and then it's going to return
+a copy.
+
+16
+00:01:02,650 --> 00:01:08,830
+So we're returning the original value, or
+a copy of the original value, and we're changing
+
+17
+00:01:08,830 --> 00:01:10,319
+the value at the same time.
+
+18
+00:01:10,319 --> 00:01:18,189
+Since we're returning by value, we have to
+make sure that that return is by value.
+
+19
+00:01:18,189 --> 00:01:24,229
+So we’re returning a copy; we’re returning
+something that we created inside our function
+
+20
+00:01:24,229 --> 00:01:25,569
+so we have to return by value.
+
+21
+00:01:25,569 --> 00:01:31,039
+So you're going to see it as date with no
+ampersand operator plus plus, and because
+
+22
+00:01:31,039 --> 00:01:36,359
+this is the posting current operator, we need
+to pass in that integer; so it's date operator
+
+23
+00:01:36,359 --> 00:01:38,549
+plus plus integer.
+
+24
+00:01:38,549 --> 00:01:41,509
+The integer really has no bearing on what
+happens inside.
+
+25
+00:01:41,509 --> 00:01:47,599
+It's really just a way to differentiate between
+the pre-increment in the post increment operator
+
+26
+00:01:47,599 --> 00:01:50,280
+and that's the only way that C++ can solve
+it.
+
+27
+00:01:50,280 --> 00:01:54,189
+So don’t look at the value of the integer;
+the value of the integers completely irrelevant.
+
+28
+00:01:54,189 --> 00:01:57,700
+Just the fact there is an integer there tells
+us that it's suppose increment operator.
+

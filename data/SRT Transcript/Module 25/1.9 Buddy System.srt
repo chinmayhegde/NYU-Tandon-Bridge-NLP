@@ -1,0 +1,304 @@
+1
+00:00:00,570 --> 00:00:05,050
+The buddy system is actually a compromise
+between the fixed and the dynamic partitionings.
+
+2
+00:00:05,050 --> 00:00:09,860
+And again there's not a lot of operating systems
+that do this today, in fact I don't know any
+
+3
+00:00:09,860 --> 00:00:15,289
+of them, but for example, Linux uses this
+for what it calls its kernel slab allocator.
+
+4
+00:00:15,289 --> 00:00:21,510
+So, when the kernel itself needs to create
+some memory for the kernel, it will use a
+
+5
+00:00:21,510 --> 00:00:29,490
+chunk of memory and divide that chunk of memory
+as a buddy system, just to make smaller partitions
+
+6
+00:00:29,490 --> 00:00:31,350
+of a larger chunk of main memory.
+
+7
+00:00:31,350 --> 00:00:35,660
+So, while we don't do this on a large scale
+for all of main memory, there are certainly
+
+8
+00:00:35,660 --> 00:00:43,500
+situations where even Linux today will do
+this for parts of its slab allocator for creation
+
+9
+00:00:43,500 --> 00:00:49,340
+of, or for allocation of smaller parts of
+main memory for kernel purposes.
+
+10
+00:00:49,340 --> 00:00:55,240
+Anyhow, what it does is we take main memory
+and divide it in multiples of two.
+
+11
+00:00:55,240 --> 00:00:58,300
+And the reason of course that we're doing
+multiples of two is because it makes it easier
+
+12
+00:00:58,300 --> 00:01:02,851
+on the calculations; we don't have to necessarily
+record the starting in the ending point, we
+
+13
+00:01:02,851 --> 00:01:06,800
+can record what multiple of two this is and
+so on and so forth.
+
+14
+00:01:06,800 --> 00:01:12,910
+Let's take for example, a two megabyte memory
+allocation, so let's say the the Linux kernel
+
+15
+00:01:12,910 --> 00:01:17,920
+has a two megabyte memory allocation for it
+and wants to divide it up for purposes for
+
+16
+00:01:17,920 --> 00:01:22,970
+storage of an IO table, or storage of a main
+memory management table, or who knows.
+
+17
+00:01:22,970 --> 00:01:28,340
+It’s got to store some portion of information
+but two megabytes would be a huge waste, it
+
+18
+00:01:28,340 --> 00:01:29,939
+needs something much smaller.
+
+19
+00:01:29,939 --> 00:01:35,250
+The kernel means is let's say one hundred
+kilobytes, for whatever it's going to do.
+
+20
+00:01:35,250 --> 00:01:40,350
+The process then is that we take that two
+megabytes and start breaking it down into
+
+21
+00:01:40,350 --> 00:01:45,560
+divisions, so you can see that what we've
+created initially, we take the two megabytes
+
+22
+00:01:45,560 --> 00:01:50,469
+and divide it in half so that we end up with
+the a one thousand and twenty four kilobyte
+
+23
+00:01:50,469 --> 00:01:54,420
+allocation and another one thousand twenty
+four kilobyte allocation.
+
+24
+00:01:54,420 --> 00:01:59,530
+But that's way over what we need of hundred
+kilobytes, so we break down one of the one
+
+25
+00:01:59,530 --> 00:02:04,770
+thousand twenty-four kilobytes into two five
+hundred twelve kilobyte allocations.
+
+26
+00:02:04,770 --> 00:02:08,670
+Then we'll take one of the five hundred twelve
+kilobyte allocations and break that down into
+
+27
+00:02:08,670 --> 00:02:13,120
+two two hundred fifty six kilobyte allocations
+and that's still too much.
+
+28
+00:02:13,120 --> 00:02:17,750
+So, we take that and divide it down again
+into two one hundred twenty eight kilobyte
+
+29
+00:02:17,750 --> 00:02:18,750
+allocations.
+
+30
+00:02:18,750 --> 00:02:23,450
+If we were to divide the one twenty eight
+KP allocation again, it would be a sixty-four
+
+31
+00:02:23,450 --> 00:02:28,520
+kilobyte allocation and that's too small to
+fit the hundred kilobytes need that we have.
+
+32
+00:02:28,520 --> 00:02:32,950
+So, we would have to we would have to stop
+there and use one hundred twenty eight killed
+
+33
+00:02:32,950 --> 00:02:34,060
+by an allocation.
+
+34
+00:02:34,060 --> 00:02:39,720
+Now this results of course in internal fragmentation,
+because it's going to end up where… we’re
+
+35
+00:02:39,720 --> 00:02:43,830
+going to end up allocating one hundred twenty-eight
+kilobyte, when only one hundred kilobytes
+
+36
+00:02:43,830 --> 00:02:44,890
+was needed.
+
+37
+00:02:44,890 --> 00:02:49,200
+But we're talking about twenty-eight kilobytes
+so it's not an overly significant factor.
+
+38
+00:02:49,200 --> 00:02:54,980
+We might end up with some extra fragmentation
+if we have a lot of these small slivers but
+
+39
+00:02:54,980 --> 00:02:58,860
+one of the nice features of the buddy system
+is what's called coalescing.
+
+40
+00:02:58,860 --> 00:03:04,030
+We can take those two hundred twenty-eight
+kilobit allocations, and recombine them up
+
+41
+00:03:04,030 --> 00:03:09,470
+into a two hundred fifty-six kilobyte allocation.
+and we can keep doing that ultimately getting
+
+42
+00:03:09,470 --> 00:03:13,920
+back to the original two megabyte allocation,
+if we ever need to.
+
+43
+00:03:13,920 --> 00:03:19,510
+So, coalescing allows us to bring these back
+into a larger hole.
+
+44
+00:03:19,510 --> 00:03:25,260
+If we have a large number of hundred kilobytes
+processes, we might take that hundred one
+
+45
+00:03:25,260 --> 00:03:29,410
+hundred twenty eight kilobyte allocations
+that we already have but we'll also divide
+
+46
+00:03:29,410 --> 00:03:32,670
+the two fifty-six into two one twenty-eight.
+
+47
+00:03:32,670 --> 00:03:36,900
+We divide the five twelve into two two fifty-sixes
+in each of those into one twenty-eight.
+
+48
+00:03:36,900 --> 00:03:44,250
+So, we can we can create a lot of one hundred
+twenty-eight kilobyte partitions out of this
+
+49
+00:03:44,250 --> 00:03:45,650
+original two megabytes.
+
+50
+00:03:45,650 --> 00:03:51,810
+So, we end up decreasing the amount of internal
+fragmentation, overall, because if we had
+
+51
+00:03:51,810 --> 00:03:57,930
+only two megabyte allocations there would
+be one point nine megabytes of completely
+
+52
+00:03:57,930 --> 00:04:03,670
+wasted space, because we'd have to allocate
+two megabytes for one hundred kilobyte allocation.
+
+53
+00:04:03,670 --> 00:04:07,150
+It makes the operating system structures easier,
+because they're beginning and ending on a
+
+54
+00:04:07,150 --> 00:04:09,700
+two to the N boundary it.
+
+55
+00:04:09,700 --> 00:04:15,140
+It actually does work quite well, the only
+problem is coalescing back does take some
+
+56
+00:04:15,140 --> 00:04:16,570
+effort.
+
+57
+00:04:16,570 --> 00:04:20,980
+And so Linux actually delays that, it's called
+delayed coalescing.
+
+58
+00:04:20,980 --> 00:04:26,150
+It waits until much later on, when the operating
+system is not very busy and it says: “you’re
+
+59
+00:04:26,150 --> 00:04:29,760
+probably not going to use these anymore”
+and then it recombines them back up.
+
+60
+00:04:29,760 --> 00:04:33,850
+But ultimately this does work; it doesn't
+work on a grand scale, it works on a micro
+
+61
+00:04:33,850 --> 00:04:34,850
+scale.
+
+62
+00:04:34,850 --> 00:04:40,690
+But it is a solution that involves both fixed
+and dynamic partitioning and it is a compromise
+
+63
+00:04:40,690 --> 00:04:41,400
+between the two.
+

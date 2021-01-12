@@ -1,0 +1,56 @@
+0:00:00.520,0:00:01.520
+Okay.
+
+0:00:01.520,0:00:08.570
+So now that we have the syntax of the arrays
+in C++, let’s go back to the problem of
+
+0:00:08.570,0:00:11.610
+calculating the grades that are above the
+average.
+
+0:00:11.610,0:00:18.980
+So, as you recall, we have our class with
+four students, we have the grades, and we
+
+0:00:18.980,0:00:25.789
+know that, not only, that the average is 79.75,
+we also know which grades come about the average.
+
+0:00:25.789,0:00:32.180
+In order to implement that, we would obviously
+store the grades in an array, but if you recall
+
+0:00:32.180,0:00:36.750
+we have to provide the physical size of the
+array at compile time.
+
+0:00:36.750,0:00:41.660
+So, when we write the code, basically we have
+to know how many grades, or what the maximum
+
+0:00:41.660,0:00:43.920
+amount of grades we’re gonna have.
+
+0:00:43.920,0:00:49.320
+Think it would be a very legitimate assumption
+to assume that a class won’t exceed, let’s
+
+0:00:49.320,0:00:51.260
+say, sixty students.
+
+0:00:51.260,0:00:56.829
+So, let’s update a bit this problem.
+
+0:00:56.829,0:01:03.160
+And the program first would ask the user to
+enter the number of students and the grades,
+
+0:01:03.160,0:01:05.590
+saying not more than sixty.
+
+0:01:05.590,0:01:08.189
+And then continue as we said before.
+
+0:01:08.189,0:01:09.159
+Let’s go implement it.

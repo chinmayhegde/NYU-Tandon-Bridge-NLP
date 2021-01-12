@@ -1,0 +1,184 @@
+1
+00:00:00,919 --> 00:00:03,850
+In deadlock detection, it's really easy going.
+
+2
+00:00:03,850 --> 00:00:08,590
+All it does is say we have all the requirements,
+there’s a possibility for a deadlock, so
+
+3
+00:00:08,590 --> 00:00:12,230
+we'll check periodically to see that the deadlock
+is not occurring.
+
+4
+00:00:12,230 --> 00:00:16,770
+It's not at all restrictive; we're not saying
+that we were going to stop any situation from
+
+5
+00:00:16,770 --> 00:00:17,770
+occurring.
+
+6
+00:00:17,770 --> 00:00:23,359
+We're saying in fact the exact opposite: that
+deadlocks will occur and when they do occur
+
+7
+00:00:23,359 --> 00:00:26,369
+we're going to have to deal with them, and
+we'll talk about that in just a minute.
+
+8
+00:00:26,369 --> 00:00:31,180
+But we recognize that the deadlocks will occur
+and that periodically we're going to have
+
+9
+00:00:31,180 --> 00:00:35,589
+to check the system to see if there are any
+dead locks that are in existence.
+
+10
+00:00:35,589 --> 00:00:40,449
+Once we detect the deadlock, well we have
+to figure out what that's going to do and
+
+11
+00:00:40,449 --> 00:00:45,341
+the only ways that we can really deal with
+a deadlock are either rolling back the deadlock
+
+12
+00:00:45,341 --> 00:00:50,969
+process, or the deadlock thread, to a previous
+unlock state that's useful for things like
+
+13
+00:00:50,969 --> 00:00:55,649
+SQL servers and database servers, but it requires
+transaction logs.
+
+14
+00:00:55,649 --> 00:01:01,379
+So, we have to know what this thread, or what
+this process that's deadlock did in the past
+
+15
+00:01:01,379 --> 00:01:06,200
+X time interval, so that we can roll it back
+to that X time interval and either restart
+
+16
+00:01:06,200 --> 00:01:10,969
+it or let it continue from a previous state,
+when which it wasn't deadlocked.
+
+17
+00:01:10,969 --> 00:01:15,450
+We could also just say let's abort all the
+deadlock threads; we'll kill them all.
+
+18
+00:01:15,450 --> 00:01:20,280
+We could abort a single thread and see if
+the deadlock is being resolved, so we can
+
+19
+00:01:20,280 --> 00:01:25,799
+arbitrarily just pick one of the deadlock
+threads and say it's now killed, its resources
+
+20
+00:01:25,799 --> 00:01:31,240
+are released, and now see if the system is
+back to a stable state, let it run again and
+
+21
+00:01:31,240 --> 00:01:33,570
+see if there's a deadlock or not.
+
+22
+00:01:33,570 --> 00:01:35,810
+Or we can start pre-empting resources.
+
+23
+00:01:35,810 --> 00:01:40,770
+Unfortunately, in all of these situations
+we have the potential, except for rolling
+
+24
+00:01:40,770 --> 00:01:46,969
+back, in all of these other situations we
+have the potential for catastrophic loss of
+
+25
+00:01:46,969 --> 00:01:49,009
+data or corruption of data.
+
+26
+00:01:49,009 --> 00:01:53,799
+Basically we're saying that we don't think
+that the system is in a consistent state,
+
+27
+00:01:53,799 --> 00:01:59,079
+but we really have no other resolution other
+than to just say we have to take some emergency
+
+28
+00:01:59,079 --> 00:02:05,319
+action and that means we recognize that if
+the data is corrupt we have to deal with that.
+
+29
+00:02:05,319 --> 00:02:09,429
+So, deadlock detection says, just let it happen
+and then we'll deal with it afterwards, we
+
+30
+00:02:09,429 --> 00:02:10,599
+hope it doesn't happen.
+
+31
+00:02:10,599 --> 00:02:14,959
+And believe it or not this is the one that's
+most common today, that we just say let it
+
+32
+00:02:14,959 --> 00:02:18,010
+happen and if it does happen we'll deal with
+it.
+
+33
+00:02:18,010 --> 00:02:22,239
+You might have had this in your past you have
+an application that just completely freezes
+
+34
+00:02:22,239 --> 00:02:27,340
+up on a Mac, you get the beach ball on a Windows
+machine you just get the screen graying out;
+
+35
+00:02:27,340 --> 00:02:31,879
+it's doing something we have no idea what
+it's doing, so what happens we kill it.
+
+36
+00:02:31,879 --> 00:02:36,739
+We are the deadlock detection algorithm; we
+have recognized that a deadlock has occurred
+
+37
+00:02:36,739 --> 00:02:41,220
+and we abort all the deadlock threads by killing
+the entire process.
+
+38
+00:02:41,220 --> 00:02:44,900
+So, congratulations everybody has been promoted
+to a deadlock detection algorithm.
+

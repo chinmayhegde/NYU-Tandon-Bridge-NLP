@@ -1,0 +1,328 @@
+1
+00:00:00,080 --> 00:00:05,379
+Let’s show that every natural number can
+be written as a power of two times an odd
+
+2
+00:00:05,379 --> 00:00:06,379
+number.
+
+3
+00:00:06,379 --> 00:00:10,830
+Once again you can see that this statement
+is of the form for any natural number some
+
+4
+00:00:10,830 --> 00:00:16,460
+P of N is true; this is our P of N and know
+that N can be written in some form.
+
+5
+00:00:16,460 --> 00:00:17,870
+Let's go ahead and prove it.
+
+6
+00:00:17,870 --> 00:00:22,800
+Actually before we start proving using strong
+induction, let's see that just the regular
+
+7
+00:00:22,800 --> 00:00:25,410
+mathematical induction can't really help us
+here.
+
+8
+00:00:25,410 --> 00:00:30,600
+So, in regular induction we would probably
+say that we assume that P of N minus one is
+
+9
+00:00:30,600 --> 00:00:37,080
+true or basically N minus one can be written
+in the form of two to the power of some I
+
+10
+00:00:37,080 --> 00:00:40,930
+times an odd number J, so let's assume we
+have that.
+
+11
+00:00:40,930 --> 00:00:45,710
+And given that, we should show that N is also
+some power of two times an odd number.
+
+12
+00:00:45,710 --> 00:00:50,930
+The only straightforward way I'm thinking
+of combining N with N minus one is just adding
+
+13
+00:00:50,930 --> 00:00:56,430
+one to it, but then if N minus one is two
+to the I times J, if I'll add one to it, I
+
+14
+00:00:56,430 --> 00:01:02,430
+won't get something of the form some power
+of I times J. But then if we know that this
+
+15
+00:01:02,430 --> 00:01:07,300
+thing is true, not only for N minus one but
+for all other values of N.
+
+16
+00:01:07,300 --> 00:01:11,530
+For example, I know that N is two times N
+by two.
+
+17
+00:01:11,530 --> 00:01:17,310
+So, if I know that N by two, for example,
+is two times two to the power of I times J,
+
+18
+00:01:17,310 --> 00:01:23,810
+then N would be two times two to the power
+of I times J, which would be some power of
+
+19
+00:01:23,810 --> 00:01:25,800
+two times an odd number.
+
+20
+00:01:25,800 --> 00:01:31,930
+So, using the assumption on a smaller value
+than N minus one, in this case N by two, seems
+
+21
+00:01:31,930 --> 00:01:36,090
+to be helpful more than using the assumption
+of N minus one.
+
+22
+00:01:36,090 --> 00:01:38,130
+That's why a strong induction here is better.
+
+23
+00:01:38,130 --> 00:01:41,140
+Let's use a strong induction to show exactly
+that.
+
+24
+00:01:41,140 --> 00:01:42,140
+Okay.
+
+25
+00:01:42,140 --> 00:01:47,941
+So, a proof will prove by a strong induction
+on N. And once again, we have two steps: the
+
+26
+00:01:47,941 --> 00:01:50,340
+base and inductive step.
+
+27
+00:01:50,340 --> 00:01:54,340
+So for the base, we should show that P of
+one is true.
+
+28
+00:01:54,340 --> 00:02:01,070
+So, for any cause one, we should show how
+we can represent one as some power of two
+
+29
+00:02:01,070 --> 00:02:02,440
+times an odd number.
+
+30
+00:02:02,440 --> 00:02:06,390
+So, that's very easy cause one is two to the
+zero times one.
+
+31
+00:02:06,390 --> 00:02:12,721
+So, if we take our power of two to be zero,
+the exponent to be zero, and our odd number
+
+32
+00:02:12,721 --> 00:02:20,180
+to be one we get that one is basically two
+to the zero times one, just as requested.
+
+33
+00:02:20,180 --> 00:02:22,410
+And now, let's do the inductive step.
+
+34
+00:02:22,410 --> 00:02:27,709
+In this case, we should assume that P of N
+is true for any value smaller than N. And
+
+35
+00:02:27,709 --> 00:02:32,340
+using that assumption, we should show that
+P of N is true, so let's have this assumption
+
+36
+00:02:32,340 --> 00:02:33,340
+ready.
+
+37
+00:02:33,340 --> 00:02:41,520
+So we assume that every K smaller than N can
+be written in the form of K equals two to
+
+38
+00:02:41,520 --> 00:02:48,960
+some power of I times J, where obviously I
+is a non-negative integer and J is odd.
+
+39
+00:02:48,960 --> 00:02:51,500
+So, this is our assumption; it's cement.
+
+40
+00:02:51,500 --> 00:02:56,570
+And now we show that N itself can also be
+written in this form.
+
+41
+00:02:56,570 --> 00:03:03,430
+Now we show that N can be written as two to
+the power of I times J, obviously other I's
+
+42
+00:03:03,430 --> 00:03:06,440
+and J’s here, with I and J as described.
+
+43
+00:03:06,440 --> 00:03:08,610
+So, this is what we need to show.
+
+44
+00:03:08,610 --> 00:03:14,300
+So, we’ll use this assumption here in order
+to show that N can be represented this way
+
+45
+00:03:14,300 --> 00:03:19,400
+and this assumption is for every value of
+K; for K equals N minus one, N minus two,
+
+46
+00:03:19,400 --> 00:03:20,860
+N minus three, and so on.
+
+47
+00:03:20,860 --> 00:03:25,570
+Also for K equals N by two, which would be
+the value of K that we would like to use this
+
+48
+00:03:25,570 --> 00:03:26,570
+assumption on.
+
+49
+00:03:26,570 --> 00:03:27,790
+Yeah, so let's do that.
+
+50
+00:03:27,790 --> 00:03:34,500
+The only thing is that we need to take care,
+or in other words, not every N has an integer
+
+51
+00:03:34,500 --> 00:03:39,380
+N by two; odd numbers you can't really divide
+by two and get another integer value after
+
+52
+00:03:39,380 --> 00:03:40,380
+this division.
+
+53
+00:03:40,380 --> 00:03:45,410
+So, let's separate to the two cases when our
+N is odd and when it's even and do all of
+
+54
+00:03:45,410 --> 00:03:46,410
+that.
+
+55
+00:03:46,410 --> 00:03:52,819
+So, we have two cases to take care of: the
+first is that N is odd; the second is that
+
+56
+00:03:52,819 --> 00:03:53,819
+N is even.
+
+57
+00:03:53,819 --> 00:03:58,740
+So, for the second case that's the main part
+of this proof is when we're going to use the
+
+58
+00:03:58,740 --> 00:04:01,040
+inductive assumption on N by two.
+
+59
+00:04:01,040 --> 00:04:05,120
+The first case is quite easy when N is odd,
+obviously you can represent it as a power
+
+60
+00:04:05,120 --> 00:04:09,470
+of two times an odd number, just take the
+power of two to be zero, so it would be one
+
+61
+00:04:09,470 --> 00:04:10,680
+times N itself.
+
+62
+00:04:10,680 --> 00:04:18,759
+So, in this case, if we take I to be zero
+and J to be N, we get that N equals two to
+
+63
+00:04:18,759 --> 00:04:26,159
+the power of zero times N, which is obviously
+N, and I and J are as requested; so, we're
+
+64
+00:04:26,159 --> 00:04:27,159
+fine.
+
+65
+00:04:27,159 --> 00:04:31,770
+In the case where N is even, now we're going
+to do what we basically said we'll do here
+
+66
+00:04:31,770 --> 00:04:32,889
+in this case.
+
+67
+00:04:32,889 --> 00:04:40,290
+Since N by two is less than N, by the inductive
+hypothesis, if we take K to be N by two, we
+
+68
+00:04:40,290 --> 00:04:46,009
+get that N by two is then equal to two to
+the power of two to the power of some, let's
+
+69
+00:04:46,009 --> 00:04:53,849
+say, I prime times J prime for our non-negative
+I prime and all J prime.
+
+70
+00:04:53,849 --> 00:05:01,209
+And now we can, given that, we can present
+N in other requested form.
+

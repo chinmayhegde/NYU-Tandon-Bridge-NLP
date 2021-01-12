@@ -1,0 +1,48 @@
+1
+00:00:00,380 --> 00:00:01,380
+Hi.
+
+2
+00:00:01,380 --> 00:00:05,050
+My name is Jerry and I will be your instructor
+for the Computer Architecture and Organization
+
+3
+00:00:05,050 --> 00:00:07,460
+Section of the CS-Bridge Program.
+
+4
+00:00:07,460 --> 00:00:11,560
+So far, we have covered several paradigms
+and techniques of computer programming.
+
+5
+00:00:11,560 --> 00:00:15,580
+And these techniques have enabled us to write
+software code for different purposes.
+
+6
+00:00:15,580 --> 00:00:20,310
+So in this section, we will cover how the
+CPU interprets this code and executes it.
+
+7
+00:00:20,310 --> 00:00:25,009
+Then we will discuss what is inside the CPU
+that allows it to execute such code.
+
+8
+00:00:25,009 --> 00:00:29,729
+More specifically, we’ll cover the assembly
+language and mnemonic machine code, which
+
+9
+00:00:29,729 --> 00:00:35,180
+are human-readable representations of machine-level
+instructions, we will go over the CPU execution
+
+10
+00:00:35,180 --> 00:00:39,040
+steps, and we will detail the microarchitecture
+of the CPU.
+

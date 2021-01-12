@@ -1,0 +1,90 @@
+1
+00:00:00,940 --> 00:00:04,500
+Now that we've got the mutators, we can change
+the data but that doesn't give us any access
+
+2
+00:00:04,500 --> 00:00:08,900
+to actually view what's in there; so we can
+store it but we can't change it.
+
+3
+00:00:08,900 --> 00:00:14,610
+If we are going to create a function that
+is going to access information inside the
+
+4
+00:00:14,610 --> 00:00:20,300
+class but not make any changes to the to the
+data inside the class, then we really need
+
+5
+00:00:20,300 --> 00:00:23,630
+to mark that function as being a const function.
+
+6
+00:00:23,630 --> 00:00:28,880
+what a const function means is that the object
+from the start of the function to the end
+
+7
+00:00:28,880 --> 00:00:31,240
+of the function will not change.
+
+8
+00:00:31,240 --> 00:00:35,719
+and it's a protection mechanism to make sure
+that we don't accidentally make any mistakes
+
+9
+00:00:35,719 --> 00:00:37,969
+by changing variables.
+
+10
+00:00:37,969 --> 00:00:44,219
+So the same as we would use const during our
+previous programming samples, we now can use
+
+11
+00:00:44,219 --> 00:00:49,640
+const to protect our objects from accidental
+damage by ourselves, the programmers.
+
+12
+00:00:49,640 --> 00:00:53,710
+Now there is one thing to take into account
+when we have const functions.
+
+13
+00:00:53,710 --> 00:01:00,049
+If an object is const-ified, so if for example
+we were to pass an object to a function and
+
+14
+00:01:00,049 --> 00:01:05,330
+we will pass that object by const reference
+which is very common to do, then the only
+
+15
+00:01:05,330 --> 00:01:13,330
+functions we have access to inside that function
+is a const function inside the object.
+
+16
+00:01:13,330 --> 00:01:19,750
+So here now if the object is const-ified,
+the only functions that we can call are const-ified
+
+17
+00:01:19,750 --> 00:01:21,840
+functions inside the object.
+
+18
+00:01:21,840 --> 00:01:27,290
+It's a protection mechanism from C++ to make
+sure that we can't do more than what the function
+
+19
+00:01:27,290 --> 00:01:27,311
+can do.
+

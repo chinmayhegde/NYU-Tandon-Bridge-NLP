@@ -1,0 +1,80 @@
+1
+00:00:00,590 --> 00:00:03,360
+Let's get down to the syntax of how we can
+create a class.
+
+2
+00:00:03,360 --> 00:00:07,620
+First off the class is an abstract data type,
+so we're creating a new data type for C++
+
+3
+00:00:07,620 --> 00:00:09,100
+to know about.
+
+4
+00:00:09,100 --> 00:00:15,860
+We can create this class as a data type which
+is a more complex data type made up of simpler
+
+5
+00:00:15,860 --> 00:00:16,860
+data types.
+
+6
+00:00:16,860 --> 00:00:21,450
+And we're going to get into this a lot because
+we can make them very, very complex.
+
+7
+00:00:21,450 --> 00:00:26,410
+Of course we’ll use the C++ keyword class,
+which means incidentally that you can never
+
+8
+00:00:26,410 --> 00:00:31,110
+use the word class as an identifier for anything
+inside your programs.
+
+9
+00:00:31,110 --> 00:00:33,610
+You can't create a variable named class.
+
+10
+00:00:33,610 --> 00:00:39,550
+Here's a quick view of what a date class might
+look at, and we know that a date is actually
+
+11
+00:00:39,550 --> 00:00:42,810
+just three integers; it's a day, a month,
+and a year.
+
+12
+00:00:42,810 --> 00:00:48,440
+So here we’re creating a new data type for
+the storage of three integers, atomically,
+
+13
+00:00:48,440 --> 00:00:50,100
+so that they go together.
+
+14
+00:00:50,100 --> 00:00:54,930
+The year and the month and the day are all
+associated, so that for example, your birthday
+
+15
+00:00:54,930 --> 00:01:00,219
+is actually three different numbers associated
+with them one another: the day, the month,
+
+16
+00:01:00,219 --> 00:01:01,260
+and the year.
+
+17
+00:01:01,260 --> 00:01:07,009
+And we need to have all three contain together;
+hence the idea of encapsulation.
+

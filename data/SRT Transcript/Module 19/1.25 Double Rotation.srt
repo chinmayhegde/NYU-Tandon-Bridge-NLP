@@ -1,0 +1,154 @@
+1
+00:00:00,560 --> 00:00:06,970
+What happens when we do have that outside-inside
+insertion?
+
+2
+00:00:06,970 --> 00:00:10,100
+And in either way whether we're talking about
+left right or whether we're talking about
+
+3
+00:00:10,100 --> 00:00:17,830
+right left, what we're saying is that the
+heavier node is a different child than what
+
+4
+00:00:17,830 --> 00:00:19,000
+we decided on the parent.
+
+5
+00:00:19,000 --> 00:00:25,130
+So when we're looking at the grandparent node,
+in this case we have twenty: the left child
+
+6
+00:00:25,130 --> 00:00:28,779
+of twenty is ten, the right child of ten is
+fifteen.
+
+7
+00:00:28,779 --> 00:00:34,020
+We've got is a problem in which a single rotation
+would not solve this.
+
+8
+00:00:34,020 --> 00:00:39,950
+What we really need to do is reorganize these
+as a double rotation.
+
+9
+00:00:39,950 --> 00:00:46,040
+And a double rotation is actually pretty simple
+because all we need to do is first do a counter
+
+10
+00:00:46,040 --> 00:00:51,940
+clockwise rotation around ten, so that we
+end up in the same situation.
+
+11
+00:00:51,940 --> 00:00:56,750
+So first we'll do a counter clockwise rotation
+about ten.
+
+12
+00:00:56,750 --> 00:01:04,189
+Which means the twenty's left sub child will
+be fifteen, and then fifteen's left sub child
+
+13
+00:01:04,189 --> 00:01:05,189
+will be ten.
+
+14
+00:01:05,189 --> 00:01:12,470
+So, initially we sort of make the problem
+not go away but we put the problem in a solution
+
+15
+00:01:12,470 --> 00:01:18,130
+that we can solve because we're going to generate
+an outside-outside problem.
+
+16
+00:01:18,130 --> 00:01:22,690
+So initially the single rotation would not
+solve this at all.
+
+17
+00:01:22,690 --> 00:01:29,079
+If we only used a single rotation we would
+still have the problem of, even if we promoted
+
+18
+00:01:29,079 --> 00:01:35,360
+ten to be the root its right sub tree would
+be twenty and the left sub child of twenty
+
+19
+00:01:35,360 --> 00:01:36,360
+would be fifteen.
+
+20
+00:01:36,360 --> 00:01:43,909
+So that's doesn’t solve the problem but
+if we do a single rotation about the parent,
+
+21
+00:01:43,909 --> 00:01:47,780
+not about the grandparent but about the parent,
+if do the single rotation about the parent
+
+22
+00:01:47,780 --> 00:01:48,970
+first.
+
+23
+00:01:48,970 --> 00:01:52,770
+Then what we end up with is a problem that
+we can solve.
+
+24
+00:01:52,770 --> 00:01:57,819
+So we end up with twenty; its left child being
+fifteen, fifteen’s left child being ten
+
+25
+00:01:57,819 --> 00:02:01,319
+and that's just a single rotation that we
+can solve.
+
+26
+00:02:01,319 --> 00:02:07,090
+The end point is that we have fifteen as the
+root; its left some child is ten and its rights
+
+27
+00:02:07,090 --> 00:02:08,360
+of child is twenty.
+
+28
+00:02:08,360 --> 00:02:10,569
+And that's the way that double rotation is
+done.
+
+29
+00:02:10,569 --> 00:02:15,239
+So in fact if you look at the code, a double
+rotation is actually done by two calls to
+
+30
+00:02:15,239 --> 00:02:19,659
+the single rotation function: once clockwise
+and the others counter-clockwise so there's
+
+31
+00:02:19,659 --> 00:02:21,970
+not really much work that has to be done there.
+
+32
+00:02:21,970 --> 00:02:24,880
+But the double rotation problem does exist
+and we do have to recognize it.
+

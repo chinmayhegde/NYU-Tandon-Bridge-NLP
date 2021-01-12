@@ -1,0 +1,146 @@
+1
+00:00:00,500 --> 00:00:03,820
+So let us discuss cache associativity.
+
+2
+00:00:03,820 --> 00:00:10,160
+Cache associativity dictates where in the
+cache can a DRAM block be copied into.
+
+3
+00:00:10,160 --> 00:00:14,549
+Associativity is the main factor that determines
+the trade-off between temporal locality and
+
+4
+00:00:14,549 --> 00:00:16,410
+access time of the data in the cache.
+
+5
+00:00:16,410 --> 00:00:24,320
+There are generally three associativity methods:
+one is direct mapped, the other is fully associative,
+
+6
+00:00:24,320 --> 00:00:27,359
+and the last one is set associative
+
+7
+00:00:27,359 --> 00:00:31,460
+In a direct map cache, there is a one-to-one
+mapping between the cache blocks and the D
+
+8
+00:00:31,460 --> 00:00:32,460
+RAM blocks.
+
+9
+00:00:32,460 --> 00:00:37,989
+In other words, a D RAM block can be moved
+to only one specific cache block.
+
+10
+00:00:37,989 --> 00:00:41,570
+We use this color coding to indicate direct
+mapping.
+
+11
+00:00:41,570 --> 00:00:46,640
+Blue blocks in the D RAM can only go the one
+blue block in the cache.
+
+12
+00:00:46,640 --> 00:00:51,990
+Yellow blocks in the D RAM can only go the
+yellow block in the cache, so on and so forth.
+
+13
+00:00:51,990 --> 00:00:58,090
+The main benefit of the direct map cache is
+it is easier and faster to search the cache.
+
+14
+00:00:58,090 --> 00:01:03,000
+This is because, since a D RAM block can be
+moved to only one specific cache block, we
+
+15
+00:01:03,000 --> 00:01:06,750
+can directly go to the exact cache block to
+look for the data.
+
+16
+00:01:06,750 --> 00:01:11,750
+Usually, the way that is done is by using
+the index number of the cache block.
+
+17
+00:01:11,750 --> 00:01:17,040
+In this example we have here, when searching
+for the instruction or data in a D RAM block
+
+18
+00:01:17,040 --> 00:01:23,060
+0 or 4, the cache controller simply goes to
+cache block 0 to get the instruction or data
+
+19
+00:01:23,060 --> 00:01:28,960
+because that is the only place in the cache
+that D RAM blue blocks can go to in the cache.
+
+20
+00:01:28,960 --> 00:01:32,850
+However, direct map doesn’t provide good
+temporal locality.
+
+21
+00:01:32,850 --> 00:01:37,920
+This is because the blue cache block may have
+to be evicted several times if another blue
+
+22
+00:01:37,920 --> 00:01:41,280
+D RAM block needs to be brought onto the cache.
+
+23
+00:01:41,280 --> 00:01:47,220
+When we say eviction we essentially mean that
+cache block has to overwritten or replaced
+
+24
+00:01:47,220 --> 00:01:50,450
+with new content coming from the D RAM.
+
+25
+00:01:50,450 --> 00:01:55,590
+Since direct map only allows one location
+to put all the blue D RAM blocks, if the blue
+
+26
+00:01:55,590 --> 00:02:00,579
+cache block is busy, then we have to kick
+the current content of the blue cache block
+
+27
+00:02:00,579 --> 00:02:02,020
+out.
+
+28
+00:02:02,020 --> 00:02:06,860
+If we end up needing it again, we have to
+go back to the D RAM to get, causing more
+
+29
+00:02:06,860 --> 00:02:07,860
+delay.
+
+30
+00:02:07,860 --> 00:02:13,319
+In summary, direct mapping provides very good
+access speed because it is easy to search,
+
+31
+00:02:13,319 --> 00:02:15,200
+but has bad temporal locality.
+

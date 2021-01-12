@@ -1,0 +1,124 @@
+1
+00:00:00,020 --> 00:00:02,699
+Let’s implement the factorial function.
+
+2
+00:00:02,699 --> 00:00:11,080
+So the prototype would be in factorial that
+the parameter here is n. and we should start
+
+3
+00:00:11,080 --> 00:00:15,610
+with the base case; we should solve the problem
+for the smallest possible input.
+
+4
+00:00:15,610 --> 00:00:19,890
+In the case of factorial the smallest possible
+input, we're assuming that N is a positive
+
+5
+00:00:19,890 --> 00:00:23,600
+integer, so the smallest possible input is
+when N equals 1.
+
+6
+00:00:23,600 --> 00:00:29,890
+Let’s identify this case when N equals 1,
+that the case we are trying to solve here.
+
+7
+00:00:29,890 --> 00:00:32,730
+In this case the factorial of 1 is 1.
+
+8
+00:00:32,730 --> 00:00:36,140
+So let's just return 1 as our output.
+
+9
+00:00:36,140 --> 00:00:40,920
+Otherwise here we need to implement the recursive
+step.
+
+10
+00:00:40,920 --> 00:00:47,910
+So our assumption would be that calling factorial
+on smaller value than N would return the factorial.
+
+11
+00:00:47,910 --> 00:00:54,280
+in this case ,we already observe that pictorial
+of N is basically N times the factorial of
+
+12
+00:00:54,280 --> 00:01:01,870
+N minus 1, so maybe we should just call factorial
+for N minus 1 and multiply that by N. so converting
+
+13
+00:01:01,870 --> 00:01:07,460
+a single line of code but let me split it
+into a few, let's create res local variable.
+
+14
+00:01:07,460 --> 00:01:15,200
+Let’s store in res, the result of calling
+factorial with N minus 1.
+
+15
+00:01:15,200 --> 00:01:21,789
+that basically says that res now has factorial
+of N minus 1 and we should then just multiply
+
+16
+00:01:21,789 --> 00:01:28,799
+res by N, that is the factorial of N. now
+res would hold factorial of N we could just
+
+17
+00:01:28,799 --> 00:01:30,740
+return res for that matter.
+
+18
+00:01:30,740 --> 00:01:33,950
+That is totally all the implementation for
+factorial.
+
+19
+00:01:33,950 --> 00:01:36,999
+Let's write a simple program that uses it.
+
+20
+00:01:36,999 --> 00:01:47,659
+So I'll just declare factorial up here, and
+in my name let's cout factorial of four, basically
+
+21
+00:01:47,659 --> 00:01:48,659
+prints 24.
+
+22
+00:01:48,659 --> 00:01:53,950
+Let’s execute it; yep, prints 24 which is
+exactly what we expected it to do. and when
+
+23
+00:01:53,950 --> 00:01:59,719
+we're looking back at this implementation,
+we see that we used our assumption, we called
+
+24
+00:01:59,719 --> 00:02:05,189
+our function on a smaller input, and it did
+what we asked it to do basically, to return
+
+25
+00:02:05,189 --> 00:02:11,100
+the factorial of N minus 1 and then we update
+it we fixed this value in order to have the
+
+26
+00:02:11,100 --> 00:02:15,799
+value of the factorial of N basically by each
+multiply by N. that was the whole idea here.
+

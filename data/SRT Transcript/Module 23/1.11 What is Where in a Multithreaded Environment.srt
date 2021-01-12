@@ -1,0 +1,105 @@
+1
+00:00:00,650 --> 00:00:07,460
+So, if we now modify the definition of a process,
+we need to change where things are stored
+
+2
+00:00:07,460 --> 00:00:08,470
+inside that process.
+
+3
+00:00:08,470 --> 00:00:14,200
+So if we take a look, the PCB still has most
+of the stuff that we would recognize: the
+
+4
+00:00:14,200 --> 00:00:19,830
+memory allocation, all the memory and IO tables,
+all the files all the linkages, all that stuff.
+
+5
+00:00:19,830 --> 00:00:25,440
+But the thread now needs to keep track of
+some of the thread specific things like the
+
+6
+00:00:25,440 --> 00:00:31,019
+context, the stack, the variables that are
+specific to that thread.
+
+7
+00:00:31,019 --> 00:00:36,430
+All of that needs to be offloaded outside
+of the PCB and inside maybe a TCB, a thread
+
+8
+00:00:36,430 --> 00:00:40,320
+control block, to keep track of each of the
+individual threads.
+
+9
+00:00:40,320 --> 00:00:44,820
+Now the fun part about threads is that they
+all have access to the resources, the memory
+
+10
+00:00:44,820 --> 00:00:51,760
+and all the rest of the stuff, from the process,
+and that means that we have a great level
+
+11
+00:00:51,760 --> 00:00:55,390
+of communication between all the threads inside
+of a process.
+
+12
+00:00:55,390 --> 00:01:00,760
+But the process needs to recognize, or the
+threads really need to recognize that they
+
+13
+00:01:00,760 --> 00:01:05,570
+exist inside of a process and there are some
+concurrency issues that come up in relation
+
+14
+00:01:05,570 --> 00:01:06,890
+to that.
+
+15
+00:01:06,890 --> 00:01:11,250
+Now what about your old programs, like your
+‘Hello World’ programs that you've written
+
+16
+00:01:11,250 --> 00:01:13,960
+for previous modules, do they have threads?
+
+17
+00:01:13,960 --> 00:01:20,060
+Well they did; they had one thread, the main
+thread and that main thread could have, although
+
+18
+00:01:20,060 --> 00:01:27,159
+it didn't create other threads to do other
+tasks each individual task inside the system
+
+19
+00:01:27,159 --> 00:01:33,170
+can be or inside the process rather, can be
+handled by one thread and each of the threads
+
+20
+00:01:33,170 --> 00:01:34,250
+do their own sort of work.
+
+21
+00:01:34,250 --> 00:01:40,530
+But they all work together on one project
+one process and they all share the materials
+
+22
+00:01:40,530 --> 00:01:41,310
+of that process.
+

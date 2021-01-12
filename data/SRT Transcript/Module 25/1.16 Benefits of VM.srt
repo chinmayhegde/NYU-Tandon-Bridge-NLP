@@ -1,0 +1,126 @@
+1
+00:00:00,849 --> 00:00:05,340
+Of course the benefits of a virtual memory
+are huge; the programmer can look at this
+
+2
+00:00:05,340 --> 00:00:07,790
+as a much larger memory space.
+
+3
+00:00:07,790 --> 00:00:15,090
+So, now each program, or each process even,
+can view main memory as completely available
+
+4
+00:00:15,090 --> 00:00:17,080
+purely to itself.
+
+5
+00:00:17,080 --> 00:00:24,900
+In a thirty-two bit address space, each process
+is going to think that it has four gigabytes
+
+6
+00:00:24,900 --> 00:00:27,610
+of main memory available; it doesn’t.
+
+7
+00:00:27,610 --> 00:00:31,890
+There may not even be four gigabytes of main
+memory available in the system.
+
+8
+00:00:31,890 --> 00:00:37,329
+But that process is going to think that it
+has four gigabytes because it's using virtual
+
+9
+00:00:37,329 --> 00:00:38,329
+memory.
+
+10
+00:00:38,329 --> 00:00:40,960
+In a sixty-four bit operating system, we’re
+going…
+
+11
+00:00:40,960 --> 00:00:47,879
+The programmers are going to perceive a eighteen
+exabyte memory space which is just enormous,
+
+12
+00:00:47,879 --> 00:00:50,480
+but that's what we can view this as.
+
+13
+00:00:50,480 --> 00:00:54,719
+Even if the system doesn't have that much
+memory the program can be written as if it
+
+14
+00:00:54,719 --> 00:00:56,269
+were available.
+
+15
+00:00:56,269 --> 00:01:00,579
+The system the operating system can remove
+unused pages, so pages like that splash screen
+
+16
+00:01:00,579 --> 00:01:04,570
+I talked about a few slides ago, those can
+be eliminated out of main memory; they're
+
+17
+00:01:04,570 --> 00:01:06,070
+not going to ever be used again.
+
+18
+00:01:06,070 --> 00:01:10,190
+So, let's take them out of main memory, store
+them in a second or storage device, just in
+
+19
+00:01:10,190 --> 00:01:13,740
+case because we have no guarantee that they're
+not going to be used again, store them in
+
+20
+00:01:13,740 --> 00:01:18,509
+the swap space and when they're never used
+again, we just don't put them back in main
+
+21
+00:01:18,509 --> 00:01:21,740
+memory; so freeze up that main memory.
+
+22
+00:01:21,740 --> 00:01:25,950
+More processes can run in the system and that
+means we have better performance, that means
+
+23
+00:01:25,950 --> 00:01:31,829
+more processes generally means that there's
+a higher probability that a process will find
+
+24
+00:01:31,829 --> 00:01:36,259
+itself in the ready state, so that will find
+a process that's in the ready state.
+
+25
+00:01:36,259 --> 00:01:41,530
+So, ultimately we can result in better system
+performance just by having more main memory
+
+26
+00:01:41,530 --> 00:01:42,530
+available.
+
+27
+00:01:42,530 --> 00:01:46,560
+Huge benefits available for virtual armoring,
+which is why it's the standard today.
+

@@ -1,0 +1,203 @@
+0:00:00.919,0:00:05.570
+Ok let’s go ahead and implement this program.
+So first thing we do is we ask the user to
+
+0:00:05.570,0:00:14.320
+enter the radius of the circle. So cout please
+enter the radius so break the line here. And
+
+0:00:14.320,0:00:20.880
+then let’s read the user’s radius for
+that let’s first declare a variable. Since
+
+0:00:20.880,0:00:27.090
+radius could be a real number with a fractional
+part let’s use the double type for this
+
+0:00:27.090,0:00:32.320
+variable. And if we are thinking how to name
+it this is going to store the radius maybe
+
+0:00:32.320,0:00:37.870
+we should just name it radius. So double radius
+that’s a variable we created here and let’s
+
+0:00:37.870,0:00:45.129
+read into the radius variable. So we got the
+input from the user now we should calculate
+
+0:00:45.129,0:00:51.929
+the area of this circle. So let’s add a
+variable to store the area and I will just
+
+0:00:51.929,0:00:59.719
+name it area. And then after having the radius
+let’s set area to be pi times radius squared.
+
+0:00:59.719,0:01:11.200
+So pi is 3.14 times radius times radius. Something
+like that so pi that’s radius squared. So
+
+0:01:11.200,0:01:16.899
+we have the area calculated after that we
+should announce to the user that the area
+
+0:01:16.899,0:01:24.770
+of a circle is whatever the value of the variable
+area is. So let’s start cout and then let’s
+
+0:01:24.770,0:01:36.609
+print the text the area of a circle with radius
+of space here. And then write the value of
+
+0:01:36.609,0:01:43.270
+the variable radius and then the word is once
+again space before and after and the value
+
+0:01:43.270,0:01:49.159
+of the variable area let’s end the line.
+So we have the area of a circle with the radius
+
+0:01:49.159,0:01:55.690
+of the value of the variable radius is the
+value of the variable area. Basically output
+
+0:01:55.690,0:02:01.430
+statement we want to make here let’s test
+it see if we didn’t make any mistakes. Please
+
+0:02:01.430,0:02:10.610
+enter the radius 2.6 and then it says the
+area of a circle with radius of 2.6 is 21.2264.
+
+0:02:10.610,0:02:20.489
+One thing I would change here is instead of
+hardcoding the value 3.14 let’s create a
+
+0:02:20.489,0:02:26.260
+constant with this value and give it a meaningful
+name. In this case we probably should name
+
+0:02:26.260,0:02:33.709
+it pi. Because 3.14 stands for pi so up here
+above the main we will create a constant of
+
+0:02:33.709,0:02:43.250
+type double named pi and the value would be
+3.14. After we have that instead of writing
+
+0:02:43.250,0:02:51.180
+3.14 we should just use pi the constant name
+and that would be replaced by 3.14 and that
+
+0:02:51.180,0:02:58.519
+makes our code be more readable. So we say
+that area equals pi times radius squared.
+
+0:02:58.519,0:03:04.260
+Let’s test it once again although it is
+not supposed to behave any differently. So
+
+0:03:04.260,0:03:10.769
+the radius is 2.6 and then it prints that
+the area of a circle radius is 2.6 is once
+
+0:03:10.769,0:03:19.890
+again 21.2264. So looks very good though that
+is not really an accurate value here for the
+
+0:03:19.890,0:03:27.400
+area that’s because the value of pi I gave
+here 3.14 is not very good estimation for
+
+0:03:27.400,0:03:33.579
+pi. So we could either have pi figure out
+what the more accurate value of pi and just
+
+0:03:33.579,0:03:40.909
+change our constant. Or we could add or use
+some predefined value of pi. So pi is not
+
+0:03:40.909,0:03:46.829
+a pre defined constant in C++ but then there
+are extensions for C++ language that we can
+
+0:03:46.829,0:03:53.189
+use these extensions include the value of
+pi. In order to use these extensions we use
+
+0:03:53.189,0:03:59.150
+the pound include statement just as we’ve
+done up here pound include iostream. Baiscally
+
+0:03:59.150,0:04:06.620
+we are extending the C++ language to include
+some more abilities of io input output. Actually
+
+0:04:06.620,0:04:13.819
+cout and cin are not built in operators in
+C++ they are not defined not predefined in
+
+0:04:13.819,0:04:20.280
+C++. If we won’t have this include iostream
+cout and cin won’t work we will have compilation
+
+0:04:20.280,0:04:25.760
+errors for trying to execute them. In order
+to use cout and cin we need to extend our
+
+0:04:25.760,0:04:32.090
+language to include some iostream capabilities
+and then cout and cin are defined then we
+
+0:04:32.090,0:04:38.280
+can definitely use them. Same thing with pi
+in order to have the predefined constant pi
+
+0:04:38.280,0:04:43.820
+and to be able to use it we need to include
+to extend our language. So let’s add some
+
+0:04:43.820,0:04:51.890
+include statement here and the name of the
+library that we are going to use the pi constant
+
+0:04:51.890,0:04:58.820
+and some other mathematical capabilities is
+called cmath. So if we include cmath that
+
+0:04:58.820,0:05:05.460
+would have predefined pi constant in it so
+we won’t need to define this constant on
+
+0:05:05.460,0:05:13.160
+our own. We can just use the cmath pi constant
+that is already defined. The only thing is
+
+0:05:13.160,0:05:21.940
+that it is not called pi p i as we could expect
+this is called m underscore pi math pi. So
+
+0:05:21.940,0:05:30.130
+area is now math pi times radius times radius.
+This math pi constant is much more accurate
+
+0:05:30.130,0:05:37.020
+than 3.14 and if we execute it again the program
+will now we are expecting to get a better
+
+0:05:37.020,0:05:43.840
+approximation for the area it would be slightly
+different than 21.2264. Let’s try it out
+
+0:05:43.840,0:05:54.520
+if we have 2.6 the area now is 21.2372 slightly
+different probably better result here. Yes
+
+0:05:54.520,0:06:01.960
+so we basically read the radius from the user
+we use the pi constant in order to calculate
+
+0:06:01.960,0:06:06.540
+the area and then we output the statement
+saying what the area is.

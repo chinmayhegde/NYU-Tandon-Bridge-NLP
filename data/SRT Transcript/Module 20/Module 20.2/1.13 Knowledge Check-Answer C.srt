@@ -1,0 +1,43 @@
+1
+00:00:00,500 --> 00:00:02,190
+That is correct.
+
+2
+00:00:02,190 --> 00:00:06,240
+We first check if the branch condition is
+true; the registers are not equal, so the
+
+3
+00:00:06,240 --> 00:00:09,050
+branch condition is true and the branch is
+taken.
+
+4
+00:00:09,050 --> 00:00:13,950
+To calculate the target address, we take the
+immediate value, sign extend it which gives
+
+5
+00:00:13,950 --> 00:00:18,020
+us all F’s because it is a negative one
+in decimal.
+
+6
+00:00:18,020 --> 00:00:21,920
+Multiply it by four which should give us FFFFC.
+
+7
+00:00:21,920 --> 00:00:25,880
+And we add it to the value of the program
+counter which should give us PC+4, which should
+
+8
+00:00:25,880 --> 00:00:30,980
+give us back the original value of the branch
+if equal program counter.
+
+9
+00:00:30,980 --> 00:00:35,300
+Hence, the branch instruction jumps back to
+itself resulting in an infinite loop.
+

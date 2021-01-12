@@ -1,0 +1,81 @@
+1
+00:00:00,969 --> 00:00:03,760
+So spatial locality is a bit easier to implement.
+
+2
+00:00:03,760 --> 00:00:09,530
+This is because, the main thing to consider
+with that is the size of the cache block.
+
+3
+00:00:09,530 --> 00:00:13,870
+The larger the cache block, the more data
+or instructions that are next to each other
+
+4
+00:00:13,870 --> 00:00:17,410
+we can bring and the more spatial locality
+we have.
+
+5
+00:00:17,410 --> 00:00:23,130
+And since the cache block size is the same
+as the DRAM block size, there is not much
+
+6
+00:00:23,130 --> 00:00:26,180
+the cache designer can do to impact that.
+
+7
+00:00:26,180 --> 00:00:30,409
+On the other hand, temporal locality requires
+a bit of work.
+
+8
+00:00:30,409 --> 00:00:35,480
+Ideally, what we would like to do is keep
+all the D RAM blocks in the cache.
+
+9
+00:00:35,480 --> 00:00:39,410
+But we know that is not practical because
+of the size differences.
+
+10
+00:00:39,410 --> 00:00:44,740
+So the CPU designer has to make several design
+choices in the cache in order to maintain
+
+11
+00:00:44,740 --> 00:00:47,030
+temporal locality as much as possible.
+
+12
+00:00:47,030 --> 00:00:53,420
+For that, the designer uses the following
+parameters: the associativity of the cache
+
+13
+00:00:53,420 --> 00:00:59,030
+to determine which locations in the cache
+can a D RAM block be moved to, the replacement
+
+14
+00:00:59,030 --> 00:01:04,500
+policy to determine when to evict a block
+from the cache, and the write policy which
+
+15
+00:01:04,500 --> 00:01:09,030
+determines how to synchronize the data between
+the cache and the D RAM.
+
+16
+00:01:09,030 --> 00:01:14,360
+We will discuss how each parameter impacts
+not only the temporal locality but also the
+
+17
+00:01:14,360 --> 00:01:16,380
+delay at which the cache is accessed
+

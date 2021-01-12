@@ -1,0 +1,147 @@
+1
+00:00:00,560 --> 00:00:06,890
+Let's go to the selection-sort algorithm now
+that we know that find index of min is theta
+
+2
+00:00:06,890 --> 00:00:13,920
+of N, in other words is linear, let's use
+that when we're analyzing the selection-sort
+
+3
+00:00:13,920 --> 00:00:15,050
+algorithm.
+
+4
+00:00:15,050 --> 00:00:25,220
+Once again let's define N, as the size of
+the input ARR size in this case, and let's
+
+5
+00:00:25,220 --> 00:00:30,419
+try to figure out what T of N is.
+
+6
+00:00:30,419 --> 00:00:38,160
+So, we have a for loop that we need to figure
+out what's the cost of this for loop.
+
+7
+00:00:38,160 --> 00:00:47,210
+But not like the other algorithm we had so
+far, each iteration the body costs differently.
+
+8
+00:00:47,210 --> 00:00:53,000
+And let's try to see what the cost of each
+iteration.
+
+9
+00:00:53,000 --> 00:00:58,640
+So basically the most expensive, I would say
+operation here, is the call of the function
+
+10
+00:00:58,640 --> 00:00:59,890
+find index of min.
+
+11
+00:00:59,890 --> 00:01:07,570
+And then since the range changes from iteration
+to iteration, basically the linear cost or
+
+12
+00:01:07,570 --> 00:01:13,810
+the number of elements that we are going over,
+changes from iteration to iteration.
+
+13
+00:01:13,810 --> 00:01:23,759
+I would say that the cost of the body could
+be described as theta of N minus i, right.
+
+14
+00:01:23,759 --> 00:01:29,759
+So when i equals zero, when we're going over
+the entire range, we are basically paying
+
+15
+00:01:29,759 --> 00:01:31,340
+N, right.
+
+16
+00:01:31,340 --> 00:01:37,020
+When i equals one, when we're going over one
+item less we’re basically doing N minus
+
+17
+00:01:37,020 --> 00:01:38,189
+one.
+
+18
+00:01:38,189 --> 00:01:41,220
+And when i equals two, we’re doing N minus
+two and so on.
+
+19
+00:01:41,220 --> 00:01:48,770
+So basically when we are summing up all the
+cost of calling find index of min, we'll pay
+
+20
+00:01:48,770 --> 00:01:54,710
+N for the first call, and we'll pay N minus
+one for the second call, and N minus two for
+
+21
+00:01:54,710 --> 00:01:59,999
+the third call and so on and so on, till the
+last call would be two and one.
+
+22
+00:01:59,999 --> 00:02:03,700
+So that's basically the cheapest score.
+
+23
+00:02:03,700 --> 00:02:11,930
+So the entire set of calls to find the index
+of min would be the sum of that, of these
+
+24
+00:02:11,930 --> 00:02:15,110
+numbers: N plus N minus one plus N minus two
+and so on.
+
+25
+00:02:15,110 --> 00:02:22,130
+You know that this here, actually we've seen
+it in one of our previous models, that we
+
+26
+00:02:22,130 --> 00:02:29,939
+can think of it as a kind of a triangle inside
+a square.
+
+27
+00:02:29,939 --> 00:02:32,770
+And we know that it is theta of N squared.
+
+28
+00:02:32,770 --> 00:02:39,260
+You can look at the exact formula and figure
+out where it's theta of N squared but we've
+
+29
+00:02:39,260 --> 00:02:46,879
+already seen that this kind of a sum is a
+quadratic running time.
+
+30
+00:02:46,879 --> 00:02:54,440
+Yeah, so basically meaning that selection-sort
+is a quadratic running time algorithm for
+
+31
+00:02:54,440 --> 00:02:54,579
+sorting.
+

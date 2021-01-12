@@ -1,0 +1,96 @@
+1
+00:00:00,669 --> 00:00:06,340
+So, we saw in the supplier/demander thread,
+an example of checking and changing the buffer
+
+2
+00:00:06,340 --> 00:00:10,420
+and the buffer count and how that has to be
+done atomically; we have to look at that as
+
+3
+00:00:10,420 --> 00:00:12,790
+one atomic instruction.
+
+4
+00:00:12,790 --> 00:00:19,270
+We have to not be able to stop running that
+or run anything else until we finished running
+
+5
+00:00:19,270 --> 00:00:20,699
+them, that set of instructions.
+
+6
+00:00:20,699 --> 00:00:26,000
+So, we have to consider the complete supplier
+threat or at least the subset of the supplier
+
+7
+00:00:26,000 --> 00:00:32,480
+thread in that portion where does the checking
+the if statement and the changing of the buffer
+
+8
+00:00:32,480 --> 00:00:38,780
+count and the buffer; we have to do that in
+one atomic instruction, although we can't
+
+9
+00:00:38,780 --> 00:00:39,899
+do it in one atomic instruction.
+
+10
+00:00:39,899 --> 00:00:45,079
+So, the only way that we can consider this
+is that the that portion of the function needs
+
+11
+00:00:45,079 --> 00:00:49,329
+to be protected by a critical section and
+we'll see how to do that.
+
+12
+00:00:49,329 --> 00:00:53,079
+In the double update/missing update problem,
+really those entire functions which are very
+
+13
+00:00:53,079 --> 00:00:58,119
+simple functions well they are as two lines
+of code, both of those functions need to run
+
+14
+00:00:58,119 --> 00:01:02,149
+atomically so they cannot be interrupted from
+the time we start the function to the time
+
+15
+00:01:02,149 --> 00:01:05,049
+we finish the function.
+
+16
+00:01:05,049 --> 00:01:09,500
+The need for running those sections of code
+atomically, actually indicates that those
+
+17
+00:01:09,500 --> 00:01:14,009
+sections of code are critical sections, and
+that's what we're trying to identify.
+
+18
+00:01:14,009 --> 00:01:20,149
+We're trying to make sure that we know where
+the critical sections are and that we protect
+
+19
+00:01:20,149 --> 00:01:27,090
+them by protection mechanisms, which we'll
+talk about in just a few minutes, from any
+
+20
+00:01:27,090 --> 00:01:29,799
+untoward asynchrony that might happen inside
+the system.
+

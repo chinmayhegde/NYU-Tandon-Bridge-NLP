@@ -1,0 +1,81 @@
+1
+00:00:00,530 --> 00:00:06,939
+Let’s take a second look at a problem we
+already implemented the program that reads
+
+2
+00:00:06,939 --> 00:00:15,349
+from the user two numbers and print their
+sum and see if we can find some of these constructs
+
+3
+00:00:15,349 --> 00:00:17,430
+some data expressions and control flow.
+
+4
+00:00:17,430 --> 00:00:25,130
+So here is the program we implemented you
+can see that when this program is executed
+
+5
+00:00:25,130 --> 00:00:27,830
+it is executed line after line.
+
+6
+00:00:27,830 --> 00:00:34,140
+First there is cout that prints an instruction
+to the user please enter two numbers.
+
+7
+00:00:34,140 --> 00:00:39,539
+Then there is the cin that reads from the
+user these two numbers then we add them store
+
+8
+00:00:39,539 --> 00:00:47,429
+them into sum and eventually we print out
+the message that whatever the sum is.
+
+9
+00:00:47,429 --> 00:00:52,379
+You can see that the program is executed line
+by line we call this flow a sequential flow.
+
+10
+00:00:52,379 --> 00:00:56,930
+This is a default flow of a program that lines
+executed one after the other.
+
+11
+00:00:56,930 --> 00:01:04,729
+You could also see that we have here some
+data we have three variables numOne numTwo
+
+12
+00:01:04,729 --> 00:01:13,360
+sum they are all integers in C which is a
+C++ which is a strongly type language.
+
+13
+00:01:13,360 --> 00:01:20,380
+Each data must have a type of its own in this
+case both or all of our variables are integers
+
+14
+00:01:20,380 --> 00:01:22,460
+int.
+
+15
+00:01:22,460 --> 00:01:29,330
+There are also expressions here in our program
+there is numOne plus numTwo there is an assignment
+
+16
+00:01:29,330 --> 00:01:34,369
+expressions there is a cout a cin an io expression.
+
+17
+00:01:34,369 --> 00:01:41,259
+So there are all the kinds of these constructs
+here in this program.
+

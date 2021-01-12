@@ -1,0 +1,181 @@
+1
+00:00:00,740 --> 00:00:07,090
+So here's a piece of C++ code and I just wanted
+to show you how this works when we use a stack.
+
+2
+00:00:07,090 --> 00:00:12,889
+So we're going to take the code we're going
+to parse it character by character.
+
+3
+00:00:12,889 --> 00:00:18,430
+And what we're doing is we're saying if we
+see any parentheses or curly braces or square
+
+4
+00:00:18,430 --> 00:00:21,220
+brackets we're going to push those onto the
+stack of their opening.
+
+5
+00:00:21,220 --> 00:00:24,220
+And if they're closing we're going to compare
+them to the top of the stack make sure it
+
+6
+00:00:24,220 --> 00:00:25,220
+matches.
+
+7
+00:00:25,220 --> 00:00:30,340
+So we can see of course is this actually is
+an acceptable piece of code of course, we're
+
+8
+00:00:30,340 --> 00:00:34,660
+going to take first the characters int main
+we're just throw them away because they're
+
+9
+00:00:34,660 --> 00:00:36,030
+not relevant to our discussion.
+
+10
+00:00:36,030 --> 00:00:39,790
+And we're going to take the parentheses we're
+going to push it onto the stack and when we
+
+11
+00:00:39,790 --> 00:00:43,570
+see the close parentheses, you're going to
+discover that on the top of the stack there
+
+12
+00:00:43,570 --> 00:00:48,570
+is an open parentheses and so that matches
+and the open parentheses would then be removed
+
+13
+00:00:48,570 --> 00:00:50,490
+in the stack would be empty.
+
+14
+00:00:50,490 --> 00:00:55,070
+We then encounter the opening curly brace
+and we'll push that onto the stack.
+
+15
+00:00:55,070 --> 00:00:57,440
+Some more characters that we just completely
+throw away.
+
+16
+00:00:57,440 --> 00:01:02,270
+And then we have an opening square bracket
+which will push on top of the opening curly
+
+17
+00:01:02,270 --> 00:01:03,270
+brace.
+
+18
+00:01:03,270 --> 00:01:06,869
+And then we have a closing square brackets
+so we throw away the openings square bracket;
+
+19
+00:01:06,869 --> 00:01:08,920
+more characters that we throw away.
+
+20
+00:01:08,920 --> 00:01:12,820
+There's an opening curly brace, and we have
+two opening curly braces on the stack some
+
+21
+00:01:12,820 --> 00:01:16,689
+characters that we throw away, and then we
+have a closing curly brace.
+
+22
+00:01:16,689 --> 00:01:21,179
+So we match it with the opening curly brace
+that's already on the stack and throw both
+
+23
+00:01:21,179 --> 00:01:22,539
+of those away.
+
+24
+00:01:22,539 --> 00:01:27,380
+We throw away all the other characters leading
+up to the opening square bracket, and the
+
+25
+00:01:27,380 --> 00:01:31,259
+opening square brackets pushed on top of the
+opening curly brace that's already on the
+
+26
+00:01:31,259 --> 00:01:36,149
+stack and then we have an opening parentheses,
+which gets pushed on top of the stack.
+
+27
+00:01:36,149 --> 00:01:40,079
+And you'll seen at that point in the compiler
+there's an opening curly brace and opening
+
+28
+00:01:40,079 --> 00:01:43,409
+square bracket and an opening parentheses.
+
+29
+00:01:43,409 --> 00:01:46,859
+And then we have the closing parentheses so
+the opening parentheses comes off the stack.
+
+30
+00:01:46,859 --> 00:01:51,079
+We have the closing square brackets so the
+opening square bracket comes off the stack;
+
+31
+00:01:51,079 --> 00:01:52,759
+we throw some characters away.
+
+32
+00:01:52,759 --> 00:01:57,329
+We have the closing curly brace and we throw
+away the opening curly brace.
+
+33
+00:01:57,329 --> 00:01:59,860
+We’re done with the input; the stack Is
+empty.
+
+34
+00:01:59,860 --> 00:02:01,460
+This code is great.
+
+35
+00:02:01,460 --> 00:02:05,990
+If anything doesn't match up, we can throw
+an error and we can actually tell the user
+
+36
+00:02:05,990 --> 00:02:09,630
+tell the programmer roughly where the error
+is.
+
+37
+00:02:09,630 --> 00:02:14,540
+For example, missing square bracket at line
+blah blah blah, and I'm sure you've seen that
+
+38
+00:02:14,540 --> 00:02:19,830
+in your experience, this is the exact way
+that your compiler has generated that error.
+

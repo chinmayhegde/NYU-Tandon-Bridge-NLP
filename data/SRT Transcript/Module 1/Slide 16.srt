@@ -1,0 +1,41 @@
+1
+00:00:03,100 --> 00:00:06,100
+As you can see from this, this is what looks
+like a physical RAM stick or it's known as
+
+2
+00:00:06,100 --> 00:00:08,760
+a dual inline memory module.
+
+3
+00:00:08,760 --> 00:00:14,610
+What we have here is a printed circuit board
+or a PCB with a number of chips.
+
+4
+00:00:14,610 --> 00:00:17,279
+This one is made by Samsung Corp.
+
+5
+00:00:17,279 --> 00:00:21,790
+Each of the individual chips store a certain
+amount of RAM.
+
+6
+00:00:21,790 --> 00:00:26,080
+Regardless you can't really peer into it and
+look at what's going on and as soon as you
+
+7
+00:00:26,080 --> 00:00:28,540
+pull the power out everything's lost anyhow.
+
+8
+00:00:28,540 --> 00:00:35,640
+So the basic idea here is that you have a
+physical device in which we can temporarily
+
+9
+00:00:35,640 --> 00:00:37,850
+store some information.
+

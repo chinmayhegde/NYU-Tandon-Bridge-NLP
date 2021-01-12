@@ -1,0 +1,126 @@
+1
+00:00:00,729 --> 00:00:05,830
+So we can always use the ignore function if
+we want to skip over a set of characters.
+
+2
+00:00:05,830 --> 00:00:11,230
+Now what the ignore function does is it allows
+us to tell it how many characters we want
+
+3
+00:00:11,230 --> 00:00:14,989
+to skip or what character we want to stop
+at skipping.
+
+4
+00:00:14,989 --> 00:00:20,849
+so you'll commonly see something like in File
+dot ignore, and then nine nine nine nine and
+
+5
+00:00:20,849 --> 00:00:25,789
+then backslash n in a character in a single
+character scene and single quotes there.
+
+6
+00:00:25,789 --> 00:00:29,769
+which means we're going to skip over nine
+thousand nine hundred ninety nine characters
+
+7
+00:00:29,769 --> 00:00:32,780
+or the first return character that we see.
+
+8
+00:00:32,780 --> 00:00:37,399
+so it basically skips to the end of the line
+as long as the line is not more than one thousand
+
+9
+00:00:37,399 --> 00:00:38,800
+nine hundred ninety nine characters.
+
+10
+00:00:38,800 --> 00:00:44,100
+and what this is useful for is if we want
+to read in part of the line, not the whole
+
+11
+00:00:44,100 --> 00:00:47,230
+line, and then we want to skip to the end
+of the line.
+
+12
+00:00:47,230 --> 00:00:52,940
+we can use the read in operation like the
+input operator and then we can once we've
+
+13
+00:00:52,940 --> 00:00:57,730
+got the information that we want we just ignore
+the rest of the line and then go back to using
+
+14
+00:00:57,730 --> 00:01:02,149
+the input operator to read in the next lines
+piece of information that we want.
+
+15
+00:01:02,149 --> 00:01:05,530
+So the ignore function is actually a very
+useful function.
+
+16
+00:01:05,530 --> 00:01:09,870
+Sometimes we might be at the end of the line,
+because we just did an input operator and
+
+17
+00:01:09,870 --> 00:01:14,630
+we stop the trailing whitespace, the return
+characters trailing whitespace, and the next
+
+18
+00:01:14,630 --> 00:01:16,510
+line we want to read in the whole line.
+
+19
+00:01:16,510 --> 00:01:21,380
+if all we did was a get line we would get
+nothing because we were really looking at
+
+20
+00:01:21,380 --> 00:01:27,800
+the return character, but we can first do
+it an ignore and skip over that return character
+
+21
+00:01:27,800 --> 00:01:32,460
+and then read in using the Get line then the
+whole next line.
+
+22
+00:01:32,460 --> 00:01:38,510
+So get line and ignore kind of go together
+and ignore is the solution to having to do
+
+23
+00:01:38,510 --> 00:01:43,410
+get line after we've done an input operation
+using the input operator.
+
+24
+00:01:43,410 --> 00:01:47,480
+we put in ignore in the middle to make sure
+that we skip over that return character and
+
+25
+00:01:47,480 --> 00:01:51,380
+the next line we're going to get the whole
+line As opposed to a blank which is nothing
+
+26
+00:01:51,380 --> 00:01:51,880
+at the end of the line.
+

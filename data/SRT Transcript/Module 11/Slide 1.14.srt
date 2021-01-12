@@ -1,0 +1,133 @@
+0:00:00.590,0:00:04.860
+One of the fun things that we can do with
+pointers is pointer arithmetic and this is
+
+0:00:04.860,0:00:08.720
+especially useful if we have a pointer that's
+pointing at an array.
+
+0:00:08.720,0:00:14.290
+C++ allows us to manipulate pointers using
+standard arithmetic operators like the plus
+
+0:00:14.290,0:00:17.820
+sign and the minus sign and the plus plus
+and the minus minus sign.
+
+0:00:17.820,0:00:21.370
+And what we can do is add on to the pointer.
+
+0:00:21.370,0:00:28.880
+Now C++ understands enough about what the
+pointer is pointing to to make some interesting
+
+0:00:28.880,0:00:30.050
+extrapolations.
+
+0:00:30.050,0:00:35.250
+What it does is for example if we added zero
+to the pointer that would obviously move it
+
+0:00:35.250,0:00:36.910
+no positions.
+
+0:00:36.910,0:00:43.540
+But if the pointer is pointing at in an array
+then we can move the pointer up one element
+
+0:00:43.540,0:00:48.660
+of the array by adding one to it and that's
+possibly very helpful.
+
+0:00:48.660,0:00:54.010
+If you want to use pointer arithmetic to access
+the elements of the array you can make a temporary
+
+0:00:54.010,0:01:00.469
+pointer and then progress through the array
+in a loop adding one to the pointer each time
+
+0:01:00.469,0:01:04.339
+and that would take you through all the elements
+of the array.
+
+0:01:04.339,0:01:08.770
+You don't have to worry about how large a
+single element is.
+
+0:01:08.770,0:01:12.749
+If this for example is an integer each element
+is going to be four bytes.
+
+0:01:12.749,0:01:15.380
+If it's a double each element is going to
+be eight bytes.
+
+0:01:15.380,0:01:18.619
+But that's not something that you have to
+concern yourself with because with pointer
+
+0:01:18.619,0:01:23.399
+arithmetic the pointer data type is known
+because we can only have an integer pointer
+
+0:01:23.399,0:01:24.889
+pointing to an integer.
+
+0:01:24.889,0:01:30.649
+So when we add one to that integer pointer
+it's going to move up one element which means
+
+0:01:30.649,0:01:34.569
+either four bytes for an integer or eight
+bytes for a double.
+
+0:01:34.569,0:01:37.570
+If we add five to it it moves of five elements.
+
+0:01:37.570,0:01:41.859
+But the important thing to recognize now is
+if we change where the pointer is pointing
+
+0:01:41.859,0:01:48.249
+to then the zero element or the square brackets
+zero element the first element in the array
+
+0:01:48.249,0:01:49.709
+will now be different.
+
+0:01:49.709,0:01:53.950
+So if we have an array with the number of
+elements and we add five to the beginning
+
+0:01:53.950,0:01:57.399
+of the pointer to the pointer at the beginning.
+
+0:01:57.399,0:02:02.309
+It's going to move up five elements which
+makes the zero element now what is actually
+
+0:02:02.309,0:02:04.600
+the fifth element in the real array.
+
+0:02:04.600,0:02:08.879
+So that has to be taken into consideration
+you should always remember where the beginning
+
+0:02:08.879,0:02:11.719
+of the real array is.
+
+0:02:11.719,0:02:15.680
+If you want to move up just one element of
+the time we have the plus plus operator and
+
+0:02:15.680,0:02:20.959
+the minus minus operator and those can just
+move us forward or backwards an individual
+
+0:02:20.959,0:02:22.400
+element of time.
+
+0:02:22.400,0:02:27.819
+So something like ptr plus plus is a really
+useful tool for accessing the array.

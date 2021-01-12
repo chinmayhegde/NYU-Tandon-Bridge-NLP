@@ -1,0 +1,111 @@
+1
+00:00:00,760 --> 00:00:04,590
+Here we've got quite a bit of code and I just
+want to go over it quite simply.
+
+2
+00:00:04,590 --> 00:00:09,380
+We've got a base class called Pet. and the
+base class pet, what we're doing is we're
+
+3
+00:00:09,380 --> 00:00:13,940
+creating a cat and a pet combination here.
+
+4
+00:00:13,940 --> 00:00:19,980
+So the base class pet has functions like get
+name and set name and it asked the pet to
+
+5
+00:00:19,980 --> 00:00:24,000
+speak and figure out what the pet speaking
+does later.
+
+6
+00:00:24,000 --> 00:00:28,650
+But we also have a cat class, which is based
+on the pet class.
+
+7
+00:00:28,650 --> 00:00:35,260
+If take a look that colon public pet indicates
+that a cat is a pet, and that's the derivation;
+
+8
+00:00:35,260 --> 00:00:36,940
+that's inheritance right there.
+
+9
+00:00:36,940 --> 00:00:43,499
+The cat doesn't redefine name and pet ID that
+were created inside the pet class, but it
+
+10
+00:00:43,499 --> 00:00:47,760
+does add a double, which is the whisker length
+of the cat.
+
+11
+00:00:47,760 --> 00:00:55,390
+The constructor for the cat class tells the
+pet class to set its pet ID to ten thousand.
+
+12
+00:00:55,390 --> 00:01:00,239
+So here we have an explicit call to the base
+constructor and if you look, that form of
+
+13
+00:01:00,239 --> 00:01:06,160
+it looks very much like the member initialization
+list that we saw so many slides ago.
+
+14
+00:01:06,160 --> 00:01:11,940
+Now we call it the base initialization list
+and it can only be done this way; you can't
+
+15
+00:01:11,940 --> 00:01:16,650
+put anything inside those curly braces in
+order to initialize the pet.
+
+16
+00:01:16,650 --> 00:01:22,710
+Now keep in mind if you take a look at pet,
+the cat will not have access to the pet ID
+
+17
+00:01:22,710 --> 00:01:26,770
+because it's a private data member inside
+the base class.
+
+18
+00:01:26,770 --> 00:01:32,560
+So the only way to set the pet ID is to use
+that base initialization list.
+
+19
+00:01:32,560 --> 00:01:37,110
+We also have a function speak, which just
+prints out meow and set length and get length,
+
+20
+00:01:37,110 --> 00:01:39,820
+which are accessors and mutators for the whisker
+length.
+
+21
+00:01:39,820 --> 00:01:44,310
+And we have another function called set name
+which coincidentally looks very much like
+
+22
+00:01:44,310 --> 00:01:46,780
+the set name function inside pet.
+
+23
+00:01:46,780 --> 00:01:49,100
+We’re going to look at that in just a minute.
+

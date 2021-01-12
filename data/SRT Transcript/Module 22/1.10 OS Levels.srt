@@ -1,0 +1,244 @@
+1
+00:00:00,370 --> 00:00:05,310
+I want you to look here at this image that
+I have which is just list the levels of what
+
+2
+00:00:05,310 --> 00:00:10,740
+we consider the operating system, and this
+is just a rough diagram; it's not really hard
+
+3
+00:00:10,740 --> 00:00:12,650
+and fast rule.
+
+4
+00:00:12,650 --> 00:00:18,480
+But what we've got on the very, very bottom,
+the bottom four levels, are not really that
+
+5
+00:00:18,480 --> 00:00:23,450
+concerned operating systems per se except
+that we have to interact with them.
+
+6
+00:00:23,450 --> 00:00:29,110
+So things like interrupts, procedures, processor
+instruction sets, and electronic circuits
+
+7
+00:00:29,110 --> 00:00:32,630
+as operating systems designers: we don't get
+any control over that.
+
+8
+00:00:32,630 --> 00:00:37,860
+Those get dictated by hardware designers,
+computer engineers, not computer scientists,
+
+9
+00:00:37,860 --> 00:00:42,120
+which are going to design the electronic circuits
+which are going to specify the processor instruction
+
+10
+00:00:42,120 --> 00:00:48,329
+set, which are going to deal with how we can
+do procedures small bits of code you know
+
+11
+00:00:48,329 --> 00:00:55,510
+the small items that are built into the processor
+itself, as well as interrupts that have to
+
+12
+00:00:55,510 --> 00:00:57,300
+occur inside the system.
+
+13
+00:00:57,300 --> 00:01:01,219
+We don't get to control much of that stuff,
+but we do have to interact with it.
+
+14
+00:01:01,219 --> 00:01:06,340
+Now in the primitive processes phase, what
+we're talking about are very low level pieces
+
+15
+00:01:06,340 --> 00:01:08,960
+of code that are parts of the operating system.
+
+16
+00:01:08,960 --> 00:01:13,420
+And in fact, if you look at those two dark
+lines that I’ve drawn, levels five six and
+
+17
+00:01:13,420 --> 00:01:19,000
+seven are what we consider what's called a
+microkernel; that's the minimum that's necessary
+
+18
+00:01:19,000 --> 00:01:22,070
+in order to have a functional operating system.
+
+19
+00:01:22,070 --> 00:01:26,420
+Primitive processes deals mostly with scheduling
+and resource management.
+
+20
+00:01:26,420 --> 00:01:30,610
+Secondary storage obviously we have to access
+all the other code and all the other components
+
+21
+00:01:30,610 --> 00:01:35,030
+of the operating system, as well as all the
+other programs and data so that's a very low
+
+22
+00:01:35,030 --> 00:01:36,510
+level concern.
+
+23
+00:01:36,510 --> 00:01:40,890
+And then we have this concept of virtual memory
+or even we can call it memory management,
+
+24
+00:01:40,890 --> 00:01:45,570
+which we'll talk about in a later module that
+has to be managed.
+
+25
+00:01:45,570 --> 00:01:49,630
+So, we're going to need some, some fundamental
+control over what's in main memory.
+
+26
+00:01:49,630 --> 00:01:54,610
+So, those three components are absolutely
+necessary in order to have an operating system.
+
+27
+00:01:54,610 --> 00:01:59,160
+Now in the old days and I'm not talking about
+back in the mainframe days, but really only
+
+28
+00:01:59,160 --> 00:02:01,170
+a couple decades ago.
+
+29
+00:02:01,170 --> 00:02:07,450
+What we can say is the rest of it would have
+been included in what we call a macro kernel
+
+30
+00:02:07,450 --> 00:02:14,069
+or a large kernel, so the micro kernel has
+only the smallest and most essential elements.
+
+31
+00:02:14,069 --> 00:02:19,519
+The macro kernel has everything: communication
+systems communication, subsystems for getting
+
+32
+00:02:19,519 --> 00:02:25,510
+information into and out of the computer,
+the file systems, Windows even has some components
+
+33
+00:02:25,510 --> 00:02:30,629
+that are built into the kernel, that are purely
+for the file system.
+
+34
+00:02:30,629 --> 00:02:35,270
+But file systems concerns in an operating
+systems like Linux and most Unixes, those
+
+35
+00:02:35,270 --> 00:02:39,900
+are an upper level concern outside of the
+kernel, devices that we might connect to,
+
+36
+00:02:39,900 --> 00:02:45,099
+directories that are on the file system, any
+user processes, and the shell, the shell being
+
+37
+00:02:45,099 --> 00:02:46,819
+really what you're interacting with.
+
+38
+00:02:46,819 --> 00:02:49,480
+In Windows, this is called explored dot EXE.
+
+39
+00:02:49,480 --> 00:02:54,840
+So, the shell is a component that the user
+interacts with everything below that is down
+
+40
+00:02:54,840 --> 00:02:59,409
+to Level five, is a concern of the operating
+system and everything below that is a concern
+
+41
+00:02:59,409 --> 00:03:00,779
+of system hardware.
+
+42
+00:03:00,779 --> 00:03:05,689
+But I just wanted you to get an idea of what
+we what we look at, what we use, because each
+
+43
+00:03:05,689 --> 00:03:09,079
+of these levels use services of the levels
+below them.
+
+44
+00:03:09,079 --> 00:03:16,660
+Virtual memory, for example, stores components
+of processes on the secondary storage device
+
+45
+00:03:16,660 --> 00:03:20,799
+so the virtual memory system uses components
+of the secondary storage uses services of
+
+46
+00:03:20,799 --> 00:03:22,189
+secondary storage.
+
+47
+00:03:22,189 --> 00:03:27,620
+And because virtual memory is higher, that
+means we can use the services they exist already.
+
+48
+00:03:27,620 --> 00:03:32,779
+So, what we do is we provide services to the
+layers above, to the levels above and then
+
+49
+00:03:32,779 --> 00:03:34,840
+we use the services of the levels below.
+
+50
+00:03:34,840 --> 00:03:39,930
+So, that's the way that this whole interaction
+works but I want to you have an idea of the
+
+51
+00:03:39,930 --> 00:03:43,589
+core levels, if you will, of the operating
+system.
+

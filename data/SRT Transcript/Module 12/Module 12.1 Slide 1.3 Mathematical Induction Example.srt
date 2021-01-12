@@ -1,0 +1,22 @@
+1
+00:00:00,500 --> 00:00:01,000
+Okay.
+
+2
+00:00:01,000 --> 00:00:04,620
+So, let's use this technique in order to prove
+the following claim.
+
+3
+00:00:04,630 --> 00:00:11,450
+We’ll show that for any natural number N:
+two N square plus five N minus six is greater
+
+4
+00:00:11,450 --> 00:00:13,170
+or equal to zero.
+
+5
+00:00:13,170 --> 00:00:14,140
+Let's go ahead and prove it.
+

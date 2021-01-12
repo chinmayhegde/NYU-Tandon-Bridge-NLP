@@ -1,0 +1,18 @@
+0:00:00.760,0:00:04.020
+Ok let's use this syntax in order to implement
+the problem.
+
+0:00:04.020,0:00:11.520
+So this program would read the user's name
+and print this name in a reverse order.
+
+0:00:11.520,0:00:17.020
+So for example we would prompt the user please
+enter your name the user would say Donald
+
+0:00:17.020,0:00:22.840
+Duck and then it would print whatever so Donald
+Duck in a reverse order.
+
+0:00:22.840,0:00:24.869
+So let's go ahead and implement it.

@@ -1,0 +1,232 @@
+1
+00:00:00,530 --> 00:00:06,080
+Okay, so now that we know how to work with
+other number systems, we know how to a convert
+
+2
+00:00:06,080 --> 00:00:07,189
+from one system to another.
+
+3
+00:00:07,189 --> 00:00:13,599
+Let's see how we can do some math; how we
+can do some arithmetic in different number
+
+4
+00:00:13,599 --> 00:00:14,599
+systems.
+
+5
+00:00:14,599 --> 00:00:18,590
+Let's start with addition: how we can add
+numbers to one another.
+
+6
+00:00:18,590 --> 00:00:21,860
+So again, let's start with a decimal number
+system.
+
+7
+00:00:21,860 --> 00:00:27,340
+And make sure we get exactly what we do there,
+and then, try to generalize it to other number
+
+8
+00:00:27,340 --> 00:00:28,340
+systems as well.
+
+9
+00:00:28,340 --> 00:00:35,030
+So, for example, let's try to add 325 to 692,
+two decimal numbers.
+
+10
+00:00:35,030 --> 00:00:40,409
+We start, I think third grade, our teacher
+said start with the ones digit.
+
+11
+00:00:40,409 --> 00:00:44,059
+So, we add 5 and 2, we get 7.
+
+12
+00:00:44,059 --> 00:00:50,520
+And then, for the tens digit we had 2 tens
+and 9 tens, that would give us 11 tens, which
+
+13
+00:00:50,520 --> 00:00:57,989
+would, 11 tens would be grouped into 100 and
+an additional ten.
+
+14
+00:00:57,989 --> 00:01:04,930
+That's why we write 1 in the tens, and carry
+over an additional hundred.
+
+15
+00:01:04,930 --> 00:01:13,500
+Then we have 100 plus 300 plus 600, it adds
+up to 10 hundreds.
+
+16
+00:01:13,500 --> 00:01:20,900
+And we have, therefore, 0 for the ten hundreds
+and 1 for the thousand because these 10 hundreds
+
+17
+00:01:20,900 --> 00:01:23,680
+were grouped into one group of a thousand.
+
+18
+00:01:23,680 --> 00:01:30,390
+So, we have 0 hundreds and 1 carried to the
+thousands, which would then be dropped down,
+
+19
+00:01:30,390 --> 00:01:34,250
+and all together we have 1017.
+
+20
+00:01:34,250 --> 00:01:41,080
+Let's try to do the same when we add, or we
+try to do some additions, in the Octal number
+
+21
+00:01:41,080 --> 00:01:42,080
+system.
+
+22
+00:01:42,080 --> 00:01:46,600
+For example, a 365 plus 243 Octal.
+
+23
+00:01:46,600 --> 00:01:51,090
+Again, we start with the ones digit, 5 plus
+3.
+
+24
+00:01:51,090 --> 00:01:53,409
+When we add 5 plus 3, we get 8.
+
+25
+00:01:53,409 --> 00:02:00,200
+But we don't just write 8, because in the
+octal number system, 8 ones are grouped into
+
+26
+00:02:00,200 --> 00:02:01,560
+a single ten.
+
+27
+00:02:01,560 --> 00:02:10,369
+So, after grouping these eight ones to a ten,
+we have 0 additional ones and a carry over
+
+28
+00:02:10,369 --> 00:02:12,230
+of a ten.
+
+29
+00:02:12,230 --> 00:02:22,860
+Then, we add a 10, another 6 ten and another
+4 ten, that would give us 11 tens, right?
+
+30
+00:02:22,860 --> 00:02:28,010
+Maybe let's try to count it; count it up starting
+at 6.
+
+31
+00:02:28,010 --> 00:02:31,790
+So, we kind of have to add: 6 plus 5.
+
+32
+00:02:31,790 --> 00:02:34,260
+So, let's add 5 to 6.
+
+33
+00:02:34,260 --> 00:02:35,379
+Let’s count.
+
+34
+00:02:35,379 --> 00:02:43,230
+After six comes seven, after seven we have
+ten, eleven, twelve, thirteen, so we have
+
+35
+00:02:43,230 --> 00:02:46,540
+thirteen in the tens position.
+
+36
+00:02:46,540 --> 00:02:54,140
+So, we group ten of them to hundreds, we are
+left with 3 tens and one hundred is carry
+
+37
+00:02:54,140 --> 00:02:55,140
+over.
+
+38
+00:02:55,140 --> 00:03:02,110
+Then, we have 3 plus 1 that's a 4, plus 2
+that's a five, a six, that would give us 6.
+
+39
+00:03:02,110 --> 00:03:10,340
+So all together, 365 octal plus 243 octal,
+gives us 630 octal, right?
+
+40
+00:03:10,340 --> 00:03:15,000
+Same thing as we've done with the decimal,
+we are working in the octal.
+
+41
+00:03:15,000 --> 00:03:22,920
+We just keep in mind to group items when we
+have eight individual ones.
+
+42
+00:03:22,920 --> 00:03:29,760
+Same thing would work when we try to add binary
+numbers: 0 plus 1 would be a 1, 0 plus 0 would
+
+43
+00:03:29,760 --> 00:03:37,260
+give us 0, 1 plus 0 would be 1, 1 plus 1 that
+is 2 obviously.
+
+44
+00:03:37,260 --> 00:03:43,620
+That would be 0 plus 1 of a carry over, 1
+plus 1 plus 1, that's a 3, that would leave
+
+45
+00:03:43,620 --> 00:03:46,220
+1 plus 1 of a carry over.
+
+46
+00:03:46,220 --> 00:03:55,630
+1 plus 0 plus 0 would be a1, 0 plus 1 is 1,
+and 1 plus 1 is basically 2, or 10.
+
+47
+00:03:55,630 --> 00:04:00,800
+Or a 0 plus a 1 carry over, which then drops
+down.
+
+48
+00:04:00,800 --> 00:04:05,290
+And that is the result of adding these two
+binary numbers.
+
+49
+00:04:05,290 --> 00:04:10,620
+Try a few on your own, and make sure you get
+how to add the numbers in terms of alternative
+
+50
+00:04:10,620 --> 00:04:11,510
+number system.
+

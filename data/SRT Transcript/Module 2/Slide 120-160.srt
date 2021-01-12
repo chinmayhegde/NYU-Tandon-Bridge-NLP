@@ -1,0 +1,252 @@
+1
+00:00:00,789 --> 00:00:06,790
+So, for that let's start with the decimal
+number system itself; understand exactly what
+
+2
+00:00:06,790 --> 00:00:11,910
+the positions of each digit mean, and then
+try to generalize it to other number systems
+
+3
+00:00:11,910 --> 00:00:12,910
+as well.
+
+4
+00:00:12,910 --> 00:00:15,500
+So, for example, number 375, decimal 375.
+
+5
+00:00:15,500 --> 00:00:20,090
+So, we have three digits here: the ones, tens,
+and hundreds.
+
+6
+00:00:20,090 --> 00:00:25,540
+So, the one basically stands for the five,
+that is in the one's position.
+
+7
+00:00:25,540 --> 00:00:30,610
+Each value here, represents a single object,
+right?
+
+8
+00:00:30,610 --> 00:00:37,660
+Each value in the tens position represents
+a group of ten objects, and each value in
+
+9
+00:00:37,660 --> 00:00:42,680
+the hundreds position represents a group of
+one hundred objects.
+
+10
+00:00:42,680 --> 00:00:47,910
+We like to write it as powers of ten, so one
+hundred is ten to the power of two, ten is
+
+11
+00:00:47,910 --> 00:00:51,640
+ten to the power of one, and one is ten to
+the power of zero.
+
+12
+00:00:51,640 --> 00:01:00,800
+So, now we can look at 375 as a weighted sum
+of these weights of the digits in their position.
+
+13
+00:01:00,800 --> 00:01:05,790
+So, we have five times one object: ten to
+the power of zero.
+
+14
+00:01:05,790 --> 00:01:09,330
+Plus seven tens: seven times ten to the power
+of one.
+
+15
+00:01:09,330 --> 00:01:13,320
+Plus three hundred, which is three times ten
+to the power of two.
+
+16
+00:01:13,320 --> 00:01:19,140
+If you add that, you get to 375, not surprising
+at all, but that what we mean when we say
+
+17
+00:01:19,140 --> 00:01:20,650
+375 decimal.
+
+18
+00:01:20,650 --> 00:01:24,260
+Now, let's look at 125 octal, for example.
+
+19
+00:01:24,260 --> 00:01:30,900
+Once again, each digit here has its own weight,
+its own amount of objects that it represents.
+
+20
+00:01:30,900 --> 00:01:35,380
+So, the ones digits represent a single object
+here as well.
+
+21
+00:01:35,380 --> 00:01:39,210
+The ten digits represent a group of eight,
+right?
+
+22
+00:01:39,210 --> 00:01:49,710
+And the hundredth digits represent eight eighths
+or eight octal tens, which means 64 objects.
+
+23
+00:01:49,710 --> 00:01:52,530
+Once again, let's write it as powers of eight.
+
+24
+00:01:52,530 --> 00:01:57,620
+So, sixty four is eight to the power of two,
+eight is eight to the power of one, and one
+
+25
+00:01:57,620 --> 00:01:59,200
+is eight to the power of zero.
+
+26
+00:01:59,200 --> 00:02:09,069
+So, 125 octal, we can look at it as the sum
+of: 5 times 1 times 8 to the power of 0, plus
+
+27
+00:02:09,069 --> 00:02:13,159
+2 times 8 to the power of 1, plus 1 times
+8 to the power of 2.
+
+28
+00:02:13,159 --> 00:02:17,000
+If you add them all up, you get 85.
+
+29
+00:02:17,000 --> 00:02:23,939
+Basically, 125 octal represents an amount
+of 85 objects, decimal eighty five by the
+
+30
+00:02:23,939 --> 00:02:25,319
+way.
+
+31
+00:02:25,319 --> 00:02:28,659
+Same thing would work with the binary number
+system.
+
+32
+00:02:28,659 --> 00:02:32,400
+So, again each digit has its own weight, right?
+
+33
+00:02:32,400 --> 00:02:40,120
+The ones digit is 1, the tens digit is 2,
+the hundreds digit is 4 and the fourth digit,
+
+34
+00:02:40,120 --> 00:02:42,459
+the thousandth digit, represents an amount
+of eight.
+
+35
+00:02:42,459 --> 00:02:47,799
+Again, as powers of 2 to the 0, 2 to the 1,
+2 to the 2, and 2 to the 3.
+
+36
+00:02:47,799 --> 00:02:53,299
+And the sum would then be 1 times 2 to the
+zero, plus 1 times 2 to the 1, plus 0 times
+
+37
+00:02:53,299 --> 00:02:57,459
+2 squared, and 1 times 2 to the three.
+
+38
+00:02:57,459 --> 00:02:59,459
+You add them, you'll get eleven.
+
+39
+00:02:59,459 --> 00:03:07,599
+So, 1011 binary is equivalent, represents,
+11 objects, 11 decimal, right?
+
+40
+00:03:07,599 --> 00:03:11,169
+Same thing for hexadecimal 3b2.
+
+41
+00:03:11,169 --> 00:03:17,139
+Each digit has its own weight: 16 to the 0,
+16 to the 1, 16 to the 2, and then when you
+
+42
+00:03:17,139 --> 00:03:23,129
+add it up, you get 2 times 16 to the 0, 11
+times 16 to the 1, right?
+
+43
+00:03:23,129 --> 00:03:26,339
+B. is one after the A: A is ten, B. is eleven.
+
+44
+00:03:26,339 --> 00:03:31,219
+So, 11 times 6 into the 1 to 3 times 16 squared.
+
+45
+00:03:31,219 --> 00:03:34,239
+All together it adds up to 946.
+
+46
+00:03:34,239 --> 00:03:42,349
+If you look in a general form, you look at
+the number An to a 0, like you have n. plus
+
+47
+00:03:42,349 --> 00:03:43,419
+1 digits here.
+
+48
+00:03:43,419 --> 00:03:49,820
+In the number system, base B., each digit
+would have its own weight: b. to the 0, b.
+
+49
+00:03:49,820 --> 00:03:55,150
+to the power of 1, b. to the power of 2, up
+to b. to the power of N. And this number,
+
+50
+00:03:55,150 --> 00:04:02,790
+if you add the digits with their corresponding
+weight, you'll have the formula: A0 times
+
+51
+00:04:02,790 --> 00:04:07,969
+B. to the power of 0, plus A1 times b to the
+power of 1, and so on up to An times B. to
+
+52
+00:04:07,969 --> 00:04:08,969
+the power of N.
+
+53
+00:04:08,969 --> 00:04:14,409
+If you use this technique, you'll be able
+to figure out what’s the decimal value that
+
+54
+00:04:14,409 --> 00:04:17,350
+is represented, in this case a base B. number.
+

@@ -1,0 +1,91 @@
+1
+00:00:00,630 --> 00:00:05,070
+The next aspect of cache design we will look
+at is the write policy.
+
+2
+00:00:05,070 --> 00:00:10,880
+Though cache policy has some impact on temporal
+locality, it is primarily done to synchronize
+
+3
+00:00:10,880 --> 00:00:13,530
+the data in the cache with that in main memory.
+
+4
+00:00:13,530 --> 00:00:19,241
+For example, when we have a store instruction,
+do we write the data in the cache only, in
+
+5
+00:00:19,241 --> 00:00:22,270
+the D RAM only, or in both?
+
+6
+00:00:22,270 --> 00:00:27,220
+The decision on which to select depends on
+the bandwidth limitations of the memory, the
+
+7
+00:00:27,220 --> 00:00:31,869
+amount of energy it takes to write to memory,
+and who else needs the data.
+
+8
+00:00:31,869 --> 00:00:37,520
+For example, if we have a processor for a
+low-power device like a smartphone.
+
+9
+00:00:37,520 --> 00:00:42,420
+Its memory is likely to have limited bandwidth,
+so it may take a lot of time and energy to
+
+10
+00:00:42,420 --> 00:00:45,530
+always write to the D RAM for every store
+instruction.
+
+11
+00:00:45,530 --> 00:00:51,740
+However, if the data that we are writing needs
+to be used by a co-processor like a graphics
+
+12
+00:00:51,740 --> 00:00:57,050
+processor, then it is best to have it in D
+RAM where the co-processor can access it.
+
+13
+00:00:57,050 --> 00:01:03,070
+There are two common write policies: write-through
+and write-back.
+
+14
+00:01:03,070 --> 00:01:08,200
+The basic idea of write-through is to write
+the data both to cache and the D RAM on a
+
+15
+00:01:08,200 --> 00:01:09,340
+store instruction.
+
+16
+00:01:09,340 --> 00:01:15,700
+This keeps both the cache and D RAM synchronized
+but consumes more energy.
+
+17
+00:01:15,700 --> 00:01:21,130
+In write-back cache, the data is written to
+the cache only on a store instruction.
+
+18
+00:01:21,130 --> 00:01:26,140
+The data is not written into the D RAM until
+the cache block has to be evicted according
+
+19
+00:01:26,140 --> 00:01:27,419
+to its replacement policy.
+

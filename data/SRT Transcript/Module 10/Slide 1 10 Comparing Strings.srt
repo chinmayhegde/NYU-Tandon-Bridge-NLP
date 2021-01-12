@@ -1,0 +1,154 @@
+0:00:00.700,0:00:06.350
+Ok so we know how to initialize how to concatenate
+how to read strings from the user. We can
+
+0:00:06.350,0:00:13.349
+access specific characters using the indexing
+system syntax we can slice out a substring
+
+0:00:13.349,0:00:19.190
+we can figure out the length. Let's see how
+we can compare strings. So obivously we can
+
+0:00:19.190,0:00:23.950
+use a double equal signs in order to figure
+out if two strings are equal to one another
+
+0:00:23.950,0:00:30.790
+or not equal to one another. But how about
+the less than. Can we also try and find whether
+
+0:00:30.790,0:00:36.860
+one string is less than the other? For example
+if we have str one is A B C and str two is
+
+0:00:36.860,0:00:44.610
+D E. Can we do something like if str one is
+less than str two? For example in this case
+
+0:00:44.610,0:00:49.570
+we’ll print that str one is smaller than
+str two otherwise we’ll print that str one
+
+0:00:49.570,0:00:55.190
+is not smaller than str two. What do you think
+it would happen if we try to execute these
+
+0:00:55.190,0:01:03.680
+few lines of code? So one option it would
+figure out or let’s say first start in the
+
+0:01:03.680,0:01:11.400
+second option. So one way is that that could
+be a compilation error. The compiler won’t
+
+0:01:11.400,0:01:22.469
+approve comparing strings with less than operator.
+Another option is that that would be legal
+
+0:01:22.469,0:01:29.959
+expression in C++ but then if so what do you
+think it would happen? Does str one is smaller
+
+0:01:29.959,0:01:37.090
+is less than str two? Is ABC smaller than
+DE? So let me first tell you that it is not
+
+0:01:37.090,0:01:42.719
+a compilation error. It is a legal expression
+in C++ it is a legal a Boolean expression
+
+0:01:42.719,0:01:49.850
+actually in C++. But then when we talked about
+the less than operator we compared integers
+
+0:01:49.850,0:01:57.070
+and doubles. I didn’t explain too much it
+was kind of intuitive if four is less than
+
+0:01:57.070,0:02:04.529
+seven or five point five is less than six
+point seven. But in case of strings it is
+
+0:02:04.529,0:02:13.660
+not very straight forward. Is ABC less than
+DE? How do we compare strings? By their length?
+
+0:02:13.660,0:02:20.750
+ABC is a three length string or DE is a two
+lengths strings so in this case ABC is not
+
+0:02:20.750,0:02:26.500
+less than DE. Three is not less than two.
+But then if we try to execute this code we’ll
+
+0:02:26.500,0:02:35.900
+see that it would print that ABC is smaller
+than DE. In other words ABC is less than DE.
+
+0:02:35.900,0:02:41.989
+So it is not comparing the strings by their
+length it has other criteria in order to determine
+
+0:02:41.989,0:02:48.480
+whether one string is less than the other.
+And the criteria C++ chooses and it is common
+
+0:02:48.480,0:02:55.700
+in other languages as well not only C++. The
+criteria by which we compare strings is by
+
+0:02:55.700,0:03:02.480
+a lexicographical order. Other words in alphabetical
+order what string comes before that in let’s
+
+0:03:02.480,0:03:10.590
+say in a dictionary. So obviously ABC is before
+DE therefore ABC is less than DE. So in this
+
+0:03:10.590,0:03:19.099
+case str one was less than str two that was
+true therefore it was it printed that str
+
+0:03:19.099,0:03:25.999
+one is smaller than str two. So when comparing
+strings we can use the less than the greater
+
+0:03:25.999,0:03:33.390
+than less or equal to greater or equal to
+operators. And it would do some kind of lexicographical
+
+0:03:33.390,0:03:40.439
+ordering or in alphabetical ordering. In more
+detal the way we compare the way C++ compares
+
+0:03:40.439,0:03:50.810
+strings let’s say we have two strings ABCDEFG
+and ABCDXYZ. So when C++ tries to compare
+
+0:03:50.810,0:03:57.750
+these strings it kind of iterates over the
+strings simultaneously and figures out the
+
+0:03:57.750,0:04:03.139
+first location where they differ from one
+another. So first A and A are equal it goes
+
+0:04:03.139,0:04:09.659
+forward to B and B C and C D and D and then
+the first position where they differ from
+
+0:04:09.659,0:04:18.030
+one another is E and X. That’s how or that’s
+the point where C++ determines whether one
+
+0:04:18.030,0:04:22.740
+of them is less than the other and the criteria
+is basically comparing the ASCII value of
+
+0:04:22.740,0:04:31.190
+E and X. In this case E is less than X so
+the entire string ABCDEFG is less than the
+
+0:04:31.190,0:04:33.900
+entire string ABCDXYZ.

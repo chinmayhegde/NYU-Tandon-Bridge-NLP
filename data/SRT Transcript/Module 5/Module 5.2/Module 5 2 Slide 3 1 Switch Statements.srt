@@ -1,0 +1,156 @@
+0:00:00.530,0:00:06.010
+We have a few branching statements: we have
+a one way if, a two way if, multi-way if.
+
+0:00:06.010,0:00:13.280
+I want to show you another kind of a branching
+statement; it's also a multi-way branching.
+
+0:00:13.280,0:00:18.090
+It's called a switch statement and it goes
+something like that.
+
+0:00:18.090,0:00:23.070
+Again, let me first talk about the syntax
+the rules of how to create a valid switch
+
+0:00:23.070,0:00:31.140
+expression, and then let's see how the compiler
+basically interprets and executes this kind
+
+0:00:31.140,0:00:35.010
+of statements, what’s the semantics of this
+expression.
+
+0:00:35.010,0:00:39.859
+So let's start with the syntax we have our
+program up to the switch statement, then we
+
+0:00:39.859,0:00:45.420
+have the switch keyword and then we have a
+numeric expression basically an arithmetic
+
+0:00:45.420,0:00:48.710
+expression enclosed in parenthesis.
+
+0:00:48.710,0:00:59.670
+Then, we have a compound expression basically
+a body enclosed in the curly braces.
+
+0:00:59.670,0:01:07.560
+That has a few case clauses and the default
+clause; each case clause starts with the keyword
+
+0:01:07.560,0:01:15.640
+case followed by a constant value and colons,
+and then shifted another tab to the right
+
+0:01:15.640,0:01:23.649
+we have the statements that are condition
+followed by a break and the semi-colon ending
+
+0:01:23.649,0:01:25.120
+this case.
+
+0:01:25.120,0:01:30.640
+And then another case, another constant colon,
+body break, and so on.
+
+0:01:30.640,0:01:37.130
+We can have as many cases as we want and then
+finally would come the word default and that
+
+0:01:37.130,0:01:44.509
+again some statements pushed one tab to the
+right, with the body and the break.
+
+0:01:44.509,0:01:52.600
+You can see that here we are kind of conditioning
+execution of some statements but we're not
+
+0:01:52.600,0:02:00.259
+grouping them in the curly braces, we start
+their group with colons and a group with a
+
+0:02:00.259,0:02:01.259
+break.
+
+0:02:01.259,0:02:08.659
+This is how we kind of specify the instructions
+that are conditions.
+
+0:02:08.659,0:02:13.209
+So this is the syntax, the semantics goes
+something like that.
+
+0:02:13.209,0:02:19.659
+When the execution reaches a switch statement,
+first the numeric expression is evaluated.
+
+0:02:19.659,0:02:25.170
+A numeric expression is not a Boolean expression;
+its value is not true or false, it's a numeric
+
+0:02:25.170,0:02:31.030
+value to be seven six point five or whatever.
+
+0:02:31.030,0:02:40.180
+So we have a numeric value, and then this
+value is compared to the constants that come
+
+0:02:40.180,0:02:43.250
+in the different cases.
+
+0:02:43.250,0:02:50.459
+So first the numeric expression value is compared
+to constant one, if they're equal if the numeric
+
+0:02:50.459,0:02:57.210
+expression is the value of constant one, then
+these expressions would be executed.
+
+0:02:57.210,0:03:02.629
+The break would break out of the switch statement
+and the problem would continue.
+
+0:03:02.629,0:03:07.080
+But if the numeric expression is not equal
+to constant one, the numeric expression is
+
+0:03:07.080,0:03:13.050
+compared to constant two if it is equal to
+constant two this statements of the body would
+
+0:03:13.050,0:03:18.260
+be executed break would break us out of the
+switch statement and so on.
+
+0:03:18.260,0:03:24.879
+So the numeric expression would be compared
+to the different constants one after the other.
+
+0:03:24.879,0:03:30.990
+If none of the constants are equal to the
+numeric expression, then the default body
+
+0:03:30.990,0:03:35.280
+would be executed break would break us out
+of the switch statement.
+
+0:03:35.280,0:03:42.280
+So you can see that we have a muti-choice
+here depending on the value of the numeric
+
+0:03:42.280,0:03:45.760
+expression and the values of the constants.
+
+0:03:45.760,0:03:51.360
+One of them would be executed; either the
+constant one body, or the constant two body,
+
+0:03:51.360,0:03:54.400
+or maybe the default body would be excellent.
+
+0:03:54.400,0:04:00.560
+So it's a multi choice branching statement
+that we get here out of the switch.

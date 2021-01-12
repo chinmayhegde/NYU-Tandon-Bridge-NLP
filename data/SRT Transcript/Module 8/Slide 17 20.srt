@@ -1,0 +1,27 @@
+0:00:00.550,0:00:06.640
+Now that we have the definition of what k
+combinations are let’s try to write a program
+
+0:00:06.640,0:00:11.400
+that reads from the user two positive integers
+n and k.
+
+0:00:11.400,0:00:13.831
+Assuming that k is not greater than n.
+
+0:00:13.831,0:00:16.939
+And it would print the value of n choose k.
+
+0:00:16.939,0:00:19.680
+So an execution can look something like that.
+
+0:00:19.680,0:00:23.159
+First we would ask the user to enter n and
+k.
+
+0:00:23.159,0:00:27.789
+The user can say five and three for example
+and then the program would respond by saying
+
+0:00:27.789,0:00:30.129
+five choose three is ten.

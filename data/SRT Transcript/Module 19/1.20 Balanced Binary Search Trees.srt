@@ -1,0 +1,110 @@
+1
+00:00:00,370 --> 00:00:04,120
+The solution of course is a balanced binary
+search tree.
+
+2
+00:00:04,120 --> 00:00:10,030
+And the balanced binary search tree guarantees
+that we use Log N or that we have Log N search
+
+3
+00:00:10,030 --> 00:00:11,030
+time.
+
+4
+00:00:11,030 --> 00:00:15,420
+To do that we need to do some additional work
+and insertions and removals.
+
+5
+00:00:15,420 --> 00:00:19,980
+The d binary search tree does protect the
+big O Log N insertion time.
+
+6
+00:00:19,980 --> 00:00:26,660
+Unfortunately as a result, insertions and
+removals do take a little bit longer, but
+
+7
+00:00:26,660 --> 00:00:29,660
+they're still going to be close to Log N.
+
+8
+00:00:29,660 --> 00:00:35,850
+So, we're not changing this to a linear insertion
+like we would have with a linked list or within
+
+9
+00:00:35,850 --> 00:00:37,640
+array; god help us.
+
+10
+00:00:37,640 --> 00:00:43,760
+But it does take longer than big theta Log
+N so it's still going to be big O of Log of
+
+11
+00:00:43,760 --> 00:00:48,460
+N, but it's actually only something closer
+to like two Log of N so the theta to does
+
+12
+00:00:48,460 --> 00:00:52,249
+change but the big O pretty much stays the
+same.
+
+13
+00:00:52,249 --> 00:00:55,489
+There's two types of very popular balance
+binary search trees.
+
+14
+00:00:55,489 --> 00:00:58,999
+There's one that's really easy to understand
+but the performance isn't all that great,
+
+15
+00:00:58,999 --> 00:01:03,039
+called an AVL tree, and then there's one that's
+really hard to understand the but the performance
+
+16
+00:01:03,039 --> 00:01:05,800
+is fabulous and that's called a red-black
+tree.
+
+17
+00:01:05,800 --> 00:01:11,860
+If you were create a tree, if you were to
+use a tree inside STL.
+
+18
+00:01:11,860 --> 00:01:16,480
+So, the STL actually does have two trees:
+one is called a set and the other is called
+
+19
+00:01:16,480 --> 00:01:17,800
+a map.
+
+20
+00:01:17,800 --> 00:01:21,410
+And of course, there are multi-multi-mapped
+trees in case we're interested in that.
+
+21
+00:01:21,410 --> 00:01:27,200
+But the STL set and the STL map are actually
+implemented as red-black trees.
+
+22
+00:01:27,200 --> 00:01:32,800
+So here we actually have something that exists
+in real life or in our real code life at least
+
+23
+00:01:32,800 --> 00:01:34,000
+that we're that we're studying at this point.
+

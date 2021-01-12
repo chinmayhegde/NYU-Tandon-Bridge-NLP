@@ -1,0 +1,15 @@
+1
+00:00:00,740 --> 00:00:07,850
+Remember, by default, the CPU goes to PC+4
+for non-branch and non-jump instructions.
+
+2
+00:00:07,850 --> 00:00:12,620
+Therefore, there is no need to use a jump
+instruction to do PC+4.
+
+3
+00:00:12,620 --> 00:00:17,890
+Jumps and branch are thus NEVER used to go
+to the next instruction in the code sequence.
+

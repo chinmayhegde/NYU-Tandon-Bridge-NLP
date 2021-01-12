@@ -1,0 +1,64 @@
+1
+00:00:00,510 --> 00:00:04,430
+Let us discuss each execution step in detail.
+
+2
+00:00:04,430 --> 00:00:09,330
+In the instruction fetch step, the processor
+uses the program counter to access the memory
+
+3
+00:00:09,330 --> 00:00:12,660
+and get the instruction to execute.
+
+4
+00:00:12,660 --> 00:00:20,651
+The syntax M and PC in brackets indicates
+a memory access where PC is the address is
+
+5
+00:00:20,651 --> 00:00:22,480
+used for the access.
+
+6
+00:00:22,480 --> 00:00:27,550
+When the memory returns the instruction, the
+CPU puts it in a special register known as
+
+7
+00:00:27,550 --> 00:00:30,480
+the instruction register, or IR.
+
+8
+00:00:30,480 --> 00:00:36,129
+This register always holds the 32 bits of
+the instruction being executed.
+
+9
+00:00:36,129 --> 00:00:40,370
+The last part of the instruction fetch is
+to update the program counter to point to
+
+10
+00:00:40,370 --> 00:00:41,999
+the next instruction.
+
+11
+00:00:41,999 --> 00:00:45,789
+This is done by adding four to the current
+program counter.
+
+12
+00:00:45,789 --> 00:00:50,629
+The value four is used to increment the program
+counter because each instruction is 32 bits
+
+13
+00:00:50,629 --> 00:00:51,850
+or four bytes.
+
+14
+00:00:51,850 --> 00:00:57,909
+Therefore, the CPU has to jump four bytes
+of address space to go point to the next instruction.
+

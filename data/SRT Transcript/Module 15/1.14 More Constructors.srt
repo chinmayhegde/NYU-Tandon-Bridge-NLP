@@ -1,0 +1,86 @@
+1
+00:00:00,560 --> 00:00:04,110
+So we can also have constructors that take,
+for example three integers.
+
+2
+00:00:04,110 --> 00:00:08,090
+We might have one that takes a day month in
+year, sets those values.
+
+3
+00:00:08,090 --> 00:00:14,370
+We can also have a constructor that takes
+just one of the values and constructs it based
+
+4
+00:00:14,370 --> 00:00:19,330
+on the Unix epoch, in case you're interested
+in constructing it based on that.
+
+5
+00:00:19,330 --> 00:00:26,460
+But what we can do now is inside main, we
+can now create a date with those three variables
+
+6
+00:00:26,460 --> 00:00:28,630
+so that our code is a little bit easier.
+
+7
+00:00:28,630 --> 00:00:34,110
+So if you remember back couple slides ago,
+the previous code, we set the date to August
+
+8
+00:00:34,110 --> 00:00:36,180
+sixth one thousand nine hundred one.
+
+9
+00:00:36,180 --> 00:00:40,680
+We had to create the date first and then set
+each of the three individual values.
+
+10
+00:00:40,680 --> 00:00:45,260
+Now we can take those four lines of code and
+compact them down into one/ where we create
+
+11
+00:00:45,260 --> 00:00:48,000
+the date and set the values all at the same
+time.
+
+12
+00:00:48,000 --> 00:00:53,610
+You can create as many constructors as you
+like; each has to have a unique set of parameters.
+
+13
+00:00:53,610 --> 00:00:59,430
+And you have to remember that even though
+we have a default constructor, only one constructor
+
+14
+00:00:59,430 --> 00:01:01,030
+will ever be called.
+
+15
+00:01:01,030 --> 00:01:06,719
+So whichever constructor is chosen to be called,
+that's the only one that will ever be called;
+
+16
+00:01:06,719 --> 00:01:10,810
+it's not like one is going to call the default
+constructor and then go further on to do some
+
+17
+00:01:10,810 --> 00:01:12,420
+extra work.
+
+18
+00:01:12,420 --> 00:01:15,490
+Construction only happens once and we only
+call one constructor.
+

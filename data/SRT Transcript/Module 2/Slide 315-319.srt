@@ -1,0 +1,123 @@
+1
+00:00:00,520 --> 00:00:04,060
+Okay, now that we know how to add numbers
+in different number systems, let's see how
+
+2
+00:00:04,060 --> 00:00:07,290
+we can subtract numbers in a different number
+system.
+
+3
+00:00:07,290 --> 00:00:14,590
+Again, let's start with decimal for practice,
+and then try to generalize it to other number
+
+4
+00:00:14,590 --> 00:00:15,590
+systems as well.
+
+5
+00:00:15,590 --> 00:00:20,670
+So, let's try to subtract 427 minus 192 decimal.
+
+6
+00:00:20,670 --> 00:00:23,430
+So, we start with the ones right.
+
+7
+00:00:23,430 --> 00:00:30,590
+7 minus 2 that would give us a 5, then we
+try to subtract 2 minus 9 and that's a problem
+
+8
+00:00:30,590 --> 00:00:39,430
+because we can’t subtract 9 from 2, so we
+would need to borrow an additional 10 tens,
+
+9
+00:00:39,430 --> 00:00:41,550
+actually in this case.
+
+10
+00:00:41,550 --> 00:00:52,500
+So, instead of having 2 tens, we'll have 12
+tens, and that by splitting the hundred, the
+
+11
+00:00:52,500 --> 00:00:57,350
+4 hundreds into 3 hundred and 10 tens.
+
+12
+00:00:57,350 --> 00:01:03,230
+That would leave us with 3 hundred and 10
+tens additional 2 tens that would give a 312
+
+13
+00:01:03,230 --> 00:01:04,230
+ten.
+
+14
+00:01:04,230 --> 00:01:13,070
+So, instead of saying 42 tens or 420, we say
+312 tens.
+
+15
+00:01:13,070 --> 00:01:18,810
+Then we have these 12 tens minus 9 that would
+give us a 3 and 300 minus 1, that would give
+
+16
+00:01:18,810 --> 00:01:19,810
+us a 2.
+
+17
+00:01:19,810 --> 00:01:25,630
+So 427 minus 192 is 235.
+
+18
+00:01:25,630 --> 00:01:28,289
+Let's try doing the same for the octal number
+system.
+
+19
+00:01:28,289 --> 00:01:31,799
+Let’s try to subtract 351 from 536.
+
+20
+00:01:31,799 --> 00:01:39,289
+Same thing, we first subtract 1 from the 6
+that would give us a 5, then when we try to
+
+21
+00:01:39,289 --> 00:01:43,170
+subtract 5 from 3, that is not possible.
+
+22
+00:01:43,170 --> 00:01:49,049
+So, we need to split one of the hundreds,
+one of the 5 hundred into tens.
+
+23
+00:01:49,049 --> 00:01:58,450
+So, instead of having 530, we would have 4
+hundred and 13 ten.
+
+24
+00:01:58,450 --> 00:02:05,090
+So therefore, we have 13 tens that we need
+to take 5 out of them.
+
+25
+00:02:05,090 --> 00:02:14,320
+So, let's count back out of thirteen, so it's
+twelve, eleven, ten, seven, six.
+
+26
+00:02:14,320 --> 00:02:19,310
+So, we have 6 there, and 4 minus 3 is 1.
+
+27
+00:02:19,310 --> 00:02:24,870
+So, 536 minus 351 is 165 octal.
+

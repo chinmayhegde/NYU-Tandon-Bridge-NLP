@@ -1,0 +1,59 @@
+0:00:00.680,0:00:08.280
+Ok let’s then try to use this while statements
+this iterative capability that we just talked
+
+0:00:08.280,0:00:12.480
+about in order to solve our counting program.
+
+0:00:12.480,0:00:22.039
+Let’s try and think how we can use the capability
+of repeating some statements over and over
+
+0:00:22.039,0:00:27.110
+in order to print numbers let’s say from
+1 to N.
+
+0:00:27.110,0:00:37.040
+So we can maybe maintain some kind of a variable
+a counter that would be initialized to one
+
+0:00:37.040,0:00:39.590
+printed and incremented.
+
+0:00:39.590,0:00:40.730
+Printed and incremented.
+
+0:00:40.730,0:00:47.530
+Something like that we will start counter
+as one and we will print one and increment
+
+0:00:47.530,0:00:48.530
+counter to two.
+
+0:00:48.530,0:00:51.500
+We will print two and we will increment counter
+to three.
+
+0:00:51.500,0:00:53.920
+Will print three and increment counter to
+four.
+
+0:00:53.920,0:00:59.660
+So basically we are repeating two statements
+here print the value of counter and increment
+
+0:00:59.660,0:01:00.660
+it.
+
+0:01:00.660,0:01:01.809
+Print the value of counter and increment it.
+
+0:01:01.809,0:01:09.460
+If we do it a right amount of times we will
+basically print numbers from 1 to wherever
+
+0:01:09.460,0:01:10.960
+we decide to go.
+
+0:01:10.960,0:01:14.040
+Let’s implement it using C code now.

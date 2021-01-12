@@ -1,0 +1,206 @@
+0:00:00.340,0:00:06.160
+So let’s take a look at this program here
+that we have same program that we had before.
+
+0:00:06.160,0:00:12.920
+And let’s execute or trace this execution
+using the runtime stack model. So assuming
+
+0:00:12.920,0:00:22.000
+you have your memory here as we do a sequence
+of bytes a sequence of data. Let me show you
+
+0:00:22.000,0:00:28.070
+how the runtime stack model works for executing
+this program. I believe you will get the hang
+
+0:00:28.070,0:00:34.100
+of it as we go and you will be able to apply
+it to other executions as well. It would help
+
+0:00:34.100,0:00:43.020
+you predict exactly what the output or how
+programs basically behave. So ok so we have
+
+0:00:43.020,0:00:50.940
+our main program when we start executing the
+main we first have all our local variables
+
+0:00:50.940,0:00:58.079
+stored in the frame of the main function.
+In this case we have n k kcomb nfact k fact
+
+0:00:58.079,0:01:04.759
+n minus k fact. All of these variables we
+declared at the head over our main. So we
+
+0:01:04.759,0:01:12.520
+have a place for all of these variables. You
+will see that the runtime stack helps us maintain
+
+0:01:12.520,0:01:23.349
+the variables and manage the variables that
+are accessible in each in each position we
+
+0:01:23.349,0:01:28.979
+are in the code. In the case of main these
+are the variables. Then for example let’s
+
+0:01:28.979,0:01:35.610
+start executing. So line four would print
+please enter n and k. Then we get to line
+
+0:01:35.610,0:01:42.890
+five cin n and k let’s assume the user enters
+three and five. So n would be equal to five.
+
+0:01:42.890,0:01:49.919
+K would be equal to three. Then line six we
+have a call we have an assignment basically
+
+0:01:49.919,0:01:58.590
+n fact equals the factorial of n. And in an
+assignment expression we first evaluate the
+
+0:01:58.590,0:02:07.509
+right hand side and then the result would
+be stored in the left hand side of the assignment.
+
+0:02:07.509,0:02:16.270
+So basically it is a compound expression that
+has two steps here. An evaluation on the right
+
+0:02:16.270,0:02:22.400
+hand side and then an assignment to the left
+hand side. So when we are calling the factorial
+
+0:02:22.400,0:02:28.920
+of n when we have a function call let me show
+you what happens in our runtime stack model.
+
+0:02:28.920,0:02:34.450
+So there would be a few steps each time we
+call a function. First time is creating a
+
+0:02:34.450,0:02:41.500
+frame for the factorial function. The frame
+would include the parameters the function
+
+0:02:41.500,0:02:48.459
+has what is inside the parentheses in this
+case num. The local variables factRes and
+
+0:02:48.459,0:02:56.310
+I. And one additional data which is the return
+address right. We said that the function when
+
+0:02:56.310,0:03:00.230
+we call function we always go to the same
+place but when we return each time we need
+
+0:03:00.230,0:03:07.140
+to return to a different position in our code.
+So we need to store we need to keep where
+
+0:03:07.140,0:03:13.140
+we want to return when this function ends.
+So that’s why in addition to the data the
+
+0:03:13.140,0:03:22.480
+function uses it also stores where to return
+when the calculation is done. So first step
+
+0:03:22.480,0:03:28.150
+when calling a function is creating the frame
+for the function in case of factorial we have
+
+0:03:28.150,0:03:36.099
+num as our argument. Local variables factRes
+and i. And then the return address. Step two
+
+0:03:36.099,0:03:43.780
+would be to evaluate the arguments in our
+calling environment. In this case n. So when
+
+0:03:43.780,0:03:49.811
+we are in main n is five we are calling factorial
+with a value of five. So step two is evaluate
+
+0:03:49.811,0:03:56.840
+the argument. Step three is associating the
+argument with the parameters. So in this case
+
+0:03:56.840,0:04:07.189
+associating num the factorial num with the
+argument value five. Also updating the return
+
+0:04:07.189,0:04:15.109
+address to be six to the assignment here.
+After we created the frame evaluated the arguments
+
+0:04:15.109,0:04:21.239
+associated the parameters with the argument
+values update the return address. Step four
+
+0:04:21.239,0:04:28.650
+would be to jump to the beginning of the function
+to execute the code over there. So in this
+
+0:04:28.650,0:04:35.819
+case we will set fact Res to one. By the way
+when we are inside the function block the
+
+0:04:35.819,0:04:43.830
+only variables we can access are the function’s
+frame variables. We can access the factorial
+
+0:04:43.830,0:04:49.890
+variables we cannot access the main variables
+at this position. So the factorial body cannot
+
+0:04:49.890,0:04:57.970
+access the main n k and so on. Ok so factRes
+is initialized to one and then we start iterating
+
+0:04:57.970,0:05:05.639
+so initially I is one. Then we multiply factRes
+by one then I increases to two. We multiply
+
+0:05:05.639,0:05:11.759
+factRes by two. I advances to three we multiply
+that by three. So factRes is six and we keep
+
+0:05:11.759,0:05:19.800
+on doing that until factRes holds the one
+hundred and twenty or when we are done iterating
+
+0:05:19.800,0:05:28.360
+over the entire range from one to num. In
+this case five. And when we come to the return
+
+0:05:28.360,0:05:36.310
+statement return factRes. So that’s a new
+statement. Let me show you how this statement
+
+0:05:36.310,0:05:43.509
+is evaluated in our runtime stack model. So
+we first evaluate so again a few steps here.
+
+0:05:43.509,0:05:49.660
+First we evaluate the return value the factRes
+in this case one hundred and twenty. Then
+
+0:05:49.660,0:05:57.659
+we figure out where we need to return to.
+That is address six. And then we pop out the
+
+0:05:57.659,0:06:04.430
+current frame and jump with a return value
+in this case one hundred and twenty back to
+
+0:06:04.430,0:06:11.550
+line six. So we assign n fact with the return
+value with one hundred and twenty. So n fact
+
+0:06:11.550,0:06:12.530
+would get one hundred and twenty.

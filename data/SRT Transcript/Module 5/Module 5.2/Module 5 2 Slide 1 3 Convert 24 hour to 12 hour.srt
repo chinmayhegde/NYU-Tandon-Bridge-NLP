@@ -1,0 +1,134 @@
+0:00:00.599,0:00:05.210
+Let's try to write a program now that reads
+from the user a time, entered in a twenty
+
+0:00:05.210,0:00:10.550
+four hour format and then the program would
+print the equivalent time in a twelve hour
+
+0:00:10.550,0:00:11.550
+format.
+
+0:00:11.550,0:00:16.650
+So for example the user would be prompted
+to enter a time in twenty four hour form,
+
+0:00:16.650,0:00:19.680
+that it would they would say I don't know
+fifteen
+
+0:00:19.680,0:00:25.950
+colon thirty seven, and for that input the
+program would respond by saying that fifteen
+
+0:00:25.950,0:00:29.690
+thirty seven is three thirty seven PM.
+
+0:00:29.690,0:00:37.069
+So, basically we're converting time in a twenty-four
+hour format to twelve-hour format adding the
+
+0:00:37.069,0:00:39.489
+AM PM and stuff like that.
+
+0:00:39.489,0:00:48.329
+I'm sure you're familiar with these two formats,
+but let's take a second look here how these
+
+0:00:48.329,0:00:49.329
+formats basically work.
+
+0:00:49.329,0:00:56.780
+So in a twenty four hour format, we have all
+the hours going from running from zero to
+
+0:00:56.780,0:00:58.399
+twenty three.
+
+0:00:58.399,0:01:04.780
+The first twelve are considered to be A.M.,
+so zero to eleven are considered to be AM.
+
+0:01:04.780,0:01:12.920
+Where twelve to twenty three are obviously
+considered to be PM, so that's the period
+
+0:01:12.920,0:01:15.610
+value.
+
+0:01:15.610,0:01:22.400
+Regarding the twelve hour format an hour or
+so in the first half of the day the time basically
+
+0:01:22.400,0:01:29.440
+remains, so one in the twenty four hour format
+is one AM, two is two am, three is three am,
+
+0:01:29.440,0:01:32.729
+and so on up to eleven which is eleven am.
+
+0:01:32.729,0:01:40.149
+Where in the second half of the day then the
+time doesn't really stay the same, we kind
+
+0:01:40.149,0:01:49.479
+of shift it twelve hours back so thirteen
+is considered to be one pm, fourteen is considered
+
+0:01:49.479,0:01:55.010
+to be fourteen minus twelve which is two pm,
+fifteen is three pm and so on up to twenty
+
+0:01:55.010,0:01:57.210
+three which is eleven pm.
+
+0:01:57.210,0:02:02.229
+So it seems that the first half of the day
+the hour basically stays the same and the
+
+0:02:02.229,0:02:09.590
+second half of the day the hour is shifted
+back twelve hours, twelve numbers before.
+
+0:02:09.590,0:02:20.900
+That's almost true, there are two exceptions
+here, in the first half of the day, zero is
+
+0:02:20.900,0:02:22.350
+not zero A.M.
+
+0:02:22.350,0:02:28.200
+So, zero doesn't stay the same just as one
+stayed one A.M. and two stayed two AM.
+
+0:02:28.200,0:02:30.300
+Zero is twelve A.M.
+
+0:02:30.300,0:02:41.120
+So it has different behavior here, same thing
+regarding twelve or noon, twelve doesn't become
+
+0:02:41.120,0:02:46.040
+zero P.M. is not shifted back twelve hours.
+
+0:02:46.040,0:02:52.510
+Twelve kind of remains twelve P.M., so most
+of the hours in the first half of the day
+
+0:02:52.510,0:02:55.210
+remain the same besides zero.
+
+0:02:55.210,0:03:00.900
+Most of the hours in the second half of the
+day are shifted back twelve hours, besides
+
+0:03:00.900,0:03:01.900
+twelve P.M.
+
+0:03:01.900,0:03:07.340
+So, this is basically how the twenty four
+hour and twelve hour format works.
+
+0:03:07.340,0:03:09.840
+Let's go ahead and implement this program
+now.

@@ -1,0 +1,75 @@
+1
+00:00:00,310 --> 00:00:04,370
+Here we have the MIPS mnemonic code for the
+other high-level code that works whether X
+
+2
+00:00:04,370 --> 00:00:05,549
+or Y is zero.
+
+3
+00:00:05,549 --> 00:00:11,880
+In this code, we also initiate registers R8
+and R9 to hold the accumulator and the loop
+
+4
+00:00:11,880 --> 00:00:12,880
+counter.
+
+5
+00:00:12,880 --> 00:00:15,070
+The next stage is to implement the while loop.
+
+6
+00:00:15,070 --> 00:00:17,990
+For that we use a branch if not equal instruction.
+
+7
+00:00:17,990 --> 00:00:23,470
+If the branch condition is true, we go inside
+the loop to decrement the counter and to add
+
+8
+00:00:23,470 --> 00:00:24,609
+to the accumulator.
+
+9
+00:00:24,609 --> 00:00:29,390
+If the loop condition is false, then we need
+to quit to loop.
+
+10
+00:00:29,390 --> 00:00:33,750
+The way we do that in this case is by using
+the Jump instruction.
+
+11
+00:00:33,750 --> 00:00:37,070
+This allows us to skip the instructions that
+are within the loop.
+
+12
+00:00:37,070 --> 00:00:42,440
+We also see that there is a jump instruction
+after the instructions within the loop.
+
+13
+00:00:42,440 --> 00:00:47,210
+This second jump instruction targets the branch
+if not equal instruction so we can go back
+
+14
+00:00:47,210 --> 00:00:51,390
+and check the condition of the loop before
+we quit the function.
+
+15
+00:00:51,390 --> 00:00:57,600
+The last two instructions are similar to the
+other code as they are responsible for copying
+
+16
+00:00:57,600 --> 00:01:03,489
+the value of the accumulator in the R2 register
+and for returning from the function call.
+

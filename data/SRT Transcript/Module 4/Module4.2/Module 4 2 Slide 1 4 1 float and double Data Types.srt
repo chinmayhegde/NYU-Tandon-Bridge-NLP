@@ -1,0 +1,44 @@
+0:00:00.710,0:00:07.819
+One way of trying to do that is decide that
+if we have let’s 8 bytes that the first
+
+0:00:07.819,0:00:16.800
+4 bytes would be for the integer part and
+the other four bytes would be for the fractional
+
+0:00:16.800,0:00:18.310
+part.
+
+0:00:18.310,0:00:23.970
+And this is what we call like where we put
+decimal point in a fixed position.
+
+0:00:23.970,0:00:27.960
+After four bytes we have fixed position for
+the point.
+
+0:00:27.960,0:00:33.670
+This is not how doubles and float are really
+represented inside the memory.
+
+0:00:33.670,0:00:40.731
+I am not going to get into the details of
+the bits of how to represent floating point
+
+0:00:40.731,0:00:49.320
+numbers you can read in the following link
+some more information about the floating points
+
+0:00:49.320,0:00:53.960
+representation method it is called IEEE 754.
+
+0:00:53.960,0:01:02.890
+But then I would say that the decimal point
+it is not in a fixed position the point can
+
+0:01:02.890,0:01:09.700
+float around inside a bunch of bits that’s
+why it is called the floating point representation
+
+0:01:09.700,0:01:10.200
+method.

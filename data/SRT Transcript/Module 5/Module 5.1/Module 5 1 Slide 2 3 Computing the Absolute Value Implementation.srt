@@ -1,0 +1,306 @@
+0:00:00.070,0:00:02.370
+Okay, so let's implement this program.
+
+0:00:02.370,0:00:08.919
+Let's first prompt the user to enter an integer
+so C-out: “please enter an integer.”
+
+0:00:08.919,0:00:10.990
+And let's also break the line here.
+
+0:00:10.990,0:00:16.859
+Then, let's read this integer from the user,
+so let's have an integer variable.
+
+0:00:16.859,0:00:21.330
+Let's name it, I don't know, maybe “user
+input,” because this is what the user inputs.
+
+0:00:21.330,0:00:26.570
+So, let's just c-in into this user input variable.
+
+0:00:26.570,0:00:30.980
+And now we need to calculate the absolute
+value of a user input.
+
+0:00:30.980,0:00:36.480
+So, as we said there are two cases: one is
+when the user input is positive, in this case
+
+0:00:36.480,0:00:42.260
+the absolute value just remains whatever the
+input was, and in case the user input is negative,
+
+0:00:42.260,0:00:45.359
+in this case we need to multiply it by a negative
+one.
+
+0:00:45.359,0:00:50.200
+So, let's do something like IF and then that's
+have a Boolean expression here.
+
+0:00:50.200,0:00:56.360
+“User input” is less than zero then; in
+this case we need to multiply “user input”
+
+0:00:56.360,0:00:57.360
+by negative one.
+
+0:00:57.360,0:01:04.059
+So let's do “user input” times negative
+one, and let's set it back into the “user
+
+0:01:04.059,0:01:05.110
+input” variable.
+
+0:01:05.110,0:01:10.159
+So, in this case we're kind of multiplying
+“user input” by negative one and then
+
+0:01:10.159,0:01:13.420
+setting the result back to the variable “user
+input.”
+
+0:01:13.420,0:01:18.880
+So, “user input” basically changes its
+value from its original value to its additive
+
+0:01:18.880,0:01:20.210
+inverse.
+
+0:01:20.210,0:01:24.310
+So this case we have “user input” equals
+“user input times negative one”.
+
+0:01:24.310,0:01:28.940
+And now we can just C- out, in this case,
+the user input value.
+
+0:01:28.940,0:01:30.720
+Let's try to execute it.
+
+0:01:30.720,0:01:35.020
+Please enter an integer: so, if we have negative
+seven, it would a print seven.
+
+0:01:35.020,0:01:39.479
+By the way, it printed the program ended with
+exit code zero right here after the seven
+
+0:01:39.479,0:01:40.790
+because we didn't break the line.
+
+0:01:40.790,0:01:44.229
+So, let's break the line also, it would make
+it appear better.
+
+0:01:44.229,0:01:50.770
+And let's also test a positive value, in this
+case seven and then we get the value seven
+
+0:01:50.770,0:01:51.770
+back.
+
+0:01:51.770,0:01:53.760
+Okay, so it seems to be working fine.
+
+0:01:53.760,0:01:58.490
+I want to improve it in two ways: the first
+one is not a great improvement it’s just
+
+0:01:58.490,0:02:00.340
+a syntactic shortcut here.
+
+0:02:00.340,0:02:05.430
+Where instead of having user input equals
+user input times negative one, we can make
+
+0:02:05.430,0:02:09.990
+it shorter and just have the user input times
+equals negative one.
+
+0:02:09.990,0:02:16.950
+It's a syntactic shortcut of obviating variable
+value by applying some operation on its previous
+
+0:02:16.950,0:02:24.360
+value, in this case user input would be multiplied
+by negative one and set back into the same
+
+0:02:24.360,0:02:28.160
+variable, so the times equals operator does
+that.
+
+0:02:28.160,0:02:34.480
+You can use this shortcut of an operator;
+there is also plus-equal, minus-equals, div-equals
+
+0:02:34.480,0:02:35.700
+and so on.
+
+0:02:35.700,0:02:38.540
+Sometimes it is easier to write it in this
+way.
+
+0:02:38.540,0:02:40.750
+So that's one thing I wanted us to use.
+
+0:02:40.750,0:02:46.210
+The second thing is the output I was expecting
+out of this program was not just to print
+
+0:02:46.210,0:02:50.430
+the absolute value of the input, to a print
+something more of the form like the absolute
+
+0:02:50.430,0:02:55.640
+value of whatever original input was equals
+the absolute value.
+
+0:02:55.640,0:03:02.320
+Not just a seven, but something like the absolute
+value of seven equals seven For that, we should
+
+0:03:02.320,0:03:11.420
+print something like the absolute value of
+something and then another pipe here equals
+
+0:03:11.420,0:03:13.570
+and whatever the absolute value is.
+
+0:03:13.570,0:03:19.750
+So this is kind of the format I'm expecting
+here, like pipe symbol and then the original
+
+0:03:19.750,0:03:23.930
+input and then another pipe and then equals
+and then the value of the absolute value of
+
+0:03:23.930,0:03:25.010
+the original input.
+
+0:03:25.010,0:03:30.710
+The problem here is that we kind of change,
+in some cases, the original input.
+
+0:03:30.710,0:03:35.120
+So if you do if it was positive it would remain
+the same, but if it was negative originally
+
+0:03:35.120,0:03:40.470
+then we changed its value and in this point
+in our program; we don't have its original
+
+0:03:40.470,0:03:41.530
+value anymore.
+
+0:03:41.530,0:03:48.240
+In order to resolve this we can use two variables:
+one for the original input and one for the
+
+0:03:48.240,0:03:49.240
+absolute value.
+
+0:03:49.240,0:03:52.190
+So, in this case let's declare another variable.
+
+0:03:52.190,0:03:58.480
+So we would have user input and, for short,
+“Abs Value” and then the user input would
+
+0:03:58.480,0:04:04.090
+remain with the original input the user entered
+and the absolute value would contain the absolute
+
+0:04:04.090,0:04:05.200
+value of the original input.
+
+0:04:05.200,0:04:12.890
+So, to do that I would first initialize absolute
+value with input value or the user input.
+
+0:04:12.890,0:04:19.160
+And then, in case the user input is negative
+then I would set the absolute value to be
+
+0:04:19.160,0:04:21.829
+the user input times negative one.
+
+0:04:21.829,0:04:28.350
+If we take a closer look here, we'll see that
+originally I set absolute value to be the
+
+0:04:28.350,0:04:29.350
+user input.
+
+0:04:29.350,0:04:31.110
+Let’s add a semicolon here.
+
+0:04:31.110,0:04:36.180
+And if it is a negative, it would change its
+sign, if it is not negative it would remain
+
+0:04:36.180,0:04:38.220
+with the original user input.
+
+0:04:38.220,0:04:44.170
+Now at this point, we can use user input,
+original input, it didn't change, and absolute
+
+0:04:44.170,0:04:45.750
+value down here.
+
+0:04:45.750,0:04:50.690
+You can see that the names we chose for the
+variables represent exactly what they're holding.
+
+0:04:50.690,0:04:57.020
+So, the user input actually does hold whatever
+the user entered that's why it is a good name
+
+0:04:57.020,0:05:02.340
+for it; it was read from the user, input did
+not change or its value did not change.
+
+0:05:02.340,0:05:06.850
+And then we're printing the absolute value
+of the user input and absolute value, actually
+
+0:05:06.850,0:05:11.640
+contains the absolute value of this user input;
+it is better than what I’ve have done in
+
+0:05:11.640,0:05:17.310
+my previous version, where the user input
+changed its a value to be the additive inverse
+
+0:05:17.310,0:05:21.240
+of its original value and then it does not
+contain the user input anymore.
+
+0:05:21.240,0:05:23.810
+Let's try to execute it now, make sure it
+works.
+
+0:05:23.810,0:05:29.360
+So let's enter an integer, let's say negative
+seven and then it just prints the absolute
+
+0:05:29.360,0:05:31.180
+value of negative seven equals seven.
+
+0:05:31.180,0:05:33.360
+I see I'm missing the space here.
+
+0:05:33.360,0:05:35.750
+Let's test it with a positive value.
+
+0:05:35.750,0:05:41.280
+Let's say seven, works fine, let's test it
+with a zero; though I'm not expecting any
+
+0:05:41.280,0:05:42.280
+issues.
+
+0:05:42.280,0:05:42.780
+Yeah, seems to be working fine.

@@ -1,0 +1,127 @@
+0:00:00.680,0:00:03.420
+Let me show you how we can deal with that.
+
+0:00:03.420,0:00:11.020
+I want to introduce you a few ways a few types
+to pass parameters to function.
+
+0:00:11.020,0:00:17.430
+There are basically two major ways for a parameter
+passing to functions.
+
+0:00:17.430,0:00:22.500
+One of them is called call by value the second
+is call by reference.
+
+0:00:22.500,0:00:28.000
+We’ve used up to now without mentioning
+it that’s the only way I showed you how
+
+0:00:28.000,0:00:33.760
+to create parameters and pass arguments to
+parameters we used call by value.
+
+0:00:33.760,0:00:38.760
+Now I want to show you what call by reference
+is and what’s the difference between both
+
+0:00:38.760,0:00:39.760
+of them.
+
+0:00:39.760,0:00:47.690
+So we’ll talk about these two types in two
+dimensions.
+
+0:00:47.690,0:00:54.430
+First I will talk about the syntactic difference
+what you need to do coding wise in order to
+
+0:00:54.430,0:00:58.050
+call a parameter or to pass a parameter by
+value.
+
+0:00:58.050,0:01:03.300
+And what you need to do syntactic wise in
+order to pass a parameter by reference.
+
+0:01:03.300,0:01:05.470
+And then I will obviously explain what is
+the difference.
+
+0:01:05.470,0:01:09.880
+What does it mean when you pass a parameter
+by value or by reference.
+
+0:01:09.880,0:01:13.780
+So syntactically the difference is very simple.
+
+0:01:13.780,0:01:17.890
+In a call by value you do exactly what we’ve
+done before.
+
+0:01:17.890,0:01:23.630
+You have your func and then the parameter
+is just the type and the name of the parameter.
+
+0:01:23.630,0:01:24.939
+Int x in this case.
+
+0:01:24.939,0:01:31.950
+The syntax for call by reference is very similar
+but with one significant difference.
+
+0:01:31.950,0:01:39.150
+So when you have func then you have int and
+then ampersand symbol x.
+
+0:01:39.150,0:01:46.579
+So adding the ampsersand symbol next to the
+int that would make your parameter here be
+
+0:01:46.579,0:01:49.119
+called by reference parameter.
+
+0:01:49.119,0:01:54.100
+So that’s the way you control the method
+you are passing your parameter.
+
+0:01:54.100,0:01:59.490
+Either you just have the type before the name
+that would be call by value.
+
+0:01:59.490,0:02:02.700
+Or type ampersand and a name that would be
+call by reference.
+
+0:02:02.700,0:02:09.719
+So we know how syntactically to call or to
+pass an argument by value.
+
+0:02:09.719,0:02:12.599
+How syntactically to pass an argument by reference.
+
+0:02:12.599,0:02:18.329
+But what does it mean when we pass an argument
+by value versus passing an argument by reference?
+
+0:02:18.329,0:02:24.900
+So the semantics is something like that the
+meaning is something like that.
+
+0:02:24.900,0:02:30.799
+When we are passing a parameter by value we
+are evaluating the value of the argument and
+
+0:02:30.799,0:02:32.969
+that value is passed.
+
+0:02:32.969,0:02:39.659
+Where when we are passing an argument by reference
+we are evaluating the reference the position
+
+0:02:39.659,0:02:47.400
+the location of the argument and the link
+or a reference to that position.
+
+0:02:47.400,0:02:48.530
+That is what passes.

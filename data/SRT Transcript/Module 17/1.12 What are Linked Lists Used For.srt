@@ -1,0 +1,226 @@
+1
+00:00:00,539 --> 00:00:05,330
+You may ask yourself where we're going to
+use linked lists and it's a reasonable question,
+
+2
+00:00:05,330 --> 00:00:11,759
+and anywhere that we need storage where we
+have constant time insertion with no overhead
+
+3
+00:00:11,759 --> 00:00:16,240
+and we don't really need anything other than
+linear access to the individual nodes.
+
+4
+00:00:16,240 --> 00:00:20,740
+That comes into play in a lot of situations
+in computer science so you'll run across this
+
+5
+00:00:20,740 --> 00:00:21,740
+constantly.
+
+6
+00:00:21,740 --> 00:00:26,790
+In a later module, we're going to talk about
+using linked lists to develop stacks and develop
+
+7
+00:00:26,790 --> 00:00:28,050
+cues.
+
+8
+00:00:28,050 --> 00:00:31,160
+We're also going to talk about other data
+structures which are either similar to linked
+
+9
+00:00:31,160 --> 00:00:33,810
+lists or are based on linked lists.
+
+10
+00:00:33,810 --> 00:00:38,000
+So there's a lot of situations like that but
+one real world situation that you might actually
+
+11
+00:00:38,000 --> 00:00:41,410
+have come across is the FAT thirty two file
+system.
+
+12
+00:00:41,410 --> 00:00:48,300
+And this file system was in use in a lot of
+places for a long time; ever since from the
+
+13
+00:00:48,300 --> 00:00:53,910
+basically the Windows ninety-five era on up
+through to, well it was still being used a
+
+14
+00:00:53,910 --> 00:00:58,800
+little bit in Windows XP, but we stopped using
+it pretty much in Windows seven.
+
+15
+00:00:58,800 --> 00:01:05,180
+You still use it today in a lot of situations
+where you have to transfer a file from a Mac
+
+16
+00:01:05,180 --> 00:01:09,700
+machine to a PC and it needs to be editable
+on both of them.
+
+17
+00:01:09,700 --> 00:01:16,600
+The only file system, at least right now,
+that's compatible for editing with both MacOS
+
+18
+00:01:16,600 --> 00:01:21,220
+and with Windows is the FAT thirty two file
+system so we still use it.
+
+19
+00:01:21,220 --> 00:01:26,802
+This file system stores a file, when we're
+storing a file what we do is we store a pointer
+
+20
+00:01:26,802 --> 00:01:31,409
+to the first block on the hard drive where
+the file is stored and the first block on
+
+21
+00:01:31,409 --> 00:01:34,210
+the hard drive stores a pointer to the second
+block on the hard drive.
+
+22
+00:01:34,210 --> 00:01:38,150
+It's got quite a bit of data, but it also
+has a pointer to the second block.
+
+23
+00:01:38,150 --> 00:01:42,990
+And then the second block stores a large amount
+of data, usually about four kilobytes, and
+
+24
+00:01:42,990 --> 00:01:47,350
+a pointer to the third block and so on and
+so on and so on and so forth.
+
+25
+00:01:47,350 --> 00:01:51,150
+The reason that this works is because very
+standardized format, we all understand it;
+
+26
+00:01:51,150 --> 00:01:54,320
+it's a very old format so everybody knows
+how to work with it.
+
+27
+00:01:54,320 --> 00:01:58,490
+But there are some downsides to it and let
+me explain one of the biggest downsides that
+
+28
+00:01:58,490 --> 00:02:00,730
+you might have actually experience.
+
+29
+00:02:00,730 --> 00:02:07,009
+If you had a large video files stored on a
+FAT thirty two file system, this video file
+
+30
+00:02:07,009 --> 00:02:12,939
+would be stored as pointers and the video
+file might be, let's say four gigabytes.
+
+31
+00:02:12,939 --> 00:02:20,220
+But that means that it's broken down into
+four million blocks; each one of which stores
+
+32
+00:02:20,220 --> 00:02:23,249
+a small portion of the video file.
+
+33
+00:02:23,249 --> 00:02:26,950
+Now if you watch the video straight through
+you won’t notice any problem, you’ll retrieve
+
+34
+00:02:26,950 --> 00:02:30,680
+the first block on your video player will
+display that and then the second block in
+
+35
+00:02:30,680 --> 00:02:34,639
+your video player will display that and so
+on and so forth and so on and so forth.
+
+36
+00:02:34,639 --> 00:02:38,590
+But if you're like me and you stop and start
+movies a whole bunch of times; you might stop
+
+37
+00:02:38,590 --> 00:02:41,860
+the movie restart your machine come back to
+it a week later.
+
+38
+00:02:41,860 --> 00:02:47,830
+And you drag the slider to the middle, well
+unfortunately we can't jump to the middle
+
+39
+00:02:47,830 --> 00:02:48,969
+of that set of blocks.
+
+40
+00:02:48,969 --> 00:02:53,450
+So we can't jump to the five hundred thousandth
+block out of the one million to get to the
+
+41
+00:02:53,450 --> 00:02:54,450
+middle.
+
+42
+00:02:54,450 --> 00:02:58,950
+What we actually have to do is access all
+five hundred thousand blocks and then we can
+
+43
+00:02:58,950 --> 00:03:01,769
+get to the five hundred thousand and one block.
+
+44
+00:03:01,769 --> 00:03:06,590
+So this is a downside of the FAT thirty two
+file system and you may have experience that
+
+45
+00:03:06,590 --> 00:03:11,999
+if you have a video file stored on a FAT thirty
+two file system, drag the slider and wait
+
+46
+00:03:11,999 --> 00:03:15,959
+for it to load all those five hundred thousand
+blocks and throw them away because all they're
+
+47
+00:03:15,959 --> 00:03:18,670
+doing is accessing the pointers sequentially.
+

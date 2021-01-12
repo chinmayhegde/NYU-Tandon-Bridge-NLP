@@ -1,0 +1,36 @@
+1
+00:00:01,870 --> 00:00:06,649
+Ok so let’s start to write our first C++
+program.
+
+2
+00:00:06,649 --> 00:00:11,860
+Let’s make it easy let’s write a program
+that reads from the user to numbers and just
+
+3
+00:00:11,860 --> 00:00:14,809
+prints what the sum of these numbers are.
+
+4
+00:00:14,809 --> 00:00:18,880
+So we want to interact with the user something
+like that we would first ask the user please
+
+5
+00:00:18,880 --> 00:00:22,500
+enter two numbers separated by a space.
+
+6
+00:00:22,500 --> 00:00:29,130
+The user would enter for example 7 and 5 and
+then the program would respond 7 plus 5 equals
+
+7
+00:00:29,130 --> 00:00:30,130
+12.
+
+8
+00:00:30,130 --> 00:00:32,960
+Let’s see how we write it in C++.
+

@@ -1,0 +1,108 @@
+1
+00:00:01,020 --> 00:00:04,890
+So C++ makes output relatively easy and it's
+not really very difficult.
+
+2
+00:00:04,890 --> 00:00:09,210
+All we have to do is create one of these ofstream
+objects; that's the first step.
+
+3
+00:00:09,210 --> 00:00:14,940
+So we create the ofstream object and of course
+we give it a variable name like out file is
+
+4
+00:00:14,940 --> 00:00:19,830
+descriptive enough to tell us what that file
+is going to be, and then we have to open it.
+
+5
+00:00:19,830 --> 00:00:24,790
+And when we open it we tell it the full filename
+that we want to open as you see here we've
+
+6
+00:00:24,790 --> 00:00:25,910
+got filename dot TXT.
+
+7
+00:00:25,910 --> 00:00:30,280
+Or you could also if you wanted to skip the
+step of opening it, you could also just use
+
+8
+00:00:30,280 --> 00:00:35,390
+the constructor for the ofstream class and
+pass the filename to the constructor.
+
+9
+00:00:35,390 --> 00:00:42,380
+Only in very rare instances will opening an
+output file fail; but it still could.
+
+10
+00:00:42,380 --> 00:00:47,470
+For example, you might not have permissions
+on the drive to create a file, or the drive
+
+11
+00:00:47,470 --> 00:00:49,610
+might simply be out of space.
+
+12
+00:00:49,610 --> 00:00:54,830
+If any of those things happen, we're going
+to see how to detect that opening a file has
+
+13
+00:00:54,830 --> 00:00:56,760
+failed in just a few minutes.
+
+14
+00:00:56,760 --> 00:00:58,930
+But you should check for that every.
+
+15
+00:00:58,930 --> 00:01:02,850
+If it's important that the file is going to
+open, you should check to make sure that the
+
+16
+00:01:02,850 --> 00:01:04,390
+file does open.
+
+17
+00:01:04,390 --> 00:01:09,229
+Now once the files open, you can write to
+the output file exactly as you would write
+
+18
+00:01:09,229 --> 00:01:10,280
+to the screen.
+
+19
+00:01:10,280 --> 00:01:16,670
+So it's a simple output operation you can
+say outfile arrow arrow, or output operator.
+
+20
+00:01:16,670 --> 00:01:20,860
+And then print out your string or print out
+your variable or any capability that you would
+
+21
+00:01:20,860 --> 00:01:25,959
+have to write it to the screen output to see
+out, you have the ability to write it to this
+
+22
+00:01:25,959 --> 00:01:27,159
+output file.
+
+23
+00:01:27,159 --> 00:01:30,149
+And it works again very much like printing
+to the screen.
+

@@ -1,0 +1,66 @@
+1
+00:00:00,599 --> 00:00:02,820
+Cin and Cout are also objects.
+
+2
+00:00:02,820 --> 00:00:07,049
+We've been working with them over the past
+few weeks and we didn't realize that they
+
+3
+00:00:07,049 --> 00:00:12,660
+are actually also objects and their data type
+is an ifstream and an ofstream.
+
+4
+00:00:12,660 --> 00:00:19,920
+Now since we understand inheritance, we know
+that an ifstream object is actually an istream
+
+5
+00:00:19,920 --> 00:00:22,420
+object as it's base class.
+
+6
+00:00:22,420 --> 00:00:27,750
+Every ifstream can be treated as if it were
+an istream, and every ofstream can be treated
+
+7
+00:00:27,750 --> 00:00:34,460
+as if it were an ostream object or said another
+way, if we design a function to accept istream
+
+8
+00:00:34,460 --> 00:00:40,820
+and ostream by reference of course objects
+then we can also accept ifstream and ofstream
+
+9
+00:00:40,820 --> 00:00:41,820
+objects.
+
+10
+00:00:41,820 --> 00:00:46,839
+Which is a really nice convenient way of saying
+that we can create a function that can accept
+
+11
+00:00:46,839 --> 00:00:52,769
+either a file or it can accept the screen
+or keyboard for input and output.
+
+12
+00:00:52,769 --> 00:00:58,769
+And that's very helpful for debugging purposes
+if we create a function to do all the processing,
+
+13
+00:00:58,769 --> 00:01:04,710
+to do all the output or all the input, and
+then allow for debugging to send either Cout
+
+14
+00:01:04,710 --> 00:01:06,189
+or Cin to that function.
+

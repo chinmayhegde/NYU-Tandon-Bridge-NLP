@@ -1,0 +1,191 @@
+0:00:00.580,0:00:09.360
+When we implement this program we’ll probably
+want to define a function analyze digits right.
+
+0:00:09.360,0:00:16.590
+And let’s think of the interface the input
+and output this function should have.
+
+0:00:16.590,0:00:24.289
+So as an input for analyze digit I would expect
+some number num that’s the input of this
+
+0:00:24.289,0:00:25.660
+function.
+
+0:00:25.660,0:00:33.250
+And this function should given the num do
+a lot of calculation a lot of yeah calculation
+
+0:00:33.250,0:00:34.520
+there.
+
+0:00:34.520,0:00:38.500
+And tell us two things first what is.
+
+0:00:38.500,0:00:46.440
+Or not first one is what is the number of
+digits and the second is what is the sum of
+
+0:00:46.440,0:00:47.730
+these digits.
+
+0:00:47.730,0:00:52.360
+So there is one input and two outputs.
+
+0:00:52.360,0:00:59.750
+And that is a bit of a problem in C++ because
+if you recall the syntax of a function we
+
+0:00:59.750,0:01:06.400
+have the function name we can have as a parameters
+as many parameters as we want.
+
+0:01:06.400,0:01:10.260
+Just separate them with commas say what’s
+the type of each of them and you can have
+
+0:01:10.260,0:01:13.610
+as many inputs as many parameters as you want.
+
+0:01:13.610,0:01:20.570
+So for the input we can as many as we want
+but before the function we have the type of
+
+0:01:20.570,0:01:23.040
+the return value.
+
+0:01:23.040,0:01:27.640
+Basically saying that we can have only one
+value returned from a function.
+
+0:01:27.640,0:01:35.430
+So when we use the return statement or the
+return expression we can only return one value.
+
+0:01:35.430,0:01:38.580
+Which can then be assigned to a variable or
+whatever.
+
+0:01:38.580,0:01:42.570
+But we can have only one in this case we want
+to.
+
+0:01:42.570,0:01:53.340
+So in order to implement such behavior we
+can work around that by using call by reference.
+
+0:01:53.340,0:02:02.320
+Since call by reference basically can update
+a value in some other scope in for example
+
+0:02:02.320,0:02:07.490
+the caller’s frame scope.
+
+0:02:07.490,0:02:16.030
+We can maybe instead of returning a value
+can update the variable that we want to set
+
+0:02:16.030,0:02:18.310
+this return value to.
+
+0:02:18.310,0:02:26.000
+So basically we can have we can write we can
+implement this behavior in a few ways.
+
+0:02:26.000,0:02:34.900
+One of them would be say analyze digits input
+would be an integer num and then since we
+
+0:02:34.900,0:02:42.280
+want to return two stuff one we would return
+as a return value for example the amount would
+
+0:02:42.280,0:02:44.480
+be the int for the return value.
+
+0:02:44.480,0:02:51.080
+And the second would be returned using call
+by reference variable.
+
+0:02:51.080,0:02:55.720
+So we would have int ampersand int by reference.
+
+0:02:55.720,0:02:59.739
+And out sum that would be the returned sum.
+
+0:02:59.739,0:03:08.700
+By the way I note that the num the first parameter
+is an integer and it is called by value.
+
+0:03:08.700,0:03:10.940
+You didn’t have the ampersand right.
+
+0:03:10.940,0:03:16.270
+And then the second parameter is out sum and
+it is called by reference.
+
+0:03:16.270,0:03:22.550
+In a few minutes we will implement it and
+you will see exactly how that works.
+
+0:03:22.550,0:03:30.610
+But just naming convention when a parameter
+is used for a return value I like to name
+
+0:03:30.610,0:03:34.580
+it out something in this case out sum.
+
+0:03:34.580,0:03:43.250
+You can also say ok if we can return values
+using call by reference let’s do it this
+
+0:03:43.250,0:03:44.250
+way.
+
+0:03:44.250,0:03:51.110
+So let’s have analyze digits with an input
+of num and have both values returned this
+
+0:03:51.110,0:03:52.110
+way.
+
+0:03:52.110,0:03:55.709
+So we would have out sum and out count digits.
+
+0:03:55.709,0:04:01.950
+Both passed by reference so int ampersand
+out sum and int ampersand count out count
+
+0:04:01.950,0:04:02.950
+digits.
+
+0:04:02.950,0:04:07.500
+This case our function would be void right
+it won’t return anything as a return value.
+
+0:04:07.500,0:04:14.819
+It would return both of them in the mechanism
+of passing by reference.
+
+0:04:14.819,0:04:20.340
+Let’s implement the analyze digits using
+the computer.
+
+0:04:20.340,0:04:27.729
+I’ll implement the first one just to show
+the difference of how to return both by a
+
+0:04:27.729,0:04:31.860
+return value and using a call by reference.
+
+0:04:31.860,0:04:42.870
+Both on the implementation of the analyze
+digits function and in the calling of the
+
+0:04:42.870,0:04:44.530
+function as well.
+
+0:04:44.530,0:04:48.230
+So let’s go to the computer and write this
+code.

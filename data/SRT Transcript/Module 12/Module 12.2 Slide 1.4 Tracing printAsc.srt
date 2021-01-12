@@ -1,0 +1,235 @@
+1
+00:00:00,560 --> 00:00:06,009
+Let’s try to convince ourselves that this
+magical implementation here really works.
+
+2
+00:00:06,009 --> 00:00:09,400
+So, I’ll do it in two separate ways.
+
+3
+00:00:09,400 --> 00:00:16,210
+first you've executed it and probably saw
+that it basically works, but let me try to
+
+4
+00:00:16,210 --> 00:00:24,131
+convince you a first more logically some kind
+of a bottom up argument, just like I show
+
+5
+00:00:24,131 --> 00:00:29,839
+you that recursion basically prove that P
+of N is always true, so that would be one
+
+6
+00:00:29,839 --> 00:00:34,020
+way for me to convince you that this implementation
+basically is fine.
+
+7
+00:00:34,020 --> 00:00:39,360
+The second is a more formal tracing of using,
+I don’t know, runtime stack and stuff like
+
+8
+00:00:39,360 --> 00:00:40,360
+that.
+
+9
+00:00:40,360 --> 00:00:45,520
+but let's start with a more logical argument
+here to show that print ascending, for example,
+
+10
+00:00:45,520 --> 00:00:49,740
+one four basically prints the values one,
+two, three, four.
+
+11
+00:00:49,740 --> 00:00:54,280
+To do that, as I said, I'm going to make a
+bottom up argument.
+
+12
+00:00:54,280 --> 00:01:00,850
+Let’s first convince ourselves that print
+ascending one and one basically prints the
+
+13
+00:01:00,850 --> 00:01:03,650
+values in that range, basically prints one
+correctly.
+
+14
+00:01:03,650 --> 00:01:11,000
+So if we’ll execute print ascending one
+one we’ll first evaluate the condition if
+
+15
+00:01:11,000 --> 00:01:13,159
+start equals to end, it would be true.
+
+16
+00:01:13,159 --> 00:01:18,960
+We would print start, in this case one and
+our function with the end after that.
+
+17
+00:01:18,960 --> 00:01:25,590
+So, print ascending one one prints one which
+is exactly what it should do; remember that
+
+18
+00:01:25,590 --> 00:01:28,439
+for the future, so print one one works fine.
+
+19
+00:01:28,439 --> 00:01:32,840
+Now let's try to trace the sending one and
+two.
+
+20
+00:01:32,840 --> 00:01:39,399
+So when we look at the Boolean condition start
+equals end for one and two that would be false.
+
+21
+00:01:39,399 --> 00:01:45,359
+We’ll go to the else clause in this case
+we will print the sending start and in minus
+
+22
+00:01:45,359 --> 00:01:47,619
+one which would be one in one.
+
+23
+00:01:47,619 --> 00:01:51,709
+We know that from the sending one one prints
+one we don't need to re execute it we already
+
+24
+00:01:51,709 --> 00:01:56,350
+know that when we call print the sending one
+while we get one as an output.
+
+25
+00:01:56,350 --> 00:02:01,979
+So this line would print one after that we
+would print the end which is two, both of
+
+26
+00:02:01,979 --> 00:02:05,389
+them together would print one and two.
+
+27
+00:02:05,389 --> 00:02:11,439
+So print ascending one two also works as we
+expected to; it would print one and two, so
+
+28
+00:02:11,439 --> 00:02:12,790
+keep that in mind to.
+
+29
+00:02:12,790 --> 00:02:16,790
+Now let's see how/what print ascending one
+and three does.
+
+30
+00:02:16,790 --> 00:02:21,750
+Once again start equals two and is false here,
+so we go to the else clause.
+
+31
+00:02:21,750 --> 00:02:27,280
+We call print ascending with start and end
+minus one, in this case it's a one and two.
+
+32
+00:02:27,280 --> 00:02:31,519
+We’ve already seen that print ascending
+one two prints one and two, so this line would
+
+33
+00:02:31,519 --> 00:02:32,849
+print one and two.
+
+34
+00:02:32,849 --> 00:02:38,310
+After that we are printing end for all so
+together we are printing one, two, three,
+
+35
+00:02:38,310 --> 00:02:39,310
+four.
+
+36
+00:02:39,310 --> 00:02:45,680
+Print ascending one and three prints the numbers
+one, two, three, just as required; keep that
+
+37
+00:02:45,680 --> 00:02:49,730
+in mind so print ascending one and three prints
+one, two, three.
+
+38
+00:02:49,730 --> 00:02:55,500
+Let's finally see how print ascending one
+and four prints one, two, three, four.
+
+39
+00:02:55,500 --> 00:02:59,349
+Once again, the Boolean condition is false;
+we go to the else clause.
+
+40
+00:02:59,349 --> 00:03:04,599
+We call print ascending for one and three;
+we know that this call would print one, two,
+
+41
+00:03:04,599 --> 00:03:06,110
+and three.
+
+42
+00:03:06,110 --> 00:03:11,980
+After that we print end, which is four, all
+together it prints one, two, three, four.
+
+43
+00:03:11,980 --> 00:03:18,110
+That shows that print ascending one to four
+prints the entire range of one two three four.
+
+44
+00:03:18,110 --> 00:03:25,439
+I hope that this argument here convinced you
+not only for one and four that print ascending
+
+45
+00:03:25,439 --> 00:03:29,880
+works properly, it would convince you that
+any range of size one works.
+
+46
+00:03:29,880 --> 00:03:35,849
+Therefore, any range of size to works properly
+and equal for range of size three works properly.
+
+47
+00:03:35,849 --> 00:03:40,350
+Therefore, any range of size four would work
+properly and so on.
+
+48
+00:03:40,350 --> 00:03:45,530
+So, print ascending basically this implementation
+is basically fine.
+
+49
+00:03:45,530 --> 00:03:50,310
+next video will talk about the runtime stack
+of this execution.
+

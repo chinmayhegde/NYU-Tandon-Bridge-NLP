@@ -1,0 +1,27 @@
+0:00:00.669,0:00:06.600
+This module we're going to look at C++’s
+pointers and how we can use them to expand
+
+0:00:06.600,0:00:09.470
+the capabilities of what we do in terms of
+programming.
+
+0:00:09.470,0:00:13.940
+And using heap dynamic variables using heap
+dynamic arrays.
+
+0:00:13.940,0:00:18.600
+We're going to create some very useful code
+here and this code is going to be the basis
+
+0:00:18.600,0:00:24.369
+for a lot of what we're doing in the future
+for both future programming and for data structures.
+
+0:00:24.369,0:00:28.920
+It also leads into discussions on operating
+systems so this is a rather important topic
+
+0:00:28.920,0:00:33.109
+that's a gateway to a lot of other things
+in the rest of the semester.

@@ -1,0 +1,109 @@
+0:00:00.789,0:00:05.560
+Ok so we've seen the vectors and we understand
+how vectors work.
+
+0:00:05.560,0:00:09.400
+There's one more thing that was added in C++
+in 2011.
+
+0:00:09.400,0:00:13.860
+Obviously C++ is dynamic it's still being
+updated there's a lot of work being done to
+
+0:00:13.860,0:00:20.110
+it but this was added and it was actually
+taken more from Java and some other languages
+
+0:00:20.110,0:00:25.680
+because C++ realized that they were missing
+this capability and it's called ranged for
+
+0:00:25.680,0:00:26.680
+loop.
+
+0:00:26.680,0:00:30.910
+The ranged for loop has a really strange syntax
+but that's because it was borrowed from other
+
+0:00:30.910,0:00:37.430
+languages and what you see is I have the same
+code from as from the previous section and
+
+0:00:37.430,0:00:41.990
+you can see that I've changed that last for
+loop now and this is what's called a ranged
+
+0:00:41.990,0:00:47.380
+for loop because we're progressing over the
+entire range of the vector.
+
+0:00:47.380,0:00:53.370
+So this is a very common occurrence we want
+to do something for each element inside the
+
+0:00:53.370,0:00:54.370
+vector.
+
+0:00:54.370,0:00:57.690
+So there's going to be some number of elements
+inside the vector in this case we have one
+
+0:00:57.690,0:01:03.649
+hundred elements which we loaded up in a previous
+line and now we want to do a task for each
+
+0:01:03.649,0:01:08.170
+element inside the vector.
+
+0:01:08.170,0:01:12.900
+And in fact other languages call this a For
+Each loop but C++ is called the for loop so
+
+0:01:12.900,0:01:18.830
+we specify what data type we're going to get
+out of the vector in this case it's an integer
+
+0:01:18.830,0:01:24.490
+we specify a variable name for the individual
+element as we go through the loop in this
+
+0:01:24.490,0:01:25.920
+case I am using I.
+
+0:01:25.920,0:01:31.140
+And then we specify a colon and the name of
+the vector that we'd like to progress over.
+
+0:01:31.140,0:01:37.440
+And from that point inside the for loop we
+have access to this variable I which is a
+
+0:01:37.440,0:01:42.030
+different element of the vector each time
+we go through the loop.
+
+0:01:42.030,0:01:47.420
+So in the first iteration through this loop
+I is equivalent to v square brackets zero
+
+0:01:47.420,0:01:52.840
+and in the second iteration loop I is equivalent
+to V square bracket one and so on and so forth
+
+0:01:52.840,0:01:54.370
+until we get to the end.
+
+0:01:54.370,0:02:00.369
+But it saves us having to worry about which
+element we're specifically working on and
+
+0:02:00.369,0:02:05.590
+it also saves us from having to check to see
+that we haven't gone off the end of the vector.
+
+0:02:05.590,0:02:09.939
+So the format for this for loop while being
+a little bit strange actually can save us
+
+0:02:09.939,0:02:12.219
+time and protect us from making a lot of mistakes.

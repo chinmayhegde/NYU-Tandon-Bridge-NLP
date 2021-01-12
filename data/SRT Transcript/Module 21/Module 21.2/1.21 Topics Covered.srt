@@ -1,0 +1,32 @@
+1
+00:00:01,090 --> 00:00:03,380
+We have covered memory hierarchy.
+
+2
+00:00:03,380 --> 00:00:08,170
+We discussed the main limitations of D RAM
+with respect to access delay and how it can
+
+3
+00:00:08,170 --> 00:00:11,440
+have a significant degradation on performance.
+
+4
+00:00:11,440 --> 00:00:15,790
+To overcome this delay, we discuss how caches
+can be used.
+
+5
+00:00:15,790 --> 00:00:20,730
+We highlighted the principles of temporal
+and spatial locality of caches and how they
+
+6
+00:00:20,730 --> 00:00:25,960
+can be organized to keep frequently used data
+and instructions closer to the CPU in order
+
+7
+00:00:25,960 --> 00:00:27,190
+to reduce access delay.
+

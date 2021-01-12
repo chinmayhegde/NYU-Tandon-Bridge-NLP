@@ -1,0 +1,267 @@
+0:00:00.650,0:00:08.590
+Ok so in terms of data types we talked about
+integers float and doubles character string.
+
+0:00:08.590,0:00:16.030
+The last data type I want to review here is
+called a bool data type. Bool is short for
+
+0:00:16.030,0:00:24.400
+Boolean. The data it represents is truth value
+true or false. Actually these are the only
+
+0:00:24.400,0:00:33.020
+two values that can be represented in a bool
+data type. And if we try to think how this
+
+0:00:33.020,0:00:39.830
+bool would be represented internally actually
+it seems like a single bit is enough to represent
+
+0:00:39.830,0:00:47.820
+all the range of bool values. Either zero
+let’s say for false or one for true. But
+
+0:00:47.820,0:00:55.050
+then in C++ all the datas come in groups of
+bytes so even though we don’t need 256 different
+
+0:00:55.050,0:01:07.300
+values a bool data would be one byte long.
+In that one byte a sequence of eight zeroes
+
+0:01:07.300,0:01:12.600
+would be the representation of false. The
+representation of true is a bit surprising
+
+0:01:12.600,0:01:18.300
+at least for me it was when I first heard
+of it. Any non zero value is considered to
+
+0:01:18.300,0:01:26.430
+be true. So actually there is one way to say
+false all zeroes and all the rest of the ways
+
+0:01:26.430,0:01:35.390
+255 other ways to say true to represent true.
+That’s how Booleans are represented in the
+
+0:01:35.390,0:01:43.210
+memory. In terms of C++ built in literals
+there are these two literals there is true
+
+0:01:43.210,0:01:52.280
+or false all lower case. There are C++ key
+words that are considered to be of type bool.
+
+0:01:52.280,0:02:00.130
+You can use them wherever you need to. In
+terms of operators in this case the bool data
+
+0:02:00.130,0:02:05.700
+type is not an arithmetic type. It doesn’t
+have a numerical value it is a Boolean type
+
+0:02:05.700,0:02:12.579
+and it has a Boolean value. The operators
+that are common for bool are called Boolean
+
+0:02:12.579,0:02:20.620
+operators. There are three Boolean operators
+the not and and or and I will talk about each
+
+0:02:20.620,0:02:28.680
+of them separately. Let’s start with the
+not operator. The not operator is a unary
+
+0:02:28.680,0:02:35.019
+operator basically it has a single operand
+a single argument p for example. And then
+
+0:02:35.019,0:02:42.010
+you have an expression not p. The meaning
+or the semantics of the not operator actually
+
+0:02:42.010,0:02:48.029
+matches the meaning we have for the word not
+in English. So for example if p is true not
+
+0:02:48.029,0:02:54.010
+p would be false. Kind of obvious. If p is
+false not p would be true. So it basically
+
+0:02:54.010,0:03:03.099
+negates the value of its operand. In C++ the
+syntax for not is not the word n o t not the
+
+0:03:03.099,0:03:09.500
+sequence of letters n o t. We have exclamation
+mark for that. For example let’s say we
+
+0:03:09.500,0:03:19.779
+have three Boolean values b1 b2 and b3. We
+can set b1 to the C++ literal true. We can
+
+0:03:19.779,0:03:29.290
+set b2 to be not b1. That would set b2 to
+be false obviously. We can also set b3 to
+
+0:03:29.290,0:03:37.579
+be not of false that would set b3 to be true.
+So that’s the not operator. Another operator
+
+0:03:37.579,0:03:44.819
+used for Booleans is the end operator. And
+and is a binary operator meaning it has two
+
+0:03:44.819,0:03:55.549
+operands p and q. And it is defined actually
+very naturally as we use the word and in English.
+
+0:03:55.549,0:04:03.050
+So in order for p and q to be true both p
+and q must be true. So if p is true and q
+
+0:04:03.050,0:04:10.199
+is true p and q is true otherwise p and q
+would be false. If p is true and q is false
+
+0:04:10.199,0:04:16.780
+p and q is not true because not both of them
+are true. If p is false and q is true it is
+
+0:04:16.780,0:04:21.509
+also considered to be false and obviously
+if both of them are both p and q is not true.
+
+0:04:21.509,0:04:30.509
+P and q is false in this case. The syntax
+for an and in C++ is a double ampersand symbols
+
+0:04:30.509,0:04:37.030
+that come together that’s the way we write
+and in C++. And once again if we have three
+
+0:04:37.030,0:04:45.820
+variables b1 b2 and b3 we can see b1 to true
+we can set b2 to false and then we can have
+
+0:04:45.820,0:04:55.600
+b3 to be b1 and b2. In this case true and
+false is false. So b3 would be false. We can
+
+0:04:55.600,0:05:05.550
+also set b3 to be b1 and not b2. If b2 is
+false not b2 is true and then b1 which is
+
+0:05:05.550,0:05:13.370
+true and not b2 which is also true would together
+with the and operator would be true. In this
+
+0:05:13.370,0:05:21.789
+case b3 would then be true. So we have the
+not and and operator. The last Boolean operator
+
+0:05:21.789,0:05:30.060
+I want to talk about is the or operator. The
+or operator is a bit more tricky because in
+
+0:05:30.060,0:05:36.990
+English there are two meaning we have when
+we use the word or. There is what we call
+
+0:05:36.990,0:05:43.990
+the exclusive or or the inclusive or. Let
+me demonstrate it. For example when you go
+
+0:05:43.990,0:05:52.720
+to a restaurant and the waiter says with your
+meal you can have soup or salad. So you can
+
+0:05:52.720,0:05:58.370
+choose either soup or salad. Obviously if
+you choose soup that’s fine if you choose
+
+0:05:58.370,0:06:05.939
+salad that’s also fine but it won’t be
+fine to say I want both soup and salad. So
+
+0:06:05.939,0:06:14.539
+an or is true if exactly one of soup or salad
+is chosen. You can’t choose both of them.
+
+0:06:14.539,0:06:22.069
+So exactly one that’s the exclusive or.
+Another meaning for or is demonstrated in
+
+0:06:22.069,0:06:31.490
+the following example. In order to pass the
+course you need to get A in the midterm or
+
+0:06:31.490,0:06:36.990
+a B in the exam. So if you get an A in the
+midterm you obviously pass if you get a B
+
+0:06:36.990,0:06:42.770
+in the exam you also obviously pass. If you
+get both an A on the midterm and a B in the
+
+0:06:42.770,0:06:50.520
+exam obviously you passed. So in this meaning
+of or if both arguments are true that is also
+
+0:06:50.520,0:06:59.569
+considered to be true. Not like choosing soup
+and salad which is not an option. So the way
+
+0:06:59.569,0:07:08.690
+computers or in C++ or in OS define is the
+inclusive or where like the second example
+
+0:07:08.690,0:07:15.300
+I gave you. So in order for p or q to be true
+at least one of them has to be true. So if
+
+0:07:15.300,0:07:23.300
+both are true p or q is considered to be true
+if p is true and q is false it is true. If
+
+0:07:23.300,0:07:30.930
+p is false and q is true it is also true.
+The only case where p or q is false is where
+
+0:07:30.930,0:07:39.449
+both of them are false. So this is the definition
+of the or operator we can then use it in C++.
+
+0:07:39.449,0:07:46.870
+The syntax is double pipes for or and it is
+used something like that. If you have three
+
+0:07:46.870,0:07:58.410
+Boolean variables b1 b2 and b3. If b1 is false
+and b2 is b1 or not b1 b1 is false not b1
+
+0:07:58.410,0:08:06.830
+is true false or true is true. So b2 would
+be true. If we have let’s say a more compound
+
+0:08:06.830,0:08:18.270
+expression b2 and b1 or true. B2 as we said
+is true and b1 which is false or true that
+
+0:08:18.270,0:08:29.611
+would also be true. So true and true is true.
+So b3 is also true in this case. This is the
+
+0:08:29.611,0:08:39.200
+main syntax of the bool operator. We will
+use Booleans in a lot of our further programming
+
+0:08:39.200,0:08:46.710
+in the future module you will see how useful
+this type is. Now it seems very standard but
+
+0:08:46.710,0:08:52.230
+then it would be used in order to control
+the flow of our executions later on.

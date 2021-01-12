@@ -1,0 +1,294 @@
+1
+00:00:01,050 --> 00:00:03,300
+So now that we've seen how to create the stack.
+
+2
+00:00:03,300 --> 00:00:06,380
+How do we use the stack or what do we use
+the stack for?
+
+3
+00:00:06,380 --> 00:00:11,240
+Well one of the most fundamental components
+of computer science of course as we see is
+
+4
+00:00:11,240 --> 00:00:16,180
+the compiler and we're using the compiler
+extensively for all of our C++ work and there's
+
+5
+00:00:16,180 --> 00:00:19,460
+a lot of other programming languages that
+use compilers.
+
+6
+00:00:19,460 --> 00:00:22,880
+Compilers have a lot of places where they
+use the stack but one of the most fundamental
+
+7
+00:00:22,880 --> 00:00:25,070
+places is pattern matching.
+
+8
+00:00:25,070 --> 00:00:30,650
+So that when we have a piece of source code
+we want to make sure that for example all
+
+9
+00:00:30,650 --> 00:00:34,829
+the opening parentheses correspond with all
+the closing parentheses and all the opening
+
+10
+00:00:34,829 --> 00:00:37,850
+curly braces correspond with all the closing
+curly braces.
+
+11
+00:00:37,850 --> 00:00:41,660
+And all the opening square brackets correspond
+with all the closing square brackets and it's
+
+12
+00:00:41,660 --> 00:00:46,589
+not just a matter of counting how many openings
+we have and matching it to the equal number
+
+13
+00:00:46,589 --> 00:00:47,589
+of closings.
+
+14
+00:00:47,589 --> 00:00:53,890
+It has to be precise so that when we have
+an opening it matches with the closing both
+
+15
+00:00:53,890 --> 00:00:57,859
+in number and in order so that's a really
+important factor.
+
+16
+00:00:57,859 --> 00:01:02,761
+If we have an opening curly brace followed
+by an opening parentheses and then we have
+
+17
+00:01:02,761 --> 00:01:08,080
+a closing curly brace before we have the closing
+parentheses we have an invalid syntax there
+
+18
+00:01:08,080 --> 00:01:12,270
+because we haven't closed the parentheses
+before we close the curly brace.
+
+19
+00:01:12,270 --> 00:01:20,230
+And the easiest way to deal with this is to
+create a stack and when we encounter an opening
+
+20
+00:01:20,230 --> 00:01:23,660
+we can push on the opening symbol on to the
+stack.
+
+21
+00:01:23,660 --> 00:01:29,460
+It's going to be stored there and remember
+that because this is the first in last out
+
+22
+00:01:29,460 --> 00:01:35,530
+buffer what we're looking at on the top of
+the stack is the last thing that we inserted.
+
+23
+00:01:35,530 --> 00:01:40,140
+So if we have an opening parentheses and then
+immediately a closing parentheses.
+
+24
+00:01:40,140 --> 00:01:44,780
+We're going to see that the opening parentheses
+matches the closing parentheses.
+
+25
+00:01:44,780 --> 00:01:47,860
+And it doesn't matter what came before it
+or what comes after it.
+
+26
+00:01:47,860 --> 00:01:51,270
+We have to have that matching opening with
+that matching closing.
+
+27
+00:01:51,270 --> 00:01:56,450
+So what we do is when we find an opening we
+push onto the stack and when we find a closing
+
+28
+00:01:56,450 --> 00:02:01,740
+we compare it to the top of the stack and
+if it's a match then we can pop the top of
+
+29
+00:02:01,740 --> 00:02:06,560
+the stack we can remove that opening element
+and say let's go to the next element and see
+
+30
+00:02:06,560 --> 00:02:08,070
+that the next element matches.
+
+31
+00:02:08,070 --> 00:02:10,850
+And the next element might be an opening or
+might be a closing.
+
+32
+00:02:10,850 --> 00:02:17,970
+So the stack is used to do the pushes and
+the pops to make sure that the last thing
+
+33
+00:02:17,970 --> 00:02:20,890
+that we see is the first thing that we see
+in the in the closing.
+
+34
+00:02:20,890 --> 00:02:26,720
+There's also a couple more examples of where
+we would use stacks for and that is in math
+
+35
+00:02:26,720 --> 00:02:33,000
+operations it's very difficult to deal with
+infix operations using using a programming
+
+36
+00:02:33,000 --> 00:02:34,710
+language like C++.
+
+37
+00:02:34,710 --> 00:02:41,740
+So if we have even a simple task like two
+plus three times four we recognize from a
+
+38
+00:02:41,740 --> 00:02:46,930
+math perspective that the three times four
+portion has to be done before the two plus
+
+39
+00:02:46,930 --> 00:02:50,830
+three portion because that's order of operations.
+
+40
+00:02:50,830 --> 00:02:54,750
+But the computer has a little difficult time
+because we're going to be scanning that from
+
+41
+00:02:54,750 --> 00:02:56,130
+left to right.
+
+42
+00:02:56,130 --> 00:03:01,050
+So there's a different type of notation that's
+called postfix notation and what we can do
+
+43
+00:03:01,050 --> 00:03:06,200
+is take the operators the plus and the multiply
+and we can push them on the stack and there's
+
+44
+00:03:06,200 --> 00:03:11,150
+a number of different rules about what you
+can push on top of something else you can't
+
+45
+00:03:11,150 --> 00:03:15,430
+push a lower precedence operator on top of
+a higher precedence operator.
+
+46
+00:03:15,430 --> 00:03:21,280
+And then we can order this so that two plus
+three times four actually turns out to be
+
+47
+00:03:21,280 --> 00:03:26,620
+two three four times plus which makes it very
+easy for the next thing that we use stacks
+
+48
+00:03:26,620 --> 00:03:32,990
+for and that's for converting a postfix notation
+into an actual value.
+
+49
+00:03:32,990 --> 00:03:37,390
+We take the two the three and the four and
+we push those on to the stack and then when
+
+50
+00:03:37,390 --> 00:03:41,910
+it comes time to do the multiplication we
+pop the last two elements off of the stack
+
+51
+00:03:41,910 --> 00:03:47,290
+so we have the three times four so that makes
+it very easy to do order of operations without
+
+52
+00:03:47,290 --> 00:03:50,160
+having to worry about infix notation.
+
+53
+00:03:50,160 --> 00:03:52,569
+We've converted it's postfix notation.
+
+54
+00:03:52,569 --> 00:03:58,290
+Both of those examples we use stacks in the
+conversion we would use the stack to store
+
+55
+00:03:58,290 --> 00:04:03,750
+operators and in the evaluation we'd use the
+stack to store operands would use to store
+
+56
+00:04:03,750 --> 00:04:08,069
+numbers and when we get done we can push the
+number back onto the stack and when we're
+
+57
+00:04:08,069 --> 00:04:12,540
+completely done with the evaluation the top
+number on the stack which should be the only
+
+58
+00:04:12,540 --> 00:04:15,400
+number on the stack is the actual value.
+
+59
+00:04:15,400 --> 00:04:21,269
+So we can see that in the examples in later
+on in the course but you'll see the infix
+
+60
+00:04:21,269 --> 00:04:26,469
+to postfix conversion and you'll see postfix
+the value of valuation and it's done with
+
+61
+00:04:26,469 --> 00:04:26,819
+stacks.
+

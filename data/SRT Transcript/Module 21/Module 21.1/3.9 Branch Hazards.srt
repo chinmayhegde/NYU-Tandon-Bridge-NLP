@@ -1,0 +1,316 @@
+1
+00:00:00,760 --> 00:00:05,730
+Branch hazards occur when there is a branch
+instruction the CPU needs to fetch the next
+
+2
+00:00:05,730 --> 00:00:07,810
+instruction in the pipeline.
+
+3
+00:00:07,810 --> 00:00:11,480
+Since the result of the branch condition and
+the target address of the branch will not
+
+4
+00:00:11,480 --> 00:00:13,168
+be available until the execute stage, the
+CPU does not what to fetch.
+
+5
+00:00:13,168 --> 00:00:14,168
+Consider the example here.
+
+6
+00:00:14,168 --> 00:00:15,168
+At cycle 4, the CPU fetches the instruction
+at address E0.
+
+7
+00:00:15,168 --> 00:00:16,168
+In the next cycle, that instruction moves
+to the decode stage.
+
+8
+00:00:16,168 --> 00:00:17,168
+To keep the pipeline busy, the CPU needs to
+fetch a new instruction at that same cycle.
+
+9
+00:00:17,168 --> 00:00:18,168
+However, the CPU does not yet know if the
+branch is taken or what that target address
+
+10
+00:00:18,168 --> 00:00:19,168
+is in that case.
+
+11
+00:00:19,168 --> 00:00:20,168
+Although we have described the branch hazards
+for conditional branches, the same issue occurs
+
+12
+00:00:20,168 --> 00:00:21,168
+for unconditional jump instructions because
+the target address is calculated at the execute
+
+13
+00:00:21,168 --> 00:00:22,168
+stage of the pipeline.
+
+14
+00:00:22,168 --> 00:00:23,168
+There are several ways to overcome branch
+hazards.
+
+15
+00:00:23,168 --> 00:00:24,168
+The most naïve way is to simply stall the
+CPU execution until the branch instruction
+
+16
+00:00:24,168 --> 00:00:25,168
+goes to the execute stage to calculate the
+target address.
+
+17
+00:00:25,168 --> 00:00:26,168
+This is known as a pipeline bubble.
+
+18
+00:00:26,168 --> 00:00:27,168
+In fact, pipeline bubble can be used to mitigate
+just about every hazard.
+
+19
+00:00:27,168 --> 00:00:28,168
+The issue with pipeline bubble is that it
+does not optimize the use of the pipeline.
+
+20
+00:00:28,168 --> 00:00:29,168
+If we have to always stall due to hazards,
+then the benefits of pipelining are limited.
+
+21
+00:00:29,168 --> 00:00:30,168
+Another approach to mitigate branch hazards
+is for the compiler to add a branch delay
+
+22
+00:00:30,168 --> 00:00:31,168
+slot after each branch instruction.
+
+23
+00:00:31,168 --> 00:00:32,168
+A branch delay slot is essentially an instruction
+within the program code that can be executed
+
+24
+00:00:32,168 --> 00:00:33,168
+whether the branch is taken or not.
+
+25
+00:00:33,168 --> 00:00:34,168
+This is similar to the instruction reordering
+approach.
+
+26
+00:00:34,168 --> 00:00:35,168
+The most common approach to mitigate branch
+hazards, however, is by using branch prediction.
+
+27
+00:00:35,168 --> 00:00:36,168
+The basic idea here is to predict if the branch
+is taken or not based on past history.
+
+28
+00:00:36,168 --> 00:00:37,168
+The CPU has a table to keep the history of
+each branch instruction.
+
+29
+00:00:37,168 --> 00:00:38,168
+For example, for each branch instruction,
+the table holds its last target address and
+
+30
+00:00:38,168 --> 00:00:39,168
+whether the branch was taken the last few
+times it was executed.
+
+31
+00:00:39,168 --> 00:00:40,168
+The CPU then uses that pattern of the last
+few times the branch was executed to predict
+
+32
+00:00:40,168 --> 00:00:41,168
+if it will be taken and to provide the CPU
+the target address at the fetch stage.
+
+33
+00:00:41,168 --> 00:00:42,168
+Branch predictors are over 99% accurate in
+modern processors.
+
+34
+00:00:42,168 --> 00:00:43,168
+Branch hazards occur when there is a branch
+instruction the CPU needs to fetch the next
+
+35
+00:00:43,168 --> 00:00:44,168
+instruction in the pipeline.
+
+36
+00:00:44,168 --> 00:00:45,168
+Since the result of the branch condition and
+the target address of the branch will not
+
+37
+00:00:45,168 --> 00:00:46,168
+be available until the execute stage, the
+CPU does not what to fetch.
+
+38
+00:00:46,168 --> 00:00:47,168
+Consider the example here.
+
+39
+00:00:47,168 --> 00:00:48,168
+At cycle 4, the CPU fetches the instruction
+at address E0.
+
+40
+00:00:48,168 --> 00:00:49,168
+In the next cycle, that instruction moves
+to the decode stage.
+
+41
+00:00:49,168 --> 00:00:50,168
+To keep the pipeline busy, the CPU needs to
+fetch a new instruction at that same cycle.
+
+42
+00:00:50,168 --> 00:00:51,168
+However, the CPU does not yet know if the
+branch is taken or what that target address
+
+43
+00:00:51,168 --> 00:00:52,168
+is in that case.
+
+44
+00:00:52,168 --> 00:00:53,168
+Although we have described the branch hazards
+for conditional branches, the same issue occurs
+
+45
+00:00:53,168 --> 00:00:54,168
+for unconditional jump instructions because
+the target address is calculated at the execute
+
+46
+00:00:54,168 --> 00:00:55,168
+stage of the pipeline.
+
+47
+00:00:55,168 --> 00:00:56,168
+There are several ways to overcome branch
+hazards.
+
+48
+00:00:56,168 --> 00:01:00,410
+The most naïve way is to simply stall the
+CPU execution until the branch instruction
+
+49
+00:01:00,410 --> 00:01:03,480
+goes to the execute stage to calculate the
+target address.
+
+50
+00:01:03,480 --> 00:01:05,910
+This is known as a pipeline bubble.
+
+51
+00:01:05,910 --> 00:01:11,430
+In fact, pipeline bubble can be used to mitigate
+just about every hazard.
+
+52
+00:01:11,430 --> 00:01:16,440
+The issue with pipeline bubble is that it
+does not optimize the use of the pipeline.
+
+53
+00:01:16,440 --> 00:01:22,040
+If we have to always stall due to hazards,
+then the benefits of pipelining are limited.
+
+54
+00:01:22,040 --> 00:01:26,660
+Another approach to mitigate branch hazards
+is for the compiler to add a branch delay
+
+55
+00:01:26,660 --> 00:01:28,940
+slot after each branch instruction.
+
+56
+00:01:28,940 --> 00:01:34,910
+A branch delay slot is essentially an instruction
+within the program code that can be executed
+
+57
+00:01:34,910 --> 00:01:36,830
+whether the branch is taken or not.
+
+58
+00:01:36,830 --> 00:01:41,350
+This is similar to the instruction reordering
+approach.
+
+59
+00:01:41,350 --> 00:01:47,390
+The most common approach to mitigate branch
+hazards, however, is by using branch prediction.
+
+60
+00:01:47,390 --> 00:01:53,250
+The basic idea here is to predict if the branch
+is taken or not based on past history.
+
+61
+00:01:53,250 --> 00:01:57,229
+The CPU has a table to keep the history of
+each branch instruction.
+
+62
+00:01:57,229 --> 00:02:02,990
+For example, for each branch instruction,
+the table holds its last target address and
+
+63
+00:02:02,990 --> 00:02:06,880
+whether the branch was taken the last few
+times it was executed.
+
+64
+00:02:06,880 --> 00:02:12,120
+The CPU then uses that pattern of the last
+few times the branch was executed to predict
+
+65
+00:02:12,120 --> 00:02:17,480
+if it will be taken and to provide the CPU
+the target address at the fetch stage.
+
+66
+00:02:17,480 --> 00:02:21,549
+Branch predictors are over 99% accurate in
+modern processors.
+

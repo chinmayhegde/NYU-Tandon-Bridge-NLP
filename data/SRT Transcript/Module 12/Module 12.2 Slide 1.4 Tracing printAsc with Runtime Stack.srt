@@ -1,0 +1,192 @@
+1
+00:00:00,610 --> 00:00:06,950
+Logically I believe or I hope I convinced
+you that print ascending one and four works.
+
+2
+00:00:06,950 --> 00:00:09,570
+Let's see it in a more formal way.
+
+3
+00:00:09,570 --> 00:00:19,840
+Let's use our run time stack model, that basically
+follows the actual way that programs are executed
+
+4
+00:00:19,840 --> 00:00:26,270
+inside our computer and let's see that using
+this model print ascending one and four, also
+
+5
+00:00:26,270 --> 00:00:28,360
+prints one, two, three, four.
+
+6
+00:00:28,360 --> 00:00:34,590
+So, at the beginning we have a single frame
+in our stack with a start equals one and end
+
+7
+00:00:34,590 --> 00:00:40,860
+equals four and we are at the beginning of
+the function starting to execute it.
+
+8
+00:00:40,860 --> 00:00:45,530
+So we are checking if start equals to end,
+in this case it does not, so we go to the
+
+9
+00:00:45,530 --> 00:00:51,329
+else clause and we call print ascending with
+the start and end minus one.
+
+10
+00:00:51,329 --> 00:00:58,590
+that would create a new frame in our stack
+with start equals one and end equals three,
+
+11
+00:00:58,590 --> 00:01:04,469
+and after we create this frame we jump to
+the beginning of the function to store the
+
+12
+00:01:04,469 --> 00:01:07,010
+new functions execution.
+
+13
+00:01:07,010 --> 00:01:14,170
+So once again we check if starts equals end,
+it does not so, we go to the else clause and
+
+14
+00:01:14,170 --> 00:01:17,060
+once again we have another function call here.
+
+15
+00:01:17,060 --> 00:01:23,670
+So we create a new frame in our stack, in
+this case start is one and end is two, after
+
+16
+00:01:23,670 --> 00:01:28,970
+creating this frame we jump back to the beginning
+of the function to start the execution of
+
+17
+00:01:28,970 --> 00:01:30,330
+this new call.
+
+18
+00:01:30,330 --> 00:01:37,659
+So we ask whether the start equals end, it
+does not so we go to the else clause and unfortunately,
+
+19
+00:01:37,659 --> 00:01:39,920
+there is another function call.
+
+20
+00:01:39,920 --> 00:01:45,500
+That creates a new frame in our stack, in
+this case start and end are both equal to
+
+21
+00:01:45,500 --> 00:01:50,990
+one; once again, we jump to the beginning
+of this function to execute this call.
+
+22
+00:01:50,990 --> 00:01:58,680
+This time start is equal to end, so we see
+out start, we print one that's our output
+
+23
+00:01:58,680 --> 00:02:00,210
+so far one.
+
+24
+00:02:00,210 --> 00:02:09,959
+And this call basically ends, so this this
+frame is popped out and the one two frame
+
+25
+00:02:09,959 --> 00:02:11,410
+turns active.
+
+26
+00:02:11,410 --> 00:02:19,120
+We go back to where we came from we called,
+this call the just ended right here in the
+
+27
+00:02:19,120 --> 00:02:20,120
+else clause.
+
+28
+00:02:20,120 --> 00:02:27,040
+So we go one statement after that to see out
+end when we see out end in this active frame
+
+29
+00:02:27,040 --> 00:02:30,700
+and is two, so two is printed.
+
+30
+00:02:30,700 --> 00:02:33,459
+This call is also ended.
+
+31
+00:02:33,459 --> 00:02:39,320
+So we pop out this frame go back to where
+we came from with one and three as the active
+
+32
+00:02:39,320 --> 00:02:47,160
+frame; we see out three this call also ends,
+this frame pops out and we go back to where
+
+33
+00:02:47,160 --> 00:02:50,989
+we came from with one and four as the active
+frame.
+
+34
+00:02:50,989 --> 00:02:58,300
+We see end and in this case would print four
+and finally this last frame also pops out
+
+35
+00:02:58,300 --> 00:03:04,290
+and this initial call of print ascending,
+one in four, basically ends.
+
+36
+00:03:04,290 --> 00:03:08,870
+As you can see this call here just printed
+one, two, three, and four.
+
+37
+00:03:08,870 --> 00:03:17,709
+I know that this probably convinced you that
+this implementation works for this function,
+
+38
+00:03:17,709 --> 00:03:24,519
+but then when we designed this algorithm we
+didn't think of the runtime stack evaluation
+
+39
+00:03:24,519 --> 00:03:27,150
+that is going to occur.
+
+40
+00:03:27,150 --> 00:03:33,940
+We thought of it kind of an inductive manner;
+how to combine a smaller instance of the problem
+
+41
+00:03:33,940 --> 00:03:36,850
+to be a solution for original input.
+

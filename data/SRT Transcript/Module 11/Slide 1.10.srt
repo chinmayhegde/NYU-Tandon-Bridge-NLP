@@ -1,0 +1,84 @@
+0:00:00.799,0:00:03.190
+So how do we create new memory on the heap?
+
+0:00:03.190,0:00:05.150
+How do we create these heap dynamic variables?
+
+0:00:05.150,0:00:11.281
+Well there's a function that we can call it's
+actually an operator technically in C++ and
+
+0:00:11.281,0:00:12.860
+it's called new.
+
+0:00:12.860,0:00:18.130
+All we do is say new and then the data type
+that we want to be created and we get back
+
+0:00:18.130,0:00:22.210
+a pointer to that new variable that's created
+on the heap.
+
+0:00:22.210,0:00:25.489
+It doesn't have a name it will never have
+a name.
+
+0:00:25.489,0:00:29.720
+So the only way that we can refer to it would
+be via a pointer.
+
+0:00:29.720,0:00:35.030
+Again once memory is allocated on the heap
+it's not deallocated until you deallocate
+
+0:00:35.030,0:00:36.309
+it or the program ends.
+
+0:00:36.309,0:00:40.399
+If the program ends all the memory for that
+program is deallocated.
+
+0:00:40.399,0:00:45.780
+If you ever lose track of a pointer of a pointer
+to a heap dynamic variable or if you ever
+
+0:00:45.780,0:00:50.190
+lose track of the dynamic variable it immediately
+becomes garbage on the heap and you can't
+
+0:00:50.190,0:00:51.250
+use it anymore.
+
+0:00:51.250,0:00:52.769
+And that's your memory leak.
+
+0:00:52.769,0:00:57.899
+But for creating a new variable the only thing
+they have to do is call new and tell it the
+
+0:00:57.899,0:01:04.339
+data type that you want in terms of integer
+float double or any of the other data types.
+
+0:01:04.339,0:01:08.110
+And it is going to give you back a pointer
+to that data type so you just need to store
+
+0:01:08.110,0:01:09.420
+that pointer.
+
+0:01:09.420,0:01:14.370
+And then you have all the access that you
+need by the dereference operator you can make
+
+0:01:14.370,0:01:19.590
+copies of the pointer that doesn't make copies
+of the data necessarily.
+
+0:01:19.590,0:01:24.420
+And you can use the pointer to access the
+variable that's created on the heap.
+
+0:01:24.420,0:01:28.290
+Remember that it doesn't get destroyed until
+you specifically say it should be.

@@ -1,0 +1,34 @@
+1
+00:00:02,169 --> 00:00:08,029
+To give an easy definition of what a computer
+is a very basic definition the computer is
+
+2
+00:00:08,029 --> 00:00:13,390
+an electromechanical device which takes input,
+does processing and produces output.
+
+3
+00:00:13,390 --> 00:00:18,590
+And we know that what we define as a computer
+today is a heck of a lot more, but this is
+
+4
+00:00:18,590 --> 00:00:22,970
+just a basic definition for what we think
+should be in a computer in the most basic
+
+5
+00:00:22,970 --> 00:00:27,529
+form: taking input, do some processing, and
+producing output.
+
+6
+00:00:27,529 --> 00:00:32,640
+It meets the very basis of the definition
+and it doesn't have a lot of superfluous items
+
+7
+00:00:32,640 --> 00:00:35,389
+that we are not necessarily concerned with.
+

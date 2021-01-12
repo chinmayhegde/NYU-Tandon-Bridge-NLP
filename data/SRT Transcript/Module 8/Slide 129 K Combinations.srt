@@ -1,0 +1,611 @@
+0:00:00.210,0:00:02.590
+So let’s take a look at our code here.
+
+0:00:02.590,0:00:06.430
+So we have the main function just as we had
+it previously.
+
+0:00:06.430,0:00:10.420
+We also have the factorial function we implemented.
+
+0:00:10.420,0:00:17.789
+I just added include IO stream and using namespace
+STD so we can use the IO capabilities cout
+
+0:00:17.789,0:00:19.730
+and cin and all of these guys there.
+
+0:00:19.730,0:00:20.990
+Let’s try to execute it.
+
+0:00:20.990,0:00:23.029
+Ok so I press the play button.
+
+0:00:23.029,0:00:24.489
+Oh my God build failed.
+
+0:00:24.489,0:00:27.919
+Ok something is not fine here let’s take
+a look what the problem is.
+
+0:00:27.919,0:00:32.180
+It seems like that problems are in line nine
+and ten and eleven.
+
+0:00:32.180,0:00:36.809
+Basically the lines where we are calling the
+factorial function or our factorial function
+
+0:00:36.809,0:00:39.120
+something is not properly ok there.
+
+0:00:39.120,0:00:42.980
+But let’s see it says use of undeclared
+identifier factorial.
+
+0:00:42.980,0:00:48.850
+Sounds like the compiler for some reason doesn’t
+recognize the factorial function and says
+
+0:00:48.850,0:00:51.570
+that we are using something that is undeclared
+or undefined.
+
+0:00:51.570,0:00:53.859
+But then it is defined right.
+
+0:00:53.859,0:00:56.410
+Our factorial is defined down here.
+
+0:00:56.410,0:01:03.239
+The problem is that when the compiler builds
+the executable it translates it line after
+
+0:01:03.239,0:01:06.920
+line starting line one two three four and
+so on.
+
+0:01:06.920,0:01:12.960
+So when we compiler reaches for example line
+number nine it doesn’t recognize the factorial
+
+0:01:12.960,0:01:13.960
+right.
+
+0:01:13.960,0:01:16.729
+Because factorial was not defined before line
+number nine.
+
+0:01:16.729,0:01:19.430
+It was defined only in line number nineteen.
+
+0:01:19.430,0:01:24.040
+So at that point the factorial the compiler
+says wait a second I don’t know what factorial
+
+0:01:24.040,0:01:30.000
+is how can I translate it and make an executable
+a machine language code for calling the factorial.
+
+0:01:30.000,0:01:31.880
+I don’t know what factorial is.
+
+0:01:31.880,0:01:34.299
+So there are two ways to solve this issue.
+
+0:01:34.299,0:01:37.950
+First one is defining factorial before using
+it.
+
+0:01:37.950,0:01:43.060
+Basically let’s take the definition of factorial
+up here before the main right.
+
+0:01:43.060,0:01:44.060
+Something like that.
+
+0:01:44.060,0:01:46.920
+First you see that there are no these errors
+are gone.
+
+0:01:46.920,0:01:50.390
+If we execute the program ok build succeed
+which is good.
+
+0:01:50.390,0:01:54.820
+I can enter five and three and then it would
+say that five choose three is ten.
+
+0:01:54.820,0:01:56.670
+As we intended it to be.
+
+0:01:56.670,0:02:02.429
+That is not a recommended way to solve this
+issue because when we are going to have programs
+
+0:02:02.429,0:02:07.890
+with many more functions it will be difficult
+to figure out what is the order we need to
+
+0:02:07.890,0:02:11.610
+define the functions so they would be defined
+before we call them.
+
+0:02:11.610,0:02:16.190
+When we have tons of functions it becomes
+a very complicated task to do.
+
+0:02:16.190,0:02:19.640
+Sometimes it is also impossible when we have
+circular calls.
+
+0:02:19.640,0:02:24.780
+Function one calls function two function two
+calls function three and function three calls
+
+0:02:24.780,0:02:26.420
+function one back again.
+
+0:02:26.420,0:02:31.440
+So in this case we don’t have a right order
+to play the function so each definition would
+
+0:02:31.440,0:02:33.480
+become before the function call.
+
+0:02:33.480,0:02:39.090
+So the preferred way to solve this issue is
+not to mind about the order of the way we
+
+0:02:39.090,0:02:40.780
+are defining the function.
+
+0:02:40.780,0:02:46.340
+So in this case I can define the main before
+factorial this case call the function before
+
+0:02:46.340,0:02:47.950
+I define it.
+
+0:02:47.950,0:02:54.100
+But in order for assuring the compiler that
+the definition of the factorial function is
+
+0:02:54.100,0:03:00.070
+head to come we are adding function declaration
+up here before the main.
+
+0:03:00.070,0:03:05.710
+The function declaration basically contains
+the header the prototype of the function.
+
+0:03:05.710,0:03:07.730
+Basically the header line of the function.
+
+0:03:07.730,0:03:10.640
+The interface for using this function.
+
+0:03:10.640,0:03:16.010
+Basically saying that the function is named
+factorial it is expected to get one single
+
+0:03:16.010,0:03:20.940
+argument of type integer and return an integer
+as a return value.
+
+0:03:20.940,0:03:26.560
+When we are copying this header line this
+prototype the syntax is to end it with a semicolon.
+
+0:03:26.560,0:03:29.530
+In this case it would look something like
+that.
+
+0:03:29.530,0:03:35.220
+So now when the compiler translates this code
+after including or extending with the definitions
+
+0:03:35.220,0:03:37.840
+of IO stream and using namespace STD.
+
+0:03:37.840,0:03:43.130
+We are telling the compiler you can be sure
+that we are going to define a function named
+
+0:03:43.130,0:03:45.070
+factorial later on.
+
+0:03:45.070,0:03:50.730
+And just for your information this function
+would be named factorial it would get an integer
+
+0:03:50.730,0:03:55.910
+num as an input and it would return an integer
+as an output.
+
+0:03:55.910,0:04:01.600
+Then when the compiler reaches let’s say
+line number eleven and it has to compile and
+
+0:04:01.600,0:04:04.590
+translate this function call factorial of
+n.
+
+0:04:04.590,0:04:10.620
+It knows that it would eventually find a definition
+for the function factorial.
+
+0:04:10.620,0:04:16.340
+So it knows that there would be a function
+with the same matching name factorial and
+
+0:04:16.340,0:04:21.500
+passing n an integer as a single argument
+that’s also fine because this function is
+
+0:04:21.500,0:04:25.270
+expecting to get one integer as an input.
+
+0:04:25.270,0:04:32.460
+And assigning the value factorial n into a
+variable of type int that is also fine because
+
+0:04:32.460,0:04:34.720
+we said that this function is returning an
+int.
+
+0:04:34.720,0:04:40.750
+So basically this prototype tells all the
+compiler needs to know for using for calling
+
+0:04:40.750,0:04:43.020
+for interacting with this function.
+
+0:04:43.020,0:04:49.090
+So by having or by supplying this prototype
+up here the compiler can know that the syntax
+
+0:04:49.090,0:04:51.199
+of this function call is valid.
+
+0:04:51.199,0:04:56.669
+So it is ok and the compiler just keeps on
+translating the entire main function.
+
+0:04:56.669,0:05:00.870
+And then line twenty one this promise we made
+is coming to live.
+
+0:05:00.870,0:05:04.120
+So we are basically implementing the factorial
+function.
+
+0:05:04.120,0:05:07.719
+So that is fine and we can execute this code.
+
+0:05:07.719,0:05:11.240
+Now we can enter five and three and get the
+value back.
+
+0:05:11.240,0:05:17.520
+So now that we know that we can call functions
+we can define functions and we can declare
+
+0:05:17.520,0:05:19.560
+functions let’s continue doing that.
+
+0:05:19.560,0:05:23.319
+We said that there are a few advantages of
+using functions.
+
+0:05:23.319,0:05:28.749
+For example defining the factorial function
+first made our code more clearer more readable
+
+0:05:28.749,0:05:29.749
+right.
+
+0:05:29.749,0:05:33.300
+We have the word factorial n instead of some
+for loop here.
+
+0:05:33.300,0:05:35.909
+We can reuse this function over and over.
+
+0:05:35.909,0:05:37.919
+In this case we used it three times.
+
+0:05:37.919,0:05:42.699
+By the way another point we can make here
+see that we returned factRes.
+
+0:05:42.699,0:05:44.800
+We didn’t print we didn’t cout factRes.
+
+0:05:44.800,0:05:46.710
+It is a big difference.
+
+0:05:46.710,0:05:52.840
+If in some way instead of return we cout it
+factRes that would be not a good behavior
+
+0:05:52.840,0:05:56.199
+because it would print these three factorial
+values.
+
+0:05:56.199,0:05:59.860
+We don’t want that we want to assign it
+to variables right.
+
+0:05:59.860,0:06:03.300
+Also if we print it we can then not assign
+it to a variable.
+
+0:06:03.300,0:06:08.090
+So make sure that you see that we intended
+to return the value not to print it.
+
+0:06:08.090,0:06:11.210
+Later on if you wanted to print it we could
+have printed it back in the main.
+
+0:06:11.210,0:06:14.889
+You’ll see that a lot of times we would
+return values from functions.
+
+0:06:14.889,0:06:18.389
+Typically that’s the way we use functions
+where we return the value.
+
+0:06:18.389,0:06:23.740
+It is very rare that you see that functions
+do the interactions with the user and print
+
+0:06:23.740,0:06:25.039
+some values to the user.
+
+0:06:25.039,0:06:29.710
+It happens sometimes but most of the times
+we just return the values back to the caller
+
+0:06:29.710,0:06:34.319
+and the caller would decide whether it wants
+to assign it to a variable or it wants to
+
+0:06:34.319,0:06:35.770
+print it to the user.
+
+0:06:35.770,0:06:38.360
+What about defining another function here?
+
+0:06:38.360,0:06:44.550
+You see that this calculating here that calculates
+the k combinations here we are doing it only
+
+0:06:44.550,0:06:45.550
+once.
+
+0:06:45.550,0:06:50.300
+But we can think of scenarios where we want
+to repeat this calculation over and over.
+
+0:06:50.300,0:06:53.560
+So maybe we should take this few lines of
+code here.
+
+0:06:53.560,0:06:58.020
+These calculating of factorial of n factorial
+of k of n minus k and doing the math to get
+
+0:06:58.020,0:07:02.250
+the k combinations and create a new function
+for that purpose.
+
+0:07:02.250,0:07:06.860
+So let’s create a function named k combinations.
+
+0:07:06.860,0:07:12.309
+There are two inputs n and k so we should
+do int n and int k.
+
+0:07:12.309,0:07:18.090
+Make sure that when you have more than one
+argument or more than one input for a function
+
+0:07:18.090,0:07:20.629
+you separate the input with a comma.
+
+0:07:20.629,0:07:24.979
+Just like when you declare more than one variable
+you separate it with a comma.
+
+0:07:24.979,0:07:29.849
+With one exception here for functions if you
+have more than one of the same type you still
+
+0:07:29.849,0:07:32.790
+need to write explicitly the type of each
+variable.
+
+0:07:32.790,0:07:35.819
+So you cannot do something like int n comma
+k.
+
+0:07:35.819,0:07:38.900
+You will need to say int n comma int k.
+
+0:07:38.900,0:07:43.889
+So this function k combinations gets two inputs
+n and k.
+
+0:07:43.889,0:07:48.199
+And given n and k it would return an int right.
+
+0:07:48.199,0:07:54.539
+So we have a curly brace lock for the code
+the body of this function.
+
+0:07:54.539,0:07:55.949
+And let’s define it.
+
+0:07:55.949,0:07:58.229
+Basically it would be this code here right.
+
+0:07:58.229,0:08:01.439
+So let’s take that from here put it here.
+
+0:08:01.439,0:08:07.319
+Right we have some problems it says it doesn’t
+know the nFact variable so let’s take n
+
+0:08:07.319,0:08:11.300
+fact k fact n minus k fact make them local
+over here.
+
+0:08:11.300,0:08:17.909
+So the k combinations function given n and
+k basically declare three additional local
+
+0:08:17.909,0:08:18.909
+variables.
+
+0:08:18.909,0:08:23.979
+N fact k fact n minus k fact that are set
+to be the factorial of n factorial of k factorial
+
+0:08:23.979,0:08:25.379
+of n minus k.
+
+0:08:25.379,0:08:30.410
+And after having these values we should return
+this thing here.
+
+0:08:30.410,0:08:34.441
+N fact over k fact times n minus k fact.
+
+0:08:34.441,0:08:38.020
+That is the return value that we are returning.
+
+0:08:38.020,0:08:46.290
+And then up here in our main we will see k
+combinations after reading n and k to be whatever
+
+0:08:46.290,0:08:52.080
+k combinations would return when called with
+n and k.
+
+0:08:52.080,0:08:53.080
+Something like that ok.
+
+0:08:53.080,0:08:58.950
+Let’s take a look here so we still have
+one issue here that we are using k combinations
+
+0:08:58.950,0:08:59.950
+that is not defined.
+
+0:08:59.950,0:09:02.910
+Yeah that’s basically we are defining it
+after using it.
+
+0:09:02.910,0:09:07.980
+Let’s make a declaration let’s the prototype
+of k combinations up here.
+
+0:09:07.980,0:09:09.590
+That should solve this issue.
+
+0:09:09.590,0:09:11.970
+Ok let’s look at our code now.
+
+0:09:11.970,0:09:16.500
+So first we have the declarations of factorial
+and k combinations.
+
+0:09:16.500,0:09:18.620
+Just so we can use it before we define it.
+
+0:09:18.620,0:09:22.800
+Then the main has actually only three local
+variables.
+
+0:09:22.800,0:09:25.010
+N and k that we are reading from the user.
+
+0:09:25.010,0:09:28.300
+And k combinations k comb actually here.
+
+0:09:28.300,0:09:31.450
+That would hold whatever k combinations results
+to.
+
+0:09:31.450,0:09:36.050
+And then we print n choose k is whatever k
+comb is.
+
+0:09:36.050,0:09:44.180
+Right and k comb would be set to the calculation
+of k combinations hold with n and k.
+
+0:09:44.180,0:09:48.180
+So again take a look at this main it seems
+very readable now.
+
+0:09:48.180,0:09:53.830
+So we are reading n and k we are calculating
+k combinations for these n and k and then
+
+0:09:53.830,0:09:55.590
+we are printing the result.
+
+0:09:55.590,0:09:59.650
+Right we don’t need to do a lot in order
+to understand exactly what happens here.
+
+0:09:59.650,0:10:04.370
+And then k combinations is implemented very
+straight forward right.
+
+0:10:04.370,0:10:09.790
+Given n and k we are defining these three
+local variables that are set to the three
+
+0:10:09.790,0:10:13.870
+values of factorial of n factorial of k and
+factorial of n minus k.
+
+0:10:13.870,0:10:16.980
+And then we are returning this combination
+here.
+
+0:10:16.980,0:10:19.930
+Then we also obviously define the factorial
+function as well.
+
+0:10:19.930,0:10:25.720
+Even though we are calling the k combinations
+only one time it is still important to define
+
+0:10:25.720,0:10:26.840
+these functions.
+
+0:10:26.840,0:10:31.890
+First for increasing the readability of our
+program and then for reuse maybe in other
+
+0:10:31.890,0:10:32.910
+programs as well.
+
+0:10:32.910,0:10:36.340
+Let’s just execute it and see that it works
+as expected.
+
+0:10:36.340,0:10:41.390
+So build succeeded let’s enter five and
+three and then we get that five choose three
+
+0:10:41.390,0:10:42.390
+is ten.
+
+0:10:42.390,0:10:42.890
+So it seems to be working just fine.

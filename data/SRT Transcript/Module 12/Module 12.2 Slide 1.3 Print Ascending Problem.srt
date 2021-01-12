@@ -1,0 +1,422 @@
+1
+00:00:00,540 --> 00:00:01,060
+Okay.
+
+2
+00:00:01,060 --> 00:00:05,940
+Let's try to use this technique in order to
+solve the following problem.
+
+3
+00:00:05,950 --> 00:00:09,712
+Let's try to write a recursive implementation
+for the function of print ascending.
+
+4
+00:00:09,712 --> 00:00:17,400
+Print ascending is supposed to get two arguments,
+a start and an end, both are integers and
+
+5
+00:00:17,400 --> 00:00:24,080
+as the name kind of says, it should print
+the numbers from start to end in an ascending order
+
+6
+00:00:24,080 --> 00:00:30,320
+So we will assume that start is less or
+equal to N, so there is like a range of numbers,
+
+7
+00:00:30,329 --> 00:00:35,840
+a valid range of numbers to print and print
+ascending should then print the numbers from
+
+8
+00:00:35,840 --> 00:00:36,840
+start to end.
+
+9
+00:00:36,840 --> 00:00:41,750
+For example if we'll call print ascending
+one and four, it should then print the values
+
+10
+00:00:41,750 --> 00:00:44,559
+one, two, three, four in an ascending order.
+
+11
+00:00:44,559 --> 00:00:51,100
+Once again, we would need to make a recursive
+implementation for this function, obviously
+
+12
+00:00:51,100 --> 00:00:57,280
+an iterative one is very straightforward,
+but let's try to practice the recursion technique
+
+13
+00:00:57,280 --> 00:01:04,050
+on this example here to see how we can then
+define recursive functions.
+
+14
+00:01:04,050 --> 00:01:13,470
+So, as we said there are two steps in solving
+or creating/developing a recursive algorithm;
+
+15
+00:01:13,470 --> 00:01:19,300
+first one is the base case where we are supposed
+to solve the problem for the smallest possible
+
+16
+00:01:19,300 --> 00:01:22,980
+value/smallest possible input.
+
+17
+00:01:22,980 --> 00:01:31,100
+So first we need to define what's the smallest
+possible input, or maybe before that we should
+
+18
+00:01:31,100 --> 00:01:35,420
+even try to figure out how do we measure the
+size of the input.
+
+19
+00:01:35,420 --> 00:01:39,130
+So we know that the inputs are start and end.
+
+20
+00:01:39,130 --> 00:01:45,080
+These are the input themselves but the size
+of the input is a big difference so what should
+
+21
+00:01:45,080 --> 00:01:49,710
+be the size of print ascending start and end.
+
+22
+00:01:49,710 --> 00:01:55,520
+For example, if we use print ascending three
+and six; what's the size of this instance?
+
+23
+00:01:55,520 --> 00:02:00,380
+I would say that the size of print ascending
+three and six would be three, four, five,
+
+24
+00:02:00,380 --> 00:02:06,360
+six, N equals four, the number of elements
+in the range from three to six.
+
+25
+00:02:06,360 --> 00:02:12,140
+Print ascending seven nine, would be seven,
+eight, nine, the size would be three.
+
+26
+00:02:12,140 --> 00:02:16,980
+Again, the number of elements in the range
+from seven to nine.
+
+27
+00:02:16,980 --> 00:02:20,790
+Print ascending five and five, the size would
+be one.
+
+28
+00:02:20,790 --> 00:02:23,830
+There is only one number in the range from
+five to five.
+
+29
+00:02:23,830 --> 00:02:30,700
+So, let's define N as the input size to be
+the number of integers in the range from start
+
+30
+00:02:30,700 --> 00:02:31,700
+to end.
+
+31
+00:02:31,700 --> 00:02:37,220
+Saying that, it would be easier for us now
+to solve the problem for the smallest input;
+
+32
+00:02:37,220 --> 00:02:40,640
+we know how to measure the size of the inputs.
+
+33
+00:02:40,640 --> 00:02:47,700
+So, the smaller input would basically be the
+smallest valid range of numbers, basically
+
+34
+00:02:47,700 --> 00:02:50,910
+a range with a single number in it.
+
+35
+00:02:50,910 --> 00:02:56,760
+So if we want to solve the problem, solve
+print ascending, with the smallest values/the
+
+36
+00:02:56,760 --> 00:03:05,380
+smallest size for start and end, if we try
+to identify this case it would be when start
+
+37
+00:03:05,380 --> 00:03:10,650
+equals N. When start equals N, basically,
+we are in the case where there is a single
+
+38
+00:03:10,650 --> 00:03:13,850
+element in the range from start to end.
+
+39
+00:03:13,850 --> 00:03:19,580
+So our solution for the smallest possible
+input would start, if this is the case of
+
+40
+00:03:19,580 --> 00:03:21,190
+the smallest possible input.
+
+41
+00:03:21,190 --> 00:03:26,600
+If start equals to N, then let's see what
+we should do in this case.
+
+42
+00:03:26,600 --> 00:03:33,910
+So, when we call print ascending with a single
+element or a single integer range, the print
+
+43
+00:03:33,910 --> 00:03:41,380
+ascending should just print the single element
+in that range, basically cout sort that is,
+
+44
+00:03:41,380 --> 00:03:42,380
+right?
+
+45
+00:03:42,380 --> 00:03:49,650
+So, this few lines of code basically solves
+the problem for the smallest input; quite
+
+46
+00:03:49,650 --> 00:03:52,010
+straightforward, quite easy.
+
+47
+00:03:52,010 --> 00:04:00,319
+By the way just the same as mathematical induction,
+the base case is a very easy step in the proof.
+
+48
+00:04:00,319 --> 00:04:04,930
+It's very easy to show that P of one is true,
+most of the times.
+
+49
+00:04:04,930 --> 00:04:11,100
+Same here, solving the problem for the smallest
+input is typically very easy; we just have
+
+50
+00:04:11,100 --> 00:04:18,319
+to identify the smallest input and the solution
+is quite straightforward then.
+
+51
+00:04:18,319 --> 00:04:21,019
+The recursive step that's a bit more tricky.
+
+52
+00:04:21,019 --> 00:04:26,520
+The recursive step, as we said, we first need
+to define the inductive assumption and then
+
+53
+00:04:26,520 --> 00:04:31,760
+we would need to use it in order to solve
+the original of the given problem.
+
+54
+00:04:31,760 --> 00:04:37,639
+So we said that, generally, the inductive
+assumption is something of the form if we
+
+55
+00:04:37,639 --> 00:04:43,490
+call the function on a smaller input it would
+do its job. for print ascending, if we try
+
+56
+00:04:43,490 --> 00:04:51,569
+to make this assumption more specific here,
+I would say something like if we call printer
+
+57
+00:04:51,569 --> 00:04:58,330
+sending on a smaller range it would print
+the numbers in that range in an ascending
+
+58
+00:04:58,330 --> 00:04:59,330
+order.
+
+59
+00:04:59,330 --> 00:05:04,189
+Instead of the word function, if we call the
+function I would say if we call print ascending
+
+60
+00:05:04,189 --> 00:05:07,340
+instead of saying on a smaller input I would
+say on a smaller range.
+
+61
+00:05:07,340 --> 00:05:11,830
+So if we call print ascending on a smaller
+range and instead of just saying it would
+
+62
+00:05:11,830 --> 00:05:17,849
+do its job, I would say it would as print
+ascending should do print the numbers in the
+
+63
+00:05:17,849 --> 00:05:19,819
+range in ascending order.
+
+64
+00:05:19,819 --> 00:05:26,009
+So, this is a very powerful thing to assume;
+we're assuming basically that calling the
+
+65
+00:05:26,009 --> 00:05:32,360
+function on a smaller input would do something,
+actually it would do what it has to do it
+
+66
+00:05:32,360 --> 00:05:36,840
+would print the numbers in ascending order.
+
+67
+00:05:36,840 --> 00:05:42,300
+Having this powerful assumption, let's see
+how we can use it in order to solve our original
+
+68
+00:05:42,300 --> 00:05:47,689
+problem of printing the numbers the entire
+set of numbers from start to end.
+
+69
+00:05:47,689 --> 00:05:54,710
+So let's try to use this assumption let's
+try to call print ascending on the smaller
+
+70
+00:05:54,710 --> 00:05:55,710
+range.
+
+71
+00:05:55,710 --> 00:06:00,619
+So, our original range is, let’s say, from
+start to end.
+
+72
+00:06:00,619 --> 00:06:07,110
+Let's try to call this function on a smaller
+range, for example, not from start to end
+
+73
+00:06:07,110 --> 00:06:11,860
+but from start to end minus one, that's a
+smaller range.
+
+74
+00:06:11,860 --> 00:06:17,599
+What would happen if we call print ascending
+start, end minus one?
+
+75
+00:06:17,599 --> 00:06:21,849
+Actually I don't know, but our assumption
+says that if we call print ascending on a
+
+76
+00:06:21,849 --> 00:06:25,810
+smaller range it would print the numbers in
+an ascending order.
+
+77
+00:06:25,810 --> 00:06:32,289
+So, since and end minus one is a smaller range,
+this call here should print the numbers from
+
+78
+00:06:32,289 --> 00:06:35,740
+start to end minus one in ascending order.
+
+79
+00:06:35,740 --> 00:06:41,900
+Surprisingly probably a lot this call would
+print the numbers from start to end minus
+
+80
+00:06:41,900 --> 00:06:42,919
+one.
+
+81
+00:06:42,919 --> 00:06:47,800
+That’s most of the job we need to do here;
+we need to print the numbers from start to
+
+82
+00:06:47,800 --> 00:06:52,990
+end in ascending order, and this single line
+of code already printed the line from start
+
+83
+00:06:52,990 --> 00:06:55,590
+to end minus one in ascending order.
+
+84
+00:06:55,590 --> 00:07:02,499
+The only thing left for us to do is just after
+that is print the value of end.
+
+85
+00:07:02,499 --> 00:07:09,710
+These two lines combined together then would
+print the entire range from start to end.
+
+86
+00:07:09,710 --> 00:07:16,719
+I know it is surprising; I know it is very
+not intuitive the next we are will try to
+
+87
+00:07:16,719 --> 00:07:18,719
+show why it works.
+
+88
+00:07:18,719 --> 00:07:24,289
+I think maybe before the second video just
+try it on your computer and make sure it does
+
+89
+00:07:24,289 --> 00:07:25,789
+work and get surprised a bit.
+

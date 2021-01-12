@@ -1,0 +1,123 @@
+1
+00:00:02,070 --> 00:00:06,009
+We have a lot of different types of computers
+in use in the environments today as well as
+
+2
+00:00:06,009 --> 00:00:07,600
+and past history.
+
+3
+00:00:07,600 --> 00:00:13,360
+So we have this concept of a mainframe which
+is a very, very large computer which used
+
+4
+00:00:13,360 --> 00:00:20,029
+to act for lack of a better term, used to
+act as a central point for all the computing
+
+5
+00:00:20,029 --> 00:00:22,429
+done on a campus.
+
+6
+00:00:22,429 --> 00:00:28,089
+So for example, one university might have
+just one mainframe for each campus in the
+
+7
+00:00:28,089 --> 00:00:31,560
+entire university and that's where all the
+processing was done.
+
+8
+00:00:31,560 --> 00:00:34,760
+Imagine only having one computer for the entire
+university.
+
+9
+00:00:34,760 --> 00:00:40,170
+It gets very very busy and the time on that
+computer is very much in demand.
+
+10
+00:00:40,170 --> 00:00:45,079
+And then we move to a more common definition
+today which is that of a server, and a server
+
+11
+00:00:45,079 --> 00:00:51,230
+would be something that probably exists in
+a data center or in a room dedicated with
+
+12
+00:00:51,230 --> 00:00:54,090
+air conditioning and power controls.
+
+13
+00:00:54,090 --> 00:00:59,170
+This would not be used by most people, so
+it would have a lot of capability a lot of
+
+14
+00:00:59,170 --> 00:01:04,390
+RAM a lot of CPU (we will talk about these
+definitions later) but the server serves one
+
+15
+00:01:04,390 --> 00:01:05,850
+purpose.
+
+16
+00:01:05,850 --> 00:01:10,000
+And a desktop would be used by an end user
+at one physical location (obviously) because
+
+17
+00:01:10,000 --> 00:01:12,229
+you don't want to carry a desktop around too
+much.
+
+18
+00:01:12,229 --> 00:01:16,640
+A laptop we know we just carry it around and
+use it just as a regular computer.
+
+19
+00:01:16,640 --> 00:01:21,240
+A tablet is pretty much the same as a regular
+laptop except without a keyboard, and that's
+
+20
+00:01:21,240 --> 00:01:23,810
+basically what we've come to these days.
+
+21
+00:01:23,810 --> 00:01:28,909
+And then we could also add that a portable
+phone is by definition a computer because
+
+22
+00:01:28,909 --> 00:01:33,909
+it does take input, do some processing on
+that input (your voice), and then encoding
+
+23
+00:01:33,909 --> 00:01:38,290
+your voice, and then it produces output in
+the form of a signal it gets transmitted to
+
+24
+00:01:38,290 --> 00:01:39,950
+your cell provider.
+
+25
+00:01:39,950 --> 00:01:44,380
+So all of these are types of computers and
+we're going to explore the commonalities between
+
+26
+00:01:44,380 --> 00:01:45,341
+these computers in just a minute.
+

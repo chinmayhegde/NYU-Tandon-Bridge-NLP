@@ -1,0 +1,20 @@
+1
+00:00:00,640 --> 00:00:04,090
+Here you used the wrong formula to calculate
+the target address.
+
+2
+00:00:04,090 --> 00:00:08,680
+Remember, the first part of the formula is
+to increment PC by 4.
+
+3
+00:00:08,680 --> 00:00:13,040
+But remember, for this question, the CPU just
+completed the fetch step.
+
+4
+00:00:13,040 --> 00:00:17,039
+So it doesn't yet know that it is doing a
+branch instruction.
+

@@ -1,0 +1,46 @@
+1
+00:00:00,440 --> 00:00:05,850
+A J-format instruction only has one operand:
+a 26-bit immediate value.
+
+2
+00:00:05,850 --> 00:00:08,400
+J-format instructions are used for jump instructions.
+
+3
+00:00:08,400 --> 00:00:14,309
+Therefore, the 26-bit immediate value is used
+as an address parameter to use to calculate
+
+4
+00:00:14,309 --> 00:00:17,200
+the target address of the jump instruction.
+
+5
+00:00:17,200 --> 00:00:23,330
+Just like I-format, each J-format instruction
+has its own opcode and does not need a 2nd
+
+6
+00:00:23,330 --> 00:00:24,330
+opcode.
+
+7
+00:00:24,330 --> 00:00:29,190
+Just like all instructions, the CPU first
+read the opcode to determine the format.
+
+8
+00:00:29,190 --> 00:00:33,370
+In the case of this example, the opcode matches
+to the Jump instruction.
+
+9
+00:00:33,370 --> 00:00:39,969
+Since the jump instruction is a J-format,
+the CPU just reads the next 26 bits to determine
+
+10
+00:00:39,969 --> 00:00:41,570
+the value of the address field.
+

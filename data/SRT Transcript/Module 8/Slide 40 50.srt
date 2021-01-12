@@ -1,0 +1,108 @@
+0:00:00.470,0:00:06.450
+If we have our main here in addition to the
+main since we are calling factorial in this
+
+0:00:06.450,0:00:08.139
+case even three times.
+
+0:00:08.139,0:00:13.090
+We will need to give the implementation of
+factorial the function factorial.
+
+0:00:13.090,0:00:16.279
+So now we have two things in our program.
+
+0:00:16.279,0:00:21.759
+The main which is by the way seems very much
+syntactically as a function we will see a
+
+0:00:21.759,0:00:24.890
+few words about it in one of our future modules.
+
+0:00:24.890,0:00:30.779
+So we have the main function and then we have
+the factorial function.
+
+0:00:30.779,0:00:33.590
+And let’s see how this program basically
+executes.
+
+0:00:33.590,0:00:41.070
+So first we read n and k from the user cout
+please enter n and k cin n and k.
+
+0:00:41.070,0:00:50.290
+And then we have a call to factorial basically
+jumping to the code of factorial assigning
+
+0:00:50.290,0:00:57.530
+num the local variable num with the value
+of n doing the calculation of n factorial.
+
+0:00:57.530,0:01:02.650
+And returning res back to the main back to
+n fact.
+
+0:01:02.650,0:01:09.130
+After doing that we call factorial again with
+the value of k associated to num.
+
+0:01:09.130,0:01:16.640
+Jumping to the factorial call doing the calculations
+and going back to assigning the resulted value
+
+0:01:16.640,0:01:21.690
+to the factRes back to k fact.
+
+0:01:21.690,0:01:27.580
+And then we are calling factorial for n minus
+k jumping to factorial calculating the for
+
+0:01:27.580,0:01:33.030
+loop a third time now and returning the result
+back to n minus k fact.
+
+0:01:33.030,0:01:39.960
+And then we can calculate the combination
+there of n fact over k fact times n minus
+
+0:01:39.960,0:01:44.140
+k fact into k combinations and printing the
+output.
+
+0:01:44.140,0:01:50.869
+So you can see that we are calling this function
+factorial several times.
+
+0:01:50.869,0:01:55.510
+Makes it very tempting to define this factorial
+function.
+
+0:01:55.510,0:02:03.210
+We implement the algorithm of calculating
+factorial only once but we can use it over
+
+0:02:03.210,0:02:04.210
+and over.
+
+0:02:04.210,0:02:06.700
+One of the advantages of using a function.
+
+0:02:06.700,0:02:13.260
+Also the name factorial is another great advantage
+here because instead of having a for loop
+
+0:02:13.260,0:02:19.030
+three times we are having word name factorial
+appear three times.
+
+0:02:19.030,0:02:25.010
+Make it much more readable and clear exactly
+what we are doing here.
+
+0:02:25.010,0:02:33.560
+And this way we call this function over and
+over and calculate the factorial of n of k
+
+0:02:33.560,0:02:35.080
+and of n minus k.

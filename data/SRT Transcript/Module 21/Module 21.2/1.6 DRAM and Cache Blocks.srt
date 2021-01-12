@@ -1,0 +1,65 @@
+1
+00:00:00,489 --> 00:00:06,359
+So now let us look at how caches are organized
+and how data and instructions are moved from
+
+2
+00:00:06,359 --> 00:00:07,759
+the main memory to the cache.
+
+3
+00:00:07,759 --> 00:00:10,330
+Let us first go over some basics.
+
+4
+00:00:10,330 --> 00:00:16,049
+First, the main memory is organized into blocks,
+each block being of the same size.
+
+5
+00:00:16,049 --> 00:00:22,119
+The CPU designer can configure the memory
+blocks to be 16, 32, or 64 bytes.
+
+6
+00:00:22,119 --> 00:00:27,150
+Each cache in the CPU is also organized into
+blocks that are the same sizes as the main
+
+7
+00:00:27,150 --> 00:00:28,199
+memory blocks.
+
+8
+00:00:28,199 --> 00:00:35,610
+But since the size of a cache is much smaller
+than that of the main memory, there are significantly
+
+9
+00:00:35,610 --> 00:00:38,690
+less cache blocks than there are main memory
+blocks.
+
+10
+00:00:38,690 --> 00:00:45,020
+For example, if we have a memory hierarchy
+with 16-byte blocks, a 2 gigabyte main memory
+
+11
+00:00:45,020 --> 00:00:50,690
+will have over 1 million blocks, whereas a
+32 kilobyte cache has a little bit more than
+
+12
+00:00:50,690 --> 00:00:52,440
+2 thousand blocks.
+
+13
+00:00:52,440 --> 00:00:57,230
+So the key question is how does the CPU move
+data and instructions between the caches and
+
+14
+00:00:57,230 --> 00:00:57,890
+the main memory?
+

@@ -1,0 +1,85 @@
+0:00:00.130,0:00:05.480
+So let's first prompt the user to enter a
+positive integer: let's print "please enter
+
+0:00:05.480,0:00:08.620
+a positive integer."
+
+0:00:08.620,0:00:16.880
+Let's read the input, so let's have an integer
+user input variable and let's c-in into this
+
+0:00:16.880,0:00:18.130
+user input.
+
+0:00:18.130,0:00:25.220
+And now we need to figure out whether the
+input is even or odd and create the corresponding
+
+0:00:25.220,0:00:30.140
+output message in order to determine whether
+a number is even or odd.
+
+0:00:30.140,0:00:35.450
+Basically, we observe the remainder when we
+divide this number by two; if the remainder
+
+0:00:35.450,0:00:37.220
+is zero it means it's even.
+
+0:00:37.220,0:00:39.320
+if the remainder is one means it means it's
+odd.
+
+0:00:39.320,0:00:46.480
+So, let's do something like if and then take
+user input and mod it by two, and figure out
+
+0:00:46.480,0:00:49.340
+whether it's zero.
+
+0:00:49.340,0:00:54.770
+Basically if user input mod two equals zero,
+it means the remainder when we divide user
+
+0:00:54.770,0:00:57.780
+input by two is zero that means it is even.
+
+0:00:57.780,0:01:06.829
+So, in this case we need C- out something
+like user input is even and then else we would
+
+0:01:06.829,0:01:11.569
+need to c- out that user input is odd.
+
+0:01:11.569,0:01:17.640
+So based on the value of this Boolean expression,
+once again it is either true or false.
+
+0:01:17.640,0:01:23.549
+So if user input mod two equals zero, it would
+be true basically we'll print even, but if
+
+0:01:23.549,0:01:30.389
+user input mod two is not zero, otherwise
+it should be one, then we would just print
+
+0:01:30.389,0:01:31.389
+odd.
+
+0:01:31.389,0:01:33.729
+Let's go ahead and test it.
+
+0:01:33.729,0:01:40.750
+So let's enter a positive integer here: let's
+say seven and then it would say that seven
+
+0:01:40.750,0:01:41.750
+is odd.
+
+0:01:41.750,0:01:46.859
+Let's also test it with an even value: let's
+say sixteen and then it would say sixteen
+
+0:01:46.859,0:01:47.359
+is even

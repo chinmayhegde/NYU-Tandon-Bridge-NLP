@@ -1,0 +1,20 @@
+1
+00:00:00,520 --> 00:00:05,010
+Remember, you must take the most significant
+four bits of PC+4.
+
+2
+00:00:05,010 --> 00:00:07,980
+The formula assumes that the program counter
+is 32-bits.
+
+3
+00:00:07,980 --> 00:00:12,470
+So if it's not, you must first pad it with
+zeroes to make it 32 bits.
+
+4
+00:00:12,470 --> 00:00:15,550
+Then take the most significant four bits [31:28]
+of the result
+

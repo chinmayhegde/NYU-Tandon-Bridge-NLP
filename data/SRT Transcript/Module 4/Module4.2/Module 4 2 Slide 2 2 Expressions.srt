@@ -1,0 +1,186 @@
+0:00:00.830,0:00:06.470
+Let’s take a look at another example of
+what happens when we mix the types.
+
+0:00:06.470,0:00:16.240
+For example if we cout 5 divided by 2 so since
+5 and 2 are both integers the dividing operators
+
+0:00:16.240,0:00:17.900
+has the meaning of div.
+
+0:00:17.900,0:00:24.760
+As we said that when slash comes between two
+integers that means div.
+
+0:00:24.760,0:00:33.960
+If we do 5.0 divided 2.0 the dividing operator
+has the meaning of real division because when
+
+0:00:33.960,0:00:40.040
+a dividing operator comes between two doubles
+it has the meaning of a real division.
+
+0:00:40.040,0:00:45.320
+So the first cout would print 2 because 5
+div 2 is 2.
+
+0:00:45.320,0:00:51.710
+The second cout would print 2.5 because 5.0
+divided by 2.0 is 2.5.
+
+0:00:51.710,0:00:57.260
+What do you think would happen if we divide
+5.0 by 2?
+
+0:00:57.260,0:01:00.500
+When we try to divide a double by an integer.
+
+0:01:00.500,0:01:07.150
+What meaning would the divider operator have
+in this case?
+
+0:01:07.150,0:01:11.610
+Actually I don’t know maybe it has the meaning
+of the div maybe it has the meaning of a real
+
+0:01:11.610,0:01:15.120
+division or maybe it could even be an error.
+
+0:01:15.120,0:01:24.680
+So it is not an error you can relax here the
+compiler when we have mixed types in an expression
+
+0:01:24.680,0:01:31.450
+the compiler would try to resolve the issue
+of the mixing types and would try to make
+
+0:01:31.450,0:01:38.570
+casting of the arguments to state where the
+two operands would be of the same type.
+
+0:01:38.570,0:01:45.220
+The casting would be what we call implicit
+cast casting that do not lose any accuracy
+
+0:01:45.220,0:01:50.560
+in this case converting an int to a double
+never loses any accuracy.
+
+0:01:50.560,0:01:56.500
+Because every integer could be represented
+as a double not the other way around right
+
+0:01:56.500,0:02:01.200
+not every double can be represented as an
+integer some accuracy can be lost.
+
+0:02:01.200,0:02:07.580
+Just as when we converted 6.7 into an integer
+the .7 got lost there.
+
+0:02:07.580,0:02:14.569
+But converting 2 to a double that is a conversion
+that can be done implicitly can be done without
+
+0:02:14.569,0:02:16.069
+losing any accuracy.
+
+0:02:16.069,0:02:25.270
+So the compiler would try to match the types
+of these operands 5.0 and 2 in this case casts
+
+0:02:25.270,0:02:32.319
+2 to a double and then the dividing operator
+would be in the meaning of real division.
+
+0:02:32.319,0:02:36.240
+So this cout would also print 2.5.
+
+0:02:36.240,0:02:44.020
+Another thing I want to show you here what
+happens if we assign x to the value of 5 divided
+
+0:02:44.020,0:02:45.220
+by 2.
+
+0:02:45.220,0:02:53.110
+Obviously no issue 5 and 2 are both integers
+the dividing operator is div in this case
+
+0:02:53.110,0:02:58.810
+so 5 div 2 is 2 and x as an integer gets the
+value of 2.
+
+0:02:58.810,0:03:05.989
+But what will happen if we assign y to 5 div
+2?
+
+0:03:05.989,0:03:13.709
+Y is a double right so do you think that in
+this case 5 divided by 2 would be 2.5 and
+
+0:03:13.709,0:03:22.370
+y would get the value 2.5 or 5 div 2 5 divided
+by 2 would still be 2 and y would be assigned
+
+0:03:22.370,0:03:23.370
+to 2.
+
+0:03:23.370,0:03:27.920
+You can try it out but I will tell you what
+would happen.
+
+0:03:27.920,0:03:34.380
+So an assignment expression has two steps
+in its evaluation.
+
+0:03:34.380,0:03:39.569
+First step is evaluating the right hand side
+after we get this value the value is assigned
+
+0:03:39.569,0:03:40.569
+to the variable.
+
+0:03:40.569,0:03:45.660
+And the first step doesn’t take into account
+what’s the type of the variable we are going
+
+0:03:45.660,0:03:47.340
+to assign the second step.
+
+0:03:47.340,0:03:52.230
+The first step just evaluates the right hand
+side in this case evaluating 5 divided by
+
+0:03:52.230,0:03:53.230
+2.
+
+0:03:53.230,0:04:00.190
+And once again since 5 and 2 are both integers
+the dividing comes in a form of div.
+
+0:04:00.190,0:04:06.470
+So when we are evaluating the right hand side
+here 5 divided by 2 would result to 2 the
+
+0:04:06.470,0:04:07.470
+integer 2.
+
+0:04:07.470,0:04:14.230
+But then we are trying to assign the integer
+2 to the variable of type double formally
+
+0:04:14.230,0:04:20.909
+we should have casted the integer 2 to a double
+but the compiler would do it for us so y would
+
+0:04:20.909,0:04:25.379
+get the double of the value 2.
+
+0:04:25.379,0:04:28.400
+What we would like to write as the literal
+2.0.
+
+0:04:28.400,0:04:32.120
+So y would be the double 2 in this case.

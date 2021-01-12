@@ -1,0 +1,159 @@
+1
+00:00:00,659 --> 00:00:04,529
+So, we can take a look at the way this code
+is going to run; we can see the program counter
+
+2
+00:00:04,529 --> 00:00:05,529
+here.
+
+3
+00:00:05,529 --> 00:00:08,590
+I've broken it down into multiple steps, so
+that you can see.
+
+4
+00:00:08,590 --> 00:00:12,929
+What we start off with is the deposit function
+which is going to put in fifty dollars into
+
+5
+00:00:12,929 --> 00:00:14,269
+the account.
+
+6
+00:00:14,269 --> 00:00:19,710
+The balance, the new balance, becomes a hundred
+fifty dollars so this new balance variable
+
+7
+00:00:19,710 --> 00:00:24,960
+is local to the deposit function and it makes
+a copy of the balance which was one hundred
+
+8
+00:00:24,960 --> 00:00:28,609
+dollars and it adds the fifty dollars, so
+we have one hundred fifty dollars.
+
+9
+00:00:28,609 --> 00:00:32,290
+Unfortunately, we get an interrupt or we’re
+running on a separate CPU, so we go to the
+
+10
+00:00:32,290 --> 00:00:35,140
+other CPU and we check out what's happening
+there.
+
+11
+00:00:35,140 --> 00:00:40,329
+Now we look at the withdrawal function now
+and it's running on the other CPU or it's
+
+12
+00:00:40,329 --> 00:00:47,410
+now running on the one CPU, and we say that
+the new balance is now the balance minus the
+
+13
+00:00:47,410 --> 00:00:51,390
+amount, which would now be zero, so the new
+balance is now zero.
+
+14
+00:00:51,390 --> 00:01:00,760
+And then we go back and check the previous
+thread which then goes back and copies the
+
+15
+00:01:00,760 --> 00:01:03,829
+stored New Balance information.
+
+16
+00:01:03,829 --> 00:01:09,040
+We go back and finish out the deposit function
+put the balance in as a hundred fifty dollars,
+
+17
+00:01:09,040 --> 00:01:12,940
+which makes sense because if we had a hundred
+dollars and we deposited fifty dollars then
+
+18
+00:01:12,940 --> 00:01:18,020
+we go ahead and put that a hundred fifty value
+back into the common shared variable, which
+
+19
+00:01:18,020 --> 00:01:22,070
+is balance, and then the deposit thread is
+finished; the deposit thread exits.
+
+20
+00:01:22,070 --> 00:01:27,850
+But we have to go back and finish out the
+withdraw thread, and when we do that we get
+
+21
+00:01:27,850 --> 00:01:33,290
+into a lot of trouble because we're going
+to copy New Balance back up into balance and
+
+22
+00:01:33,290 --> 00:01:34,890
+New Balance is now zero.
+
+23
+00:01:34,890 --> 00:01:41,460
+So, our fifty dollars disappeared, because
+it was hidden; what happened is we had asynchrony.
+
+24
+00:01:41,460 --> 00:01:46,520
+We had the deposit function running at the
+same time as the withdrawal function, and
+
+25
+00:01:46,520 --> 00:01:51,820
+the deposit function performed its action,
+asynchronously, with the withdraw function,
+
+26
+00:01:51,820 --> 00:01:55,700
+and the withdraw function never got the update
+according to The New Balance.
+
+27
+00:01:55,700 --> 00:02:00,510
+So, in other words when deposit changed new
+balance, withdraw knew nothing about the new
+
+28
+00:02:00,510 --> 00:02:02,890
+balance and it used the previous balance.
+
+29
+00:02:02,890 --> 00:02:05,730
+So, that over wrote the original balance.
+
+30
+00:02:05,730 --> 00:02:09,140
+So, ultimately what this means is that our
+bank gets a free fifty dollars, and we're
+
+31
+00:02:09,140 --> 00:02:14,200
+going to have to go to the bank and fight
+for our fifty dollars and that's kind of annoying.
+
+32
+00:02:14,200 --> 00:02:18,120
+Thankfully we're going to take care of this
+with critical sections, so that we know that
+
+33
+00:02:18,120 --> 00:02:21,310
+we're not going to change the balance, so
+we're not going to lose our money.
+

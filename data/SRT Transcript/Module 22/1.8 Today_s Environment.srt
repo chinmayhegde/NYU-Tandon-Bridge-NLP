@@ -1,0 +1,292 @@
+1
+00:00:00,640 --> 00:00:05,520
+Today we have a lot of processing power and
+we have a lot of memory: eight gigs, sixteen
+
+2
+00:00:05,520 --> 00:00:06,700
+gigs, thirty-two gigs.
+
+3
+00:00:06,700 --> 00:00:10,600
+I've worked on machines that have one-hundred
+and ninety-two gigs of memory, not hard drive
+
+4
+00:00:10,600 --> 00:00:11,600
+but memory.
+
+5
+00:00:11,600 --> 00:00:15,861
+and we have enough to run multiple programs
+at the same time what we really want to do
+
+6
+00:00:15,861 --> 00:00:17,919
+is what's called multitasking.
+
+7
+00:00:17,919 --> 00:00:23,220
+We want to have the ability to open up a web
+browser, as well as open up Microsoft Word,
+
+8
+00:00:23,220 --> 00:00:28,199
+as well as open up Microsoft Excel, as well
+as open up anything else that we want to open
+
+9
+00:00:28,199 --> 00:00:30,109
+up at the given time.
+
+10
+00:00:30,109 --> 00:00:35,690
+So, in order to do that the operating system
+has to become a resource manager, and what
+
+11
+00:00:35,690 --> 00:00:41,879
+we do is allocate resources to the various
+programs that want to run them.
+
+12
+00:00:41,879 --> 00:00:46,219
+And then the operating system decides which
+programs can run and which programs, and when
+
+13
+00:00:46,219 --> 00:00:47,789
+they can run.
+
+14
+00:00:47,789 --> 00:00:53,320
+The operating system will be responsible for
+stopping and restarting running programs and
+
+15
+00:00:53,320 --> 00:00:55,149
+this is what we call preemption.
+
+16
+00:00:55,149 --> 00:01:00,760
+Now when we restart a running program, we
+don't start over from the beginning we start
+
+17
+00:01:00,760 --> 00:01:02,280
+from where we left off.
+
+18
+00:01:02,280 --> 00:01:08,820
+So, you may not have realized this in your
+‘hello world’ programs but your hello
+
+19
+00:01:08,820 --> 00:01:13,640
+world programs didn't start and run straight
+through to the end; they were stopped and
+
+20
+00:01:13,640 --> 00:01:16,140
+restarted many, many, many times.
+
+21
+00:01:16,140 --> 00:01:18,630
+Not from the beginning just from where we
+left off.
+
+22
+00:01:18,630 --> 00:01:23,110
+So, it's sort of like the operating system
+lets the program do a couple of instructions,
+
+23
+00:01:23,110 --> 00:01:27,399
+in reality it's going to be a lot of instructions
+but let's say a couple of instructions, and
+
+24
+00:01:27,399 --> 00:01:32,299
+then it stops and it saves everything in the
+registers and saves all the information in
+
+25
+00:01:32,299 --> 00:01:35,490
+the CPU and it goes on to doing something
+else entirely.
+
+26
+00:01:35,490 --> 00:01:39,479
+And when it comes back to decide that your
+program is going to run again, all it has
+
+27
+00:01:39,479 --> 00:01:43,610
+to do is restore those values to the CPU and
+let it run.
+
+28
+00:01:43,610 --> 00:01:48,340
+The instruction pointer, sorry… the instruction
+register, the program counter, all the AX,
+
+29
+00:01:48,340 --> 00:01:54,080
+BX: all those registers that are in the CPU
+are going to be saved and restored.
+
+30
+00:01:54,080 --> 00:01:59,770
+So, your program picks up from where you left
+off; you don't actually have to restart the
+
+31
+00:01:59,770 --> 00:02:03,829
+whole process over from scratch it will just
+stop and restart.
+
+32
+00:02:03,829 --> 00:02:06,340
+And this is what we call a timesharing system.
+
+33
+00:02:06,340 --> 00:02:12,129
+Now the reason that your program stops might
+be because it wants to stop; it might want
+
+34
+00:02:12,129 --> 00:02:14,750
+to do something that takes a very, very long
+time.
+
+35
+00:02:14,750 --> 00:02:19,870
+So the operating system says, let's say opening
+up a file which takes a fairly significant
+
+36
+00:02:19,870 --> 00:02:24,780
+amount of time on the order of let's say fifteen
+or twenty milliseconds.
+
+37
+00:02:24,780 --> 00:02:28,510
+The operating system will say okay, if you're
+going to open up that file, there's no reason
+
+38
+00:02:28,510 --> 00:02:31,709
+that you're going to run anymore until I have
+that file open.
+
+39
+00:02:31,709 --> 00:02:36,709
+So, we'll save your settings your registers
+in the CPU, we’ll call your state and then
+
+40
+00:02:36,709 --> 00:02:38,150
+we'll run something else.
+
+41
+00:02:38,150 --> 00:02:42,020
+We'll do some other code; we’ll run another
+program, we'll do anything else.
+
+42
+00:02:42,020 --> 00:02:44,629
+And when your file is loaded and ready to
+go.
+
+43
+00:02:44,629 --> 00:02:49,660
+We'll bring you back and reload those registers
+into the CPU and let you run again because
+
+44
+00:02:49,660 --> 00:02:51,650
+now we have your file available.
+
+45
+00:02:51,650 --> 00:02:57,310
+So the operating system does this very, very
+quickly and it really does this hundreds or
+
+46
+00:02:57,310 --> 00:03:03,330
+even sometimes thousands of times per second
+inside the system, and in doing so it creates
+
+47
+00:03:03,330 --> 00:03:06,689
+an environment that we call a time sharing
+system.
+
+48
+00:03:06,689 --> 00:03:09,260
+And it allows us to run very many applications.
+
+49
+00:03:09,260 --> 00:03:14,520
+So, if you're on a Windows PC right now, you
+can hit control shift escape and you bring
+
+50
+00:03:14,520 --> 00:03:19,410
+up the Task Manager; you go over to performance
+and you can see how many programs, how many
+
+51
+00:03:19,410 --> 00:03:23,660
+processes are actually running, and that's
+probably in the order of between seventy and
+
+52
+00:03:23,660 --> 00:03:26,879
+one-hundred, maybe even more processes that
+are running.
+
+53
+00:03:26,879 --> 00:03:31,159
+If you're on a Mac, you can go to the activity
+monitor in the Applications Utilities folder
+
+54
+00:03:31,159 --> 00:03:33,180
+and you can see that same information.
+
+55
+00:03:33,180 --> 00:03:38,310
+So, what we're saying is that in today's environment,
+going back to the batch multiprogramming days,
+
+56
+00:03:38,310 --> 00:03:42,379
+is something that we absolutely could not
+do; we don't even think that way anymore.
+
+57
+00:03:42,379 --> 00:03:48,020
+If you were restricted to only running Microsoft
+Word and you could never get out of Microsoft
+
+58
+00:03:48,020 --> 00:03:53,140
+Word and go into a web browser and go into
+absolutely anything else or any other program,
+
+59
+00:03:53,140 --> 00:03:57,030
+would you even be able to write a paper and
+I doubt it very much.
+
+60
+00:03:57,030 --> 00:04:01,950
+But that's the way we worked in old environments;
+today we don't expect to work that way.
+
+61
+00:04:01,950 --> 00:04:04,069
+So today we're doing multitasking and we're
+doing time sharing.
+

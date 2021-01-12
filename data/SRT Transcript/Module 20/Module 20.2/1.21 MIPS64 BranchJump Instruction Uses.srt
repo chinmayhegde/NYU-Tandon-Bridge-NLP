@@ -1,0 +1,62 @@
+1
+00:00:00,719 --> 00:00:05,259
+Now let's take a look at an example of how
+jump and branch instructions are used for
+
+2
+00:00:05,259 --> 00:00:06,259
+loops.
+
+3
+00:00:06,259 --> 00:00:08,280
+Consider the following example.
+
+4
+00:00:08,280 --> 00:00:12,720
+We have two integer variables X and Y, both
+greater than zero.
+
+5
+00:00:12,720 --> 00:00:17,240
+The goal is to perform X times Y, without
+using the multiplication instruction.
+
+6
+00:00:17,240 --> 00:00:22,660
+One way to implement this function in a high-level
+C or C++ code is as follows.
+
+7
+00:00:22,660 --> 00:00:26,710
+We have a while loop that uses a decrementing
+counter initialized at Y.
+
+8
+00:00:26,710 --> 00:00:33,310
+Inside the loop, we add X to an accumulator
+as long as the counter is not zero.
+
+9
+00:00:33,310 --> 00:00:38,020
+Note that for this approach, it doesn't matter
+if C and Y are always greater than 0.
+
+10
+00:00:38,020 --> 00:00:42,190
+Another approach is to leverage the fact that
+X and yYare both greater than zero.
+
+11
+00:00:42,190 --> 00:00:46,610
+In that case, we know that the loop will be
+executed at least once.
+
+12
+00:00:46,610 --> 00:00:49,190
+So we can use a do while loop for the code.
+
+13
+00:00:49,190 --> 00:00:53,120
+We will use that second approach to implement
+the MIPS mnemonic code.
+

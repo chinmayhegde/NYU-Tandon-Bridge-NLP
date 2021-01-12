@@ -1,0 +1,19 @@
+1
+00:00:00,410 --> 00:00:04,790
+So we have gone over a high-level view of
+the most important components of a generic
+
+2
+00:00:04,790 --> 00:00:10,519
+CPU, discussed general purpose registers and
+the functionality and we have differentiated
+
+3
+00:00:10,519 --> 00:00:12,519
+the RISC and CISC computer architecture.
+
+4
+00:00:12,519 --> 00:00:17,230
+In this class, we will use a RISC architecture
+known as MIPS to cover the different topics.
+

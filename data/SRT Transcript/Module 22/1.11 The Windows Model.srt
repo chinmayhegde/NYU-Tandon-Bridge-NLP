@@ -1,0 +1,169 @@
+1
+00:00:00,489 --> 00:00:04,351
+I want to show you now, and I hope you don't
+get too concerned by this image that you're
+
+2
+00:00:04,351 --> 00:00:10,469
+going to see, of what the inside of Microsoft
+Windows looks like or at least what Microsoft
+
+3
+00:00:10,469 --> 00:00:13,809
+will tell us the Windows model looks like.
+
+4
+00:00:13,809 --> 00:00:18,340
+And I really want you to concentrate on a
+few items that are below the line, below the
+
+5
+00:00:18,340 --> 00:00:20,220
+solid line.
+
+6
+00:00:20,220 --> 00:00:25,769
+What we're seeing here is the components of
+the kernel, and in fact you can see that indication
+
+7
+00:00:25,769 --> 00:00:30,080
+that shows you kernel mode versus user mode;
+user mode being above and kernel mode being
+
+8
+00:00:30,080 --> 00:00:31,150
+below.
+
+9
+00:00:31,150 --> 00:00:37,070
+Now the lowest level of here that we want
+to consider is the HAL, the hardware abstraction
+
+10
+00:00:37,070 --> 00:00:38,070
+layer.
+
+11
+00:00:38,070 --> 00:00:39,690
+We're going to talk about that in just a minute.
+
+12
+00:00:39,690 --> 00:00:44,650
+But I also want you to see that there are
+some other components for device drivers as
+
+13
+00:00:44,650 --> 00:00:48,060
+well as video drivers, a few things that have
+to be built in.
+
+14
+00:00:48,060 --> 00:00:55,330
+There's a virtual memory manager; those components
+that are the fundamental components of the
+
+15
+00:00:55,330 --> 00:00:58,520
+operating system are down there in kernel
+mode.
+
+16
+00:00:58,520 --> 00:01:01,550
+Now if you remember back from the computer
+architecture discussion.
+
+17
+00:01:01,550 --> 00:01:06,770
+There is kernel mode as well as user mode,
+and we're going to talk about this a lot more
+
+18
+00:01:06,770 --> 00:01:07,969
+in later modules.
+
+19
+00:01:07,969 --> 00:01:12,240
+But kernel mode has complete access to the
+entire system, whereas user mode has a much
+
+20
+00:01:12,240 --> 00:01:13,799
+more limited access.
+
+21
+00:01:13,799 --> 00:01:18,469
+So, what I want you to get away and take away
+from this is that Windows is of course a very
+
+22
+00:01:18,469 --> 00:01:22,939
+complex model, it's been around it's been
+being developed now for over thirty years,
+
+23
+00:01:22,939 --> 00:01:25,429
+so it's a very complex model.
+
+24
+00:01:25,429 --> 00:01:30,340
+But what I want you to see is that at the
+very bottom there's only a few layers that
+
+25
+00:01:30,340 --> 00:01:34,899
+directly communicate even inside the operating
+system with system hardware, and there's good
+
+26
+00:01:34,899 --> 00:01:36,899
+reason for that.
+
+27
+00:01:36,899 --> 00:01:41,850
+Inside the kernel mode, we just keep track
+of processes and other things, most of the
+
+28
+00:01:41,850 --> 00:01:46,670
+work of the Windows kernel is actually done
+outside of kernel mode.
+
+29
+00:01:46,670 --> 00:01:51,240
+And the reason for that is one of security
+as well as organization and it's much easier
+
+30
+00:01:51,240 --> 00:01:55,549
+to update things that are outside of the kernel,
+than things that are inside of the kernel.
+
+31
+00:01:55,549 --> 00:02:00,670
+So, take a look at this image just don't,
+don’t memorize it don't, don't study it
+
+32
+00:02:00,670 --> 00:02:01,790
+too hard.
+
+33
+00:02:01,790 --> 00:02:07,979
+Just take away some of the major components
+of it that you can at least keep track of.
+
+34
+00:02:07,979 --> 00:02:12,500
+And understand that modular operating system
+design is really what we absolutely have to
+
+35
+00:02:12,500 --> 00:02:16,610
+do today, because there are so many things
+that the operating system has to do just even
+
+36
+00:02:16,610 --> 00:02:17,860
+to run the first program.
+

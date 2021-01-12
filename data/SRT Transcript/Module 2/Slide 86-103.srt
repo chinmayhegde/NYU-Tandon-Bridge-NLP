@@ -1,0 +1,138 @@
+1
+00:00:00,530 --> 00:00:05,770
+We’ll talk about the binary number system
+in much more detail in a few minutes. But
+
+2
+00:00:05,770 --> 00:00:11,679
+let's take a look at another very important
+number system: the hexadecimal number system.
+
+3
+00:00:11,679 --> 00:00:17,910
+which is also called the base sixteen. Let's
+start counting in base sixteen this time.
+
+4
+00:00:17,910 --> 00:00:26,770
+So zero, one, two, three, four, five, six,
+seven, eight, nine, after nine. So now we
+
+5
+00:00:26,770 --> 00:00:35,109
+have a problem, because we are still not supposed
+to group the ones to a ten at this stage,
+
+6
+00:00:35,109 --> 00:00:42,980
+right we are grouping only sixteen ones to
+hexadecimal ten but we don't have any more
+
+7
+00:00:42,980 --> 00:00:50,230
+digits anymore symbols to use for a single
+digit number. So, when we worked with the
+
+8
+00:00:50,230 --> 00:00:54,769
+number systems that are less than ten, I don't
+know, the octave, the binary, we just used
+
+9
+00:00:54,769 --> 00:00:59,570
+a subset of the digits zero to nine. For the
+octal, we use zero to seven. For binary, we
+
+10
+00:00:59,570 --> 00:01:05,649
+use zero to nine. But, now that we have a
+bigger number system, in this case base sixteen,
+
+11
+00:01:05,649 --> 00:01:07,750
+we need additional symbols.
+
+12
+00:01:07,750 --> 00:01:14,590
+So, the common symbols for basics in common
+digits for basic things is zero to nine, which
+
+13
+00:01:14,590 --> 00:01:22,219
+are the first ten digits we use anyway. And
+then we need five more, that would be the
+
+14
+00:01:22,219 --> 00:01:28,440
+first five letters in the English alphabet
+A.B.C. D. E. and F.. So after nine, instead
+
+15
+00:01:28,440 --> 00:01:35,100
+of grouping together and moving to the next
+position, we still have a single digit number
+
+16
+00:01:35,100 --> 00:01:42,200
+represents the quantity of ten. That is A
+and then we have B. C. D. E. and F. which
+
+17
+00:01:42,200 --> 00:01:48,299
+represents the amount of fifteen object, see
+still a single digit number, and then the
+
+18
+00:01:48,299 --> 00:01:56,000
+sixteenth object would be grouped into a single
+ten and the next position , a decimal ten
+
+19
+00:01:56,000 --> 00:02:03,399
+so we have one and zero additional ones. And
+then we have eleven, twelve, thirteen, nineteen,
+
+20
+00:02:03,399 --> 00:02:11,550
+after nineteen comes. I hope you didn't say
+twenty, it's 1a right? Because after one hexadecimal
+
+21
+00:02:11,550 --> 00:02:17,760
+ten and nine ones we have one hexadecimal
+tens and ten ones that are still not grouped,
+
+22
+00:02:17,760 --> 00:02:26,019
+that is written 1a, after that we have 1b,
+1c, up to 1f. After 1f, now comes the twenty,
+
+23
+00:02:26,019 --> 00:02:32,440
+because we are grouping sixteen ones into
+a single hexadecimal ten. In this case, we
+
+24
+00:02:32,440 --> 00:02:38,590
+would have two tens and no additional ones.
+Twenty one, twenty two, twenty three, up to
+
+25
+00:02:38,590 --> 00:02:46,320
+2f, then would come for thirty and so on.
+Can you think what comes before one hundred?
+
+26
+00:02:46,320 --> 00:02:54,489
+Hope you said f.f. because it represents fifteen
+tens and fifteen ones. The next one would
+
+27
+00:02:54,489 --> 00:03:00,810
+be grouped into another ten then we would
+have sixteen ten, grouped into one hundred
+
+28
+00:03:00,810 --> 00:03:01,339
+and so on.
+

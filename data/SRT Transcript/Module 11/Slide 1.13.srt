@@ -1,0 +1,54 @@
+0:00:00.719,0:00:03.040
+So what can we do with heap dynamic arrays?
+
+0:00:03.040,0:00:06.830
+Thankfully everything that we can do with
+normal arrays.
+
+0:00:06.830,0:00:12.260
+All the normal arrays we've been working with
+are actually just pointers to stack dynamic
+
+0:00:12.260,0:00:13.260
+arrays.
+
+0:00:13.260,0:00:18.660
+So even when we created those old stack dynamic
+arrays that you did in previous modules you
+
+0:00:18.660,0:00:23.779
+actually had a pointer to the base of a stack
+dynamic array.
+
+0:00:23.779,0:00:29.050
+Well now we have the pointer to the base of
+a heap dynamic array and we can do everything
+
+0:00:29.050,0:00:31.929
+that we could do with the old stack dynamic
+arrays.
+
+0:00:31.929,0:00:37.680
+There's really no difference heap dynamic
+arrays work just the same way as stack dynamic
+
+0:00:37.680,0:00:38.680
+arrays.
+
+0:00:38.680,0:00:42.890
+We can still use the square brackets operators
+to access each of the individual elements.
+
+0:00:42.890,0:00:48.250
+We also now if we wanted to could use the
+star operator dereference operator to access
+
+0:00:48.250,0:00:49.960
+just the first element.
+
+0:00:49.960,0:00:54.270
+So we see that there's really no difference
+between a heap dynamic array and a stack dynamic
+
+0:00:54.270,0:00:54.770
+array.

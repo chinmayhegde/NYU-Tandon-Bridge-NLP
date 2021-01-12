@@ -1,0 +1,409 @@
+1
+00:00:00,480 --> 00:00:04,819
+The operating system has to meet a number
+of requirements, in terms of taking care of
+
+2
+00:00:04,819 --> 00:00:05,860
+main memory.
+
+3
+00:00:05,860 --> 00:00:08,990
+The first one is relocation.
+
+4
+00:00:08,990 --> 00:00:15,059
+In years past, the operating system, or rather
+the program, would be the only thing running
+
+5
+00:00:15,059 --> 00:00:16,059
+on the system.
+
+6
+00:00:16,059 --> 00:00:20,759
+If we look back at the old era of the IBM
+mainframes, or even older than that when we
+
+7
+00:00:20,759 --> 00:00:25,529
+look at really big computers, there was only
+ever one program running on the system at
+
+8
+00:00:25,529 --> 00:00:31,609
+any given time, and since there was only one
+program that program had access to the entirety
+
+9
+00:00:31,609 --> 00:00:34,239
+of main memory; it could do whatever it wanted
+with it.
+
+10
+00:00:34,239 --> 00:00:41,230
+So, in reality the programmer had access to
+all of main memory inside his program and
+
+11
+00:00:41,230 --> 00:00:46,780
+the programmer could put portions of the program,
+portions of data, portions of code, anywhere
+
+12
+00:00:46,780 --> 00:00:49,190
+he wanted inside main memory.
+
+13
+00:00:49,190 --> 00:00:51,719
+Unfortunately, that's not true anymore.
+
+14
+00:00:51,719 --> 00:00:56,910
+We're looking at a system where we have a
+lot of programs running, and we don't know
+
+15
+00:00:56,910 --> 00:01:00,360
+what the order of the programs is that are
+going to start; we don't know what's free
+
+16
+00:01:00,360 --> 00:01:05,020
+when a program starts, we don't know what's
+occupied when a program starts.
+
+17
+00:01:05,020 --> 00:01:09,910
+And the operating system is going to have
+to be responsible for putting a running program
+
+18
+00:01:09,910 --> 00:01:15,700
+into a particular space in main memory and
+during its lifetime even while the program
+
+19
+00:01:15,700 --> 00:01:20,810
+is running, not actively running on the CPU,
+but maybe in the ready state or in the block
+
+20
+00:01:20,810 --> 00:01:24,150
+state or even in one of the suspended states.
+
+21
+00:01:24,150 --> 00:01:29,060
+The operating system should be able to relocate
+that process to a completely different section
+
+22
+00:01:29,060 --> 00:01:34,180
+of main memory, I mean actually take it and
+move it to a different place in main memory.
+
+23
+00:01:34,180 --> 00:01:37,900
+And so, that's relocation and the operating
+system has to be able to do that, so that's
+
+24
+00:01:37,900 --> 00:01:39,750
+one of our requirements.
+
+25
+00:01:39,750 --> 00:01:41,480
+Another requirement is protection.
+
+26
+00:01:41,480 --> 00:01:47,610
+The operating system will be the only entity
+in the computer system, which is allowed to
+
+27
+00:01:47,610 --> 00:01:49,810
+access all of main memory.
+
+28
+00:01:49,810 --> 00:01:56,610
+A program cannot be allowed to access another
+program's memory space, and that's a prime
+
+29
+00:01:56,610 --> 00:01:59,670
+tenet of memory management.
+
+30
+00:01:59,670 --> 00:02:05,190
+So, that we need to make sure that one program
+cannot interfere with another running program
+
+31
+00:02:05,190 --> 00:02:06,190
+in the system.
+
+32
+00:02:06,190 --> 00:02:10,729
+In fact, one program shouldn't even know that
+another program is necessarily running without
+
+33
+00:02:10,729 --> 00:02:12,409
+the intervention of the operating system.
+
+34
+00:02:12,409 --> 00:02:16,459
+Now obviously, two programs may need to communicate
+and we have facilities for doing that; we
+
+35
+00:02:16,459 --> 00:02:19,379
+have the inter-process communication facility.
+
+36
+00:02:19,379 --> 00:02:25,170
+But overall, we should say that protection
+should be enforced, such that one program
+
+37
+00:02:25,170 --> 00:02:28,109
+cannot access another program's memory space.
+
+38
+00:02:28,109 --> 00:02:34,120
+And we saw this in when we've talking about
+pointers in earlier modules, because if we
+
+39
+00:02:34,120 --> 00:02:39,580
+let the pointer go outside the memory space
+of the program then the program would be shut
+
+40
+00:02:39,580 --> 00:02:41,670
+down and that was protection.
+
+41
+00:02:41,670 --> 00:02:46,719
+If you remember or if you ever saw that message
+that came up in Windows it says, “Microsoft
+
+42
+00:02:46,719 --> 00:02:50,790
+is sorry but your program has performed an
+illegal operation,” that's a protection
+
+43
+00:02:50,790 --> 00:02:51,790
+mechanism.
+
+44
+00:02:51,790 --> 00:02:57,030
+Your program, probably via a pointer, was
+trying to access memory outside of its memory
+
+45
+00:02:57,030 --> 00:03:02,550
+space, and so Windows intervened and said
+that's not allowed and it shut your program
+
+46
+00:03:02,550 --> 00:03:04,689
+down immediately.
+
+47
+00:03:04,689 --> 00:03:10,159
+One of the problems with this is that the
+operating system can't prescreen.
+
+48
+00:03:10,159 --> 00:03:15,079
+We can't go through and look at all the memory
+accesses that your program is going to do
+
+49
+00:03:15,079 --> 00:03:19,019
+before you actually do them, because that
+would take just too much time.
+
+50
+00:03:19,019 --> 00:03:20,469
+It has to be done dynamically.
+
+51
+00:03:20,469 --> 00:03:26,299
+So as you make a memory request, the CPU,
+the hardware actually has to look at the memory
+
+52
+00:03:26,299 --> 00:03:31,450
+request and decide whether it's in your memory
+space, your program's memory space, or outside
+
+53
+00:03:31,450 --> 00:03:34,109
+your program's memory space and should be
+terminated.
+
+54
+00:03:34,109 --> 00:03:35,799
+So that's protection.
+
+55
+00:03:35,799 --> 00:03:40,170
+We also have some situations where sharing
+might make sense, and we'll talk about these
+
+56
+00:03:40,170 --> 00:03:41,370
+later on.
+
+57
+00:03:41,370 --> 00:03:46,049
+Where the process is actually going to share
+code with another process.
+
+58
+00:03:46,049 --> 00:03:50,959
+In fact we're going to talk about one situation
+where we execute a process, and then we fork
+
+59
+00:03:50,959 --> 00:03:55,450
+and create an exact duplicate of this process
+as a new process.
+
+60
+00:03:55,450 --> 00:03:57,939
+So, we'll talk about that in a little bit.
+
+61
+00:03:57,939 --> 00:04:01,549
+We can talk about logical organization where
+we create modules.
+
+62
+00:04:01,549 --> 00:04:06,879
+So, a lot of programs are written these days
+using shared objects or dynamically linked
+
+63
+00:04:06,879 --> 00:04:12,280
+libraries and what this is is rather than
+creating every possible function.
+
+64
+00:04:12,280 --> 00:04:17,600
+So, for example when you were writing your
+“hello world” program, your simple “hello
+
+65
+00:04:17,600 --> 00:04:23,460
+world “programs, you didn't overload the
+output operator for the IO stream class.
+
+66
+00:04:23,460 --> 00:04:28,700
+You had a library that did that for you and
+all you had to do was pound include IO stream.
+
+67
+00:04:28,700 --> 00:04:35,030
+Well what that did was tell the operating
+system that, through a lot of steps I'm oversimplifying
+
+68
+00:04:35,030 --> 00:04:39,642
+it, but that tells the operating system that
+you're going to use a library and one of the
+
+69
+00:04:39,642 --> 00:04:44,760
+libraries is the Microsoft Visual C++ library
+MSVCRTDLL.
+
+70
+00:04:44,760 --> 00:04:51,170
+Inside that library is the code for the function
+on how to output to C-out to the O-stream
+
+71
+00:04:51,170 --> 00:04:52,710
+class.
+
+72
+00:04:52,710 --> 00:04:59,290
+So you don't write that code, it's already
+in Windows and every program that uses C++
+
+73
+00:04:59,290 --> 00:05:00,910
+has use for that code.
+
+74
+00:05:00,910 --> 00:05:03,600
+Well we don’t want to load that code with
+every program.
+
+75
+00:05:03,600 --> 00:05:08,280
+We want to load that code once and have it
+shared between every program that was written
+
+76
+00:05:08,280 --> 00:05:09,700
+in C++.
+
+77
+00:05:09,700 --> 00:05:15,040
+So that might be seventy programs and we only
+have one copy of that MSVCRTDLL, it's not
+
+78
+00:05:15,040 --> 00:05:19,070
+a large DLL maybe it takes up only one megabyte
+or two megabytes.
+
+79
+00:05:19,070 --> 00:05:21,890
+But if we're talking about seventy different
+programs using it.
+
+80
+00:05:21,890 --> 00:05:25,950
+That means we're saving between seventy and
+one hundred forty megabytes of memory and
+
+81
+00:05:25,950 --> 00:05:29,140
+that all of a sudden becomes significant.
+
+82
+00:05:29,140 --> 00:05:33,180
+And then we'll talk about the memory management
+requirement of physical organization, which
+
+83
+00:05:33,180 --> 00:05:38,030
+is really just how we map a logical memory
+addresses to physical memory addresses.
+
+84
+00:05:38,030 --> 00:05:40,800
+So, these are the requirements that we have
+to meet.
+
+85
+00:05:40,800 --> 00:05:46,250
+So, we've got relocation, protection, sharing,
+logical organization, and physical organization.
+
+86
+00:05:46,250 --> 00:05:50,120
+And those are the requirements that the operating
+system has to meet in order to complete its
+
+87
+00:05:50,120 --> 00:05:51,590
+memory management tasks.
+

@@ -1,0 +1,208 @@
+1
+00:00:00,520 --> 00:00:05,450
+Now we have a good basis for how to create
+classes and when to create classes, there's
+
+2
+00:00:05,450 --> 00:00:10,480
+something else that we can do in C++ which
+is really great; and that's called inheritance.
+
+3
+00:00:10,480 --> 00:00:16,870
+Inheritance allows us to create really, really
+complex classes out of simpler ones; not just
+
+4
+00:00:16,870 --> 00:00:22,990
+with composition, not just with adding elements
+into a class, but what we can really do here
+
+5
+00:00:22,990 --> 00:00:28,020
+is create what we call the is a situation
+or the is a solution.
+
+6
+00:00:28,020 --> 00:00:34,910
+I'll give you a couple of very simple examples:
+a car is a vehicle, or a circle is an object
+
+7
+00:00:34,910 --> 00:00:38,110
+or, for example, a student is a person.
+
+8
+00:00:38,110 --> 00:00:45,680
+What we're saying is that the car class should
+contain everything that the vehicle class
+
+9
+00:00:45,680 --> 00:00:46,680
+can contain.
+
+10
+00:00:46,680 --> 00:00:50,690
+So anything you can do with a vehicle, you
+could do with a car.
+
+11
+00:00:50,690 --> 00:00:54,399
+The person is the same sort of thing, any
+information we'd like to store about a person,
+
+12
+00:00:54,399 --> 00:00:56,320
+we'd also like to store about a student.
+
+13
+00:00:56,320 --> 00:01:01,410
+So for storing things like name, and height
+and age and that sort of stuff for a person,
+
+14
+00:01:01,410 --> 00:01:05,939
+we'd like to store that same information as
+a student but we also like to store additional
+
+15
+00:01:05,939 --> 00:01:09,210
+information in a student that's not in a person.
+
+16
+00:01:09,210 --> 00:01:17,619
+So what we're creating here is a larger more
+complex derived class from an existing base
+
+17
+00:01:17,619 --> 00:01:18,619
+class.
+
+18
+00:01:18,619 --> 00:01:25,639
+So using the base class as just a form so
+that we can add things and not have to reimplement
+
+19
+00:01:25,639 --> 00:01:29,310
+all the work that was done to create the base
+class.
+
+20
+00:01:29,310 --> 00:01:34,399
+Now the great part about inheritance is that
+all the items all the functions, all the data,
+
+21
+00:01:34,399 --> 00:01:39,729
+everything that was in the base class is automatically
+going to be in the derived class.
+
+22
+00:01:39,729 --> 00:01:44,560
+Unfortunately, we don't copy over the constructors,
+so the constructors for the base class don't
+
+23
+00:01:44,560 --> 00:01:49,299
+come over to the derived class; we have to
+recreate any constructors that we might want.
+
+24
+00:01:49,299 --> 00:01:53,240
+But we also have the ability to call those
+base class constructors so it's not as difficult
+
+25
+00:01:53,240 --> 00:01:54,909
+as it might seem.
+
+26
+00:01:54,909 --> 00:01:58,969
+The derived class, of course, can add any
+new material that it wants to add; anything
+
+27
+00:01:58,969 --> 00:02:04,069
+that we want to put into the derived class
+that doesn't exist in the base class can obviously
+
+28
+00:02:04,069 --> 00:02:05,819
+be put in.
+
+29
+00:02:05,819 --> 00:02:10,610
+The derived class can create new versions
+of existing functions and then it's called
+
+30
+00:02:10,610 --> 00:02:11,610
+overriding.
+
+31
+00:02:11,610 --> 00:02:17,380
+We can override a function that exists in
+the base class by creating a new function
+
+32
+00:02:17,380 --> 00:02:22,300
+in the derived class which does similar things
+which has the same parameter list which has
+
+33
+00:02:22,300 --> 00:02:23,490
+the same name.
+
+34
+00:02:23,490 --> 00:02:27,090
+One thing that we're going to come into play
+with, that's going to come into play here,
+
+35
+00:02:27,090 --> 00:02:33,650
+is that we are not changing any of the accessors;
+so public is still public and private and
+
+36
+00:02:33,650 --> 00:02:34,880
+is still private.
+
+37
+00:02:34,880 --> 00:02:38,890
+And if you remember I said that inside the
+only member functions of a class can access
+
+38
+00:02:38,890 --> 00:02:44,270
+private data; does that mean that member functions
+of a derived class can access private data?
+
+39
+00:02:44,270 --> 00:02:50,970
+The answer is no: member functions of a derived
+class cannot access private data of a base
+
+40
+00:02:50,970 --> 00:02:51,970
+class.
+
+41
+00:02:51,970 --> 00:02:57,650
+Obviously, member functions of a derived class
+can access its own private data, but not that
+
+42
+00:02:57,650 --> 00:02:58,680
+of the base class.
+
+43
+00:02:58,680 --> 00:03:04,150
+So we have to take that into account when
+we look at accessing private information.
+
+44
+00:03:04,150 --> 00:03:07,650
+The derived classes member functions can’t
+access the base class’ private data.
+

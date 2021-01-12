@@ -1,0 +1,10 @@
+1
+00:00:00,719 --> 00:00:05,279
+The immediate value of DADDI is hardcoded
+in the instruction itself.
+
+2
+00:00:05,279 --> 00:00:07,839
+So there is no need to go to memory to get
+it.
+

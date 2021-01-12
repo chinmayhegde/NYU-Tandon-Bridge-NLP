@@ -1,0 +1,77 @@
+1
+00:00:00,669 --> 00:00:05,380
+During the decode step, the CPU determines
+the operation that the instruction needs to
+
+2
+00:00:05,380 --> 00:00:10,860
+perform, obtains the register values that
+may be needed, and allocates the functional
+
+3
+00:00:10,860 --> 00:00:14,679
+resources that the instruction needs for its
+operation.
+
+4
+00:00:14,679 --> 00:00:19,860
+For the purposes of our CPU, we only need
+one functional unit: an ALU.
+
+5
+00:00:19,860 --> 00:00:23,780
+This is because our CPU does not have complex
+instructions.
+
+6
+00:00:23,780 --> 00:00:28,460
+The same ALU is used for all operations that
+the CPU needs to perform.
+
+7
+00:00:28,460 --> 00:00:33,180
+This ALU has two outputs ALUOut1 and ALUOut2.
+
+8
+00:00:33,180 --> 00:00:38,309
+Here is a little bit mor e detail on the decode
+step for our CPU.
+
+9
+00:00:38,309 --> 00:00:44,969
+During that step, our CPU automatically accesses
+the registers for the Rs and Rt operands and
+
+10
+00:00:44,969 --> 00:00:50,280
+sign-extends the 16-bit immediate value, regardless
+of the instruction type.
+
+11
+00:00:50,280 --> 00:00:57,839
+The CPU then puts the value of Rs in a special
+register called A, It puts the value of Rt
+
+12
+00:00:57,839 --> 00:01:03,580
+into a special register called B, and it puts
+the sign-extended value into a special register
+
+13
+00:01:03,580 --> 00:01:06,310
+called I MM, or immediate.
+
+14
+00:01:06,310 --> 00:01:13,200
+Note that A, B, and I MM, are special registers
+like PC and IR and cannot be accessed by the
+
+15
+00:01:13,200 --> 00:01:14,200
+code.
+
+16
+00:01:14,200 --> 00:01:20,140
+They are only used to store temporary parameters
+that the CPU needs to complete the instruction.
+

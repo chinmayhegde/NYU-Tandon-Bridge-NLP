@@ -1,0 +1,137 @@
+1
+00:00:01,920 --> 00:00:08,380
+So the brain of the computer is what's known
+as the central processing unit or the CPU
+
+2
+00:00:08,380 --> 00:00:14,080
+and this is where all of the processing, all
+of the data processing, all the commands that
+
+3
+00:00:14,080 --> 00:00:16,340
+we're going to run inside of a computer.
+
+4
+00:00:16,340 --> 00:00:18,260
+This is where all that is done.
+
+5
+00:00:18,260 --> 00:00:23,859
+It is a single piece of silicon in the form
+of a chip designed and manufactured by a company
+
+6
+00:00:23,859 --> 00:00:31,570
+like Intel or AMD. or there's a few others
+that produce these chips, and this is the
+
+7
+00:00:31,570 --> 00:00:37,210
+only location in the entire system where code
+can actually be run.
+
+8
+00:00:37,210 --> 00:00:41,319
+Now the code that's going to run here is not
+the code that we're going to write, at least
+
+9
+00:00:41,319 --> 00:00:43,760
+not in the first parts of this course.
+
+10
+00:00:43,760 --> 00:00:46,399
+The code that we're going to write in the
+first part of this course is what's known
+
+11
+00:00:46,399 --> 00:00:51,569
+as a high level language and the CPU only
+runs machine language code.
+
+12
+00:00:51,569 --> 00:00:55,920
+Machine language code is not easy to write
+and we will do something a little bit like
+
+13
+00:00:55,920 --> 00:01:00,319
+it but it will then convert to machine language
+code.
+
+14
+00:01:00,319 --> 00:01:06,159
+In short machine language codes for machines
+and human code is for… higher level code
+
+15
+00:01:06,159 --> 00:01:07,240
+is for humans.
+
+16
+00:01:07,240 --> 00:01:13,520
+The CPU operates on a fetch, decode, execute
+cycle which we'll talk about in just a little
+
+17
+00:01:13,520 --> 00:01:20,610
+bit, but it runs this cycle very very quickly
+and when it's running this cycle each CPU
+
+18
+00:01:20,610 --> 00:01:24,350
+has its own set of instructions which it understands.
+
+19
+00:01:24,350 --> 00:01:30,219
+So the CPU has a language for itself if you
+will.
+
+20
+00:01:30,219 --> 00:01:35,070
+Each CPU really only has a small amount of
+memory, there's not a lot of memory inside
+
+21
+00:01:35,070 --> 00:01:37,659
+the CPU and those are called registers.
+
+22
+00:01:37,659 --> 00:01:42,930
+And the registers are where we store information
+temporarily, in order to do the immediate
+
+23
+00:01:42,930 --> 00:01:44,039
+processing.
+
+24
+00:01:44,039 --> 00:01:47,430
+But we only have a few of these registers
+so we have to be…
+
+25
+00:01:47,430 --> 00:01:52,530
+When we're writing machine language code,
+we have to be very careful to use them without
+
+26
+00:01:52,530 --> 00:01:54,240
+wasting the memory.
+
+27
+00:01:54,240 --> 00:02:01,789
+And the CPU may have a cache memory which
+can perform more quickly than main memory,
+
+28
+00:02:01,789 --> 00:02:06,249
+but it's not really much of a concern for
+us because as programmers we don't have a
+
+29
+00:02:06,249 --> 00:02:11,330
+lot of capability for working with cache memory,
+in terms of what's inside the CPU.
+

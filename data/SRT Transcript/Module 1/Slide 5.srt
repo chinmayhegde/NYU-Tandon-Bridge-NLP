@@ -1,0 +1,71 @@
+1
+00:00:01,790 --> 00:00:07,880
+So in this image, we've got what looks like
+the inside of a desktop computer and you're
+
+2
+00:00:07,880 --> 00:00:14,150
+seeing hopefully what you would expect to
+see when you open up a regular desktop computer.
+
+3
+00:00:14,150 --> 00:00:17,680
+In the upper right there we've got the power
+supply, which has the big label that says
+
+4
+00:00:17,680 --> 00:00:19,270
+Dell on it.
+
+5
+00:00:19,270 --> 00:00:24,520
+And below that is what we call the main board
+or motherboard of the computer where we have
+
+6
+00:00:24,520 --> 00:00:28,340
+most of the main components related to the
+computer.
+
+7
+00:00:28,340 --> 00:00:30,550
+Down below it you'll see the CPU.
+
+8
+00:00:30,550 --> 00:00:32,340
+The memory is off to the left.
+
+9
+00:00:32,340 --> 00:00:36,000
+A little bit further than that you have the
+secondary storage device which in this case
+
+10
+00:00:36,000 --> 00:00:38,980
+looks like a spinning hard drive.
+
+11
+00:00:38,980 --> 00:00:43,530
+All the way up in the upper left we have the
+tertiary storage device which looks like a
+
+12
+00:00:43,530 --> 00:00:47,720
+CD-ROM and then run about the middle we have
+the video controller card.
+
+13
+00:00:47,720 --> 00:00:54,090
+So these are the major macro components of
+what's inside of a computer and each of them
+
+14
+00:00:54,090 --> 00:01:00,060
+communicate with each other through the main
+board which has components known as the system
+
+15
+00:01:00,060 --> 00:01:01,940
+bus, which we're going to talk about in a
+little bit.
+

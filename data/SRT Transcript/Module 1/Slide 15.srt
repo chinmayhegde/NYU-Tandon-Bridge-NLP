@@ -1,0 +1,100 @@
+1
+00:00:02,090 --> 00:00:06,769
+RAM is another term that we use for main memory
+and that's because of it's the way it's constructed
+
+2
+00:00:06,769 --> 00:00:12,560
+it's known as random access memory because
+any place in the memory can be accessed in
+
+3
+00:00:12,560 --> 00:00:17,230
+the same amount of time, which in computer
+science is known as random time.
+
+4
+00:00:17,230 --> 00:00:22,260
+So we can access any byte of main memory at
+the same amount of time.
+
+5
+00:00:22,260 --> 00:00:27,590
+The areas of main memory inside RAM are broken
+down into bytes and each byte is access independently,
+
+6
+00:00:27,590 --> 00:00:33,090
+so we can access all of the bytes of main
+memory as individual bytes or we can group
+
+7
+00:00:33,090 --> 00:00:39,690
+them together in terms of known as a word
+or D word or cue word double word or quad
+
+8
+00:00:39,690 --> 00:00:41,280
+word.
+
+9
+00:00:41,280 --> 00:00:46,570
+Usually they're accessed in terms of the data
+types which we're accessing might have a particular
+
+10
+00:00:46,570 --> 00:00:47,570
+size.
+
+11
+00:00:47,570 --> 00:00:52,809
+So for example in C++ it's very common to
+have an integer which is a size of four bytes
+
+12
+00:00:52,809 --> 00:00:55,999
+which is equivalent to a D word or double
+word.
+
+13
+00:00:55,999 --> 00:01:00,500
+Unfortunately was RAM, as we said when the
+computers turned off everything in RAM is
+
+14
+00:01:00,500 --> 00:01:05,360
+lost, all of it is completely erased and that's
+by virtue of its design.
+
+15
+00:01:05,360 --> 00:01:11,320
+So once the electrical power is shut down
+to RAM, then the RAM no longer contains any
+
+16
+00:01:11,320 --> 00:01:13,090
+information.
+
+17
+00:01:13,090 --> 00:01:18,009
+When running a program all the machine language
+instructions are brought into RAM and then
+
+18
+00:01:18,009 --> 00:01:23,310
+there one by one pulled by the CPU during
+the fetch and execute cycle into that instruction
+
+19
+00:01:23,310 --> 00:01:25,139
+register and then process.
+
+20
+00:01:25,139 --> 00:01:31,899
+So RAM is an absolutely critical portion of
+the system and we have to know how it works
+
+21
+00:01:31,899 --> 00:01:32,759
+in order to use.
+

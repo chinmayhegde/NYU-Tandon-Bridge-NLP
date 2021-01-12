@@ -1,0 +1,76 @@
+1
+00:00:00,799 --> 00:00:07,020
+The hardware provides us with the mutual exclusion
+protection mechanism, built into it; we have
+
+2
+00:00:07,020 --> 00:00:13,330
+the system bus, and we know that the system
+bus can only be used by one processor at any
+
+3
+00:00:13,330 --> 00:00:14,330
+given time.
+
+4
+00:00:14,330 --> 00:00:19,051
+So, even in this scenario where we have symmetric
+multiprocessing, with multi processors in
+
+5
+00:00:19,051 --> 00:00:25,060
+the system, we recognize that it's impossible
+for two processors to change the same memory
+
+6
+00:00:25,060 --> 00:00:26,300
+location at the same time.
+
+7
+00:00:26,300 --> 00:00:32,040
+It is absolutely impossible because one of
+those processors will gain access to the system
+
+8
+00:00:32,040 --> 00:00:37,440
+boss will be allowed to change that memory
+location and then the other will have to wait.
+
+9
+00:00:37,440 --> 00:00:42,910
+So, we have a protection mechanism built directly
+into hardware just by the nature of the way
+
+10
+00:00:42,910 --> 00:00:48,420
+we do things, so that we can't change a memory
+location to two different values at the same
+
+11
+00:00:48,420 --> 00:00:49,420
+time.
+
+12
+00:00:49,420 --> 00:00:54,490
+So, what we'd like to do is develop something
+that we can use at a much higher level, to
+
+13
+00:00:54,490 --> 00:01:01,219
+protect our code in C++ or in a high level
+language, from any problems that might happen
+
+14
+00:01:01,219 --> 00:01:03,180
+because of mutual exclusion cases.
+
+15
+00:01:03,180 --> 00:01:08,330
+So, having that fundamental hardware mechanism
+is very useful, is helpful, but ultimately
+
+16
+00:01:08,330 --> 00:01:12,020
+we need something a lot easier to deal with
+on a high level and we'll see that.
+

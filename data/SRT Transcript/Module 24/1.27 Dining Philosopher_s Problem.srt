@@ -1,0 +1,184 @@
+1
+00:00:00,719 --> 00:00:04,930
+I'd like to take a look at one classic computer
+science problem.
+
+2
+00:00:04,930 --> 00:00:10,750
+It was first presented by Dr. Edsger Dijkstra
+who was a famous computer scientist that you're
+
+3
+00:00:10,750 --> 00:00:15,690
+going to hear a lot about Dr. Dijkstra with
+his various assorted algorithms throughout
+
+4
+00:00:15,690 --> 00:00:18,490
+your careers in computer science.
+
+5
+00:00:18,490 --> 00:00:23,651
+But it's a computer, sorry, it’s a concurrency
+control problem and what he said was… and
+
+6
+00:00:23,651 --> 00:00:30,420
+I really have no idea how he came up with
+this idea, this scenario but somehow he created
+
+7
+00:00:30,420 --> 00:00:31,420
+it.
+
+8
+00:00:31,420 --> 00:00:34,570
+He said that there's a house where we have
+five philosophers and the Philosopher's are
+
+9
+00:00:34,570 --> 00:00:36,590
+numbered 0 through 4.
+
+10
+00:00:36,590 --> 00:00:40,680
+And they alternate, they only do two things,
+philosophers only do two things: they eat
+
+11
+00:00:40,680 --> 00:00:42,210
+and they think.
+
+12
+00:00:42,210 --> 00:00:47,760
+And when it's time to eat, somebody, we were
+not figuring out who, sets up a circular table
+
+13
+00:00:47,760 --> 00:00:50,000
+and it has a place setting for each philosopher.
+
+14
+00:00:50,000 --> 00:00:54,270
+And the place setting consists of one fork
+on the left side, and one plate in front of
+
+15
+00:00:54,270 --> 00:00:55,720
+the philosopher.
+
+16
+00:00:55,720 --> 00:00:59,560
+The meal unfortunately that they're going
+to eat is a particularly difficult to eat
+
+17
+00:00:59,560 --> 00:01:00,560
+kind of spaghetti.
+
+18
+00:01:00,560 --> 00:01:01,980
+I’m quoting dr.
+
+19
+00:01:01,980 --> 00:01:06,540
+Dijkstra here, this is not me, this is Dijkstra's
+dining philosophers problem.
+
+20
+00:01:06,540 --> 00:01:11,490
+I don't know why spaghetti, or why you eat
+spaghetti with two forks, but he said that
+
+21
+00:01:11,490 --> 00:01:15,250
+you need to have two forks to eat this kind
+of spaghetti.
+
+22
+00:01:15,250 --> 00:01:18,670
+And unfortunately, each philosopher is only
+given one fork.
+
+23
+00:01:18,670 --> 00:01:23,360
+But we recognize that there's a fork on the
+left of the philosopher and a fork on the
+
+24
+00:01:23,360 --> 00:01:25,270
+right of the philosopher.
+
+25
+00:01:25,270 --> 00:01:29,480
+The way that we can think about this is that
+when the philosopher comes he can pick up
+
+26
+00:01:29,480 --> 00:01:34,340
+the fork on the left, and he can try and pick
+up the fork on the right, the unfortunate
+
+27
+00:01:34,340 --> 00:01:39,321
+problem is that if all five philosophers come
+to the table at exactly the same time, all
+
+28
+00:01:39,321 --> 00:01:43,210
+of them will pick up their left forks and
+there will be no right forks.
+
+29
+00:01:43,210 --> 00:01:48,479
+In other words, all of them are holding a
+lock where there's mutual exclusion because
+
+30
+00:01:48,479 --> 00:01:53,400
+the philosopher doesn't let go of his fork,
+all of them are holding the lock on the left
+
+31
+00:01:53,400 --> 00:01:56,460
+fork and waiting for the lock on the right
+fork.
+
+32
+00:01:56,460 --> 00:02:00,600
+All of them have no preemption so nobody's
+going to reach across the table and start
+
+33
+00:02:00,600 --> 00:02:05,670
+grabbing a fork these are nice philosophers,
+I guess they're not from Brooklyn, I'm kidding.
+
+34
+00:02:05,670 --> 00:02:09,849
+And we have a circular wait we have the last
+philosopher in a sequence waiting for the
+
+35
+00:02:09,849 --> 00:02:11,760
+first philosopher on the sequence.
+
+36
+00:02:11,760 --> 00:02:17,550
+So, ultimately what we have is all four requirements,
+we’ve met the deadlock requirements, and
+
+37
+00:02:17,550 --> 00:02:20,010
+in fact you can see that we have a deadlock.
+
+38
+00:02:20,010 --> 00:02:24,190
+In this scenario all the philosophers will
+starve to death, because none of them will
+
+39
+00:02:24,190 --> 00:02:26,390
+put down the fork and allow somebody else
+to eat.
+

@@ -1,0 +1,34 @@
+1
+00:00:00,570 --> 00:00:05,460
+We covered the various instruction formats
+of MIPS64 architecture and detailed how they
+
+2
+00:00:05,460 --> 00:00:10,139
+are used to encode information about the operations
+of different instructions.
+
+3
+00:00:10,139 --> 00:00:15,630
+We also discussed the five main stages of
+CPU execution and their intricacies.
+
+4
+00:00:15,630 --> 00:00:20,380
+Then, we covered processor pipelining, which
+is one of the most fundamental aspects of
+
+5
+00:00:20,380 --> 00:00:22,410
+computer organization.
+
+6
+00:00:22,410 --> 00:00:27,300
+We discussed the benefits of pipelining in
+term of throughput, the hazards they present,
+
+7
+00:00:27,300 --> 00:00:30,170
+and the common mechanisms used to overcome
+these hazards.
+

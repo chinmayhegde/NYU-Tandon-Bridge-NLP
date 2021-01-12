@@ -1,0 +1,86 @@
+0:00:00.269,0:00:02.740
+Okay, so let's calculate the average.
+
+0:00:02.740,0:00:08.010
+For that we would need to go over the elements
+in the array and to sum them up.
+
+0:00:08.010,0:00:09.670
+Let's create a sum variable.
+
+0:00:09.670,0:00:16.780
+We'll start by setting it to zero and then
+iterate over the elements and add each of
+
+0:00:16.780,0:00:20.080
+them into sum, so we'll use a for loop.
+
+0:00:20.080,0:00:29.720
+Again index would start zero, it would increase
+each iteration and we just keep on going while
+
+0:00:29.720,0:00:32.230
+ind is less than number of students.
+
+0:00:32.230,0:00:40.420
+So this basically is the way we pass over
+an array; we start our index with zero, we
+
+0:00:40.420,0:00:46.120
+move it, increase each iteration and go up
+to the logical size of that array.
+
+0:00:46.120,0:00:53.610
+Each time here we just want to add the current
+element into sum, so sum plus equals, lets
+
+0:00:53.610,0:00:58.829
+access our grades list at the index position.
+
+0:00:58.829,0:01:05.869
+This code here will then just add all the
+elements in the array up into are some variable.
+
+0:01:05.869,0:01:08.729
+After doing that we can calculate the average.
+
+0:01:08.729,0:01:15.819
+So let's have a double variable; let's call
+it average and we can just set the average
+
+0:01:15.819,0:01:20.240
+to be sum divided by the number of students.
+
+0:01:20.240,0:01:26.569
+One thing we should be careful though is when
+we divide sum and num of students, since they
+
+0:01:26.569,0:01:31.850
+are both integers this division is basically
+integer division; it’s div.
+
+0:01:31.850,0:01:36.759
+So, we should cast sum and number of students
+in order to turn it into real division.
+
+0:01:36.759,0:01:43.509
+So let's cast some to a double and number
+of students to a double and then this would
+
+0:01:43.509,0:01:46.320
+be real division and not just integer division.
+
+0:01:46.320,0:01:53.499
+So after we have the average calculated, we
+can output to the user that ‘the class average
+
+0:01:53.499,0:01:59.810
+is’ and then just print the value of the
+variable average; that basically calculate
+
+0:01:59.810,0:02:01.009
+the average here.
+
+0:02:01.009,0:02:03.629
+Let's try to trace this, see if it all makes
+sense.

@@ -1,0 +1,28 @@
+1
+00:00:00,410 --> 00:00:03,390
+Instead, we start by working with assembly
+language.
+
+2
+00:00:03,390 --> 00:00:07,019
+The assembly language is a symbolic representation
+of the machine code.
+
+3
+00:00:07,019 --> 00:00:11,370
+In this respect, symbolic means it simplifies
+some of the complexities of machine code by
+
+4
+00:00:11,370 --> 00:00:13,519
+using labels and symbols.
+
+5
+00:00:13,519 --> 00:00:18,400
+Nevertheless, given a machine-level code,
+there is a one-to-one mapping between a machine
+
+6
+00:00:18,400 --> 00:00:20,500
+instruction and an assembly instruction
+

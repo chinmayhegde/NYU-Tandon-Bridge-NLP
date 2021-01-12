@@ -1,0 +1,213 @@
+1
+00:00:00,650 --> 00:00:05,900
+What we do in fixed partitioning is when the
+system boots up, we can divide main memory
+
+2
+00:00:05,900 --> 00:00:08,540
+into some static number of parts.
+
+3
+00:00:08,540 --> 00:00:13,059
+Let's imagine a situation where we have four
+megabytes, four gigabytes of main memory and
+
+4
+00:00:13,059 --> 00:00:16,379
+we're going to divide it up into let's say
+sixteen different partitions, now those could
+
+5
+00:00:16,379 --> 00:00:20,380
+be either equal sized partitions or unequal
+sized partitions.
+
+6
+00:00:20,380 --> 00:00:25,300
+And if they are equal sized partitions, then
+let's imagine that those sixteen different
+
+7
+00:00:25,300 --> 00:00:31,480
+partitions, each run two-hundred and fifty
+megabytes in size, so our four gigabytes of
+
+8
+00:00:31,480 --> 00:00:36,540
+main memory is broken down into sixteen equal
+partitions of two-hundred and fifty megabytes
+
+9
+00:00:36,540 --> 00:00:37,960
+each.
+
+10
+00:00:37,960 --> 00:00:39,530
+Now that works; it’s fine.
+
+11
+00:00:39,530 --> 00:00:44,350
+It means we have a maximum limit of running
+sixteen different processes; we can't run
+
+12
+00:00:44,350 --> 00:00:50,010
+any more than sixteen different processes.
+and one other problem is if we start up notepad,
+
+13
+00:00:50,010 --> 00:00:54,680
+and notepad is going to just edit a small
+text file and it only needs one megabyte of
+
+14
+00:00:54,680 --> 00:01:00,170
+main memory, well the smallest we can put
+it in is two hundred fifty megabytes, because
+
+15
+00:01:00,170 --> 00:01:01,740
+we have equal sized partitions.
+
+16
+00:01:01,740 --> 00:01:06,600
+So, what that means is that we're wasting
+two-hundred and forty megabytes of main memory
+
+17
+00:01:06,600 --> 00:01:08,030
+and that's pretty significant.
+
+18
+00:01:08,030 --> 00:01:10,100
+That's what we call internal fragmentation.
+
+19
+00:01:10,100 --> 00:01:15,830
+We have this division allocated, for notepad,
+we give it two-hundred and fifty megabytes
+
+20
+00:01:15,830 --> 00:01:20,100
+for notepad and notepad only really wants
+one megabyte.
+
+21
+00:01:20,100 --> 00:01:25,960
+And the other two hundred forty megabytes
+now are wasted in internal fragmentation.
+
+22
+00:01:25,960 --> 00:01:31,410
+One solution that we could use is to maybe
+use unequal sized partition, so partitions
+
+23
+00:01:31,410 --> 00:01:33,960
+which are differing in size.
+
+24
+00:01:33,960 --> 00:01:39,020
+And if we do that we might say there are sixteen
+different partitions, one partition is very
+
+25
+00:01:39,020 --> 00:01:45,110
+very big it's one gigabyte, and other partitions
+are very very small there might be ten meg,
+
+26
+00:01:45,110 --> 00:01:49,729
+ten megabyte partitions or just slightly larger.
+
+27
+00:01:49,729 --> 00:01:56,810
+The point is that we're always going to have
+some internal fragmentation with these solutions,
+
+28
+00:01:56,810 --> 00:02:02,180
+but we're going to maybe minimize the amount
+of internal fragmentation.
+
+29
+00:02:02,180 --> 00:02:06,750
+Now if we use unequal sized partitions, we’re
+going to have to worry about which partition
+
+30
+00:02:06,750 --> 00:02:08,840
+we decide to place this process in.
+
+31
+00:02:08,840 --> 00:02:13,739
+Let’s say we open up notepad and we open
+up a small text file and so the operating
+
+32
+00:02:13,739 --> 00:02:20,469
+system decides, okay we'll put it into one
+of the ten megabyte partitions and then somebody
+
+33
+00:02:20,469 --> 00:02:24,549
+chooses to open up an enormous file of one
+gigabyte file.
+
+34
+00:02:24,549 --> 00:02:27,719
+Let's say a video file but they're opening
+in Notepad.
+
+35
+00:02:27,719 --> 00:02:32,879
+Well now the operating system has to move
+that process out of its memory space; we can
+
+36
+00:02:32,879 --> 00:02:37,329
+do that because of relocation and move it
+into the one gigabyte partition that we have,
+
+37
+00:02:37,329 --> 00:02:39,870
+the only one gigabyte partition that we have.
+
+38
+00:02:39,870 --> 00:02:45,529
+And what happens if that one gigabyte partition
+is taken by something else, maybe chrome,
+
+39
+00:02:45,529 --> 00:02:50,400
+and now notepad cannot run at the same time
+as Chrome, because they both need that one
+
+40
+00:02:50,400 --> 00:02:51,400
+gigabyte partition.
+
+41
+00:02:51,400 --> 00:02:55,400
+So, there are some real disadvantages to having
+fixed partition.
+
+42
+00:02:55,400 --> 00:03:00,309
+But one of the big advantages of it is it's
+really simple, really requires very little
+
+43
+00:03:00,309 --> 00:03:02,749
+effort on the part of the operating system.
+
+44
+00:03:02,749 --> 00:03:07,280
+But the downside is that we have very limiting
+factors on the number of processes that we
+
+45
+00:03:07,280 --> 00:03:11,090
+can run, and we also waste a lot of memory
+in internal fragmentation.
+

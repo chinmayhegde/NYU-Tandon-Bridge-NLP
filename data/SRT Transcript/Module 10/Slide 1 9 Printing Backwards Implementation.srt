@@ -1,0 +1,173 @@
+0:00:00.080,0:00:01.780
+Let’s go ahead and implement this program.
+
+0:00:01.780,0:00:07.859
+So first let’s prompt the user cout please
+enter your name and break the line.
+
+0:00:07.859,0:00:13.070
+And then let’s read the user’s name so
+for that let’s first include the string
+
+0:00:13.070,0:00:16.369
+library and let’s create a string variable.
+
+0:00:16.369,0:00:17.910
+Let’s name it username.
+
+0:00:17.910,0:00:22.730
+And let’s read whatever the user enters
+into the user name variable.
+
+0:00:22.730,0:00:28.230
+Since the user name would be first and last
+name it would probably contain spaces so let’s
+
+0:00:28.230,0:00:30.710
+use the get line syntax for that.
+
+0:00:30.710,0:00:35.790
+So get line first parameter as we said it’s
+cin basically saying that that input comes
+
+0:00:35.790,0:00:38.540
+from the keyboard from the user.
+
+0:00:38.540,0:00:42.770
+And the user name that is where we want it
+to read it to.
+
+0:00:42.770,0:00:45.490
+So now we have the user name string.
+
+0:00:45.490,0:00:50.700
+What we need to do now is what I was thinking
+is to create a new string with the reverse
+
+0:00:50.700,0:00:51.700
+name in it.
+
+0:00:51.700,0:00:56.890
+Let’s create another string variable or
+actually since we’ll just need to print
+
+0:00:56.890,0:01:02.420
+this name we don’t need to create a string
+we can just iterate and print in each iterator.
+
+0:01:02.420,0:01:06.190
+But then we would need to go in a reverse
+order we need to go from the enter to the
+
+0:01:06.190,0:01:07.190
+beginning.
+
+0:01:07.190,0:01:08.880
+I think it is a good practice let’s use
+a for loop.
+
+0:01:08.880,0:01:15.900
+I will have an index variable and in this
+case we should initialize index to the end
+
+0:01:15.900,0:01:21.250
+of the string and each iterator instead of
+incrementing index we will decrease index.
+
+0:01:21.250,0:01:24.200
+We’ll do something like index minus minus.
+
+0:01:24.200,0:01:29.590
+So let’s think of what value the index should
+be set to initially.
+
+0:01:29.590,0:01:32.870
+That should be the index of the last character
+in the string.
+
+0:01:32.870,0:01:39.780
+We can definitely use the length method for
+that so it would be user name dot length that’s
+
+0:01:39.780,0:01:42.740
+basically the number of characters in this
+string.
+
+0:01:42.740,0:01:47.980
+But then if we think about it let’s say
+we have a string ABC the length is three but
+
+0:01:47.980,0:01:50.760
+the last character is in the index two right.
+
+0:01:50.760,0:01:56.240
+Because like since it is a zero based index
+system it starts at zero and ends at basically
+
+0:01:56.240,0:01:57.790
+length minus one.
+
+0:01:57.790,0:02:03.140
+So let’s set the initial index to username
+length minus one.
+
+0:02:03.140,0:02:08.340
+That’s the index that’s the position of
+the last character in the username string.
+
+0:02:08.340,0:02:12.000
+So initially index is the length minus one.
+
+0:02:12.000,0:02:19.400
+Each iterator index is decreased and we keep
+on going as long as our index is greater or
+
+0:02:19.400,0:02:21.300
+equal to zero.
+
+0:02:21.300,0:02:24.730
+Basically it is still a valid index we can
+access.
+
+0:02:24.730,0:02:29.060
+Each iterator we’ll just print the current
+character we are at.
+
+0:02:29.060,0:02:36.880
+So let’s cout username at the index position
+so first iteration would print the last character.
+
+0:02:36.880,0:02:40.280
+Then we’ll decrease index and we’ll print
+the character that comes before that.
+
+0:02:40.280,0:02:45.040
+We’ll decrease index and print the character
+that comes before that and so on until index
+
+0:02:45.040,0:02:48.690
+equals zero in the last iteration where we’d
+print the first character.
+
+0:02:48.690,0:02:54.160
+At the end let’s just break the line so
+cout end l here.
+
+0:02:54.160,0:03:01.130
+And seems to be fine let’s try to execute
+it make sure we didn’t make any silly mistakes.
+
+0:03:01.130,0:03:08.180
+So please enter your name Donald Duck and
+then it just prints it in a reverse order.
+
+0:03:08.180,0:03:13.780
+Great another option here would be as I started
+before to create a string variable with a
+
+0:03:13.780,0:03:18.790
+reverse name in it it would be a great practice
+for you to try to implement this version on
+
+0:03:18.790,0:03:19.290
+your own.

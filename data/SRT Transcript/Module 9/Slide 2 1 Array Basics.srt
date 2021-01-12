@@ -1,0 +1,113 @@
+0:00:00.099,0:00:01.400
+Let's see how we can get it done.
+
+0:00:01.400,0:00:09.420
+So let's have our main place for the variables,
+so let's have an integer X, a double Y.
+
+0:00:09.420,0:00:15.030
+That's a sign X. with four, Y. with seven
+point three.
+
+0:00:15.030,0:00:18.340
+And then our memory, our run time stack would
+look something like that.
+
+0:00:18.340,0:00:23.910
+We have our X, let's say it's physically stored
+in the address one thousand, it's assigned
+
+0:00:23.910,0:00:30.020
+to be four since it's four bytes long, then
+it would end at thousand and four.
+
+0:00:30.020,0:00:35.059
+Then we would have Y; Y is double so it’s
+eight bytes long, that would take it to ten
+
+0:00:35.059,0:00:36.059
+twelve.
+
+0:00:36.059,0:00:37.390
+Y is assigned to seven point three.
+
+0:00:37.390,0:00:39.300
+Okay, so all of that we already know.
+
+0:00:39.300,0:00:43.609
+We can create variables of different types,
+assign each one of the stored in the runtime
+
+0:00:43.609,0:00:45.050
+spec, everything is as we use.
+
+0:00:45.050,0:00:50.800
+Now let's create our already, which is a sequential
+collection of variables.
+
+0:00:50.800,0:00:58.219
+So if you do something like that; int arr
+five that's a single line of code that basically
+
+0:00:58.219,0:01:00.890
+declares a sequence of five integers.
+
+0:01:00.890,0:01:06.340
+So they are in the memory one after the other:
+one, two, three, four, five.
+
+0:01:06.340,0:01:10.560
+And there are ten twelve, ten sixteen, ten
+twenty.
+
+0:01:10.560,0:01:12.020
+They’re all integers.
+
+0:01:12.020,0:01:17.710
+So each of them is four bytes long: ten twenty
+eight, ten thirty two.
+
+0:01:17.710,0:01:22.380
+So in a single line of code, we basically
+declared a sequence: a collection of five
+
+0:01:22.380,0:01:23.380
+integers.
+
+0:01:23.380,0:01:27.870
+And then let's say I want to write the value
+ten over here.
+
+0:01:27.870,0:01:35.789
+So this array’s basically zero based index;
+each one has a local address, a local position.
+
+0:01:35.789,0:01:44.049
+And if I want to assign this thing here to
+be ten, I'll just have arr index two.
+
+0:01:44.049,0:01:47.079
+I use a square brackets, equals ten.
+
+0:01:47.079,0:01:52.509
+If I want to write a value fourteen here,
+I’ll just go arr four.
+
+0:01:52.509,0:01:58.259
+That's the index that's a position where I
+want to have the number fourteen in and put
+
+0:01:58.259,0:01:59.940
+fourteen right over there.
+
+0:01:59.940,0:02:05.590
+So as you can see, it's very easy to declare
+a sequence; to declare a multiple collection
+
+0:02:05.590,0:02:11.440
+of variables in a single line and then we
+can also have our uniform naming mechanism
+
+0:02:11.440,0:02:17.660
+using indexes to access the different position,
+the different cells or slots of this array.

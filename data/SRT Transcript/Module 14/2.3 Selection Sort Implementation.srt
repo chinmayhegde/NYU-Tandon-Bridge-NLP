@@ -1,0 +1,147 @@
+1
+00:00:00,680 --> 00:00:04,799
+Let's implement the find index of min so we
+would have that as well.
+
+2
+00:00:04,799 --> 00:00:10,890
+So once again find index of min is given the
+starting index, the starting address of the
+
+3
+00:00:10,890 --> 00:00:15,890
+entire array, but in order to indicate the
+range we are searching for the minimum index
+
+4
+00:00:15,890 --> 00:00:21,390
+we have low and high, two indexes that basically
+indicate that range.
+
+5
+00:00:21,390 --> 00:00:29,660
+We would need to accumulate the index of the
+minimum element; actually, let's accumulate
+
+6
+00:00:29,660 --> 00:00:34,649
+two things, not only the index of the minimum
+value, but also the minimum value itself.
+
+7
+00:00:34,649 --> 00:00:38,850
+So that have two variables min and min ind.
+
+8
+00:00:38,850 --> 00:00:48,130
+And let's accumulate these two values over
+the path of the elements between low and high.
+
+9
+00:00:48,130 --> 00:00:55,540
+So initially, let's set min to be the first
+element: ARR at the low position, the min
+
+10
+00:00:55,540 --> 00:00:58,090
+ind would be low obviously.
+
+11
+00:00:58,090 --> 00:01:03,809
+And then, we’ll iterate over the rest of
+the elements using a for loop basically iterating
+
+12
+00:01:03,809 --> 00:01:12,210
+from low plus one to high, accumulating the
+minimum and the minimum index.
+
+13
+00:01:12,210 --> 00:01:15,710
+Eventually after doing all of that, we would
+just return the index of the minimum: the
+
+14
+00:01:15,710 --> 00:01:16,900
+min ind.
+
+15
+00:01:16,900 --> 00:01:20,380
+So let's just iterate and accumulate that
+value.
+
+16
+00:01:20,380 --> 00:01:27,270
+So we'll use an index i ranging from low plus
+one, low is already taken care of before the
+
+17
+00:01:27,270 --> 00:01:35,560
+loop, so we’ll start at low plus one, up
+too high so for i goes from low plus one less
+
+18
+00:01:35,560 --> 00:01:40,150
+or equal to high incrementing by one, i plus
+plus.
+
+19
+00:01:40,150 --> 00:01:46,770
+Each iteration let's compare ARR i, the current
+element, to the minimum we've seen so far,
+
+20
+00:01:46,770 --> 00:01:47,770
+right.
+
+21
+00:01:47,770 --> 00:01:54,049
+So if ARR i is less than the minimum we've
+seen so far that is the new minimum.
+
+22
+00:01:54,049 --> 00:02:03,829
+Basically we’ll assign min to be ARR i and
+also save min index as our current location
+
+23
+00:02:03,829 --> 00:02:04,829
+as i.
+
+24
+00:02:04,829 --> 00:02:11,150
+So if we first set min and min index to be
+the first element, then we’re starting to
+
+25
+00:02:11,150 --> 00:02:17,719
+iterate from the second and on up to i, each
+time checking whether we need to update the
+
+26
+00:02:17,719 --> 00:02:18,879
+minimum index.
+
+27
+00:02:18,879 --> 00:02:24,450
+We are accumulating both min index and min
+itself, eventually we can just return the
+
+28
+00:02:24,450 --> 00:02:25,550
+min index.
+
+29
+00:02:25,550 --> 00:02:32,120
+So all together, we have a function that finds
+the index of min in a range from low to high
+
+30
+00:02:32,120 --> 00:02:40,569
+and by calling it over and over on range that
+changes each time and the swap, we are basically
+
+31
+00:02:40,569 --> 00:02:42,060
+sorting the entire array.
+

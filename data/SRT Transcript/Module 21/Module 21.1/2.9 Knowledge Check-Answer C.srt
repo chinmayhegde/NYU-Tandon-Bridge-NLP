@@ -1,0 +1,32 @@
+1
+00:00:00,070 --> 00:00:02,740
+That is correct. A is a temporary
+
+2
+00:00:02,740 --> 00:00:05,080
+register that holds the value of RS,
+
+3
+00:00:05,080 --> 00:00:10,240
+which in our case is FFFC. 0 is a 1 bit
+
+4
+00:00:10,240 --> 00:00:12,040
+flag that holds the result of the
+
+5
+00:00:12,040 --> 00:00:14,889
+operation of the ALU. Since the operation
+
+6
+00:00:14,889 --> 00:00:18,280
+for this instruction is RS minus 0, the
+
+7
+00:00:18,280 --> 00:00:21,370
+result is not 0. Therefore, the zero flag
+
+8
+00:00:21,370 --> 00:00:24,690
+is remaining 0.
+

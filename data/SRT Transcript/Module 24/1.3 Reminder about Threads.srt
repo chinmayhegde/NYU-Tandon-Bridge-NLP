@@ -1,0 +1,63 @@
+1
+00:00:00,580 --> 00:00:06,520
+So a quick reminder threads all share the
+resources of the process, which means that
+
+2
+00:00:06,520 --> 00:00:10,500
+they have access to all the same memory access
+to all the files access to everything that
+
+3
+00:00:10,500 --> 00:00:17,330
+the process has access to and each of the
+individual threads work as a separate program
+
+4
+00:00:17,330 --> 00:00:20,019
+but they're all working towards the same goal.
+
+5
+00:00:20,019 --> 00:00:25,160
+So, if the process that we're talking about
+is Microsoft Word the ultimate goal is to
+
+6
+00:00:25,160 --> 00:00:30,710
+create a document and print it, save it, do
+something with it but the problem that runs
+
+7
+00:00:30,710 --> 00:00:32,910
+is that threads can run asynchronously.
+
+8
+00:00:32,910 --> 00:00:38,590
+The problem that we have is that these threads
+are going to do work and that the work is
+
+9
+00:00:38,590 --> 00:00:44,290
+not done in a synchronous manner in other
+words we don't have one thread running to
+
+10
+00:00:44,290 --> 00:00:47,970
+completion and then another thread starting
+up we have all the threads running at the
+
+11
+00:00:47,970 --> 00:00:52,580
+same time and if we have multiple threads
+running at the same time accessing the same
+
+12
+00:00:52,580 --> 00:00:58,070
+resources we have the potential for conflict
+on those resources and we have to figure out
+
+13
+00:00:58,070 --> 00:01:05,170
+ways to deal with the conflict and address
+the potential for catastrophic loss of information.
+

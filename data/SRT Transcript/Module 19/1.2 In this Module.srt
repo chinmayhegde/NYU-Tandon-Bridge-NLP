@@ -1,0 +1,64 @@
+1
+00:00:00,560 --> 00:00:02,470
+We've got a lot to cover in this module.
+
+2
+00:00:02,470 --> 00:00:05,310
+We're going to talk about trees and binary
+search trees.
+
+3
+00:00:05,310 --> 00:00:09,520
+And we're going to start by talking about
+the definition for trees and some of the definitions
+
+4
+00:00:09,520 --> 00:00:12,470
+of words that we use in conjunction with trees.
+
+5
+00:00:12,470 --> 00:00:16,320
+We're going to talk about tree storage methods
+and how we can take this model of what a tree
+
+6
+00:00:16,320 --> 00:00:18,380
+is and put it into main memory.
+
+7
+00:00:18,380 --> 00:00:22,000
+We're going to talk about the design of binary
+search trees and what they are, and how they
+
+8
+00:00:22,000 --> 00:00:23,329
+can help us.
+
+9
+00:00:23,329 --> 00:00:27,920
+We're going to talk about why we need binary
+search trees and then we're going to talk
+
+10
+00:00:27,920 --> 00:00:29,929
+about tree traversals.
+
+11
+00:00:29,929 --> 00:00:34,070
+And what happens when a binary search tree
+doesn't meet our requirements that we need
+
+12
+00:00:34,070 --> 00:00:38,450
+and then we're going to talk about balance
+binary search trees including AVL trees, and
+
+13
+00:00:38,450 --> 00:00:39,930
+a little bit on red-black trees.
+
+14
+00:00:39,930 --> 00:00:42,890
+So we've got a lot to cover in this module;
+stick with me.
+

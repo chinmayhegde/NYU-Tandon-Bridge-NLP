@@ -1,0 +1,22 @@
+1
+00:00:00,530 --> 00:00:01,530
+That is correct.
+
+2
+00:00:01,530 --> 00:00:06,929
+If the unconditional jump instruction jumped
+to itself, then the target address will be
+
+3
+00:00:06,929 --> 00:00:09,360
+again the unconditional jump instruction.
+
+4
+00:00:09,360 --> 00:00:14,240
+Therefore, the unconditional jump instruction
+will continually jump to itself over and over
+
+5
+00:00:14,240 --> 00:00:16,390
+again resulting in an infinite loop.
+

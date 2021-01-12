@@ -1,0 +1,201 @@
+0:00:00.680,0:00:04.890
+Kind of complex but let’s do it in this
+case two more times.
+
+0:00:04.890,0:00:08.660
+So line seven again an assignment expression.
+
+0:00:08.660,0:00:11.110
+First we divided the right hand side.
+
+0:00:11.110,0:00:13.510
+So that’s evaluate factorial of K.
+
+0:00:13.510,0:00:15.090
+That is a function call right.
+
+0:00:15.090,0:00:18.770
+So we are expecting four steps here.
+
+0:00:18.770,0:00:23.430
+First create a frame for this function.
+
+0:00:23.430,0:00:30.289
+In this case it would contain the parameters
+num the local variables factRes and I.
+
+0:00:30.289,0:00:33.060
+And return address right.
+
+0:00:33.060,0:00:37.300
+Step two is evaluate the argument in this
+case K. K is three.
+
+0:00:37.300,0:00:44.870
+Step three is associate the argument the parameter
+with argument value in this case num is three.
+
+0:00:44.870,0:00:49.560
+Also associate the return address in this
+case we want to return to seven.
+
+0:00:49.560,0:00:55.309
+Not six as before because this call should
+return to line number seven.
+
+0:00:55.309,0:01:00.539
+And the last step step four is jump to the
+beginning of the code start executing.
+
+0:01:00.539,0:01:06.070
+So factRes would be one and than we will iterate
+and iterate and iterate until we will have
+
+0:01:06.070,0:01:10.240
+factRes with a value of six.
+
+0:01:10.240,0:01:15.400
+And then when we come to the return statement
+we will need to return the value.
+
+0:01:15.400,0:01:17.130
+Again a few steps there.
+
+0:01:17.130,0:01:21.510
+First we will evaluate the value we want to
+return factRes which is six.
+
+0:01:21.510,0:01:25.810
+Then we will figure out where we want to return
+to address seven.
+
+0:01:25.810,0:01:31.260
+Then we will pop out the local frame the function
+that we’ve just ended.
+
+0:01:31.260,0:01:33.409
+No need for that data anymore.
+
+0:01:33.409,0:01:37.009
+And then we will jump back with the return
+value to the return address.
+
+0:01:37.009,0:01:42.159
+We were jumping back with six that’s our
+return value to line number seven.
+
+0:01:42.159,0:01:47.520
+We have to complete the assignment so k fact
+would get the value of six.
+
+0:01:47.520,0:01:52.460
+That ends the execution of line number seven.
+
+0:01:52.460,0:01:57.460
+Line number eight I hope you get it after
+this third function call.
+
+0:01:57.460,0:02:03.400
+So again an assignment we have a call to the
+function factorial.
+
+0:02:03.400,0:02:09.919
+So we are creating a new frame for factorial
+containing the parameters local variables
+
+0:02:09.919,0:02:11.609
+and a return address.
+
+0:02:11.609,0:02:16.069
+We are evaluating step two evaluating the
+argument n minus k.
+
+0:02:16.069,0:02:22.779
+So under the main’s scope n is five k is
+three n minus k is two.
+
+0:02:22.779,0:02:28.150
+Step three is associating the parameter with
+the argument value so num would be two.
+
+0:02:28.150,0:02:32.349
+Return address would be updated also to be
+eight.
+
+0:02:32.349,0:02:35.409
+And step four we are jumping to the beginning
+of the code.
+
+0:02:35.409,0:02:38.359
+Same location right the beginning of the factorial
+function.
+
+0:02:38.359,0:02:47.769
+We will do the execution there initializing
+updating factRes I and advancing all of that.
+
+0:02:47.769,0:02:53.219
+And when we want to return the value here
+let’s do the steps we need to take when
+
+0:02:53.219,0:02:54.430
+we are returning a value.
+
+0:02:54.430,0:02:59.280
+So return factRes we first evaluate factRes
+which is two.
+
+0:02:59.280,0:03:02.349
+Then we figure out where we want to return
+to that is eight.
+
+0:03:02.349,0:03:10.919
+Then we pop out the current frame and jump
+back with the return value two to line number
+
+0:03:10.919,0:03:11.989
+eight.
+
+0:03:11.989,0:03:17.469
+So we assign n minus k fact with the value
+of two.
+
+0:03:17.469,0:03:23.709
+Then line number nine we would assign k comb
+with one twenty over six times two.
+
+0:03:23.709,0:03:24.980
+Basically which is ten.
+
+0:03:24.980,0:03:31.790
+Then we print that five that is the value
+of n choose three that is the value of k here
+
+0:03:31.790,0:03:33.749
+in our local scope.
+
+0:03:33.749,0:03:38.540
+Right we are in the main so we are using the
+variables of the main frame.
+
+0:03:38.540,0:03:46.749
+Is and then we print k comb which is in this
+case ten.
+
+0:03:46.749,0:03:51.189
+That basically when we are returning zero
+we are basically just as all other return
+
+0:03:51.189,0:03:56.609
+popping out the current frame and jumping
+back to where we came from.
+
+0:03:56.609,0:03:58.120
+Back to the operating system.
+
+0:03:58.120,0:04:02.290
+We will talk about operating system in one
+of our future modules we’ll get into that
+
+0:04:02.290,0:04:03.110
+in much more detail.

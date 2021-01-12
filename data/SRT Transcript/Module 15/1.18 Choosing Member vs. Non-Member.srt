@@ -1,0 +1,262 @@
+1
+00:00:00,750 --> 00:00:05,790
+A little while ago I mentioned that you could
+either have an operator overloading as a member
+
+2
+00:00:05,790 --> 00:00:06,790
+or nonmember.
+
+3
+00:00:06,790 --> 00:00:09,730
+So what are the benefits of having one versus
+the other; why do we have the option of doing
+
+4
+00:00:09,730 --> 00:00:10,910
+both.
+
+5
+00:00:10,910 --> 00:00:15,590
+Well first off, the key thing to remember
+of course is that members have access to private.
+
+6
+00:00:15,590 --> 00:00:19,770
+So if we're a member of the class, if we overload
+this operators a member of the class, then
+
+7
+00:00:19,770 --> 00:00:22,619
+we can directly access the private information.
+
+8
+00:00:22,619 --> 00:00:27,900
+And in a lot of cases we have to overload
+it as a member because of those restrictions,
+
+9
+00:00:27,900 --> 00:00:33,860
+because we're not going to create functions
+to allow everybody to access the private information;
+
+10
+00:00:33,860 --> 00:00:40,510
+we might not have an accessor function so
+we want to have a limited access to the private
+
+11
+00:00:40,510 --> 00:00:44,040
+data, yet we want to have these operators
+overloaded.
+
+12
+00:00:44,040 --> 00:00:47,390
+In that case the only choice is to make it
+a member.
+
+13
+00:00:47,390 --> 00:00:52,190
+We also have the option, and this is a little
+bit strange, but we also have the option of
+
+14
+00:00:52,190 --> 00:01:00,520
+listing a non-member function, as a friend,
+if inside the class we write the signature,
+
+15
+00:01:00,520 --> 00:01:04,610
+which is the prototype of the function, we
+write the function signature and before we
+
+16
+00:01:04,610 --> 00:01:06,150
+write friend.
+
+17
+00:01:06,150 --> 00:01:10,659
+Then we're not saying that that function is
+a member of the class in fact it's by definition
+
+18
+00:01:10,659 --> 00:01:15,130
+a nonmember but it has access to private information.
+
+19
+00:01:15,130 --> 00:01:21,970
+So friend functions have direct access to
+the private information, even though they’re
+
+20
+00:01:21,970 --> 00:01:22,970
+non-members.
+
+21
+00:01:22,970 --> 00:01:29,450
+And this is a little way of sidestepping the
+private restrictions inside C++.
+
+22
+00:01:29,450 --> 00:01:35,760
+It is used in some cases and, is in fact used
+often in the input and output operator, but
+
+23
+00:01:35,760 --> 00:01:41,090
+apart from those operators it's not used very
+often because we consider it side stepping
+
+24
+00:01:41,090 --> 00:01:43,860
+around the rules, so we don't want to use
+it.
+
+25
+00:01:43,860 --> 00:01:48,810
+Otherwise there's really one fundamental difference
+between choosing member versus nonmember,
+
+26
+00:01:48,810 --> 00:01:52,380
+apart from the fact that it has access to
+private.
+
+27
+00:01:52,380 --> 00:01:57,610
+If we're doing for example A plus B; A plus
+B is going to work in either case whether
+
+28
+00:01:57,610 --> 00:02:03,020
+we choose to overload the plus operator as
+a member or nonmember function, A plus B will
+
+29
+00:02:03,020 --> 00:02:04,680
+still work.
+
+30
+00:02:04,680 --> 00:02:11,560
+But if we have a constructor which can construct
+an object out of constant like an integer,
+
+31
+00:02:11,560 --> 00:02:19,069
+then A plus five or A plus an object plus
+A constant is going to work if there's a constructor,
+
+32
+00:02:19,069 --> 00:02:22,870
+which we can take five and construct one of
+these objects.
+
+33
+00:02:22,870 --> 00:02:27,370
+So that would working again in either case
+if we have that constructor; it'll work if
+
+34
+00:02:27,370 --> 00:02:29,430
+it's a member or nonmember.
+
+35
+00:02:29,430 --> 00:02:31,760
+But here's where life really gets interesting.
+
+36
+00:02:31,760 --> 00:02:37,180
+If we turn that around and we say five plus
+A, well of course assuming that we have that
+
+37
+00:02:37,180 --> 00:02:42,370
+constructor that can construct one of these
+objects out of a constant, five plus A will
+
+38
+00:02:42,370 --> 00:02:46,950
+only work if the plus operator is overloaded
+as a non-member.
+
+39
+00:02:46,950 --> 00:02:54,739
+C++ has this restriction that it says that
+because we now are going to require that the
+
+40
+00:02:54,739 --> 00:03:01,930
+left hand side is an object, we have to know
+that it's not a constant object.
+
+41
+00:03:01,930 --> 00:03:08,770
+And the plus operator overloaded, if it's
+a member is going to have to have full access
+
+42
+00:03:08,770 --> 00:03:13,810
+to the objects of the object will have to
+exist before hand It will not be able to be
+
+43
+00:03:13,810 --> 00:03:16,569
+constructed automatically out of a constant.
+
+44
+00:03:16,569 --> 00:03:22,720
+So here, the only difference between choosing
+member a nonmember is that a plus five will
+
+45
+00:03:22,720 --> 00:03:27,260
+work in either case but five plus A will only
+work if we have a nonmember.
+
+46
+00:03:27,260 --> 00:03:32,069
+Generally speaking this is a small price to
+pay for over for having access directly to
+
+47
+00:03:32,069 --> 00:03:34,070
+the private information.
+
+48
+00:03:34,070 --> 00:03:41,360
+So personally I usually make things members,
+but there are a lot of purists in C++ who
+
+49
+00:03:41,360 --> 00:03:48,220
+prefer that you create only those items that
+are members that have to have access to private.
+
+50
+00:03:48,220 --> 00:03:53,299
+And then create nonmember functions that are
+based on the use of the member functions.
+
+51
+00:03:53,299 --> 00:03:59,790
+So for example, the plus operator you might
+be able to overload by using the plus equal
+
+52
+00:03:59,790 --> 00:04:00,790
+operator.
+
+53
+00:04:00,790 --> 00:04:05,380
+So you’d overload the plus equal operator
+as a member but the plus operator as a nonmember,
+
+54
+00:04:05,380 --> 00:04:08,690
+and then use the plus equal to solve the problem.
+
+55
+00:04:08,690 --> 00:04:12,239
+What you choose is entirely up to you; you’re
+the programmer and you decide.
+

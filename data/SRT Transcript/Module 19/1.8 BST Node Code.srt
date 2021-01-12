@@ -1,0 +1,100 @@
+1
+00:00:01,050 --> 00:00:06,240
+I wanted you to see the code here for the
+binary search tree node, and this helps us
+
+2
+00:00:06,240 --> 00:00:10,170
+a little bit to understand what we're looking
+at when we see the binary search trees no
+
+3
+00:00:10,170 --> 00:00:12,900
+order when we're talking about the binary
+search tree.
+
+4
+00:00:12,900 --> 00:00:17,929
+What I've got here is just a data element
+and it looks very much like we had with the
+
+5
+00:00:17,929 --> 00:00:19,480
+linked lists.
+
+6
+00:00:19,480 --> 00:00:24,380
+There's just a data element and I have a templated,
+so it's a template type T. And then we have
+
+7
+00:00:24,380 --> 00:00:27,999
+a pointer to the parent, pointer to the left
+sub-child or pointer to the rights sub-child,
+
+8
+00:00:27,999 --> 00:00:29,050
+and that's it.
+
+9
+00:00:29,050 --> 00:00:32,079
+That's all the storage that the entire BST
+node class has.
+
+10
+00:00:32,079 --> 00:00:35,870
+I had a constructor in the same way that I
+have a constructor for the linked list; it's
+
+11
+00:00:35,870 --> 00:00:40,510
+just useful for setting things up and it makes
+creation of nodes a little bit easier later
+
+12
+00:00:40,510 --> 00:00:41,510
+on.
+
+13
+00:00:41,510 --> 00:00:45,969
+I have a friend just like I did in the linked
+list, so the very common, a very much common
+
+14
+00:00:45,969 --> 00:00:50,379
+with the linked list here except that we've
+got two pointers, a left and right child.
+
+15
+00:00:50,379 --> 00:00:55,260
+We're going to get into this getSize class,
+in just a minute of the getSize function in
+
+16
+00:00:55,260 --> 00:01:00,499
+just a minute, what it's going to do is just
+tell us how many nodes there are as children
+
+17
+00:01:00,499 --> 00:01:03,420
+and this node for the node.
+
+18
+00:01:03,420 --> 00:01:08,170
+So, we're talking about the size really that's
+by definition if you remember back from the
+
+19
+00:01:08,170 --> 00:01:13,810
+definitions we did a couple of slides ago,
+this is just the size of this individual node.
+
+20
+00:01:13,810 --> 00:01:18,980
+So this is the format for the BST node class
+and you're going to see a lot of commonalities
+
+21
+00:01:18,980 --> 00:01:19,690
+with the linked list.
+

@@ -1,0 +1,52 @@
+1
+00:00:00,900 --> 00:00:04,580
+Let's write another recursive implementation.
+
+2
+00:00:04,580 --> 00:00:08,710
+This time let's implement the function are
+all even; this function gets in the range
+
+3
+00:00:08,710 --> 00:00:14,530
+of integers as a parameter and its logical
+size N. and it should return true if all of
+
+4
+00:00:14,530 --> 00:00:19,810
+the elements in this array even, if not all
+of them are even it would just return false.
+
+5
+00:00:19,810 --> 00:00:25,179
+For example, if we’ll call this function
+with an array, let's say four, six, zero,
+
+6
+00:00:25,179 --> 00:00:30,859
+and two and the logical size four, obviously
+it would return true because all of the elements
+
+7
+00:00:30,859 --> 00:00:32,500
+here are even.
+
+8
+00:00:32,500 --> 00:00:37,840
+If we'll call this function with the array
+four, seven, zero, and two with logical size
+
+9
+00:00:37,840 --> 00:00:42,100
+four, it would return false because not of
+all of the elements here are even.
+
+10
+00:00:42,100 --> 00:00:45,390
+For example, seven in this case is odd.
+
+11
+00:00:45,390 --> 00:00:49,570
+Let's try to have a recursive implementation
+using a computer; let's do that now.
+

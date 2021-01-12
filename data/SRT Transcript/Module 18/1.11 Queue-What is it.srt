@@ -1,0 +1,121 @@
+1
+00:00:00,710 --> 00:00:03,540
+Now that we're comfortable with the stack,
+let’s take a look at our second data structure
+
+2
+00:00:03,540 --> 00:00:05,160
+which is the queue.
+
+3
+00:00:05,160 --> 00:00:09,570
+And the queue is our FIFO data structure:
+it's a first in, first out data structure,
+
+4
+00:00:09,570 --> 00:00:15,870
+which means that whatever item is first in
+queued, is the first item that's de-queued.
+
+5
+00:00:15,870 --> 00:00:21,160
+And this is exactly what you have at a line,
+what we call in the United States we call
+
+6
+00:00:21,160 --> 00:00:26,289
+it a line, in Europe they might call it a
+queue which is exactly what we're demonstrating
+
+7
+00:00:26,289 --> 00:00:27,289
+here.
+
+8
+00:00:27,289 --> 00:00:30,880
+when you arrive at the bank if there's a line
+they have to get on you're going to enter
+
+9
+00:00:30,880 --> 00:00:34,019
+into the line and you're going to wait until
+it's your turn.
+
+10
+00:00:34,019 --> 00:00:37,969
+if we used a stack for something like that
+the first person to arrive in the morning
+
+11
+00:00:37,969 --> 00:00:42,660
+might not be serviced until the very end of
+the day, but in the queue it's much more fair.
+
+12
+00:00:42,660 --> 00:00:46,940
+The first item that comes into the queue is
+the first item that goes out of the queue;
+
+13
+00:00:46,940 --> 00:00:50,499
+so they go out in order as opposed to in reverse
+order.
+
+14
+00:00:50,499 --> 00:00:55,660
+the FIFO buffer or the queue is often use
+for storing information temporarily and then
+
+15
+00:00:55,660 --> 00:01:01,430
+releasing it later so called a buffer. the
+functions that we have you might see them
+
+16
+00:01:01,430 --> 00:01:06,740
+called N.Q. and D.Q. and top, but a lot of
+people refer to him just as push and pop and
+
+17
+00:01:06,740 --> 00:01:09,020
+top the same as they do with the stack.
+
+18
+00:01:09,020 --> 00:01:14,570
+So just be clear of what functions you're
+using and what data structure you're using,
+
+19
+00:01:14,570 --> 00:01:18,159
+because it is possible you might have some
+overlap between the names push and pop.
+
+20
+00:01:18,159 --> 00:01:22,430
+Of course, the supplemental functions that
+we're going to have are still the same as
+
+21
+00:01:22,430 --> 00:01:25,202
+the stack; we're still going to have the clear,
+we're still going to have the is empty, and
+
+22
+00:01:25,202 --> 00:01:29,299
+we're still going to have the size. and you
+can see that the elements that get inserted
+
+23
+00:01:29,299 --> 00:01:33,020
+get inserted to the back of the queue and
+when they get removed they get removed from
+
+24
+00:01:33,020 --> 00:01:34,380
+the front of the queue.
+
+25
+00:01:34,380 --> 00:01:38,509
+So it's our simple FIFO data structure for
+just temporary storage of information.
+

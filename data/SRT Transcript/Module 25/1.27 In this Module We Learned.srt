@@ -1,0 +1,111 @@
+1
+00:00:00,630 --> 00:00:04,580
+We covered a lot of material in this module,
+and memory management is not a simple task
+
+2
+00:00:04,580 --> 00:00:05,890
+at all, we know that.
+
+3
+00:00:05,890 --> 00:00:09,450
+The operating system does a lot of work for
+memory management.
+
+4
+00:00:09,450 --> 00:00:14,560
+But we did cover the need for memory management
+and we covered the memory management requirements;
+
+5
+00:00:14,560 --> 00:00:19,449
+we understand those requirements of protection,
+and relocation, logical organization, sharing,
+
+6
+00:00:19,449 --> 00:00:21,089
+physical organization.
+
+7
+00:00:21,089 --> 00:00:22,960
+We talked about partitioning strategies.
+
+8
+00:00:22,960 --> 00:00:27,609
+We talked about logical versus physical addresses,
+and how to convert them, specifically in the
+
+9
+00:00:27,609 --> 00:00:31,419
+paging scenario we did a lot of calculations
+on how it works.
+
+10
+00:00:31,419 --> 00:00:33,240
+We talked about virtual memory.
+
+11
+00:00:33,240 --> 00:00:36,880
+We talked about the working set strategies
+and the resident set strategies and we used
+
+12
+00:00:36,880 --> 00:00:42,260
+resident set strategies to determine how we
+can control the load of the system, how many
+
+13
+00:00:42,260 --> 00:00:44,240
+processes we really have running.
+
+14
+00:00:44,240 --> 00:00:49,820
+And then we talked about shared pages and
+copy on write and then the magic of the Unix
+
+15
+00:00:49,820 --> 00:00:50,820
+FORK function.
+
+16
+00:00:50,820 --> 00:00:56,150
+So, we certainly covered a lot on memory management
+there, of course in a current and current
+
+17
+00:00:56,150 --> 00:01:00,079
+system today's environment, there’s a lot
+more that has to go into memory management
+
+18
+00:01:00,079 --> 00:01:01,600
+and these are only the basics.
+
+19
+00:01:01,600 --> 00:01:05,600
+But at least with the basics we can get started
+with understanding some of the more complex
+
+20
+00:01:05,600 --> 00:01:12,049
+features, and the operating systems courses
+are going to cover a lot of memory management
+
+21
+00:01:12,049 --> 00:01:14,170
+techniques that we just kind of glazed over.
+
+22
+00:01:14,170 --> 00:01:18,149
+So, there's a lot more out there; some of
+it that Microsoft will even tell us about
+
+23
+00:01:18,149 --> 00:01:19,969
+we have to find out manually.
+
+24
+00:01:19,969 --> 00:01:23,740
+But there's at least a good basics in this
+module.
+

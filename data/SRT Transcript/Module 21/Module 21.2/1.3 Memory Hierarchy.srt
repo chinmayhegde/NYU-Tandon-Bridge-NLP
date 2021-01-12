@@ -1,0 +1,110 @@
+1
+00:00:00,710 --> 00:00:05,340
+So far, we have assumed that every memory
+access that the CPU makes takes one clock
+
+2
+00:00:05,340 --> 00:00:06,420
+cycle.
+
+3
+00:00:06,420 --> 00:00:11,650
+That is, each time an instruction is fetched,
+or a data is written to or read from memory,
+
+4
+00:00:11,650 --> 00:00:13,650
+it only requires one cycle.
+
+5
+00:00:13,650 --> 00:00:17,260
+However, in reality, each memory access takes
+several cycles.
+
+6
+00:00:17,260 --> 00:00:19,820
+This is because of two reasons.
+
+7
+00:00:19,820 --> 00:00:24,890
+The first and most important reason is that
+main memory is generally implemented as DRAM,
+
+8
+00:00:24,890 --> 00:00:28,109
+which stands for dynamic random access memory.
+
+9
+00:00:28,109 --> 00:00:33,370
+In this instance, dynamic means that the data
+needs to be refreshed from time to time, in
+
+10
+00:00:33,370 --> 00:00:36,510
+order to keep it available in memory.
+
+11
+00:00:36,510 --> 00:00:41,989
+This refreshing delays the access time of
+data because it may need to be refreshed before
+
+12
+00:00:41,989 --> 00:00:44,010
+it is brought to the CPU.
+
+13
+00:00:44,010 --> 00:00:48,519
+The second reason is that the main memory
+is so large, usually in the gigabyte range,
+
+14
+00:00:48,519 --> 00:00:54,460
+that it has to be put off the CPU chip, causing
+it to run at a lower frequency than the CPU
+
+15
+00:00:54,460 --> 00:00:55,460
+itself.
+
+16
+00:00:55,460 --> 00:00:59,850
+Therefore, the main memory is running at a
+slower speed than the CPU, causing additional
+
+17
+00:00:59,850 --> 00:01:01,739
+delays.
+
+18
+00:01:01,739 --> 00:01:08,780
+In many cases, access to main memory can take
+as many as 100 cycles for each access.
+
+19
+00:01:08,780 --> 00:01:15,090
+Therefore, if we consider a simple pipelined
+CPU, each instruction fetch stage requires
+
+20
+00:01:15,090 --> 00:01:16,930
+100 cycles.
+
+21
+00:01:16,930 --> 00:01:22,860
+Similarly, each memory stage where the instruction
+reads from memory or writes to memory also
+
+22
+00:01:22,860 --> 00:01:24,820
+requires 100 cycles.
+
+23
+00:01:24,820 --> 00:01:31,390
+In this small example, we can see how the
+execution time goes from 7 to at least 700
+
+24
+00:01:31,390 --> 00:01:34,409
+cycles when we consider the real access delay
+of memory.
+

@@ -1,0 +1,159 @@
+0:00:00.789,0:00:03.670
+So let's talk about dynamic memory.
+
+0:00:03.670,0:00:09.440
+We've already talked about pointers and having
+them assigned to static variables or stack
+
+0:00:09.440,0:00:11.190
+dynamic variables.
+
+0:00:11.190,0:00:15.690
+But now we're going to talk about what pointers
+are really useful for and that is creating
+
+0:00:15.690,0:00:17.580
+heap dynamic memory.
+
+0:00:17.580,0:00:21.779
+We're allocating heap dynamic memory and having
+a pointer point to that heap dynamic memory
+
+0:00:21.779,0:00:23.680
+so that we can use it.
+
+0:00:23.680,0:00:27.200
+Now heap dynamic memory when we create it
+it has no names.
+
+0:00:27.200,0:00:32.870
+So we have to use pointers in order to access
+that heap dynamic information.
+
+0:00:32.870,0:00:37.520
+And there's no way to find anything on the
+heap once it's created and allocated you'll
+
+0:00:37.520,0:00:43.960
+be given a pointer to that memory location
+and then you have only that pointer to use
+
+0:00:43.960,0:00:45.080
+to access it.
+
+0:00:45.080,0:00:48.770
+If you ever lose track of that pointer you've
+lost track of that memory.
+
+0:00:48.770,0:00:51.300
+And that's a bad thing it's called a memory
+leak.
+
+0:00:51.300,0:00:56.970
+So pointers can point to heap dynamic memory
+heap dynamic memory is allocated whenever
+
+0:00:56.970,0:01:01.500
+you ask for it and it remains allocated until
+you destroy it.
+
+0:01:01.500,0:01:05.940
+Which means that it can survive a function
+call what we can do is create this heap dynamic
+
+0:01:05.940,0:01:11.420
+memory or allocate this heap dynamic memory
+in function A. And then function A can end
+
+0:01:11.420,0:01:15.860
+and we go on to do function B and heap dynamic
+memory is still allocated.
+
+0:01:15.860,0:01:21.830
+What we can do is pass a pointer between function
+A and and its parent function and then back
+
+0:01:21.830,0:01:27.280
+to function B. And the variable still remains
+allocated in that same memory location and
+
+0:01:27.280,0:01:32.650
+the only thing we need to do is keep the memory
+location keep the pointer.
+
+0:01:32.650,0:01:38.369
+Now the unfortunate fact here is that while
+there's a lot of capability in heap dynamic
+
+0:01:38.369,0:01:40.780
+memory there's also a lot of danger.
+
+0:01:40.780,0:01:46.591
+If you don't deallocate your heap dynamic
+memory then you have what's known as a memory
+
+0:01:46.591,0:01:47.760
+leak.
+
+0:01:47.760,0:01:52.530
+What this means is that for every variable
+that you allocate on the heap you must remember
+
+0:01:52.530,0:01:54.340
+to destroy that variable.
+
+0:01:54.340,0:02:00.939
+It is not destroyed automatically and this
+is a huge downside to C++ and languages does
+
+0:02:00.939,0:02:03.450
+that have support for heap dynamic memory.
+
+0:02:03.450,0:02:09.170
+There are newer languages which prohibit the
+use of of certain features like heap dynamic
+
+0:02:09.170,0:02:10.170
+memory.
+
+0:02:10.170,0:02:15.859
+And there are other programming languages
+that do so in an more automated way like newer
+
+0:02:15.859,0:02:21.200
+languages like Java will allow you to create
+heap dynamic memory but it keeps track of
+
+0:02:21.200,0:02:25.680
+all of it and destroys it on its own time
+when you're not using it anymore.
+
+0:02:25.680,0:02:32.139
+So C++ leaves a lot in your hands you have
+to do a lot of the work and it's very useful
+
+0:02:32.139,0:02:34.540
+but you have to be very very careful.
+
+0:02:34.540,0:02:39.680
+Memory leaks themselves won't cause your program
+to crash at least not immediately but over
+
+0:02:39.680,0:02:44.659
+time a small amount of memory that's wasted
+by your program will add up.
+
+0:02:44.659,0:02:49.169
+And if your program runs continuously for
+months and months or even weeks and weeks.
+
+0:02:49.169,0:02:53.900
+It's quite possible that you're going to run
+out of memory eventually and then your program
+
+0:02:53.900,0:02:55.719
+will crash.
+
+0:02:55.719,0:02:58.980
+But it's insidious it's going to take a really
+long time before that happens.

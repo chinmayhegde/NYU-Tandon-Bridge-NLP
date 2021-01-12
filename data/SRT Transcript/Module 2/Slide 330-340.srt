@@ -1,0 +1,148 @@
+1
+00:00:00,599 --> 00:00:06,879
+Okay, so now we know that we can represent
+numbers using the binary number system, basically
+
+2
+00:00:06,879 --> 00:00:11,200
+base two, so numbers can be represented using
+zeros and ones.
+
+3
+00:00:11,200 --> 00:00:16,930
+But then, let's see how we can represent not
+only positive numbers but also negative numbers.
+
+4
+00:00:16,930 --> 00:00:19,030
+So for example, 26.
+
+5
+00:00:19,030 --> 00:00:23,289
+The decimal 26 is equivalent to 11010 binary,
+right?
+
+6
+00:00:23,289 --> 00:00:29,840
+Because if we add up the weights, 16 plus
+8 plus 2, it would add up to 26.
+
+7
+00:00:29,840 --> 00:00:31,470
+Check it yourself.
+
+8
+00:00:31,470 --> 00:00:38,199
+How can we represent negative 26 decimal in
+binary?
+
+9
+00:00:38,199 --> 00:00:44,239
+So obviously, we can write negative 11010
+but then inside a computer, we don't have,
+
+10
+00:00:44,239 --> 00:00:45,429
+we only have zeros and ones.
+
+11
+00:00:45,429 --> 00:00:48,800
+We don't have the negative sign, we can’t
+have that represented.
+
+12
+00:00:48,800 --> 00:00:54,909
+So, we would need to figure out a different
+way to represent negative numbers, signed
+
+13
+00:00:54,909 --> 00:00:59,929
+numbers, using only zeros and ones.
+
+14
+00:00:59,929 --> 00:01:03,030
+The first approach I want to show you is called
+“Sign and Magnitude.”
+
+15
+00:01:03,030 --> 00:01:11,229
+It's a very intuitive approach and it says
+it's a slight variation of a binary number
+
+16
+00:01:11,229 --> 00:01:15,570
+system, the formal binary number system.
+
+17
+00:01:15,570 --> 00:01:22,509
+It said that not all of the bits have their
+weight depending on their position; the left
+
+18
+00:01:22,509 --> 00:01:28,619
+most bit is used only to say what the sign
+of the number is, the rest of the bits would
+
+19
+00:01:28,619 --> 00:01:32,280
+have their weighted value depending on the
+position.
+
+20
+00:01:32,280 --> 00:01:40,689
+So, for example, a positive number is 0, a
+negative number is 1 for the sign bit and
+
+21
+00:01:40,689 --> 00:01:44,620
+twenty six would be whatever 26 looks like.
+
+22
+00:01:44,620 --> 00:01:52,719
+000 and then 11010 so negative 26 in the sign
+magnitude representation, would start with
+
+23
+00:01:52,719 --> 00:02:00,140
+the 1 as the sign and the rest of the bits
+would just represent 26.
+
+24
+00:02:00,140 --> 00:02:08,319
+This way using only zeros and ones, we can
+represent negative numbers as well.
+
+25
+00:02:08,319 --> 00:02:15,670
+Just know that the one in the signs bit position
+doesn't have a power of two as its weight,
+
+26
+00:02:15,670 --> 00:02:21,440
+it represents something else, its represents
+the sign of the number whether it's positive
+
+27
+00:02:21,440 --> 00:02:22,440
+or negative.
+
+28
+00:02:22,440 --> 00:02:28,550
+So, that's a very intuitive way to represent
+signed numbers.
+
+29
+00:02:28,550 --> 00:02:35,840
+But then, that's not the way computers typically
+represent signed integers.
+
+30
+00:02:35,840 --> 00:02:40,200
+The typical way that computers represent signed
+integers is called “Two’s Complement”
+
+31
+00:02:40,200 --> 00:02:44,560
+and I'm going to explain this representation
+method right away.
+

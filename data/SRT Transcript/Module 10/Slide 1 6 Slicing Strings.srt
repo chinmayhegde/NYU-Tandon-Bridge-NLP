@@ -1,0 +1,183 @@
+0:00:00.470,0:00:08.040
+So we can basically take separate elements
+from a string using the indexing system indexing
+
+0:00:08.040,0:00:11.540
+syntax just like arrays.
+
+0:00:11.540,0:00:17.369
+We can do something even a bit more advanced
+with strings we can take a slice of a string
+
+0:00:17.369,0:00:19.019
+out.
+
+0:00:19.019,0:00:24.239
+That is the slicing syntax and it works something
+like that.
+
+0:00:24.239,0:00:31.649
+In order to take a slice to take a sub string
+out of a string we use the sub str method.
+
+0:00:31.649,0:00:39.900
+The way we call this method is str one dot
+sub str and then we have two parameters basically
+
+0:00:39.900,0:00:44.740
+saying where this sub string starts and how
+long is this sub string.
+
+0:00:44.740,0:00:49.370
+In this case this sub string would start at
+index three and it would be two characters
+
+0:00:49.370,0:00:50.370
+long.
+
+0:00:50.370,0:00:58.370
+So index three is a D two characters long
+the sub string is basically DE in this case.
+
+0:00:58.370,0:01:04.309
+Now I believe you’ve noticed that the syntax
+for calling this method is a bit different
+
+0:01:04.309,0:01:09.560
+than what we are used to when we’ve used
+functions.
+
+0:01:09.560,0:01:17.500
+Probably you’ve you probably thought that
+in order to create the sub string of str one
+
+0:01:17.500,0:01:20.220
+starting at index three and it’s two characters
+long.
+
+0:01:20.220,0:01:27.960
+We should use sub str as a function and pass
+str one and three and two as three different
+
+0:01:27.960,0:01:32.040
+parameters and that would obviously a right
+way of thinking.
+
+0:01:32.040,0:01:34.909
+That’s how we’ve used functions so far.
+
+0:01:34.909,0:01:40.030
+But then I’ve said that sub str is a method
+and that’s a bit different.
+
+0:01:40.030,0:01:45.950
+We’ll talk about it in much more detail
+when we speak about object oriented programming
+
+0:01:45.950,0:01:52.780
+and classes and you will see that methods
+how exactly or how formally they are defined.
+
+0:01:52.780,0:01:57.090
+For now I just want you to know that sub str
+is a method it is not a function so we are
+
+0:01:57.090,0:02:04.490
+not calling it sub str with three parameters
+the string the starting index and the length.
+
+0:02:04.490,0:02:10.560
+We are kind of passing the str one parameter
+in a different way.
+
+0:02:10.560,0:02:14.290
+Str one is basically the calling object of
+this method.
+
+0:02:14.290,0:02:23.250
+So sub str is aware of str one it is operating
+on str on it is taking the sub str of str
+
+0:02:23.250,0:02:25.640
+one without us passing it as a parameter.
+
+0:02:25.640,0:02:31.200
+We’ve used the dot notation in order to
+make str one be our calling object.
+
+0:02:31.200,0:02:36.520
+So we use str one dot sub str three and two.
+
+0:02:36.520,0:02:44.560
+So we are calling the method sub str on str
+one and the additional parameters are three
+
+0:02:44.560,0:02:45.560
+and two.
+
+0:02:45.560,0:02:54.690
+If we’ll for example print str one dot sub
+str three two that would print DE.
+
+0:02:54.690,0:03:00.200
+I hope it makes sense we will use methods
+in other cases as well.
+
+0:03:00.200,0:03:05.239
+Each time we are going to use a method I will
+explicitly say that this functionality is
+
+0:03:05.239,0:03:07.800
+not a function it is a method.
+
+0:03:07.800,0:03:10.510
+In this case sub str is a method.
+
+0:03:10.510,0:03:18.790
+If we’ll think about the result or the value
+of whatever sub str returns that is basically
+
+0:03:18.790,0:03:22.040
+in this case it was a DE it was of type string.
+
+0:03:22.040,0:03:29.080
+So we can do something like str two equals
+str one dot sub str two three.
+
+0:03:29.080,0:03:35.790
+Basically taking the sub string of str one
+once again our calling object is str one.
+
+0:03:35.790,0:03:42.099
+Starting at index two in this case which is
+the C and it is three characters long.
+
+0:03:42.099,0:03:50.970
+So str or the result of this method call would
+be a string of length three CDE.
+
+0:03:50.970,0:03:58.379
+And that would be str two so we are assigning
+str one dot sub str into a string variable
+
+0:03:58.379,0:03:59.379
+into str two.
+
+0:03:59.379,0:04:10.569
+If we’ll print str two as expected it would
+print CDE which is the three characters string
+
+0:04:10.569,0:04:12.150
+that sub str returned.
+
+0:04:12.150,0:04:18.540
+So the slicing syntax is using the sub str
+method we have our calling object for example
+
+0:04:18.540,0:04:25.840
+it could be the str variable and then two
+additional parameters come in parentheses.
+
+0:04:25.840,0:04:28.680
+The starting location and the length of this
+sub string.

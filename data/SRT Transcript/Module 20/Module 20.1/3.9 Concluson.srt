@@ -1,0 +1,32 @@
+1
+00:00:00,390 --> 00:00:05,080
+I have added a document on the course site
+that summarize the 32 MIPS general purpose
+
+2
+00:00:05,080 --> 00:00:06,999
+register that we have discussed earlier.
+
+3
+00:00:06,999 --> 00:00:10,670
+You guys don’t have to memorize their purposes,
+this is just as a reference.
+
+4
+00:00:10,670 --> 00:00:17,369
+I also added the official documentation of
+the MIPS64 instruction set architecture.
+
+5
+00:00:17,369 --> 00:00:21,539
+If you guys have any questions regarding anything
+we discussed, don’t hesitate to send me
+
+6
+00:00:21,539 --> 00:00:22,539
+an e-mail.
+
+7
+00:00:22,539 --> 00:00:23,189
+Thanks.
+

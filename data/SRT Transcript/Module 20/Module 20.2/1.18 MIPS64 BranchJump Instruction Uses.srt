@@ -1,0 +1,50 @@
+1
+00:00:00,599 --> 00:00:05,310
+To set the correct value of the Rs in the
+jump register instruction, we need to first
+
+2
+00:00:05,310 --> 00:00:10,190
+understand the interaction between the jump
+and link instruction the and jump register
+
+3
+00:00:10,190 --> 00:00:15,310
+instruction. Consider this use case of the
+absolute value function. We have a header
+
+4
+00:00:15,310 --> 00:00:21,100
+file Lib dot H that holds the declaration
+of the absolute value function and a c file
+
+5
+00:00:21,100 --> 00:00:26,240
+Lib dot C that holds its implementation. In
+the main file, we call the absolute value
+
+6
+00:00:26,240 --> 00:00:31,990
+function. Recall that the jump and link instruction
+is responsible for function calls. Jump and
+
+7
+00:00:31,990 --> 00:00:39,109
+Link does two things. It first sets the address
+to return to after the function call in R31,
+
+8
+00:00:39,109 --> 00:00:44,499
+and then it jumps to the function. So in this
+respect, the return address is in the R31
+
+9
+00:00:44,499 --> 00:00:50,639
+register and the jump register instruction
+must use R31 to return from the call. Hence
+
+10
+00:00:50,639 --> 00:00:55,089
+Rs in the jump register instruction is equal
+to R31.
+

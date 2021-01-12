@@ -1,0 +1,48 @@
+0:00:00.870,0:00:05.950
+So there's one little problem with C++ that's
+a little bit of almost like an eccentricity
+
+0:00:05.950,0:00:07.850
+of C++ it is a little strange.
+
+0:00:07.850,0:00:13.110
+If we define multiple pointers on the same
+line the star doesn't associate with the data
+
+0:00:13.110,0:00:15.540
+type it actually associates with the variable
+name.
+
+0:00:15.540,0:00:19.550
+And I know this makes absolutely no sense
+but if you take a look at this sample code
+
+0:00:19.550,0:00:24.020
+you'll see that here we're creating three
+pointers and one x one integer.
+
+0:00:24.020,0:00:32.270
+So the three pointers need to have their stars
+immediately preceding the variable name and
+
+0:00:32.270,0:00:37.649
+this actually doesn't even matter if the star
+is before the space immediately adjacent to
+
+0:00:37.649,0:00:42.859
+the int or if it's to the right and immediately
+adjacent to the name of the variable.
+
+0:00:42.859,0:00:49.129
+But it's important to recognize that the star
+does not make the line create all pointers
+
+0:00:49.129,0:00:51.320
+it makes only that variable a pointer.
+
+0:00:51.320,0:00:57.159
+So in this case we have ptr one ptr two and
+ptr three are pointers to integers.
+
+0:00:57.159,0:00:59.059
+But x is just an integer on its own.

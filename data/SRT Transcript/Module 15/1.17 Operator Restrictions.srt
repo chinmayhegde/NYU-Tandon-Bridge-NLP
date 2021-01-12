@@ -1,0 +1,175 @@
+1
+00:00:00,680 --> 00:00:04,190
+C++ has some restrictions; it's not open.
+
+2
+00:00:04,190 --> 00:00:06,200
+There are some operators that can't be overloaded.
+
+3
+00:00:06,200 --> 00:00:10,770
+For example the dot operator; you can't change
+what it does, it's known as the struct member
+
+4
+00:00:10,770 --> 00:00:15,780
+union select operator and you simply cannot
+change anything about it.
+
+5
+00:00:15,780 --> 00:00:19,340
+The scope resolution operator, the one that
+goes between the name of the class and the
+
+6
+00:00:19,340 --> 00:00:22,869
+name of the function when we're defining it
+outside the class, you can't change that there's
+
+7
+00:00:22,869 --> 00:00:24,990
+nothing you can do with that.
+
+8
+00:00:24,990 --> 00:00:29,390
+There's a couple more that you would probably
+never try to change; the Star dot which is
+
+9
+00:00:29,390 --> 00:00:32,160
+the de-reference and member select.
+
+10
+00:00:32,160 --> 00:00:38,890
+The size of which is very rarely changed;
+very rarely even considered, very rarely used.
+
+11
+00:00:38,890 --> 00:00:42,110
+And the ternary operator, you can't change
+what the ternary operator does.
+
+12
+00:00:42,110 --> 00:00:44,600
+So those are some that are just completely
+off limits.
+
+13
+00:00:44,600 --> 00:00:47,550
+You can't change anything about them; they
+are what they are.
+
+14
+00:00:47,550 --> 00:00:52,710
+There are some that are restricted that you
+can overload them but you have to be a member
+
+15
+00:00:52,710 --> 00:00:58,850
+in as an to overload this this operator and
+that's because the operator has so much involved
+
+16
+00:00:58,850 --> 00:01:03,610
+in what it's going to do inside the class,
+that C++ says you have to be a member of this
+
+17
+00:01:03,610 --> 00:01:05,760
+class in order to overload it.
+
+18
+00:01:05,760 --> 00:01:11,261
+So these are functions that can only be overloaded
+operators that can only be overloaded as member
+
+19
+00:01:11,261 --> 00:01:12,261
+functions.
+
+20
+00:01:12,261 --> 00:01:18,200
+So the assignment operator and the array index
+of operator can only be overloaded as members
+
+21
+00:01:18,200 --> 00:01:20,979
+of the class; you have no choice in that.
+
+22
+00:01:20,979 --> 00:01:26,530
+There's also some that can almost, not be
+overloaded as a member: the input and the
+
+23
+00:01:26,530 --> 00:01:31,830
+output operators, or technically they're known
+as the bit shift the left and bit shift right
+
+24
+00:01:31,830 --> 00:01:36,450
+operators, but we all call them the output
+in the input operators.
+
+25
+00:01:36,450 --> 00:01:41,310
+These operators can be overloaded as a member
+of the class because if you look at the equivalent
+
+26
+00:01:41,310 --> 00:01:47,830
+function call, if we said something like C
+out arrow arrow A then the problem is that
+
+27
+00:01:47,830 --> 00:01:54,240
+this would be C out dot operator arrow arrow
+A. So you wouldn't be making this a member
+
+28
+00:01:54,240 --> 00:01:59,820
+of your class, you would be making this a
+member of the class which has the object C
+
+29
+00:01:59,820 --> 00:02:02,270
+out, and that's called an O stream.
+
+30
+00:02:02,270 --> 00:02:06,030
+And you're not going to overload override
+the entire Ostream class; you're going to
+
+31
+00:02:06,030 --> 00:02:11,349
+recreate the entire Ostream class, and create
+a new C out object just to overload this member.
+
+32
+00:02:11,349 --> 00:02:16,250
+So while C++ doesn't technically say that
+you can't overload this members, overload
+
+33
+00:02:16,250 --> 00:02:21,239
+this operator is a member, it's almost universally
+accepted that you're going to make this a
+
+34
+00:02:21,239 --> 00:02:22,860
+non-member of the class.
+
+35
+00:02:22,860 --> 00:02:27,480
+So those are the only restrictions; any other
+operator that you can think of, you can't
+
+36
+00:02:27,480 --> 00:02:32,749
+create your own you can't change the precedence
+of any operator, but any other operator which
+
+37
+00:02:32,749 --> 00:02:34,829
+C++ has you can overload.
+

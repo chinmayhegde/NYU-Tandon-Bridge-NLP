@@ -1,0 +1,347 @@
+1
+00:00:00,669 --> 00:00:06,029
+Okay, so now that we know the technique of
+how to convert the hexadecimal to binary and
+
+2
+00:00:06,029 --> 00:00:08,630
+backwards binary to hexadecimal.
+
+3
+00:00:08,630 --> 00:00:15,210
+Let's try to say a few words justifying why
+this magic here works, that we can translate
+
+4
+00:00:15,210 --> 00:00:23,570
+each digit individually, independently without
+caring with its surrounding.
+
+5
+00:00:23,570 --> 00:00:29,710
+I'll try to give you the intuition of the
+argument, basically demonstrating it on a
+
+6
+00:00:29,710 --> 00:00:34,829
+specific binary number and how to convert
+it into hexadecimal.
+
+7
+00:00:34,829 --> 00:00:42,069
+Hopefully you would be able to take this calculation
+here and generalize it into formal proof,
+
+8
+00:00:42,069 --> 00:00:43,850
+general proof for all cases.
+
+9
+00:00:43,850 --> 00:00:52,569
+So, let's look at this binary number and I'll
+try to make some mathematical equations, or
+
+10
+00:00:52,569 --> 00:00:58,519
+quantities, that eventually would end up with
+the hexadecimal equivalent.
+
+11
+00:00:58,519 --> 00:01:07,729
+But, as we go, you’ll see how we are relating
+back to the table and converting each 4 bits
+
+12
+00:01:07,729 --> 00:01:12,350
+independently to its hexadecimal digit.
+
+13
+00:01:12,350 --> 00:01:19,829
+So, let's get started: so we have this number
+here, it's a binary number, therefore we can
+
+14
+00:01:19,829 --> 00:01:24,070
+write it equivalently as a weighted sum of
+powers of 2.
+
+15
+00:01:24,070 --> 00:01:31,500
+So, it is 1 times 2 to the 0, plus 1 times
+2 to the 1, plus 0 times 2 to the second,
+
+16
+00:01:31,500 --> 00:01:32,500
+and so on.
+
+17
+00:01:32,500 --> 00:01:36,720
+We can go up to, I think it goes out to 0
+times 0 to the power of, raised to the power
+
+18
+00:01:36,720 --> 00:01:44,770
+of 11, and now let's look at this sum here,
+with 12 errands.
+
+19
+00:01:44,770 --> 00:01:51,690
+And probably, not really surprisingly, we’ll
+divide it into groups of 4 errands.
+
+20
+00:01:51,690 --> 00:01:55,450
+So, let's start with the first 4.
+
+21
+00:01:55,450 --> 00:01:59,460
+In this case, let's take the first 4 errands
+and just actually copy them.
+
+22
+00:01:59,460 --> 00:02:05,520
+So, we have 1 times 2 to the 0, plus 1 times
+2 to the 1, plus 0 times 2 to the square,
+
+23
+00:02:05,520 --> 00:02:09,539
+plus 0 times 2 to the power of 3.
+
+24
+00:02:09,539 --> 00:02:18,790
+So, obviously our first 4 errands in the upper
+side are equal to the first 4 in the lower
+
+25
+00:02:18,790 --> 00:02:20,700
+one.
+
+26
+00:02:20,700 --> 00:02:25,950
+It won't make any difference if I also multiplied
+by one, right?
+
+27
+00:02:25,950 --> 00:02:31,090
+Or in other words, instead of one I can just
+write 2 to the power of 0, exactly the same,
+
+28
+00:02:31,090 --> 00:02:32,090
+right?
+
+29
+00:02:32,090 --> 00:02:38,760
+So that's what we do with the first 4 errands,
+we kept them equal just wrote it a bit differently.
+
+30
+00:02:38,760 --> 00:02:45,340
+Let's take the next 4 errands, in this case,
+instead of just copying them as is, we'll
+
+31
+00:02:45,340 --> 00:02:48,519
+factor them by 2 to the 4.
+
+32
+00:02:48,519 --> 00:02:54,400
+So, instead of 1 times 2 to the 4, we do 1
+times 2 to the 0.
+
+33
+00:02:54,400 --> 00:02:59,950
+And later we'll just multiply it by 2 to the
+4 and 0 times 2 to the 5 would be 0 times
+
+34
+00:02:59,950 --> 00:03:05,209
+2 to the 1 and 1 times 2 to the second, and
+1 times 2 to the third.
+
+35
+00:03:05,209 --> 00:03:12,050
+So, taking these 4 errands in the parenthesis
+and multiplying them by 2 to the 4, would
+
+36
+00:03:12,050 --> 00:03:19,970
+give you the second 4 errands up there.
+
+37
+00:03:19,970 --> 00:03:23,390
+For the last 4 errands, we’ll do something
+very similar.
+
+38
+00:03:23,390 --> 00:03:29,480
+We’ll write them but will factor them in
+this case by 2 to the 8.
+
+39
+00:03:29,480 --> 00:03:30,480
+Right.
+
+40
+00:03:30,480 --> 00:03:39,209
+So, the first one would be 0 times 2 to the
+0, plus 1 times 2 to the 1, and so on.
+
+41
+00:03:39,209 --> 00:03:49,689
+You can see that each parenthesis here has
+some combination of the first 4 powers of
+
+42
+00:03:49,689 --> 00:03:51,840
+2.
+
+43
+00:03:51,840 --> 00:03:57,049
+Let's take a look at these ones for starters.
+
+44
+00:03:57,049 --> 00:04:04,390
+Let's go back to the table and if we take
+a look here, at this line here, this number
+
+45
+00:04:04,390 --> 00:04:11,980
+0011 actually equals to 1 times 2 to the 0,
+plus 1 times 2 to the 1, plus 0 times 2 to
+
+46
+00:04:11,980 --> 00:04:15,879
+the second, plus 0 times 2 to the 3, which
+is equivalent to 3.
+
+47
+00:04:15,879 --> 00:04:19,900
+So, this thing here is equal to 3, same thing.
+
+48
+00:04:19,900 --> 00:04:26,110
+So, we can write it 3 times, to do the same
+thing with these 4 errands in the second parenthesis.
+
+49
+00:04:26,110 --> 00:04:30,580
+Again, it's a combination of the first 4 powers
+of 2.
+
+50
+00:04:30,580 --> 00:04:36,390
+Going back to the table, it would match exactly
+this line there with 1101.
+
+51
+00:04:36,390 --> 00:04:42,630
+Because 1101 basically stands for 1 times
+2 to the 0, plus 0 times 2 to the 1, plus
+
+52
+00:04:42,630 --> 00:04:49,350
+1 times 2 to the second, plus 1 times 2 to
+3, which is equivalent to 13, hexadecimal
+
+53
+00:04:49,350 --> 00:04:50,880
+D. but it's equivalent to 13.
+
+54
+00:04:50,880 --> 00:04:56,110
+So, this thing here is 13 times 2 to the power
+of 4.
+
+55
+00:04:56,110 --> 00:05:00,680
+Same thing with these 4 errands, we’ll look
+at the table.
+
+56
+00:05:00,680 --> 00:05:04,950
+It matches this line and it adds up to 6.
+
+57
+00:05:04,950 --> 00:05:09,300
+So, we can write 6 times 2 to the 8.
+
+58
+00:05:09,300 --> 00:05:16,310
+So, again, as we said it's not a coincidence
+that our table there gave us all the combinations
+
+59
+00:05:16,310 --> 00:05:17,510
+of 4 bits.
+
+60
+00:05:17,510 --> 00:05:22,680
+Because when we do the math, we would get
+some combination of the first 4 powers of
+
+61
+00:05:22,680 --> 00:05:24,940
+2: 2 to the 0 through 2 to the 3.
+
+62
+00:05:24,940 --> 00:05:29,300
+Now, let's take a look at the powers of 2
+that we have there.
+
+63
+00:05:29,300 --> 00:05:35,430
+2 to the 0, 2 to the 4, and 2 to the 8, so
+2 to the 0 is basically 1, which is also 16
+
+64
+00:05:35,430 --> 00:05:36,640
+to the power of 0.
+
+65
+00:05:36,640 --> 00:05:46,250
+You see like I'm getting us towards a hexadecimal
+representation, something times powers of
+
+66
+00:05:46,250 --> 00:05:51,030
+16, so this would be 3 times 6 into the power
+of 0.
+
+67
+00:05:51,030 --> 00:05:58,830
+Fortunately for us, actually it's not very
+fortunate, it just works, 2 to the 4 is 16,
+
+68
+00:05:58,830 --> 00:06:00,330
+which is 16 to the power of 1.
+
+69
+00:06:00,330 --> 00:06:09,080
+So, this digit here is also 13 times a power
+of 16, and 2 to the 8 is 2 to the 4 squared,
+
+70
+00:06:09,080 --> 00:06:11,180
+or in other words, 16 squared.
+
+71
+00:06:11,180 --> 00:06:14,380
+So, we get 6 times 16 squared.
+
+72
+00:06:14,380 --> 00:06:28,520
+So, we can view that as a hexadecimal representation
+because it's 3 for the ones digit, 13 or D
+
+73
+00:06:28,520 --> 00:06:33,200
+for the tens digit, and 6 for the hexadecimal
+hundreds digit.
+
+74
+00:06:33,200 --> 00:06:40,530
+So, that very long binary number is equivalent
+to 6d3 hexidecimal.
+

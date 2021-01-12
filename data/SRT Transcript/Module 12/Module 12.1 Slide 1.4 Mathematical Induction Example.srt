@@ -1,0 +1,253 @@
+1
+00:00:00,400 --> 00:00:00,940
+Okay.
+
+2
+00:00:00,940 --> 00:00:08,680
+So we're going to prove that for any natural
+number N, two N square plus five N minus six
+
+3
+00:00:08,690 --> 00:00:10,750
+is greater or equal to zero.
+
+4
+00:00:10,750 --> 00:00:16,800
+Before we start just know that this statement
+here is of the form for any natural number
+
+5
+00:00:16,800 --> 00:00:24,330
+and P of N is true, where this here are P
+of N: two N square plus five N minus six greater
+
+6
+00:00:24,330 --> 00:00:28,050
+equal to zero, that's a P of N. Okay.
+
+7
+00:00:28,050 --> 00:00:36,230
+Let's start to disprove here; know there are
+a lot of ways to show this statement here.
+
+8
+00:00:36,230 --> 00:00:40,300
+But we’ll use induction, you know, in order
+to prove it.
+
+9
+00:00:40,300 --> 00:00:58,330
+So, it's first state that we will prove using
+induction on N. And as we said there are two
+
+10
+00:00:58,330 --> 00:01:08,250
+steps: there is the base and there is the
+inductive step.
+
+11
+00:01:08,250 --> 00:01:12,580
+So, let's start with the base.
+
+12
+00:01:12,580 --> 00:01:19,909
+The base: we are supposed to show that P of
+one is true; basically, that this thing here
+
+13
+00:01:19,909 --> 00:01:22,330
+is true for any cause one.
+
+14
+00:01:22,330 --> 00:01:35,909
+And that's quite easy because for any cause
+one, we get that two times one square plus
+
+15
+00:01:35,909 --> 00:01:44,700
+five times one minus six basically equals
+to one which is greater or equal to zero just
+
+16
+00:01:44,700 --> 00:01:48,560
+as required.
+
+17
+00:01:48,560 --> 00:01:54,270
+Now, let's try to show; let's try to do the
+inductive step.
+
+18
+00:01:54,270 --> 00:02:00,100
+So for the inductive step, we said that we're
+going to assume that P of N minus one is true,
+
+19
+00:02:00,100 --> 00:02:04,270
+and under that assumption we'll show that
+P of N is also true.
+
+20
+00:02:04,270 --> 00:02:18,739
+So we assume that P of N minus one is true,
+that means we should just take N minus one
+
+21
+00:02:18,739 --> 00:02:28,590
+instead of N in our statement; two N minus
+one square plus five N minus one minus six
+
+22
+00:02:28,590 --> 00:02:30,260
+is greater or equal to zero.
+
+23
+00:02:30,260 --> 00:02:32,209
+So, that's our assumption.
+
+24
+00:02:32,209 --> 00:02:45,169
+And we’ll show that under that assumption
+two N square plus five N minus six is also
+
+25
+00:02:45,169 --> 00:02:46,840
+greater or equal to zero.
+
+26
+00:02:46,840 --> 00:02:55,599
+So, this here is our assumption and this here
+is what we need to show.
+
+27
+00:02:55,599 --> 00:03:01,810
+And we’ll use our assumption for, to show
+that thing.
+
+28
+00:03:01,810 --> 00:03:02,859
+So, okay.
+
+29
+00:03:02,859 --> 00:03:14,120
+So let's see; two N square plus five N minus
+six.
+
+30
+00:03:14,120 --> 00:03:18,099
+Let's see how we can make it using our assumption.
+
+31
+00:03:18,099 --> 00:03:28,249
+So hopefully it would just be equal to two
+N minus one square plus five N minus one minus
+
+32
+00:03:28,249 --> 00:03:29,379
+six.
+
+33
+00:03:29,379 --> 00:03:35,409
+If these two expressions were equal, using
+our assumption we can just say that the right
+
+34
+00:03:35,409 --> 00:03:42,669
+hand side is greater or equal to zero and
+therefore two N square plus five N minus six
+
+35
+00:03:42,669 --> 00:03:44,469
+is greater or equal to zero.
+
+36
+00:03:44,469 --> 00:03:50,681
+Unfortunately, they're not equal because of
+this thing here is, and I'll simplify it,
+
+37
+00:03:50,681 --> 00:04:00,379
+it goes, gets to two N square plus N minus
+nine.
+
+38
+00:04:00,379 --> 00:04:08,359
+So, we can fix this expression for it to be
+equal and for that we would need, okay, so
+
+39
+00:04:08,359 --> 00:04:13,049
+two N square, we have on both sides.
+
+40
+00:04:13,049 --> 00:04:20,169
+On the left hand we have five N, on the right
+hand we have, and so we need to add four N.
+
+41
+00:04:20,169 --> 00:04:25,240
+On the left hand we have negative six on the
+right hand we have a negative nine so let's
+
+42
+00:04:25,240 --> 00:04:33,020
+just add three more, and now these two things
+are equal to one another.
+
+43
+00:04:33,020 --> 00:04:40,319
+So, now that's very easy because, it's very
+useful actually, because we know that this
+
+44
+00:04:40,319 --> 00:04:44,690
+thing here is greater or equal to zero; that's
+our inductive assumption.
+
+45
+00:04:44,690 --> 00:04:53,220
+We also know that four N plus three, also,
+is greater or equal to zero because N is greater
+
+46
+00:04:53,220 --> 00:04:55,240
+or equal to two, is a positive integer.
+
+47
+00:04:55,240 --> 00:05:01,939
+So, if we multiplied by four and add three
+we would definitely get a positive number.
+
+48
+00:05:01,939 --> 00:05:08,590
+Therefore, these two add-ins, basically, are
+greater equal to zero plus zero, which is
+
+49
+00:05:08,590 --> 00:05:09,590
+their zero.
+
+50
+00:05:09,590 --> 00:05:16,920
+All together, we get that two N square five
+N minus six is greater or equal to zero.
+
+51
+00:05:16,920 --> 00:05:24,400
+So, the inductive step showed that given our
+assumption: that's two N minus one squared
+
+52
+00:05:24,400 --> 00:05:28,120
+plus five N minus one minus six is greater
+or equal to zero.
+
+53
+00:05:28,120 --> 00:05:34,710
+Given that assumption, we can then say that
+two N square plus five N minus six, itself,
+
+54
+00:05:34,710 --> 00:05:36,279
+is greater or equal to zero.
+

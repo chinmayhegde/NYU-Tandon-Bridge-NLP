@@ -1,0 +1,39 @@
+1
+00:00:00,700 --> 00:00:07,109
+Before we get into implementing it let’s
+stop a second and think how we can figure
+
+2
+00:00:07,109 --> 00:00:13,230
+out how many full weeks and extra days are
+there in a some amount of days.
+
+3
+00:00:13,230 --> 00:00:19,470
+So if we divide let’s say 19 by 7 we get
+two with a remainder of 5.
+
+4
+00:00:19,470 --> 00:00:25,450
+Two would be how many full times 7 fits into
+19 which is the number of full weeks.
+
+5
+00:00:25,450 --> 00:00:31,980
+And 5 is basically the days remaining after
+these two full weeks.
+
+6
+00:00:31,980 --> 00:00:40,890
+So once again 19 div 7 is the full weeks and
+19 mod 5 would be the days remaining.
+
+7
+00:00:40,890 --> 00:00:46,870
+After we have that figured out it will be
+quite easy implementing it using C++.
+
+8
+00:00:46,870 --> 00:00:48,170
+Let’s go ahead and do that.
+

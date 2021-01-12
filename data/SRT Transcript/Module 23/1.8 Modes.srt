@@ -1,0 +1,159 @@
+1
+00:00:00,580 --> 00:00:04,560
+One of the other components that the operating
+system needs to keep track of is what mode
+
+2
+00:00:04,560 --> 00:00:06,709
+a process might be in.
+
+3
+00:00:06,709 --> 00:00:13,349
+And what we're really talking about here is
+what processor mode the process could be using.
+
+4
+00:00:13,349 --> 00:00:18,390
+For the most part processes are going to use
+user mode, and that's normal, but in certain
+
+5
+00:00:18,390 --> 00:00:24,109
+instances a process may have to be created
+that has more permissions, to access more
+
+6
+00:00:24,109 --> 00:00:30,039
+parts of the system then a user mode would
+be allowed to access.
+
+7
+00:00:30,039 --> 00:00:34,930
+User mode has a lot of restrictions; it's
+not allowed to directly access system hardware,
+
+8
+00:00:34,930 --> 00:00:38,860
+it's not allowed to access main memory outside
+of its own bounds.
+
+9
+00:00:38,860 --> 00:00:45,280
+So, the operating system keeps track of what
+processes are in user mode, and what processes
+
+10
+00:00:45,280 --> 00:00:49,890
+are in kernel mode and there are very few
+that are in kernel mode.
+
+11
+00:00:49,890 --> 00:00:54,830
+Now let's be clear kernel mode has absolutely
+no restrictions; you can do absolutely anything
+
+12
+00:00:54,830 --> 00:01:01,280
+that the system can do when in kernel mode
+and kernel mode should really be restricted
+
+13
+00:01:01,280 --> 00:01:06,000
+to only those processes that need kernel mode.
+
+14
+00:01:06,000 --> 00:01:10,050
+In years past kernel mode was allowed for
+almost any process that was running on the
+
+15
+00:01:10,050 --> 00:01:16,171
+system, and if you survived or use computers
+through the late 90's and early 2000’s you
+
+16
+00:01:16,171 --> 00:01:18,390
+know how dangerous that was.
+
+17
+00:01:18,390 --> 00:01:24,070
+The era of Windows 98 and Windows ME constantly
+crashing and blue screening and the power
+
+18
+00:01:24,070 --> 00:01:32,150
+switch solution to that was partly a result
+of having every process access to kernel mode.
+
+19
+00:01:32,150 --> 00:01:37,750
+Now we have a much better solution: we use
+user mode only for those for those processes
+
+20
+00:01:37,750 --> 00:01:41,620
+that are going to not need kernel mode.
+
+21
+00:01:41,620 --> 00:01:46,680
+And the processor knows the difference between
+user mode in kernel mode as a result of one
+
+22
+00:01:46,680 --> 00:01:47,680
+register.
+
+23
+00:01:47,680 --> 00:01:53,320
+In the Intel architecture, we call this the
+program status word register the PSW, and
+
+24
+00:01:53,320 --> 00:01:59,010
+that one register has one bit to indicate
+whether it's in user mode or in kernel mode.
+
+25
+00:01:59,010 --> 00:02:03,020
+Switching between the modes is easy if you're
+going from kernel mode to user mode because
+
+26
+00:02:03,020 --> 00:02:09,340
+you simply modify the register for the program
+status word and it changes into user mode
+
+27
+00:02:09,340 --> 00:02:10,420
+from kernel mode.
+
+28
+00:02:10,420 --> 00:02:14,900
+But switching back from user mode to kernel
+mode is a bit more difficult.
+
+29
+00:02:14,900 --> 00:02:20,470
+For this the processor, itself needs to recognize
+when the operating system is going to run
+
+30
+00:02:20,470 --> 00:02:25,370
+and it needs to move back into kernel mode
+automatically, by itself.
+
+31
+00:02:25,370 --> 00:02:29,620
+And we’ll talk about when this happens there
+are certain events that occur that cause the
+
+32
+00:02:29,620 --> 00:02:34,709
+processor to move back into kernel mode and
+when that happens, of course, the processor
+
+33
+00:02:34,709 --> 00:02:37,730
+is going to switch to running the operating
+system.
+

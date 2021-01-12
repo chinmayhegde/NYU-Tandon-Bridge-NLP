@@ -1,0 +1,109 @@
+0:00:00.680,0:00:05.859
+We’ve talked about for loops while loops
+iterative statements.
+
+0:00:05.859,0:00:08.540
+Let’s look at another problem now.
+
+0:00:08.540,0:00:13.540
+Let’s talk about how to compute the average
+of a collection of numbers.
+
+0:00:13.540,0:00:21.110
+For example let’s assume the user enters
+a sequence of grades and calculates and prints
+
+0:00:21.110,0:00:24.340
+the average of the sequence.
+
+0:00:24.340,0:00:28.910
+Let’s try to aim for a behavior that looks
+something like that.
+
+0:00:28.910,0:00:35.050
+At first the program would ask the user please
+enter the number of students you have in the
+
+0:00:35.050,0:00:36.050
+class.
+
+0:00:36.050,0:00:44.420
+The user can say let’s say 4 and then the
+program would ask the user please enter the
+
+0:00:44.420,0:00:47.760
+students’ grades separated by spaces.
+
+0:00:47.760,0:00:55.170
+The user would then enter four grades for
+example 71 86 68 94.
+
+0:00:55.170,0:01:01.379
+And eventually the program would respond by
+saying what’s the average of this sequence.
+
+0:01:01.379,0:01:06.520
+In this case the class average is 79.75.
+
+0:01:06.520,0:01:13.820
+So in order to implement this problem here
+we need to calculate an average.
+
+0:01:13.820,0:01:18.890
+And in order to calculate the average basically
+you need to sum up all the numbers and divide
+
+0:01:18.890,0:01:20.970
+it by the amount of numbers.
+
+0:01:20.970,0:01:23.030
+That would give you the average.
+
+0:01:23.030,0:01:29.159
+So to do that we know how many numbers are
+going to be that’s the first input we got
+
+0:01:29.159,0:01:30.189
+from the user.
+
+0:01:30.189,0:01:35.020
+The number of students in the class but in
+order to figure out the sum of the numbers
+
+0:01:35.020,0:01:41.280
+the sum of the grades we would need to accumulate
+them in some kind of sum variable.
+
+0:01:41.280,0:01:47.360
+Just as we did in the calculating the sum
+of the digits of a number.
+
+0:01:47.360,0:01:51.420
+So basically we are going to repeat here two
+things over and over.
+
+0:01:51.420,0:01:54.400
+We will read an input and add it to sum.
+
+0:01:54.400,0:01:55.990
+Read an input and add it to sum.
+
+0:01:55.990,0:01:57.759
+Read an input and add it to sum.
+
+0:01:57.759,0:02:00.700
+Over and over for each grade the user enters.
+
+0:02:00.700,0:02:06.950
+After we will finish up reading and accumulating
+the sum we will have a variable containing
+
+0:02:06.950,0:02:11.829
+the total sum which we can then divide by
+the amount of numbers to figure out what the
+
+0:02:11.829,0:02:13.079
+average is.
+
+0:02:13.079,0:02:16.099
+Let’s get into the details of this implementation.

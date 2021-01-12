@@ -1,0 +1,53 @@
+1
+00:00:00,870 --> 00:00:04,590
+In this module we're going to talk about a
+couple of data structures the two data structures
+
+2
+00:00:04,590 --> 00:00:07,580
+that we're going to talk about our stacks
+and queues.
+
+3
+00:00:07,580 --> 00:00:11,440
+And these really popular data structures in
+computer science and we use them over and
+
+4
+00:00:11,440 --> 00:00:12,940
+over and over again.
+
+5
+00:00:12,940 --> 00:00:16,850
+So we're going to talk about first the stack
+we are going to explain what it is and how
+
+6
+00:00:16,850 --> 00:00:20,500
+it works and what it's designed for and then
+I'm going to talk about some uses that we
+
+7
+00:00:20,500 --> 00:00:23,830
+could apply the stack to and then we're going
+to talk about queues.
+
+8
+00:00:23,830 --> 00:00:27,330
+We're going to talk about the same thing what
+it is and how it works and what it's designed
+
+9
+00:00:27,330 --> 00:00:30,140
+for and then what we use queues for.
+
+10
+00:00:30,140 --> 00:00:35,949
+So coming away from this you're going to have
+a good look at two very fundamental data structures
+
+11
+00:00:35,949 --> 00:00:39,660
+in computer science and you should understand
+both how they are built and how they are used.
+

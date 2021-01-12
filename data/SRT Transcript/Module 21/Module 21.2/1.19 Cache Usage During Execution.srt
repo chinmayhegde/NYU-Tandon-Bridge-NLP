@@ -1,0 +1,200 @@
+1
+00:00:01,380 --> 00:00:06,970
+So let us take a look at how the cache is
+accessed during the instruction fetch and
+
+2
+00:00:06,970 --> 00:00:10,070
+the memory stages of the CPU pipeline.
+
+3
+00:00:10,070 --> 00:00:16,510
+Let us assume we have 16 megabyte DRAM, and
+a 16 kilobye, 2-way set associative cache
+
+4
+00:00:16,510 --> 00:00:19,980
+with LRU replacement and WriteBack policy.
+
+5
+00:00:19,980 --> 00:00:25,279
+In addition to the cache age bits and the
+dirty bits that we discussed before, each
+
+6
+00:00:25,279 --> 00:00:29,210
+cache block has a valid bit and cache tag
+bits.
+
+7
+00:00:29,210 --> 00:00:33,160
+The valid bit indicates that there is a valid
+content in the cache block.
+
+8
+00:00:33,160 --> 00:00:38,790
+So initially the valid bit is zero and when
+something is brought into the cache the first
+
+9
+00:00:38,790 --> 00:00:42,860
+time, the valid bit for that cache block is
+set to one.
+
+10
+00:00:42,860 --> 00:00:48,170
+The cache tag bits hold the value for the
+cache tag field for the D RAM address of the
+
+11
+00:00:48,170 --> 00:00:51,960
+data or instruction in that cache block.
+
+12
+00:00:51,960 --> 00:00:56,350
+We will illustrate how the cache controller
+goes about searching the cache and updating
+
+13
+00:00:56,350 --> 00:00:57,860
+it given an address.
+
+14
+00:00:57,860 --> 00:01:05,460
+By default, when the CPU starts, all the valid
+bits are zero because there is nothing in
+
+15
+00:01:05,460 --> 00:01:06,460
+the cache.
+
+16
+00:01:06,460 --> 00:01:09,390
+This is known as a cold start.
+
+17
+00:01:09,390 --> 00:01:13,159
+For simplicity, we assume this is the L1 data
+cache.
+
+18
+00:01:13,159 --> 00:01:18,380
+So it only handles requests for data accesses
+at the memory stage of the pipeline
+
+19
+00:01:18,380 --> 00:01:25,259
+At some point in execution, there is a Load
+double instruction where the memory address
+
+20
+00:01:25,259 --> 00:01:27,380
+is 001C.
+
+21
+00:01:27,380 --> 00:01:32,210
+So the CPU calculates the target address and
+gives it to the cache controller.
+
+22
+00:01:32,210 --> 00:01:36,869
+The cache controller then breaks down the
+address into the different fields to find
+
+23
+00:01:36,869 --> 00:01:41,009
+out if the requested data is in the cache.
+
+24
+00:01:41,009 --> 00:01:46,539
+Here we see that the cache controller gets
+the fields and determines that if the data
+
+25
+00:01:46,539 --> 00:01:52,640
+for this load double instruction is already
+in the cache, then it must be in set 1.
+
+26
+00:01:52,640 --> 00:01:56,209
+The cache controller searches for each block
+in set 1.
+
+27
+00:01:56,209 --> 00:02:01,439
+But since all the valid bits of the blocks
+in that set are all zero, then there is no
+
+28
+00:02:01,439 --> 00:02:03,779
+data in that cache set.
+
+29
+00:02:03,779 --> 00:02:08,240
+Hence the data is not in the cache and must
+be brought from the D RAM.
+
+30
+00:02:08,240 --> 00:02:10,220
+This is known as a cache miss.
+
+31
+00:02:10,220 --> 00:02:15,840
+Though we are using the LRU policy, there
+is nothing to replace because the set is initially
+
+32
+00:02:15,840 --> 00:02:16,840
+empty.
+
+33
+00:02:16,840 --> 00:02:21,420
+So the cache controller simply sends the address
+to the memory controller to handle the cache
+
+34
+00:02:21,420 --> 00:02:22,560
+miss.
+
+35
+00:02:22,560 --> 00:02:27,690
+The memory controller uses the D RAM block
+field of the address to find out which block
+
+36
+00:02:27,690 --> 00:02:29,380
+is being requested.
+
+37
+00:02:29,380 --> 00:02:32,690
+Here we see that D RAM block is requested.
+
+38
+00:02:32,690 --> 00:02:37,100
+So the memory controller gets D RAM block
+1 and sends it back to the cache controller.
+
+39
+00:02:37,100 --> 00:02:44,450
+The cache controller then takes the
+data, adds it to an empty blocks in the set,
+
+40
+00:02:44,450 --> 00:02:49,070
+updates the valid bit to indicate that there
+is some valid content in that cache block,
+
+41
+00:02:49,070 --> 00:02:53,720
+updates the cache age bits to indicate the
+recency of access for this block and sets
+
+42
+00:02:53,720 --> 00:02:58,260
+the cache tag bits of that block to the value
+of the cache tag field of the address.
+
+43
+00:02:58,260 --> 00:03:01,190
+In our case, the cache tag field is zero.
+

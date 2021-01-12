@@ -1,0 +1,105 @@
+1
+00:00:00,580 --> 00:00:06,580
+Let's analyze the running time of selection-sort
+and see how efficient this algorithm is.
+
+2
+00:00:06,580 --> 00:00:12,220
+Before we analyze selection sort, let's start
+by analyzing find index of min, this helper
+
+3
+00:00:12,220 --> 00:00:18,690
+function, so we would know what's the cost
+of each call there and then we'll just use
+
+4
+00:00:18,690 --> 00:00:23,359
+that when we are analyzing a selection sort
+algorithm.
+
+5
+00:00:23,359 --> 00:00:29,279
+So let's start with a find index of min; let's
+find the running time and the running time
+
+6
+00:00:29,279 --> 00:00:31,140
+of that function.
+
+7
+00:00:31,140 --> 00:00:37,090
+Like all algorithms that we are analyzing,
+we need to give the running time as a function
+
+8
+00:00:37,090 --> 00:00:39,160
+of the size of the input.
+
+9
+00:00:39,160 --> 00:00:46,140
+So, in this case the size of the input N would
+be the number of elements in the range were
+
+10
+00:00:46,140 --> 00:00:53,540
+searching for the index of min; so let’s
+have N as the number of elements between low
+
+11
+00:00:53,540 --> 00:01:01,320
+and high, arithmetically we’ll just have
+high minus low plus one, that the number of
+
+12
+00:01:01,320 --> 00:01:08,600
+elements between low and i so this is our
+N. And let's analyze the running time as a
+
+13
+00:01:08,600 --> 00:01:09,600
+function of N.
+
+14
+00:01:09,600 --> 00:01:18,210
+So once again, before we start the for loop,
+we are doing a constant amount of operations
+
+15
+00:01:18,210 --> 00:01:21,820
+and after the for loop we are having a constant
+amount of operations.
+
+16
+00:01:21,820 --> 00:01:27,990
+So min equals ARR low, minInd equals low,
+that’s theta of one, and return min Ind
+
+17
+00:01:27,990 --> 00:01:29,600
+that’s also theta of one.
+
+18
+00:01:29,600 --> 00:01:36,290
+And we’re mostly interested at the cost
+of this for loop.
+
+19
+00:01:36,290 --> 00:01:44,979
+Once again the body here, each iteration is
+constant; it's only two or three primitive
+
+20
+00:01:44,979 --> 00:01:47,300
+operations so that’s theta of one.
+
+21
+00:01:47,300 --> 00:01:54,490
+Which means that the number of iterations,
+that’s basically the cost of this for loop.
+
+22
+00:01:54,490 --> 00:02:00,140
+Here the number of iterations is N, so the
+entire cost is theta of N.
+

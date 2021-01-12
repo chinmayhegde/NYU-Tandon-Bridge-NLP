@@ -1,0 +1,41 @@
+0:00:00.500,0:00:06.580
+So let's try to use a switch in order to solve
+of the following problem.
+
+0:00:06.580,0:00:11.470
+Let's write a program that reads from the
+user a simple mathematical expression.
+
+0:00:11.470,0:00:18.240
+We will allow only an addition difference
+division or multiplication expression and
+
+0:00:18.240,0:00:20.360
+then we'll print the value.
+
+0:00:20.360,0:00:26.340
+For example, the user would be prompted to
+enter an expression of the form argument operator
+
+0:00:26.340,0:00:33.730
+argument, and then the user would say I don't
+know five point two times four and the program
+
+0:00:33.730,0:00:39.730
+would respond by saying twenty point eight
+which is five point two times four.
+
+0:00:39.730,0:00:43.460
+Let's try to implement this program using
+switch.
+
+0:00:43.460,0:00:50.260
+Now we don't really need to use switch here
+we can definitely use the if-else statement
+
+0:00:50.260,0:00:57.989
+or other kind of branching statements, but
+let's try to use switch anyway.
+
+0:00:57.989,0:00:59.120
+Let's go ahead.

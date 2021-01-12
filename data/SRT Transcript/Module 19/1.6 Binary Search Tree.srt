@@ -1,0 +1,280 @@
+1
+00:00:00,489 --> 00:00:05,009
+The most common form of tree that we're going
+to work with is actually a binary search tree.
+
+2
+00:00:05,009 --> 00:00:09,100
+And I'd like to go over that and talk about
+it, because we are going to use it extensively
+
+3
+00:00:09,100 --> 00:00:11,340
+especially in this module.
+
+4
+00:00:11,340 --> 00:00:14,179
+The binary search tree as I mentioned before,
+only has…
+
+5
+00:00:14,179 --> 00:00:19,160
+It's a binary tree first off, so that means
+it only has a left than a right pointer.
+
+6
+00:00:19,160 --> 00:00:24,580
+And it actually has an additional property,
+and the additional property helps us serve
+
+7
+00:00:24,580 --> 00:00:28,470
+the order of the nodes, helps us decide the
+order of the nodes.
+
+8
+00:00:28,470 --> 00:00:32,700
+So, in other words which one goes on the left
+and which one goes on the right.
+
+9
+00:00:32,700 --> 00:00:38,350
+And the order property in the binary search
+tree says that: all the values in the left
+
+10
+00:00:38,350 --> 00:00:43,800
+sub tree are going to be values that are less
+than the value of this node, and all the values
+
+11
+00:00:43,800 --> 00:00:50,380
+in the right subtree are going to be values
+that are greater than the value of this node.
+
+12
+00:00:50,380 --> 00:00:55,100
+And that means whatever the data is in the
+data section, and I usually use just integers
+
+13
+00:00:55,100 --> 00:01:00,520
+just to describe it and you can see that here
+in this in this graphic, the value of the
+
+14
+00:01:00,520 --> 00:01:04,280
+nodes are what the value is in the data section.
+
+15
+00:01:04,280 --> 00:01:08,009
+And if we have this templated then of course
+that means we need to overload the less than
+
+16
+00:01:08,009 --> 00:01:12,310
+operator for whatever the classes that were
+storing, but that's outside the scope of this
+
+17
+00:01:12,310 --> 00:01:18,270
+discussion you can look at the previous modules
+and operator overloading to talk about the
+
+18
+00:01:18,270 --> 00:01:19,869
+less than operator.
+
+19
+00:01:19,869 --> 00:01:24,679
+But if we have that then we can keep these
+in a regular order.
+
+20
+00:01:24,679 --> 00:01:30,939
+So here now in this graphic what I have is
+module, sorry, value twenty is that the tops
+
+21
+00:01:30,939 --> 00:01:35,259
+of the root is value twenty that was the first
+to know that was inserted into the tree.
+
+22
+00:01:35,259 --> 00:01:41,319
+So, we inserted twenty and then we inserted
+five, now five is the value less than twenty.
+
+23
+00:01:41,319 --> 00:01:46,280
+So, of course five is going to be on the left
+hand side of twenty five would be the left
+
+24
+00:01:46,280 --> 00:01:47,930
+child of twenty.
+
+25
+00:01:47,930 --> 00:01:52,180
+We then either inserted three maybe, or ten,
+or thirty, I'm not sure which the order of
+
+26
+00:01:52,180 --> 00:01:56,939
+insertions wasn't doesn't really matter but
+if we insert three then three should be on
+
+27
+00:01:56,939 --> 00:01:58,229
+the left of twenty.
+
+28
+00:01:58,229 --> 00:02:02,939
+Unfortunately, five is already on the left
+to twenty so what we can do is progress down
+
+29
+00:02:02,939 --> 00:02:07,209
+the tree to insert three as the left child
+of five.
+
+30
+00:02:07,209 --> 00:02:11,960
+So what we're doing is we're looking for a
+place where, when we do insertion where that
+
+31
+00:02:11,960 --> 00:02:15,920
+value should belong but there's actually a
+null.
+
+32
+00:02:15,920 --> 00:02:20,250
+And then when we find that we can go ahead
+and insert a new node at that location.
+
+33
+00:02:20,250 --> 00:02:24,960
+So when we go to insert ten, ten belongs on
+the left there are twenty but it belongs on
+
+34
+00:02:24,960 --> 00:02:28,340
+the right of five because it is a value greater
+than five.
+
+35
+00:02:28,340 --> 00:02:34,160
+If you take a look at that subtree, that three
+five ten sub tree, that is the left of twenty
+
+36
+00:02:34,160 --> 00:02:39,010
+all the values in that sub tree are less than
+twenty.
+
+37
+00:02:39,010 --> 00:02:44,720
+And all values in the left subtree of five
+are less than five and all the values in the
+
+38
+00:02:44,720 --> 00:02:48,100
+right subtree of five are greater than five.
+
+39
+00:02:48,100 --> 00:02:54,420
+So we can evaluate where an insertion should
+happen based on the comparison of the current
+
+40
+00:02:54,420 --> 00:02:59,020
+value that we're trying to insert, with the
+value that's already inside the node. and
+
+41
+00:02:59,020 --> 00:03:03,910
+if you take a look at the values on the right
+of twenty There's a value of thirty on the
+
+42
+00:03:03,910 --> 00:03:07,680
+right of twenty but if it's left child is
+twenty-five.
+
+43
+00:03:07,680 --> 00:03:11,590
+Twenty-five is a value between twenty and
+thirty, we can describe it that way.
+
+44
+00:03:11,590 --> 00:03:17,030
+If we were going to insert one into this tree,
+the only place acceptable in this entire tree
+
+45
+00:03:17,030 --> 00:03:20,330
+that we could insert one would be on the left
+of three.
+
+46
+00:03:20,330 --> 00:03:26,280
+The only place settable to insert thirty-five,
+for example or a value any value greater than
+
+47
+00:03:26,280 --> 00:03:29,210
+thirty, would be on the right sub child of
+thirty.
+
+48
+00:03:29,210 --> 00:03:35,500
+So the binary search tree holds the properties
+that all the left's children are less than
+
+49
+00:03:35,500 --> 00:03:40,610
+and all the right children are greater than
+and that happens recursively over and over
+
+50
+00:03:40,610 --> 00:03:41,610
+again.
+
+51
+00:03:41,610 --> 00:03:45,430
+So we have to maintain that property, not
+just for the tree as a whole but for each
+
+52
+00:03:45,430 --> 00:03:47,490
+node individually.
+
+53
+00:03:47,490 --> 00:03:52,970
+Now if we also allow equal values then it's
+very common to say that the right sub child
+
+54
+00:03:52,970 --> 00:03:59,410
+will hold all the equal values but in trees
+it's very common to prohibit equal values
+
+55
+00:03:59,410 --> 00:04:00,600
+inside of the tree.
+
+56
+00:04:00,600 --> 00:04:04,930
+So you may you may recognize that we don't
+allow equal values.
+
+57
+00:04:04,930 --> 00:04:08,930
+In other words, insertion of twenty five onto
+this tree simply wouldn't have any effect
+
+58
+00:04:08,930 --> 00:04:08,952
+on the tree at all.
+

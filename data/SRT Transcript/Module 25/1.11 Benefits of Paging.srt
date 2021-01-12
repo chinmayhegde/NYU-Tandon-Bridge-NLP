@@ -1,0 +1,189 @@
+1
+00:00:00,489 --> 00:00:02,320
+Well let's look at the benefits of paging.
+
+2
+00:00:02,320 --> 00:00:08,639
+There’s no external fragmentation; every
+frame of main memory is equally good, and
+
+3
+00:00:08,639 --> 00:00:12,120
+we can put any page in any frame and there's
+no detriment.
+
+4
+00:00:12,120 --> 00:00:18,550
+So, there's no reason to keep pages together,
+which means any pages, any frame is available
+
+5
+00:00:18,550 --> 00:00:21,119
+for use as long as of course it's not occupied.
+
+6
+00:00:21,119 --> 00:00:24,289
+So, there's no external fragmentation.
+
+7
+00:00:24,289 --> 00:00:27,160
+Some argument is that there's a minimum of
+internal fragmentation.
+
+8
+00:00:27,160 --> 00:00:31,480
+Okay, yes there is internal fragmentation,
+but how much?
+
+9
+00:00:31,480 --> 00:00:37,050
+We're talking the maximum amount of internal
+fragmentation we could have is four kilobytes
+
+10
+00:00:37,050 --> 00:00:38,090
+minus one byte.
+
+11
+00:00:38,090 --> 00:00:45,160
+So, if the process is going to use one extra
+byte beyond the end of a four kilobyte page,
+
+12
+00:00:45,160 --> 00:00:50,570
+then it's wasting four thousand and ninety
+five bytes of main memory.
+
+13
+00:00:50,570 --> 00:00:56,170
+A process wasting four kilobytes of main memory
+is not terribly significant, even if we had
+
+14
+00:00:56,170 --> 00:01:02,460
+one hundred processes running on the system
+that means a maximum of four hundred kilobytes
+
+15
+00:01:02,460 --> 00:01:06,229
+of main memory wasted and that's insignificant
+in today's environment.
+
+16
+00:01:06,229 --> 00:01:11,370
+So, we don't care about it; so we say yes
+it's going to have some internal fragmentation
+
+17
+00:01:11,370 --> 00:01:15,009
+possibilities, but it's so small we just don't
+care.
+
+18
+00:01:15,009 --> 00:01:22,460
+Protection is really easy because if the process
+is making a reference beyond the end of its
+
+19
+00:01:22,460 --> 00:01:27,189
+page map table, the hardware memory management
+unit won’t be able to convert that into
+
+20
+00:01:27,189 --> 00:01:28,860
+a physical memory address.
+
+21
+00:01:28,860 --> 00:01:35,289
+We know there's a problem and we can interrupt
+and call the operating system immediately
+
+22
+00:01:35,289 --> 00:01:37,210
+to say that something's gone wrong.
+
+23
+00:01:37,210 --> 00:01:42,469
+So, protection becomes really easy the process
+literally cannot access anything outside its
+
+24
+00:01:42,469 --> 00:01:44,420
+own memory space.
+
+25
+00:01:44,420 --> 00:01:50,249
+relocation becomes easy and, in fact, relocation
+now is talking about relocating a page.
+
+26
+00:01:50,249 --> 00:01:55,119
+We don't necessarily have to relocate the
+entire process; we could if we want but if
+
+27
+00:01:55,119 --> 00:02:00,679
+all we need to do is relocate one page, we
+can just update the page map table to indicate
+
+28
+00:02:00,679 --> 00:02:05,850
+where the new the pages now located what the
+new frame number is and we're done.
+
+29
+00:02:05,850 --> 00:02:10,200
+It really doesn't take a lot of effort, of
+course we have to copy those four killer bytes,
+
+30
+00:02:10,200 --> 00:02:13,830
+but copying four kilobytes is not terribly
+significant anyhow.
+
+31
+00:02:13,830 --> 00:02:16,660
+Besides why would we do relocation?
+
+32
+00:02:16,660 --> 00:02:21,690
+There's very little reason in an simple paging
+system, there’s very little reason to move
+
+33
+00:02:21,690 --> 00:02:23,530
+a page from one to the other.
+
+34
+00:02:23,530 --> 00:02:26,570
+And then easy sharing which we're going to
+see a little bit later on.
+
+35
+00:02:26,570 --> 00:02:31,300
+If we just have two processes that want to
+share a page and it's allowed to do so, doesn't
+
+36
+00:02:31,300 --> 00:02:36,010
+violate protection, if they're allowed to
+share a page then we can simply enter the
+
+37
+00:02:36,010 --> 00:02:41,360
+same frame number into their page map tables
+at the same location and we don't have any
+
+38
+00:02:41,360 --> 00:02:42,730
+problems with that.
+
+39
+00:02:42,730 --> 00:02:47,810
+So, there's a huge number of benefits to paging
+and that's why we'll never go back to the
+
+40
+00:02:47,810 --> 00:02:50,410
+old fixed and dynamic partitioning systems.
+

@@ -1,0 +1,194 @@
+1
+00:00:00,630 --> 00:00:04,830
+First, we need a definition of an operating
+system and what I've come up with as a definition
+
+2
+00:00:04,830 --> 00:00:10,309
+is: a program that controls execution of application
+programs and acts as an interface between
+
+3
+00:00:10,309 --> 00:00:12,500
+applications and computer hardware.
+
+4
+00:00:12,500 --> 00:00:15,559
+And we're going to delve into that a lot more
+in later slides.
+
+5
+00:00:15,559 --> 00:00:20,150
+But what I want you to understand here is
+that the operating system is a piece of software;
+
+6
+00:00:20,150 --> 00:00:23,550
+it's not a component of the of the computer.
+
+7
+00:00:23,550 --> 00:00:30,619
+So contrary to Apple's view when you buy a
+computer, you don't necessarily buy an operating
+
+8
+00:00:30,619 --> 00:00:36,550
+system and that you can mix and match which
+operating systems you want on which hardware
+
+9
+00:00:36,550 --> 00:00:38,140
+with some limitations.
+
+10
+00:00:38,140 --> 00:00:43,970
+Now the operating system does interact directly
+with system hardware and it has to be very
+
+11
+00:00:43,970 --> 00:00:46,160
+closely matched to that system hardware.
+
+12
+00:00:46,160 --> 00:00:51,181
+So, it's not like we can mix and match any
+operating system with any hardware; there
+
+13
+00:00:51,181 --> 00:00:54,190
+has to be some compatibility concerns there.
+
+14
+00:00:54,190 --> 00:00:59,950
+But if we take a look at the hardware for
+example that Apple uses on all of their laptops
+
+15
+00:00:59,950 --> 00:01:01,250
+and desktops.
+
+16
+00:01:01,250 --> 00:01:07,880
+It's the exact same hardware as any PC In
+fact, the CPU is the same, the system bus
+
+17
+00:01:07,880 --> 00:01:11,759
+is the same, the DMA controllers the same,
+the interrupt controllers the same; all of
+
+18
+00:01:11,759 --> 00:01:18,590
+it is exactly the same as one made by HP or
+Dell or any other PC manufacturer.
+
+19
+00:01:18,590 --> 00:01:24,070
+What makes the huge difference is the operating
+system, and Apple has designed its operating
+
+20
+00:01:24,070 --> 00:01:29,819
+system only to work with their hardware, but
+the operating system is a piece of software
+
+21
+00:01:29,819 --> 00:01:30,819
+fundamentally.
+
+22
+00:01:30,819 --> 00:01:34,909
+And it runs on the same processor as the user's
+program code.
+
+23
+00:01:34,909 --> 00:01:39,020
+So, your programs that you're writing, your
+‘hello world’ applications that you're
+
+24
+00:01:39,020 --> 00:01:46,200
+writing, those are running on the processor
+which is the same processor as the operating
+
+25
+00:01:46,200 --> 00:01:47,200
+system.
+
+26
+00:01:47,200 --> 00:01:51,759
+So, we don't have more than one processor
+in the system; let's keep it simple and consider
+
+27
+00:01:51,759 --> 00:01:56,810
+a system that doesn't have multi processors,
+uni-processor systems what we call it.
+
+28
+00:01:56,810 --> 00:02:02,420
+The operating system has to divide the time
+between itself running code for the operating
+
+29
+00:02:02,420 --> 00:02:08,149
+system to manage the hardware and manage the
+execution of the whole system, and actually
+
+30
+00:02:08,149 --> 00:02:11,530
+running your program that you really care
+about.
+
+31
+00:02:11,530 --> 00:02:15,330
+What the operating system doesn't include
+is applications.
+
+32
+00:02:15,330 --> 00:02:20,690
+And this is going to be a big difference for
+you to understand, because we'll talk about
+
+33
+00:02:20,690 --> 00:02:21,950
+it in a later slide.
+
+34
+00:02:21,950 --> 00:02:26,200
+When you go and buy an operating system from
+Microsoft or something like that what you
+
+35
+00:02:26,200 --> 00:02:30,880
+get is a lot more than just the operating
+system so, we're going to talk about that.
+
+36
+00:02:30,880 --> 00:02:36,510
+But I want you to think of the operating system
+as the fundamental hard software that goes
+
+37
+00:02:36,510 --> 00:02:38,940
+along with the hardware for the computer.
+
+38
+00:02:38,940 --> 00:02:45,330
+It doesn't have to be directly matched to
+the exact hardware; there can be some compatibility
+
+39
+00:02:45,330 --> 00:02:48,450
+for multiple operating systems to multiple
+hardware.
+
+40
+00:02:48,450 --> 00:02:55,200
+But fundamentally we can talk about the operating
+system being a piece of software that manages
+
+41
+00:02:55,200 --> 00:02:56,830
+this system hardware and runs applications.
+

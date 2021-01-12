@@ -1,0 +1,162 @@
+0:00:00.620,0:00:09.200
+Ok as a final example let’s write a program
+that solves a quadratic equation. Let’s
+
+0:00:09.200,0:00:14.150
+write a program that basically reads three
+real numbers representing the coefficients
+
+0:00:14.150,0:00:20.780
+of a quadratic equation. And then it prints
+the solutions of the equation if there are
+
+0:00:20.780,0:00:28.170
+any or an appropriate message. So for example
+an execution could look something like please
+
+0:00:28.170,0:00:35.100
+enter coefficients of the quadratic equation.
+The user says one negative five and six. And
+
+0:00:35.100,0:00:43.719
+then the program would say the equation one
+x squared just uses this symbol to says power
+
+0:00:43.719,0:00:52.589
+up. So one x squared plus negative five x
+plus six equals zero solutions two and three.
+
+0:00:52.589,0:01:01.739
+In this case there are two solutions. So before
+we go to implement this program let’s go
+
+0:01:01.739,0:01:07.890
+back to I don’t know seventh eighth grade
+where we’ve talked about quadratic equations
+
+0:01:07.890,0:01:14.570
+and make sure that we got the math all figured
+out. All the observations how to solve quadratic
+
+0:01:14.570,0:01:23.100
+equations. So we know that we have this formula
+in case our equation A x squared plus B x
+
+0:01:23.100,0:01:32.070
+plus C equals zero and it is a real quadratic
+equation. So A is not zero. Then we have an
+
+0:01:32.070,0:01:42.430
+equation for the square root of these of the
+solutions of these x sub one and two are negative
+
+0:01:42.430,0:01:50.450
+B plus minus the square root of B squared
+minus four A C over two A. See why it is important
+
+0:01:50.450,0:01:58.960
+that A is not zero so we can divide by two
+times A. So this formula here is fine only
+
+0:01:58.960,0:02:06.620
+when it is a real quadratic equation. And
+basically there could be different types of
+
+0:02:06.620,0:02:15.569
+solutions basically depending on the sign
+of the discriminant. So in case B squared
+
+0:02:15.569,0:02:22.900
+minus four A C is positive there could be
+two real solutions here. For example a one
+
+0:02:22.900,0:02:28.319
+negative five and six x squared minus five
+x plus six equals zero. We have two solutions
+
+0:02:28.319,0:02:35.269
+x one and x two. But then if the discriminant
+is zero then when we take the square root
+
+0:02:35.269,0:02:41.099
+it would also be zero and the plus minus zero
+would be the same. So for that case we would
+
+0:02:41.099,0:02:47.569
+have only one solution. For example when A
+is one B is two and C is three you can check
+
+0:02:47.569,0:02:52.870
+that B squared minus four A C would be zero
+and then we would get only one solution. X
+
+0:02:52.870,0:03:01.010
+equals negative one. And there are also cases
+where the discriminant is negative in this
+
+0:03:01.010,0:03:09.209
+case there is no square root real square root.
+So there is no real solution so we say that
+
+0:03:09.209,0:03:17.200
+in this case there is no real solution. For
+example when A is one B is zero and C is one
+
+0:03:17.200,0:03:24.469
+you will see that B squared minus four A C
+is a negative. In this case there is no real
+
+0:03:24.469,0:03:31.480
+solution there are complex solutions but no
+real solutions. So so far for quadratic equations
+
+0:03:31.480,0:03:38.829
+we either have two real solutions one real
+solution or no real solutions at all. But
+
+0:03:38.829,0:03:46.900
+when we are reading these A B and C we are
+not guaranteed that A would be not zero. There
+
+0:03:46.900,0:03:57.779
+are cases where A could be zero. In these
+cases the solutions can also be a bit different.
+
+0:03:57.779,0:04:04.739
+So for example if A is zero B is zero and
+C is five so we get a zero x squared plus
+
+0:04:04.739,0:04:13.109
+zero x plus five equals zero basically five
+equals zero no value substitute for x to get
+
+0:04:13.109,0:04:20.769
+like a truth statement here. So in this case
+there is no solution at all not only not a
+
+0:04:20.769,0:04:27.250
+real solution and you do have a complex solution.
+There would be no solution at all right. Or
+
+0:04:27.250,0:04:35.530
+if all A B and Cs are zeroes so you’ll get
+zero equals zero basically all values you’ll
+
+0:04:35.530,0:04:41.311
+substitute for x would give you a truth statement.
+So for zero zero zero for example you would
+
+0:04:41.311,0:04:49.949
+get that all reals are solutions. So let’s
+use these observations so there are five types
+
+0:04:49.949,0:04:56.389
+of different solutions either two real solutions
+one real solution no real solution at all
+
+0:04:56.389,0:05:05.580
+no solutions at all or that all the reals
+are solutions. Now that we’ve refreshed
+
+0:05:05.580,0:05:08.500
+that let’s go ahead and implement this program.

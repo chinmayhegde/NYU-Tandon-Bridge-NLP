@@ -1,0 +1,102 @@
+1
+00:00:00,459 --> 00:00:05,540
+So, let’s go through a detailed example
+of converting a high-level code in C or C++
+
+2
+00:00:05,540 --> 00:00:09,290
+to MIPS assembly and ultimately to MIPS mnemonic
+format.
+
+3
+00:00:09,290 --> 00:00:12,410
+Consider the high-level code we have here
+as an example.
+
+4
+00:00:12,410 --> 00:00:17,249
+Note that the values for A, B, and C, are
+initialized in hexadecimal format
+
+5
+00:00:17,249 --> 00:00:22,269
+So when we successfully compile this high-level
+code using our MIPS compiler, we get the software
+
+6
+00:00:22,269 --> 00:00:24,470
+binary that is compatible only to a MIPS processor.
+
+7
+00:00:24,470 --> 00:00:27,340
+This binary is the executable file of the
+code.
+
+8
+00:00:27,340 --> 00:00:32,140
+And if we try to open this binary, what we
+see is a bunch of ones and zeros representing
+
+9
+00:00:32,140 --> 00:00:36,460
+the bits for the machine-level instructions
+that implement this high-level code
+
+10
+00:00:36,460 --> 00:00:41,699
+This binary itself is generally broken down
+into two segments: a code segment that contains
+
+11
+00:00:41,699 --> 00:00:45,649
+the machine level instructions that implement
+the functionality of the high-level code and
+
+12
+00:00:45,649 --> 00:00:50,629
+a data segment that contains the declared
+static variables in the high-level code.
+
+13
+00:00:50,629 --> 00:00:53,300
+Each segment has a start address that we call
+the base address.
+
+14
+00:00:53,300 --> 00:00:56,480
+Note that the addresses are given in hexadecimal.
+
+15
+00:00:56,480 --> 00:01:02,659
+In our example, the code segment base address
+is F00 and the base address of the data segment
+
+16
+00:01:02,659 --> 00:01:03,659
+is A000.
+
+17
+00:01:03,659 --> 00:01:09,140
+Note that in the data segment, each static
+variable is initialized to 64 bits.
+
+18
+00:01:09,140 --> 00:01:13,880
+This is the default configuration of the MIPS64
+processor.
+
+19
+00:01:13,880 --> 00:01:18,090
+So ideally, what we would like to do is to
+be able to understand how the high-level code
+
+20
+00:01:18,090 --> 00:01:25,410
+A = B+C maps to machine code However, this
+is too complicated because working with the
+
+21
+00:01:25,410 --> 00:01:29,299
+bitwise representations of machine-level instructions
+is tedious and error-prone.
+

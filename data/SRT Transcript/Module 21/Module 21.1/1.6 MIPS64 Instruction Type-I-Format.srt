@@ -1,0 +1,72 @@
+1
+00:00:00,440 --> 00:00:06,120
+An I-format instruction has a 16-bit immediate
+value as an operand.
+
+2
+00:00:06,120 --> 00:00:11,190
+An I-format instruction can also have up to
+two registers, Rs and Rt.
+
+3
+00:00:11,190 --> 00:00:17,510
+Rt itself can be a source or a destination
+registers, whereas Rs can only be a source
+
+4
+00:00:17,510 --> 00:00:18,520
+register.
+
+5
+00:00:18,520 --> 00:00:23,100
+Unlike R-format instructions, each I-format
+instruction has a unique opcode.
+
+6
+00:00:23,100 --> 00:00:25,910
+Therefore, there is no need for a second opcode.
+
+7
+00:00:25,910 --> 00:00:29,840
+Let us see how the processor breaks down an
+I-format instruction.
+
+8
+00:00:29,840 --> 00:00:31,730
+Consider the instruction above.
+
+9
+00:00:31,730 --> 00:00:34,510
+The processor first reads its opcode.
+
+10
+00:00:34,510 --> 00:00:38,719
+The opcode matches to the double word add
+immediate instruction, which is an immediate
+
+11
+00:00:38,719 --> 00:00:41,780
+instruction or an I-format instruction.
+
+12
+00:00:41,780 --> 00:00:49,059
+Since the CPU knows that D ADD I uses two
+registers Rs and Rt, it reads the two fields
+
+13
+00:00:49,059 --> 00:00:52,929
+for Rs and Rt to determine the register numbers.
+
+14
+00:00:52,929 --> 00:00:56,640
+The CPU then reads the 16-bit immediate value.
+
+15
+00:00:56,640 --> 00:01:01,050
+Once that is done, the CPU has all of the
+operands of the instruction and can go onto
+
+16
+00:01:01,050 --> 00:01:01,659
+the next step.
+

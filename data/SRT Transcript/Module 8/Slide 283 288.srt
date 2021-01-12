@@ -1,0 +1,67 @@
+0:00:00.410,0:00:02.940
+Let’s add another function here.
+
+0:00:02.940,0:00:05.229
+Linear just as we had quadratic.
+
+0:00:05.229,0:00:10.879
+The input for the linear would be actually
+linear has two coefficients so we would have
+
+0:00:10.879,0:00:13.759
+double A and double B right.
+
+0:00:13.759,0:00:19.910
+And the linear function should return the
+type of solution right maybe all reals we
+
+0:00:19.910,0:00:21.350
+said in case of a linear.
+
+0:00:21.350,0:00:25.780
+There could be no solution at all or no real
+solution or both of the times actually there
+
+0:00:25.780,0:00:28.369
+is only one solution for linear equation.
+
+0:00:28.369,0:00:31.160
+A x plus B equals zero.
+
+0:00:31.160,0:00:35.890
+So just move the B divide by A and get one
+real solution.
+
+0:00:35.890,0:00:42.450
+So let’s have the solution as an output
+parameter and the type of solution as a return
+
+0:00:42.450,0:00:43.450
+value.
+
+0:00:43.450,0:00:49.460
+Let’s document this function so linear first
+we say what is it intended to do so it solves
+
+0:00:49.460,0:00:53.510
+a linear equation of the type A x plus B equals
+zero.
+
+0:00:53.510,0:00:58.199
+The input are A and B which are the coefficients
+of the solution.
+
+0:00:58.199,0:01:04.300
+And the output is the type of the solution
+as a return value and out x one that is the
+
+0:01:04.300,0:01:10.970
+solution of the solution of an equation or
+a solution of an equation as an output parameter.
+
+0:01:10.970,0:01:19.250
+Our assumption here is obviously if there
+aren’t any solutions then out x one is not
+
+0:01:19.250,0:01:19.870
+defined.

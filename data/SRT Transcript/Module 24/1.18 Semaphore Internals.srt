@@ -1,0 +1,166 @@
+1
+00:00:00,710 --> 00:00:06,000
+So, we need to look at the internals of the
+semaphore and we need to have an understanding
+
+2
+00:00:06,000 --> 00:00:08,910
+of how the semaphore works internally.
+
+3
+00:00:08,910 --> 00:00:14,139
+So, what we're going to do is kind of piece
+together what happens inside a semaphore,
+
+4
+00:00:14,139 --> 00:00:17,880
+without actually going through the nitty-gritty
+of how the operating system creates a semaphore
+
+5
+00:00:17,880 --> 00:00:19,380
+and maintains a semaphore.
+
+6
+00:00:19,380 --> 00:00:24,630
+But what we do is we create a counter inside
+the semaphore object, and the semaphore is
+
+7
+00:00:24,630 --> 00:00:28,199
+going to indicate how many signals, or the
+counter is going to indicate how many signals
+
+8
+00:00:28,199 --> 00:00:29,739
+have been sent.
+
+9
+00:00:29,739 --> 00:00:36,050
+Each weight causes the counter to decrement
+and if the counter ever becomes negative then
+
+10
+00:00:36,050 --> 00:00:40,370
+the thread that causes it to go negative,
+and of course all subsequent threads, are
+
+11
+00:00:40,370 --> 00:00:43,120
+going to be blocked and then they're placed
+on a queue.
+
+12
+00:00:43,120 --> 00:00:48,719
+Now the operating system maintains the queue,
+and it's a queue of blocked threads waiting
+
+13
+00:00:48,719 --> 00:00:50,570
+for a signal on that semaphore.
+
+14
+00:00:50,570 --> 00:00:56,199
+So, that's going to be our indication that
+we can release a thread, but they all go into
+
+15
+00:00:56,199 --> 00:01:01,530
+the blocked queue; all those threads that
+come in and call wait, that cause the counter
+
+16
+00:01:01,530 --> 00:01:05,720
+to go negative, when the counter is negative
+those threads are all blocked and the only
+
+17
+00:01:05,720 --> 00:01:11,829
+thread that's allowed to run is the one thread
+that consumed the one and only signal.
+
+18
+00:01:11,829 --> 00:01:17,130
+Now when that thread is finished, it has to
+send a signal, and if there are any threads
+
+19
+00:01:17,130 --> 00:01:23,399
+on the queue then the signal will cause the
+counter to increment; first signal always
+
+20
+00:01:23,399 --> 00:01:25,500
+causes the counter to increment.
+
+21
+00:01:25,500 --> 00:01:31,170
+But it also releases the next thread in the
+queue, if the counter actually goes positive
+
+22
+00:01:31,170 --> 00:01:34,350
+that means that there's nobody in the queue
+waiting for a signal so there's nothing to
+
+23
+00:01:34,350 --> 00:01:41,899
+be done there, but we recognize that the signal
+in the wait function allow us to create this
+
+24
+00:01:41,899 --> 00:01:44,090
+mutual exclusion environment.
+
+25
+00:01:44,090 --> 00:01:49,729
+Unfortunately, internally to the semaphore,
+there exists the critical section; the act
+
+26
+00:01:49,729 --> 00:01:54,900
+of looking at the counter and then changing
+the counter is itself a critical section.
+
+27
+00:01:54,900 --> 00:01:59,130
+So, here we have a mechanism that we're trying
+to use to protect against critical sections,
+
+28
+00:01:59,130 --> 00:02:01,009
+and we created a critical section.
+
+29
+00:02:01,009 --> 00:02:06,799
+So, that's a real problem so we have to use
+a hardware solution to prevent asynchrony
+
+30
+00:02:06,799 --> 00:02:11,580
+when the semaphore has to both check the counter
+and set the counter.
+
+31
+00:02:11,580 --> 00:02:16,140
+So, this is where the semaphore is going to
+use someone of the hardware options, either
+
+32
+00:02:16,140 --> 00:02:20,470
+disable interrupts or test and set, probably
+exchange, and it's going to take care of it
+
+33
+00:02:20,470 --> 00:02:21,470
+internally.
+
+34
+00:02:21,470 --> 00:02:26,440
+So, we have to recognize that semaphore itself
+has a critical section and it has that in
+
+35
+00:02:26,440 --> 00:02:27,640
+order to solve our critical section.
+

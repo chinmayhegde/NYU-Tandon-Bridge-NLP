@@ -1,0 +1,143 @@
+0:00:00.630,0:00:02.980
+Hi there hope you are having a great day.
+
+0:00:02.980,0:00:06.660
+Today we are going to talk about how to analyze
+algorithms.
+
+0:00:06.660,0:00:13.640
+We talk about correctness of algorithms and
+how to assess the resources algorithms used.
+
+0:00:13.640,0:00:17.440
+Whether it is time memory network or stuff
+like that.
+
+0:00:17.440,0:00:22.740
+We will focus mostly on time but same concepts
+would work for other resources as well.
+
+0:00:22.740,0:00:29.819
+We will start by talking about the problem
+of testing whether a number is prime or not.
+
+0:00:29.819,0:00:36.300
+Before we look at the problem definition let’s
+look at some other two definitions.
+
+0:00:36.300,0:00:39.040
+First is defining what is a prime number.
+
+0:00:39.040,0:00:42.310
+I believe you probably know that but let’s
+make it formal.
+
+0:00:42.310,0:00:47.280
+So assuming we have an integer num that is
+greater or equal to two.
+
+0:00:47.280,0:00:54.610
+We say that num is prime if its only factors
+are one and num itself.
+
+0:00:54.610,0:01:00.230
+So if it divides only by num and one that
+would make it a prime number.
+
+0:01:00.230,0:01:08.710
+For example 13 is prime because 13’s only
+factors are 1 and 13 no other number divides
+
+0:01:08.710,0:01:11.490
+by 13.
+
+0:01:11.490,0:01:18.439
+On the other hand 12 is not prime because
+besides 1 and 12 for example 6 is a factor
+
+0:01:18.439,0:01:19.990
+of 12.
+
+0:01:19.990,0:01:23.429
+That would make it not a prime number.
+
+0:01:23.429,0:01:30.719
+Another definition I want us to note here
+is complimentary dividers.
+
+0:01:30.719,0:01:36.240
+The definition goes something like that again
+let’s have an integer number num greater
+
+0:01:36.240,0:01:38.139
+or equal to two.
+
+0:01:38.139,0:01:43.329
+And let’s assume d and k are two dividers
+of num.
+
+0:01:43.329,0:01:50.899
+We would call k and q complimentary dividers
+of num if when we multiply them we get num.
+
+0:01:50.899,0:01:53.840
+So if d times k equals num.
+
+0:01:53.840,0:02:01.009
+For example for num equals 100 4 and 25 are
+complimentary because if you multiply 4 by
+
+0:02:01.009,0:02:02.279
+25 you will get 100.
+
+0:02:02.279,0:02:08.289
+And so are 5 and 20 both are dividers if you
+multiply 5 by 20 you will get 100.
+
+0:02:08.289,0:02:16.850
+That would make 4 or 25 a complimentary couple
+of dividers and 5 and 20 complimentary dividers.
+
+0:02:16.850,0:02:23.840
+For example 2 and 10 which are also two dividers
+of 100 are not complimentary dividers because
+
+0:02:23.840,0:02:28.050
+if we multiply 2 and 10 we won’t get 100.
+
+0:02:28.050,0:02:32.620
+So let’s have these two definitions we will
+use them later on.
+
+0:02:32.620,0:02:36.690
+And let’s take a look at the problem of
+testing primality.
+
+0:02:36.690,0:02:42.970
+So let’s write a program that reads from
+the user an integer let’s assume that it
+
+0:02:42.970,0:02:45.820
+is greater or equal to two.
+
+0:02:45.820,0:02:49.680
+And the problem would need to determine whether
+this number is prime or not.
+
+0:02:49.680,0:02:52.710
+So an execution could look something like.
+
+0:02:52.710,0:02:58.760
+Assuming we have we will ask the user to enter
+an integer greater or equal to two.
+
+0:02:58.760,0:03:08.330
+The user would enter 911 and then the program
+would respond by saying 911 is a prime number.
+
+0:03:08.330,0:03:13.800
+You can try it out and check that 911 is indeed
+a prime number.
+
+0:03:13.800,0:03:15.530
+Ok let’s go ahead and solve it.

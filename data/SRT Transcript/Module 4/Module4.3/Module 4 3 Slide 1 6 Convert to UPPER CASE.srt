@@ -1,0 +1,56 @@
+0:00:00.560,0:00:06.040
+Ok so let’s take all the syntax we’ve
+talked about characters and implement the
+
+0:00:06.040,0:00:07.040
+following program.
+
+0:00:07.040,0:00:12.880
+Let’s write a program that reads from the
+user a lower case letter and convert it to
+
+0:00:12.880,0:00:20.050
+its upper case equivalent and prints the upper
+case letter of the lower case that was read.
+
+0:00:20.050,0:00:25.119
+For example the program would start by asking
+the user please enter a lower case letter
+
+0:00:25.119,0:00:31.730
+the user can for example enter lower case
+T and the program would respond by saying
+
+0:00:31.730,0:00:39.020
+upper case of lower case T is upper case T.
+Let’s try to think how we can implement
+
+0:00:39.020,0:00:40.760
+this kind of behavior.
+
+0:00:40.760,0:00:47.820
+So we already noticed that the lower case
+letters are sequential the upper case letters
+
+0:00:47.820,0:00:52.540
+are sequential and the digits are all sequential.
+
+0:00:52.540,0:01:03.470
+Using this property we can see that the distance
+from lower case T to lower case A is the same
+
+0:01:03.470,0:01:10.539
+this offset is the same as the offset from
+upper case T to upper case A. We can then
+
+0:01:10.539,0:01:17.060
+maybe calculate what is the offset of lower
+case T from lower case A and add the same
+
+0:01:17.060,0:01:23.990
+distance the same offset to upper case A that
+would get us to upper case T. Let’s use
+
+0:01:23.990,0:01:26.780
+this observation in order to implement the
+program.

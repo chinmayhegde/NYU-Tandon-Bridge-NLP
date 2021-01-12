@@ -1,0 +1,428 @@
+1
+00:00:00,080 --> 00:00:04,210
+Now I'd like to show you how to do some input
+from a file.
+
+2
+00:00:04,210 --> 00:00:08,380
+And so what I've done is create a couple of
+sample files here; I'll just show you the
+
+3
+00:00:08,380 --> 00:00:09,780
+first input file.
+
+4
+00:00:09,780 --> 00:00:14,360
+And again it's very important these are text-based
+files, so if you're creating these files on
+
+5
+00:00:14,360 --> 00:00:18,400
+a Mac you have to make sure that these are
+created as regular text.
+
+6
+00:00:18,400 --> 00:00:23,270
+If you're creating them on a PC you might
+just use notepad; notepad is really easy to
+
+7
+00:00:23,270 --> 00:00:28,090
+do to create these files and you can just
+go and right-click inside the folder and choose
+
+8
+00:00:28,090 --> 00:00:30,000
+new text documents.
+
+9
+00:00:30,000 --> 00:00:33,890
+Don't choose word or anything like that because
+if you look at a word file it actually contains
+
+10
+00:00:33,890 --> 00:00:36,930
+quite a bit more formatting information and
+that sort of stuff.
+
+11
+00:00:36,930 --> 00:00:40,560
+We're not going to really care about any formatting;
+we're just working with text.
+
+12
+00:00:40,560 --> 00:00:44,460
+So here I've created a text document with
+just a number of integers and what I'd like
+
+13
+00:00:44,460 --> 00:00:50,870
+to do is create a program, which can read
+in and maybe find the average of these integers.
+
+14
+00:00:50,870 --> 00:00:53,800
+So we'll keep it very, very simple to start
+off with.
+
+15
+00:00:53,800 --> 00:00:56,970
+So the first thing is of course that account
+include my fstream again.
+
+16
+00:00:56,970 --> 00:01:02,060
+I'm going to give you the open input file
+function and open input file is going to have
+
+17
+00:01:02,060 --> 00:01:05,930
+to take into account the fact that the user
+might type in the wrong file name.
+
+18
+00:01:05,930 --> 00:01:12,550
+So it's going to pass in the ifstream object
+which an ifstream object we talked about is
+
+19
+00:01:12,550 --> 00:01:17,350
+a file coming in and when we pass streams
+to functions, of course we always pass them
+
+20
+00:01:17,350 --> 00:01:18,490
+by reference.
+
+21
+00:01:18,490 --> 00:01:24,390
+So I'm going to pass in my in file, by reference,
+to my open input file function and I'll just
+
+22
+00:01:24,390 --> 00:01:30,370
+create a string for the file name here and
+ask the user the file name and I'll read in
+
+23
+00:01:30,370 --> 00:01:31,450
+its file name.
+
+24
+00:01:31,450 --> 00:01:36,140
+And then I'll go ahead and open that file
+so I'll assume that the in file objects not
+
+25
+00:01:36,140 --> 00:01:40,740
+opened at this point which makes sense since
+that's what we're asking this function to
+
+26
+00:01:40,740 --> 00:01:41,740
+do.
+
+27
+00:01:41,740 --> 00:01:46,659
+And we'll give it the file name I haven't
+included string here so I can see that these
+
+28
+00:01:46,659 --> 00:01:47,659
+strings.
+
+29
+00:01:47,659 --> 00:01:51,741
+We hope that the file name opens but hope
+is not enough we're gonna have to verify that
+
+30
+00:01:51,741 --> 00:01:53,730
+the file actually does open.
+
+31
+00:01:53,730 --> 00:01:58,170
+So I'm going to write a while loop to see
+if the file is open and you ask why it's a
+
+32
+00:01:58,170 --> 00:02:03,500
+while loop, well because what happens if we
+try again and it still fails to open a second
+
+33
+00:02:03,500 --> 00:02:05,590
+time and a third time and a fourth time.
+
+34
+00:02:05,590 --> 00:02:09,450
+In fact, you could ask the question how many
+times is it necessary to try to open a file
+
+35
+00:02:09,450 --> 00:02:13,970
+before successful and the answer is we don't
+know; we want to continue in this loop till
+
+36
+00:02:13,970 --> 00:02:15,630
+the file actually opens.
+
+37
+00:02:15,630 --> 00:02:20,800
+While in file is not open so while a file
+is not successful while we have a failure
+
+38
+00:02:20,800 --> 00:02:28,310
+on any file it can say file fails to open
+and then we can ask the user to do the same
+
+39
+00:02:28,310 --> 00:02:33,250
+process over again: read in in that file name,
+and then we can try and open it again, but
+
+40
+00:02:33,250 --> 00:02:40,400
+before we open it we have to call clear because
+what we're testing for is a flag that shows
+
+41
+00:02:40,400 --> 00:02:41,400
+failure.
+
+42
+00:02:41,400 --> 00:02:47,550
+And even if we have a success the previous
+fail will cause that flag to remain, unless
+
+43
+00:02:47,550 --> 00:02:51,290
+we’ve called clear so before we open it
+again before we attempt to open this file
+
+44
+00:02:51,290 --> 00:02:55,630
+again we're going to have to clear it that
+failure flag and then you can try and open
+
+45
+00:02:55,630 --> 00:02:56,980
+it on the file.
+
+46
+00:02:56,980 --> 00:03:01,640
+So it's not exactly the same code as previous
+because you have to clear the flags but we
+
+47
+00:03:01,640 --> 00:03:06,670
+do want to try opening it again and in order
+to test it right after that.
+
+48
+00:03:06,670 --> 00:03:09,940
+We're going to have to make sure that it's
+not in a failed state to begin with and then
+
+49
+00:03:09,940 --> 00:03:12,590
+we can try opening it and see if it's a failed
+state.
+
+50
+00:03:12,590 --> 00:03:18,069
+This function almost becomes wrote because
+you can use it over and over and over again
+
+51
+00:03:18,069 --> 00:03:22,920
+for different projects that you have to work
+on, so I’d commit this to memory or at the
+
+52
+00:03:22,920 --> 00:03:26,090
+very least get used to knowing how this function
+works.
+
+53
+00:03:26,090 --> 00:03:32,629
+And that way when we create an ifstring object
+called in file we can use the open input file
+
+54
+00:03:32,629 --> 00:03:39,270
+function to open that in file and trust that
+when it's done that that input file is open.
+
+55
+00:03:39,270 --> 00:03:43,849
+So now we know that in order to get out of
+that function the input file must be open
+
+56
+00:03:43,849 --> 00:03:44,950
+and ready to read.
+
+57
+00:03:44,950 --> 00:03:52,020
+From that point we can read in maybe into
+an array or a vector the elements of the file,
+
+58
+00:03:52,020 --> 00:03:53,269
+so I know that these are integers.
+
+59
+00:03:53,269 --> 00:03:58,610
+I'm going to go ahead and read these into
+a vector of integers, so of course I'll pound
+
+60
+00:03:58,610 --> 00:04:05,599
+vector and then I can have a temporary one
+so I want to make sure that I can't read in
+
+61
+00:04:05,599 --> 00:04:08,290
+into V there's no simple way to do that.
+
+62
+00:04:08,290 --> 00:04:14,440
+But what I can do is create a temporary object
+and read in in a while loop from in file into
+
+63
+00:04:14,440 --> 00:04:21,139
+the temporary object; now, what this does
+is reads in one integer into temp and then
+
+64
+00:04:21,139 --> 00:04:22,159
+we can process it.
+
+65
+00:04:22,159 --> 00:04:29,240
+Now if the input operation if the read in
+operation is a temp doesn't succeed then we're
+
+66
+00:04:29,240 --> 00:04:33,050
+not going to continue in the while loop, that
+would be a failure and we'd fall out of the
+
+67
+00:04:33,050 --> 00:04:34,050
+while loop.
+
+68
+00:04:34,050 --> 00:04:38,490
+So like when the file is done when we've read
+in all the information from the file then
+
+69
+00:04:38,490 --> 00:04:43,050
+the read in operation will fail and we can
+go on and do something else, but as long as
+
+70
+00:04:43,050 --> 00:04:48,759
+we're able to read in an integer then we can
+store it in temp and then do something with
+
+71
+00:04:48,759 --> 00:04:49,759
+that.
+
+72
+00:04:49,759 --> 00:04:52,849
+And for this we're going to be real simple,
+we'll just push that back the push temp back
+
+73
+00:04:52,849 --> 00:04:59,080
+out to V and then if we want let's say the
+average we can take the sum using our for
+
+74
+00:04:59,080 --> 00:05:11,419
+loop, V sum plus equals the average of the
+integers we can do some divided by dot size,
+
+75
+00:05:11,419 --> 00:05:16,150
+so that tells us a quick average of the items
+in the file.
+
+76
+00:05:16,150 --> 00:05:22,150
+And I've called this input one dot txt very
+important in Windows that you show the file
+
+77
+00:05:22,150 --> 00:05:25,610
+extensions, so if you don't show the file
+extensions this is only going to show up as
+
+78
+00:05:25,610 --> 00:05:31,150
+input one but it's very important that you
+recognize the file extensions do actually
+
+79
+00:05:31,150 --> 00:05:32,150
+exist.
+
+80
+00:05:32,150 --> 00:05:36,229
+So if all you're seeing is input one and it
+says text document then in reality this is
+
+81
+00:05:36,229 --> 00:05:37,999
+input one dot txt.
+
+82
+00:05:37,999 --> 00:05:41,560
+I have it showing all the file extensions
+for all my files because that's the way I
+
+83
+00:05:41,560 --> 00:05:42,560
+like it.
+
+84
+00:05:42,560 --> 00:05:44,490
+I'm going to compile this program I didn't
+initialize it.
+
+85
+00:05:44,490 --> 00:05:45,490
+Yeah, that's right okay.
+
+86
+00:05:45,490 --> 00:05:50,449
+So I've got to initialize that and then when
+I run the program txt.
+
+87
+00:05:50,449 --> 00:05:56,569
+The average of the integers in the file is
+55 so that's an easy way to read in a whole
+
+88
+00:05:56,569 --> 00:06:01,219
+slew of integers there and you can work on
+those integers using a vector or a dynamic
+
+89
+00:06:01,219 --> 00:06:02,240
+array of some sort.
+
+90
+00:06:02,240 --> 00:06:07,499
+I'll show you the code just one more time
+main and finish the open it
+

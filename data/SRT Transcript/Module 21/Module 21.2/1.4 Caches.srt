@@ -1,0 +1,105 @@
+1
+00:00:00,610 --> 00:00:05,360
+The primary approach to overcome the main
+memory access delay is by adding caches.
+
+2
+00:00:05,360 --> 00:00:09,309
+A cache is another memory component that is
+put between the main memory and the processor
+
+3
+00:00:09,309 --> 00:00:15,019
+core and its role is to hold instructions
+and data that the CPU often uses.
+
+4
+00:00:15,019 --> 00:00:18,030
+So what makes a cache different from DRAM?
+
+5
+00:00:18,030 --> 00:00:22,120
+First off, a cache is implemented as SRAM
+instead of DRAM.
+
+6
+00:00:22,120 --> 00:00:24,700
+The S in SRAM stands for static.
+
+7
+00:00:24,700 --> 00:00:28,840
+This means that there is no need to refresh
+the main memory, which makes it faster to
+
+8
+00:00:28,840 --> 00:00:31,950
+read from and write to.
+
+9
+00:00:31,950 --> 00:00:37,150
+However, SRAM requires more space to hold
+one bit of data than DRAM.
+
+10
+00:00:37,150 --> 00:00:43,080
+Usually, SRAM can require up to 8 times more
+area to store one bit than a DRAM.
+
+11
+00:00:43,080 --> 00:00:47,610
+So, although it consumes less power, SRAM
+takes more area.
+
+12
+00:00:47,610 --> 00:00:50,630
+As a result, we can’t have gigabytes worth
+of SRAM.
+
+13
+00:00:50,630 --> 00:00:56,090
+Usually, an SRAM cache is in the range of
+2KB to 2-MB.
+
+14
+00:00:56,090 --> 00:01:00,170
+Given that a cache can be in the kilobyte
+size, it is small enough that it can be put
+
+15
+00:01:00,170 --> 00:01:05,610
+on the same chip as the CPU without it consuming
+all of the power budget.
+
+16
+00:01:05,610 --> 00:01:10,540
+So with the benefits of using static RAM and
+being able to put the cache on the same chip
+
+17
+00:01:10,540 --> 00:01:16,480
+as the CPU, the access delay of a cache can
+be between 1 and 12 cycles depending on the
+
+18
+00:01:16,480 --> 00:01:19,580
+size and other factors that we will discuss.
+
+19
+00:01:19,580 --> 00:01:24,640
+Now someone may have the intuition to simply
+use SRAM for main memory instead of DRAM.
+
+20
+00:01:24,640 --> 00:01:30,439
+But remember, SRAM can require up to 8 more
+area than DRAM.
+
+21
+00:01:30,439 --> 00:01:36,430
+Therefore, you cannot have a large 8 GB main
+memory as SRAM because it will take too much
+
+22
+00:01:36,430 --> 00:01:37,859
+space on your computer motherboard.
+

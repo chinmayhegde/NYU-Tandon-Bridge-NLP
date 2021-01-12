@@ -1,0 +1,65 @@
+1
+00:00:00,590 --> 00:00:05,210
+So, the process is made up of the code, data
+and context.
+
+2
+00:00:05,210 --> 00:00:10,850
+And we're talking about the process being
+a running program in a system state, and we're
+
+3
+00:00:10,850 --> 00:00:14,950
+gonna talk about what system states mean,
+in detail, in the next topic.
+
+4
+00:00:14,950 --> 00:00:20,690
+But for now, we'll simply say that when the
+program starts, it has to have all the information
+
+5
+00:00:20,690 --> 00:00:26,250
+that it needs in order to run; specifically,
+the code as well as any data it may need initially.
+
+6
+00:00:26,250 --> 00:00:30,660
+And then the operating system needs to keep
+track of a lot of information about the running
+
+7
+00:00:30,660 --> 00:00:33,850
+program, and that's what we're gonna call
+that the context.
+
+8
+00:00:33,850 --> 00:00:38,380
+The code all has to be run in sequential memory;
+you know this, you've done some programming.
+
+9
+00:00:38,380 --> 00:00:42,760
+You've done quite a bit of programming and
+you're gonna have to recognize that the code
+
+10
+00:00:42,760 --> 00:00:49,450
+starts from point one and proceeds sequentially
+through the entire program.
+
+11
+00:00:49,450 --> 00:00:52,320
+And so that code needs to be loaded into sequential
+memory.
+
+12
+00:00:52,320 --> 00:00:57,629
+The process is a way for the operating system
+to keep track of the state of the running
+
+13
+00:00:57,629 --> 00:01:01,239
+program, and the resources assigned to that
+running program.
+

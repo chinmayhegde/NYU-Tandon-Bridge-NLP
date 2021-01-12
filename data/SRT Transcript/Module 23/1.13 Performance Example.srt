@@ -1,0 +1,423 @@
+1
+00:00:00,640 --> 00:00:06,080
+Here we have an example of a file server.
+and the file server does some sort of an IO
+
+2
+00:00:06,080 --> 00:00:08,650
+operation for eighty percent of its time.
+
+3
+00:00:08,650 --> 00:00:15,130
+So, what this is we’ll take in a request
+for some file, and then we’ll process that
+
+4
+00:00:15,130 --> 00:00:20,439
+request, whatever that means, and then we’ll
+go off and receive the file, recover the file
+
+5
+00:00:20,439 --> 00:00:24,779
+from them from the secondary storage device,
+and return it to the requester.
+
+6
+00:00:24,779 --> 00:00:32,090
+So, you might think of this is like an old
+1990’s style HTTP web server so we take
+
+7
+00:00:32,090 --> 00:00:37,180
+the request, we process the request; that's
+going to take let's say about two milliseconds.
+
+8
+00:00:37,180 --> 00:00:41,920
+And then we'll deal with the IO operation
+of actually recovering the file from a secondary
+
+9
+00:00:41,920 --> 00:00:47,379
+storage device and returning it to the to
+the requester, which maybe takes eight milliseconds.
+
+10
+00:00:47,379 --> 00:00:50,940
+So, in total the processing time takes ten
+milliseconds.
+
+11
+00:00:50,940 --> 00:00:56,260
+And that's just a perfect example; we've got
+an IO operation that takes eighty percent.
+
+12
+00:00:56,260 --> 00:01:00,809
+If we do this without threats, we do this
+with just one process that means we've peaked
+
+13
+00:01:00,809 --> 00:01:05,979
+out, we've maximized, our utilization at one
+hundred transactions per second; each transaction
+
+14
+00:01:05,979 --> 00:01:10,659
+is going to take us ten milliseconds and of
+course there's a thousand milliseconds in
+
+15
+00:01:10,659 --> 00:01:14,409
+a second, so thousand divided by ten means
+we can get one hundred of these transactions
+
+16
+00:01:14,409 --> 00:01:15,880
+in a single second.
+
+17
+00:01:15,880 --> 00:01:20,860
+But let's take a look if we add in the idea
+of threads, and let's create a thread for
+
+18
+00:01:20,860 --> 00:01:22,060
+each transaction.
+
+19
+00:01:22,060 --> 00:01:29,320
+When we do that, we can now synchronously
+process the CPU and the IO operation.
+
+20
+00:01:29,320 --> 00:01:36,130
+In other words, if we created two threads,
+then the first thread’s CPU could be done
+
+21
+00:01:36,130 --> 00:01:39,549
+while the second thread was doing an IO operation.
+
+22
+00:01:39,549 --> 00:01:44,490
+And then the second thread could do its CPU
+time while the first thread is doing the IO
+
+23
+00:01:44,490 --> 00:01:45,490
+operation.
+
+24
+00:01:45,490 --> 00:01:51,630
+So, we can sort of go back and forth using
+the CPU as much as we can and using the IO
+
+25
+00:01:51,630 --> 00:01:53,229
+completely.
+
+26
+00:01:53,229 --> 00:01:57,899
+Now if we do this, we recognize that the IO
+can't be done synchronously; we have to we
+
+27
+00:01:57,899 --> 00:02:00,090
+have to do that asynchronously.
+
+28
+00:02:00,090 --> 00:02:05,430
+We have to do that so that one IO operation
+is completed and then the next IO operation
+
+29
+00:02:05,430 --> 00:02:06,590
+can start.
+
+30
+00:02:06,590 --> 00:02:11,730
+The IO device can run multiple requests at
+the same time, so we can service multiple
+
+31
+00:02:11,730 --> 00:02:15,540
+requests at the same time, that means we have
+to do it asynchronously.
+
+32
+00:02:15,540 --> 00:02:20,000
+Well what that means is that we have these
+little eight second eight millisecond blocks
+
+33
+00:02:20,000 --> 00:02:24,840
+that were chopping up this one thousand millisecond
+second into these eight millisecond blocks,
+
+34
+00:02:24,840 --> 00:02:30,120
+and that means we can use only one hundred
+twenty-five transactions per second.
+
+35
+00:02:30,120 --> 00:02:33,370
+Now that doesn't mean we're not doing the
+CPU time, of course we're still doing that
+
+36
+00:02:33,370 --> 00:02:38,760
+two milliseconds of CPU time, but it means
+that we're doing it while the IO operation
+
+37
+00:02:38,760 --> 00:02:42,629
+is happening for one of the other threads
+for the other thread.
+
+38
+00:02:42,629 --> 00:02:47,659
+So, ultimately we've increased our capability
+by twenty-five percent, because what we've
+
+39
+00:02:47,659 --> 00:02:53,599
+effectively done is hidden the CPU time behind
+the IO delay, and that works out great.
+
+40
+00:02:53,599 --> 00:03:00,490
+But we can actually do better because in this
+example of a web server, it's pretty obvious
+
+41
+00:03:00,490 --> 00:03:05,319
+that a lot of the requests are going to come
+in to the exact same file; they're going to
+
+42
+00:03:05,319 --> 00:03:07,550
+be for the exact same file.
+
+43
+00:03:07,550 --> 00:03:15,270
+And if we're dealing with each request independently,
+then the CPU time and the IO delay don't result
+
+44
+00:03:15,270 --> 00:03:20,959
+in any cache; they don't result in anything
+being retained for the next request.
+
+45
+00:03:20,959 --> 00:03:26,610
+But if we can keep track of each of the requests
+and when we bring in a file, we store that
+
+46
+00:03:26,610 --> 00:03:33,270
+file in main memory, then in the next request
+we don't have to do the IO operation; we can
+
+47
+00:03:33,270 --> 00:03:38,470
+avoid doing that eight milliseconds, that
+expensive IO operation, we can completely
+
+48
+00:03:38,470 --> 00:03:42,190
+avoid that by recovering the file directly
+from the cache.
+
+49
+00:03:42,190 --> 00:03:47,439
+So, this is one of the benefits of threads
+that were exploiting by having a shared memory
+
+50
+00:03:47,439 --> 00:03:53,689
+space, which you can't do with processes;
+a shared memory space where we can store these
+
+51
+00:03:53,689 --> 00:03:55,590
+files temporarily.
+
+52
+00:03:55,590 --> 00:03:59,780
+Now at some point if we don't ever need the
+file, we have to throw it out of the cache
+
+53
+00:03:59,780 --> 00:04:05,610
+and if we use up too much memory, we may have
+to throw away some of the files that aren't
+
+54
+00:04:05,610 --> 00:04:06,989
+being used very often.
+
+55
+00:04:06,989 --> 00:04:11,630
+So, there's an extra bit of processing, but
+even if we increase the processing time by
+
+56
+00:04:11,630 --> 00:04:16,270
+twenty-five percent and increase it then say,
+do two and a half milliseconds of CPU time,
+
+57
+00:04:16,270 --> 00:04:22,470
+the benefit here is that we're decreasing
+the amount of IO delay.
+
+58
+00:04:22,470 --> 00:04:27,460
+Now, let's say for example we get seventy-five
+percent hit rate on the cache; now that's
+
+59
+00:04:27,460 --> 00:04:33,220
+abnormally high granted, but it's possible,
+if we have a web server that's popularly serving
+
+60
+00:04:33,220 --> 00:04:35,600
+one web page.
+
+61
+00:04:35,600 --> 00:04:41,670
+When that happens, we recognize that the IO
+delay drops to zero for those seventy-five
+
+62
+00:04:41,670 --> 00:04:48,110
+percent of the operations of the transactions,
+the IO delay will drop to zero.
+
+63
+00:04:48,110 --> 00:04:52,130
+Now the twenty five percent that remains we're
+still going to have to do that eight milliseconds
+
+64
+00:04:52,130 --> 00:04:57,330
+of IO delay, and unfortunately now we've wasted
+an additional half a millisecond for the CPU
+
+65
+00:04:57,330 --> 00:05:01,440
+time to sort of look into the cache and realize
+that it's not even there.
+
+66
+00:05:01,440 --> 00:05:07,910
+So, this extends that, but it reduces the
+overall time because now on average we're
+
+67
+00:05:07,910 --> 00:05:13,110
+going to have two and a half milliseconds
+of IO delay for every transaction but then,
+
+68
+00:05:13,110 --> 00:05:18,100
+correction two and a half milliseconds of
+CPU delay for every transaction, but the IO
+
+69
+00:05:18,100 --> 00:05:21,790
+delay is reduced to only two milliseconds
+for every transaction.
+
+70
+00:05:21,790 --> 00:05:26,530
+And it's not really two milliseconds for every
+transaction, it's eight milliseconds for those
+
+71
+00:05:26,530 --> 00:05:31,230
+transactions that we have to do the IO delay,
+but that's only seventy-five percent of the
+
+72
+00:05:31,230 --> 00:05:32,230
+time.
+
+73
+00:05:32,230 --> 00:05:36,960
+So, we can say that on average each transaction
+uses two milliseconds of IO delay, so with
+
+74
+00:05:36,960 --> 00:05:42,501
+two and a half milliseconds of CPU and two
+milliseconds of IO delay, we have four and
+
+75
+00:05:42,501 --> 00:05:47,800
+a half milliseconds total and that means that
+we can get four hundred transactions in a
+
+76
+00:05:47,800 --> 00:05:48,800
+single second.
+
+77
+00:05:48,800 --> 00:05:53,440
+So, we've gone from one hundred transactions
+in a second to now four hundred transactions
+
+78
+00:05:53,440 --> 00:05:57,680
+in a second just by implementing threads and
+creating a cache and getting a pretty good
+
+79
+00:05:57,680 --> 00:06:00,950
+cache hit rate, but it's possible.
+
+80
+00:06:00,950 --> 00:06:04,920
+If we want to put some money into the problem,
+maybe we can add a second processor and set
+
+81
+00:06:04,920 --> 00:06:09,640
+up symmetric multiprocessing so that that
+CPU delay can be done concurrently, in which
+
+82
+00:06:09,640 --> 00:06:14,500
+case the only slowdown here is the IO operation.
+
+83
+00:06:14,500 --> 00:06:19,380
+We’re IO bound, meaning that we still have
+those two milliseconds of IO delay that we
+
+84
+00:06:19,380 --> 00:06:24,990
+can't get rid of, and that two milliseconds
+means that we're kind of limited at five hundred
+
+85
+00:06:24,990 --> 00:06:26,770
+transactions per second.
+
+86
+00:06:26,770 --> 00:06:31,280
+But with a very small investment, we can go
+from one hundred transactions per second to
+
+87
+00:06:31,280 --> 00:06:35,050
+five hundred transactions per second, and
+with no investment at all we can go from one
+
+88
+00:06:35,050 --> 00:06:39,020
+hundred to four hundred transactions per second
+just by implementing threads.
+

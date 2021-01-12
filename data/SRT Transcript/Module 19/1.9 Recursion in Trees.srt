@@ -1,0 +1,128 @@
+1
+00:00:00,729 --> 00:00:11,570
+wanted to give you an example of that here
+with that get size function inside the BST
+
+2
+00:00:11,570 --> 00:00:12,570
+node class.
+
+3
+00:00:12,570 --> 00:00:17,050
+So here what we're saying is, we’ll start
+out since we are in a node already we can
+
+4
+00:00:17,050 --> 00:00:22,689
+assume that there is one value the size at
+least one, so we’ll start that counter at
+
+5
+00:00:22,689 --> 00:00:23,689
+one.
+
+6
+00:00:23,689 --> 00:00:27,039
+And then all going to do is just check to
+see if this node has a left: if it does then
+
+7
+00:00:27,039 --> 00:00:32,279
+add the size of the left, if it has a right
+then add the size of the right and then return
+
+8
+00:00:32,279 --> 00:00:33,279
+count.
+
+9
+00:00:33,279 --> 00:00:37,399
+And if you take a look at that count, plus
+equals left arrow get size, that's a recursive
+
+10
+00:00:37,399 --> 00:00:39,280
+function call to a different node.
+
+11
+00:00:39,280 --> 00:00:43,421
+So, what we're doing is checking to see if
+that node exists first, because we don't want
+
+12
+00:00:43,421 --> 00:00:48,800
+to de-ref null of course, if that no does
+exist then we'll call its get size function
+
+13
+00:00:48,800 --> 00:00:51,660
+and we'll add its size to our size.
+
+14
+00:00:51,660 --> 00:00:57,800
+So if we have any children, we can assume
+that our size is the sum of the child sizes
+
+15
+00:00:57,800 --> 00:00:59,300
+plus one.
+
+16
+00:00:59,300 --> 00:01:04,720
+And that's really all there is to recursion
+in trees, trying to do this with iteration
+
+17
+00:01:04,720 --> 00:01:09,840
+is really, really hard because you have to
+keep track of what level inside the tree you're
+
+18
+00:01:09,840 --> 00:01:13,800
+on what depth you're at and then move backwards
+and forwards.
+
+19
+00:01:13,800 --> 00:01:16,472
+Remember if, for example, there's no…
+
+20
+00:01:16,472 --> 00:01:21,640
+There's no association; there's no pointers
+between a child node and its cousin node.
+
+21
+00:01:21,640 --> 00:01:28,371
+So, if we have to go back up to an uncle node
+which would be the parents sibling node, that
+
+22
+00:01:28,371 --> 00:01:34,450
+takes quite an effort and even worse if this
+these cousins are separated significantly
+
+23
+00:01:34,450 --> 00:01:39,050
+by more and more uncles and aunts in the family
+tree that looks really crazy.
+
+24
+00:01:39,050 --> 00:01:46,680
+But with recursion it's rather simple because
+we can just call the recursive function to
+
+25
+00:01:46,680 --> 00:01:54,300
+take a pointer to the child nodes, or in this
+case we embed it inside the node class and
+
+26
+00:01:54,300 --> 00:01:59,520
+we can use the getSize function for the child
+nodes inside the parents get size function.
+
+27
+00:01:59,520 --> 00:02:02,160
+So, recursion is going to happen quite often
+in trees.
+

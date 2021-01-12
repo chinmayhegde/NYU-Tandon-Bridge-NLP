@@ -1,0 +1,105 @@
+1
+00:00:00,359 --> 00:00:05,000
+Let us now discuss the syntax and semantics
+of the Load doubleword, doubleword add, and
+
+2
+00:00:05,000 --> 00:00:08,650
+store doubleword instructions that we have
+already covered.
+
+3
+00:00:08,650 --> 00:00:12,099
+Here we see the syntax and semantics of the
+Load doubleword.
+
+4
+00:00:12,099 --> 00:00:19,150
+Rt is the destination register, Rs holds the
+base address of the data segment and the offset
+
+5
+00:00:19,150 --> 00:00:23,380
+holds the position of the data relative to
+that base address.
+
+6
+00:00:23,380 --> 00:00:25,860
+The offset is always at most 16 bits.
+
+7
+00:00:25,860 --> 00:00:30,100
+To calculate the address of the target data,
+the CPU adds the value of the base address
+
+8
+00:00:30,100 --> 00:00:31,440
+in Rs to the offset.
+
+9
+00:00:31,440 --> 00:00:36,190
+But Rs is a 64-bit register, and the offset
+is 16 bits.
+
+10
+00:00:36,190 --> 00:00:38,920
+The addition requires both values to be the
+same size.
+
+11
+00:00:38,920 --> 00:00:44,000
+To change the size of the 16-bit offset to
+64 bits, we perform what is called a sign
+
+12
+00:00:44,000 --> 00:00:45,000
+extension.
+
+13
+00:00:45,000 --> 00:00:49,530
+The basic idea of a sign extension is to increase
+the number of bits used to represent a value,
+
+14
+00:00:49,530 --> 00:00:50,880
+while keeping the sign.
+
+15
+00:00:50,880 --> 00:00:56,040
+So the naïve approach to extend a 16-bit
+value to 64 bits would to append 48 zeros
+
+16
+00:00:56,040 --> 00:00:58,330
+to the left of the original 16-bit value.
+
+17
+00:00:58,330 --> 00:01:01,890
+However, this approach doesn’t work if the
+number is negative.
+
+18
+00:01:01,890 --> 00:01:06,030
+This is because if we extend a negative number
+with zero bits, then it becomes positive because
+
+19
+00:01:06,030 --> 00:01:09,340
+the most significant bit is now 0 instead
+of 1.
+
+20
+00:01:09,340 --> 00:01:13,680
+So sign extension works by first looking at
+the most significant bit of a binary, and
+
+21
+00:01:13,680 --> 00:01:17,400
+using the value of that bit to extend it to
+the desired bitsize.
+
+22
+00:01:17,400 --> 00:01:22,140
+The three examples here show how to sign extend
+different 16-bit values to 64 bits
+

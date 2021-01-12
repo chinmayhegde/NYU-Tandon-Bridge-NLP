@@ -1,0 +1,260 @@
+1
+00:00:00,710 --> 00:00:01,710
+Okay.
+
+2
+00:00:01,710 --> 00:00:06,550
+So we've seen two searching algorithms: the
+general search algorithm, which was linear
+
+3
+00:00:06,550 --> 00:00:13,220
+time, and sorted search, the binary search
+algorithm which was a log of N time.
+
+4
+00:00:13,220 --> 00:00:21,099
+Now obviously a theta of log N is significantly
+better than a theta of N, but I want to show
+
+5
+00:00:21,099 --> 00:00:28,579
+you or give you a better intuition what's
+the meaning of this difference of log time
+
+6
+00:00:28,579 --> 00:00:30,609
+versus linear time.
+
+7
+00:00:30,609 --> 00:00:39,149
+So, you would really appreciate these kinds
+of algorithms: the logarithmic time algorithms.
+
+8
+00:00:39,149 --> 00:00:46,030
+Let's try to compare the value of N versus
+the value of log base two of N for several
+
+9
+00:00:46,030 --> 00:00:47,030
+values.
+
+10
+00:00:47,030 --> 00:00:54,559
+So, for example for N equals two, log two
+of N would be log two of two which is one,
+
+11
+00:00:54,559 --> 00:01:03,179
+slightly better than N, one is obviously smaller
+than two but doesn't seem such a big difference
+
+12
+00:01:03,179 --> 00:01:07,280
+not something to be too happy about.
+
+13
+00:01:07,280 --> 00:01:13,480
+Let's go on, for N equals four, I'm skipping
+three by the way just because I want the log
+
+14
+00:01:13,480 --> 00:01:15,420
+of N to be integer values.
+
+15
+00:01:15,420 --> 00:01:21,320
+So, any value between two and four, in this
+case three, would be somewhere in that range
+
+16
+00:01:21,320 --> 00:01:23,689
+and you see that later on as well.
+
+17
+00:01:23,689 --> 00:01:30,920
+So, for N equals four, log two of N is log
+two of two squared which is four, that equals
+
+18
+00:01:30,920 --> 00:01:31,920
+two.
+
+19
+00:01:31,920 --> 00:01:36,850
+So again log two of four is less than four.
+
+20
+00:01:36,850 --> 00:01:41,600
+But again doesn't seem such a big difference;
+let's go on.
+
+21
+00:01:41,600 --> 00:01:48,900
+Let's keep two eight two to the power of three;
+let's take a look at log two of eight.
+
+22
+00:01:48,900 --> 00:01:55,180
+That would be log two of two to the power
+three, that is three again better than eight
+
+23
+00:01:55,180 --> 00:01:58,880
+not something to get too crazy about.
+
+24
+00:01:58,880 --> 00:02:05,540
+Let's go to a larger value: two to the power
+of ten, around one thousand right.
+
+25
+00:02:05,540 --> 00:02:13,590
+So one thousand on the N but log two of two
+to the power of N, is only ten that starts
+
+26
+00:02:13,590 --> 00:02:20,260
+to be a greater difference here; a thousand
+versus ten.
+
+27
+00:02:20,260 --> 00:02:24,770
+And let's go on, two to the power of thirty
+two; to the power of thirty two, that's around
+
+28
+00:02:24,770 --> 00:02:27,200
+four point three billion.
+
+29
+00:02:27,200 --> 00:02:34,190
+When we're taking the log two of N that would
+be a log two of two to the power of thirty
+
+30
+00:02:34,190 --> 00:02:36,750
+two, that it would be thirty two.
+
+31
+00:02:36,750 --> 00:02:43,780
+That already is quite a big difference: four
+point three billion versus only thirty two.
+
+32
+00:02:43,780 --> 00:02:49,490
+So an algorithm that had to do four point
+three operations versus an algorithm that
+
+33
+00:02:49,490 --> 00:02:55,060
+has to do only thirty two operations, the
+thirty to one would run much faster.
+
+34
+00:02:55,060 --> 00:03:01,560
+But let's even go further; let's talk about
+N equals two to the power of one thousand.
+
+35
+00:03:01,560 --> 00:03:09,550
+Now that is a huge number, it represents like
+the quantity of two the power of one thousand
+
+36
+00:03:09,550 --> 00:03:14,130
+is greater than the number of the total number
+of practicals in the universe.
+
+37
+00:03:14,130 --> 00:03:22,150
+So that's a huge number, obviously it would
+take practically infinite time for an algorithm
+
+38
+00:03:22,150 --> 00:03:28,500
+to run, to execute two to the power of one
+thousand instructions.
+
+39
+00:03:28,500 --> 00:03:34,110
+But a logarithmic algorithm, on the other
+end, which has two log two of two to the power
+
+40
+00:03:34,110 --> 00:03:40,070
+of one thousand, would basically need to execute
+only one thousand instructions and that is
+
+41
+00:03:40,070 --> 00:03:42,290
+less than the second.
+
+42
+00:03:42,290 --> 00:03:50,210
+So a logarithmic algorithm is much faster;
+obviously as N grows but it's much faster
+
+43
+00:03:50,210 --> 00:03:52,210
+than the linear one.
+
+44
+00:03:52,210 --> 00:03:57,320
+And that's the thing to take into account
+where we are implementing an algorithm, if
+
+45
+00:03:57,320 --> 00:04:04,260
+we can create a logarithmic algorithm that
+we would give us a much better performance
+
+46
+00:04:04,260 --> 00:04:06,560
+than a linear one.
+
+47
+00:04:06,560 --> 00:04:14,230
+Just you can see that a linear function, if
+we look at the graph of F of N equals N versus
+
+48
+00:04:14,230 --> 00:04:20,680
+a function equals to log of N, you can see
+that they are both kind of growing.
+
+49
+00:04:20,680 --> 00:04:27,170
+I don't know if you can see that log of N
+also grows to infinity very slow, but it also
+
+50
+00:04:27,170 --> 00:04:28,610
+grows to infinity.
+
+51
+00:04:28,610 --> 00:04:32,430
+If we zoom out this difference would even
+be more visual.
+
+52
+00:04:32,430 --> 00:04:38,300
+Again, you can see that F of N equals N, the
+linear function, grows very fast where the
+
+53
+00:04:38,300 --> 00:04:45,550
+logarithmic function actually seems very much
+like a constant, almost doesn't grow at all.
+
+54
+00:04:45,550 --> 00:04:50,740
+It's kind of fascinating but it would grow
+to infinity eventually but very very slowly.
+
+55
+00:04:50,740 --> 00:04:55,169
+So a logarithmic algorithm is it's a very
+good resource, is very good algorithm.
+

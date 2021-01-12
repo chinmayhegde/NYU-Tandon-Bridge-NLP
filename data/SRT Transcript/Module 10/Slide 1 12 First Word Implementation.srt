@@ -1,0 +1,117 @@
+0:00:00.070,0:00:04.590
+Let’s start by prompting the user to enter
+three words separated by space.
+
+0:00:04.590,0:00:11.980
+So please enter three words separated by space
+and let’s break the line.
+
+0:00:11.980,0:00:14.629
+And then let’s read these three words.
+
+0:00:14.629,0:00:20.789
+Let’s first include the string library and
+then let’s declare three string variables.
+
+0:00:20.789,0:00:26.730
+So let’s have word one word two and word
+three.
+
+0:00:26.730,0:00:29.710
+And now we need to read three words into these
+variables.
+
+0:00:29.710,0:00:36.989
+Since each of them is supposed to be a single
+word actually cin is a good way to read these
+
+0:00:36.989,0:00:40.000
+words into these variables because cin separated
+by space.
+
+0:00:40.000,0:00:47.320
+So we can just do cin into word one into word
+two and into word three.
+
+0:00:47.320,0:00:50.690
+So now we have the three words in these variables.
+
+0:00:50.690,0:00:54.350
+Now let’s try to determine which one is
+the smallest.
+
+0:00:54.350,0:01:00.329
+So I was thinking of having a multiway if
+statement here three cases.
+
+0:01:00.329,0:01:05.660
+Checking if word one is the smallest if word
+two is the smallest or otherwise it is obviously
+
+0:01:05.660,0:01:06.660
+word three.
+
+0:01:06.660,0:01:11.510
+So let’s have an if statement and let’s
+figure out a condition that determines whether
+
+0:01:11.510,0:01:14.170
+word one is the smallest of the three.
+
+0:01:14.170,0:01:23.220
+So we can do something like if word one is
+less or equal to word two and also word one
+
+0:01:23.220,0:01:26.490
+is less or equal to word three.
+
+0:01:26.490,0:01:32.800
+If this is true basically it means that word
+one is both less than word two and less than
+
+0:01:32.800,0:01:33.800
+word three.
+
+0:01:33.800,0:01:40.000
+It is thus the smallest of them all in this
+case we’ll just cout word one let’s break
+
+0:01:40.000,0:01:41.000
+the line.
+
+0:01:41.000,0:01:47.549
+Otherwise let’s do the same to check if
+word two is the smallest so if word two is
+
+0:01:47.549,0:01:54.250
+less or equal to word one and word two is
+less or equal to word three.
+
+0:01:54.250,0:02:00.180
+That means word two is the smallest of the
+three so we should print word two break the
+
+0:02:00.180,0:02:01.220
+line.
+
+0:02:01.220,0:02:08.580
+And otherwise I will just comment that word
+three is the smallest in this caser we’ll
+
+0:02:08.580,0:02:10.220
+just print word three.
+
+0:02:10.220,0:02:16.270
+That’s supposed to be good enough let’s
+test and make sure we didn’t do anything
+
+0:02:16.270,0:02:17.490
+wrong here.
+
+0:02:17.490,0:02:25.850
+So please enter three words separated by space
+so we have dolphin cat and tiger.
+
+0:02:25.850,0:02:30.490
+And that it just prints cat and yea that is
+the smallest word of these three.

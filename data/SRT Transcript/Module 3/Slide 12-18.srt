@@ -1,0 +1,137 @@
+1
+00:00:01,969 --> 00:00:07,540
+Ok so we have a program that can be executed
+by the computer.
+
+2
+00:00:07,540 --> 00:00:14,520
+It looks as a sequence of zeroes and ones
+that represent instructions for the CPU to
+
+3
+00:00:14,520 --> 00:00:15,520
+execute.
+
+4
+00:00:15,520 --> 00:00:23,279
+These instructions are very low level they
+can add things multiply move data from one
+
+5
+00:00:23,279 --> 00:00:25,359
+place to another jump to another position.
+
+6
+00:00:25,359 --> 00:00:30,710
+Very simple set of instructions.
+
+7
+00:00:30,710 --> 00:00:34,390
+We are not going to program with zeroes and
+ones.
+
+8
+00:00:34,390 --> 00:00:40,060
+This kind of programming language is called
+machine language that is obviously understood
+
+9
+00:00:40,060 --> 00:00:43,100
+by the machine by the CPU by a computer.
+
+10
+00:00:43,100 --> 00:00:50,710
+We are going to program and write and implement
+our algorithms using a high level language.
+
+11
+00:00:50,710 --> 00:00:56,530
+There are a lot of high level languages we
+are going to write in C++ but there are also
+
+12
+00:00:56,530 --> 00:01:07,600
+Java Python C# and C and Pascal and Scheme
+and a lot of high level languages.
+
+13
+00:01:07,600 --> 00:01:12,490
+A program let’s say in C++ would not look
+as a sequence of zeroes and ones it would
+
+14
+00:01:12,490 --> 00:01:15,010
+look more like that.
+
+15
+00:01:15,010 --> 00:01:24,170
+Which is a text in English contains the English
+alphabet you can see we don’t understand
+
+16
+00:01:24,170 --> 00:01:31,010
+exactly what it does but you can see it has
+a text Hello World it has some English words
+
+17
+00:01:31,010 --> 00:01:38,570
+you can probably recognize like main and include
+and return and stuff like that.
+
+18
+00:01:38,570 --> 00:01:46,450
+So we write in something that is much closer
+to our natural language not zeroes and ones.
+
+19
+00:01:46,450 --> 00:01:50,340
+But then the computer doesn’t understand
+this type of language.
+
+20
+00:01:50,340 --> 00:01:57,320
+So we need to translate this code here into
+a machine language code.
+
+21
+00:01:57,320 --> 00:02:05,440
+This kind of translation or this process of
+translating a high level language into language
+
+22
+00:02:05,440 --> 00:02:13,760
+the machine the computer can understand is
+called compilation or a build process and
+
+23
+00:02:13,760 --> 00:02:20,250
+we lucky for us it is an automated process
+since even high level languages are very strict
+
+24
+00:02:20,250 --> 00:02:23,980
+and we have to follow the rules accurately.
+
+25
+00:02:23,980 --> 00:02:30,880
+And automated process can just take the code
+in the programming language and translate
+
+26
+00:02:30,880 --> 00:02:33,500
+it into machine language.
+
+27
+00:02:33,500 --> 00:02:40,780
+So we just have to start this process and
+then our computer will be able to execute
+
+28
+00:02:40,780 --> 00:02:42,760
+the program we write in the high level language.
+
+29
+00:02:42,760 --> 00:02:46,400
+I will show you how we do that as we write
+our first program.
+

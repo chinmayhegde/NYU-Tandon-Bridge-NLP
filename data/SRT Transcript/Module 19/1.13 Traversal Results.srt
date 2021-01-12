@@ -1,0 +1,224 @@
+1
+00:00:00,550 --> 00:00:05,010
+I wanted to show you what the traversal results
+look like, so I’ll come back to that same
+
+2
+00:00:05,010 --> 00:00:08,550
+tree that we came that we showed you earlier
+with the twenty at the root node.
+
+3
+00:00:08,550 --> 00:00:12,910
+And what I want you to see is that the pre-order,
+in-order, post-order and level order traversals
+
+4
+00:00:12,910 --> 00:00:15,480
+really produce very, very different outputs.
+
+5
+00:00:15,480 --> 00:00:20,539
+And so what we're doing is we're saying that
+the in-order traversal would actually process
+
+6
+00:00:20,539 --> 00:00:25,119
+all the left nodes first and then the node,
+and then the right node first.
+
+7
+00:00:25,119 --> 00:00:29,660
+The pre-order traversal tends to process the
+root node first and then it processes the
+
+8
+00:00:29,660 --> 00:00:33,989
+left and processes the right recursively,
+and that's the important characteristics here.
+
+9
+00:00:33,989 --> 00:00:38,620
+So, take a look at the pre-order traversal;
+it means we process twenty first of course
+
+10
+00:00:38,620 --> 00:00:40,949
+because we're doing the pre-processing.
+
+11
+00:00:40,949 --> 00:00:46,340
+So we process twenty first, and then recursively
+process the left sub-child which means a five
+
+12
+00:00:46,340 --> 00:00:52,539
+comes out next, but that means recursively
+we have to do the left sub-child of five before
+
+13
+00:00:52,539 --> 00:00:54,750
+we can go back and do anything else.
+
+14
+00:00:54,750 --> 00:00:59,620
+Three comes out and because three doesn't
+have any left child or right child, we're
+
+15
+00:00:59,620 --> 00:01:04,159
+done and we move back to five in which case
+we have to process the right sub-child of
+
+16
+00:01:04,159 --> 00:01:05,159
+five.
+
+17
+00:01:05,159 --> 00:01:07,650
+We only process the left; it's now time to
+process the right.
+
+18
+00:01:07,650 --> 00:01:12,790
+So, if we if you take a look back at the code
+after we're done processing the left child
+
+19
+00:01:12,790 --> 00:01:17,040
+of five, we're going to have to process the
+right child of five, which is ten and then
+
+20
+00:01:17,040 --> 00:01:19,530
+we're done because it has no left and no right
+child.
+
+21
+00:01:19,530 --> 00:01:23,350
+When we come back the five, we're done with
+five, we go back to twenty and we still have
+
+22
+00:01:23,350 --> 00:01:25,180
+to process the right children.
+
+23
+00:01:25,180 --> 00:01:28,550
+And so that's the way that the pre-order traversal
+is going to operate.
+
+24
+00:01:28,550 --> 00:01:33,900
+The output would be twenty-five, three, ten,
+thirty, and twenty-five because we're doing
+
+25
+00:01:33,900 --> 00:01:34,900
+it pre-order.
+
+26
+00:01:34,900 --> 00:01:39,870
+In-order; you can see that this actually is
+in order so it's sorted if you will.
+
+27
+00:01:39,870 --> 00:01:44,490
+We're processing all the left children first;
+when we go to process the left child of three
+
+28
+00:01:44,490 --> 00:01:50,090
+since it has no left child we can simply process
+the node at three and then process its right
+
+29
+00:01:50,090 --> 00:01:51,090
+child.
+
+30
+00:01:51,090 --> 00:01:53,640
+It has no right child, so we process three
+first.
+
+31
+00:01:53,640 --> 00:01:59,630
+In other words, the minimum value is the value
+processed first which makes sense.
+
+32
+00:01:59,630 --> 00:02:04,520
+Likewise, the maximum value is the value that's
+processed last.
+
+33
+00:02:04,520 --> 00:02:08,810
+So, the output from the in-order traversal
+would be three, five, ten, twenty, twenty-five
+
+34
+00:02:08,810 --> 00:02:09,810
+and thirty.
+
+35
+00:02:09,810 --> 00:02:14,780
+Just simply because we're going through this
+in order and since it is a binary search tree
+
+36
+00:02:14,780 --> 00:02:16,770
+it's kept in order.
+
+37
+00:02:16,770 --> 00:02:19,270
+The level-order is the most interesting one
+here.
+
+38
+00:02:19,270 --> 00:02:24,370
+Which is that we do twenty first and then
+if you look at the queue, when we push twenty
+
+39
+00:02:24,370 --> 00:02:29,230
+we're then going to push five and thirty,
+which are the nodes on the left and right
+
+40
+00:02:29,230 --> 00:02:30,300
+child of twenty.
+
+41
+00:02:30,300 --> 00:02:35,600
+When we're done processing twenty and we start
+processing five, we'll push three and ten
+
+42
+00:02:35,600 --> 00:02:39,530
+but three and ten are actually after thirty
+on the queue.
+
+43
+00:02:39,530 --> 00:02:45,120
+So, if you look internally at the queue, what
+we're going to see is three, thirty, three,
+
+44
+00:02:45,120 --> 00:02:50,220
+ten, and then it's not until we're finished
+with ten and we process twenty-five that were
+
+45
+00:02:50,220 --> 00:02:52,200
+done with the entire tree.
+
+46
+00:02:52,200 --> 00:02:57,890
+So the level-order traversal would be twenty,
+five, thirty, three, ten, and then twenty-five
+
+47
+00:02:57,890 --> 00:03:01,200
+and that is exactly in the order of the levels
+if you look at the picture.
+

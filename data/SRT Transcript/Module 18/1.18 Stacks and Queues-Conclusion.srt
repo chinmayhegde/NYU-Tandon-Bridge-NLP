@@ -1,0 +1,67 @@
+1
+00:00:00,690 --> 00:00:05,360
+So in this module, we took a look at the two
+fundamental data structures in C++ that we
+
+2
+00:00:05,360 --> 00:00:07,720
+use stacks and cues.
+
+3
+00:00:07,720 --> 00:00:12,360
+And we saw how they work with how they were
+implemented and what they're used for.
+
+4
+00:00:12,360 --> 00:00:16,260
+Hopefully have a better understanding of how
+a stack works, how a queue works, and you
+
+5
+00:00:16,260 --> 00:00:19,110
+also can produce one if you had to yourself.
+
+6
+00:00:19,110 --> 00:00:25,100
+Now, fortunately, of course the STL took care
+of all this for us so if we needed a stack
+
+7
+00:00:25,100 --> 00:00:28,780
+we could just pounding include stack and we
+get stack, and if we needed a queue we could
+
+8
+00:00:28,780 --> 00:00:31,910
+just pound include queue and we end up with
+a queue.
+
+9
+00:00:31,910 --> 00:00:34,100
+And all the features are there; all the functions
+are there.
+
+10
+00:00:34,100 --> 00:00:38,640
+We have to push, the pop, the enqueue and
+the dequeue, and you can use those without
+
+11
+00:00:38,640 --> 00:00:39,980
+having to build it yourself.
+
+12
+00:00:39,980 --> 00:00:43,430
+But even if you had to build yourself, you
+realize now that it's only a couple of lines
+
+13
+00:00:43,430 --> 00:00:46,489
+of code and it's not really going to take
+much to store it.
+
+14
+00:00:46,489 --> 00:00:48,949
+So I hope you enjoyed that module and we’ll
+see you for the next one.
+

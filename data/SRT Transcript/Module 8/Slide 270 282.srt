@@ -1,0 +1,126 @@
+0:00:00.539,0:00:07.149
+I think we are ok now to implement or we can
+start implementing the quadratic function.
+
+0:00:07.149,0:00:13.980
+So as we said the quadratic function gets
+three inputs as parameters A B and C. It would
+
+0:00:13.980,0:00:20.430
+return the type of solution at our return
+value and it would also update out x one and
+
+0:00:20.430,0:00:29.300
+out x two as the output parameters. For implementation
+basically we want to use the formula we have
+
+0:00:29.300,0:00:37.340
+for the solutions of a quadratic equation
+but that only works when A is a non zero value.
+
+0:00:37.340,0:00:46.970
+When we can divide by two A. So let’s first
+make sure or calculate the cases where A is
+
+0:00:46.970,0:00:56.300
+non zero. And then in these cases we can use
+the formula of x sub one two equals this thing
+
+0:00:56.300,0:01:07.810
+here. Let’s define the discriminant delta
+to be b squared minus four A C and check whether
+
+0:01:07.810,0:01:17.070
+it is positive or equals to zero or else basically
+means negative. In case it is positive we’ll
+
+0:01:17.070,0:01:25.360
+have x one be minus b plus the square root
+of delta divided by two A. And x two would
+
+0:01:25.360,0:01:34.229
+be minus b minus the square root of delta
+divided by two A. These are x one and x two
+
+0:01:34.229,0:01:43.420
+are basically our local instances of the solutions
+then we want to return these two values. So
+
+0:01:43.420,0:01:51.700
+we will set out x one and out x two to these
+two values and we should also return our type
+
+0:01:51.700,0:01:57.759
+of solution for that case which are two real
+solutions. Right again make sure you first
+
+0:01:57.759,0:02:03.520
+return the values in the output parameters
+and then do the return statement. Now let’s
+
+0:02:03.520,0:02:11.200
+take care of the case where our delta equals
+zero. In this case we said we are assigning
+
+0:02:11.200,0:02:18.019
+out x one so let’s first have x one be minus
+b over two A. Right the plus minus would be
+
+0:02:18.019,0:02:22.680
+plus minus zero that’s why we have only
+one. So out x one that’s very important
+
+0:02:22.680,0:02:29.840
+by our assumption out x one would contain
+x one and we return one real solution. And
+
+0:02:29.840,0:02:38.340
+in case A is not zero but our discriminant
+is negative in this case we just say no real
+
+0:02:38.340,0:02:44.569
+solution. We don’t update out x one and
+out x two at all and we said we are not defining
+
+0:02:44.569,0:02:53.579
+what would be returned by these values in
+case there are no real solutions. Ok now the
+
+0:02:53.579,0:03:01.319
+last thing we have to take care of is what
+happens if A is zero. In this case actually
+
+0:03:01.319,0:03:09.170
+our quadratic equation A x squared plus B
+x plus C equals zero when A is zero basically
+
+0:03:09.170,0:03:20.939
+it becomes linear equation. B x plus C equals
+zero we don’t have a quadratic element anymore.
+
+0:03:20.939,0:03:29.760
+So in this case we should solve it as a linear
+equation. We can have the code here but actually
+
+0:03:29.760,0:03:37.140
+I think it would make sense if we would create
+a function that deals with linear equations
+
+0:03:37.140,0:03:43.919
+separately. Then we can use this function
+later on maybe not in this program but in
+
+0:03:43.919,0:03:50.309
+another programs as well. So it makes sense
+to have or to define a function that not only
+
+0:03:50.309,0:03:53.729
+not only to define a function that solves
+a quadratic equation but also to define a
+
+0:03:53.729,0:04:00.260
+function that solves a linear equation. So
+the quadratic can use the linear but the linear
+
+0:04:00.260,0:04:02.079
+can be used in other scenarios as well.

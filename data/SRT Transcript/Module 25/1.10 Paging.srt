@@ -1,0 +1,252 @@
+1
+00:00:00,399 --> 00:00:03,460
+So, let's look at something that actually
+happens in today's environment: it’s called
+
+2
+00:00:03,460 --> 00:00:04,820
+paging.
+
+3
+00:00:04,820 --> 00:00:10,400
+What we do is take main memory and we break
+it down into a lot of equal size frames, and
+
+4
+00:00:10,400 --> 00:00:15,150
+each of the frames are the same size, every
+frame is the same size.
+
+5
+00:00:15,150 --> 00:00:19,790
+And it's something small like four kilobytes;
+it's not something significant.
+
+6
+00:00:19,790 --> 00:00:23,359
+Then what we do is we take down a process,
+take a process and we break that down into
+
+7
+00:00:23,359 --> 00:00:25,140
+the exact same size pages.
+
+8
+00:00:25,140 --> 00:00:29,740
+So, we’ll take the process and break it
+down into four kilobyte pages.
+
+9
+00:00:29,740 --> 00:00:33,860
+Now I'm sure you can see where this fits,
+and that is that one page fits exactly into
+
+10
+00:00:33,860 --> 00:00:35,510
+one frame.
+
+11
+00:00:35,510 --> 00:00:41,440
+This is RAM okay, and what RAM means is that
+we have random access memory, that means that
+
+12
+00:00:41,440 --> 00:00:47,120
+every single frame, in fact every single byte,
+can be accessed all at the same amount of
+
+13
+00:00:47,120 --> 00:00:48,120
+time.
+
+14
+00:00:48,120 --> 00:00:53,910
+So, there's no benefit to keeping the process
+as one coherent entity.
+
+15
+00:00:53,910 --> 00:00:59,270
+There's no reason we should keep the process
+in sequential memory; that wasn't a failed
+
+16
+00:00:59,270 --> 00:01:03,820
+assumption that we had for fixed and dynamic
+partitioning.
+
+17
+00:01:03,820 --> 00:01:07,420
+That we had to keep the process all together;
+we don’t.
+
+18
+00:01:07,420 --> 00:01:11,460
+If we have bits of the process at the beginning
+of main memory and bits of the process the
+
+19
+00:01:11,460 --> 00:01:16,610
+end of main memory, it doesn't matter as long
+as we can keep track of them in order.
+
+20
+00:01:16,610 --> 00:01:20,870
+We can access the front of main memory and
+the back of them in memory all at the same
+
+21
+00:01:20,870 --> 00:01:21,870
+time.
+
+22
+00:01:21,870 --> 00:01:26,620
+So, there's no reason that the process needs
+to be continuous.
+
+23
+00:01:26,620 --> 00:01:31,410
+Now the operating system is going to have
+to keep track of where each page is located
+
+24
+00:01:31,410 --> 00:01:35,360
+in main memory; what frame number each page
+is loaded into.
+
+25
+00:01:35,360 --> 00:01:40,220
+And it can do that, it does that, in what's
+known as a page map table or some books call
+
+26
+00:01:40,220 --> 00:01:42,060
+it or just simply a page table.
+
+27
+00:01:42,060 --> 00:01:49,420
+And the page map table is simply in an array
+of frame numbers and if we look at index three,
+
+28
+00:01:49,420 --> 00:01:51,310
+for example into the page map table.
+
+29
+00:01:51,310 --> 00:01:57,490
+That's going to tell us where the fourth page,
+zero one two three, where the fourth page
+
+30
+00:01:57,490 --> 00:02:02,479
+of the process is located; what frame number
+the fourth page of the process is loaded into.
+
+31
+00:02:02,479 --> 00:02:08,959
+So, we can look now into the page map table
+and find out where each of the pages in the
+
+32
+00:02:08,959 --> 00:02:15,150
+system is in physical memory, and that's exactly
+what the hardware memory management needs
+
+33
+00:02:15,150 --> 00:02:16,189
+to do.
+
+34
+00:02:16,189 --> 00:02:23,329
+Whenever any logical memory request is made,
+to a logical address, basically to the offset
+
+35
+00:02:23,329 --> 00:02:29,349
+from the beginning of the program, the hardware
+memory management unit needs to calculate
+
+36
+00:02:29,349 --> 00:02:34,909
+how to convert that logical memory address
+into a physical memory address.
+
+37
+00:02:34,909 --> 00:02:40,349
+And it doesn't take a lot of effort to do
+so it can simply do a number of bit shift
+
+38
+00:02:40,349 --> 00:02:48,340
+left and bit shift right to get the the physical
+address from the logical address.
+
+39
+00:02:48,340 --> 00:02:53,260
+and one of the features that it's going to
+have to do is a look up into the page map
+
+40
+00:02:53,260 --> 00:02:54,260
+table.
+
+41
+00:02:54,260 --> 00:02:59,489
+So, the format of the page map table now is
+going to be defined by the hardware manufacturer
+
+42
+00:02:59,489 --> 00:03:05,340
+and not by the operating system designer,
+because the hardware needs to know first where
+
+43
+00:03:05,340 --> 00:03:11,079
+the page map table is stored and each process
+is going to need its own page map table; each
+
+44
+00:03:11,079 --> 00:03:14,159
+process has its own page map table.
+
+45
+00:03:14,159 --> 00:03:18,599
+And the hardware memory management unit is
+programmed, during a switch, during a context
+
+46
+00:03:18,599 --> 00:03:21,340
+switch, it's programmed for where that page
+or app table is.
+
+47
+00:03:21,340 --> 00:03:26,909
+And the hardware memory management unit will
+look up in the page map table where the appropriate
+
+48
+00:03:26,909 --> 00:03:32,029
+page is loaded and do the conversion between
+page number and frame number and then look
+
+49
+00:03:32,029 --> 00:03:33,029
+at the offset.
+
+50
+00:03:33,029 --> 00:03:37,559
+So, this conversion process is a little bit
+involved, and we’ll see it a little bit
+
+51
+00:03:37,559 --> 00:03:38,769
+later on.
+
+52
+00:03:38,769 --> 00:03:43,999
+But the benefit here is that we can use paging,
+and we'll see the benefits of paging the next
+
+53
+00:03:43,999 --> 00:03:44,000
+slide.
+

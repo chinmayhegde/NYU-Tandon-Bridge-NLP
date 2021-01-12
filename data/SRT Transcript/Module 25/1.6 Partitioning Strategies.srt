@@ -1,0 +1,91 @@
+1
+00:00:00,659 --> 00:00:05,450
+When the system boots up, we’re looking
+at what is effectively a desert.
+
+2
+00:00:05,450 --> 00:00:10,080
+There is nothing in main memory, short of
+a couple of locations where we can communicate
+
+3
+00:00:10,080 --> 00:00:16,209
+with hardware, but the majority of main memory
+is simply completely empty.
+
+4
+00:00:16,209 --> 00:00:21,510
+And as the operating system, it becomes our
+responsibility to divide main memory into
+
+5
+00:00:21,510 --> 00:00:26,030
+sections where we're going to allow programs
+to use.
+
+6
+00:00:26,030 --> 00:00:29,920
+And we're going to have to talk about a number
+of different partitioning strategies for how
+
+7
+00:00:29,920 --> 00:00:30,920
+to get that done.
+
+8
+00:00:30,920 --> 00:00:38,210
+So, the core of the idea is that we're going
+to look at a way to break down main memory
+
+9
+00:00:38,210 --> 00:00:43,469
+into different sections so that the programs
+can all be in their own individual sections,
+
+10
+00:00:43,469 --> 00:00:47,510
+so that's again part of our part of our relocation
+of protection requirements, more protection
+
+11
+00:00:47,510 --> 00:00:52,850
+than anything else that we can set guidelines
+we can set borders for a process.
+
+12
+00:00:52,850 --> 00:00:57,280
+But we have to recognize that when the system
+starts memory is just empty and it's just
+
+13
+00:00:57,280 --> 00:00:58,829
+available for us to use.
+
+14
+00:00:58,829 --> 00:01:04,019
+So, some of the strategies we're going to
+look at our fix partitioning and dynamic partitioning.
+
+15
+00:01:04,019 --> 00:01:08,060
+We’re going to take a look at a buddy system
+which is sort of fixed and dynamic both.
+
+16
+00:01:08,060 --> 00:01:12,300
+Then, we're going to look at paging and segmentation
+and paging segmentation is really what's done
+
+17
+00:01:12,300 --> 00:01:13,300
+today.
+
+18
+00:01:13,300 --> 00:01:16,650
+But we have to understand fixed in the name
+of partitioning before we can get into the
+
+19
+00:01:16,650 --> 00:01:17,470
+more advanced stuff.
+

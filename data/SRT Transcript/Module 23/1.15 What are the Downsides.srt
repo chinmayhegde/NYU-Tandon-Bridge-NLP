@@ -1,0 +1,142 @@
+1
+00:00:00,510 --> 00:00:04,130
+So we've talked about the upsides of threads
+and we certainly understand how threads can
+
+2
+00:00:04,130 --> 00:00:07,590
+be great, but of course there's got to be
+some sort of a downside.
+
+3
+00:00:07,590 --> 00:00:08,660
+And what's the downside?
+
+4
+00:00:08,660 --> 00:00:13,900
+Well the biggest one is that all the threads
+have access to the same memory of the process;
+
+5
+00:00:13,900 --> 00:00:16,960
+well that was an upside too, wasn’t it?
+
+6
+00:00:16,960 --> 00:00:22,880
+The biggest issue here is that we have concurrency
+problems; that if all the threads are trying
+
+7
+00:00:22,880 --> 00:00:30,490
+to access the same memory that of the process,
+then it is possible that the threads could
+
+8
+00:00:30,490 --> 00:00:33,859
+interfere with one another, unintentionally.
+
+9
+00:00:33,859 --> 00:00:37,449
+And there's a lot of examples of this and
+we’ll go over some of the concurrency examples
+
+10
+00:00:37,449 --> 00:00:44,780
+in the next module, but ultimately what we're
+looking at is that whenever a thread is accessing
+
+11
+00:00:44,780 --> 00:00:53,140
+memory or it really any resource that's common
+to the process, it needs to do so very carefully
+
+12
+00:00:53,140 --> 00:00:58,429
+and it needs to keep track of where it is
+inside the execution cycle.
+
+13
+00:00:58,429 --> 00:01:02,959
+Usually what we do with this is some sort
+of a mutual exclusion lock, or a some or for
+
+14
+00:01:02,959 --> 00:01:08,210
+to indicate the thread is in execution and
+maybe has been stopped.
+
+15
+00:01:08,210 --> 00:01:09,900
+Now why was it stopped?
+
+16
+00:01:09,900 --> 00:01:13,790
+Well could be any of the reasons that we talked
+about for a context switch.
+
+17
+00:01:13,790 --> 00:01:19,100
+So, any time we could switch a process, we
+could also switch a thread; so, from one running
+
+18
+00:01:19,100 --> 00:01:20,440
+thread to the other.
+
+19
+00:01:20,440 --> 00:01:25,641
+And unfortunately, if the thread is making
+some changes to the memory, it might not be
+
+20
+00:01:25,641 --> 00:01:30,950
+complete with all of the changes; it might
+do only half of the changes leaving that memory
+
+21
+00:01:30,950 --> 00:01:36,480
+in a really inconsistent state, and that's
+one of the concepts that we know of as concurrency.
+
+22
+00:01:36,480 --> 00:01:38,170
+This is what we call concurrency.
+
+23
+00:01:38,170 --> 00:01:44,310
+The other problem of course is deadlock, but
+deadlock can happen as well in processes and
+
+24
+00:01:44,310 --> 00:01:47,180
+we will talk about deadlocks in a later module.
+
+25
+00:01:47,180 --> 00:01:50,980
+The other problem that we have with threads
+is that programmers really like them, so they
+
+26
+00:01:50,980 --> 00:01:53,200
+create a lot of threads.
+
+27
+00:01:53,200 --> 00:01:57,700
+And if we create too many threads we lose
+track, or it's very easy to lose track I should
+
+28
+00:01:57,700 --> 00:02:02,659
+say, of what each thread is doing and that
+causes a lot of confusion.
+
+29
+00:02:02,659 --> 00:02:07,300
+And two threads might interact with each other
+in a way that we didn't really intend because
+
+30
+00:02:07,300 --> 00:02:10,079
+we're not being careful with how many threads
+we're creating.
+

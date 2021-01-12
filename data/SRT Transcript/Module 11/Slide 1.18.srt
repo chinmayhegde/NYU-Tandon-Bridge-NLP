@@ -1,0 +1,36 @@
+0:00:00.669,0:00:05.340
+So we covered a lot of material in this module
+we covered pointers and we covered how to
+
+0:00:05.340,0:00:10.420
+make a pointer point to something how to get
+the address of a variable how to access information
+
+0:00:10.420,0:00:12.110
+via a pointer.
+
+0:00:12.110,0:00:16.570
+We also talked about heap dynamic variables
+and heap dynamic arrays.
+
+0:00:16.570,0:00:21.640
+We talked about vectors and we talked about
+the range for loops we covered a lot of material
+
+0:00:21.640,0:00:27.790
+and this does take quite a bit of time to
+acclimate to using heap dynamic variables
+
+0:00:27.790,0:00:31.440
+and making sure that we don't have memory
+leaks and making sure that we don't have double
+
+0:00:31.440,0:00:32.440
+deletes.
+
+0:00:32.440,0:00:36.219
+But we'll get used to them over the course
+of the semester and you'll be experts by the
+
+0:00:36.219,0:00:36.719
+end.

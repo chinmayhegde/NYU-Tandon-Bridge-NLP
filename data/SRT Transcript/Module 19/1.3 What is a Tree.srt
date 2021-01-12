@@ -1,0 +1,158 @@
+1
+00:00:00,750 --> 00:00:04,460
+The question that we have to ask first is
+what is a tree, and the answer to that is
+
+2
+00:00:04,460 --> 00:00:08,490
+that it's a data structure designed to hold
+items in a hierarchical pattern.
+
+3
+00:00:08,490 --> 00:00:13,120
+Now we talk about a hierarchical pattern and
+what we mean by that is that there's one node
+
+4
+00:00:13,120 --> 00:00:14,120
+that's at the very, very top.
+
+5
+00:00:14,120 --> 00:00:18,060
+And that there's a bunch of nodes that are
+down further, and some that are at the very
+
+6
+00:00:18,060 --> 00:00:19,400
+very bottom.
+
+7
+00:00:19,400 --> 00:00:25,310
+This is often used for searching; the tree
+can be used in a lot of for an index for a
+
+8
+00:00:25,310 --> 00:00:26,820
+database for example.
+
+9
+00:00:26,820 --> 00:00:31,960
+Or we might use a binary search tree, hence
+the name search tree, for searching information
+
+10
+00:00:31,960 --> 00:00:33,710
+that we might store.
+
+11
+00:00:33,710 --> 00:00:40,149
+Every node has one and only one parent node,
+and that gives us that hierarchical fashion
+
+12
+00:00:40,149 --> 00:00:42,170
+so that every node has a parent.
+
+13
+00:00:42,170 --> 00:00:46,070
+Now of course there's one node that's a special
+node which is at the very, very top and it
+
+14
+00:00:46,070 --> 00:00:49,490
+has no parent and that's called the root node.
+
+15
+00:00:49,490 --> 00:00:54,930
+Every node will have at least some storage
+for pointing to children.
+
+16
+00:00:54,930 --> 00:01:00,489
+So, every node has zero or more children;
+it may not actually have children but each
+
+17
+00:01:00,489 --> 00:01:04,140
+node is going to have the capability to point
+to children nodes.
+
+18
+00:01:04,140 --> 00:01:09,159
+The storage for this is actually as a pointer,
+just to the first node in the tree to the
+
+19
+00:01:09,159 --> 00:01:11,110
+highest node in the tree, and that's the root.
+
+20
+00:01:11,110 --> 00:01:14,320
+So, when we look at the class that we're going
+to design.
+
+21
+00:01:14,320 --> 00:01:17,350
+It's really only going to have one pointer,
+very much in the way that we did a linked
+
+22
+00:01:17,350 --> 00:01:21,600
+list is going to have one point there which
+is the pointer to the root of the tree and
+
+23
+00:01:21,600 --> 00:01:23,310
+that's the highest node in the tree.
+
+24
+00:01:23,310 --> 00:01:28,659
+It's not necessarily the first node in the
+tree it's not the lowest value, but we may
+
+25
+00:01:28,659 --> 00:01:32,810
+keep it as the center; this is the highest
+node in the tree.
+
+26
+00:01:32,810 --> 00:01:35,030
+We'll talk about what that looks like.
+
+27
+00:01:35,030 --> 00:01:40,509
+The great thing about trees is that every
+node looks like its own sub tree.
+
+28
+00:01:40,509 --> 00:01:44,409
+So every node looks like a tree by itself.
+
+29
+00:01:44,409 --> 00:01:51,869
+Now we know that naturally the root is the
+natural start of the entire tree, but each
+
+30
+00:01:51,869 --> 00:01:56,330
+node could pretend to be a tree by itself.
+
+31
+00:01:56,330 --> 00:01:59,810
+And that leads us to a discussion of course
+that going to come up again and again and
+
+32
+00:01:59,810 --> 00:02:05,299
+that is that recursion is going to happen
+a lot in trees, because each node looks like
+
+33
+00:02:05,299 --> 00:02:08,229
+a tree and there's one node that is the root.
+
+34
+00:02:08,229 --> 00:02:10,950
+But we can treat all the nodes as if they
+were their own tree.
+

@@ -1,0 +1,190 @@
+0:00:00.410,0:00:01.859
+Let’s start with the first one.
+
+0:00:01.859,0:00:03.610
+So t1 of N down here.
+
+0:00:03.610,0:00:06.240
+Let’s see t1 of N equals.
+
+0:00:06.240,0:00:11.929
+So first thing we do is set coutn divs to
+zero that’s one.
+
+0:00:11.929,0:00:15.830
+Then we set I to one that’s another one.
+
+0:00:15.830,0:00:20.680
+And the new start iterating in this for loop.
+
+0:00:20.680,0:00:29.519
+Each iteration we do five things right we
+compare I to num this less or equal to.
+
+0:00:29.519,0:00:30.880
+We take the mod.
+
+0:00:30.880,0:00:32.730
+We compare it to zero.
+
+0:00:32.730,0:00:38.870
+And potentially we have two increments count
+divs plus plus and I plus plus.
+
+0:00:38.870,0:00:44.440
+So we do these five things over and over how
+many times?
+
+0:00:44.440,0:00:45.440
+N times.
+
+0:00:45.440,0:00:49.690
+So all together it has it costs us five times
+N.
+
+0:00:49.690,0:00:53.309
+So we set count to zero that was one.
+
+0:00:53.309,0:00:59.719
+We set I to one that was another one and then
+5n that’s the cost of our for loop.
+
+0:00:59.719,0:01:06.880
+After that we do compare count divs to two
+that’s another primitive operation.
+
+0:01:06.880,0:01:08.750
+And either return true or false.
+
+0:01:08.750,0:01:11.900
+So altogether that’s two additional things.
+
+0:01:11.900,0:01:17.050
+All together one plus one plus 5n plus two
+equals 5n plus four.
+
+0:01:17.050,0:01:21.510
+That would give us t1 to be 5n plus 4.
+
+0:01:21.510,0:01:26.820
+Let’s try to do the same for t2 the second
+and the third versions.
+
+0:01:26.820,0:01:31.560
+So let’s go over to the second version.
+
+0:01:31.560,0:01:36.640
+Once again count divs is initialized to zero
+that’s one operation.
+
+0:01:36.640,0:01:41.530
+I is initialized to one that’s another primitive
+operation.
+
+0:01:41.530,0:01:46.700
+And then we have actually in this case six
+things that are repeated over and over.
+
+0:01:46.700,0:01:50.840
+Less than we need to calculate the div that’s
+another thing.
+
+0:01:50.840,0:01:57.600
+Mod double equals and potentially two increments.
+
+0:01:57.600,0:02:04.780
+That would give us six things that are repeated
+but the number of iterations here is not N
+
+0:02:04.780,0:02:07.230
+as it was before it is N by two.
+
+0:02:07.230,0:02:10.500
+So it is six times N by two.
+
+0:02:10.500,0:02:19.290
+After we do that we have in the if outside
+of the for loop we have two additional operations.
+
+0:02:19.290,0:02:22.540
+Comparison and a return of either true or
+false.
+
+0:02:22.540,0:02:26.819
+All together that adds up to 3n plus four.
+
+0:02:26.819,0:02:33.410
+So t1 was 5n plus 4 t2 is 3n plus 4.
+
+0:02:33.410,0:02:37.820
+That’s an improvement that’s better than
+5n plus 4.
+
+0:02:37.820,0:02:41.500
+Let’s quickly analyze the third version.
+
+0:02:41.500,0:02:46.520
+Once again we start with setting count divs
+to zero that’s one operation.
+
+0:02:46.520,0:02:49.560
+I to zero that’s another operation.
+
+0:02:49.560,0:02:56.210
+And then we have six operations repeating
+over and over in our for loop.
+
+0:02:56.210,0:02:58.910
+The comparison I to square root of num.
+
+0:02:58.910,0:03:03.440
+The calculating of square root of num which
+is by the way not a primitive operation but
+
+0:03:03.440,0:03:07.580
+for this analysis we will just assume it is.
+
+0:03:07.580,0:03:11.910
+Mod comparison to zero and potentially two
+increments.
+
+0:03:11.910,0:03:17.700
+That would give us six operations primitive
+operations that are repeated but the number
+
+0:03:17.700,0:03:20.710
+of times that are repeated is not N.
+
+0:03:20.710,0:03:27.090
+Not N by two but square root of N. That would
+add to six times square root of N.
+
+0:03:27.090,0:03:35.050
+After that we have these two primitive operations
+in the next if statement.
+
+0:03:35.050,0:03:39.620
+All together it adds up to six square root
+of N plus 4.
+
+0:03:39.620,0:03:47.850
+So t3 of N would be six square root of N plus
+4.
+
+0:03:47.850,0:03:55.450
+That clearly shows that given that type of
+a criteria where we try to compare the number
+
+0:03:55.450,0:04:01.680
+of primitive operations as a function the
+process executes as a function of the input
+
+0:04:01.680,0:04:02.680
+size.
+
+0:04:02.680,0:04:14.240
+That t3 is the fastest the lowest value and
+then t2 is a bit slower and t1 is the slowest
+
+0:04:14.240,0:04:15.560
+of the three.

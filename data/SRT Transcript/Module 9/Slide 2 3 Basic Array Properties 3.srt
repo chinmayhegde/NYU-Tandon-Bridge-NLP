@@ -1,0 +1,105 @@
+0:00:00.240,0:00:04.779
+This formula that the compiler uses makes
+very weird behavior.
+
+0:00:04.779,0:00:11.550
+For example, if we do, let’s say, arr five
+equals seven, that's regular behavior where
+
+0:00:11.550,0:00:18.720
+the address of five would be, once again,
+one thousand plus five times four that would
+
+0:00:18.720,0:00:25.780
+be one hundred and twenty, one thousand four,
+thousand and twelve, thousand sixteen and
+
+0:00:25.780,0:00:29.480
+twenty and that's where the seven would be
+written in.
+
+0:00:29.480,0:00:36.850
+But let’s say the programmer says arr eight
+equals, let's say, ten.
+
+0:00:36.850,0:00:42.710
+So that's obviously a logic mistake because
+our arrays only of size six and we're trying
+
+0:00:42.710,0:00:47.290
+to access arr eight, which is basically the
+ninth element in this array.
+
+0:00:47.290,0:00:51.180
+There are no nine element, there are only
+six elements but then the compiler would just
+
+0:00:51.180,0:00:59.320
+use this formula.So the address of error arr
+eight would be one thousand, as our base address,
+
+0:00:59.320,0:01:06.270
+plus eight times four which takes it to a
+thousand and forty, and ten will be written
+
+0:01:06.270,0:01:07.289
+over here.
+
+0:01:07.289,0:01:13.719
+So the compiler doesn't care that we go out
+of the range of our array, it basically goes
+
+0:01:13.719,0:01:20.159
+follows this formula and writes to the memory
+using this formula and it's our responsibility
+
+0:01:20.159,0:01:24.880
+as programmers to keep ourself inside the
+boundaries of the array.
+
+0:01:24.880,0:01:31.149
+Know that in address ten forty, there could
+be other variables it can be even memory that
+
+0:01:31.149,0:01:36.069
+is not associated to our program; it could
+be associated to some other application that
+
+0:01:36.069,0:01:41.810
+runs simultaneously to our program And it's
+very dangerous to write to locations that
+
+0:01:41.810,0:01:47.840
+are not logically related to our program,
+so it's our responsibility to keep in bounds.
+
+0:01:47.840,0:01:55.639
+Another quite weird behavior we can say arr
+negative two equals, let's say, twenty.
+
+0:01:55.639,0:02:02.380
+Again the compiler would follow the same formula:
+substituting negative two to be one thousand,
+
+0:02:02.380,0:02:08.670
+the location is one thousand minus two times
+four, which is basically ninety nine two,
+
+0:02:08.670,0:02:11.490
+that where the twenty will be written.
+
+0:02:11.490,0:02:18.280
+So we kind of have the eight index and the
+negative two index, which are invalid indexes.
+
+0:02:18.280,0:02:22.510
+But the compiler does allow it; it's not,
+it won't be in the air.
+
+0:02:22.510,0:02:27.110
+So, again be safe when you use in indexes
+for the arrays.
+
+0:02:27.110,0:02:30.330
+It's your responsibility to keep inbound of
+our range.

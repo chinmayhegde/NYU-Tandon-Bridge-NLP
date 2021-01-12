@@ -1,0 +1,174 @@
+1
+00:00:01,069 --> 00:00:05,990
+We have better solutions today; we definitely
+do, we’ll deal with some hardware solutions
+
+2
+00:00:05,990 --> 00:00:06,990
+in just a minute.
+
+3
+00:00:06,990 --> 00:00:11,469
+But originally we didn't have hardware that
+could help us deal with this mutual exclusion
+
+4
+00:00:11,469 --> 00:00:17,810
+problem and so computer scientists started
+working to try and solve the mutual exclusion
+
+5
+00:00:17,810 --> 00:00:23,109
+problem using just software, so not having
+anything in the hardware to directly deal
+
+6
+00:00:23,109 --> 00:00:27,859
+with this except for that system bus limitation.
+
+7
+00:00:27,859 --> 00:00:31,939
+Peterson came up with a fundamental way to
+protect two threads from accessing the same
+
+8
+00:00:31,939 --> 00:00:37,180
+resource at the same time and what he did
+was he provided each thread with the Boolean
+
+9
+00:00:37,180 --> 00:00:38,180
+flag variable.
+
+10
+00:00:38,180 --> 00:00:42,720
+So, there's an array of Boolean flag variables
+for each of the threads and each thread would
+
+11
+00:00:42,720 --> 00:00:48,059
+put up its flag; would set it its Boolean
+value equal to true, if it wanted to access
+
+12
+00:00:48,059 --> 00:00:49,239
+its critical section.
+
+13
+00:00:49,239 --> 00:00:53,360
+Now, unfortunately that's not enough because
+we're going to have to go and check everybody
+
+14
+00:00:53,360 --> 00:00:57,100
+else's, or the other thread let's say if there's
+only two threads, we're going to go and check
+
+15
+00:00:57,100 --> 00:01:01,519
+the other threads flag to make sure it's not
+in its critical section.
+
+16
+00:01:01,519 --> 00:01:07,400
+And we run the risk if we set our flag and
+then go check the other thread, that the other
+
+17
+00:01:07,400 --> 00:01:11,420
+thread is doing exactly the same thing at
+the same time, and now we have both threads
+
+18
+00:01:11,420 --> 00:01:16,380
+have their flags up and both threads think
+that the other thread is in it's critical
+
+19
+00:01:16,380 --> 00:01:18,820
+section and in fact, nobody is in a critical
+section.
+
+20
+00:01:18,820 --> 00:01:24,460
+So, what Peterson did to solve that problem
+specifically was introduce another variable
+
+21
+00:01:24,460 --> 00:01:27,159
+he called the turn variable.
+
+22
+00:01:27,159 --> 00:01:34,110
+And in here it's being generous is very helpful
+he thought, so what the threads do is they
+
+23
+00:01:34,110 --> 00:01:39,479
+offer the turn to the other thread so thread
+zero would offer the turn to thread one and
+
+24
+00:01:39,479 --> 00:01:41,899
+thread one would offer the turn to thread
+zero.
+
+25
+00:01:41,899 --> 00:01:49,180
+So, in that very rare situation where both
+threads want to access the critical section,
+
+26
+00:01:49,180 --> 00:01:55,350
+both would raise up their flags and one would
+offer the turn to the other and the second
+
+27
+00:01:55,350 --> 00:02:02,430
+one would win; the second turn right, if you
+will, would overwrite the first change of
+
+28
+00:02:02,430 --> 00:02:03,450
+the turn variable.
+
+29
+00:02:03,450 --> 00:02:10,100
+So, either thread zero or thread one would
+be allowed access into its critical section,
+
+30
+00:02:10,100 --> 00:02:15,450
+and then of course eventually it would unset
+its flag and allow the other thread to access
+
+31
+00:02:15,450 --> 00:02:18,000
+its critical section because it no longer
+has its flag up.
+
+32
+00:02:18,000 --> 00:02:24,081
+So, the nice feature here is that it does
+provide protection for mutual exclusion, if
+
+33
+00:02:24,081 --> 00:02:28,610
+we have two threads that need access to mutual
+exclusion.
+
+34
+00:02:28,610 --> 00:02:32,630
+If we have more than that we have a bit of
+a problem, but Peterson's algorithm allows
+
+35
+00:02:32,630 --> 00:02:37,790
+us to deal with the situation where we have
+two threads and we can provide mutual exclusion
+
+36
+00:02:37,790 --> 00:02:39,870
+for those two threads using only software
+solutions.
+

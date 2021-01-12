@@ -1,0 +1,115 @@
+0:00:00.780,0:00:01.780
+Okay.
+
+0:00:01.780,0:00:09.360
+So now let's try to make this program a bit
+more complicated: in addition to just calculating
+
+0:00:09.360,0:00:16.049
+the average, let's also figure out which grades
+are above the average.So, the program would
+
+0:00:16.049,0:00:17.300
+interact something like that.
+
+0:00:17.300,0:00:22.100
+First it would ask the user to enter the number
+of students in the class, the student would
+
+0:00:22.100,0:00:23.350
+say four.
+
+0:00:23.350,0:00:27.430
+Again, the user would be asked to enter the
+grades.
+
+0:00:27.430,0:00:33.829
+So seventy one, eighty six, sixty eight, ninety
+four, and then the program would not only
+
+0:00:33.829,0:00:37.739
+say that the average is seventy nine point
+seven five.
+
+0:00:37.739,0:00:44.899
+It would also say that the grades above the
+average are: eighty six and ninety four.
+
+0:00:44.899,0:00:52.629
+Seems very similar, but then if we think about
+it a bit more; let's see how we can implement
+
+0:00:52.629,0:00:55.039
+this requirement.
+
+0:00:55.039,0:01:03.230
+So, we would need to know what grades are
+above the average.
+
+0:01:03.230,0:01:10.430
+We can do it really in a single pass over
+the elements, just as we have for calculating
+
+0:01:10.430,0:01:15.570
+the average when we wanted to sum them up
+because only after figuring out the value
+
+0:01:15.570,0:01:19.720
+of the average we can know which grades are
+above the average.
+
+0:01:19.720,0:01:26.310
+So it seems like we would need two passes
+over the data in order to find the grade that
+
+0:01:26.310,0:01:29.450
+are above the average.
+
+0:01:29.450,0:01:35.570
+So one solution could be let’s ask the user
+to re-enter the grades after we calculated
+
+0:01:35.570,0:01:41.869
+the average but that is not user friendly
+at all.
+
+0:01:41.869,0:01:49.630
+And so, another solution could be maybe to
+store the grades, to store these datas in
+
+0:01:49.630,0:01:55.590
+our memory, so we can pass over them more
+than once.
+
+0:01:55.590,0:02:01.330
+It could be very impractical to store them
+in different variables because first, we don't
+
+0:02:01.330,0:02:06.890
+know how many variables we would need and
+it would be very difficult to manage these
+
+0:02:06.890,0:02:07.890
+variables.
+
+0:02:07.890,0:02:12.670
+For that we would need some kind of a data
+structure, which is a single entity that allows
+
+0:02:12.670,0:02:19.370
+us to store a collection of elements in it
+and to access and modify these elements as
+
+0:02:19.370,0:02:21.280
+we need.
+
+0:02:21.280,0:02:28.790
+We would use the ray data structure, a static
+array basically, which can be thought of as
+
+0:02:28.790,0:02:36.390
+a sequence of variables that are of the same
+type; in this case are integers.
+
+0:02:36.390,0:02:37.819
+Let's see how it works.

@@ -1,0 +1,14 @@
+1
+00:00:00,450 --> 00:00:02,060
+That is correct.
+
+2
+00:00:02,060 --> 00:00:05,899
+Pipelining only allows one instruction in
+a pipeline stage at a time.
+
+3
+00:00:05,899 --> 00:00:09,650
+Therefore, we can't have 2 instructions in
+the decode stage at the same time.
+

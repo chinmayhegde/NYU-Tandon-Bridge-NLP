@@ -1,0 +1,67 @@
+1
+00:00:00,520 --> 00:00:05,040
+Let's use the strong induction technique to
+prove some claim.
+
+2
+00:00:05,050 --> 00:00:12,030
+So let's show that every natural number N
+can be written in the form of two to the power
+
+3
+00:00:12,030 --> 00:00:17,090
+of I times J, where I is a non-negative integer
+and J is odd.
+
+4
+00:00:17,090 --> 00:00:23,750
+Basically, we’ll try to show that N can
+be written as a power of two times an odd
+
+5
+00:00:23,750 --> 00:00:24,750
+number.
+
+6
+00:00:24,750 --> 00:00:31,800
+For example, forty: we can write forty as
+two to the power of three, which is eight,
+
+7
+00:00:31,800 --> 00:00:32,800
+times five.
+
+8
+00:00:32,800 --> 00:00:39,970
+So, it's a power of two with the non-negative
+integer exponent times an odd number.
+
+9
+00:00:39,970 --> 00:00:45,360
+That is true, we should show it not only for
+forty but for all natural number N.
+
+10
+00:00:45,360 --> 00:00:51,361
+For example, for six: six can be written as
+two to the power of one times three, and seven,
+
+11
+00:00:51,361 --> 00:00:56,100
+for example, can be written as two to the
+power of zero times seven.
+
+12
+00:00:56,100 --> 00:01:01,830
+And we’ll show that any number, any natural
+number, can be written in this form: some
+
+13
+00:01:01,830 --> 00:01:07,570
+power of two with a non-negative exponent
+times an odd number.
+
+14
+00:01:07,570 --> 00:01:08,300
+Let's go ahead and show it.
+

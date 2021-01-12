@@ -1,0 +1,15 @@
+1
+00:00:00,520 --> 00:00:05,930
+Remember, in a direct-mapped cache, a DRAM
+block can only go to one location in the cache.
+
+2
+00:00:05,930 --> 00:00:11,330
+So there is no need to search for the whole
+cache, one can simply go to that one location.
+
+3
+00:00:11,330 --> 00:00:14,190
+Thus it takes one clock cycle to search the
+cache
+

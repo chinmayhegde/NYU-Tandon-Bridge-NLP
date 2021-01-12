@@ -1,0 +1,10 @@
+0:00:00.590,0:00:06.570
+Now that we have the one way if statement,
+let's try to implement this problem here that
+
+0:00:06.570,0:00:10.440
+reads from the user an integer and prints
+its absolute value.
+
+0:00:10.440,0:00:12.250
+Let’s go and implement it.

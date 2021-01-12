@@ -1,0 +1,204 @@
+1
+00:00:00,630 --> 00:00:05,310
+Unix was designed to be a multi-user, multi-tasking
+operating system.
+
+2
+00:00:05,310 --> 00:00:10,830
+And what that means is that we are designing
+an OS which is going to run on a centralized
+
+3
+00:00:10,830 --> 00:00:16,390
+machine and have lots of users; not one person
+sitting at a keyboard a screen but in fact
+
+4
+00:00:16,390 --> 00:00:19,419
+lots of users accessing this all the same
+time.
+
+5
+00:00:19,419 --> 00:00:25,169
+And in the era of the mainframe computer,
+when you didn't ever access the mainframe
+
+6
+00:00:25,169 --> 00:00:31,419
+computer; I remember people telling me stories
+of writing their programs on punch cards and
+
+7
+00:00:31,419 --> 00:00:37,390
+leaving punch cards in companies for the mainframe
+operators to load into the mainframe.
+
+8
+00:00:37,390 --> 00:00:42,280
+They never directly interacted with the mainframe
+the whole idea of Unix was actually very nice
+
+9
+00:00:42,280 --> 00:00:47,030
+because you could directly use the mainframe
+or directly use the computer.
+
+10
+00:00:47,030 --> 00:00:52,690
+Unix was designed to allow users to manage
+their own tasks and this was one of the first
+
+11
+00:00:52,690 --> 00:00:59,079
+time sharing systems that came about and that's
+why it was so popular because it decentralized
+
+12
+00:00:59,079 --> 00:01:00,510
+responsibility.
+
+13
+00:01:00,510 --> 00:01:05,109
+Your users only got a very small portion of
+the time allowed to run on the system and
+
+14
+00:01:05,109 --> 00:01:10,470
+nobody could take too much time on the system
+or too much resources, I should say.
+
+15
+00:01:10,470 --> 00:01:15,850
+But it was allowed to access directly the
+mainframe, and do your work directly on the
+
+16
+00:01:15,850 --> 00:01:21,159
+mainframe and have immediate feedback rather
+than delayed feedback whenever the mainframe
+
+17
+00:01:21,159 --> 00:01:24,200
+operators cited for your program to run.
+
+18
+00:01:24,200 --> 00:01:27,979
+The other thing about Unix that was great
+was that it was released into the public domain
+
+19
+00:01:27,979 --> 00:01:29,299
+with open source.
+
+20
+00:01:29,299 --> 00:01:33,319
+When you got UNIX you didn't just get the
+operating system; you also got the source
+
+21
+00:01:33,319 --> 00:01:34,609
+code.
+
+22
+00:01:34,609 --> 00:01:39,240
+And it was released in the public domain with
+public licensing, public domain licensing,
+
+23
+00:01:39,240 --> 00:01:44,869
+so that if you made any modifications to the
+Unix operating system You could re-release
+
+24
+00:01:44,869 --> 00:01:48,929
+it as your own, except that you couldn't charge
+for it.
+
+25
+00:01:48,929 --> 00:01:53,929
+So, you couldn't take the Unix operating system
+and make one change and sell it for hundreds
+
+26
+00:01:53,929 --> 00:01:55,960
+of dollars; It wasn't allowed.
+
+27
+00:01:55,960 --> 00:02:01,630
+In fact, all they allow for is what's called
+a media charge So a few dollars for the cost
+
+28
+00:02:01,630 --> 00:02:06,670
+of the media on which you would distribute
+the source code, and you had to release the
+
+29
+00:02:06,670 --> 00:02:09,890
+source code as well for whatever changes.
+
+30
+00:02:09,890 --> 00:02:14,720
+Now Unix comes in a lot of different flavors
+comes in AIX, Linux, Solaris, etcetera like
+
+31
+00:02:14,720 --> 00:02:15,720
+that.
+
+32
+00:02:15,720 --> 00:02:21,600
+And some of them are branches of the original
+UNIX, so they're now public domain which means
+
+33
+00:02:21,600 --> 00:02:26,190
+if they made any if they used any of the original
+source code of Unix, or any subsequent source
+
+34
+00:02:26,190 --> 00:02:28,810
+code of Unix, they have to be public domain.
+
+35
+00:02:28,810 --> 00:02:35,420
+There are some companies like IBM who designed
+AIX from scratch to look like Unix, but include
+
+36
+00:02:35,420 --> 00:02:39,590
+none of the source code of Unix so that they
+could license it and sell it and make money
+
+37
+00:02:39,590 --> 00:02:40,590
+off of it.
+
+38
+00:02:40,590 --> 00:02:42,460
+So, there are some versions like that.
+
+39
+00:02:42,460 --> 00:02:47,920
+And that's how Apple gets away with selling,
+or what they used to, sell MacOS was because
+
+40
+00:02:47,920 --> 00:02:54,220
+they used BSD, which was a completely new
+implementation of Unix; it didn't use any
+
+41
+00:02:54,220 --> 00:02:55,920
+of the original Unix.
+
+42
+00:02:55,920 --> 00:03:01,360
+So, Unix has been modified many, many, many,
+many times over the years, but what we have
+
+43
+00:03:01,360 --> 00:03:04,780
+is this basic idea of a multi-user multi-tasking
+operating system.
+

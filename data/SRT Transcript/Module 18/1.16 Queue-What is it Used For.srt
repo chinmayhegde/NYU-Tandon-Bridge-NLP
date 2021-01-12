@@ -1,0 +1,114 @@
+1
+00:00:00,719 --> 00:00:04,759
+So now that we understand how a queue is built,
+what do we use it for?
+
+2
+00:00:04,759 --> 00:00:09,990
+The fundamental way that we use queues as
+storage buffer, so there's going to be a lot
+
+3
+00:00:09,990 --> 00:00:13,320
+of situations where we're bringing information
+in.
+
+4
+00:00:13,320 --> 00:00:17,660
+For example you've already worked with the
+IO stream and, whether we're talking about
+
+5
+00:00:17,660 --> 00:00:22,800
+a file stream or whether we're talking about
+keyboard input, we are talking about bringing
+
+6
+00:00:22,800 --> 00:00:28,999
+in a large amount of data at first, storing
+it temporarily, and then slowly feeding it
+
+7
+00:00:28,999 --> 00:00:31,169
+into your user program.
+
+8
+00:00:31,169 --> 00:00:36,120
+So in the case of reading a file, because
+it's an expensive endeavor to actually read
+
+9
+00:00:36,120 --> 00:00:41,360
+data from the secondary storage device, what
+we're instead going to do is grab a large
+
+10
+00:00:41,360 --> 00:00:47,240
+portion of the file, perhaps all of it, store
+it temporarily in a structure in main memory,
+
+11
+00:00:47,240 --> 00:00:52,240
+and then as the program asks for it it's going
+to be fed in slowly.
+
+12
+00:00:52,240 --> 00:00:57,520
+Now the best structure for that of course
+is a first in first out buffer, or a queue.
+
+13
+00:00:57,520 --> 00:01:00,180
+So there's one situation is as there.
+
+14
+00:01:00,180 --> 00:01:04,670
+We might use it in operating systems, later
+we're going to talk about memory management,
+
+15
+00:01:04,670 --> 00:01:09,890
+and we're going to talk about removing the
+oldest page of main memory for example.
+
+16
+00:01:09,890 --> 00:01:11,560
+And how do we know which one is the oldest?
+
+17
+00:01:11,560 --> 00:01:17,500
+Well we keep a FIFO list, a FIFO queue, of
+all the pages that are in main memory and
+
+18
+00:01:17,500 --> 00:01:22,390
+when we need to throw one away we throw away
+the front of the queue, so there's options
+
+19
+00:01:22,390 --> 00:01:23,890
+for that.
+
+20
+00:01:23,890 --> 00:01:27,729
+Really anywhere in computer science where
+we need in an ordered list; where we have
+
+21
+00:01:27,729 --> 00:01:29,950
+first in first out property.
+
+22
+00:01:29,950 --> 00:01:31,229
+That's where we're going to use a queue.
+
+23
+00:01:31,229 --> 00:01:35,280
+So there's a lot of situations that you're
+going to see throughout your career in computer
+
+24
+00:01:35,280 --> 00:01:39,119
+science that you're going to use a queue and
+they are a very popular structure.
+

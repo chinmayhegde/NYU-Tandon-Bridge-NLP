@@ -1,0 +1,103 @@
+1
+00:00:00,840 --> 00:00:04,900
+One of the problems that we're going to run
+into is that if we just construct an object
+
+2
+00:00:04,900 --> 00:00:11,120
+like we did before and it's a Date object;
+what are the values of day month in year immediately
+
+3
+00:00:11,120 --> 00:00:16,090
+after the construction of the Date object,
+they’re garbage, they’re garbage values.
+
+4
+00:00:16,090 --> 00:00:20,630
+We don't know what their values are and they
+may not even be valid so it's very possible
+
+5
+00:00:20,630 --> 00:00:26,890
+that we may have a large number for the day,
+like negative eight hundred thousand and it's
+
+6
+00:00:26,890 --> 00:00:32,300
+now here are stored inside, what we would
+classify as an acceptable date object, because
+
+7
+00:00:32,300 --> 00:00:33,780
+we created it.
+
+8
+00:00:33,780 --> 00:00:41,290
+So what C++ allows us to do is make sure that
+we always know that valid values, even if
+
+9
+00:00:41,290 --> 00:00:45,820
+we just created that object, that there are
+valid values in it.
+
+10
+00:00:45,820 --> 00:00:53,110
+So C++ creates thing called a constructor,
+and we can create the constructor where it
+
+11
+00:00:53,110 --> 00:00:58,850
+runs code that we want so that we can set
+the values appropriately for whatever the
+
+12
+00:00:58,850 --> 00:00:59,850
+default date is.
+
+13
+00:00:59,850 --> 00:01:06,779
+So the default constructor is a function which
+is given a name which is exactly the same
+
+14
+00:01:06,779 --> 00:01:10,460
+and it is case sensitive, it’s exactly the
+same as the name of the class.
+
+15
+00:01:10,460 --> 00:01:14,420
+There’s no return type, so it’s not void
+or anything like that, it’s just literally
+
+16
+00:01:14,420 --> 00:01:18,689
+no return type, we don't list anything and
+it doesn't have any parameters.
+
+17
+00:01:18,689 --> 00:01:26,450
+So we can see from the code that what we've
+done here is create a constructor where we're
+
+18
+00:01:26,450 --> 00:01:32,020
+setting the values of day, month, and year,
+to the appropriate to what we classify as
+
+19
+00:01:32,020 --> 00:01:36,359
+an appropriate value, without any interaction
+by the user.
+
+20
+00:01:36,359 --> 00:01:42,240
+All the user has to do is create one of these
+Date objects, by default, and it will set
+
+21
+00:01:42,240 --> 00:01:45,599
+those values to what we consider the default
+values.
+

@@ -1,0 +1,10 @@
+1
+00:00:00,590 --> 00:00:04,720
+Actually, each register can hold 64 bits of
+data.
+
+2
+00:00:04,720 --> 00:00:10,260
+This is why we can do instructions such as
+double word add, where we add two 64-bit data.
+

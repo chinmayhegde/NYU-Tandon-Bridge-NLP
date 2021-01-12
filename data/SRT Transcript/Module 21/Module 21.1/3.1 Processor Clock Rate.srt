@@ -1,0 +1,61 @@
+1
+00:00:00,620 --> 00:00:03,380
+Let us now discuss the performance of this
+CPU.
+
+2
+00:00:03,380 --> 00:00:06,359
+First, let's go over the concept of CPU clock
+rate.
+
+3
+00:00:06,359 --> 00:00:12,929
+Usually, when we buy a computer, one of the
+factors that we look at is the CPU frequency.
+
+4
+00:00:12,929 --> 00:00:17,800
+The frequency essentially is representative
+of the clock rate, which defines how fast
+
+5
+00:00:17,800 --> 00:00:20,220
+each operation can be performed.
+
+6
+00:00:20,220 --> 00:00:22,400
+The metric of the clock rate is the clock
+cycle.
+
+7
+00:00:22,400 --> 00:00:27,790
+To determine out how many seconds a clock
+cycle last, we simply take the inverse of
+
+8
+00:00:27,790 --> 00:00:29,110
+the CPU frequency.
+
+9
+00:00:29,110 --> 00:00:36,230
+For example, if we have a 1 gigahertz CPU,
+one clock cycle takes 1 divided by 1 gigahertz
+
+10
+00:00:36,230 --> 00:00:38,160
+which equals 1 Nano second.
+
+11
+00:00:38,160 --> 00:00:43,610
+What this means is that each operation of
+the CPU takes 1 nano second to perform.
+
+12
+00:00:43,610 --> 00:00:48,710
+In this respect, an operation can be thought
+of as the work of one state in our CPU high-level
+
+13
+00:00:48,710 --> 00:00:49,610
+diagram.
+

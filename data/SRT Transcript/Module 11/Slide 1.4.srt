@@ -1,0 +1,88 @@
+0:00:00.820,0:00:03.210
+In C++ we have to specify the data type.
+
+0:00:03.210,0:00:07.180
+C++ is very type specific so we always have
+to specify the data type.
+
+0:00:07.180,0:00:12.639
+And a pointer is going to be specified as
+pointing to a particular data type.
+
+0:00:12.639,0:00:17.240
+So a pointer as we're going to see later on
+is really just a number that we store in main
+
+0:00:17.240,0:00:20.679
+memory to represent where this pointer is
+pointing to.
+
+0:00:20.679,0:00:25.140
+It's actually just a memory address but the
+problem with this is that all memory addresses
+
+0:00:25.140,0:00:26.539
+are the same size.
+
+0:00:26.539,0:00:31.369
+Unfortunately C++ doesn't let us take an integer
+pointer and make it point to a double you
+
+0:00:31.369,0:00:32.500
+can't do that.
+
+0:00:32.500,0:00:36.539
+You can't make an integer pointer point to
+anything other than an integer.
+
+0:00:36.539,0:00:41.090
+So if we took an integer variable and we found
+out its address which we’ll figure out how
+
+0:00:41.090,0:00:46.219
+to do later on we could take that which is
+just simply a number it's an address and we
+
+0:00:46.219,0:00:48.020
+could store it in a pointer.
+
+0:00:48.020,0:00:54.489
+Now that has the effect of making the pointer
+point to the integer and that's exactly how
+
+0:00:54.489,0:00:55.489
+we do this.
+
+0:00:55.489,0:00:59.410
+The stored number represents the memory address
+of the item that we're being that's being
+
+0:00:59.410,0:01:00.740
+pointed to.
+
+0:01:00.740,0:01:06.470
+We can create pointers using a very simple
+construct it's just int star ptr.
+
+0:01:06.470,0:01:11.670
+In the same way that we can create integers
+like int x we can create integer pointers
+
+0:01:11.670,0:01:15.640
+by just saying int star and then giving it
+a variable name.
+
+0:01:15.640,0:01:19.830
+At that point on construction the pointer
+doesn't point to anything reasonable it's
+
+0:01:19.830,0:01:24.890
+pointing to garbage in the same way that if
+we said int x we don't know the value of x.
+
+0:01:24.890,0:01:28.590
+If we say int star ptr we don't know the value
+of ptr.
+
+0:01:28.590,0:01:29.450
+It's pointing at garbage.

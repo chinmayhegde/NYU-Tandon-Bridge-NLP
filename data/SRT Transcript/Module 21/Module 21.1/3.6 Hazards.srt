@@ -1,0 +1,46 @@
+1
+00:00:00,630 --> 00:00:06,530
+The main issues with a pipelined CPU are conflicts
+that it encounters when executing multiple
+
+2
+00:00:06,530 --> 00:00:08,830
+instructions simultaneously.
+
+3
+00:00:08,830 --> 00:00:14,701
+These conflicts are commonly known as hazards
+and are categorized in three groups: structural
+
+4
+00:00:14,701 --> 00:00:19,499
+hazards, data hazards, and branch hazards.
+
+5
+00:00:19,499 --> 00:00:24,410
+Structural hazards occur when multiple instructions
+need to access the same CPU resource at the
+
+6
+00:00:24,410 --> 00:00:26,019
+same time.
+
+7
+00:00:26,019 --> 00:00:31,949
+Data hazards occur when an instruction needs
+to read a data that is being modified by another
+
+8
+00:00:31,949 --> 00:00:32,949
+instruction.
+
+9
+00:00:32,949 --> 00:00:38,620
+And branch hazards occur when a branch instruction
+is being executed and the CPU needs to know
+
+10
+00:00:38,620 --> 00:00:42,500
+if the branch is taken or not before it fetches
+the next instruction.
+

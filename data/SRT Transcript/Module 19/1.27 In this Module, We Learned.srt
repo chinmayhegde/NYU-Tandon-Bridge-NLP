@@ -1,0 +1,114 @@
+1
+00:00:00,900 --> 00:00:03,260
+We covered a lot of stuff in this module.
+
+2
+00:00:03,260 --> 00:00:06,540
+We talked about the definitions for trees,
+we’ve talk about the heights and sizes and
+
+3
+00:00:06,540 --> 00:00:08,179
+the depths and that sort of stuff.
+
+4
+00:00:08,179 --> 00:00:12,309
+We talked about how we can store trees in
+main memory; remember, we talked about the
+
+5
+00:00:12,309 --> 00:00:16,360
+parent-child relationship, parent-multi-child
+relationship and then we talk about the parent-child-sibling
+
+6
+00:00:16,360 --> 00:00:17,410
+relationship.
+
+7
+00:00:17,410 --> 00:00:20,869
+We talked about the design of binary search
+trees and what we need them for.
+
+8
+00:00:20,869 --> 00:00:24,180
+We actually went through the binary search
+tree code.
+
+9
+00:00:24,180 --> 00:00:28,890
+We talked about tree traversals: in-order,
+pre-order, post-order and level-order.
+
+10
+00:00:28,890 --> 00:00:33,340
+We talked about when binary search trees fail
+and fall back on a linked list, and even if
+
+11
+00:00:33,340 --> 00:00:38,610
+that doesn't happen as an actual linked list,
+even a portion of that could cause us to lose
+
+12
+00:00:38,610 --> 00:00:43,670
+our big O of Log N. And then we talked about
+balanced binary search trees: the ATL and
+
+13
+00:00:43,670 --> 00:00:45,210
+the red-black trees.
+
+14
+00:00:45,210 --> 00:00:50,730
+So we certainly covered a lot in this module
+and I want you to take away the idea that
+
+15
+00:00:50,730 --> 00:00:53,390
+trees are very popular.
+
+16
+00:00:53,390 --> 00:00:56,440
+We come across them quite often in computer
+science.
+
+17
+00:00:56,440 --> 00:01:00,510
+In fact, if you just look at the files on
+your on your hard drive, what you're looking
+
+18
+00:01:00,510 --> 00:01:02,290
+at is a tree.
+
+19
+00:01:02,290 --> 00:01:06,920
+You're looking at a regular tree; it's not
+a binary search tree but it is a regular tree
+
+20
+00:01:06,920 --> 00:01:11,920
+because you do have folders inside of folders
+in this higher structure.
+
+21
+00:01:11,920 --> 00:01:14,220
+But they're not difficult and they’re not
+complex.
+
+22
+00:01:14,220 --> 00:01:19,421
+And they are incredibly useful, certainly
+in the binary search tree for being able to
+
+23
+00:01:19,421 --> 00:01:23,650
+store a large quantity of data and being able
+to search it in big O of Log N time.
+
+24
+00:01:23,650 --> 00:01:26,280
+So, I hope you took away a lot of good information
+from this module.
+

@@ -1,0 +1,112 @@
+1
+00:00:01,930 --> 00:00:07,289
+Probably the most important consideration
+here is what the CPU does when it has to execute
+
+2
+00:00:07,289 --> 00:00:08,640
+instructions.
+
+3
+00:00:08,640 --> 00:00:14,120
+And it performs what’s called the fetch-execute
+cycle, or the fetch-decode-execute cycle.
+
+4
+00:00:14,120 --> 00:00:18,920
+What it does is move one instruction from
+main memory, which we haven’t talked about
+
+5
+00:00:18,920 --> 00:00:23,430
+but we will in just a minute, it moves it
+from main memory into a register in the CPU,
+
+6
+00:00:23,430 --> 00:00:26,210
+which is known as the instruction register.
+
+7
+00:00:26,210 --> 00:00:31,820
+And then it decodes the instruction and if
+necessary moves in any necessary parameters,
+
+8
+00:00:31,820 --> 00:00:34,600
+so it copies those parameters in from main
+memory.
+
+9
+00:00:34,600 --> 00:00:40,030
+And once everything is complied in the CPU,
+once everything is loaded in the CPU, then
+
+10
+00:00:40,030 --> 00:00:45,510
+the CPU can actually execute that instruction
+and do whatever the task is that is asked.
+
+11
+00:00:45,510 --> 00:00:51,329
+For example, if we had an add instruction
+which added two numbers together, the fetch
+
+12
+00:00:51,329 --> 00:00:54,090
+would be for a particular memory location.
+
+13
+00:00:54,090 --> 00:01:00,150
+And we would bring that memory location to
+the register, and we’d add that to a value,
+
+14
+00:01:00,150 --> 00:01:04,939
+maybe that’s already in the CPU or maybe
+its in main memory.
+
+15
+00:01:04,939 --> 00:01:10,970
+Once the operation is complete, then we repeat
+the process with the next instruction in the
+
+16
+00:01:10,970 --> 00:01:11,970
+sequence.
+
+17
+00:01:11,970 --> 00:01:17,689
+So this operation happens very very very quickly
+in the system and it has to happen literally
+
+18
+00:01:17,689 --> 00:01:21,960
+millions of times per second in the CPU.
+
+19
+00:01:21,960 --> 00:01:28,530
+Which means each operation could take as little
+as a bout 10 nanoseconds to perform this operation
+
+20
+00:01:28,530 --> 00:01:30,240
+which is unbelievably small.
+
+21
+00:01:30,240 --> 00:01:35,229
+Nano is one times ten to the negative nine,
+so we’re talking about something happening
+
+22
+00:01:35,229 --> 00:01:37,930
+incredibly quickly inside the system.
+
+23
+00:01:37,930 --> 00:01:44,180
+So while it happens very frequently, literally
+millions of times a second, it happens very
+
+24
+00:01:44,180 --> 00:01:44,680
+very quickly.
+

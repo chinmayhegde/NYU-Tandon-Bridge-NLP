@@ -1,0 +1,192 @@
+0:00:00.570,0:00:06.130
+Ok let’s take a look at another example
+very similar to the previous one.
+
+0:00:06.130,0:00:11.759
+But implementation wise you can see that the
+only difference is that the range we are iterating
+
+0:00:11.759,0:00:16.049
+in the inner loop is not one through N but
+one through I.
+
+0:00:16.049,0:00:18.160
+Which is written in orange here.
+
+0:00:18.160,0:00:27.369
+So again we are reading N from the user and
+then N times we are repeating a body of iterating
+
+0:00:27.369,0:00:30.110
+from one to I and breaking the line.
+
+0:00:30.110,0:00:33.180
+Printing I stars basically and breaking the
+line.
+
+0:00:33.180,0:00:38.070
+So first iteration when I is one we are printing
+one star and breaking the line.
+
+0:00:38.070,0:00:42.640
+Second iteration when I is two we are printing
+two stars and breaking the line and then three
+
+0:00:42.640,0:00:44.170
+stars and breaking the line.
+
+0:00:44.170,0:00:50.760
+Altogether we will print this kind of a triangle
+of stars.
+
+0:00:50.760,0:00:57.690
+Once again let’s try and analyze the running
+time of this algorithm so our T of N here.
+
+0:00:57.690,0:01:09.090
+Now again I am ignoring the cout cin the return
+zero at the end I am focusing on the major
+
+0:01:09.090,0:01:15.220
+part the major cost of our algorithm these
+two nested loops.
+
+0:01:15.220,0:01:23.420
+Once again we are going to go from the inner
+parts to the outer parts adding them all together.
+
+0:01:23.420,0:01:29.800
+In this case though we cannot say that each
+iteration we are doing the same exact thing.
+
+0:01:29.800,0:01:34.020
+In the previous example each iteration we
+printed the same amount of stars.
+
+0:01:34.020,0:01:40.710
+We did N operations each time so it was N
+times N. In this case one time we are printing
+
+0:01:40.710,0:01:43.580
+one star then we are printing two stars and
+three stars.
+
+0:01:43.580,0:01:50.649
+We can’t multiply something by N. The number
+of operations we are doing here varies from
+
+0:01:50.649,0:01:52.290
+iteration to iteration.
+
+0:01:52.290,0:01:58.270
+We can say that each iteration we are doing
+the theta of I operations right.
+
+0:01:58.270,0:02:02.880
+And then when we want to figure out what is
+the total number of operations we are doing
+
+0:02:02.880,0:02:06.110
+here we are not multiplying I by something.
+
+0:02:06.110,0:02:14.370
+We would need to add these values over the
+iterations the outer iterations we are doing
+
+0:02:14.370,0:02:15.370
+here.
+
+0:02:15.370,0:02:20.150
+So for I equals one we are doing one for I
+equals two we are doing two for I equals three
+
+0:02:20.150,0:02:25.270
+we are doing three operations and so on up
+to N. In order to figure out the total number
+
+0:02:25.270,0:02:31.600
+of operations here we would need to figure
+out what is the order of growth what is the
+
+0:02:31.600,0:02:37.030
+asymptotic order of this sum here that goes
+from one through N.
+
+0:02:37.030,0:02:45.150
+Now I guess you all know that arithmetic progression
+the sum of this arithmetic progression adds
+
+0:02:45.150,0:02:48.400
+up to N times N plus one over two.
+
+0:02:48.400,0:02:56.910
+Which is basically half N squared plus half
+N. And yea you can see that that is theta
+
+0:02:56.910,0:02:59.890
+of N squared right.
+
+0:02:59.890,0:03:07.520
+Again dropping the half N and dropping the
+half as the constant we are left with N squared.
+
+0:03:07.520,0:03:11.150
+We can also formally prove by the definition
+of theta.
+
+0:03:11.150,0:03:17.300
+But intuitively we can see that it is theta
+of N squared.
+
+0:03:17.300,0:03:22.870
+Another way to view that is looking at the
+image that we are basically printing this
+
+0:03:22.870,0:03:24.970
+triangle of stars here.
+
+0:03:24.970,0:03:30.050
+Now we can see that this triangle here is
+half of the square right.
+
+0:03:30.050,0:03:37.470
+It is half N squared so again intuitively
+N squared and half of N squared are only a
+
+0:03:37.470,0:03:38.930
+constant apart.
+
+0:03:38.930,0:03:44.900
+A factor constant apart and that would make
+them both be the same order of growth.
+
+0:03:44.900,0:03:47.140
+The same squared order of growth.
+
+0:03:47.140,0:03:53.050
+So that’s a good thing to notice here.
+
+0:03:53.050,0:03:59.250
+Another important thing I want you to remember
+memorize because we are going to use that
+
+0:03:59.250,0:04:00.250
+thing a lot.
+
+0:04:00.250,0:04:06.390
+And the visual image here of the triangle
+that is basically half of the square really
+
+0:04:06.390,0:04:14.490
+demonstrates it that one plus two plus tree
+plus four plus so on up to N is the same order
+
+0:04:14.490,0:04:15.490
+as N squared.
+
+0:04:15.490,0:04:17.540
+It is half of the square.
+
+0:04:17.540,0:04:19.459
+That’s the result we are going to use quite
+a lot.

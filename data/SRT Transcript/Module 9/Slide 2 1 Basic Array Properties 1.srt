@@ -1,0 +1,45 @@
+0:00:00.320,0:00:05.620
+Let's recap the three basic properties of
+arrays.
+
+0:00:05.620,0:00:11.440
+So let's say we have an array, so the first
+thing is obviously that the elements are all
+
+0:00:11.440,0:00:14.840
+stored one after the other in our memory.
+
+0:00:14.840,0:00:20.060
+So, the elements are stored continuously in
+the memory.
+
+0:00:20.060,0:00:23.949
+Second thing is that all of the elements are
+of the same type.
+
+0:00:23.949,0:00:29.259
+For instance, if they're ints, they're all
+going to be four bytes long but they all must
+
+0:00:29.259,0:00:34.410
+be of the same type; we can't have an array
+that one element is an integer, the other
+
+0:00:34.410,0:00:36.370
+is a double and so on.
+
+0:00:36.370,0:00:40.739
+So either all of the elements are integers,
+or all the elements are doubles, or all the
+
+0:00:40.739,0:00:44.610
+elements are chars or whatever, but they all
+must be of the same type.
+
+0:00:44.610,0:00:52.739
+And the last thing is that we access our array
+using a zero-based index system so they have
+
+0:00:52.739,0:00:57.780
+their local addresses starting at zero, one,
+two, three, and so on.

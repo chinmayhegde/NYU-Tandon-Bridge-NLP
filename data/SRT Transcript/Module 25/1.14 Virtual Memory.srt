@@ -1,0 +1,203 @@
+1
+00:00:00,909 --> 00:00:06,879
+If we're using a paging or segmentation system,
+we have to recognize that the process is only
+
+2
+00:00:06,879 --> 00:00:10,670
+going to be making one memory reference at
+any given time.
+
+3
+00:00:10,670 --> 00:00:14,389
+Now I know that's an overly simplistic view
+of things, it's actually going to be making
+
+4
+00:00:14,389 --> 00:00:16,290
+a lot of memory references.
+
+5
+00:00:16,290 --> 00:00:20,140
+But one of the things that you can see is
+that the memory references are all going to
+
+6
+00:00:20,140 --> 00:00:23,030
+be pretty much clustered together.
+
+7
+00:00:23,030 --> 00:00:31,180
+If we, for example, start a process and the
+process throws a splash screen up on the screen.
+
+8
+00:00:31,180 --> 00:00:37,390
+You know starting Word or PowerPoint, that
+splash screen will never appear again during
+
+9
+00:00:37,390 --> 00:00:39,149
+that run of the program.
+
+10
+00:00:39,149 --> 00:00:44,140
+But that splash screen takes a memory, there's
+code that tells it how to display that splash
+
+11
+00:00:44,140 --> 00:00:47,899
+screen, and there's the splash screen itself
+probably an image.
+
+12
+00:00:47,899 --> 00:00:53,780
+So, that memory is loaded into main memory
+and it's never going to be used again.
+
+13
+00:00:53,780 --> 00:00:59,329
+So the question then becomes: why should still
+be loaded in main memory, which is a finite
+
+14
+00:00:59,329 --> 00:01:05,360
+quantity very much in demand, why can't we
+take it out of main memory and put it on the
+
+15
+00:01:05,360 --> 00:01:06,360
+hard drive?
+
+16
+00:01:06,360 --> 00:01:11,070
+Somewhere that we can bring it back if we
+ever need to, if the process never needs it
+
+17
+00:01:11,070 --> 00:01:16,350
+again then it can just be deleted off the
+hard drive and never recovered.
+
+18
+00:01:16,350 --> 00:01:22,120
+But what if the the process was never going
+to use that splash screen for that run of
+
+19
+00:01:22,120 --> 00:01:24,310
+the process again.
+
+20
+00:01:24,310 --> 00:01:27,380
+And what if we just took it out of main memory
+and left it on a hard drive.
+
+21
+00:01:27,380 --> 00:01:32,250
+And if we did that we would free up some main
+memory and we would allow that main memory
+
+22
+00:01:32,250 --> 00:01:34,960
+to be used by other processes.
+
+23
+00:01:34,960 --> 00:01:40,610
+So, this is the concept known as virtual memory;
+what we're doing is we're using a separate
+
+24
+00:01:40,610 --> 00:01:44,390
+portion of the hard drive, it’s not where
+the process is normally stored.
+
+25
+00:01:44,390 --> 00:01:51,020
+It's a separate portion of the hard drive;
+Windows calls a virtual memory, I think Mac
+
+26
+00:01:51,020 --> 00:01:55,910
+OS calls it the swap space, most Linux and
+Unix clones call it a swap space.
+
+27
+00:01:55,910 --> 00:02:02,260
+But we have this area of a Hard drive dedicated
+for storing pages of main memory, which are
+
+28
+00:02:02,260 --> 00:02:06,170
+no longer in main memory, which are no longer
+going to be used.
+
+29
+00:02:06,170 --> 00:02:11,670
+Now the operating system can decide, dynamically,
+which pages to save in main memory, which
+
+30
+00:02:11,670 --> 00:02:15,040
+pages stay in memory and which pages come
+out.
+
+31
+00:02:15,040 --> 00:02:21,420
+And there has to be some operations that has
+to go back and forth between main memory and
+
+32
+00:02:21,420 --> 00:02:28,320
+the secondary storage device, but it's a mechanism
+for actually saving a lot of main memory for
+
+33
+00:02:28,320 --> 00:02:31,260
+more processes than would normally be allowed
+to fit.
+
+34
+00:02:31,260 --> 00:02:38,420
+So, now if we say have only four gigabytes
+of main memory, and we want to run one hundred
+
+35
+00:02:38,420 --> 00:02:43,380
+processes, each of which needs a gigabyte
+of main memory, under normal circumstances
+
+36
+00:02:43,380 --> 00:02:45,210
+there's no way that we could do it.
+
+37
+00:02:45,210 --> 00:02:51,810
+But with virtual memory, we would be allowed
+to do that; each of the hundred processes
+
+38
+00:02:51,810 --> 00:02:57,000
+would have a portion of the four gigabytes,
+a portion of itself loaded in the four gigabytes,
+
+39
+00:02:57,000 --> 00:02:59,820
+the rest of it would be on secondary storage
+and available.
+
+40
+00:02:59,820 --> 00:03:05,460
+So, we have to move these pages in and out
+into main memory, and a lot of discussion
+
+41
+00:03:05,460 --> 00:03:09,620
+to talk about how that's done, but we have
+that available now.
+
+42
+00:03:09,620 --> 00:03:13,540
+We can use more memory than is actually in
+the system.
+

@@ -1,0 +1,244 @@
+1
+00:00:01,969 --> 00:00:02,969
+Hi there.
+
+2
+00:00:02,969 --> 00:00:07,290
+Today we are going to implement our first
+C++ program.
+
+3
+00:00:07,290 --> 00:00:12,790
+Typically a first program in a programming
+language is a Hello World application that
+
+4
+00:00:12,790 --> 00:00:17,550
+reaches out to the user saying ‘Hey I am
+here’ or printing Hello World.
+
+5
+00:00:17,550 --> 00:00:24,789
+We are going to write a slightly different
+first program but before we do that let’s
+
+6
+00:00:24,789 --> 00:00:31,599
+take a closer look at the process at how an
+application is executed inside a computer.
+
+7
+00:00:31,599 --> 00:00:38,090
+Let’s focus on three main components inside
+the computer we’ve talked about a few.
+
+8
+00:00:38,090 --> 00:00:44,470
+Let’s focus on these three the memory the
+main memory the ram and the secondary memory
+
+9
+00:00:44,470 --> 00:00:48,060
+whether it is a hard disk or a solid disk
+drive.
+
+10
+00:00:48,060 --> 00:00:56,010
+And obviously the CPU which is the central
+processing unit that does all of the job inside
+
+11
+00:00:56,010 --> 00:00:57,340
+a computer.
+
+12
+00:00:57,340 --> 00:01:06,070
+So both memories ether it is a second memory
+or the RAM are basically contains a lot of
+
+13
+00:01:06,070 --> 00:01:07,070
+zeroes and ones.
+
+14
+00:01:07,070 --> 00:01:10,640
+Everything inside a computer is zeroes and
+ones as you all know.
+
+15
+00:01:10,640 --> 00:01:17,070
+And these bits of zeroes and ones encode a
+lot of information.
+
+16
+00:01:17,070 --> 00:01:25,450
+The bits are collected into collections of
+eight bits each collection of eight bits is
+
+17
+00:01:25,450 --> 00:01:28,700
+called a byte and they are stored inside the
+memory.
+
+18
+00:01:28,700 --> 00:01:35,640
+For example the first byte that was eight
+bits located in a physical address of zero
+
+19
+00:01:35,640 --> 00:01:39,340
+the second one would be one two and three
+and all.
+
+20
+00:01:39,340 --> 00:01:45,210
+So there is a very long sequence of bits each
+one containing zeroes and ones.
+
+21
+00:01:45,210 --> 00:01:53,530
+This is used to represent all types of data
+with zeroes and ones we saw how we could represent
+
+22
+00:01:53,530 --> 00:02:01,030
+numbers but using numbers we can represent
+audio we can represent video we can represent
+
+23
+00:02:01,030 --> 00:02:03,090
+documents spreadsheet.
+
+24
+00:02:03,090 --> 00:02:09,440
+All types of data can be represented with
+zeroes and ones.
+
+25
+00:02:09,440 --> 00:02:14,410
+One other kind of data that is represented
+is a program or an application.
+
+26
+00:02:14,410 --> 00:02:19,080
+An application is basically a set of instructions.
+
+27
+00:02:19,080 --> 00:02:31,410
+For example these 95 bytes here are a sequence
+of instructions for a program named prog.exe.
+
+28
+00:02:31,410 --> 00:02:39,600
+Typically that’s the file extension for
+an application it is executable .exe.
+
+29
+00:02:39,600 --> 00:02:49,459
+So assuming these bytes here are a program
+prog.exe we can execute it and make the magic
+
+30
+00:02:49,459 --> 00:02:51,459
+of this application happen.
+
+31
+00:02:51,459 --> 00:02:55,180
+What happens when we double click an application?
+
+32
+00:02:55,180 --> 00:02:58,300
+When we want to start executing a program?
+
+33
+00:02:58,300 --> 00:03:03,200
+So there are a few steps that are happening
+first thing that happens is obviously the
+
+34
+00:03:03,200 --> 00:03:09,489
+program is stored inside our secondary memory
+so the first thing that happens is this program
+
+35
+00:03:09,489 --> 00:03:17,110
+is copied into our main memory in order for
+the computer to have fast access to this set
+
+36
+00:03:17,110 --> 00:03:18,500
+of instructions.
+
+37
+00:03:18,500 --> 00:03:24,210
+And then these instructions are starting to
+execute one after the other.
+
+38
+00:03:24,210 --> 00:03:27,440
+Obviously the CPU is responsible for that.
+
+39
+00:03:27,440 --> 00:03:34,300
+The CPU has a program counter register that
+says where or what’s the next instruction
+
+40
+00:03:34,300 --> 00:03:35,790
+that would be executed.
+
+41
+00:03:35,790 --> 00:03:42,780
+It is initialized to 100 which is the first
+instruction in this program and then the fetch
+
+42
+00:03:42,780 --> 00:03:48,060
+decode executes cycle is starting to happen.
+
+43
+00:03:48,060 --> 00:03:54,209
+Each cycle the instruction that the program
+counter points to is fetched from the main
+
+44
+00:03:54,209 --> 00:03:57,000
+memory into the CPU.
+
+45
+00:03:57,000 --> 00:04:03,459
+Then the CPU decodes it understand what the
+meaning what it has to do with this instruction
+
+46
+00:04:03,459 --> 00:04:05,190
+and then it executes it.
+
+47
+00:04:05,190 --> 00:04:11,900
+And over and over so the program counter is
+increased and the next instruction is fetched
+
+48
+00:04:11,900 --> 00:04:14,040
+decoded and executed.
+
+49
+00:04:14,040 --> 00:04:19,440
+Program counter is increased and the instruction
+is fetched decoded and executed.
+
+50
+00:04:19,440 --> 00:04:25,690
+This happens literally million times each
+second and each the instructions are just
+
+51
+00:04:25,690 --> 00:04:27,520
+executed one after the other.
+
+52
+00:04:27,520 --> 00:04:30,280
+Whatever the program is intended to do basically
+happens.
+

@@ -1,0 +1,15 @@
+1
+00:00:00,719 --> 00:00:04,210
+Keep in mind the operations that the CPU performs
+during the fetch step.
+
+2
+00:00:04,210 --> 00:00:10,260
+It first sends the value of the program counter
+to get the instruction, then it increments
+
+3
+00:00:10,260 --> 00:00:14,410
+the program counter by four to point to the
+next instruction in the code sequence
+

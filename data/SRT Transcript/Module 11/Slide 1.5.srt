@@ -1,0 +1,63 @@
+0:00:00.780,0:00:05.770
+So we'd like to use these pointers to point
+to something and we can do that but we need
+
+0:00:05.770,0:00:08.500
+to have some address that we make it point
+to.
+
+0:00:08.500,0:00:14.759
+In another words we need to find an address
+of a variable and take that address and store
+
+0:00:14.759,0:00:20.910
+it in the pointer and we can do that by using
+what's called the address of operator.
+
+0:00:20.910,0:00:25.840
+It's a new operator that we haven't seen before
+but if we place it in front of variable that
+
+0:00:25.840,0:00:31.200
+we have existing we're going to get back the
+address of that variable.
+
+0:00:31.200,0:00:35.999
+Now the data type for the address of an integer
+the data type for that would be a pointer
+
+0:00:35.999,0:00:39.899
+to an integer which is perfect because now
+we know how to create pointers.
+
+0:00:39.899,0:00:45.899
+So we have a little bit of code here which
+is just simply creates a variable called x.
+
+0:00:45.899,0:00:50.800
+Sets its value equal to one hundred and then
+we have a pointer and the pointer is set to
+
+0:00:50.800,0:00:52.559
+point to x.
+
+0:00:52.559,0:00:58.550
+Now that allows us to work with the x value
+but not use the variable name x which we're
+
+0:00:58.550,0:01:00.620
+going to see later on is very important.
+
+0:01:00.620,0:01:07.750
+We can use pointer ptr and access x as if
+we're accessing it through the pointer which
+
+0:01:07.750,0:01:09.420
+is exactly what we're doing.
+
+0:01:09.420,0:01:14.100
+But we're going to need to get the address
+of x first and we do that using the ampersand
+
+0:01:14.100,0:01:16.459
+or what's called the address of operator.

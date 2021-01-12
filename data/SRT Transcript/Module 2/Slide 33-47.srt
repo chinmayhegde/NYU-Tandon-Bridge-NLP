@@ -1,0 +1,148 @@
+1
+00:00:00,530 --> 00:00:06,090
+In order to get used to working in other number
+systems, let's start with the most trivial
+
+2
+00:00:06,090 --> 00:00:07,090
+thing we can do.
+
+3
+00:00:07,090 --> 00:00:12,129
+Let’s start counting, and in order to be
+able to count in different number systems,
+
+4
+00:00:12,129 --> 00:00:16,209
+let's take a deeper look at the decimal number
+system in base ten.
+
+5
+00:00:16,209 --> 00:00:22,670
+How we and what we're doing in that number
+system and then we'll try to generalize it
+
+6
+00:00:22,670 --> 00:00:24,730
+for other number systems as well.
+
+7
+00:00:24,730 --> 00:00:31,630
+So let's start counting in the decimal number
+system in base ten kind of going back to second
+
+8
+00:00:31,630 --> 00:00:33,510
+grade, but let's do that.
+
+9
+00:00:33,510 --> 00:00:41,089
+So, zero after that would come one, after
+one would come two, three, four, five, six,
+
+10
+00:00:41,089 --> 00:00:42,770
+seven, eight, nine.
+
+11
+00:00:42,770 --> 00:00:48,800
+Then, when we get to the tenth object, instead
+of having a single symbol to represent the
+
+12
+00:00:48,800 --> 00:00:54,719
+amount (the quantity of ten), we grouped ten
+ones into a single ten.
+
+13
+00:00:54,719 --> 00:01:02,550
+We have this ten in the second position in
+our number and then we have zero additional
+
+14
+00:01:02,550 --> 00:01:03,590
+ones.
+
+15
+00:01:03,590 --> 00:01:08,780
+So one zero basically means one group of ten
+and zero additional ones.
+
+16
+00:01:08,780 --> 00:01:15,170
+Then we have eleven, which is one group of
+ten and a single addition of one, twelve,
+
+17
+00:01:15,170 --> 00:01:17,280
+thirteen, fourteen, up to nineteen.
+
+18
+00:01:17,280 --> 00:01:23,689
+After that, when comes the next object having
+a group of ten and ten ones, these ten ones
+
+19
+00:01:23,689 --> 00:01:28,649
+would be grouped into another group of ten,
+so together we would have two groups of ten
+
+20
+00:01:28,649 --> 00:01:30,000
+and zero ones.
+
+21
+00:01:30,000 --> 00:01:36,090
+And so it continues twenty one, twenty two,
+and so on, up to, for example ninety nine.
+
+22
+00:01:36,090 --> 00:01:42,439
+And after ninety nine, the next object would
+have ten ones that would be grouped into another
+
+23
+00:01:42,439 --> 00:01:51,439
+ten, therefore, would have ten tens and these
+ten tens would be grouped into a single one
+
+24
+00:01:51,439 --> 00:01:54,399
+hundred that is represented in the next position.
+
+25
+00:01:54,399 --> 00:02:01,960
+So we have one of one hundred group, zero
+of the tens groups, zero of the one.
+
+26
+00:02:01,960 --> 00:02:04,229
+And so on, it continues.
+
+27
+00:02:04,229 --> 00:02:10,310
+So this is what we do when we are counting
+in base ten; how we look at the positions
+
+28
+00:02:10,310 --> 00:02:13,290
+of the digits in a decimal representation.
+
+29
+00:02:13,290 --> 00:02:19,400
+The digits we use in order to represent the
+numbers are zero to nine, to represent all
+
+30
+00:02:19,400 --> 00:02:24,590
+the different values we can have in each position.
+
+31
+00:02:24,590 --> 00:02:28,900
+After nine, we're just not using this position
+anymore we're grouping it and moving to the
+
+32
+00:02:28,900 --> 00:02:29,150
+next position.
+

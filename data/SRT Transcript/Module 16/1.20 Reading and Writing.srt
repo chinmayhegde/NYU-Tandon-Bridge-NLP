@@ -1,0 +1,116 @@
+1
+00:00:00,640 --> 00:00:04,390
+So, what happens if you want to do both reading
+and writing, and I mentioned this before but
+
+2
+00:00:04,390 --> 00:00:06,430
+it's bears repeating.
+
+3
+00:00:06,430 --> 00:00:10,950
+Surprisingly, it's actually strange to want
+to do both reading and writing at the same
+
+4
+00:00:10,950 --> 00:00:15,130
+time. and I know the concept that you have
+in mind is one of like well what if I open
+
+5
+00:00:15,130 --> 00:00:18,349
+up a document in word and I want to edit that
+document.
+
+6
+00:00:18,349 --> 00:00:23,789
+Well, what word actually does is read in the
+entire file; it’ll read in your Word document
+
+7
+00:00:23,789 --> 00:00:28,610
+into main memory and when you make any changes
+you're not making them in the file, you're
+
+8
+00:00:28,610 --> 00:00:30,489
+making them in main memory.
+
+9
+00:00:30,489 --> 00:00:34,649
+And anybody who's forgotten to save the file
+knows exactly what I'm talking about because
+
+10
+00:00:34,649 --> 00:00:38,829
+when you go back if you hadn't saved it, it
+won't remember any of those changes that you
+
+11
+00:00:38,829 --> 00:00:39,829
+made.
+
+12
+00:00:39,829 --> 00:00:43,710
+So what's happening is we're reading in the
+file making the changes in memory and we're
+
+13
+00:00:43,710 --> 00:00:46,160
+writing back over the same file.
+
+14
+00:00:46,160 --> 00:00:50,720
+Which is useful because if we want to save
+the information out we can either save it
+
+15
+00:00:50,720 --> 00:00:55,360
+out to the same file or we can save it out
+to a different file altogether.
+
+16
+00:00:55,360 --> 00:01:00,530
+Now usually we'll read in that entire file,
+will make those changes in memory and then
+
+17
+00:01:00,530 --> 00:01:05,930
+we'll write the file out to the disk and that's
+a normal process to do; that means we're not
+
+18
+00:01:05,930 --> 00:01:08,860
+going to be doing both reading and writing
+at the same time.
+
+19
+00:01:08,860 --> 00:01:15,000
+So what you would see is the opening of an
+input file, the complete reading in operation
+
+20
+00:01:15,000 --> 00:01:18,880
+of the input file, and then calling close
+on that input file.
+
+21
+00:01:18,880 --> 00:01:25,280
+Then we would do whatever changes are as necessary,
+open the output file with the same file name,
+
+22
+00:01:25,280 --> 00:01:28,390
+write everything out and then close the output
+file.
+
+23
+00:01:28,390 --> 00:01:33,030
+So that's really the process for doing both
+reading and writing; in other words, in place
+
+24
+00:01:33,030 --> 00:01:36,180
+modification of the files is not a normal
+thing to do.
+

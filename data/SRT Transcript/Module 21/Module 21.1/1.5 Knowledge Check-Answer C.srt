@@ -1,0 +1,14 @@
+1
+00:00:00,370 --> 00:00:01,640
+a) That is correct.
+
+2
+00:00:01,640 --> 00:00:07,240
+Since there are 32 possible labels for a register,
+they number of bit you need to represent a
+
+3
+00:00:07,240 --> 00:00:11,400
+register field is log base 2 of 32, which
+is 5.
+

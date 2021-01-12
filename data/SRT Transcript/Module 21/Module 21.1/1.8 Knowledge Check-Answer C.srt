@@ -1,0 +1,13 @@
+1
+00:00:00,599 --> 00:00:02,010
+That is correct.
+
+2
+00:00:02,010 --> 00:00:07,870
+The Jump Register instruction uses one only
+the operand Rs, which is a register.
+
+3
+00:00:07,870 --> 00:00:10,350
+Therefore, it is an R-format instruction
+

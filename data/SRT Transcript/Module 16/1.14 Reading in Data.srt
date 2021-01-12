@@ -1,0 +1,248 @@
+1
+00:00:00,599 --> 00:00:05,799
+So how do we, now that we have the file connection
+open, how do we now read in from that I asked
+
+2
+00:00:05,799 --> 00:00:07,270
+stream object.
+
+3
+00:00:07,270 --> 00:00:09,750
+We've been doing it the same way with as with
+the keyboard.
+
+4
+00:00:09,750 --> 00:00:15,500
+The only difference here is that in the keyboard
+instance, we had to wait for the user to input
+
+5
+00:00:15,500 --> 00:00:20,510
+the information so that we could read it in
+into our program; now everything is open and
+
+6
+00:00:20,510 --> 00:00:24,480
+everything is available inside the file, so
+we don't have to actually wait for anything
+
+7
+00:00:24,480 --> 00:00:25,480
+to happen.
+
+8
+00:00:25,480 --> 00:00:30,940
+All the read in operations can happen before
+anything proceeds we can do the entire read
+
+9
+00:00:30,940 --> 00:00:33,720
+in of the file before we proceed.
+
+10
+00:00:33,720 --> 00:00:39,719
+Now one of the questions is how do we detect
+when we've run out of stuff in the file or
+
+11
+00:00:39,719 --> 00:00:44,120
+even better question is how do we detect if
+the file never contained anything to begin
+
+12
+00:00:44,120 --> 00:00:46,660
+with; maybe it's just simply empty.
+
+13
+00:00:46,660 --> 00:00:50,739
+And you'll see a lot of books and a lot of
+it's information on the internet about using
+
+14
+00:00:50,739 --> 00:00:55,839
+dot E.O.F. but I want to caution you against
+using that because a lot of a lot of these
+
+15
+00:00:55,839 --> 00:01:01,690
+instances don't understand what E.O.F. does:
+E.O.F. tells us that the end of file has been
+
+16
+00:01:01,690 --> 00:01:03,300
+reached.
+
+17
+00:01:03,300 --> 00:01:08,229
+But unfortunately recognizing that the end
+of file has been reached requires that we
+
+18
+00:01:08,229 --> 00:01:11,030
+read in that end of file marker.
+
+19
+00:01:11,030 --> 00:01:17,509
+So if we open for example a completely empty
+file then E.O.F. will not have been reached
+
+20
+00:01:17,509 --> 00:01:21,820
+because we haven't read in the end of file
+marker, and if we start to then read in and
+
+21
+00:01:21,820 --> 00:01:27,450
+process information will be processing information
+that doesn't really exist; we will have garbage
+
+22
+00:01:27,450 --> 00:01:28,590
+information.
+
+23
+00:01:28,590 --> 00:01:34,500
+So I caution you against using E.O.F. and
+the better solution to that is to do a while
+
+24
+00:01:34,500 --> 00:01:40,210
+infile arrow arrow O. temp, and what that
+does is read in the file read in a piece of
+
+25
+00:01:40,210 --> 00:01:44,960
+information into that temporary variable,
+whatever the data type is not really important.
+
+26
+00:01:44,960 --> 00:01:50,109
+The first piece of information in the file
+will be read in into that temporary variable
+
+27
+00:01:50,109 --> 00:01:55,460
+and then because we've contain this inside
+of a while loop the while loop will test in
+
+28
+00:01:55,460 --> 00:01:59,659
+a infile in very much the same way that we
+just tested it to make sure that it was open
+
+29
+00:01:59,659 --> 00:02:00,780
+successfully.
+
+30
+00:02:00,780 --> 00:02:06,270
+So it's a two-step process, which does both
+the read in operation and the test to see
+
+31
+00:02:06,270 --> 00:02:07,870
+that it was successful.
+
+32
+00:02:07,870 --> 00:02:14,220
+So we've got a nice compact way of both reading
+in and testing that it was successful at the
+
+33
+00:02:14,220 --> 00:02:19,800
+same time through this simple while loop format;
+which works out a lot better than ever then
+
+34
+00:02:19,800 --> 00:02:21,950
+E.O.F. ever actually did.
+
+35
+00:02:21,950 --> 00:02:26,880
+The input operator, we have to understand
+how that really works, and we might have gone
+
+36
+00:02:26,880 --> 00:02:30,980
+over it in the past but it really bears repeating
+here.
+
+37
+00:02:30,980 --> 00:02:37,010
+The input operator in C++ is going to skip
+over all leading whitespace characters; whitespace
+
+38
+00:02:37,010 --> 00:02:43,000
+characters are r your space your tab your
+return characters anything which does formatting
+
+39
+00:02:43,000 --> 00:02:45,910
+inside the file but we don't actually see.
+
+40
+00:02:45,910 --> 00:02:50,650
+So, if you were open this in Notepad it shows
+up white but it's really there.
+
+41
+00:02:50,650 --> 00:02:55,960
+It skips over all the leading whitespace characters
+and then reads in any valid characters and
+
+42
+00:02:55,960 --> 00:02:59,690
+we’ll talk about what valid characters are
+in just a minute and then it stops when it
+
+43
+00:02:59,690 --> 00:03:04,150
+reaches any trailing whitespace or any invalid
+characters.
+
+44
+00:03:04,150 --> 00:03:08,269
+So that's the three step process that the
+input operator is going to doL its going can
+
+45
+00:03:08,269 --> 00:03:13,410
+skip leading whitespace read invalid characters
+and stop when it reaches trailing whitespace.
+
+46
+00:03:13,410 --> 00:03:17,250
+And if we put this in a loop and constantly
+read in, then what we're going to be doing
+
+47
+00:03:17,250 --> 00:03:21,850
+is skipping any leading whitespace characters
+reading in the valid characters and then stopping
+
+48
+00:03:21,850 --> 00:03:26,650
+at the trailing whitespace character but then
+the next read in operation will skip over
+
+49
+00:03:26,650 --> 00:03:28,530
+those whitespace characters.
+
+50
+00:03:28,530 --> 00:03:32,950
+And if we've done this correctly we can read
+in the entire file and when we get to the
+
+51
+00:03:32,950 --> 00:03:38,790
+end, we will have completed everything and
+everything will be working exactly as we expected.
+
+52
+00:03:38,790 --> 00:03:42,120
+So, that's what we're going to aim to do in
+reading in data.
+

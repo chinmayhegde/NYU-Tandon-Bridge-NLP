@@ -1,0 +1,118 @@
+1
+00:00:01,020 --> 00:00:04,930
+There's a little bit of extra work to be done
+when we template a class.
+
+2
+00:00:04,930 --> 00:00:09,860
+So when we template the class, the name of
+the class actually changes to incorporate
+
+3
+00:00:09,860 --> 00:00:11,130
+the template.
+
+4
+00:00:11,130 --> 00:00:15,340
+So here I've got a simple description of a
+class called “sum valve.”
+
+5
+00:00:15,340 --> 00:00:21,450
+Where we've templated it to store a simple
+data item and this is leading up to what a
+
+6
+00:00:21,450 --> 00:00:25,250
+linked list node would look like and we'll
+get to that in a later slide.
+
+7
+00:00:25,250 --> 00:00:32,559
+But basically the sum val class stores one
+data item, and it's got a function for get
+
+8
+00:00:32,559 --> 00:00:37,360
+val and for set val, and we don't know what
+the T data type is and really we don't care
+
+9
+00:00:37,360 --> 00:00:38,530
+what’s the T data type.
+
+10
+00:00:38,530 --> 00:00:44,450
+And now inside main what we do is we’d create
+this as sum val int and that's where you've
+
+11
+00:00:44,450 --> 00:00:46,880
+seen before, that's where a vector comes from.
+
+12
+00:00:46,880 --> 00:00:51,579
+So you've done this before with vector and
+now you understand why; it's because vector
+
+13
+00:00:51,579 --> 00:00:52,910
+is templated.
+
+14
+00:00:52,910 --> 00:00:58,671
+So we have to tell it what data type we're
+working with inside the sum val object, so
+
+15
+00:00:58,671 --> 00:01:05,590
+when we create it we say sum val int var name
+or sum val char var name or sum val whatever
+
+16
+00:01:05,590 --> 00:01:12,450
+var name and you're giving it a data type
+to now store inside some val.
+
+17
+00:01:12,450 --> 00:01:17,340
+Now the one thing to take notice of here,
+is that every function that we create has
+
+18
+00:01:17,340 --> 00:01:18,479
+to be templated.
+
+19
+00:01:18,479 --> 00:01:25,100
+So the set Val function, for example, has
+to be a templated function because first off
+
+20
+00:01:25,100 --> 00:01:32,360
+it has a parameter of type T. But also because
+the class name is now changed to some value
+
+21
+00:01:32,360 --> 00:01:33,869
+less than T greater than.
+
+22
+00:01:33,869 --> 00:01:39,649
+So we can see that the actual name of the,
+of the class changes to incorporate the data
+
+23
+00:01:39,649 --> 00:01:40,649
+type.
+
+24
+00:01:40,649 --> 00:01:44,899
+And that's just an internal C++ representation
+but we do have to take note of that for any
+
+25
+00:01:44,899 --> 00:01:48,399
+time we're going to work with a templated
+function inside of a templated class.
+

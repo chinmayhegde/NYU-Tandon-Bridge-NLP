@@ -1,0 +1,138 @@
+1
+00:00:00,630 --> 00:00:03,580
+Recursion is basically a term used in several
+disciplines.
+
+2
+00:00:03,580 --> 00:00:09,410
+In computer science, recursion is a problem
+solving technique where we solve computational
+
+3
+00:00:09,410 --> 00:00:10,620
+of problems.
+
+4
+00:00:10,620 --> 00:00:16,849
+It is a very closely related to the mathematical
+induction that we just spoke about.
+
+5
+00:00:16,849 --> 00:00:24,359
+The two are similar in some aspects; one of
+the main aspects is the fact that both kind
+
+6
+00:00:24,359 --> 00:00:29,039
+of combine smaller instances for a larger
+one.
+
+7
+00:00:29,039 --> 00:00:34,950
+So if we look at how we proved by induction.
+
+8
+00:00:34,950 --> 00:00:41,690
+We used an assumption of P on smaller values
+in order to show that P is true on a larger
+
+9
+00:00:41,690 --> 00:00:42,690
+value.
+
+10
+00:00:42,690 --> 00:00:46,540
+Same thing kind of we're going to do here
+with recursions.
+
+11
+00:00:46,540 --> 00:00:51,620
+So when we want to design a recursive algorithm,
+we're going to give you a very high level
+
+12
+00:00:51,620 --> 00:00:57,670
+description of how we're going to design recursive
+algorithms; later on we'll see if you will
+
+13
+00:00:57,670 --> 00:01:00,790
+demonstrate it using a few examples and you
+get the hang of it.
+
+14
+00:01:00,790 --> 00:01:07,171
+But high level speaking, when we develop a
+recursive algorithm, just as induction, it
+
+15
+00:01:07,171 --> 00:01:15,359
+has two steps: there is the base case/base
+step and inductive or recursive step.
+
+16
+00:01:15,359 --> 00:01:21,539
+Now when we make recursive algorithm when
+we use recursion, we use it as we said to
+
+17
+00:01:21,539 --> 00:01:22,539
+solve problems.
+
+18
+00:01:22,539 --> 00:01:28,789
+Not like induction where we use it to prove
+statements, in recursion we solve problems,
+
+19
+00:01:28,789 --> 00:01:35,280
+because in computer science we solve computational
+problems where in mathematics we prove statements.
+
+20
+00:01:35,280 --> 00:01:41,490
+So it would be very similar but then if in
+induction in the base case we proved the statement
+
+21
+00:01:41,490 --> 00:01:47,840
+for the smallest possible value, in recursion
+we're going to solve the problem for the smallest
+
+22
+00:01:47,840 --> 00:01:48,880
+possible input.
+
+23
+00:01:48,880 --> 00:01:53,810
+So that's what we're going to do in the base 
+we're going to solve our problem for the smallest
+
+24
+00:01:53,810 --> 00:01:55,140
+possible input.
+
+25
+00:01:55,140 --> 00:02:01,590
+In the recursive step, we're going to assume
+that when we call the function on smaller
+
+26
+00:02:01,590 --> 00:02:05,590
+inputs it does what it has to do it does its
+job.
+
+27
+00:02:05,590 --> 00:02:11,250
+And using that assumption we'll try to figure
+out a way how to combine calls for smaller
+
+28
+00:02:11,250 --> 00:02:15,440
+instances, to solve the problem on a given
+input.
+
+29
+00:02:15,440 --> 00:02:17,640
+Let's see how we do that.
+

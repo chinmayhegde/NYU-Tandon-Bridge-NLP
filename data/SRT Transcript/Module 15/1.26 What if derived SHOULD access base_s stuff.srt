@@ -1,0 +1,72 @@
+1
+00:00:00,659 --> 00:00:05,529
+From time to time, there's going to be situations,
+of course, where we have to have allowance
+
+2
+00:00:05,529 --> 00:00:10,290
+for the derived class to access the base classes’
+private member variables.
+
+3
+00:00:10,290 --> 00:00:15,749
+And we can't make them private in that case;
+so there's no friend possibility here.
+
+4
+00:00:15,749 --> 00:00:19,840
+But what sequels post does create is something
+called protected.
+
+5
+00:00:19,840 --> 00:00:26,330
+The protected modifier is added, now we now
+have public, private, and protected.
+
+6
+00:00:26,330 --> 00:00:32,680
+Protected is specifically for this purpose:
+it allows a derived member function to access
+
+7
+00:00:32,680 --> 00:00:36,360
+a base class’s protected information.
+
+8
+00:00:36,360 --> 00:00:41,180
+But it doesn't allow any access outside of
+those two classes: outside of the base class
+
+9
+00:00:41,180 --> 00:00:42,600
+or the derived class.
+
+10
+00:00:42,600 --> 00:00:47,460
+So if we're inside main protected in private
+or fact of the same thing but if we're inside
+
+11
+00:00:47,460 --> 00:00:52,020
+a derived class we would not have access to
+the private information, whereas we would
+
+12
+00:00:52,020 --> 00:00:54,340
+have access to the protected information.
+
+13
+00:00:54,340 --> 00:01:00,010
+It doesn't change anything Internal to the
+class; so it's only in the case of inheritance
+
+14
+00:01:00,010 --> 00:01:03,680
+that protected becomes useful because that's
+when the derived class would exist.
+
+15
+00:01:03,680 --> 00:01:08,950
+And it would have access to those items marked
+as protected inside the base class.
+

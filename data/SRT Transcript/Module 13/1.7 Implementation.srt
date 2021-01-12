@@ -1,0 +1,93 @@
+1
+00:00:01,949 --> 00:00:05,930
+Let's try to analyze the running time of the
+sorted search function.
+
+2
+00:00:05,930 --> 00:00:13,639
+Hopefully, it would give us a better result
+than linear running time; we’ve worked quite
+
+3
+00:00:13,639 --> 00:00:16,070
+a lot in order to get this coded.
+
+4
+00:00:16,070 --> 00:00:20,070
+It's much more complicated; I hope it's worth
+it.
+
+5
+00:00:20,070 --> 00:00:21,490
+Let's take a closer look.
+
+6
+00:00:21,490 --> 00:00:27,320
+So, once again if we look at the code we have
+a few statements before the while loop but
+
+7
+00:00:27,320 --> 00:00:28,320
+they are constants.
+
+8
+00:00:28,320 --> 00:00:32,110
+So, let's consider them as Taito of one.
+
+9
+00:00:32,110 --> 00:00:36,430
+There is the if statement after the while
+loop, also constant, Taito one.
+
+10
+00:00:36,430 --> 00:00:43,760
+And I think the dominant part here is basically
+the while loop, so let's try to analyze the
+
+11
+00:00:43,760 --> 00:00:49,600
+running time of this iterative process.
+
+12
+00:00:49,600 --> 00:00:56,079
+Once again if we look closer at the body of
+this a while loop, there are a few statements
+
+13
+00:00:56,079 --> 00:01:02,980
+here but we can count them; they are not depending
+on the size of the input, no matter what the
+
+14
+00:01:02,980 --> 00:01:08,950
+size of the range the number of operations
+we're doing there remains the same.
+
+15
+00:01:08,950 --> 00:01:13,259
+that's why we're staying saying it's constant,
+it's also Taito of one.
+
+16
+00:01:13,259 --> 00:01:20,130
+Which basically implies that the number of
+operations, the total number of operations
+
+17
+00:01:20,130 --> 00:01:26,060
+for the while loop, is once again the number
+of iterations is the order of the number of
+
+18
+00:01:26,060 --> 00:01:28,240
+iterations.
+
+19
+00:01:28,240 --> 00:01:33,670
+But in this case it's a bit more tricky to
+figure out what's the number of iterations
+
+20
+00:01:33,670 --> 00:01:35,909
+that this algorithm can do.
+

@@ -1,0 +1,32 @@
+1
+00:00:00,570 --> 00:00:05,420
+We have covered branch and jump instructions,
+which are fundamental in all instruction set
+
+2
+00:00:05,420 --> 00:00:06,870
+architectures.
+
+3
+00:00:06,870 --> 00:00:12,889
+As we have seen, these instructions allow
+the CPU to manipulate loops, function calls,
+
+4
+00:00:12,889 --> 00:00:14,900
+and if and else conditions.
+
+5
+00:00:14,900 --> 00:00:17,350
+This concludes the architecture portion of
+the course.
+
+6
+00:00:17,350 --> 00:00:23,230
+Next, we will start discussing computer organization
+to understand how the CPU is designed to execute
+
+7
+00:00:23,230 --> 00:00:24,189
+its instructions.
+

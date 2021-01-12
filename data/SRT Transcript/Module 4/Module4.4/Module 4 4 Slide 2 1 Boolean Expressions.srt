@@ -1,0 +1,242 @@
+0:00:00.590,0:00:09.200
+Ok so we’ve talked about a few data types
+the int float double char string and bool.
+
+0:00:09.200,0:00:12.930
+Now let’s talk a bit more about types of
+expressions.
+
+0:00:12.930,0:00:21.110
+So we’ve seen arithmetic expressions that
+are created using the arithmetic types.
+
+0:00:21.110,0:00:27.109
+When we speak about arithmetic expressions
+we say that arithmetic expressions have numeric
+
+0:00:27.109,0:00:28.109
+values.
+
+0:00:28.109,0:00:34.640
+So when we add integers when we multiply floats
+when we add an integer to a char they all
+
+0:00:34.640,0:00:37.010
+result with a numeric value.
+
+0:00:37.010,0:00:41.070
+Then they are considered to be arithmetic
+expressions.
+
+0:00:41.070,0:00:47.740
+When we introduced the bool data type we started
+using Boolean operators and using Boolean
+
+0:00:47.740,0:00:52.920
+operators we created some form of what we
+say Boolean expressions.
+
+0:00:52.920,0:00:58.360
+Now Boolean expressions as opposed to arithmetic
+expressions don’t have numeric values they
+
+0:00:58.360,0:00:59.960
+have Boolean values.
+
+0:00:59.960,0:01:07.380
+So arithmetic expressions gave numeric values
+where Boolean expressions have Boolean values
+
+0:01:07.380,0:01:09.380
+such as true and false.
+
+0:01:09.380,0:01:14.119
+Let’s get into some more details about Boolean
+expressions.
+
+0:01:14.119,0:01:20.539
+So there are atomic Boolean expressions and
+using atomic Boolean expressions we can create
+
+0:01:20.539,0:01:24.719
+more complex more compound Boolean expressions.
+
+0:01:24.719,0:01:31.429
+For atomic Boolean expressions we’ve talked
+about bool C++ literals true and false.
+
+0:01:31.429,0:01:35.939
+Each of them is considered to be an atomic
+Boolean expressions.
+
+0:01:35.939,0:01:40.970
+And then using atomic Boolean expressions
+and the atomic Boolean operators not and and
+
+0:01:40.970,0:01:45.560
+or we can create a more compound expressions.
+
+0:01:45.560,0:01:50.560
+For example if we have a Boolean b we can
+set b to true.
+
+0:01:50.560,0:01:58.719
+True is an atomic expression but then if we
+set b to true and not b that is a compound
+
+0:01:58.719,0:01:59.729
+expression.
+
+0:01:59.729,0:02:07.829
+Not b is a compound expression true is a Boolean
+expression and when we combine Boolean expressions
+
+0:02:07.829,0:02:11.890
+with Boolean operator that creates compound
+expressions.
+
+0:02:11.890,0:02:17.450
+So the second expression here true and not
+be is considered to be a compound expression.
+
+0:02:17.450,0:02:24.879
+In C++ there is another way to create an atomic
+Boolean expression in addition to the bool
+
+0:02:24.879,0:02:26.530
+literals.
+
+0:02:26.530,0:02:33.090
+And that is comparing arithmetic expression
+using relational operators less than greater
+
+0:02:33.090,0:02:36.470
+than less or equal greater or equal something
+like that.
+
+0:02:36.470,0:02:45.689
+So if we have an integer x assigned to a 3
+we can do something like b equals x is less
+
+0:02:45.689,0:02:46.830
+than 5.
+
+0:02:46.830,0:02:51.280
+The expression x is less than 5 is a Boolean
+expression right.
+
+0:02:51.280,0:02:58.490
+Its value is either true or false and this
+case since x is 3 x less than 5 is true.
+
+0:02:58.490,0:03:02.090
+So b gets the value true.
+
+0:03:02.090,0:03:08.749
+In this case x less than 5 is a Boolean expression
+its value is true in this case and it is considered
+
+0:03:08.749,0:03:11.499
+to be an atomic Boolean expression.
+
+0:03:11.499,0:03:20.209
+We can then use the Boolean operators to combine
+atomic expressions.
+
+0:03:20.209,0:03:26.310
+For example x greater or equal to 0 and x
+is less than 5.
+
+0:03:26.310,0:03:32.409
+Each of these two operands is considered to
+be an atomic Boolean expression and in this
+
+0:03:32.409,0:03:38.730
+case x greater or equal to 0 is true because
+3 is greater or equal to 0.
+
+0:03:38.730,0:03:46.650
+X less than 5 is also true because 3 is less
+than 5 and we combine them using the and operator
+
+0:03:46.650,0:03:49.959
+true and true that is also true.
+
+0:03:49.959,0:03:52.280
+So b gets the value of true.
+
+0:03:52.280,0:04:01.010
+The expression x greater or equal to 0 and
+x is less than 5 is a compound Boolean expression.
+
+0:04:01.010,0:04:08.599
+One last thing I want to note here is that
+in C++ we cannot change chain sorry relational
+
+0:04:08.599,0:04:09.599
+operator.
+
+0:04:09.599,0:04:15.090
+We can’t do x greater or equal to 0 less
+than 5 in a single statement.
+
+0:04:15.090,0:04:21.759
+We need to separate them and use the and or
+or operators in order to combine them.
+
+0:04:21.759,0:04:28.250
+So we’ve talked about less than greater
+than less or equal greater or equal relational
+
+0:04:28.250,0:04:29.450
+operators.
+
+0:04:29.450,0:04:36.590
+Two additional relational operators are equal
+to and not equal to.
+
+0:04:36.590,0:04:42.840
+Surprisingly or actually not really surprisingly
+we can’t use the equal sign in order to
+
+0:04:42.840,0:04:48.830
+check if two values are equal to one another
+because the equal sign is already used for
+
+0:04:48.830,0:04:51.080
+an assignment expressions.
+
+0:04:51.080,0:04:57.710
+The C++ syntax for checking equality is double
+equals.
+
+0:04:57.710,0:05:04.420
+So in order to check if two values are equal
+to one another we say if x equal equal to
+
+0:05:04.420,0:05:08.020
+a value we want to check the equality of.
+
+0:05:08.020,0:05:13.750
+In order to check if two values are not equal
+to one another we use exclamation mark equal.
+
+0:05:13.750,0:05:17.060
+These two together are not equal.
+
+0:05:17.060,0:05:25.781
+For example we can have b equal to x equals
+double equal actually to 3 or x double equal
+
+0:05:25.781,0:05:26.781
+to 4.
+
+0:05:26.781,0:05:35.060
+In this case since x is 3 x double equals
+to 3 is true or x double equals to 4 is false
+
+0:05:35.060,0:05:37.889
+but true or false is true.
+
+0:05:37.889,0:05:39.800
+So b would be true.

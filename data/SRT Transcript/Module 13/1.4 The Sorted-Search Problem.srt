@@ -1,0 +1,65 @@
+1
+00:00:00,680 --> 00:00:06,589
+Okay. So, let's take a look at another search
+algorithm; basically it's a variation of the
+
+2
+00:00:06,589 --> 00:00:12,410
+general searching problems algorithms, named
+the sorted search problem. in this case we’ll
+
+3
+00:00:12,410 --> 00:00:19,610
+implement the function, a sorted search, where
+we’re given a sorted array, sorted A R R,
+
+4
+00:00:19,610 --> 00:00:26,640
+that's the name of our array. Which means
+that the elements are ordered in this array
+
+5
+00:00:26,640 --> 00:00:31,970
+in an increasing order, so we get the sorted
+array and its logical size and again a val
+
+6
+00:00:31,970 --> 00:00:41,600
+to search for. And same thing, so if val appears
+in the sorted array, let's just return one
+
+7
+00:00:41,600 --> 00:00:47,670
+of the indexes where it appears. We’re not
+really interested in finding the first appearance
+
+8
+00:00:47,670 --> 00:00:54,809
+of value in a sorted array, so let's just
+return an index where val appears. And once
+
+9
+00:00:54,809 --> 00:01:02,620
+again, if val is not one of A R R elements,
+we’ll just return a negative one. For example,
+
+10
+00:01:02,620 --> 00:01:09,110
+if our sorted array is five, seven, eight,
+eight, ten, and twelve, again notice that
+
+11
+00:01:09,110 --> 00:01:16,250
+the elements are ordered in increasing order,
+then when we call this sorted search function
+
+12
+00:01:16,250 --> 00:01:21,930
+for this array of size six searching for eight,
+we'll just return an index where eight appears;
+
+13
+00:01:21,930 --> 00:01:27,700
+in this case eight appears in index two and
+three, we could arbitrarily return three.
+

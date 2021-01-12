@@ -1,0 +1,219 @@
+1
+00:00:00,450 --> 00:00:03,731
+Here's the basic format for the linked list;
+there's not much to it.
+
+2
+00:00:03,731 --> 00:00:07,939
+It is a little bit busy here but we'll go
+through it step by step.
+
+3
+00:00:07,939 --> 00:00:11,190
+The first thing that you are going to see
+is that there's a head pointer and really
+
+4
+00:00:11,190 --> 00:00:17,210
+that's the only thing that this entire class
+needs to store; a pointer to the first node
+
+5
+00:00:17,210 --> 00:00:18,500
+in the list.
+
+6
+00:00:18,500 --> 00:00:22,600
+And of course it’s an LList node pointer,
+it looks exactly like the next pointer that
+
+7
+00:00:22,600 --> 00:00:25,080
+we saw in the class, just a moment ago.
+
+8
+00:00:25,080 --> 00:00:28,880
+But here we've got a pointer to the first
+node in the list.
+
+9
+00:00:28,880 --> 00:00:33,000
+Now of course if that head pointer is null
+then that means there's nothing on the list,
+
+10
+00:00:33,000 --> 00:00:36,240
+so that's going to be our indication for an
+empty list.
+
+11
+00:00:36,240 --> 00:00:40,329
+And if you look down into the public section
+first line in the public section, you'll see
+
+12
+00:00:40,329 --> 00:00:44,000
+that that's what the default constructor actually
+does; it just sets had pointer equal to head
+
+13
+00:00:44,000 --> 00:00:45,810
+equal to null pointer.
+
+14
+00:00:45,810 --> 00:00:50,130
+We've got a copy constructor and assignment
+operator and destructor; that takes care of
+
+15
+00:00:50,130 --> 00:00:52,060
+our big three operations.
+
+16
+00:00:52,060 --> 00:00:56,530
+So those are our handle on the next three
+lines, because we are working with pointers,
+
+17
+00:00:56,530 --> 00:01:00,329
+we are working with data storage that's on
+the heap, and we are going to have to make
+
+18
+00:01:00,329 --> 00:01:02,020
+sure that that they had a storage is consistent.
+
+19
+00:01:02,020 --> 00:01:09,390
+So again look back at your pointers and dynamic
+memory discussion to look at how the big three
+
+20
+00:01:09,390 --> 00:01:11,299
+plays into a factor here.
+
+21
+00:01:11,299 --> 00:01:15,999
+The insertAtHead function is simply going
+to update the head pointer to point at the
+
+22
+00:01:15,999 --> 00:01:16,999
+new node.
+
+23
+00:01:16,999 --> 00:01:22,250
+So to do an insert and head all we have to
+do is set the head equal to a new node and
+
+24
+00:01:22,250 --> 00:01:25,929
+make that new node’s next pointer equal
+to the original head.
+
+25
+00:01:25,929 --> 00:01:30,330
+So that means keeping track of what the original
+head pointer was maybe it was null, maybe
+
+26
+00:01:30,330 --> 00:01:31,450
+it was a node.
+
+27
+00:01:31,450 --> 00:01:37,270
+But if we're doing inserted head all we have
+to do is create a new node and insert it physically
+
+28
+00:01:37,270 --> 00:01:38,570
+into the list.
+
+29
+00:01:38,570 --> 00:01:43,429
+removeFromHead is sort of the same thing which
+had to advance the head pointer to heads next.
+
+30
+00:01:43,429 --> 00:01:48,609
+isEmpty is a simple function that just checks
+to see if the head pointer is null.
+
+31
+00:01:48,609 --> 00:01:52,599
+Clear means we're going to have to eliminate
+these nodes and the easiest way to eliminate
+
+32
+00:01:52,599 --> 00:01:57,909
+all the nodes is just constantly call remove
+from head in a loop until isEmpty.
+
+33
+00:01:57,909 --> 00:02:03,639
+So it actually turns out to be while not is
+empty remove from head and that's it; that's
+
+34
+00:02:03,639 --> 00:02:06,009
+the entire clear function.
+
+35
+00:02:06,009 --> 00:02:09,670
+insertAtEnd we're going to see a little bit
+later on takes a little bit more effort and
+
+36
+00:02:09,670 --> 00:02:13,459
+then insertAtPoint is almost the same sort
+of thing.
+
+37
+00:02:13,459 --> 00:02:17,590
+And then we have a size function to tell us
+how many nodes there are actually on the list,
+
+38
+00:02:17,590 --> 00:02:19,659
+which we're going to see in the next slide
+also.
+
+39
+00:02:19,659 --> 00:02:25,290
+So here is the basic format for the linked
+list if you boil it down, it's really just
+
+40
+00:02:25,290 --> 00:02:27,940
+a head pointer and that's the entire linked
+list.
+
+41
+00:02:27,940 --> 00:02:33,360
+And before we had object orientation back
+in C, linked lists were created with a struct
+
+42
+00:02:33,360 --> 00:02:37,360
+for the node and then you would just simply
+keep a pointer to the beginning of the linked
+
+43
+00:02:37,360 --> 00:02:39,620
+list and passed that pointer around.
+
+44
+00:02:39,620 --> 00:02:44,879
+So we could do this all without a class, it’s
+just having the class keeps it all encapsulated
+
+45
+00:02:44,879 --> 00:02:49,319
+which is the point of a class together and
+makes it a little bit easier to work with.
+
+46
+00:02:49,319 --> 00:02:51,699
+But there's not a lot of effort here and we
+get a lot of benefit.
+

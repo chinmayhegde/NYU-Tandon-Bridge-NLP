@@ -1,0 +1,103 @@
+0:00:00.110,0:00:05.450
+So, these three properties basically imply
+another very important property; let's take
+
+0:00:05.450,0:00:06.450
+a look.
+
+0:00:06.450,0:00:14.200
+For example if we have an array of six integers,
+in the memory we would have six continuous
+
+0:00:14.200,0:00:15.780
+integers one after the other.
+
+0:00:15.780,0:00:18.950
+Let’s say it starts at address one thousand.
+
+0:00:18.950,0:00:25.250
+If we want to assign let's say arr zero with
+four, that won't be an issue for the compiler
+
+0:00:25.250,0:00:31.890
+since it knows that the array starts at address
+one thousand, then that's exactly the location
+
+0:00:31.890,0:00:34.280
+where this four should be written.
+
+0:00:34.280,0:00:41.370
+Okay, so what happens if we want to assign
+arr two with let's say five.
+
+0:00:41.370,0:00:45.720
+How would the compiler know where in our memory
+to write this five?
+
+0:00:45.720,0:00:51.160
+So since it knows it starts at address one
+thousand, how could it calculate; how could
+
+0:00:51.160,0:00:54.070
+it figure out where arr two is?
+
+0:00:54.070,0:01:00.070
+So, this is obviously index zero, one, two,
+three, four, and five: these are the indexes
+
+0:01:00.070,0:01:01.360
+of the array.
+
+0:01:01.360,0:01:06.130
+Arr two should be two jumps of four bytes
+after this one thousand.
+
+0:01:06.130,0:01:15.120
+Actually the compiler can figure out a formula
+that the address of arr two is one thousand
+
+0:01:15.120,0:01:22.150
+plus two times the size of each element in
+the array, basically one thousand plus eight;
+
+0:01:22.150,0:01:28.030
+that is the address of arr two, that is where
+five should be written.
+
+0:01:28.030,0:01:34.770
+More generally, we can say that instead of
+one thousand, that would be the address arr
+
+0:01:34.770,0:01:43.030
+begins, plus two times instead of four, let's
+just say the size of each element.
+
+0:01:43.030,0:01:48.780
+More generally, let's say since we know that
+all the elements are continuously in the memory
+
+0:01:48.780,0:01:53.720
+they're all of the same size and it's a zero
+based index system.
+
+0:01:53.720,0:01:59.479
+We can figure out a formula that the address
+of, let's say arr I.
+
+0:01:59.479,0:02:05.479
+Let’s do a general formula here, would be
+this base address where the arr starts.
+
+0:02:05.479,0:02:14.390
+So the address arr begins, plus in this case
+I jumps of the size of each element, which
+
+0:02:14.390,0:02:19.940
+is I times size of each element in arr.
+
+0:02:19.940,0:02:26.410
+So the compiler can use this formula in order
+to figure out where each element is located
+
+0:02:26.410,0:02:26.910
+in the memory.

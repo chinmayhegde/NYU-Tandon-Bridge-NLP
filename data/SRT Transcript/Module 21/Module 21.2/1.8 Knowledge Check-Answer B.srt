@@ -1,0 +1,10 @@
+1
+00:00:00,539 --> 00:00:03,260
+A cache block is the same size as that of
+a DRAM block.
+
+2
+00:00:03,260 --> 00:00:07,410
+Therefore, a cache block can hold only one
+DRAM block at a time.
+

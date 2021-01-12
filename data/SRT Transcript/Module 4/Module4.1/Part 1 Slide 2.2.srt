@@ -1,0 +1,150 @@
+1
+00:00:00,410 --> 00:00:05,190
+Let’s talk about some more stuff regarding
+integers.
+
+2
+00:00:05,190 --> 00:00:13,769
+For example what are the literals that are
+built in inside C++ for integers.
+
+3
+00:00:13,769 --> 00:00:21,570
+Maybe let’s take a step aside here and understand
+what do we mean when we say C++ literals.
+
+4
+00:00:21,570 --> 00:00:28,720
+So when we are talking about data basically
+data can come into two major forms either
+
+5
+00:00:28,720 --> 00:00:31,670
+variables or constants.
+
+6
+00:00:31,670 --> 00:00:38,290
+Variables are as we can understand by their
+name can change their values where constants
+
+7
+00:00:38,290 --> 00:00:42,190
+are values that are constants cannot be changed.
+
+8
+00:00:42,190 --> 00:00:49,230
+So if we look at these lines of code here
+we see that we have x and y which are variables
+
+9
+00:00:49,230 --> 00:00:55,329
+we can see that we can set their values x
+equals 6 and then set it to 7 or to 8 or whatever
+
+10
+00:00:55,329 --> 00:00:58,309
+they are variables their value can change.
+
+11
+00:00:58,309 --> 00:01:01,430
+And then there are also some constants here
+in this program.
+
+12
+00:01:01,430 --> 00:01:09,750
+As we said every data in C++ is has a type
+of its own C++ is a strongly typed language.
+
+13
+00:01:09,750 --> 00:01:20,000
+So 6 -6 even 0 way down there are all of some
+type in this case they would be of type integers.
+
+14
+00:01:20,000 --> 00:01:26,480
+So we can see that they are variables we can
+declare them let’s say int x later on we
+
+15
+00:01:26,480 --> 00:01:31,920
+can define double y or whatever type we want
+to see for each variable.
+
+16
+00:01:31,920 --> 00:01:38,560
+And then there are also contants and then
+for constants we talk about two kinds of constants
+
+17
+00:01:38,560 --> 00:01:45,190
+one that are built in inside our language
+when we name C++ literals.
+
+18
+00:01:45,190 --> 00:01:52,050
+Basically we don’t need to define 6 or -6
+or 7.3 or abc we don’t need to define what
+
+19
+00:01:52,050 --> 00:01:59,620
+these values are the compiler already recognizes
+them they are built in inside programming
+
+20
+00:01:59,620 --> 00:02:00,620
+language.
+
+21
+00:02:00,620 --> 00:02:06,670
+But we can also define our own constants we
+can create a program and define contants.
+
+22
+00:02:06,670 --> 00:02:12,520
+The syntax for that goes something like cons
+int max = 5 and in this case we are creating
+
+23
+00:02:12,520 --> 00:02:18,920
+a constant of type integer its name is max
+and the value is set to 5.
+
+24
+00:02:18,920 --> 00:02:24,950
+We will talk more about it later on but the
+major idea here is once we set max with 5
+
+25
+00:02:24,950 --> 00:02:31,970
+this value cannot change cannot set max to
+7 after a few lines of code.
+
+26
+00:02:31,970 --> 00:02:37,300
+Once we created a constant that value is there
+to stay.
+
+27
+00:02:37,300 --> 00:02:46,230
+So let’s get back to literals of type int
+what kind of built in data the compiler recognizes
+
+28
+00:02:46,230 --> 00:02:47,830
+as integers.
+
+29
+00:02:47,830 --> 00:02:58,790
+So as we can expect writing numbers in their
+decimal representation just like 3 4 -6 3954
+
+30
+00:02:58,790 --> 00:03:05,450
+or whatever number you want the compiler would
+recognize them as integers.
+
+31
+00:03:05,450 --> 00:03:11,510
+So we can use them and we know that they are
+considered to be integers.
+

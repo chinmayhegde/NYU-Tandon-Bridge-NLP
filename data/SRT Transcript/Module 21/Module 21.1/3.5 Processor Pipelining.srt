@@ -1,0 +1,161 @@
+1
+00:00:01,030 --> 00:00:03,649
+Let us discuss pipelining in more detail.
+
+2
+00:00:03,649 --> 00:00:09,450
+When a CPU is pipelined, it breaks down each
+execution step into a stage, where each can
+
+3
+00:00:09,450 --> 00:00:12,469
+be used independently by an instruction.
+
+4
+00:00:12,469 --> 00:00:19,080
+In addition, each stage uses buffers, commonly
+known as latches, to obtain information about
+
+5
+00:00:19,080 --> 00:00:21,940
+what the instruction did in the previous stage.
+
+6
+00:00:21,940 --> 00:00:26,990
+So let's use this example to illustrate the
+benefits of pipelining.
+
+7
+00:00:26,990 --> 00:00:32,290
+When one instruction starts executing, it
+first goes in the execution, instruction fetch
+
+8
+00:00:32,290 --> 00:00:34,559
+stage in the pipeline.
+
+9
+00:00:34,559 --> 00:00:40,690
+Just like the states in the high-level diagram
+of the CPU, each pipeline stage takes one
+
+10
+00:00:40,690 --> 00:00:41,690
+clock cycle to complete.
+
+11
+00:00:41,690 --> 00:00:46,450
+When the instruction completes the fetch stage,
+it goes to the decode stage of the pipeline
+
+12
+00:00:46,450 --> 00:00:48,160
+in cycle 2.
+
+13
+00:00:48,160 --> 00:00:52,710
+This means the fetch stage is free at that
+cycle because no instruction is currently
+
+14
+00:00:52,710 --> 00:00:53,710
+using it.
+
+15
+00:00:53,710 --> 00:01:00,519
+The pipelined CPU can thus send another instruction
+in the fetch stage to begin its execution.
+
+16
+00:01:00,519 --> 00:01:05,680
+At this clock cycle 2, there are multiple
+instructions being executed at the same time.
+
+17
+00:01:05,680 --> 00:01:11,000
+Hence we have what is called instruction level
+parallelism or ILP.
+
+18
+00:01:11,000 --> 00:01:16,939
+At clock cycle 3, the CPU sends the first
+instruction to the execute stage, the second
+
+19
+00:01:16,939 --> 00:01:22,460
+instruction to the decode stage, and the third
+instruction to the fetch stage.
+
+20
+00:01:22,460 --> 00:01:27,320
+Using this approach, the CPU can have one
+instruction being executed in each stage at
+
+21
+00:01:27,320 --> 00:01:28,320
+all times.
+
+22
+00:01:28,320 --> 00:01:33,320
+However, note that we cannot have multiple
+instructions in the same stage at the same
+
+23
+00:01:33,320 --> 00:01:34,320
+time.
+
+24
+00:01:34,320 --> 00:01:36,390
+This is done only by Superscalar CPUs.
+
+25
+00:01:36,390 --> 00:01:39,869
+Right now, we only have a pipelined CPU.
+
+26
+00:01:39,869 --> 00:01:45,829
+Using pipelining method, our code can take
+7 cycles instead of 18 cycles, doubling its
+
+27
+00:01:45,829 --> 00:01:47,490
+performance.
+
+28
+00:01:47,490 --> 00:01:52,119
+One interesting note about pipelining is that
+some instructions may need to go to pipeline
+
+29
+00:01:52,119 --> 00:01:54,590
+stages that they don’t use.
+
+30
+00:01:54,590 --> 00:01:59,469
+For example, the double word instruction doesn’t
+need the memory stage, because it doesn’t
+
+31
+00:01:59,469 --> 00:02:01,290
+read or write data.
+
+32
+00:02:01,290 --> 00:02:06,799
+But since, it must go to the writeback stage
+to write the result in the register, it has
+
+33
+00:02:06,799 --> 00:02:08,979
+to go through the
+Memory.
+
+34
+00:02:08,979 --> 00:02:14,170
+This is because in the pipelined design, the
+CPU simply moves an instruction from one stage
+
+35
+00:02:14,170 --> 00:02:17,180
+of the pipeline to the next stage until it
+completes.
+

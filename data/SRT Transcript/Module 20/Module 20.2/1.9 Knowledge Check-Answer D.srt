@@ -1,0 +1,23 @@
+1
+00:00:00,470 --> 00:00:01,700
+That is correct.
+
+2
+00:00:01,700 --> 00:00:06,540
+We first took the address parameter, which
+is 13 bit, shift it left by 2 which has the
+
+3
+00:00:06,540 --> 00:00:11,140
+same effect as multiplying it by 4 given us
+four EC.
+
+4
+00:00:11,140 --> 00:00:16,390
+Since the most significant four bits of the
+program counter is zero, then the final answer
+
+5
+00:00:16,390 --> 00:00:17,929
+itself is 4EC
+

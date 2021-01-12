@@ -1,0 +1,103 @@
+0:00:00.470,0:00:06.709
+Okay, so in order to use the if else statement,
+the two-way IF statement, the syntax would
+
+0:00:06.709,0:00:11.450
+go this way; once again, I'll first talk about
+the syntax, then show you the semantics for
+
+0:00:11.450,0:00:15.490
+how the compiler understands this kind of
+statements.
+
+0:00:15.490,0:00:21.970
+So, the syntax is very simple it goes like
+that; we have our program, then comes the
+
+0:00:21.970,0:00:27.669
+if keyword followed by a Boolean expression
+and enclosed in parenthesis, and then we have
+
+0:00:27.669,0:00:32.419
+the if body, again pushed one tab to the right.
+
+0:00:32.419,0:00:38.550
+After that we have the ELSE keyword and else's
+body pushed one tab to the right, after the
+
+0:00:38.550,0:00:43.770
+if else statement the program just continues
+in its original alignment.
+
+0:00:43.770,0:00:45.580
+That's basically the syntax.
+
+0:00:45.580,0:00:54.620
+The semantics is very straightforward here
+as well, so when we get to the if else statement,
+
+0:00:54.620,0:00:57.870
+the first thing is the condition is evaluated.
+
+0:00:57.870,0:01:04.890
+As we said the condition is a Boolean expression,
+so it has two values possible either its value
+
+0:01:04.890,0:01:06.530
+is true or false.
+
+0:01:06.530,0:01:12.220
+In case the condition is true, the if body
+would be executed and then the program would
+
+0:01:12.220,0:01:14.990
+continue in its original execution.
+
+0:01:14.990,0:01:20.280
+But if the condition would be false then the
+else's body would be executed followed by
+
+0:01:20.280,0:01:24.229
+the execution of the rest of the program.
+
+0:01:24.229,0:01:31.770
+So basically based on the value of the Boolean
+expression, we either evaluate the IF body
+
+0:01:31.770,0:01:33.369
+or the else body.
+
+0:01:33.369,0:01:39.170
+That's why it's called the two way if statement;
+we either go one way with the IF body or the
+
+0:01:39.170,0:01:44.260
+other way with the Else body, based on the
+value of the Boolean expression, based on
+
+0:01:44.260,0:01:47.260
+the value of this condition.
+
+0:01:47.260,0:01:53.740
+Once again this is the simplified version
+of the if else; if we want to use the more
+
+0:01:53.740,0:02:01.790
+compound version, where we want to execute
+a few of instructions, a set of instructions
+
+0:02:01.790,0:02:10.479
+in the true case, and the set of instructions
+in the false case, then we need to compound
+
+0:02:10.479,0:02:14.690
+or to group together a set of instructions
+using curly braces.
+
+0:02:14.690,0:02:20.840
+So, after the if in the condition we can have
+a set of instructions enclosed in curly braces
+
+0:02:20.840,0:02:25.620
+as after the else we can have a set of instructions
+enclosed in curly braces.

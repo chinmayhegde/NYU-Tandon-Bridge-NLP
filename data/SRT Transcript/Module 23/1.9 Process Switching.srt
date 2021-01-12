@@ -1,0 +1,198 @@
+1
+00:00:00,500 --> 00:00:05,160
+So, a process that's in the running state
+will stay in the running state until something
+
+2
+00:00:05,160 --> 00:00:10,130
+happens, and we need to understand what happens
+to cause the process to come out of the running
+
+3
+00:00:10,130 --> 00:00:14,190
+state, and how that might affect user mode
+and kernel mode.
+
+4
+00:00:14,190 --> 00:00:19,400
+Well first off, a process switch is going
+to occur during one of the events either an
+
+5
+00:00:19,400 --> 00:00:23,580
+interrupt a trap or a blocking system call.
+
+6
+00:00:23,580 --> 00:00:29,100
+During an interrupt, some piece of hardware
+has indicated that it needs immediate servicing,
+
+7
+00:00:29,100 --> 00:00:34,000
+and so the operating system must be invoked
+in order to take care of that hardware.
+
+8
+00:00:34,000 --> 00:00:38,110
+Now the hardware could be any piece, we can
+think of a wireless device; a wireless access
+
+9
+00:00:38,110 --> 00:00:43,090
+card where it has a small amount of memory
+and the buffer is starting to fill up.
+
+10
+00:00:43,090 --> 00:00:47,739
+If the buffer actually gets full then any
+new data that's coming in through the wireless
+
+11
+00:00:47,739 --> 00:00:50,129
+card is going to be lost, because the buffer
+is full.
+
+12
+00:00:50,129 --> 00:00:55,399
+So, the solution to this is for the network
+card to send an interrupt to the CPU.
+
+13
+00:00:55,399 --> 00:01:00,239
+And what happens in an interrupt is the CPU
+will finish executing the instruction that
+
+14
+00:01:00,239 --> 00:01:04,030
+it's running, and then it will switch to running
+the operating system.
+
+15
+00:01:04,030 --> 00:01:08,540
+And the operating system has a specific point
+that it uses, it's called the Interrupt Service
+
+16
+00:01:08,540 --> 00:01:10,180
+Routine, the ISR.
+
+17
+00:01:10,180 --> 00:01:15,860
+The ISR runs whenever an interrupt occurs;
+the processor knows to switch to the operating
+
+18
+00:01:15,860 --> 00:01:23,830
+system’s ISR, and of course since it's switching
+from a running program to the kernel; it switches
+
+19
+00:01:23,830 --> 00:01:28,409
+from user mode to kernel mode and it runs
+the ISR.
+
+20
+00:01:28,409 --> 00:01:34,070
+We could also have a trap; now this is a situation
+where the process has done something that
+
+21
+00:01:34,070 --> 00:01:38,750
+causes it to need the operating system, even
+though it doesn't know it needs the operating
+
+22
+00:01:38,750 --> 00:01:39,760
+system.
+
+23
+00:01:39,760 --> 00:01:45,450
+And we can also have a blocking system call;
+these are obvious like the program is trying
+
+24
+00:01:45,450 --> 00:01:46,640
+to open up a file.
+
+25
+00:01:46,640 --> 00:01:50,610
+If the program is trying to open up a file,
+it's going to need to invoke components of
+
+26
+00:01:50,610 --> 00:01:55,649
+the operating system and so the responsibility
+switches.
+
+27
+00:01:55,649 --> 00:02:01,650
+The process will switch to running the operating
+system and when it does that the operating
+
+28
+00:02:01,650 --> 00:02:06,520
+system will take care of opening up the file
+and reading in the data.
+
+29
+00:02:06,520 --> 00:02:12,160
+Now a process which involves quite a lot of
+steps, most importantly, we need to save the
+
+30
+00:02:12,160 --> 00:02:13,730
+context of that process.
+
+31
+00:02:13,730 --> 00:02:15,810
+We’re gonna save that in the PCB.
+
+32
+00:02:15,810 --> 00:02:20,610
+And then we need to move that PCB into the
+appropriate queue whether it's the blocked
+
+33
+00:02:20,610 --> 00:02:27,040
+queue or the ready queue to indicate what
+we're going to next do with this process,
+
+34
+00:02:27,040 --> 00:02:31,360
+and then we need to service whatever was requested;
+deal with the interrupt, deal with the blocking
+
+35
+00:02:31,360 --> 00:02:33,580
+system call or deal with the trap.
+
+36
+00:02:33,580 --> 00:02:38,790
+And then choose another process that's ready
+to run so we're going to look to the ready
+
+37
+00:02:38,790 --> 00:02:44,400
+queue and choose one of the processes on the
+ready queue to move into the running state.
+
+38
+00:02:44,400 --> 00:02:48,790
+And then we're going to actually run that
+new process by restoring its context.
+
+39
+00:02:48,790 --> 00:02:55,660
+This gets a little bit more complex if we
+talk about multi processors, and the idea
+
+40
+00:02:55,660 --> 00:03:02,280
+of multiprocessor we might have more than
+one process on the running state at any given
+
+41
+00:03:02,280 --> 00:03:05,299
+time. and so that's going to have some effect
+on performance.
+

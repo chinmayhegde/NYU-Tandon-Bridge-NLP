@@ -1,0 +1,134 @@
+1
+00:00:00,750 --> 00:00:05,360
+I wanted to just look a little bit more at
+how we convert a logical address to a physical
+
+2
+00:00:05,360 --> 00:00:09,550
+address in a paging system, and I know it
+sounds a little bit complex but we're going
+
+3
+00:00:09,550 --> 00:00:12,150
+to boil it down and make it really easy.
+
+4
+00:00:12,150 --> 00:00:15,349
+We have to ultimately remember that what we're
+trying to do…
+
+5
+00:00:15,349 --> 00:00:20,250
+We're given a logical address that is the
+offset from the beginning of the program,
+
+6
+00:00:20,250 --> 00:00:24,680
+and the program doesn't know that it's not,
+that it's memory is not completely sequential.
+
+7
+00:00:24,680 --> 00:00:29,769
+The program doesn't know that; it sees logical
+addresses that are all completely sequential.
+
+8
+00:00:29,769 --> 00:00:35,579
+So, what we're going to do is use a very simple
+calculation, which is going to be that the
+
+9
+00:00:35,579 --> 00:00:40,810
+physical address is equal to a look up in
+the page map table for the logical address
+
+10
+00:00:40,810 --> 00:00:47,770
+divided by the page size multiplied by the
+page size plus the logical address mod the
+
+11
+00:00:47,770 --> 00:00:49,110
+page size.
+
+12
+00:00:49,110 --> 00:00:53,620
+And you see that that's a divide and a mod
+operation and you say, well wow that's got
+
+13
+00:00:53,620 --> 00:01:00,690
+to be a lot of work; it would be if the page
+size were something other than a multiple
+
+14
+00:01:00,690 --> 00:01:02,980
+of two a factor of two.
+
+15
+00:01:02,980 --> 00:01:07,880
+And that's what makes this really easy because
+the divisions and the mod operation are now
+
+16
+00:01:07,880 --> 00:01:10,220
+simply going to become bit shifts.
+
+17
+00:01:10,220 --> 00:01:14,680
+So, because we have the bit shift, and bits
+shift really doesn't take much effort inside
+
+18
+00:01:14,680 --> 00:01:18,920
+the CPU certainly not in comparison to a divide
+operation.
+
+19
+00:01:18,920 --> 00:01:25,480
+To calculate the page number: we’ll do bit
+shifts to find the page number, we’ll look
+
+20
+00:01:25,480 --> 00:01:30,579
+up the page number in the page map table,
+we’ll find out what the frame number is,
+
+21
+00:01:30,579 --> 00:01:37,240
+do the bit shift again as is the multiple
+of the page size, and then we'll add the offset.
+
+22
+00:01:37,240 --> 00:01:44,810
+And to calculate the offset we simply looking
+for the latter half of the physical, excuse
+
+23
+00:01:44,810 --> 00:01:47,399
+me, of the logical address.
+
+24
+00:01:47,399 --> 00:01:54,280
+So, we can do an XOR to wipe out the early
+parts of the logical address and end up with
+
+25
+00:01:54,280 --> 00:02:00,430
+just the offset, and that tells us where the
+page is located (what frame number it's in)
+
+26
+00:02:00,430 --> 00:02:06,260
+and how far into that page the offset we're
+looking for for that particular byte of memory
+
+27
+00:02:06,260 --> 00:02:07,619
+that we need.
+
+28
+00:02:07,619 --> 00:02:10,479
+And that's how we convert a logical to a physical
+address in a paging system.
+

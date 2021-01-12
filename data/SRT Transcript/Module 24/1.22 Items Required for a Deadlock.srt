@@ -1,0 +1,184 @@
+1
+00:00:00,719 --> 00:00:05,990
+There are four things that have to come into
+play for a deadlock to actually occur.
+
+2
+00:00:05,990 --> 00:00:09,971
+And some of them are requirements that the
+operating system needs to have, and some of
+
+3
+00:00:09,971 --> 00:00:14,740
+them are just bad luck that have to happen,
+but we need all four of these to happen in
+
+4
+00:00:14,740 --> 00:00:17,120
+order for us to have a deadlock.
+
+5
+00:00:17,120 --> 00:00:20,830
+The first one is mutual exclusion and we already
+know what mutual exclusion is, we've been
+
+6
+00:00:20,830 --> 00:00:25,970
+talking about it, we understand that there's
+going to be a resource and this resource can
+
+7
+00:00:25,970 --> 00:00:31,859
+be held by only one thread at a time; so we
+have a lock on that resource if you will.
+
+8
+00:00:31,859 --> 00:00:37,550
+If we have that then, we have the first item
+that's required for a deadlock.
+
+9
+00:00:37,550 --> 00:00:42,660
+The second one is called a hold-and-wait and
+that means that while a thread is waiting
+
+10
+00:00:42,660 --> 00:00:47,800
+on the allocation of a new resource it retains
+all of its existing locks on the old resources.
+
+11
+00:00:47,800 --> 00:00:54,210
+So, if a thread obtains a lock on A and then
+requests a lock on B, and the lock on B is
+
+12
+00:00:54,210 --> 00:00:57,650
+not available immediately, the thread is going
+to be blocked.
+
+13
+00:00:57,650 --> 00:01:05,540
+So, it means that the thread could possibly
+have a lock on something and be in a block
+
+14
+00:01:05,540 --> 00:01:07,830
+state at the same time.
+
+15
+00:01:07,830 --> 00:01:12,540
+So this happens, we understand that this happens,
+certainly when we're creating more than one
+
+16
+00:01:12,540 --> 00:01:14,670
+lock at any given time.
+
+17
+00:01:14,670 --> 00:01:19,930
+The third thing that we need in order for
+deadlock to happen is that there is no preemption.
+
+18
+00:01:19,930 --> 00:01:25,280
+The operating system cannot forcibly remove
+a resource from a thread.
+
+19
+00:01:25,280 --> 00:01:31,340
+So, for example on a semaphore, once we've
+decremented the semaphore counter and it's
+
+20
+00:01:31,340 --> 00:01:36,380
+now zero, the operating system has no way
+of intervening and saying, ‘oh whoops I'm
+
+21
+00:01:36,380 --> 00:01:41,650
+sorry you no longer have that lock on that
+semaphore and you have to go back to doing
+
+22
+00:01:41,650 --> 00:01:43,560
+something entirely different.’
+
+23
+00:01:43,560 --> 00:01:49,610
+We usually don't have that as a possibility;
+it's the idea of no preemption.
+
+24
+00:01:49,610 --> 00:01:55,360
+The last one: and the last one is just case
+of bad luck it's called a circular wait.
+
+25
+00:01:55,360 --> 00:02:00,360
+And that's a closed chain of threads in which
+the last thread is waiting on the first thread.
+
+26
+00:02:00,360 --> 00:02:05,080
+This could be as simple as A waiting for B,
+and B waiting for A, but it's often not as
+
+27
+00:02:05,080 --> 00:02:06,250
+simple as that.
+
+28
+00:02:06,250 --> 00:02:11,260
+We can have four different threads: where
+we have A, B, C, and D. And we have A waiting
+
+29
+00:02:11,260 --> 00:02:16,380
+for B, B waiting for C, C you waiting for
+D, but D waiting back for A, so it's not easy
+
+30
+00:02:16,380 --> 00:02:21,910
+to recognize that a circular wait has occurred;
+it’s not just take a snapshot and see which
+
+31
+00:02:21,910 --> 00:02:27,099
+process, which threads are waiting for which
+threads it doesn't work that that easily.
+
+32
+00:02:27,099 --> 00:02:31,819
+There's lots of levels of iteration and recursion
+that might have to happen in order for us
+
+33
+00:02:31,819 --> 00:02:36,220
+to detect that the circular wait is actually
+happening.
+
+34
+00:02:36,220 --> 00:02:41,020
+If we have all four of these things in play:
+we have mutual exclusion because the operating
+
+35
+00:02:41,020 --> 00:02:45,590
+system provides us with locks, we have hold
+and wait because we can have more than one
+
+36
+00:02:45,590 --> 00:02:50,220
+lock and we request one lock separate from
+the other locks, and we have no preemption
+
+37
+00:02:50,220 --> 00:02:54,750
+meaning the operating system can't take things
+away from us, and we have a circular wait
+
+38
+00:02:54,750 --> 00:02:57,300
+which just happened to occur, we have a deadlock.
+

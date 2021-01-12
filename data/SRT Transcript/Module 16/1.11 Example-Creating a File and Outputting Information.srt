@@ -1,0 +1,192 @@
+1
+00:00:00,089 --> 00:00:05,150
+I just wanted to start by talking a little
+bit about what we can do with outputting a
+
+2
+00:00:05,150 --> 00:00:06,150
+file.
+
+3
+00:00:06,150 --> 00:00:10,809
+So we'll go through the quick procedures of
+how to create an output file and where that
+
+4
+00:00:10,809 --> 00:00:14,620
+information is stored and then we'll talk
+about putting some information in the file.
+
+5
+00:00:14,620 --> 00:00:17,820
+So of course as we discussed the first thing
+that's important is that we pound include
+
+6
+00:00:17,820 --> 00:00:18,970
+fstream.
+
+7
+00:00:18,970 --> 00:00:20,110
+Okay.
+
+8
+00:00:20,110 --> 00:00:25,199
+And from that point we then have options of
+creating an ofstream object and I'll just
+
+9
+00:00:25,199 --> 00:00:27,449
+call my object, out file here.
+
+10
+00:00:27,449 --> 00:00:32,029
+When I do that I get an object of type a left
+stream which I can write to and it's not at
+
+11
+00:00:32,029 --> 00:00:33,980
+this point connected to anything.
+
+12
+00:00:33,980 --> 00:00:38,050
+So we haven't specified a file name or anything
+like that at this point, so we don't really
+
+13
+00:00:38,050 --> 00:00:39,110
+have a file.
+
+14
+00:00:39,110 --> 00:00:45,260
+In order to create or rather connect this
+object to a physical file, we can do an open
+
+15
+00:00:45,260 --> 00:00:51,400
+operation and we can just give it like file
+name or let's call it out file dot TXT.
+
+16
+00:00:51,400 --> 00:00:54,340
+And when that happens the file actually gets
+created.
+
+17
+00:00:54,340 --> 00:00:58,399
+Now if the file already exists it's going
+to be overwritten, we know that, and if the
+
+18
+00:00:58,399 --> 00:01:00,430
+file doesn't exist it's going to be created.
+
+19
+00:01:00,430 --> 00:01:04,440
+So I'm just going to compile this and give
+it a run, just that we see.
+
+20
+00:01:04,440 --> 00:01:08,799
+Now the question becomes where are these files
+created because we haven't specified where
+
+21
+00:01:08,799 --> 00:01:10,950
+the file is supposed to be created.
+
+22
+00:01:10,950 --> 00:01:14,979
+So what it's going to do is create it in what's
+called the current directory, and for visual
+
+23
+00:01:14,979 --> 00:01:18,749
+studio the current directory actually is where
+the CPP file is.
+
+24
+00:01:18,749 --> 00:01:25,399
+So I'm going to go ahead and open that here;
+you can see I hope the folder view here and
+
+25
+00:01:25,399 --> 00:01:31,859
+I've got this CPP file and in the CPP file
+I've got out file dot TXT.
+
+26
+00:01:31,859 --> 00:01:36,409
+So I've got the output file TXT; of course,
+it's zero bytes because we have to put any
+
+27
+00:01:36,409 --> 00:01:37,669
+information into it.
+
+28
+00:01:37,669 --> 00:01:43,450
+So it was created here and you can see the
+creation times 12:37 pm, if I run it again
+
+29
+00:01:43,450 --> 00:01:45,719
+I get a different creation time.
+
+30
+00:01:45,719 --> 00:01:49,439
+So now if I go back I'm going to see is 12:38
+because now a minute later.
+
+31
+00:01:49,439 --> 00:01:52,070
+So we are creating those files successfully.
+
+32
+00:01:52,070 --> 00:01:58,099
+We also have the option of doing it in one
+shot of just simply creating the output file
+
+33
+00:01:58,099 --> 00:02:01,359
+and calling the open using the constructor.
+
+34
+00:02:01,359 --> 00:02:05,020
+So I could have done this; although I'll comment
+it out.
+
+35
+00:02:05,020 --> 00:02:08,599
+I could have done that because you'll see
+the combination.
+
+36
+00:02:08,599 --> 00:02:14,349
+That would make it not necessary to call the
+open operation on that file; it'll be opened.
+
+37
+00:02:14,349 --> 00:02:19,780
+How do we output thankfully we can use the
+outfile object very much like we've been using
+
+38
+00:02:19,780 --> 00:02:24,879
+Cout since the beginning of the semester,
+and here I have just a “hello world” and
+
+39
+00:02:24,879 --> 00:02:26,849
+I'm going to run that program.
+
+40
+00:02:26,849 --> 00:02:31,010
+Now you're going to see that there is some
+information here in this output file a file
+
+41
+00:02:31,010 --> 00:02:33,650
+dot txt and if we open it up you're see “hello
+world.”
+

@@ -1,0 +1,66 @@
+1
+00:00:00,539 --> 00:00:04,540
+We're going to look at what the operating
+system has to do to take care of all of main
+
+2
+00:00:04,540 --> 00:00:08,130
+memory, all of the RAM in the system, and
+there's a lot that has to be done.
+
+3
+00:00:08,130 --> 00:00:12,410
+So, in this module we're going to cover what
+the needs are for memory management: some
+
+4
+00:00:12,410 --> 00:00:15,390
+requirements that we have to meet for memory
+management.
+
+5
+00:00:15,390 --> 00:00:18,840
+We're going to talk about logical addresses
+and physical addresses and how to convert
+
+6
+00:00:18,840 --> 00:00:19,930
+between them.
+
+7
+00:00:19,930 --> 00:00:24,220
+We're going to talk about a few partitioning
+strategies for dividing up main memory.
+
+8
+00:00:24,220 --> 00:00:28,410
+We're going to talk about what is virtual
+memory, when it's in use, how it works, and
+
+9
+00:00:28,410 --> 00:00:29,410
+that sort.
+
+10
+00:00:29,410 --> 00:00:33,890
+We're going to talk about working set, and
+resident set strategies related to virtual
+
+11
+00:00:33,890 --> 00:00:36,930
+memory, and what the those definitions are.
+
+12
+00:00:36,930 --> 00:00:40,160
+We're going to talk about load control and
+we're going to talk about how pages and memory
+
+13
+00:00:40,160 --> 00:00:41,480
+can be shared between processes.
+
+14
+00:00:41,480 --> 00:00:44,280
+So, we’ve got a lot to cover in this module;
+let’s get to it.
+

@@ -1,0 +1,188 @@
+1
+00:00:00,590 --> 00:00:05,320
+For trees that have an unlimited number of
+children, so not binary search trees, but
+
+2
+00:00:05,320 --> 00:00:07,450
+trees that have an unlimited number of children.
+
+3
+00:00:07,450 --> 00:00:13,240
+The child storage pointers have to be stored
+either as an irregular as a linked list.
+
+4
+00:00:13,240 --> 00:00:17,650
+And for that we really come up with two different
+forms of storage that are common for this.
+
+5
+00:00:17,650 --> 00:00:23,890
+Now this is looking at each individual note
+as it exists in main memory, so in main memory
+
+6
+00:00:23,890 --> 00:00:27,820
+if we look at the individual node what exactly
+does that look like.
+
+7
+00:00:27,820 --> 00:00:33,680
+The first one is a parent-multi-child and
+the parent node has an arrray of child nodes
+
+8
+00:00:33,680 --> 00:00:34,970
+contained into it.
+
+9
+00:00:34,970 --> 00:00:41,720
+Oftentimes, this is just a vector of child
+pointers: so, pointers to tree nodes for example.
+
+10
+00:00:41,720 --> 00:00:46,282
+We would store in the node, we would store
+the data; would probably also store a parent
+
+11
+00:00:46,282 --> 00:00:48,489
+pointer, but I haven't shown that here.
+
+12
+00:00:48,489 --> 00:00:53,649
+We have a data section and then we just have
+an array or a vector of pointers to children
+
+13
+00:00:53,649 --> 00:00:55,350
+for however many children we have.
+
+14
+00:00:55,350 --> 00:00:59,649
+Obviously, if we have no children we don't
+want to use any storage any additional storage,
+
+15
+00:00:59,649 --> 00:01:03,600
+so that's where the vector comes in handy
+because it keeps track of that and it'll adjust
+
+16
+00:01:03,600 --> 00:01:04,699
+itself.
+
+17
+00:01:04,699 --> 00:01:10,810
+Now the other option is that we have a parent-child-sibling
+structure, which more closely represents the
+
+18
+00:01:10,810 --> 00:01:12,319
+linked list.
+
+19
+00:01:12,319 --> 00:01:16,990
+The parent would point to the first or the
+favorite child, we won't get into that discussion
+
+20
+00:01:16,990 --> 00:01:22,689
+report to the first child and the first child
+would point to its sibling and the sibling
+
+21
+00:01:22,689 --> 00:01:24,840
+or point to its sibling and so on and so forth.
+
+22
+00:01:24,840 --> 00:01:31,719
+So what we've done is we've allowed the parent
+to access all the sibling, all the children,
+
+23
+00:01:31,719 --> 00:01:36,040
+by accessing from the first child and then
+the first child has access to the sibling
+
+24
+00:01:36,040 --> 00:01:38,551
+and the sibling has access to a sibling and
+so on and so forth.
+
+25
+00:01:38,551 --> 00:01:44,200
+So it much more closely represents that of
+a linked list: the child nodes’ are on a
+
+26
+00:01:44,200 --> 00:01:49,450
+linked list and the head pointer for that
+link list is actually the child pointer from
+
+27
+00:01:49,450 --> 00:01:50,450
+the parent.
+
+28
+00:01:50,450 --> 00:01:56,509
+So we can represent this using a either a
+parent multi child solution or parent child
+
+29
+00:01:56,509 --> 00:01:57,509
+sibling solution.
+
+30
+00:01:57,509 --> 00:02:04,520
+Now in the case where we have a value, a limited
+number of children, an N value as we'll call
+
+31
+00:02:04,520 --> 00:02:05,520
+it.
+
+32
+00:02:05,520 --> 00:02:09,750
+If we have an N value, which is the number
+of children that this node might have, then
+
+33
+00:02:09,750 --> 00:02:14,030
+we can just set up the node with that number
+of pointers and it's not terribly difficult.
+
+34
+00:02:14,030 --> 00:02:19,969
+So we're going to go forward and consider
+that we do have a limited number of children
+
+35
+00:02:19,969 --> 00:02:24,560
+because the unlimited number of children problem
+doesn't often come up.
+
+36
+00:02:24,560 --> 00:02:29,420
+The unlimited number of children problem means
+that each node has a variable number of children
+
+37
+00:02:29,420 --> 00:02:33,709
+and that complexifies has the issue quite
+significantly, so we want to kind of avoid
+
+38
+00:02:33,709 --> 00:02:34,709
+this.
+
+39
+00:02:34,709 --> 00:02:39,480
+But I wanted you to see it just so that you
+know in case you get into trees that might
+
+40
+00:02:39,480 --> 00:02:41,260
+need an unlimited number of children.
+

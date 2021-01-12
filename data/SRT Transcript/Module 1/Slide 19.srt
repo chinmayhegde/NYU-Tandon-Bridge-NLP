@@ -1,0 +1,45 @@
+1
+00:00:01,880 --> 00:00:05,380
+Since we now live in a globally connected
+world.
+
+2
+00:00:05,380 --> 00:00:09,970
+We now understand the data can come from a
+variety of sources literally around the world
+
+3
+00:00:09,970 --> 00:00:12,410
+or even part of it, right?
+
+4
+00:00:12,410 --> 00:00:17,510
+The ISS has connections to the Internet, so
+we might be talking with somebody on the Internet
+
+5
+00:00:17,510 --> 00:00:19,900
+and they might not even be on Earth.
+
+6
+00:00:19,900 --> 00:00:25,880
+Networks are connected via the Internet and
+we can access data anywhere on our network,
+
+7
+00:00:25,880 --> 00:00:29,619
+so now we can really access data from anywhere.
+
+8
+00:00:29,619 --> 00:00:33,540
+And it's important to understand how that
+data comes in and how that data moves around
+
+9
+00:00:33,540 --> 00:00:35,550
+the Internet and around networks.
+
+10
+00:00:35,550 --> 00:00:36,690
+So that's where we're going to talk about.
+

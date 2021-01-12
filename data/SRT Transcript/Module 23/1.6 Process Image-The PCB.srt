@@ -1,0 +1,99 @@
+1
+00:00:00,470 --> 00:00:04,470
+So, the operating system is going to need
+to record quite a bit of information about
+
+2
+00:00:04,470 --> 00:00:11,090
+the process and in total the process is going
+to be stored in what we know as a process
+
+3
+00:00:11,090 --> 00:00:12,090
+image.
+
+4
+00:00:12,090 --> 00:00:15,490
+The operating system will keep a table known
+as the process table with pointers to the
+
+5
+00:00:15,490 --> 00:00:20,349
+various process images for those processes
+that are running inside the system.
+
+6
+00:00:20,349 --> 00:00:24,779
+And one of the components that are in the
+process image is what's known as the PCB,
+
+7
+00:00:24,779 --> 00:00:29,839
+or in some cases you might consider the PCB
+to be the actual process image.
+
+8
+00:00:29,839 --> 00:00:35,700
+It includes all the information that the operating
+system needs in order to run and manage the
+
+9
+00:00:35,700 --> 00:00:36,700
+process.
+
+10
+00:00:36,700 --> 00:00:42,040
+So, the PCB is a really critical component
+of the operating system; it's usually implemented
+
+11
+00:00:42,040 --> 00:00:44,350
+as a simple struct with quite a bit of information.
+
+12
+00:00:44,350 --> 00:00:45,870
+So, what's in there?
+
+13
+00:00:45,870 --> 00:00:50,700
+Well we've got memory tables; we've got what's
+allocated to the process.
+
+14
+00:00:50,700 --> 00:00:55,080
+We've got what secondary storage is allocated
+to the process.
+
+15
+00:00:55,080 --> 00:01:01,080
+We've got IO tables, which are what devices
+the process has access to and where it is
+
+16
+00:01:01,080 --> 00:01:03,110
+inside those devices.
+
+17
+00:01:03,110 --> 00:01:09,120
+We've got file tables with all the file handles,
+so anytime we opened a file in our previous
+
+18
+00:01:09,120 --> 00:01:14,670
+programs that we create an entry in the file
+table and that was stored inside the PCB in
+
+19
+00:01:14,670 --> 00:01:16,090
+the process image.
+
+20
+00:01:16,090 --> 00:01:20,780
+And then we've got stack pointers, and all
+of these components make up the process image,
+
+21
+00:01:20,780 --> 00:01:24,470
+which includes all the code data and of course
+this is the context.
+

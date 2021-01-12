@@ -1,0 +1,132 @@
+1
+00:00:00,810 --> 00:00:05,779
+In the deadlock avoidance scenario, the operating
+system has to know everything that the thread
+
+2
+00:00:05,779 --> 00:00:09,470
+is going to do before it actually does it.
+
+3
+00:00:09,470 --> 00:00:14,060
+So, the operating system has to know what
+locks the thread is going to want, in order
+
+4
+00:00:14,060 --> 00:00:19,800
+to look into the future, in order to have
+a premonition about what could happen in this
+
+5
+00:00:19,800 --> 00:00:21,690
+deadlock scenario.
+
+6
+00:00:21,690 --> 00:00:26,579
+So, what the operating system does is it takes
+all the information for all the threads that
+
+7
+00:00:26,579 --> 00:00:32,340
+are running, and says that whenever a thread
+makes a new request, the operating system
+
+8
+00:00:32,340 --> 00:00:36,940
+is going to run what's called a banker's algorithm,
+or what's often called a banker's algorithm.
+
+9
+00:00:36,940 --> 00:00:41,680
+And the idea is that we know all the resources
+that the operating system has, we know all
+
+10
+00:00:41,680 --> 00:00:48,410
+the resources that the threads have, and we
+have some premonition about what the resources
+
+11
+00:00:48,410 --> 00:00:51,960
+the thread is going to want in its entire
+lifetime.
+
+12
+00:00:51,960 --> 00:00:57,870
+So, we can tell which threads are going to
+run to completion just by knowing what we
+
+13
+00:00:57,870 --> 00:01:02,950
+currently have available and what the threads
+are going to want before they're finished.
+
+14
+00:01:02,950 --> 00:01:08,630
+And what we can do is constantly check, whenever
+a resource is requested, the operating system
+
+15
+00:01:08,630 --> 00:01:14,799
+is going to run the bankers algorithm to try
+and figure out if the allocation of that request
+
+16
+00:01:14,799 --> 00:01:18,759
+would cause the system to be in what we call
+an unsafe state.
+
+17
+00:01:18,759 --> 00:01:23,321
+And an unsafe state is one in which all the
+threads cannot complete, rather that we can
+
+18
+00:01:23,321 --> 00:01:29,369
+say that any thread cannot complete, so we're
+protecting the system from ever getting into
+
+19
+00:01:29,369 --> 00:01:30,600
+that unsafe state.
+
+20
+00:01:30,600 --> 00:01:37,109
+So, we sort of simulate by making the allocation
+in a simulation, and saying can we now finish
+
+21
+00:01:37,109 --> 00:01:42,819
+all of the threads and if we can, we can say
+that that allocation keeps us in a safe state
+
+22
+00:01:42,819 --> 00:01:46,829
+and we make the allocation and if we can't
+then we deny the allocation.
+
+23
+00:01:46,829 --> 00:01:51,259
+So, the system is by definition always in
+a safe state, but we're checking every single
+
+24
+00:01:51,259 --> 00:01:56,969
+time to make sure that the allocations will
+not put the system in an unsafe state.
+
+25
+00:01:56,969 --> 00:02:03,740
+It’s a lot of work and we usually don't
+have information about what the threads are
+
+26
+00:02:03,740 --> 00:02:07,460
+going to ask for ahead of time, until they
+actually ask for it.
+
+27
+00:02:07,460 --> 00:02:10,159
+So, that makes dead lock avoidance a very
+rare strategy.
+

@@ -1,0 +1,132 @@
+0:00:00.700,0:00:04.109
+Now if you're thinking that what you saw was
+a lot of work.
+
+0:00:04.109,0:00:08.340
+It was and somebody has already done it all
+for you.
+
+0:00:08.340,0:00:14.929
+Somebody took all the operations that need
+to be done to expand and an array and keep
+
+0:00:14.929,0:00:19.720
+it up to date and bundle that into what's
+known as a vector and the vector is a component
+
+0:00:19.720,0:00:24.060
+of the standard template library which has
+a lot of components which we'll talk about
+
+0:00:24.060,0:00:30.690
+throughout the semester but the vector inside
+the STL is an array that dynamically grows
+
+0:00:30.690,0:00:32.580
+whenever we needed to.
+
+0:00:32.580,0:00:36.660
+So the key functions inside the vector are
+the size function obviously which tells us
+
+0:00:36.660,0:00:38.910
+how many elements we've put into the vector.
+
+0:00:38.910,0:00:42.510
+So that's nice because we don't need to take
+care of how recording how many elements are
+
+0:00:42.510,0:00:48.220
+inside the vector and we use the push back
+function to add elements into the vector.
+
+0:00:48.220,0:00:52.790
+That's automatically resizing so we don't
+have to worry about how many things we can
+
+0:00:52.790,0:00:54.200
+put into the vector.
+
+0:00:54.200,0:00:56.710
+We just keep putting things into the vector.
+
+0:00:56.710,0:01:00.309
+Now of course we're going to have to pound
+include vector and we'll have to create it
+
+0:01:00.309,0:01:05.309
+when we created the notation for creating
+it is a little bit odd we have to tell it
+
+0:01:05.309,0:01:09.740
+what data type we're going to be storing inside
+the vector so in this case we're restoring
+
+0:01:09.740,0:01:10.740
+int.
+
+0:01:10.740,0:01:14.079
+Now that doesn't mean that we could store
+other data types so if we get to the point
+
+0:01:14.079,0:01:19.110
+where we want to store floats or doubles or
+chars or any other data type we can literally
+
+0:01:19.110,0:01:22.780
+store anything in the vector whatever data
+type you want.
+
+0:01:22.780,0:01:28.000
+So we create this vector called V and we're
+going to push back one hundred elements each
+
+0:01:28.000,0:01:33.100
+of which is the value of the element position
+times one hundred just for the sake of showing
+
+0:01:33.100,0:01:34.100
+something.
+
+0:01:34.100,0:01:39.549
+And then we're going to go through that vector
+and print out each of the individual elements.
+
+0:01:39.549,0:01:43.329
+So you can see that we're still using the
+square brackets operator the same way that
+
+0:01:43.329,0:01:48.959
+we were using on the arrays we can still use
+the square brackets operator on the vector
+
+0:01:48.959,0:01:52.420
+class and now we have something that takes
+care of the size.
+
+0:01:52.420,0:01:56.209
+So the vector class is one that we're going
+to really want to get familiar with because
+
+0:01:56.209,0:01:58.700
+we're going to be using a lot throughout the
+semester.
+
+0:01:58.700,0:02:03.139
+We're also should understand how it works
+internally and we will in a homework assignment
+
+0:02:03.139,0:02:05.189
+or in a laboratory assignment.
+
+0:02:05.189,0:02:11.610
+But the the vector is a really useful data
+storage class inside C++ and this is what
+
+0:02:11.610,0:02:17.190
+we'd like to use going forward for storage
+of a lot of data we just use it whenever we
+
+0:02:17.190,0:02:21.229
+don't know exactly how much data we're going
+to store but there's a lot of it.

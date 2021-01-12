@@ -1,0 +1,365 @@
+0:00:00.110,0:00:05.470
+So let's start by prompting the user to enter
+a time in a twenty four hour format so C-out:
+
+0:00:05.470,0:00:10.660
+please enter your time in a twenty four hour
+format.
+
+0:00:10.660,0:00:15.580
+Let's break the line here, and now let's read
+the time so the user would print something
+
+0:00:15.580,0:00:18.330
+like fifteen colon thirty seven.
+
+0:00:18.330,0:00:22.900
+So we would need an integer to read the fifteen
+an integer to read the thirty seven and then
+
+0:00:22.900,0:00:25.750
+we would also need to get rid of the colons
+here.
+
+0:00:25.750,0:00:28.670
+We're not going to use it but the user would
+definitely print it.
+
+0:00:28.670,0:00:30.680
+So we would need two integers.
+
+0:00:30.680,0:00:36.530
+So let's say integer: the fifteen would be
+an hour in a twenty four hour format so I'll
+
+0:00:36.530,0:00:42.700
+name it hour twenty four, the thirty seven
+would be minutes so I'll name it minutes twenty
+
+0:00:42.700,0:00:48.280
+four and we’ll also need a character, so
+let's define character; I'll just name it
+
+0:00:48.280,0:00:52.180
+temp because it's not going to be used besides
+just to be read.
+
+0:00:52.180,0:00:59.770
+Let's C-in this into hour twenty four into
+temp and into minutes twenty four.
+
+0:00:59.770,0:01:05.880
+So, we have our input hour twenty four and
+minutes twenty four and now we're basically
+
+0:01:05.880,0:01:09.800
+supposed to convert it into a twelve hour
+format.
+
+0:01:09.800,0:01:16.610
+For that we would need the initialize actually
+three parameters: we would need the new hour,
+
+0:01:16.610,0:01:20.960
+the new minutes, which would basically be
+the same minutes, but we would also need the
+
+0:01:20.960,0:01:22.240
+AM PM.
+
+0:01:22.240,0:01:29.060
+So, for the hour and the minutes we would
+have, let's say hour twelve and minutes twelve.
+
+0:01:29.060,0:01:37.119
+For the AM PM, we would store it in a string
+variable, for that I would include the string
+
+0:01:37.119,0:01:44.600
+library and then I can create a string variable;
+I'll name it period, so we have the period.
+
+0:01:44.600,0:01:50.229
+So we have basically all the variables to
+hold the result, the hour twelve the minute
+
+0:01:50.229,0:01:51.420
+twelve and the period.
+
+0:01:51.420,0:01:57.200
+And now we should decide in what kind of a
+control flow we're going to use to set all
+
+0:01:57.200,0:01:58.460
+these variables.
+
+0:01:58.460,0:02:02.240
+Let's take another look here at the conversion
+table.
+
+0:02:02.240,0:02:09.160
+And I'm kind of wondering whether we're going
+to use multi-way IF, a two-way if, and so
+
+0:02:09.160,0:02:10.160
+on.
+
+0:02:10.160,0:02:15.860
+At first it seems like we have, maybe four
+different cases the case of zero, the case
+
+0:02:15.860,0:02:21.560
+of one to eleven, the case of twelve, and
+the case of thirteen to twenty three so maybe
+
+0:02:21.560,0:02:24.720
+a multi-way if would be a good choice here.
+
+0:02:24.720,0:02:30.710
+But if you recall how we kind of thought of
+it when we introduced this conversion table.
+
+0:02:30.710,0:02:36.140
+We first kind of determined whether it is
+am and pm so it's kind of a two way choice
+
+0:02:36.140,0:02:42.500
+here, and then for each one of these we thought
+if we were in this range or in the zero if
+
+0:02:42.500,0:02:45.030
+we're in this range or at the twelve.
+
+0:02:45.030,0:02:52.260
+So it seems more logical to first determine
+one out of two cases, the AM PM, and then
+
+0:02:52.260,0:02:57.760
+inside it nested in it, to determine what
+would be the twelve hour format for the hour.
+
+0:02:57.760,0:03:04.590
+So my choice here would be a two way if instead
+of a multi-way or four if else statement but
+
+0:03:04.590,0:03:07.720
+then a multi-way if would also work and be
+fine.
+
+0:03:07.720,0:03:11.220
+But I would implement it using two-way IF
+statement.
+
+0:03:11.220,0:03:18.870
+So for that I would do something like if and
+then I would ask if the hour twenty four is
+
+0:03:18.870,0:03:27.140
+in the range of greater or equal to zero and
+hour twenty four is less or equal to eleven
+
+0:03:27.140,0:03:31.270
+so if we are in the first half of the day
+this is what we're going to do.
+
+0:03:31.270,0:03:35.290
+It’s going to be a lot of stuff so I'm creating
+a compound expression.
+
+0:03:35.290,0:03:37.550
+Otherwise, we'll do some other stuff.
+
+0:03:37.550,0:03:44.320
+So this would be the basic structure of our
+program; one thing is that the minute in the
+
+0:03:44.320,0:03:49.440
+twelve hour format is basically the same as
+the minutes in the twenty four hour format
+
+0:03:49.440,0:03:56.239
+so before even testing and determining in
+which part of the day we are, I can set the
+
+0:03:56.239,0:04:02.130
+minutes twelve to be the same as many twenty
+four so that goes anyways.
+
+0:04:02.130,0:04:08.170
+If we're in this part of the day let's set
+period to be AM, if we're in the second half
+
+0:04:08.170,0:04:11.390
+of the day let's set period to be PM.
+
+0:04:11.390,0:04:17.009
+So, basically up to now we said something
+like, we read the time in a twenty four hour
+
+0:04:17.009,0:04:21.949
+format and we said the minutes in the twelve
+hour format to be the same as the minutes
+
+0:04:21.949,0:04:27.099
+we'd just read from the user and then we checked
+in which half of the day we are setting the
+
+0:04:27.099,0:04:28.939
+period variable accordingly.
+
+0:04:28.939,0:04:34.639
+Now we just have to set the hour twenty four
+based on which part of the day we are so let's
+
+0:04:34.639,0:04:39.020
+do something in order to determine what the
+hour twenty four value is.
+
+0:04:39.020,0:04:41.139
+So let's take a second look here.
+
+0:04:41.139,0:04:44.449
+So in the first half of the day the hour twenty
+four is the same the hour twelve is the same
+
+0:04:44.449,0:04:50.009
+as the hour twenty four besides the case of
+hour twenty four equals zero.
+
+0:04:50.009,0:04:59.629
+So let's ask if hour twenty four equals zero
+then hour twelve is set to twelve, otherwise
+
+0:04:59.629,0:05:04.369
+our hour twelve is the same as hour twenty
+four right.
+
+0:05:04.369,0:05:10.439
+So in the first half of the day only the case
+where hour twenty four is zero then hour twelve
+
+0:05:10.439,0:05:15.659
+is twelve, otherwise it's the same as hour
+twenty four in the second half of the day.
+
+0:05:15.659,0:05:22.119
+Once again, second of all the day basically
+hour twelve is shifted back twelve hours before
+
+0:05:22.119,0:05:24.099
+the hour twenty four value.
+
+0:05:24.099,0:05:32.249
+So let's one again once again check if hour
+twenty four equals twelve then our hour twelve
+
+0:05:32.249,0:05:40.619
+would be set to twelve, otherwise our hour
+twelve would be hour twenty four minus twelve
+
+0:05:40.619,0:05:42.490
+or shifting it back twelve.
+
+0:05:42.490,0:05:49.439
+So it seems like we're setting minutes twelve
+anyway before the IF statement the, if statement
+
+0:05:49.439,0:05:54.569
+determines whether period would be set to
+AM or PM.
+
+0:05:54.569,0:05:59.879
+And that if the main if statement also determines
+whether we're going to set our twenty four
+
+0:05:59.879,0:06:02.990
+using this logic or using that logic.
+
+0:06:02.990,0:06:08.639
+Each one of these logics decides whether to
+set hour twelve one way or another.
+
+0:06:08.639,0:06:13.999
+After we're done doing all of that we are
+on the ready to create the output message.
+
+0:06:13.999,0:06:18.400
+So we want to say something that I don't know
+fifteen thirty seven is three thirty seven
+
+0:06:18.400,0:06:19.400
+P.M.
+
+0:06:19.400,0:06:28.900
+So hour twenty four colon minutes twenty four
+is and then hour twelve colon minutes twelve
+
+0:06:28.900,0:06:30.289
+and let's break the line.
+
+0:06:30.289,0:06:32.060
+Okay, let's try to execute it.
+
+0:06:32.060,0:06:37.610
+So please enter a time in a twenty four hour,
+let's do fifteen thirty seven, and then it
+
+0:06:37.610,0:06:40.479
+says fifteen thirty seven is three thirty
+seven.
+
+0:06:40.479,0:06:42.139
+We forgot to print the period value.
+
+0:06:42.139,0:06:49.210
+So that after printing minutes twelve let's
+also add space and then print period which
+
+0:06:49.210,0:06:50.460
+would be AM or PM.
+
+0:06:50.460,0:06:51.740
+Let's test it now.
+
+0:06:51.740,0:06:57.849
+So fifteen thirty seven, now it says that
+fifteen thirty seven is three thirty seven
+
+0:06:57.849,0:06:59.149
+P.M.
+
+0:06:59.149,0:07:01.830
+Let's try to do all four cases.
+
+0:07:01.830,0:07:07.580
+Let's do twelve thirty seven twelve, thirty
+seven is twelve thirty seven P.M.
+
+0:07:07.580,0:07:08.580
+That's true.
+
+0:07:08.580,0:07:15.409
+So we've tested a value in this range, we've
+tested a value here in twelve, now let's do
+
+0:07:15.409,0:07:21.639
+two AMs; one in one to eleven and one with
+the zero, basically testing all the branches,
+
+0:07:21.639,0:07:23.580
+all the possible branches of this program.
+
+0:07:23.580,0:07:29.559
+So let's do zero thirty seven, it would say
+that zero thirty seven is twelve thirty seven
+
+0:07:29.559,0:07:32.659
+am.
+
+0:07:32.659,0:07:37.819
+Three thirty seven and then it would say that
+three thirty seven is three thirty seven AM.
+
+0:07:37.819,0:07:42.129
+Okay, so it seems that all four branches work
+properly and yes, that's it.

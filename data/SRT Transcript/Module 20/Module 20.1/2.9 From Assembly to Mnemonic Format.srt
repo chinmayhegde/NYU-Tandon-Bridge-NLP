@@ -1,0 +1,76 @@
+1
+00:00:00,470 --> 00:00:04,990
+Although assembly-language provides a one-to-one
+correlation with machine code, it still has
+
+2
+00:00:04,990 --> 00:00:10,510
+some limitations with fully illustrating how
+the CPU interprets the machine-level instructions.
+
+3
+00:00:10,510 --> 00:00:14,590
+And since this is a computer architecture
+and organization course, we want to have as
+
+4
+00:00:14,590 --> 00:00:19,359
+good of a feel as possible of the CPU inner-workings.
+
+5
+00:00:19,359 --> 00:00:23,710
+With that in mind, we use MIPS mnemonic format
+to represent software code.
+
+6
+00:00:23,710 --> 00:00:28,199
+We can think of mnemonic format as a readable
+version of machine-level code.
+
+7
+00:00:28,199 --> 00:00:32,430
+It interprets all of the fields of machine-level
+code to better illustrate the inner-workings
+
+8
+00:00:32,430 --> 00:00:33,520
+of the CPU.
+
+9
+00:00:33,520 --> 00:00:39,410
+When writing in MIPS mnemonic notation, we
+generally use hexadecimal format, except for
+
+10
+00:00:39,410 --> 00:00:40,690
+register names.
+
+11
+00:00:40,690 --> 00:00:45,100
+For some cases, the hexadecimal notation of
+number may take too much space.
+
+12
+00:00:45,100 --> 00:00:48,860
+In such cases, we use the decimal notation
+of that number and explicitly say it is the
+
+13
+00:00:48,860 --> 00:00:50,350
+decimal notation.
+
+14
+00:00:50,350 --> 00:00:57,140
+For example FFFF in hexadecimal is equal to
+-1 in decimal, so we put -1 in parentheses
+
+15
+00:00:57,140 --> 00:01:01,110
+and add the 10 subscript to indicate this
+a decimal notation.
+
+16
+00:01:01,110 --> 00:01:04,290
+This is just to make it easier to write MIPS
+in mnemonic format.
+

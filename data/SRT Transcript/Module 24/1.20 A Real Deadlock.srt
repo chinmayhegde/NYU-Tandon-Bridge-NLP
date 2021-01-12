@@ -1,0 +1,58 @@
+1
+00:00:00,610 --> 00:00:07,450
+I like this picture because it really shows
+traffic inside a normal city environment.
+
+2
+00:00:07,450 --> 00:00:12,589
+And what we have here is that each of the
+cars that would enter the intersection sort
+
+3
+00:00:12,589 --> 00:00:16,660
+of went a little bit over and are now blocking
+a portion of the intersection.
+
+4
+00:00:16,660 --> 00:00:21,940
+And what you can see is that each car is waiting
+for another car to move and the last car is
+
+5
+00:00:21,940 --> 00:00:27,100
+waiting for the first car to move, and ultimately
+as you can tell, nothing is going to get done
+
+6
+00:00:27,100 --> 00:00:28,100
+here.
+
+7
+00:00:28,100 --> 00:00:32,460
+There is no way that any of these cars are
+going to move until someone decides to take
+
+8
+00:00:32,460 --> 00:00:37,430
+action, and just completely change the scenario;
+maybe one of the cars could make a turn and
+
+9
+00:00:37,430 --> 00:00:40,460
+get out of there and then free up the intersection.
+
+10
+00:00:40,460 --> 00:00:46,060
+But ultimately what's happening is we are
+controlling one quadrant of the intersection,
+
+11
+00:00:46,060 --> 00:00:52,110
+each car controls one quadrant of the intersection,
+and needs one more quadrant in order to complete
+
+12
+00:00:52,110 --> 00:00:56,370
+its task of moving through the intersection
+and we recognize that that can never occur.
+

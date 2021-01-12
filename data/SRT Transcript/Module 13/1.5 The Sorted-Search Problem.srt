@@ -1,0 +1,197 @@
+1
+00:00:00,680 --> 00:00:05,270
+So let's try to think how we can solve this
+problem.
+
+2
+00:00:05,270 --> 00:00:13,010
+First, most basic idea would say do the same
+thing as we've done before, basically searching
+
+3
+00:00:13,010 --> 00:00:15,260
+the array element by element.
+
+4
+00:00:15,260 --> 00:00:21,770
+So let's see what the first value of the array
+is, in this case it is one.
+
+5
+00:00:21,770 --> 00:00:26,060
+So, we're searching, for example val equals
+seventy nine, so it's not one.
+
+6
+00:00:26,060 --> 00:00:29,810
+Let's go over to the next one three; that's
+not seventy nine.
+
+7
+00:00:29,810 --> 00:00:33,370
+It's go over for the next one, four that's
+not seventy nine.
+
+8
+00:00:33,370 --> 00:00:36,710
+Once again eight; that's not seventy nine
+and so on.
+
+9
+00:00:36,710 --> 00:00:42,050
+We can continue on iterating over the elements
+with an array.
+
+10
+00:00:42,050 --> 00:00:49,550
+Yeah, basically could work, once again the
+running time of this approach would be linear
+
+11
+00:00:49,550 --> 00:00:55,940
+because we'll worst case have to iterate over
+the entire range of elements, basically Taito
+
+12
+00:00:55,940 --> 00:00:56,940
+of N.
+
+13
+00:00:56,940 --> 00:01:03,560
+But this approach here doesn't take advantage
+of the fact that our array is given to us,
+
+14
+00:01:03,560 --> 00:01:09,590
+basically, in an increasing order and we can
+take advantage of that if we do something
+
+15
+00:01:09,590 --> 00:01:10,780
+a bit differently.
+
+16
+00:01:10,780 --> 00:01:15,020
+So, for example if we’re again searching
+for seventy nine.
+
+17
+00:01:15,020 --> 00:01:22,030
+Let's take a look at the entire range and
+look only at the element that appears in the
+
+18
+00:01:22,030 --> 00:01:24,020
+middle of the array.
+
+19
+00:01:24,020 --> 00:01:27,480
+Let's test that element for its value.
+
+20
+00:01:27,480 --> 00:01:33,090
+for example, this element could be ninety
+six; since we know we're searching for seventy
+
+21
+00:01:33,090 --> 00:01:41,740
+nine and at the middle there is ninety six,
+we don't really have to go over the entire
+
+22
+00:01:41,740 --> 00:01:48,290
+left side of the array right because after
+all on the left side of ninety six would appear
+
+23
+00:01:48,290 --> 00:01:51,020
+only values that are greater than ninety six.
+
+24
+00:01:51,020 --> 00:01:57,420
+So, just by looking at ninety six, we can
+rule out all the greater part there or the
+
+25
+00:01:57,420 --> 00:02:05,470
+left part of ninety six and keeping us with
+only the smaller values smaller than ninety
+
+26
+00:02:05,470 --> 00:02:07,600
+six to look for seventy nine.
+
+27
+00:02:07,600 --> 00:02:13,760
+So, with one check we basically ruled out
+half of our range.
+
+28
+00:02:13,760 --> 00:02:19,900
+And then once again for the half of the numbers
+we still have to search for; again we can
+
+29
+00:02:19,900 --> 00:02:27,069
+look at only the middle point of that range,
+testing the value of the element that is there.
+
+30
+00:02:27,069 --> 00:02:31,439
+For example, twenty eight and then once again
+since we're looking for seventy nine the numbers
+
+31
+00:02:31,439 --> 00:02:37,370
+are in an increasing order, if we know that
+in some position there is twenty eight we
+
+32
+00:02:37,370 --> 00:02:42,559
+can rule out all the elements there are smaller
+than twenty eight; we can basically rule out
+
+33
+00:02:42,559 --> 00:02:50,079
+all of these elements and keeping us with
+only the range of elements between these twenty
+
+34
+00:02:50,079 --> 00:02:51,440
+eight and ninety six.
+
+35
+00:02:51,440 --> 00:02:57,010
+Once again, we can check what's in the middle
+of that range; for example, eighty four and
+
+36
+00:02:57,010 --> 00:03:00,379
+we can rule out all the elements that are
+greater than eighty four.
+
+37
+00:03:00,379 --> 00:03:08,540
+We can, we’re then left with the inner range
+over there looking at the middle point and
+
+38
+00:03:08,540 --> 00:03:12,569
+luckily seventy nine; so we've just found
+our seventy one.
+
+39
+00:03:12,569 --> 00:03:18,969
+So, basically we are starting with the regional
+range, and each time we're ruling out, we're
+
+40
+00:03:18,969 --> 00:03:24,409
+taking off half of the elements, basically
+closing on the element we are searching for.
+
+41
+00:03:24,409 --> 00:03:27,839
+Let's try to implement this approach on the
+computer.
+

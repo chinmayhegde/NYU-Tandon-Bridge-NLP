@@ -1,0 +1,112 @@
+1
+00:00:00,810 --> 00:00:05,160
+Now that we've talked about semaphores enough,
+we have to talk about one downside to having
+
+2
+00:00:05,160 --> 00:00:09,000
+all these locks and that’s the idea of a
+deadlock.
+
+3
+00:00:09,000 --> 00:00:14,000
+And the deadlock occurs in a system, or can
+occur in a system, if all the threads are
+
+4
+00:00:14,000 --> 00:00:18,850
+waiting for each other; if we have a set of
+threads that are all waiting for each other,
+
+5
+00:00:18,850 --> 00:00:23,010
+then there's really no way that any one of
+them are going to complete.
+
+6
+00:00:23,010 --> 00:00:28,570
+Usually it results from one thread waiting
+for another thread to release a resource,
+
+7
+00:00:28,570 --> 00:00:33,050
+and it's not really clear what that resource
+could be; it could be a lock, in terms of
+
+8
+00:00:33,050 --> 00:00:37,860
+a mutual exclusion lock like semaphore, or
+we could be talking about a file, or we could
+
+9
+00:00:37,860 --> 00:00:39,650
+be talking about a mouth of memory.
+
+10
+00:00:39,650 --> 00:00:44,600
+But there's some resource which is shared
+among the threads and one thread is waiting
+
+11
+00:00:44,600 --> 00:00:48,610
+for another thread to release the resource,
+while that other thread is waiting about eventually
+
+12
+00:00:48,610 --> 00:00:50,960
+back for the first thread to release the resource.
+
+13
+00:00:50,960 --> 00:00:55,550
+So, we have one A waiting for B, B waiting
+for A neither is going to get done; it's a
+
+14
+00:00:55,550 --> 00:00:59,990
+permanent block, it is not going to resolve
+itself over time.
+
+15
+00:00:59,990 --> 00:01:05,350
+This requires the intervention of an operating
+system if the deadlock does occur, there’s
+
+16
+00:01:05,350 --> 00:01:10,340
+going to have to be some resolution that the
+operating system or that's a monitor program
+
+17
+00:01:10,340 --> 00:01:15,299
+takes on top of the the deadlock threads to
+resolve the issue.
+
+18
+00:01:15,299 --> 00:01:19,630
+And unfortunately today there's really no
+efficient solution, even today we don't have
+
+19
+00:01:19,630 --> 00:01:22,049
+a very efficient solution to deadlocks.
+
+20
+00:01:22,049 --> 00:01:28,520
+It either amounts to a considerable waste
+of system resources, processor time or memory,
+
+21
+00:01:28,520 --> 00:01:32,179
+or it amounts to a deadlock occurring and
+then resolving the deadlock.
+
+22
+00:01:32,179 --> 00:01:37,789
+So, we really don't have a good solution today
+to deadlocks, other than to say we have to
+
+23
+00:01:37,789 --> 00:01:39,849
+keep them in mind and make sure that they
+don't happen.
+

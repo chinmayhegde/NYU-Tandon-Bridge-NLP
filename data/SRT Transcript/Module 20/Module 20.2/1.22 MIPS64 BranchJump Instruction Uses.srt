@@ -1,0 +1,135 @@
+1
+00:00:00,659 --> 00:00:06,359
+So let's detail the MIPS mnemonic code for
+our X times Y. Let us assume that X and Y
+
+2
+00:00:06,359 --> 00:00:12,940
+are in R4 and R5 respectively and that the
+code segment starts at address 4D0.
+
+3
+00:00:12,940 --> 00:00:17,110
+If we look at the high-level code, we see
+that the first two operations initialize the
+
+4
+00:00:17,110 --> 00:00:23,990
+counter to Y and set the accumulator R E S
+to zero. We can do the same for our MIPS code
+
+5
+00:00:23,990 --> 00:00:30,529
+by initializing the register R8 to zero and
+the register R9 to the value of Y. In our
+
+6
+00:00:30,529 --> 00:00:36,960
+MIPS code, we will thus use R8 for the accumulator
+and R9 for the loop counter. Since we have
+
+7
+00:00:36,960 --> 00:00:42,930
+a do while loop, we know that we are going
+to add to the accumulator and decrement the
+
+8
+00:00:42,930 --> 00:00:48,430
+loop counter at least once. To add to the
+accumulator, we simply use the doubleword
+
+9
+00:00:48,430 --> 00:00:57,860
+ADD, or D ADD, R8, R8, R4 instruction to keep
+adding X to itself. To decrement the counter,
+
+10
+00:00:57,860 --> 00:01:04,050
+we use the immediate add instruction D ADD
+I, where the immediate value is negative 1.
+
+11
+00:01:04,050 --> 00:01:09,690
+The next part of the code is to check if the
+counter is zero in order to determine if we
+
+12
+00:01:09,690 --> 00:01:14,900
+need to get out of the loop or not. There
+are several ways to do this. We can use a
+
+13
+00:01:14,900 --> 00:01:22,020
+branch if not equal to zero instruction, a
+branch if equal to zero, a branch if not equal,
+
+14
+00:01:22,020 --> 00:01:28,820
+and probably other approaches. We choose to
+use branch if not equal. Since we need to
+
+15
+00:01:28,820 --> 00:01:35,200
+compare the loop counter to zero, we use R9,
+which holds the loop counter, and R0, which
+
+16
+00:01:35,200 --> 00:01:43,150
+is always zero, as the registers of our BNE
+instruction. If the counter is not yet zero,
+
+17
+00:01:43,150 --> 00:01:48,060
+the branch is taken, and we need to go back
+to the two instructions that add the accumulator
+
+18
+00:01:48,060 --> 00:01:55,100
+and decremental loop counter. This allows
+us to iterate through the loop one more time.
+
+19
+00:01:55,100 --> 00:02:00,600
+As we discussed before, the sequential instruction
+after a branch instruction must handle the
+
+20
+00:02:00,600 --> 00:02:06,310
+case when the branch is not taken. For our
+code, the branch is not taken when the counter
+
+21
+00:02:06,310 --> 00:02:12,290
+is equal to zero and we need to return from
+the function call. But instead of simply handling
+
+22
+00:02:12,290 --> 00:02:19,340
+the return, we first need to store the final
+result of the accumulator in R2 or R3 register
+
+23
+00:02:19,340 --> 00:02:26,090
+so that it can be available as a return value
+from the function call. So here we use the
+
+24
+00:02:26,090 --> 00:02:32,620
+R2 register to return the value of the accumulator.
+This is similar to what we did before for
+
+25
+00:02:32,620 --> 00:02:39,260
+the absolute value function. The last instruction
+handles the return from the function call
+
+26
+00:02:39,260 --> 00:02:44,540
+and for that we use the jump register instruction.
+Assuming that the function would be called
+
+27
+00:02:44,540 --> 00:02:49,810
+using jump and link, we know the return address
+will be in R31 register.
+

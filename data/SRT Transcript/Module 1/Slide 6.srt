@@ -1,0 +1,100 @@
+1
+00:00:01,930 --> 00:00:06,220
+So all computers every computer will have
+at least one central processing unit and the
+
+2
+00:00:06,220 --> 00:00:09,180
+central processing unit is the brain of the
+computer.
+
+3
+00:00:09,180 --> 00:00:12,020
+That's where all the real work is done.
+
+4
+00:00:12,020 --> 00:00:16,519
+Main memory – main memory is where the code
+and the data are stored, but main memory has
+
+5
+00:00:16,519 --> 00:00:21,080
+got to be temporary storage because once we
+turn the computer off all of that is lost.
+
+6
+00:00:21,080 --> 00:00:24,550
+And then because we're going to need some
+sort of a permanent storage system, there's
+
+7
+00:00:24,550 --> 00:00:29,830
+got to be a secondary storage system where
+the information is stored permanently.
+
+8
+00:00:29,830 --> 00:00:33,440
+Of course all computers are going to have
+something that relates all those, so that
+
+9
+00:00:33,440 --> 00:00:35,320
+they can communicate.
+
+10
+00:00:35,320 --> 00:00:39,870
+Most computers are also going to have a video
+graphics controller where images can be rendered
+
+11
+00:00:39,870 --> 00:00:43,500
+and we can put them on display on a screen.
+
+12
+00:00:43,500 --> 00:00:47,710
+They'll also probably have a network interface
+so that we can communicate on the Internet
+
+13
+00:00:47,710 --> 00:00:50,400
+or in the local area network.
+
+14
+00:00:50,400 --> 00:00:53,760
+And then of course they're probably going
+to have a peripheral interface which is a
+
+15
+00:00:53,760 --> 00:00:57,230
+USB or a Thunderbolt, or a Firewire, or a
+SCSI.
+
+16
+00:00:57,230 --> 00:01:02,329
+And all of these components meet the requirements
+so that we can bring data into the computer,
+
+17
+00:01:02,329 --> 00:01:05,600
+we can process that data, and then we can
+produce output.
+
+18
+00:01:05,600 --> 00:01:09,600
+And if you look back at each one of these
+individual items that I've mentioned you're
+
+19
+00:01:09,600 --> 00:01:15,310
+going to see that they either do one thing
+or two things: input processing or output
+
+20
+00:01:15,310 --> 00:01:16,950
+and that's the basic idea.
+
+21
+00:01:16,950 --> 00:01:21,150
+Most devices inside the computer are either
+IO devices or they're processing.
+

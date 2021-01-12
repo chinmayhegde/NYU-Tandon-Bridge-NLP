@@ -1,0 +1,78 @@
+1
+00:00:00,530 --> 00:00:03,100
+Let us first discuss the RISC architecture.
+
+2
+00:00:03,100 --> 00:00:08,109
+The basic idea of RISC is to have simple instructions
+that perform simple operations.
+
+3
+00:00:08,109 --> 00:00:12,019
+Let us recall the A = B+C function from before.
+
+4
+00:00:12,019 --> 00:00:17,090
+In a RISC processor, each of the four operations
+needed to implement this function can be implemented
+
+5
+00:00:17,090 --> 00:00:19,270
+as a machine-level instruction.
+
+6
+00:00:19,270 --> 00:00:25,100
+So that is four RISC machine-level instructions
+for one high-level C or C++ line of code.
+
+7
+00:00:25,100 --> 00:00:31,080
+So there would be an instruction to load B
+to register, and instruction load C to register,
+
+8
+00:00:31,080 --> 00:00:36,230
+an instruction to add registers for B and
+C and put the result back in a register, and
+
+9
+00:00:36,230 --> 00:00:40,379
+an instruction to store the result back to
+memory allocated for A.
+
+10
+00:00:40,379 --> 00:00:44,429
+The benefit of having instructions that perform
+simple operations is that they make it easy
+
+11
+00:00:44,429 --> 00:00:46,539
+to implement the CPU at the hardware level.
+
+12
+00:00:46,539 --> 00:00:52,350
+So the CPU hardware is less complex and incurs
+less power and space in your computer.
+
+13
+00:00:52,350 --> 00:00:56,949
+The main downside is that it is more difficult
+to translate the high-level code into machine-level
+
+14
+00:00:56,949 --> 00:00:58,159
+instructions.
+
+15
+00:00:58,159 --> 00:01:00,859
+This makes it more difficult for the compilers.
+
+16
+00:01:00,859 --> 00:01:05,330
+The most popular RISC architecture used in
+the market is ARM, which is commonly found
+
+17
+00:01:05,330 --> 00:01:08,450
+in smartphones, tablets, and low-battery platforms.
+

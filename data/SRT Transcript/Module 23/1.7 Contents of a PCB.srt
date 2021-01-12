@@ -1,0 +1,211 @@
+1
+00:00:00,610 --> 00:00:04,740
+So, if we take a deeper look into the contents
+of the PCB, what we're going to see is a lot
+
+2
+00:00:04,740 --> 00:00:07,750
+of the context information for the process.
+
+3
+00:00:07,750 --> 00:00:10,620
+We're going to see things like the numeric
+identifiers.
+
+4
+00:00:10,620 --> 00:00:15,039
+The numeric identifiers that we have just
+a few examples of, are the process identifier.
+
+5
+00:00:15,039 --> 00:00:20,600
+Now that's one process identifier is assigned
+to each process in the system and this is
+
+6
+00:00:20,600 --> 00:00:27,340
+a simple word, it's only sixteen bytes, sorry…
+sixteen bits large and the PID has to be unique
+
+7
+00:00:27,340 --> 00:00:29,090
+for all the processes.
+
+8
+00:00:29,090 --> 00:00:35,880
+So, you're starting to come to the idea that
+the maximum number of processes in the system
+
+9
+00:00:35,880 --> 00:00:41,770
+is 65,535 because that's the maximum number
+of process identifiers that we have.
+
+10
+00:00:41,770 --> 00:00:44,550
+We're also going to keep track of the parent
+process identifier.
+
+11
+00:00:44,550 --> 00:00:49,960
+Now each process is going to be created by
+a parent, and the parent has certain responsibilities
+
+12
+00:00:49,960 --> 00:00:52,980
+and rights over that child process.
+
+13
+00:00:52,980 --> 00:00:54,680
+The parent can terminate the child.
+
+14
+00:00:54,680 --> 00:01:00,640
+The parent can receive the child's information
+when the child finishes; the return zero value
+
+15
+00:01:00,640 --> 00:01:01,640
+so to speak.
+
+16
+00:01:01,640 --> 00:01:05,570
+So, the parent process identifier needs to
+be recorded as part of the information that
+
+17
+00:01:05,570 --> 00:01:08,140
+we're going to use to manage that process.
+
+18
+00:01:08,140 --> 00:01:12,530
+We're going to record the user identifier,
+of the person who started that process.
+
+19
+00:01:12,530 --> 00:01:17,290
+The UID is important because it leads to the
+security perimeter restrictions that are placed
+
+20
+00:01:17,290 --> 00:01:18,920
+onto that program.
+
+21
+00:01:18,920 --> 00:01:24,170
+What can this program do is based on who activated
+this process.
+
+22
+00:01:24,170 --> 00:01:30,101
+And we're going to talk about registers, inside
+the PCB; we have a number of registers, now
+
+23
+00:01:30,101 --> 00:01:34,130
+those are for when the process is either in
+the blocked or the ready state.
+
+24
+00:01:34,130 --> 00:01:38,500
+When it's in the running state remember the
+process is actually running, so the registers
+
+25
+00:01:38,500 --> 00:01:40,310
+are constantly changing.
+
+26
+00:01:40,310 --> 00:01:45,100
+But those registers have to be recorded every
+time we pull the process out of the running
+
+27
+00:01:45,100 --> 00:01:50,740
+state and they need to be reloaded back into
+the CPU whenever we restore the process to
+
+28
+00:01:50,740 --> 00:01:52,299
+the running state.
+
+29
+00:01:52,299 --> 00:01:53,570
+We're going to have the stack pointers.
+
+30
+00:01:53,570 --> 00:01:58,400
+So, any stack pointers that this process might
+have in this case is probably only going to
+
+31
+00:01:58,400 --> 00:02:02,090
+be one stack pointer later on, we're going
+to see where there's a possibility of having
+
+32
+00:02:02,090 --> 00:02:03,090
+more.
+
+33
+00:02:03,090 --> 00:02:08,459
+Scheduling: so how long has this process been
+on the CPU, how much time has it spent, how
+
+34
+00:02:08,459 --> 00:02:12,980
+long has it been waiting, when should reschedule
+it to wait, and so on and so forth.
+
+35
+00:02:12,980 --> 00:02:18,780
+Any linkages: if this process is linked to
+another process in terms of a pipe, so that
+
+36
+00:02:18,780 --> 00:02:23,370
+the output of this process goes to the input
+of another process, this has to be managed
+
+37
+00:02:23,370 --> 00:02:25,150
+via the PCB.
+
+38
+00:02:25,150 --> 00:02:31,040
+Any into process communication systems that
+might be enabled inside this process, so any
+
+39
+00:02:31,040 --> 00:02:34,770
+communications that the process is having
+with other processes in the system.
+
+40
+00:02:34,770 --> 00:02:41,680
+And the resources in use, so IO devices or
+files and how much memory is being used.
+
+41
+00:02:41,680 --> 00:02:47,480
+That makes up the contents of the entire PCB.
+and that's what the operating system really
+
+42
+00:02:47,480 --> 00:02:50,420
+uses to manage the process.
+
+43
+00:02:50,420 --> 00:02:56,070
+The PCB. might be moved from state to state,
+or the PCB. might coincide with the process
+
+44
+00:02:56,070 --> 00:03:00,450
+image, but either way we're going to keep
+all this information about the process in
+
+45
+00:03:00,450 --> 00:03:00,930
+order to manage it.
+

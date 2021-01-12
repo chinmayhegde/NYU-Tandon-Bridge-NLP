@@ -1,0 +1,149 @@
+0:00:00.690,0:00:08.829
+Ok now that we have a few types in hand int
+float double let’s see what happens in some
+
+0:00:08.829,0:00:13.089
+cases when we try to mix these types kind
+of together.
+
+0:00:13.089,0:00:20.380
+So for example we have four variable two if
+type int x one and x two and two of type double
+
+0:00:20.380,0:00:22.270
+y one and y two.
+
+0:00:22.270,0:00:32.450
+If we assign x one with 6 and y one with 6.7
+that would a perfectly valid because six is
+
+0:00:32.450,0:00:40.510
+an int literal x one is an int variable and
+assigning int into an int makes perfect sense.
+
+0:00:40.510,0:00:48.510
+Same thing when we are assigning y one is
+6.7 6.7 is a double literal y one is a double
+
+0:00:48.510,0:00:54.190
+variable and the assigning a double into a
+double is very reasonable.
+
+0:00:54.190,0:00:59.839
+But what would happen if we try to assign
+y two with a value of 6?
+
+0:00:59.839,0:01:08.830
+When we try to assign an integer 6 an integer
+literal into a double y two which is a double
+
+0:01:08.830,0:01:10.660
+variable.
+
+0:01:10.660,0:01:18.380
+Formally this expression is legal we cannot
+assign an int to a double or something that
+
+0:01:18.380,0:01:21.150
+is not of the same type.
+
+0:01:21.150,0:01:26.930
+The compiler won’t say anything it will
+figure out a way to get over that but formally
+
+0:01:26.930,0:01:34.390
+what we need to do is basically to convert
+the representation of the integer 6 to the
+
+0:01:34.390,0:01:40.070
+representation of the same or the equivalent
+value in the representation of a double.
+
+0:01:40.070,0:01:47.010
+The syntax to do that is called casting converting
+the representation of data to one type to
+
+0:01:47.010,0:01:51.400
+an equivalent value in another type.
+
+0:01:51.400,0:01:58.150
+The syntax is the new type included in parentheses
+in this case double followed by the value
+
+0:01:58.150,0:02:00.180
+we want to convert into double.
+
+0:02:00.180,0:02:08.190
+So the expression double 6 would convert the
+integer 6 into a representation or an equivalent
+
+0:02:08.190,0:02:10.929
+representation in a type double.
+
+0:02:10.929,0:02:18.350
+And this expression double 6 is of type double
+and then assigning double 6 into y two is
+
+0:02:18.350,0:02:20.260
+a legal assigning.
+
+0:02:20.260,0:02:24.470
+It is a assigning a double into a double variable.
+
+0:02:24.470,0:02:34.390
+So when a casting is evaluated basically the
+representation of this data is converted from
+
+0:02:34.390,0:02:37.650
+one representation method to another.
+
+0:02:37.650,0:02:45.840
+From 32 bit 2’s complement representation
+of an integer in this case into a 64 floating
+
+0:02:45.840,0:02:48.600
+point representation of a double.
+
+0:02:48.600,0:02:54.440
+And this conversion is done by syntax of casting
+into a double of the value 6.
+
+0:02:54.440,0:03:02.190
+It would be interesting to think what would
+happen if we tried to convert or to cast 6.7
+
+0:03:02.190,0:03:09.290
+the double 6.7 into representation of int.
+
+0:03:09.290,0:03:18.510
+Int of 6.7 but then we can’t really keep
+the value or the converted value equivalent
+
+0:03:18.510,0:03:25.980
+to 6.7 because integers cannot represent a
+fractional part or a number a real number
+
+0:03:25.980,0:03:27.020
+6.7.
+
+0:03:27.020,0:03:32.470
+So what would the compiler convert the double
+6.7 to?
+
+0:03:32.470,0:03:35.010
+To what integer would it be converted?
+
+0:03:35.010,0:03:39.510
+So we can try it out but I will tell you what
+is going to happen.
+
+0:03:39.510,0:03:47.709
+It is basically going to remove the fractional
+part and convert 6.7 to a 6 in this case.
+
+0:03:47.709,0:03:56.160
+So this assigning x two equals int of 6.7
+would assign the integer x two to the value
+
+0:03:56.160,0:03:57.710
+of the integer 6.

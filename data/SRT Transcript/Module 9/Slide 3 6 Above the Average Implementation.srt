@@ -1,0 +1,141 @@
+0:00:00.140,0:00:01.150
+Okay then.
+
+0:00:01.150,0:00:06.500
+Now let's make one more pass over the data
+in order to print the ones that are above
+
+0:00:06.500,0:00:07.500
+the average.
+
+0:00:07.500,0:00:14.020
+Let's first start with announcing to the user
+that ‘the grades above the average are’
+
+0:00:14.020,0:00:17.279
+and now let's start iterating over our array.
+
+0:00:17.279,0:00:23.570
+So once again, we'll have our index starting
+at zero, incremented each iteration and it
+
+0:00:23.570,0:00:28.810
+goes as long as its value is less than number
+of students.
+
+0:00:28.810,0:00:35.039
+And now we have to figure out if we want to
+print this current element or not, so we'll
+
+0:00:35.039,0:00:41.420
+just if the grades list, our current element,
+grades list ind that's the element we're currently
+
+0:00:41.420,0:00:47.550
+looking at, is as we asked it to be above
+the average, so greater than the value of
+
+0:00:47.550,0:00:48.579
+the average.
+
+0:00:48.579,0:00:54.420
+Then, let's just print this current element:
+cout grades list.
+
+0:00:54.420,0:00:57.420
+And let's also space after each print.
+
+0:00:57.420,0:01:03.789
+Yeah, so that should go over the entire set
+of elements and print only the ones that are
+
+0:01:03.789,0:01:06.380
+above the average, spacing them.
+
+0:01:06.380,0:01:12.200
+After we do all of that, let’s just break
+the line so cout endl, and that should be
+
+0:01:12.200,0:01:13.200
+it.
+
+0:01:13.200,0:01:15.960
+So we have our first iteration to read the
+grades.
+
+0:01:15.960,0:01:21.200
+Second pass, in order to calculate the average
+and eventually, last pass over the elements
+
+0:01:21.200,0:01:24.020
+in order to print the ones that are above
+the average.
+
+0:01:24.020,0:01:28.180
+Let's just execute it, make sure it all behaves
+as we expect it to.
+
+0:01:28.180,0:01:29.990
+Build success succeeded.
+
+0:01:29.990,0:01:32.229
+Please enter a number of students.
+
+0:01:32.229,0:01:33.500
+That would be four.
+
+0:01:33.500,0:01:36.619
+Oh, we didn't ask the user to enter the grades.
+
+0:01:36.619,0:01:40.649
+We'll fix it in the second; it’s now waiting
+for the grades.
+
+0:01:40.649,0:01:46.149
+So let's have seventy one, eighty six, sixty
+eight, ninety four.
+
+0:01:46.149,0:01:50.580
+And then, it just says that the class average
+is seventy nine seventy five, and the grades
+
+0:01:50.580,0:01:54.050
+above the average are eighty six and ninety
+four which is great.
+
+0:01:54.050,0:01:58.240
+Let's just add this message here before starting
+to read the grades.
+
+0:01:58.240,0:02:06.510
+Let's ask the user enter the students’ grades,
+separated by a space.
+
+0:02:06.510,0:02:08.759
+I think that should do it.
+
+0:02:08.759,0:02:10.240
+Let’s test it.
+
+0:02:10.240,0:02:11.240
+Okay.
+
+0:02:11.240,0:02:12.240
+Building.
+
+0:02:12.240,0:02:13.240
+Number of students is four.
+
+0:02:13.240,0:02:20.010
+Here is our message so let's put seventy one,
+eighty six, sixty eight, ninety four, and
+
+0:02:20.010,0:02:25.099
+so the average is, again, seventy nine seventy
+five and we also have the numbers that are
+
+0:02:25.099,0:02:26.099
+above the average.
+
+0:02:26.099,0:02:26.599
+Great.

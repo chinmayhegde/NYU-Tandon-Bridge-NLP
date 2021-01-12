@@ -1,0 +1,142 @@
+0:00:00.690,0:00:07.250
+Ok let’s try to analyze the runtime of two
+examples.
+
+0:00:07.250,0:00:09.110
+Let’s start with the first one.
+
+0:00:09.110,0:00:12.429
+So let’s take a look at this program here.
+
+0:00:12.429,0:00:19.100
+It asks the user to enter an input N and then
+it has N iterations right.
+
+0:00:19.100,0:00:25.690
+I iterating from one to N. Each time let’s
+take a closer look here we are iterating from
+
+0:00:25.690,0:00:29.840
+one to N printing a star and breaking the
+line.
+
+0:00:29.840,0:00:34.399
+So N times we are printing N stars and breaking
+the line.
+
+0:00:34.399,0:00:35.969
+N stars breaking the line.
+
+0:00:35.969,0:00:37.870
+N times we are doing that.
+
+0:00:37.870,0:00:42.899
+Altogether it comes to a square N by N stars
+here.
+
+0:00:42.899,0:00:49.940
+But our question more interesting question
+is what is the running time of this program
+
+0:00:49.940,0:00:50.940
+here?
+
+0:00:50.940,0:00:51.940
+What is T of N?
+
+0:00:51.940,0:00:57.399
+Right again we are analyzing the running time
+as the function of the input size in this
+
+0:00:57.399,0:00:59.600
+case our N.
+
+0:00:59.600,0:01:03.589
+So let’s see.
+
+0:01:03.589,0:01:09.480
+We read the input we are going to make an
+asymptotic analysis so we don’t really need
+
+0:01:09.480,0:01:16.410
+to care about each primitive operator operation
+because anyway it is going to be dropped off
+
+0:01:16.410,0:01:19.580
+later on in the asymptotic analysis.
+
+0:01:19.580,0:01:27.240
+So I am not even counting the one operation
+for cout and the single operation for the
+
+0:01:27.240,0:01:31.810
+cin so they are both primitive operations
+but we are ignoring them.
+
+0:01:31.810,0:01:39.160
+And then we have these nested loops here when
+we are analyzing running time it is the best
+
+0:01:39.160,0:01:43.380
+good practice to go inside out.
+
+0:01:43.380,0:01:49.180
+From the inner part of the algorithm towards
+the outer parts.
+
+0:01:49.180,0:01:54.700
+So let’s take a look at the inner loop here.
+
+0:01:54.700,0:02:03.490
+So this inner for with the cout if we try
+to figure out how many operations we have
+
+0:02:03.490,0:02:04.490
+there.
+
+0:02:04.490,0:02:08.869
+So we can try and count the primitive operations
+assigning j to one and then each iteration
+
+0:02:08.869,0:02:15.140
+we have three operations that are repeated
+N times and then we have a break line.
+
+0:02:15.140,0:02:21.920
+But again since we want to make an asymptotic
+analysis here we can safely say that this
+
+0:02:21.920,0:02:27.410
+body here makes theta of N operations right.
+
+0:02:27.410,0:02:34.440
+So basically N times the outer loop would
+repeat these N operations right.
+
+0:02:34.440,0:02:42.660
+So together all these executions would do
+N times N operations.
+
+0:02:42.660,0:02:44.160
+Again asymptotically.
+
+0:02:44.160,0:02:50.490
+That would make the entire runtime here asymptotically
+N squared right.
+
+0:02:50.490,0:02:55.270
+Now it makes a lot of sense since we are viewing
+exactly what it is printed here.
+
+0:02:55.270,0:02:59.740
+We are printing a square of N by N stars.
+
+0:02:59.740,0:03:08.240
+So yea it makes sense each one of them is
+a one single operation so we are doing a total
+
+0:03:08.240,0:03:10.420
+of N squared operations.
+
+0:03:10.420,0:03:13.130
+So altogether it is theta of N squared.

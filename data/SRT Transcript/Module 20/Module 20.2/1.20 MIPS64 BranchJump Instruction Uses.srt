@@ -1,0 +1,64 @@
+1
+00:00:00,570 --> 00:00:02,930
+There is one more factor to consider.
+
+2
+00:00:02,930 --> 00:00:07,460
+As we see in the high-level code, the absolute
+value function call must return the result
+
+3
+00:00:07,460 --> 00:00:08,790
+to the main code.
+
+4
+00:00:08,790 --> 00:00:13,750
+In our current MIPS mnemonic code, we have
+the result of the absolute value in the R4
+
+5
+00:00:13,750 --> 00:00:14,750
+register.
+
+6
+00:00:14,750 --> 00:00:19,880
+If we recall, R4 is a register used to pass
+parameters to function calls.
+
+7
+00:00:19,880 --> 00:00:22,910
+It thus cannot be used to return data from
+function calls.
+
+8
+00:00:22,910 --> 00:00:27,029
+For that, we need to use either R2 or R3.
+
+9
+00:00:27,029 --> 00:00:32,870
+So in the final version of the code, we need
+to initialize R2 to X in order to keep the
+
+10
+00:00:32,870 --> 00:00:36,870
+value in R2 in case X is already positive.
+
+11
+00:00:36,870 --> 00:00:41,080
+We also need to make sure that the result
+of the subtraction that turns the negative
+
+12
+00:00:41,080 --> 00:00:45,020
+value into a positive is also put into R2.
+
+13
+00:00:45,020 --> 00:00:50,629
+This way, when the function call returns,
+the absolute value is in the R2 register and
+
+14
+00:00:50,629 --> 00:00:53,680
+it can be used as the result variable in main
+code.
+

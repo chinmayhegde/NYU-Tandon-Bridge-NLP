@@ -1,0 +1,39 @@
+0:00:00.120,0:00:01.120
+Okay.
+
+0:00:01.120,0:00:05.700
+So we start by reading the number of students
+from the user, and then we ask the user to
+
+0:00:05.700,0:00:07.299
+enter the grades.
+
+0:00:07.299,0:00:14.299
+Then we do number of student iterations in
+order to first read each grade but then, we
+
+0:00:14.299,0:00:16.270
+also want to accumulate the sum.
+
+0:00:16.270,0:00:21.670
+So, for that we have our accumulating variable
+sum that is first initialized to zero before
+
+0:00:21.670,0:00:27.790
+starting to iterate and then after each time
+we read a grade, we also add it to this accumulation
+
+0:00:27.790,0:00:29.580
+variable, we add it into sum.
+
+0:00:29.580,0:00:36.600
+So, when this ‘for’ loop ends we have
+the total sum of the grades in our sum variable.
+
+0:00:36.600,0:00:41.670
+So we can just divide sum by the number of
+students and get the average.
+
+0:00:41.670,0:00:46.540
+After doing that, all we have left is just
+outputting this average back to the user.

@@ -1,0 +1,496 @@
+1
+00:00:00,000 --> 00:00:04,560
+hello everybody I wanted to show you a
+
+2
+00:00:01,860 --> 00:00:06,990
+simple example of how we could create a
+
+3
+00:00:04,560 --> 00:00:09,780
+dynamically resizing array or rather how
+
+4
+00:00:06,990 --> 00:00:11,429
+we can dynamically resize an array and I
+
+5
+00:00:09,780 --> 00:00:14,219
+wanted to do that by starting out with
+
+6
+00:00:11,429 --> 00:00:15,780
+just a simple array its size is 10 and
+
+7
+00:00:14,219 --> 00:00:17,490
+it holds some stuff you can see the code
+
+8
+00:00:15,780 --> 00:00:19,920
+on your screen I hope we're looking at
+
+9
+00:00:17,490 --> 00:00:21,270
+just an array that holds 10 things and
+
+10
+00:00:19,920 --> 00:00:23,970
+we've gotten to the point where we'd
+
+11
+00:00:21,270 --> 00:00:25,710
+like to add one more element so we'd
+
+12
+00:00:23,970 --> 00:00:27,689
+like to add that one more element into
+
+13
+00:00:25,710 --> 00:00:30,330
+the array and unfortunately because the
+
+14
+00:00:27,689 --> 00:00:32,219
+array is already full we don't know how
+
+15
+00:00:30,330 --> 00:00:34,170
+it's possible that we could add any more
+
+16
+00:00:32,219 --> 00:00:35,190
+elements into this array so what we're
+
+17
+00:00:34,170 --> 00:00:37,410
+going to do is write a very simple
+
+18
+00:00:35,190 --> 00:00:40,020
+function which is going to resize the
+
+19
+00:00:37,410 --> 00:00:43,920
+array and we're going to give it the
+
+20
+00:00:40,020 --> 00:00:46,980
+array itself as well as the current size
+
+21
+00:00:43,920 --> 00:00:49,170
+and the new size and we're of course
+
+22
+00:00:46,980 --> 00:00:51,510
+going to have to go ahead and write that
+
+23
+00:00:49,170 --> 00:00:53,430
+function so it's not going to return
+
+24
+00:00:51,510 --> 00:00:56,550
+anything and it's going to be called
+
+25
+00:00:53,430 --> 00:00:59,309
+resize array and it's going to take the
+
+26
+00:00:56,550 --> 00:01:02,190
+array as a pointer now we have to
+
+27
+00:00:59,309 --> 00:01:04,559
+recognize that the array will change so
+
+28
+00:01:02,190 --> 00:01:06,479
+it's important that we pass that array
+
+29
+00:01:04,559 --> 00:01:08,549
+by reference or rather that pointer by
+
+30
+00:01:06,479 --> 00:01:10,500
+reference because in this case the array
+
+31
+00:01:08,549 --> 00:01:12,420
+is going to have to be resized and the
+
+32
+00:01:10,500 --> 00:01:14,790
+only way that we can resize an array is
+
+33
+00:01:12,420 --> 00:01:17,400
+by destroying it and creating a new one
+
+34
+00:01:14,790 --> 00:01:19,200
+in its place with the old data so we
+
+35
+00:01:17,400 --> 00:01:20,820
+have to take into account I'm going to
+
+36
+00:01:19,200 --> 00:01:22,110
+call this current size we have to take
+
+37
+00:01:20,820 --> 00:01:24,090
+into account that that array pointer
+
+38
+00:01:22,110 --> 00:01:25,920
+will actually change which means it does
+
+39
+00:01:24,090 --> 00:01:28,740
+have to be passed in by reference and
+
+40
+00:01:25,920 --> 00:01:30,210
+we're going to take in new size so we're
+
+41
+00:01:28,740 --> 00:01:32,159
+going to create this function which
+
+42
+00:01:30,210 --> 00:01:33,990
+takes this array the current size and
+
+43
+00:01:32,159 --> 00:01:36,570
+the new size and the purpose of this
+
+44
+00:01:33,990 --> 00:01:39,689
+function is to grow the array into a new
+
+45
+00:01:36,570 --> 00:01:41,159
+size and we can talk about how to shrink
+
+46
+00:01:39,689 --> 00:01:42,990
+the array we can do that as well but
+
+47
+00:01:41,159 --> 00:01:45,000
+that's not the core of what we're trying
+
+48
+00:01:42,990 --> 00:01:47,250
+to do here so I'm not going to focus on
+
+49
+00:01:45,000 --> 00:01:49,530
+that so when we look at this the first
+
+50
+00:01:47,250 --> 00:01:51,630
+thing we should recognize is that we're
+
+51
+00:01:49,530 --> 00:01:52,890
+going to have to create a new array so
+
+52
+00:01:51,630 --> 00:01:55,470
+we're going to need a temporary pointer
+
+53
+00:01:52,890 --> 00:01:59,610
+and that temporary pointer should point
+
+54
+00:01:55,470 --> 00:02:02,490
+to an array of size new size so we're
+
+55
+00:01:59,610 --> 00:02:04,890
+going to create on the heap a new array
+
+56
+00:02:02,490 --> 00:02:07,409
+that is pointed to by temp so temp is
+
+57
+00:02:04,890 --> 00:02:09,390
+going to point to an array of new size
+
+58
+00:02:07,409 --> 00:02:11,480
+and then we've got to go through and
+
+59
+00:02:09,390 --> 00:02:14,840
+copy over all the elements
+
+60
+00:02:11,480 --> 00:02:16,790
+of the array into the new array so one
+
+61
+00:02:14,840 --> 00:02:20,510
+by one we're going to have to go through
+
+62
+00:02:16,790 --> 00:02:23,690
+the old array and copy the elements and
+
+63
+00:02:20,510 --> 00:02:27,409
+we can do that just by saying temp at I
+
+64
+00:02:23,690 --> 00:02:30,830
+is equal to AR are at I okay so we've
+
+65
+00:02:27,409 --> 00:02:33,590
+got now two arrays the original array
+
+66
+00:02:30,830 --> 00:02:35,299
+ARR and new array pointed to by 10 and
+
+67
+00:02:33,590 --> 00:02:37,540
+they effectively hold the same data and
+
+68
+00:02:35,299 --> 00:02:40,519
+the only difference is that ARR is
+
+69
+00:02:37,540 --> 00:02:42,319
+completely full and temp now has a
+
+70
+00:02:40,519 --> 00:02:44,959
+little bit of extra space left
+
+71
+00:02:42,319 --> 00:02:46,940
+so temp has some free space which we can
+
+72
+00:02:44,959 --> 00:02:49,940
+recognize as the new size of the array
+
+73
+00:02:46,940 --> 00:02:52,640
+and then we're going to just take care
+
+74
+00:02:49,940 --> 00:02:54,829
+of deleting the old array so now we've
+
+75
+00:02:52,640 --> 00:02:56,510
+done a new operation we know that if we
+
+76
+00:02:54,829 --> 00:02:58,640
+don't do a corresponding delete
+
+77
+00:02:56,510 --> 00:03:00,349
+operation we're going to have a memory
+
+78
+00:02:58,640 --> 00:03:02,480
+leak or garbage on the heap so what we
+
+79
+00:03:00,349 --> 00:03:03,590
+can do to take care of that is delete
+
+80
+00:03:02,480 --> 00:03:06,230
+the array
+
+81
+00:03:03,590 --> 00:03:08,840
+ARR which cleans up the memory space
+
+82
+00:03:06,230 --> 00:03:10,640
+pointed to by arr now obviously that
+
+83
+00:03:08,840 --> 00:03:12,260
+means everything in there is deleted but
+
+84
+00:03:10,640 --> 00:03:14,599
+that's ok because we've made a copy of
+
+85
+00:03:12,260 --> 00:03:17,060
+all that into temp and then here's where
+
+86
+00:03:14,599 --> 00:03:18,769
+it's really important that we pass this
+
+87
+00:03:17,060 --> 00:03:20,690
+array in by reference we're going to
+
+88
+00:03:18,769 --> 00:03:22,400
+make a are are equal to temp that's
+
+89
+00:03:20,690 --> 00:03:24,410
+effectively resizing the whole array so
+
+90
+00:03:22,400 --> 00:03:26,329
+right now those couple of lines of code
+
+91
+00:03:24,410 --> 00:03:29,480
+there what we've done is created a new
+
+92
+00:03:26,329 --> 00:03:31,519
+array temporary array of the new size
+
+93
+00:03:29,480 --> 00:03:33,500
+that we want we copy over each of the
+
+94
+00:03:31,519 --> 00:03:35,810
+individual elements and then we delete
+
+95
+00:03:33,500 --> 00:03:38,030
+the original array and make the original
+
+96
+00:03:35,810 --> 00:03:41,090
+array point to the temporary array the
+
+97
+00:03:38,030 --> 00:03:43,010
+effect of that is that we've resized the
+
+98
+00:03:41,090 --> 00:03:45,109
+array now obviously this is a very
+
+99
+00:03:43,010 --> 00:03:47,299
+involved operation and it's going to
+
+100
+00:03:45,109 --> 00:03:49,489
+have to go through each element of the
+
+101
+00:03:47,299 --> 00:03:51,739
+array in order to make the copy so we
+
+102
+00:03:49,489 --> 00:03:54,049
+don't just want to go up by a small
+
+103
+00:03:51,739 --> 00:03:55,819
+amount what we'd like to do is say that
+
+104
+00:03:54,049 --> 00:03:58,790
+the new size should be something like
+
+105
+00:03:55,819 --> 00:03:59,989
+double the size so down here in main
+
+106
+00:03:58,790 --> 00:04:02,629
+I'm going to say that the new size
+
+107
+00:03:59,989 --> 00:04:05,359
+should be the size times 2 and then I
+
+108
+00:04:02,629 --> 00:04:07,760
+can say size equals new size because
+
+109
+00:04:05,359 --> 00:04:11,540
+we've now updated the size of the array
+
+110
+00:04:07,760 --> 00:04:15,079
+and we can put our new element into the
+
+111
+00:04:11,540 --> 00:04:17,739
+additional position so ARR at size plus
+
+112
+00:04:15,079 --> 00:04:20,169
+plus is equal to
+
+113
+00:04:17,739 --> 00:04:22,630
+one more and that has the effect of
+
+114
+00:04:20,169 --> 00:04:25,300
+taking our original array which was only
+
+115
+00:04:22,630 --> 00:04:28,240
+ten elements and now storing the same
+
+116
+00:04:25,300 --> 00:04:30,910
+information in a new array that has 20
+
+117
+00:04:28,240 --> 00:04:32,470
+elements and then storing the position
+
+118
+00:04:30,910 --> 00:04:34,240
+10 which of course would be the eleventh
+
+119
+00:04:32,470 --> 00:04:34,630
+element the element that we're trying to
+
+120
+00:04:34,240 --> 00:04:37,150
+store
+
+121
+00:04:34,630 --> 00:04:38,800
+so we have the capability now not just
+
+122
+00:04:37,150 --> 00:04:41,020
+to create a static sized array we have
+
+123
+00:04:38,800 --> 00:04:46,199
+the capability to create an array that
+
+124
+00:04:41,020 --> 00:04:46,199
+can grow and we can do that on the heap
+

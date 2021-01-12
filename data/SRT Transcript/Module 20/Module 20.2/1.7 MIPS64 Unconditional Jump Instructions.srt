@@ -1,0 +1,56 @@
+1
+00:00:00,650 --> 00:00:04,560
+Let us now detail the MIPS64 jump instructions.
+
+2
+00:00:04,560 --> 00:00:10,760
+There are three such instructions: Jump, Jump
+and Link, and Jump register.
+
+3
+00:00:10,760 --> 00:00:16,110
+Jump is commonly used when performing unconditional
+jumps within a function or procedure.
+
+4
+00:00:16,110 --> 00:00:20,250
+This can be used for example for goto statements.
+
+5
+00:00:20,250 --> 00:00:26,650
+Jump and Link is used for function calls and
+has two jobs: it first saves the return address
+
+6
+00:00:26,650 --> 00:00:33,130
+in the R31 register, and then updates the
+program counter to the address of first instruction
+
+7
+00:00:33,130 --> 00:00:35,440
+of the function.
+
+8
+00:00:35,440 --> 00:00:40,330
+Note that the return address in this case
+is the address of the instruction we must
+
+9
+00:00:40,330 --> 00:00:43,520
+return to when the function call has completed.
+
+10
+00:00:43,520 --> 00:00:47,470
+Jump register is used to return from a function
+call.
+
+11
+00:00:47,470 --> 00:00:53,510
+Jump and Jump and link both use relative jump,
+whereas Jump register uses indirect jump and
+
+12
+00:00:53,510 --> 00:00:56,870
+holds the address of the target instruction
+in a register.
+

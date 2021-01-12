@@ -1,0 +1,90 @@
+1
+00:00:00,770 --> 00:00:04,250
+The figure here shows the state diagram of
+our CPU.
+
+2
+00:00:04,250 --> 00:00:09,110
+Each state in the diagram has a unique numerical
+ID, where the first state has the numerical
+
+3
+00:00:09,110 --> 00:00:10,540
+ID zero.
+
+4
+00:00:10,540 --> 00:00:15,910
+Each state encompasses an execution step of
+the processor for a given operation.
+
+5
+00:00:15,910 --> 00:00:22,140
+State zero and state one of the diagram are
+common for all instructions of our CPU because
+
+6
+00:00:22,140 --> 00:00:25,980
+the same operations are performed for fetch
+and decode steps.
+
+7
+00:00:25,980 --> 00:00:31,300
+The diagram starts diverging at the execution
+step because that is when the operations vary
+
+8
+00:00:31,300 --> 00:00:34,570
+according to the specifics of the instruction.
+
+9
+00:00:34,570 --> 00:00:39,250
+We see that from state 1, many arrows in the
+diagram that transition from one state to
+
+10
+00:00:39,250 --> 00:00:43,020
+another and they are labeled by specific instructions.
+
+11
+00:00:43,020 --> 00:00:48,770
+This is to indicate which instructions need
+those states at the end of the arrows.
+
+12
+00:00:48,770 --> 00:00:54,510
+For example, coming from state 1, if the CPU
+is executing a Load double instruction it
+
+13
+00:00:54,510 --> 00:00:57,330
+has to go to state 2.
+
+14
+00:00:57,330 --> 00:01:03,370
+One important thing to note is that the last
+state of each instruction always transitions
+
+15
+00:01:03,370 --> 00:01:07,299
+to the state zero, which is the instruction
+fetch state.
+
+16
+00:01:07,299 --> 00:01:11,909
+For example, the last state for the Load double
+instruction is state 4.
+
+17
+00:01:11,909 --> 00:01:15,460
+Once that is complete, the CPU goes to state
+0, which.
+
+18
+00:01:15,460 --> 00:01:20,380
+This allows the processor to execute the next
+instruction upon completion of the current
+
+19
+00:01:20,380 --> 00:01:20,670
+one.
+

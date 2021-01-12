@@ -1,0 +1,108 @@
+1
+00:00:00,599 --> 00:00:02,510
+Here's an example of a good AVL tree.
+
+2
+00:00:02,510 --> 00:00:06,720
+So what we did was we did some insertions,
+like we inserted the value of ten and we inserted
+
+3
+00:00:06,720 --> 00:00:12,030
+five and twenty and three, and those all got
+inserted onto the tree.
+
+4
+00:00:12,030 --> 00:00:15,190
+What we have here is that ten has a height
+of two.
+
+5
+00:00:15,190 --> 00:00:19,850
+Now how we calculated that was by looking
+at the height of the left sub child and the
+
+6
+00:00:19,850 --> 00:00:25,970
+height of the rights sub child, and determining
+that the maximum of those two heights is one
+
+7
+00:00:25,970 --> 00:00:27,619
+and then adding one to that.
+
+8
+00:00:27,619 --> 00:00:32,369
+So that's why the height of the node at three,
+for example, is a zero because the height
+
+9
+00:00:32,369 --> 00:00:36,030
+of the left sub child is a negative one and
+the height of the right sub child is a negative
+
+10
+00:00:36,030 --> 00:00:41,570
+one and we can add one to that, and add one
+to the maximum of that which is the same value,
+
+11
+00:00:41,570 --> 00:00:42,899
+and we get zero.
+
+12
+00:00:42,899 --> 00:00:47,859
+So what we can do is say that this is a good
+AVL tree because the height of all of the
+
+13
+00:00:47,859 --> 00:00:52,479
+nodes are, the height of all the left sub
+child for every node in the height of all
+
+14
+00:00:52,479 --> 00:00:58,729
+the right sub child for every node, is equal
+to a value that differing by only no more
+
+15
+00:00:58,729 --> 00:00:59,729
+than one.
+
+16
+00:00:59,729 --> 00:01:04,850
+So that the largest difference here is actually
+if we get to the root node, if we take a look
+
+17
+00:01:04,850 --> 00:01:10,920
+at the root node, the height of the left sub
+child five is one and the height of the right
+
+18
+00:01:10,920 --> 00:01:14,950
+sub child is zero, the value twenty.
+
+19
+00:01:14,950 --> 00:01:20,280
+We can also look at that node five which has
+a height of the left sub child of zero and
+
+20
+00:01:20,280 --> 00:01:23,130
+the height of the right sub child as negative
+one.
+
+21
+00:01:23,130 --> 00:01:26,289
+So, that's a difference of only, of only one.
+
+22
+00:01:26,289 --> 00:01:32,189
+So, in no case do we differ from the left
+sub child to the right sub child by more than
+
+23
+00:01:32,189 --> 00:01:34,900
+one and so this is an acceptable AVL tree.
+

@@ -1,0 +1,25 @@
+0:00:00.710,0:00:05.690
+Let’s try to write a program that reads
+from the user three words and then prints
+
+0:00:05.690,0:00:08.910
+the one that comes first in an alphabetical
+order.
+
+0:00:08.910,0:00:13.250
+For example let’s prompt the user please
+enter three words separated by space.
+
+0:00:13.250,0:00:18.019
+The user can then enter I don’t know dolphin
+cat tiger.
+
+0:00:18.019,0:00:23.980
+And then the program should respond with word
+that comes first in a lexicographical order.
+
+0:00:23.980,0:00:25.800
+In this case it is cat.
+
+0:00:25.800,0:00:27.900
+Let’s go ahead and implement it.

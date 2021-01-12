@@ -1,0 +1,9 @@
+1
+00:00:00,429 --> 00:00:02,810
+R8 is equal to 3 in our example.
+
+2
+00:00:02,810 --> 00:00:08,210
+R0 is ALWAYS equal to zero; therefore the
+two registers are not equal
+

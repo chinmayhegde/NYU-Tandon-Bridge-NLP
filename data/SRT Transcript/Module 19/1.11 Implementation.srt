@@ -1,0 +1,70 @@
+1
+00:00:00,799 --> 00:00:05,180
+So here I want to show you the code for the
+in-order, the pre-order, and the post-order
+
+2
+00:00:05,180 --> 00:00:06,240
+traversals in the tree.
+
+3
+00:00:06,240 --> 00:00:11,530
+And what you can see is that we've done, we're
+taking in a pointer to a node.
+
+4
+00:00:11,530 --> 00:00:16,350
+That may not be the best solution to, in fact
+we might have a driver function which calls
+
+5
+00:00:16,350 --> 00:00:21,630
+this for the root, but we do need to do this
+recursively so it will take in a node pointer
+
+6
+00:00:21,630 --> 00:00:23,539
+to the node that we care about.
+
+7
+00:00:23,539 --> 00:00:28,199
+And what you can see with these three pieces
+of code is that in reality they are the same;
+
+8
+00:00:28,199 --> 00:00:30,679
+the only difference is where we process.
+
+9
+00:00:30,679 --> 00:00:37,540
+And in this case it's just an output statement
+where we process the current node, the node’s
+
+10
+00:00:37,540 --> 00:00:38,540
+data section.
+
+11
+00:00:38,540 --> 00:00:43,429
+So, in the in-order traversal it’s processed
+in between the left and the right processing.
+
+12
+00:00:43,429 --> 00:00:47,539
+In the pre-order traversal, it's processes
+the head of the left and right processing.
+
+13
+00:00:47,539 --> 00:00:50,679
+And the post-order traversal it's done after.
+
+14
+00:00:50,679 --> 00:00:55,539
+And since this is a recursive function that
+really is going to consequently change the
+
+15
+00:00:55,539 --> 00:01:01,710
+output of the tree based on how we want to
+go through each individual node.
+

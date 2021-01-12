@@ -1,0 +1,76 @@
+1
+00:00:02,180 --> 00:00:06,230
+The instructions and all the data has to come
+from somewhere.
+
+2
+00:00:06,230 --> 00:00:11,520
+And in order for the code to be executed it
+has to be in a register built into the CPU,
+
+3
+00:00:11,520 --> 00:00:14,420
+that one that we spoke about called the instruction
+register.
+
+4
+00:00:14,420 --> 00:00:19,160
+So why don't we just load all of the code
+directly into the CPU and then run it directly
+
+5
+00:00:19,160 --> 00:00:20,180
+from there.
+
+6
+00:00:20,180 --> 00:00:24,289
+The unfortunate fact is that the amount of
+memory inside of a CPU is really measured
+
+7
+00:00:24,289 --> 00:00:25,289
+in bytes.
+
+8
+00:00:25,289 --> 00:00:27,289
+It's a very small amount of memory.
+
+9
+00:00:27,289 --> 00:00:32,870
+So it doesn't fit a lot of code in fact we
+really only want to store one instruction
+
+10
+00:00:32,870 --> 00:00:38,829
+directly inside the CPU and the reason that
+is because each additional byte of memory
+
+11
+00:00:38,829 --> 00:00:44,960
+costs a really significant amount of money
+to add to each CPU and the manufacturers of
+
+12
+00:00:44,960 --> 00:00:50,820
+these CPU's like Intel and A.M.D. want to
+keep the costs down as much as possible so
+
+13
+00:00:50,820 --> 00:00:55,770
+we can store everything in registers because
+it's just too expensive so what we do is we
+
+14
+00:00:55,770 --> 00:01:02,860
+create a memory hierarchy whereby each layer
+of the hierarchy adds a little bit more space
+
+15
+00:01:02,860 --> 00:01:07,140
+and costs a little bit less but in addition
+it runs a little bit slower.
+
+16
+00:01:07,140 --> 00:01:08,180
+And we'll see that.
+

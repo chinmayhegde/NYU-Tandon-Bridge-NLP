@@ -1,0 +1,165 @@
+1
+00:00:00,359 --> 00:00:04,360
+We've got an interesting problem that we've
+got to take into account here, and that is
+
+2
+00:00:04,360 --> 00:00:10,370
+that if the class contains any dynamic memory
+then there is an issue that comes up with
+
+3
+00:00:10,370 --> 00:00:12,610
+what we call shallow copy.
+
+4
+00:00:12,610 --> 00:00:20,470
+So all classes have a leftover of C's struct
+era, where they'll have an assignment operator
+
+5
+00:00:20,470 --> 00:00:25,500
+and what we call a copy constructor, a constructor
+that can copy an existing object.
+
+6
+00:00:25,500 --> 00:00:30,580
+That's really a left over C++ because with
+structs we were always able to say A equals
+
+7
+00:00:30,580 --> 00:00:34,040
+B and all the data members would be copied
+over.
+
+8
+00:00:34,040 --> 00:00:39,500
+Unfortunately, because we're in C++ and we
+are using pointers, where pointers are involved
+
+9
+00:00:39,500 --> 00:00:44,600
+those built in operators are going to copy
+the pointers instead of copying where the
+
+10
+00:00:44,600 --> 00:00:46,579
+pointers of pointing to.
+
+11
+00:00:46,579 --> 00:00:50,060
+And that's really problematic and this is
+known as what's called a shallow copy.
+
+12
+00:00:50,060 --> 00:00:53,110
+So I'm going to show you some code here.
+
+13
+00:00:53,110 --> 00:00:56,649
+What we've got is we've got a class called
+thing, it's very boring, but it contains a
+
+14
+00:00:56,649 --> 00:00:58,770
+pointer to a value.
+
+15
+00:00:58,770 --> 00:01:05,890
+And the thing object constructor is going
+to create a new integer on the heap which
+
+16
+00:01:05,890 --> 00:01:07,920
+is going to store that value.
+
+17
+00:01:07,920 --> 00:01:12,210
+So here in main I'm creating thing one and
+thing two, and yes that is a Dr. Seuss reference
+
+18
+00:01:12,210 --> 00:01:14,030
+in case you get it.
+
+19
+00:01:14,030 --> 00:01:19,560
+And what I want you to see is that thing one
+has a value that points to the value one,
+
+20
+00:01:19,560 --> 00:01:25,010
+and thing two has a value pointer that points
+integer two on the heap.
+
+21
+00:01:25,010 --> 00:01:29,940
+So on the heap we've got these two integers,
+one and two, and we've got on the stack we've
+
+22
+00:01:29,940 --> 00:01:34,600
+got two variables, variable one and variable
+two, each have a value pointer.
+
+23
+00:01:34,600 --> 00:01:39,150
+And the value pointers pointing appropriately,
+so on the surface this all works perfectly
+
+24
+00:01:39,150 --> 00:01:41,750
+fine and everything's okay.
+
+25
+00:01:41,750 --> 00:01:48,420
+But when we set one equal to two, when we
+say one equals two, that has the effect of
+
+26
+00:01:48,420 --> 00:01:50,590
+copying the pointers.
+
+27
+00:01:50,590 --> 00:01:56,450
+And now that we've copied the pointers, we
+have the value pointers both pointing at the
+
+28
+00:01:56,450 --> 00:02:04,549
+same object on the heap, instead of the same
+object holding the same value.
+
+29
+00:02:04,549 --> 00:02:09,869
+So if we looked at the value in object one
+we would see two and if we look at the value
+
+30
+00:02:09,869 --> 00:02:15,340
+in object two we would see two but the problem
+is that those two pointers are actually pointing
+
+31
+00:02:15,340 --> 00:02:16,860
+to the same thing.
+
+32
+00:02:16,860 --> 00:02:23,819
+And what happened to the variable, the integer
+that object one was pointing at, it's a memory
+
+33
+00:02:23,819 --> 00:02:24,819
+leak.
+
+34
+00:02:24,819 --> 00:02:29,290
+So here we've created a memory leak; just
+by copying an object.
+
+35
+00:02:29,290 --> 00:02:33,000
+And we can’t allow that to happen; so we've
+got to find a solution to this.
+

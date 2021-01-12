@@ -1,0 +1,152 @@
+1
+00:00:00,550 --> 00:00:04,650
+When we're working with binary search trees,
+there are times that we want to process every
+
+2
+00:00:04,650 --> 00:00:06,220
+node in the tree.
+
+3
+00:00:06,220 --> 00:00:11,070
+And the way that we do that, and not by searching
+I mean we actually want to go into each node
+
+4
+00:00:11,070 --> 00:00:13,570
+in the tree and do some activity…
+
+5
+00:00:13,570 --> 00:00:18,100
+If we're going to do that we have a number
+of ways that we can do that and the order
+
+6
+00:00:18,100 --> 00:00:21,730
+of it really depends on how we want to go
+through the tree.
+
+7
+00:00:21,730 --> 00:00:24,640
+Now if we're going to do the same thing to
+every node really doesn't matter, we can just
+
+8
+00:00:24,640 --> 00:00:30,960
+do it using any of these orders, but if we
+care about the way that the processing happens.
+
+9
+00:00:30,960 --> 00:00:36,620
+So, for search for example on a file system,
+which is designed as a tree, on a search on
+
+10
+00:00:36,620 --> 00:00:41,329
+a file system we probably want to search the
+higher stuff first and search the later stuff
+
+11
+00:00:41,329 --> 00:00:42,510
+later.
+
+12
+00:00:42,510 --> 00:00:47,440
+That's called a level order traversal, but
+we may want to do different types of traversals
+
+13
+00:00:47,440 --> 00:00:52,739
+which are: in-order, pre-order, or post order
+depending on when we want to search this note
+
+14
+00:00:52,739 --> 00:00:55,949
+or when we want to process I'll call it, this
+node.
+
+15
+00:00:55,949 --> 00:01:01,559
+So what we're asking here is if we look at
+it in a recursive fashion, when do we want
+
+16
+00:01:01,559 --> 00:01:03,159
+to search the root node.
+
+17
+00:01:03,159 --> 00:01:08,520
+So, we start the process does that mean that
+we search the root node first or does that
+
+18
+00:01:08,520 --> 00:01:12,730
+mean we search the leftmost node, the minimum
+node first.
+
+19
+00:01:12,730 --> 00:01:18,150
+So, in a binary search tree really in any
+binary tree, we have to decide what the order
+
+20
+00:01:18,150 --> 00:01:19,500
+of traversal is.
+
+21
+00:01:19,500 --> 00:01:26,090
+So, in-order traversal processes the left
+nodes recursively first and then it processes
+
+22
+00:01:26,090 --> 00:01:29,940
+the so-called this node and then a processes
+the right nodes.
+
+23
+00:01:29,940 --> 00:01:35,140
+So, the pre-order traversal would just be
+that we do this node first and then the left
+
+24
+00:01:35,140 --> 00:01:36,140
+and then the right.
+
+25
+00:01:36,140 --> 00:01:39,460
+And the post-order would be that we do the
+left and then the right and then the this;
+
+26
+00:01:39,460 --> 00:01:43,160
+so it really decides when we process the this
+node.
+
+27
+00:01:43,160 --> 00:01:48,650
+Level order traversal processes it based on
+depth and this might also be known as a breadth
+
+28
+00:01:48,650 --> 00:01:52,580
+first search, it’s actually an interesting
+problem but what we're doing is we're looking
+
+29
+00:01:52,580 --> 00:01:55,060
+at the tree and going out word on the tree.
+
+30
+00:01:55,060 --> 00:01:59,780
+So we're not going down one side and then
+coming back and doing the other side we're
+
+31
+00:01:59,780 --> 00:02:01,790
+going outward on the levels of the tree.
+
+32
+00:02:01,790 --> 00:02:05,330
+And we'll see the code for this and it will
+become a lot clearer in the next slides.
+

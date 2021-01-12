@@ -1,0 +1,28 @@
+1
+00:00:00,969 --> 00:00:05,379
+In this model we're going to start working
+with files on the file system as input into
+
+2
+00:00:05,379 --> 00:00:06,430
+our programs.
+
+3
+00:00:06,430 --> 00:00:11,340
+We're going to use these files to bring in
+data into our program and then we're also
+
+4
+00:00:11,340 --> 00:00:15,269
+going to use files to store information after
+we're done with it.
+
+5
+00:00:15,269 --> 00:00:19,660
+So this whole module is about bringing in
+information and sending it out to the file
+
+6
+00:00:19,660 --> 00:00:21,069
+system for permanent storage.
+

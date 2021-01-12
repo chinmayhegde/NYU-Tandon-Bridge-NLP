@@ -1,0 +1,22 @@
+1
+00:00:00,799 --> 00:00:02,010
+That is correct.
+
+2
+00:00:02,010 --> 00:00:06,390
+The load double instruction needs to accesss
+the memory to get the data and write the data
+
+3
+00:00:06,390 --> 00:00:08,410
+to the destination register.
+
+4
+00:00:08,410 --> 00:00:12,520
+The first part is done in the memory step,
+and the second one is done in the WriteBack
+
+5
+00:00:12,520 --> 00:00:12,950
+step.
+

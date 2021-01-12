@@ -1,0 +1,181 @@
+1
+00:00:00,750 --> 00:00:04,580
+So again we have the breakdown of whether
+we use a linked list or whether we use an
+
+2
+00:00:04,580 --> 00:00:10,460
+array to make the decision on what we should
+use of the underlying data storage structure
+
+3
+00:00:10,460 --> 00:00:11,860
+for our queue.
+
+4
+00:00:11,860 --> 00:00:16,260
+so if we take a look at the list and we're
+breaking it down by function here.
+
+5
+00:00:16,260 --> 00:00:19,820
+we take a look at the push function and of
+course the push function on the list; it's
+
+6
+00:00:19,820 --> 00:00:21,550
+still going to be constant time.
+
+7
+00:00:21,550 --> 00:00:25,510
+Now we can say it's going to be constant time
+because we're going to have pointers to both
+
+8
+00:00:25,510 --> 00:00:29,990
+the head in the tail of the list and we're
+going to make sure that we can insert at either
+
+9
+00:00:29,990 --> 00:00:35,970
+the head or the tail for us, for our purposes,
+we’ll be inserting a tail and will be popping
+
+10
+00:00:35,970 --> 00:00:39,309
+from the front but that's overly unimportant.
+
+11
+00:00:39,309 --> 00:00:45,630
+the array, again, for the push operation sometimes
+it's going to be constant time and sometimes
+
+12
+00:00:45,630 --> 00:00:46,850
+it's going to be linear.
+
+13
+00:00:46,850 --> 00:00:51,530
+So the problem here is again if we run out
+of space in the underlying data structure
+
+14
+00:00:51,530 --> 00:00:56,280
+of the array, We're going to have to expand
+the array and that takes a linear amount of
+
+15
+00:00:56,280 --> 00:00:57,280
+time.
+
+16
+00:00:57,280 --> 00:00:58,480
+so we have that trouble still.
+
+17
+00:00:58,480 --> 00:01:03,629
+Now pop on a list, we've said it's constant
+time and that's just removal of a node from
+
+18
+00:01:03,629 --> 00:01:06,650
+the list, so we're just going to have a simple
+delete operation.
+
+19
+00:01:06,650 --> 00:01:11,369
+but Pop on an array is really problematic,
+because we're going to be pushing out to the
+
+20
+00:01:11,369 --> 00:01:16,930
+end the bottom of the array; it means we have
+to remove from the front from the top of the
+
+21
+00:01:16,930 --> 00:01:22,510
+array. and if we remove the zero element from
+the arraign we're going to have to move all
+
+22
+00:01:22,510 --> 00:01:24,729
+the elements upwards by one.
+
+23
+00:01:24,729 --> 00:01:30,110
+So ultimately the pop operation is going to
+take a linear time and that right there is
+
+24
+00:01:30,110 --> 00:01:32,240
+incredibly problematic.
+
+25
+00:01:32,240 --> 00:01:33,560
+We'll come back to that in just a minute.
+
+26
+00:01:33,560 --> 00:01:38,090
+the top operation on either of them is going
+to take constant time, the clear operation
+
+27
+00:01:38,090 --> 00:01:41,810
+to get on the linked list is going to take
+a linear time but the array is going to take
+
+28
+00:01:41,810 --> 00:01:45,920
+constant time and is empty in size are all
+going to take constant time.
+
+29
+00:01:45,920 --> 00:01:49,710
+So if we come back, circle back to thinking
+about that pop operation.
+
+30
+00:01:49,710 --> 00:01:55,140
+You can tell that on a range of a very large
+size we can see that there's going to be a
+
+31
+00:01:55,140 --> 00:02:01,280
+very big problem because removing that top
+element from the array Is going to cause us
+
+32
+00:02:01,280 --> 00:02:08,070
+to have to shift everything up by one element
+inside the array. and that's a very very costly
+
+33
+00:02:08,070 --> 00:02:11,610
+endeavor so it's going to take us a long time
+to do that.
+
+34
+00:02:11,610 --> 00:02:16,040
+there are mechanisms for dealing with it,
+for instance we could record where the start
+
+35
+00:02:16,040 --> 00:02:21,980
+of the array is instead of assuming that it's
+at the zero position but that runs the potential
+
+36
+00:02:21,980 --> 00:02:25,840
+of wasting space in creating a more circular
+array.
+
+37
+00:02:25,840 --> 00:02:29,790
+so there are mechanisms to dealing with this
+but ultimately what I think we're coming to
+
+38
+00:02:29,790 --> 00:02:33,689
+terms with is that it's easier and more efficient
+to store this as a linked list.
+

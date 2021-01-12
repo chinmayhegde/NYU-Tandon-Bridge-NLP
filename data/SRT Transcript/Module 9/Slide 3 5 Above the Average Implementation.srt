@@ -1,0 +1,55 @@
+0:00:00.640,0:00:01.640
+Okay.
+
+0:00:01.640,0:00:08.360
+So now we have our sum variable, we set it
+to zero and we start iterating over the array.
+
+0:00:08.360,0:00:14.340
+We first add seventy one into sum, that would
+make it seventy one, then our index would
+
+0:00:14.340,0:00:15.340
+be two.
+
+0:00:15.340,0:00:20.199
+I'm not changing the index value but the index
+is going to change again, zero, one, two,
+
+0:00:20.199,0:00:22.669
+three, four, as we iterate over the array.
+
+0:00:22.669,0:00:28.490
+So, a second iteration index is one, we’re
+adding eighty six to our sum, that would make
+
+0:00:28.490,0:00:30.829
+it one fifty seven.
+
+0:00:30.829,0:00:37.609
+Then we're adding the sixty eight, it would
+make sum two twenty five and eventually we'll
+
+0:00:37.609,0:00:42.940
+add ninety four that would make sum be three
+nineteen, I think.
+
+0:00:42.940,0:00:50.199
+Then we have our average variable and average
+is three nineteen divided by four, which is
+
+0:00:50.199,0:00:53.199
+a seventy nine point seven five.
+
+0:00:53.199,0:00:55.629
+We just print this value as the average.
+
+0:00:55.629,0:01:02.210
+Now, we’ll need to make another path over
+the numbers in order to figure out which ones
+
+0:01:02.210,0:01:03.210
+are above the average.
+
+0:01:03.210,0:01:04.339
+Let’s go and do that.

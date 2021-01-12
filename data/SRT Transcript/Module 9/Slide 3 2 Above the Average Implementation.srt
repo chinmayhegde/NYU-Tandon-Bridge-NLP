@@ -1,0 +1,190 @@
+0:00:00.130,0:00:01.130
+Okay.
+
+0:00:01.130,0:00:09.120
+So let's start with implementing this program;
+so first, let's ask our user, cout ‘please
+
+0:00:09.120,0:00:10.680
+enter the number of students.’
+
+0:00:10.680,0:00:17.070
+And we should also mention that we're expecting
+to get a number that is less or equal to sixty
+
+0:00:17.070,0:00:22.359
+as we said we are assuming that the number
+of students is less than sixty so we can use
+
+0:00:22.359,0:00:26.169
+a static array physically of sixty elements.
+
+0:00:26.169,0:00:32.910
+So, let’s say, no more than… you know
+instead of writing sixty hard coded, I think
+
+0:00:32.910,0:00:37.800
+it would be better if we’ll just defined
+constant variable.
+
+0:00:37.800,0:00:45.270
+So const int max class size, I’ll name it,
+and I’ll set it to sixty and then I would
+
+0:00:45.270,0:00:50.360
+just say, no more than, and I'll just take
+the max class size value.
+
+0:00:50.360,0:00:53.829
+And that would be our announcement.
+
+0:00:53.829,0:00:54.829
+Okay.
+
+0:00:54.829,0:01:02.000
+Now let's read the number of students; so
+let's create a variable num of students.
+
+0:01:02.000,0:01:07.600
+And let's read whatever the user enters into
+this variable.
+
+0:01:07.600,0:01:09.240
+So now we have to…
+
+0:01:09.240,0:01:15.639
+Okay, so let's create an array of physical
+size of sixty so we can store the elements,
+
+0:01:15.639,0:01:16.859
+the grades in it.
+
+0:01:16.859,0:01:22.649
+So, int, let’s call it grades list, and
+it's going to be the size of sixty.
+
+0:01:22.649,0:01:28.649
+Okay so, now we have the number of students,
+the array and we should start reading the
+
+0:01:28.649,0:01:31.100
+grades into this array.
+
+0:01:31.100,0:01:35.030
+So for that we would obviously use some kind
+of a loop.
+
+0:01:35.030,0:01:40.719
+Let's take a for loop for that, actually when
+we implemented the program of just calculating
+
+0:01:40.719,0:01:47.790
+the average, we simultaneously both read the
+input and summed all the grades up in order
+
+0:01:47.790,0:01:48.869
+to calculate the average.
+
+0:01:48.869,0:01:56.009
+But now since we're storing the grades in
+a data structure, I think we can split this
+
+0:01:56.009,0:01:57.939
+task into a few steps.
+
+0:01:57.939,0:02:04.090
+So, first step would be reading the grades:
+so we’ll probably have a form for that.
+
+0:02:04.090,0:02:12.760
+Second step would be calculating the average,
+and then as we pass over the data one more
+
+0:02:12.760,0:02:16.640
+time, will print grades above the average.
+
+0:02:16.640,0:02:22.280
+So we're going to have three steps and not
+only like two; one for reading and calculating
+
+0:02:22.280,0:02:24.970
+the average and then to print the ones that
+are above.
+
+0:02:24.970,0:02:30.100
+We’ll also split it to a reading step and
+the calculating average step that are separate.
+
+0:02:30.100,0:02:32.340
+Okay, so let's start with reading the grade.
+
+0:02:32.340,0:02:39.900
+So, let's have like a variable for a current
+grade: so curr grade and each iteration we're
+
+0:02:39.900,0:02:46.130
+going to read the current grade, and we’ll
+also want to store it in our array.
+
+0:02:46.130,0:02:53.040
+So for that, we would probably iterate over
+the indexes of the array; they basically said
+
+0:02:53.040,0:02:56.320
+the location where we put this grade in.
+
+0:02:56.320,0:03:04.010
+So we'll have an ind variable, initially ind
+would be set to zero, each iteration we would
+
+0:03:04.010,0:03:06.790
+increment or increase this ind.
+
+0:03:06.790,0:03:13.790
+And we'll just put our current grade inside
+our grades list at the ind position.
+
+0:03:13.790,0:03:17.190
+This is where our current grade would go to.
+
+0:03:17.190,0:03:25.070
+So, basically each iteration we read a grade
+and we store it in our grades list in the
+
+0:03:25.070,0:03:26.070
+ind position.
+
+0:03:26.070,0:03:32.470
+We start with index equals zero and each iteration
+we increase our index for the next element.
+
+0:03:32.470,0:03:38.690
+So first time, firstly iteration, we insert
+our grade into grades list zero, second iteration
+
+0:03:38.690,0:03:42.380
+grades list one, third iteration grades list
+two and so on.
+
+0:03:42.380,0:03:49.090
+We’ll keep on doing that while our index
+is inside the valid range for our array, which
+
+0:03:49.090,0:03:52.790
+is no more than a number of students.
+
+0:03:52.790,0:03:58.910
+So as long as index is less the number of
+students, we want to keep on going and reading.
+
+0:03:58.910,0:04:04.680
+Let's try to trace only this piece of code
+that we have up to now so we'll make sure
+
+0:04:04.680,0:04:11.850
+we get exactly how this works, why we stopped
+or controlled this loop exactly like that.
+
+0:04:11.850,0:04:14.400
+Small details that, I think, by tracing we
+would get it with a better understanding.

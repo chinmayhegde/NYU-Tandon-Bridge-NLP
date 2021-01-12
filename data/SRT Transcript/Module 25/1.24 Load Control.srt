@@ -1,0 +1,151 @@
+1
+00:00:00,410 --> 00:00:06,279
+Another issue that we can use page faults
+to look at is what we call load control, or
+
+2
+00:00:06,279 --> 00:00:11,400
+we can use the number of page faults that
+are happening in a system to make a decision
+
+3
+00:00:11,400 --> 00:00:15,690
+of whether or not to swap a process altogether
+out.
+
+4
+00:00:15,690 --> 00:00:19,250
+Now the benefit, of course, of swapping a
+process is that we get all of its memory,
+
+5
+00:00:19,250 --> 00:00:21,270
+not just a portion of its memory.
+
+6
+00:00:21,270 --> 00:00:25,690
+But that whole amount of main memory is going
+to be removed and reallocated to the other
+
+7
+00:00:25,690 --> 00:00:30,439
+running processes and of course that process
+can be brought back at a later time.
+
+8
+00:00:30,439 --> 00:00:34,700
+We can do that we've always been able to do
+that but now we can do it on a much grander
+
+9
+00:00:34,700 --> 00:00:35,700
+scale.
+
+10
+00:00:35,700 --> 00:00:41,920
+So, now we can use the number of page faults
+to tell us when it's time to choose a process
+
+11
+00:00:41,920 --> 00:00:43,430
+to swap.
+
+12
+00:00:43,430 --> 00:00:46,770
+But the question then becomes which process
+do we swap?
+
+13
+00:00:46,770 --> 00:00:51,170
+And we have a couple of options, of course,
+if we have priorities in our processes, we
+
+14
+00:00:51,170 --> 00:00:53,609
+could use the lowest priority process.
+
+15
+00:00:53,609 --> 00:00:58,949
+We could also choose the faulting process
+as it's the greatest probability that it doesn't
+
+16
+00:00:58,949 --> 00:01:01,100
+have its working set in the resident.
+
+17
+00:01:01,100 --> 00:01:05,740
+So, the faulting process of course, if we
+swap that out, that means we don't have to
+
+18
+00:01:05,740 --> 00:01:10,710
+recover a page; we don't have to deal with
+the page fault, we effectively deal with the
+
+19
+00:01:10,710 --> 00:01:13,550
+page fault by swapping the entire process.
+
+20
+00:01:13,550 --> 00:01:18,840
+The last process activated is certainly the
+least likely to have its working set resident.
+
+21
+00:01:18,840 --> 00:01:22,850
+We could also choose the process with the
+smallest local resident set because it's the
+
+22
+00:01:22,850 --> 00:01:28,770
+one that's going to be easiest to offload
+and easiest to onload later on, when we decide
+
+23
+00:01:28,770 --> 00:01:31,120
+to run this process and finish it up.
+
+24
+00:01:31,120 --> 00:01:35,180
+We could also choose the largest process,
+the exact the opposite, because we get the
+
+25
+00:01:35,180 --> 00:01:39,160
+most amount of main memory and it's most likely
+that we're going to be able finish those other
+
+26
+00:01:39,160 --> 00:01:43,090
+processes If we get back a large chunk of
+main memory.
+
+27
+00:01:43,090 --> 00:01:47,540
+If we know how long we expect this process
+to run for, we can look at the process with
+
+28
+00:01:47,540 --> 00:01:50,170
+the largest remaining execution window.
+
+29
+00:01:50,170 --> 00:01:54,600
+And because the if we aren't going to finish
+this process for another five hours, who cares
+
+30
+00:01:54,600 --> 00:01:57,300
+if it's another five hours and five minutes
+more.
+
+31
+00:01:57,300 --> 00:02:04,080
+So, load control can be done by looking just
+at the number of page faults and it is a reasonable
+
+32
+00:02:04,080 --> 00:02:06,390
+solution for the medium term scheduling algorithm.
+

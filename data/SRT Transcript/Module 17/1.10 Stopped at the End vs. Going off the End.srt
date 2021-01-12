@@ -1,0 +1,254 @@
+1
+00:00:00,690 --> 00:00:05,770
+One of the problems a lot of students have
+with linked lists is the idea of whether they
+
+2
+00:00:05,770 --> 00:00:11,090
+should stop at the last node and do some more,
+or whether they need to go off into the null.
+
+3
+00:00:11,090 --> 00:00:16,990
+And this often comes down to a lack of understanding
+with when to stop.
+
+4
+00:00:16,990 --> 00:00:19,230
+So I'd like to go over that at this point.
+
+5
+00:00:19,230 --> 00:00:23,390
+Both solutions are going to use a while loop,
+but the conditions inside those while loops
+
+6
+00:00:23,390 --> 00:00:25,290
+are going to be slightly different.
+
+7
+00:00:25,290 --> 00:00:31,380
+Stopping at the end means that we want to
+run the while loop as long as the next pointer
+
+8
+00:00:31,380 --> 00:00:35,239
+in the node that we're looking at is not equal
+to the null pointer.
+
+9
+00:00:35,239 --> 00:00:40,949
+Now that requires that we keep a little bit
+of track of the current pointer.
+
+10
+00:00:40,949 --> 00:00:46,359
+And it also requires that we're very careful
+that we make sure that we have at least one
+
+11
+00:00:46,359 --> 00:00:52,630
+node, because if we start a temp pointer at
+null and we say temp pointer is next, then
+
+12
+00:00:52,630 --> 00:00:55,449
+we've just de-ref null and the program crashed.
+
+13
+00:00:55,449 --> 00:00:59,499
+So we've got to make sure that the linked
+list has at least one node and if we can do
+
+14
+00:00:59,499 --> 00:01:07,150
+that then we can advance that temporary pointer
+until we reach the very end of the linked
+
+15
+00:01:07,150 --> 00:01:09,140
+list, the very last node in the linked list.
+
+16
+00:01:09,140 --> 00:01:13,710
+However, if what we want to do for example
+is count the number of nodes on the list then
+
+17
+00:01:13,710 --> 00:01:18,110
+we want to include that last node and we want
+to go until the temporary pointer equals the
+
+18
+00:01:18,110 --> 00:01:19,500
+null pointer.
+
+19
+00:01:19,500 --> 00:01:22,800
+Here's the biggest problem: we can't go backwards.
+
+20
+00:01:22,800 --> 00:01:29,540
+Once we've reached know all we can't take
+a step back and move to the last node, so
+
+21
+00:01:29,540 --> 00:01:34,090
+we've got to decide from the beginning whether
+we should go and stop at the last note or
+
+22
+00:01:34,090 --> 00:01:37,710
+whether we should go off the end of the last
+node because we don't even need it.
+
+23
+00:01:37,710 --> 00:01:41,560
+Here's a here's a size function so here's
+the function that size and what it does a
+
+24
+00:01:41,560 --> 00:01:47,140
+starts a simple counter at zero sets the temporary
+pointer equal to head and runs that while
+
+25
+00:01:47,140 --> 00:01:51,070
+loop until the temporary pointer gets to null
+pointer.
+
+26
+00:01:51,070 --> 00:01:55,240
+It really is just advancing that temporary
+pointer; you see that line of code that says
+
+27
+00:01:55,240 --> 00:02:01,010
+temp equals temps next, temp arrow next that
+line of code is going to advance that point
+
+28
+00:02:01,010 --> 00:02:04,230
+or node by node and we're going to update
+the counter.
+
+29
+00:02:04,230 --> 00:02:08,280
+When we're done temp is going to be equal
+to the null pointer and we're done, we've
+
+30
+00:02:08,280 --> 00:02:09,789
+counted all the nodes.
+
+31
+00:02:09,789 --> 00:02:14,770
+So if you take a look at a couple of views
+of this, if the list is empty to begin with
+
+32
+00:02:14,770 --> 00:02:20,200
+then temp equals no all temp equals had causes
+temp to be null, we don't do anything in the
+
+33
+00:02:20,200 --> 00:02:24,910
+while loop and we will return zero which makes
+sense because list is empty.
+
+34
+00:02:24,910 --> 00:02:30,370
+So that's the simple idea of how to do a size
+function but if we want to see how to do some
+
+35
+00:02:30,370 --> 00:02:35,510
+work at the end like an insertion at the end
+assuming we don't have a tail pointer.
+
+36
+00:02:35,510 --> 00:02:38,760
+Then the first thing to check of course is
+to see if the list is empty and if the list
+
+37
+00:02:38,760 --> 00:02:42,650
+is empty, then an insert at the end is the
+same as the insert at the head.
+
+38
+00:02:42,650 --> 00:02:47,540
+So let's just go ahead and use that code again
+so we can reuse that inserted head code.
+
+39
+00:02:47,540 --> 00:02:50,930
+But assuming that there are some nodes on
+the list, we're going to have to go search
+
+40
+00:02:50,930 --> 00:02:54,400
+for the last note on the list and that's what
+this…
+
+41
+00:02:54,400 --> 00:02:56,290
+That's what this function is going to do here.
+
+42
+00:02:56,290 --> 00:03:00,020
+The temporary pointer points at the new node
+that we're going to create.
+
+43
+00:03:00,020 --> 00:03:05,540
+And now it's time to find out where to insert
+this new node so we have the end pointer and
+
+44
+00:03:05,540 --> 00:03:11,271
+calling end pointer and we say while ends
+next is not equal to null pointer then we
+
+45
+00:03:11,271 --> 00:03:13,290
+just advance that and pointer.
+
+46
+00:03:13,290 --> 00:03:19,569
+Of course this is a linear time problem, it's
+big O of N to find the last node in the list
+
+47
+00:03:19,569 --> 00:03:23,770
+and then we can just update the next pointer
+of the last note on the list to point to the
+
+48
+00:03:23,770 --> 00:03:25,970
+temp, to point to the new node.
+
+49
+00:03:25,970 --> 00:03:32,220
+So what we've done is we've created a loop
+that finds us the last node and it's very
+
+50
+00:03:32,220 --> 00:03:37,770
+different from the loop before it which counts
+the last node, or counts all the nodes including
+
+51
+00:03:37,770 --> 00:03:38,840
+the last node.
+
+52
+00:03:38,840 --> 00:03:44,340
+So we've got to keep in mind that those conditions
+are quite different in those while loops and
+
+53
+00:03:44,340 --> 00:03:46,210
+to use the appropriate one at the appropriate
+time.
+

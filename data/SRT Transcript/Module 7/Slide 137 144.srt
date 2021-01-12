@@ -1,0 +1,59 @@
+0:00:00.640,0:00:08.250
+If we look back at our t1 t2 and t3 the number
+of primitive operations each one of them does
+
+0:00:08.250,0:00:13.760
+as a function of the input size. And we will
+take or we will try to figure out the asymptotic
+
+0:00:13.760,0:00:22.310
+order of these three expressions. So the first
+one dropping off the four and dropping the
+
+0:00:22.310,0:00:30.859
+leading constant five. We will be left with
+theta of N. And same thing for t2 of N. Again
+
+0:00:30.859,0:00:38.140
+the four is ignored and the leading constant
+of three is also dropped off. So we are also
+
+0:00:38.140,0:00:48.489
+left with N. And for t3 we are left with the
+square root of N. That means that t1 and t2
+
+0:00:48.489,0:00:58.989
+are both theta of N and t3 is theta of square
+root of N. Now that’s a bit surprising if
+
+0:00:58.989,0:01:06.490
+we look at the results we got here if we are
+comparing not the actual expression of 5n
+
+0:01:06.490,0:01:11.560
+plus four three and plus four and six square
+root of N plus four. But comparing their order
+
+0:01:11.560,0:01:18.360
+for growth N N and square root of N if we
+are comparing the order of growth then we
+
+0:01:18.360,0:01:26.670
+get that t1 and t2 are equivalent asymptotic
+speaking. That means that going the entire
+
+0:01:26.670,0:01:34.650
+range or going half of the range gives us
+two algorithms that are considered to be equivalent
+
+0:01:34.650,0:01:40.860
+to one another. Where the third algorithm
+where we go for the first portion of the square
+
+0:01:40.860,0:01:50.770
+root of N first numbers that is asymptotically
+lower than N right. Square root of N is asymptotically
+
+0:01:50.770,0:01:57.850
+lower than N that means that t3 of N is asymptotically
+better than t1 and t2 of N.

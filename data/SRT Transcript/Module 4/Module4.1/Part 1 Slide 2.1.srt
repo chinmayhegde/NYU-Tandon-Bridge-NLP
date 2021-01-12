@@ -1,0 +1,237 @@
+1
+00:00:00,659 --> 00:00:07,410
+Ok so let’s get into the details of int
+of the data type for integers.
+
+2
+00:00:07,410 --> 00:00:15,769
+So integers as we said are used to store integer
+numbers so every time we want an integer number
+
+3
+00:00:15,769 --> 00:00:17,939
+we use the type int.
+
+4
+00:00:17,939 --> 00:00:24,940
+Let’s see how this int data is represented
+inside the memory of our computer.
+
+5
+00:00:24,940 --> 00:00:29,199
+What is the inner representation of an int.
+
+6
+00:00:29,199 --> 00:00:32,490
+So there are basically two options here.
+
+7
+00:00:32,490 --> 00:00:41,460
+Either each data would be of a different size
+for example smaller numbers would take less
+
+8
+00:00:41,460 --> 00:00:46,670
+space less bits in order to represent them.
+
+9
+00:00:46,670 --> 00:00:51,780
+And larger number would take more space in
+order to represent them.
+
+10
+00:00:51,780 --> 00:00:56,350
+That would make integers be of a different
+sizes.
+
+11
+00:00:56,350 --> 00:01:04,460
+Another option would be that every int data
+would have a fixed amount of bytes in its
+
+12
+00:01:04,460 --> 00:01:05,460
+representation.
+
+13
+00:01:05,460 --> 00:01:13,920
+There are advantages and disadvantages for
+each one of these options and C++ the data
+
+14
+00:01:13,920 --> 00:01:18,880
+types the int datas are all of the same size.
+
+15
+00:01:18,880 --> 00:01:27,610
+Each int data is four bytes long which is
+32 bits each byte is 8 bits so four bytes
+
+16
+00:01:27,610 --> 00:01:29,200
+is 32 bits.
+
+17
+00:01:29,200 --> 00:01:33,640
+So each integer is 32 bits long.
+
+18
+00:01:33,640 --> 00:01:41,730
+For example if we have an integer x then inside
+our memory there would be four bytes for this
+
+19
+00:01:41,730 --> 00:01:42,730
+x.
+
+20
+00:01:42,730 --> 00:01:47,250
+Let’s say starting at address 100 until
+104.
+
+21
+00:01:47,250 --> 00:01:56,560
+If we have an integer y after x would come
+this four bytes for the y from 104 to 108.
+
+22
+00:01:56,560 --> 00:02:01,790
+So each int data uses four bytes.
+
+23
+00:02:01,790 --> 00:02:13,000
+So I think the greatest disadvantage of a
+fixed size variables or fixed size data is
+
+24
+00:02:13,000 --> 00:02:21,310
+that we can say that 32 bits is quite a lot
+we can represent two to the power of 32 different
+
+25
+00:02:21,310 --> 00:02:22,930
+values in 32 bits.
+
+26
+00:02:22,930 --> 00:02:28,130
+Two to the power of 32 by the way is around
+four billion different numbers so there are
+
+27
+00:02:28,130 --> 00:02:31,220
+a lot of numbers we can represent in an int
+variable.
+
+28
+00:02:31,220 --> 00:02:37,820
+But then if we were thinking about that integer
+number domain it is an infinite domain and
+
+29
+00:02:37,820 --> 00:02:46,570
+if our program would like to represent a number
+that are very big for example astronomical
+
+30
+00:02:46,570 --> 00:02:52,960
+distances then 32 bits won’t be enough for
+that kind of data.
+
+31
+00:02:52,960 --> 00:03:00,370
+So that’s the biggest disadvantage of using
+a fixed size data but then there are also
+
+32
+00:03:00,370 --> 00:03:04,819
+a lot of advantages of using fixed size data
+and we will talk more about them in more detail
+
+33
+00:03:04,819 --> 00:03:10,000
+when we speak about arrays later on in this
+course.
+
+34
+00:03:10,000 --> 00:03:21,819
+Ok so inside the memory each integer takes
+four bytes let’s think how the integer is
+
+35
+00:03:21,819 --> 00:03:23,460
+represented inside these four bytes.
+
+36
+00:03:23,460 --> 00:03:30,260
+What bits what zeroes and ones would be used
+in order to represent an integer data.
+
+37
+00:03:30,260 --> 00:03:37,560
+So when we talked in one of our previous modules
+about number systems we saw that we can represent
+
+38
+00:03:37,560 --> 00:03:44,130
+numbers using zeroes and ones using the binary
+number system base two.
+
+39
+00:03:44,130 --> 00:03:49,850
+And then since integer can also be negative
+numbers we talked about the 2’s complement
+
+40
+00:03:49,850 --> 00:03:57,300
+representation method and that’s how integers
+are represented in C++ the numbers are basically
+
+41
+00:03:57,300 --> 00:04:02,740
+represented in 32 bit 2’s complement representation
+method.
+
+42
+00:04:02,740 --> 00:04:12,459
+So for example if we set x to 6 obviously
+6 decimal is 110 in base 2 but if we are thinking
+
+43
+00:04:12,459 --> 00:04:18,989
+about the 2’s complement representation
+of 6 basically we are padding it with zeroes
+
+44
+00:04:18,989 --> 00:04:28,330
+so 6 then is this representation in a 32 bit
+2’s complement.
+
+45
+00:04:28,330 --> 00:04:36,930
+So these 4 bytes these 32 bits are then placed
+inside the 4 bytes of x.
+
+46
+00:04:36,930 --> 00:04:47,639
+If we set y to -6 then again -6 as a decimal
+are represented like in a 32 bit 2’s complement
+
+47
+00:04:47,639 --> 00:04:54,600
+representation method and these 4 bytes are
+then taken inside the y’s location in the
+
+48
+00:04:54,600 --> 00:04:56,510
+memory.
+
+49
+00:04:56,510 --> 00:05:04,300
+So the numbers are represented in four bytes
+and using the 2’s complement representation
+
+50
+00:05:04,300 --> 00:05:08,379
+method that’s a very important thing to
+know about integers.
+

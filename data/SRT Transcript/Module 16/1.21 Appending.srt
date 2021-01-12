@@ -1,0 +1,124 @@
+1
+00:00:00,640 --> 00:00:05,279
+One thing that we may want to do, which is
+actually very common to do inside programming
+
+2
+00:00:05,279 --> 00:00:09,520
+and inside the file system, is adding data
+to the end of a file.
+
+3
+00:00:09,520 --> 00:00:15,980
+So you might have seen a log file, you might
+have a log file which keeps records of transactions
+
+4
+00:00:15,980 --> 00:00:20,960
+or you might just want to record a large amount
+of information and you don't want to have
+
+5
+00:00:20,960 --> 00:00:26,249
+to read in the data and then add to the end
+of it and write it, out as we've said we would
+
+6
+00:00:26,249 --> 00:00:27,249
+have to do.
+
+7
+00:00:27,249 --> 00:00:33,969
+So there is an option inside C++ called appending
+and what appending does is leave the contents
+
+8
+00:00:33,969 --> 00:00:35,850
+of the file alone.
+
+9
+00:00:35,850 --> 00:00:41,120
+So in the original file, nothing will have
+changed and what we do is add on to the end
+
+10
+00:00:41,120 --> 00:00:42,410
+of the file.
+
+11
+00:00:42,410 --> 00:00:47,670
+To do this we have a second parameter that's
+passed to the open function so when we open
+
+12
+00:00:47,670 --> 00:00:52,640
+it, we're going to specify the file name first
+and then we're going to specify this IOS double
+
+13
+00:00:52,640 --> 00:00:54,239
+colon APP.
+
+14
+00:00:54,239 --> 00:00:58,340
+And that's the way to tell C++ any ofstream
+object that we don't know that we want to
+
+15
+00:00:58,340 --> 00:01:01,670
+append to the file and not overwrite it.
+
+16
+00:01:01,670 --> 00:01:05,470
+If the file doesn't exist, it’s going to
+be created and then we’ll add on to the
+
+17
+00:01:05,470 --> 00:01:10,720
+end of this brand new blank file, so it's
+effectively like writing.
+
+18
+00:01:10,720 --> 00:01:17,470
+If the file doesn't exist, then IOS APP really
+has no impact on what happens internally in
+
+19
+00:01:17,470 --> 00:01:19,060
+the ofstream object.
+
+20
+00:01:19,060 --> 00:01:24,659
+However if the file does exist, it sort of
+does seekG, if you will, to the very end of
+
+21
+00:01:24,659 --> 00:01:30,310
+the file and then any information that you
+write into the file is going to be added on
+
+22
+00:01:30,310 --> 00:01:34,729
+the end of the file, rather than overwriting
+what's existing there.
+
+23
+00:01:34,729 --> 00:01:39,960
+So, if what we're doing is taking in data
+from the user and storing it on the file system;
+
+24
+00:01:39,960 --> 00:01:45,520
+we might take in some data in one run of the
+program, write it out to a new file and then
+
+25
+00:01:45,520 --> 00:01:49,939
+the second run of the program, we don't want
+to overwrite what the user already gave us,
+
+26
+00:01:49,939 --> 00:01:52,210
+so we'll just append on to the end of the
+file.
+

@@ -1,0 +1,102 @@
+1
+00:00:00,909 --> 00:00:04,530
+Later in execution, consider the cache looks
+like this.
+
+2
+00:00:04,530 --> 00:00:11,650
+In addition, we get a new load double instruction
+where the address now is 0014.
+
+3
+00:00:11,650 --> 00:00:15,950
+The CPU sends the address to the cache controller
+and the latter breaks it down into the different
+
+4
+00:00:15,950 --> 00:00:17,950
+fields.
+
+5
+00:00:17,950 --> 00:00:22,920
+The controller calculates the set of this
+address and it realizes it’s one.
+
+6
+00:00:22,920 --> 00:00:26,720
+The cache controller then begins searching
+for the cache blocks in set 1.
+
+7
+00:00:26,720 --> 00:00:32,080
+For each block in the set, the controller
+first check the valid bit of that block.
+
+8
+00:00:32,080 --> 00:00:37,690
+If the bit is not one, then there is no valid
+data, so there is no need to continue with
+
+9
+00:00:37,690 --> 00:00:38,690
+that block.
+
+10
+00:00:38,690 --> 00:00:43,480
+If the valid bit is one, the controller then
+compares the cache tag field of the requested
+
+11
+00:00:43,480 --> 00:00:46,489
+address to the cache tag bits for that block.
+
+12
+00:00:46,489 --> 00:00:52,010
+If the comparison matches, then the cache
+block has the data we are looking for.
+
+13
+00:00:52,010 --> 00:00:56,649
+This is because when we combine the cache
+tag and the cache set, we get the D RAM block.
+
+14
+00:00:56,649 --> 00:01:02,149
+Therefore, if they both match, then the content
+of the requested D RAM block is in that matching
+
+15
+00:01:02,149 --> 00:01:03,150
+cache block.
+
+16
+00:01:03,150 --> 00:01:06,230
+This is known as a cache hit.
+
+17
+00:01:06,230 --> 00:01:11,480
+When there is a cache hit, the data is brought
+from the cache to CPU, without the need to
+
+18
+00:01:11,480 --> 00:01:13,130
+go to memory.
+
+19
+00:01:13,130 --> 00:01:15,750
+Hence we get much faster access of the data.
+
+20
+00:01:15,750 --> 00:01:23,490
+Cache hit and cache miss ratios are the main
+metric of performance of a cache.
+
+21
+00:01:23,490 --> 00:01:28,500
+The goal is to maximize the percentage of
+hits that we have for all memory accesses
+
+22
+00:01:28,500 --> 00:01:29,720
+that the CPU makes.
+

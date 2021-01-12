@@ -1,0 +1,111 @@
+1
+00:00:00,849 --> 00:00:01,849
+OK.
+
+2
+00:00:01,849 --> 00:00:05,730
+Now, we are going to the steps the processor
+go through when executing instructions.
+
+3
+00:00:05,730 --> 00:00:11,010
+We will use the example of building a processor
+to illustrate these steps.
+
+4
+00:00:11,010 --> 00:00:15,590
+Our processor is based on MIPS64 and has only
+7 instructions.
+
+5
+00:00:15,590 --> 00:00:22,230
+Our CPU can execute four R-format instructions:
+D ADD, D SUB, D OR and D AND.
+
+6
+00:00:22,230 --> 00:00:27,320
+It can execute Load double and store double,
+as well as branch if equal to zero.
+
+7
+00:00:27,320 --> 00:00:32,540
+When executing an instruction, a CPU generally
+goes through the following steps: instruction
+
+8
+00:00:32,540 --> 00:00:38,050
+fetch, instruction decode, instruction execute,
+memory, and WriteBack.
+
+9
+00:00:38,050 --> 00:00:42,370
+During instruction fetch, the CPU reads the
+instruction from memory to determine what
+
+10
+00:00:42,370 --> 00:00:43,809
+it is.
+
+11
+00:00:43,809 --> 00:00:48,979
+The CPU uses the program counter to determine
+the address of the instruction in memory.
+
+12
+00:00:48,979 --> 00:00:54,489
+During decode, the CPU determines the format
+of the fetched instruction, the operation
+
+13
+00:00:54,489 --> 00:00:58,670
+the instruction is supposed to do, and gets
+its operands.
+
+14
+00:00:58,670 --> 00:01:02,179
+The execute step performs the operation of
+the instruction.
+
+15
+00:01:02,179 --> 00:01:06,750
+The processor goes through a memory step if
+the instruction needs to do a data memory
+
+16
+00:01:06,750 --> 00:01:07,750
+access.
+
+17
+00:01:07,750 --> 00:01:14,140
+For example, a store instruction would go
+through the memory step.
+
+18
+00:01:14,140 --> 00:01:18,039
+The processor goes through a WriteBack step
+if the instruction needs to write the result
+
+19
+00:01:18,039 --> 00:01:20,859
+of its operation in a general purpose register.
+
+20
+00:01:20,859 --> 00:01:26,580
+For example, the DADD instruction needs to
+write the result of its addition to the destination
+
+21
+00:01:26,580 --> 00:01:30,310
+register and must go through the WriteBack
+step.
+
+22
+00:01:30,310 --> 00:01:34,790
+As we can see, an instruction may not go through
+all the steps we have described.
+
+23
+00:01:34,790 --> 00:01:40,009
+However, each instruction goes through the
+fetch decode and execute stages.
+

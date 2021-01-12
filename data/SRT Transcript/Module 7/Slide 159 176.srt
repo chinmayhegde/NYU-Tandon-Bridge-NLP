@@ -1,0 +1,237 @@
+0:00:00.630,0:00:06.570
+Ok let’s try to use the definition we just
+saw the theta definition in order to show
+
+0:00:06.570,0:00:12.490
+that three N squared plus six N minus fifteen
+is indeed theta of N squared.
+
+0:00:12.490,0:00:18.210
+Now this proposition here three N squared
+plus six N minus fifteen is theta of N squared
+
+0:00:18.210,0:00:23.539
+is follows whatever the theta definition is
+trying to define.
+
+0:00:23.539,0:00:29.439
+So it is of the form F of N is theta of G
+of N. Or F of N here is three N squared plus
+
+0:00:29.439,0:00:33.300
+six N minutes fifteen and our G of N here
+is N squared.
+
+0:00:33.300,0:00:39.070
+So it is of the form F of N is theta of G
+of N. Let’s follow the definition the theta
+
+0:00:39.070,0:00:42.650
+definition in order to prove exactly that.
+
+0:00:42.650,0:00:49.180
+So by the definition in order for F to be
+theta of G we need to show that there exists
+
+0:00:49.180,0:00:59.310
+three constants c1 c2 and n0 that for all
+values greater or equal to n0 our F is in
+
+0:00:59.310,0:01:03.560
+between c1 and c2 as multiplicands of G.
+
+0:01:03.560,0:01:13.240
+So I don’t know what c1 c2 and n0 are now
+but let’s first try to figure them out or
+
+0:01:13.240,0:01:17.799
+when we are proving we should first show them
+and appoint to them.
+
+0:01:17.799,0:01:22.689
+And then we should show that they are good
+enough constants.
+
+0:01:22.689,0:01:28.280
+So let’s assume we have these constants
+and keep on with our proof.
+
+0:01:28.280,0:01:35.380
+So we need to show that for all N greater
+or equal to n0 F of N is greater or equal
+
+0:01:35.380,0:01:42.729
+to one constant times G of N and less or equal
+to another constant times G of N.
+
+0:01:42.729,0:01:47.439
+So let’s take a look at three N squared
+plus six N minus fifteen.
+
+0:01:47.439,0:01:53.119
+Now three N squared plus six N minus fifteen
+is obviously less or equal to three N squared
+
+0:01:53.119,0:01:59.109
+plus six N right we are just dropping off
+the negative fifteen which makes the entire
+
+0:01:59.109,0:02:04.679
+expression here smaller or less than three
+N squared plus six N without the negative
+
+0:02:04.679,0:02:06.399
+fifteen.
+
+0:02:06.399,0:02:14.310
+If we want to make three N squared plus six
+N even greater instead of adding six N let’s
+
+0:02:14.310,0:02:15.730
+add six N squared.
+
+0:02:15.730,0:02:22.810
+So three N squared plus six N squared is obviously
+even greater than three N squared plus six
+
+0:02:22.810,0:02:26.990
+N and that is greater than three N squared
+plus six N minus fifteen.
+
+0:02:26.990,0:02:35.480
+So altogether we have that three N squared
+minus six N minus fifteen is less or equal
+
+0:02:35.480,0:02:37.280
+to nine N squared.
+
+0:02:37.280,0:02:47.980
+That’s one multiplicand of G of N so our
+c1 nine is a great choice for our c1 right.
+
+0:02:47.980,0:02:51.470
+Now let’s try to find c2.
+
+0:02:51.470,0:02:56.490
+So let’s take a look back at three N squared
+plus six N minus fifteen.
+
+0:02:56.490,0:03:01.350
+Now I can say that three N squared plus six
+N minus fifteen is greater or equal to three
+
+0:03:01.350,0:03:04.510
+N squared dropping off the six N minutes fifteen.
+
+0:03:04.510,0:03:11.280
+But that would be true only if six N minutes
+fifteen is a positive value otherwise we can’t
+
+0:03:11.280,0:03:12.280
+just drop it.
+
+0:03:12.280,0:03:14.340
+If it is a negative value it would make it
+smaller right.
+
+0:03:14.340,0:03:21.070
+So let’s see when is six N minus fifteen
+greater or equal to zero.
+
+0:03:21.070,0:03:26.770
+So six N minus fifteen is greater or equal
+to zero if and only six N is greater or equal
+
+0:03:26.770,0:03:31.980
+to fifteen or in other words N is greater
+or equal to 2.5.
+
+0:03:31.980,0:03:37.900
+So we can’t say that always three N plus
+six N minus fifteen is greater or equal to
+
+0:03:37.900,0:03:39.160
+three N squared.
+
+0:03:39.160,0:03:43.580
+But for values greater or equal to 2.5 that
+would be true.
+
+0:03:43.580,0:03:50.590
+So let’s take our starting position to be
+three let’s take our n0 to be three.
+
+0:03:50.590,0:03:56.569
+And for values greater or equal to three we
+can safely say that three N squared plus six
+
+0:03:56.569,0:03:59.560
+N minus fifteen is greater or equal to three
+N squared.
+
+0:03:59.560,0:04:04.140
+So c2 can then be three.
+
+0:04:04.140,0:04:09.400
+Altogether we can say that starting at three
+now we have that three N squared plus six
+
+0:04:09.400,0:04:16.329
+N minus fifteen is less or equal to nine squared
+and it is greater or equal to three N squared.
+
+0:04:16.329,0:04:23.940
+So we have two multiplicands of N squared
+that bound this our F of N.
+
+0:04:23.940,0:04:29.600
+So by definition we can conclude that three
+N squared plus six N minus fifteen is theta
+
+0:04:29.600,0:04:30.830
+of N squared.
+
+0:04:30.830,0:04:36.830
+Now when we made this proof we didn’t know
+in the beginning what are c1 c2 n0 are going
+
+0:04:36.830,0:04:37.830
+to be.
+
+0:04:37.830,0:04:44.370
+We figured them out during our process of
+proving.
+
+0:04:44.370,0:04:51.139
+After we have done that let’s try now to
+read it over and make sure that our proof
+
+0:04:51.139,0:04:52.370
+works correctly.
+
+0:04:52.370,0:05:02.139
+So in order to show that our F of N is theta
+of G of N we take c1 to be 9 c2 to be 3 and
+
+0:05:02.139,0:05:04.160
+n0 to be 3.
+
+0:05:04.160,0:05:11.560
+Then for all values for all Ns greater or
+equal to three we have that three N squared
+
+0:05:11.560,0:05:18.820
+plus six N minus fifteen is less or equal
+to nine N squared and it is greater or equal
+
+0:05:18.820,0:05:23.050
+to three N squared therefore it is theta of
+N squared.
+
+0:05:23.050,0:05:31.980
+So now it makes sense as we read it that we
+really showed that there are three such constants
+
+0:05:31.980,0:05:41.570
+that have what we one of them to have to bound
+F of N by these two multiplicands of G.

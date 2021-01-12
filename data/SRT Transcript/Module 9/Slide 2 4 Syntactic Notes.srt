@@ -1,0 +1,105 @@
+0:00:00.130,0:00:04.470
+Okay, so the arrays that we're talking about
+are actually called static arrays.
+
+0:00:04.470,0:00:08.240
+There are also other kinds of arrays which
+are called dynamic arrays.
+
+0:00:08.240,0:00:12.240
+We’ll talk in more detail about them in
+one of our future models.
+
+0:00:12.240,0:00:19.029
+But static arrays are arrays that are stored
+on our runtime stack, just like other variables.
+
+0:00:19.029,0:00:28.269
+For example, if we have, let's say, main with
+an integer, an array and a double, since they're
+
+0:00:28.269,0:00:36.790
+all stored on the runtime stack X. is stored
+first, after that comes our five element array,
+
+0:00:36.790,0:00:41.710
+one, two, three, four, five, and right after
+that comes our Y..
+
+0:00:41.710,0:00:48.760
+So basically the size of this array must be
+known at compile time so the stack can be
+
+0:00:48.760,0:00:52.680
+organized; the compiler could know where exactly
+this Y should come.
+
+0:00:52.680,0:01:00.720
+That means that we have to supply the physical
+size, the number of bytes basically, that
+
+0:01:00.720,0:01:04.110
+the array takes in our memory at compile time.
+
+0:01:04.110,0:01:10.990
+We can say something like, let's have an integer
+X. and then in an array of integers and the
+
+0:01:10.990,0:01:15.079
+double; we must say what's the physical size
+of this array.
+
+0:01:15.079,0:01:21.679
+Let's sum up a few syntactic notes regarding
+static arrays; so a few important things.
+
+0:01:21.679,0:01:27.389
+So, the most important thing I want to say
+here that: the array’s physical size must
+
+0:01:27.389,0:01:35.549
+be known at compile time, basically means
+it must be a constant and it must be given
+
+0:01:35.549,0:01:37.240
+at declaration.
+
+0:01:37.240,0:01:45.750
+We have to say int arr six, which is a constant
+int literal: it is known at compile time,
+
+0:01:45.750,0:01:47.490
+it is given a declaration.
+
+0:01:47.490,0:01:55.579
+Or we can have, let's say, const iny X. equals
+seven and then create an array of size X..
+
+0:01:55.579,0:02:00.310
+Again, it's a constant and it is known at
+compile time.
+
+0:02:00.310,0:02:07.679
+We cannot do, let's say, int arr without giving
+any size or we cannot have, let's say, an
+
+0:02:07.679,0:02:15.400
+integer N equal seven and then create an array
+of size N, again it's not a constant; it's
+
+0:02:15.400,0:02:17.780
+a variable, that's also not legal.
+
+0:02:17.780,0:02:23.730
+So, when we create, when we declare this array
+we have to supply the size of the array as
+
+0:02:23.730,0:02:25.870
+a constant at the declaration line.
+
+0:02:25.870,0:02:32.060
+I have a few more syntactic notes so I'll
+show you later, but for now let's go to implement
+
+0:02:32.060,0:02:32.890
+our ‘Above Average’ problem.

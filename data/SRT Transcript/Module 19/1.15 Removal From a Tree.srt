@@ -1,0 +1,199 @@
+1
+00:00:00,489 --> 00:00:04,350
+So if we look at removing from a tree element;
+insertion is easy, removal does require a
+
+2
+00:00:04,350 --> 00:00:05,529
+little bit more work.
+
+3
+00:00:05,529 --> 00:00:09,540
+So removing from a tree is easy if the node
+is empty.
+
+4
+00:00:09,540 --> 00:00:14,370
+If the node is a leaf node, then just remove
+it and update the parent to point to the null
+
+5
+00:00:14,370 --> 00:00:15,370
+pointer.
+
+6
+00:00:15,370 --> 00:00:19,810
+So there's not much work that has to be done
+if the node is a leaf node.
+
+7
+00:00:19,810 --> 00:00:24,430
+If the node has just one child then that's
+not difficult either, because we can promote
+
+8
+00:00:24,430 --> 00:00:29,080
+that child and the child will match the characteristics
+of the parent.
+
+9
+00:00:29,080 --> 00:00:34,910
+If, for example, it's a left child then the
+left child is going to be promoted; it's going
+
+10
+00:00:34,910 --> 00:00:40,290
+to have a value less than the parent but the
+parent relationship to the grandparent will
+
+11
+00:00:40,290 --> 00:00:44,710
+not change and so that should all still work
+out well.
+
+12
+00:00:44,710 --> 00:00:50,960
+The problem comes when the node has two children,
+and we have to choose what's called a candidate
+
+13
+00:00:50,960 --> 00:00:51,960
+replacement.
+
+14
+00:00:51,960 --> 00:00:57,410
+So now we're not going to accept the fact
+that we can promote; we can't promote a child
+
+15
+00:00:57,410 --> 00:01:02,320
+to the parent position because what if that
+child has children of its own.
+
+16
+00:01:02,320 --> 00:01:06,759
+We can't just move that child up; what do
+we do with its children and what do we do
+
+17
+00:01:06,759 --> 00:01:10,049
+with the other child of the grandparents.
+
+18
+00:01:10,049 --> 00:01:16,799
+What we're going to have to do is decide whether
+we choose the maximum of the right sub-child
+
+19
+00:01:16,799 --> 00:01:21,179
+so in other words go right and then go left,
+left, left, left, left, left, left, left,
+
+20
+00:01:21,179 --> 00:01:26,080
+and we'll end up with is the maximum value
+of the…
+
+21
+00:01:26,080 --> 00:01:29,229
+Sorry the minimum value of the right subtree.
+
+22
+00:01:29,229 --> 00:01:35,429
+Or what we can do if we're talking about going
+to the left is we can go to the left, and
+
+23
+00:01:35,429 --> 00:01:39,759
+then right, right, right, right, right, or
+we can go to the right and left, left, left,
+
+24
+00:01:39,759 --> 00:01:40,759
+left.
+
+25
+00:01:40,759 --> 00:01:46,219
+Either way that we decide to go, what we're
+choosing is either the previous node from
+
+26
+00:01:46,219 --> 00:01:49,390
+the node that we're going to delete or the
+next node from the node that we're going to
+
+27
+00:01:49,390 --> 00:01:51,420
+delete in order traversal.
+
+28
+00:01:51,420 --> 00:01:57,549
+So, if we look at this traversal in order,
+it would either be the node immediately before
+
+29
+00:01:57,549 --> 00:02:03,009
+which would be the minimum of the left-most,
+sorry the minimum of the right subtree or
+
+30
+00:02:03,009 --> 00:02:07,310
+sorry the maximum of the left subtree or would
+be the minimum of the right subtree.
+
+31
+00:02:07,310 --> 00:02:12,330
+In other words, we're going to delete a node
+and let's choose to promote, the one of the
+
+32
+00:02:12,330 --> 00:02:16,290
+nodes that are either the on the left or are
+on the right.
+
+33
+00:02:16,290 --> 00:02:21,830
+So, one of the nodes adjacent to the node
+that we're going to be deleting in value,
+
+34
+00:02:21,830 --> 00:02:24,250
+is going to be promoted to the current node.
+
+35
+00:02:24,250 --> 00:02:29,170
+So, that's the way that we're going to handle
+this; we're either going to go to the left
+
+36
+00:02:29,170 --> 00:02:34,050
+and then go right, right, right, right, right,
+to find the find the maximum node.
+
+37
+00:02:34,050 --> 00:02:38,830
+Or we're going to go to the right and then
+go left, left, left, left, left, to find the
+
+38
+00:02:38,830 --> 00:02:39,830
+minimum node.
+
+39
+00:02:39,830 --> 00:02:46,270
+So, the point is that we can actually process
+this by promoting one of the children and
+
+40
+00:02:46,270 --> 00:02:49,950
+then deleting that child instead of deleting
+the actual node that we're going to trying
+
+41
+00:02:49,950 --> 00:02:50,950
+to leave.
+
+42
+00:02:50,950 --> 00:02:51,480
+We're going to see that in just a just a minute.
+

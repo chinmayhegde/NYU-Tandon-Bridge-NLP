@@ -1,0 +1,485 @@
+1
+00:00:00,609 --> 00:00:04,910
+Now that we know how merge-sort works; now
+that we've implemented merge-sort, we've even
+
+2
+00:00:04,910 --> 00:00:06,810
+traced the execution of merge-sort.
+
+3
+00:00:06,810 --> 00:00:11,499
+Let’s try to analyze the running time of
+merge-sort and try to compare it to the selection-sort,
+
+4
+00:00:11,499 --> 00:00:17,190
+or the most basic sorting algorithm, that
+by the way executes in a quadratic time.
+
+5
+00:00:17,190 --> 00:00:22,700
+I hope merge-sort will give us a better result
+than quadratic; otherwise it wasn’t worth
+
+6
+00:00:22,700 --> 00:00:26,950
+all the effort we gave to that.
+
+7
+00:00:26,950 --> 00:00:35,050
+It's not as easy as it sounds to analyze this
+kind of an algorithm because it's not as like
+
+8
+00:00:35,050 --> 00:00:42,140
+we had an iterative process where we just
+summed up the number of operations we're doing
+
+9
+00:00:42,140 --> 00:00:48,579
+each iteration so it was all like in front
+of our eyes and we just needed to figure out
+
+10
+00:00:48,579 --> 00:00:57,579
+what's the body's cost and just add more and
+more values to figure out the total cost of
+
+11
+00:00:57,579 --> 00:00:59,700
+the iterative process.
+
+12
+00:00:59,700 --> 00:01:06,670
+In the case of a recursive call, a lot of
+operations kind of sneak in between the calls
+
+13
+00:01:06,670 --> 00:01:15,330
+and we need to better model the number of
+operations that are done during the process
+
+14
+00:01:15,330 --> 00:01:24,740
+of executing a recursive algorithm; very common
+model to do that is called a recursive tree
+
+15
+00:01:24,740 --> 00:01:26,720
+model and it works something like that.
+
+16
+00:01:26,720 --> 00:01:35,700
+We'll try to basically show all the recursive
+calls and their costs, all together, so it
+
+17
+00:01:35,700 --> 00:01:36,700
+starts like that.
+
+18
+00:01:36,700 --> 00:01:42,770
+We first have a call of an array of size N.
+
+19
+00:01:42,770 --> 00:01:50,530
+This call has two or calls two times to a
+function of size N by two, each one of them
+
+20
+00:01:50,530 --> 00:01:56,799
+calls two times to a function of size N by
+four, each one of them calls to N by 8 and
+
+21
+00:01:56,799 --> 00:02:03,680
+so on; they kind of keep on splitting, here
+we have a lot of calls to a single element
+
+22
+00:02:03,680 --> 00:02:05,820
+array of size one.
+
+23
+00:02:05,820 --> 00:02:13,780
+So this is the entire set of recursive calls
+and their sizes, but it's not that each call
+
+24
+00:02:13,780 --> 00:02:20,900
+here is constant, there are calls that cost
+us constant amount of time but there are calls
+
+25
+00:02:20,900 --> 00:02:23,480
+that are much more expensive.
+
+26
+00:02:23,480 --> 00:02:32,879
+So let's try at the side of each call, each
+circle here, write the cost of that call:
+
+27
+00:02:32,879 --> 00:02:37,900
+how much operations do we need to pay for
+that call.
+
+28
+00:02:37,900 --> 00:02:49,020
+So the first one in addition to the recursive
+calls, we need to merge to N by two element
+
+29
+00:02:49,020 --> 00:02:53,980
+arrays into one N element array.
+
+30
+00:02:53,980 --> 00:02:58,800
+The merge function, I don't think we've mentioned
+it explicitly but it's a linear function;
+
+31
+00:02:58,800 --> 00:03:04,879
+its cost is basically the sum of the sizes
+of the arrays we're trying to merge.
+
+32
+00:03:04,879 --> 00:03:11,819
+So if we are merging two N by two arrays,
+the cost of merge would be N, right, the number
+
+33
+00:03:11,819 --> 00:03:18,110
+of elements we are writing basically to the
+merge ARR, basically copying to our array.
+
+34
+00:03:18,110 --> 00:03:25,300
+So the cost here of this call, in addition
+to the recursive calls, is another N. And
+
+35
+00:03:25,300 --> 00:03:34,300
+each one of the N by two calls costs the merge
+basically N be two, so the first one costs
+
+36
+00:03:34,300 --> 00:03:36,950
+N by two and the second course costs N by
+two.
+
+37
+00:03:36,950 --> 00:03:42,310
+And each one of the N by four costs N by four,
+right?
+
+38
+00:03:42,310 --> 00:03:47,629
+Basically the cost is the cost of merge and
+that's basically the size of the elements
+
+39
+00:03:47,629 --> 00:03:51,840
+that we're trying to sort, that’s the number
+of elements who are basically also trying
+
+40
+00:03:51,840 --> 00:03:52,840
+to merge.
+
+41
+00:03:52,840 --> 00:03:57,599
+And so on and so on til the base case; each
+one costs one.
+
+42
+00:03:57,599 --> 00:04:03,440
+So in order to figure out the total cost of
+this execution, we need to sum up all the
+
+43
+00:04:03,440 --> 00:04:05,310
+reds here, all the extra costs.
+
+44
+00:04:05,310 --> 00:04:13,680
+And if we know how much all of the merge function
+cost together, that would be the total cost
+
+45
+00:04:13,680 --> 00:04:15,470
+of merge-sort.
+
+46
+00:04:15,470 --> 00:04:23,289
+It’s kind of difficult to sum up all the
+red here but then a nice observation says
+
+47
+00:04:23,289 --> 00:04:31,150
+that it would be easier for us to sum the
+reds in each level first and then if we know
+
+48
+00:04:31,150 --> 00:04:37,169
+how much a level cost, we would be able to
+some all the levels sums up and that would
+
+49
+00:04:37,169 --> 00:04:38,430
+be the total cost.
+
+50
+00:04:38,430 --> 00:04:39,779
+It works something like that.
+
+51
+00:04:39,779 --> 00:04:48,449
+So let's try to relate the level number to
+the cost, the total cost of that level.
+
+52
+00:04:48,449 --> 00:04:55,520
+In order to do that we would need two additional
+values that we want to relate here: that the
+
+53
+00:04:55,520 --> 00:05:01,419
+number of calls in the level, number of circles
+basically, and the cost of each call in the
+
+54
+00:05:01,419 --> 00:05:04,860
+level, a single red cost.
+
+55
+00:05:04,860 --> 00:05:09,059
+Let's start here; so in level number, the
+first level, I prefer to name it level to
+
+56
+00:05:09,059 --> 00:05:10,710
+start numbering here at zero.
+
+57
+00:05:10,710 --> 00:05:15,469
+So at level number zero, the number of calls
+is one, right.
+
+58
+00:05:15,469 --> 00:05:18,110
+There is one node at the first level.
+
+59
+00:05:18,110 --> 00:05:27,009
+The cost of this call is N, right, and then
+the total cost of the first level is basically
+
+60
+00:05:27,009 --> 00:05:30,509
+N times one which is basically N.
+
+61
+00:05:30,509 --> 00:05:37,560
+So the first level costs N, we can see that
+the first level costs N. The second level,
+
+62
+00:05:37,560 --> 00:05:40,999
+level number one has two calls, right.
+
+63
+00:05:40,999 --> 00:05:47,580
+There are two nodes here; each one costs N
+by two, therefore the total cost of the level
+
+64
+00:05:47,580 --> 00:05:52,149
+is two times N by two which is also N. Interesting.
+
+65
+00:05:52,149 --> 00:05:59,929
+Third level, level number two, four calls
+each one costs N by four, once again not surprising
+
+66
+00:05:59,929 --> 00:06:09,629
+four times N by four that would also be N.
+Next level would have eight nodes, each one
+
+67
+00:06:09,629 --> 00:06:17,199
+would cost N by eight, right, and that would
+also sum up to N. I have a feeling that all,
+
+68
+00:06:17,199 --> 00:06:24,979
+each one of the levels here with sum up, would
+total up to N; let's try to justify it.
+
+69
+00:06:24,979 --> 00:06:30,410
+So for example level number K: how many calls
+are we expecting there?
+
+70
+00:06:30,410 --> 00:06:35,240
+You can see the relation here between the
+level number and the number of calls; it’s
+
+71
+00:06:35,240 --> 00:06:37,780
+two raised to the power of the lever number,
+right.
+
+72
+00:06:37,780 --> 00:06:39,929
+Eight is two to the power of three.
+
+73
+00:06:39,929 --> 00:06:41,190
+Four is two to the power of two.
+
+74
+00:06:41,190 --> 00:06:44,330
+Two is two to the power of one.
+
+75
+00:06:44,330 --> 00:06:46,349
+One is two to the power of zero.
+
+76
+00:06:46,349 --> 00:06:52,349
+Therefore, the number of calls in level number
+K would be two to the power of K and the cost
+
+77
+00:06:52,349 --> 00:06:55,270
+of each call is N over that.
+
+78
+00:06:55,270 --> 00:07:00,449
+So it would be N over two to the power of
+K and then the total cost would be two to
+
+79
+00:07:00,449 --> 00:07:07,240
+the power of K times N over two to the power
+of K; you can see that that is also N.
+
+80
+00:07:07,240 --> 00:07:14,999
+So I'm kind of convinced now that not only
+the first four levels sum up to N, but all
+
+81
+00:07:14,999 --> 00:07:23,449
+levels with this behaving like that also sums
+up to N. The big question is how many levels
+
+82
+00:07:23,449 --> 00:07:28,779
+we have here because if we know how many levels,
+let's say we have thirteen levels then it's
+
+83
+00:07:28,779 --> 00:07:34,979
+going to be thirteen times N obviously the
+number of levels depends on N, it's related
+
+84
+00:07:34,979 --> 00:07:36,909
+to N, so can be just thirteen.
+
+85
+00:07:36,909 --> 00:07:42,039
+So the big question mark is: what's the level
+number of the last level.
+
+86
+00:07:42,039 --> 00:07:47,209
+Once we figure that out, we know how many
+times we need to multiply by N, right.
+
+87
+00:07:47,209 --> 00:07:48,770
+Let's do that.
+
+88
+00:07:48,770 --> 00:07:56,029
+So the most obvious thing we know about the
+last level is that the cost of each one is
+
+89
+00:07:56,029 --> 00:08:01,580
+one, right, because size is one and we know
+that the cost here should be one.
+
+90
+00:08:01,580 --> 00:08:09,710
+If you look back at the calculations we've
+done in Binary search, we've already seen
+
+91
+00:08:09,710 --> 00:08:20,449
+that the value of K where N over two to the
+K equals one is when K is Log of N. That means
+
+92
+00:08:20,449 --> 00:08:28,989
+that the level number that gives us cost of
+one should be Log two of N which means that
+
+93
+00:08:28,989 --> 00:08:35,969
+the number of calls in that level is two to
+the power of Log two of N.
+
+94
+00:08:35,969 --> 00:08:41,940
+If you're familiar with the logarithmic rules,
+you know that two raised to the power of Log
+
+95
+00:08:41,940 --> 00:08:51,089
+two of N basically equals N, so we have N
+calls, each one costs one that also adds up
+
+96
+00:08:51,089 --> 00:08:52,089
+to N.
+
+97
+00:08:52,089 --> 00:08:59,220
+Not surprisingly we've seen that; so basically
+we know that we have N in each level, Log
+
+98
+00:08:59,220 --> 00:09:00,930
+N times.
+
+99
+00:09:00,930 --> 00:09:07,560
+So the total, T of N here, is N times Log
+N or Log N times N.
+
+100
+00:09:07,560 --> 00:09:15,390
+So the running time is paid theta of N Log
+N, which is better than N squared, N times
+
+101
+00:09:15,390 --> 00:09:16,390
+N.
+
+102
+00:09:16,390 --> 00:09:23,790
+We know that N times Log of N is significantly
+better than N times N, so N Log N merge-sort
+
+103
+00:09:23,790 --> 00:09:28,830
+is a much preferred algorithm, sorting algorithm
+than for example selection-sort.
+

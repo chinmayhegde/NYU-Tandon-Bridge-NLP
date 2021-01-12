@@ -1,0 +1,9 @@
+1
+00:00:00,620 --> 00:00:03,759
+The JR reads the value of R31.
+
+2
+00:00:03,759 --> 00:00:08,169
+The writeback step is used to write to general-purpose
+registers
+

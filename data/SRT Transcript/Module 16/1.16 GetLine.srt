@@ -1,0 +1,148 @@
+1
+00:00:00,610 --> 00:00:05,620
+So, we know how to read in one individual
+item in the individual string, an individual
+
+2
+00:00:05,620 --> 00:00:10,070
+int or an individual double, but what happens
+if you want to get a whole line of text and
+
+3
+00:00:10,070 --> 00:00:12,079
+process that whole line of text accordingly.
+
+4
+00:00:12,079 --> 00:00:16,430
+So, in my previous example of reading in a
+name, what happens if the person…
+
+5
+00:00:16,430 --> 00:00:21,500
+Some people have a name like Daniel Katz and
+some people have a name like John J. Jones
+
+6
+00:00:21,500 --> 00:00:26,500
+that would be two items to read in for one
+person and three items to read in for another
+
+7
+00:00:26,500 --> 00:00:27,750
+person.
+
+8
+00:00:27,750 --> 00:00:34,200
+We can use the getLine function to get everything
+up to the end of the line and that's a really
+
+9
+00:00:34,200 --> 00:00:35,290
+useful function.
+
+10
+00:00:35,290 --> 00:00:40,250
+It doesn't skip leading whitespace so this
+doesn't work the way that input operator does;
+
+11
+00:00:40,250 --> 00:00:42,380
+it doesn't skip any leading whitespace.
+
+12
+00:00:42,380 --> 00:00:46,020
+It captures everything in the line so all
+the characters in the line.
+
+13
+00:00:46,020 --> 00:00:50,770
+And so we reach the return character at the
+end of that line and then it stops, and it
+
+14
+00:00:50,770 --> 00:00:52,430
+does not return the return character.
+
+15
+00:00:52,430 --> 00:00:57,180
+I know that's a little bit of a strange way
+of saying it but the return character at the
+
+16
+00:00:57,180 --> 00:01:03,480
+end of the line is removed from the stream
+and we don't return that into the string.
+
+17
+00:01:03,480 --> 00:01:09,860
+So the way to call this is just getLine and
+we have inFile and myString and what will
+
+18
+00:01:09,860 --> 00:01:16,970
+happen is from the in files current pointers,
+wherever the current position inside in file
+
+19
+00:01:16,970 --> 00:01:22,360
+is, will read in everything up to and in the
+up to and not including the return character
+
+20
+00:01:22,360 --> 00:01:26,360
+at the end but the return character at the
+end would be removed.
+
+21
+00:01:26,360 --> 00:01:32,490
+So if we put this in a loop, for example,
+we could get an array of strings and each
+
+22
+00:01:32,490 --> 00:01:36,830
+of the strings would not contain a return
+character and it would not really skip the
+
+23
+00:01:36,830 --> 00:01:40,180
+leading whitespace it would include everything
+on the line.
+
+24
+00:01:40,180 --> 00:01:46,520
+So, we have a really nice way of reading entire
+lines at a time and then processing them in
+
+25
+00:01:46,520 --> 00:01:47,520
+memory.
+
+26
+00:01:47,520 --> 00:01:53,939
+The only thing to take note of is that if
+the file pointer is pointing to a return character
+
+27
+00:01:53,939 --> 00:01:58,260
+then getLine is going to return nothing because
+its gonna read a no characters and then throw
+
+28
+00:01:58,260 --> 00:02:00,260
+away the return character also.
+
+29
+00:02:00,260 --> 00:02:04,850
+But this is a great way to get a large chunk
+of data out of the file when you really don't
+
+30
+00:02:04,850 --> 00:02:08,709
+know how many whitespace characters there
+are, you can just get the whole line or the
+
+31
+00:02:08,709 --> 00:02:12,780
+rest of the line and then you're set up to
+read in on the very next line.
+

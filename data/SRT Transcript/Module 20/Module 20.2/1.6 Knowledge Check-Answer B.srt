@@ -1,0 +1,19 @@
+1
+00:00:00,610 --> 00:00:07,790
+When the application finishes its job, it
+should, in fact it must, jump to the function
+
+2
+00:00:07,790 --> 00:00:08,790
+that calls it.
+
+3
+00:00:08,790 --> 00:00:13,610
+This is usually an operating system function,
+or another application.
+
+4
+00:00:13,610 --> 00:00:17,140
+So it wouldn't jump to its own code if it
+has finished executing.
+

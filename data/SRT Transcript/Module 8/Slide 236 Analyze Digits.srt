@@ -1,0 +1,343 @@
+0:00:00.160,0:00:02.070
+So let’s implement this program.
+
+0:00:02.070,0:00:08.670
+First let’s read the input so let’s say
+please enter a positive integer end l.
+
+0:00:08.670,0:00:15.509
+And then let’s read it so let’s declare
+a num variable here and read into num.
+
+0:00:15.509,0:00:22.890
+Now we need to do the calculation here analyze
+digits so we would need two values to be calculated.
+
+0:00:22.890,0:00:27.650
+The count digs and the sum digs.
+
+0:00:27.650,0:00:30.500
+The count of the digits and the sum of the
+digits.
+
+0:00:30.500,0:00:38.190
+We said to have a function analyze digits
+that as an input it would get num passed by
+
+0:00:38.190,0:00:39.190
+value right.
+
+0:00:39.190,0:00:41.950
+We don’t want num to update anything.
+
+0:00:41.950,0:00:48.110
+And it should return these two values ones
+as a return value as an int and the other
+
+0:00:48.110,0:00:51.260
+by reference variable outsum.
+
+0:00:51.260,0:00:56.969
+Ok so let’s have this function here in a
+few minutes we will make the code here.
+
+0:00:56.969,0:01:00.719
+But when we call this function it would be
+something like that.
+
+0:01:00.719,0:01:04.220
+Let’s call this function analyze digits
+right.
+
+0:01:04.220,0:01:07.380
+The input would be this num here that we’ve
+just read.
+
+0:01:07.380,0:01:13.510
+So this num here would be passed by value
+to our parameter num over here.
+
+0:01:13.510,0:01:18.030
+Again I named them the same name but it is
+a coincidence they can have totally different
+
+0:01:18.030,0:01:19.030
+names.
+
+0:01:19.030,0:01:22.670
+And then this function given num should return
+these two values.
+
+0:01:22.670,0:01:26.980
+The first one is the return value right.
+
+0:01:26.980,0:01:31.670
+So let’s have count digits store whatever
+this function returns right.
+
+0:01:31.670,0:01:36.310
+This function returns a value that we can
+then store in a variable.
+
+0:01:36.310,0:01:43.150
+So that’s how we get the return value in
+the return into our count digs variable.
+
+0:01:43.150,0:01:47.330
+The second would be get as a parameter that
+we would call by reference.
+
+0:01:47.330,0:01:51.670
+So if we pass this sum digs local variable
+by reference.
+
+0:01:51.670,0:01:54.990
+You see as the second argument is passed by
+reference.
+
+0:01:54.990,0:02:01.530
+If we pass it by reference then by updating
+the value of out sum here locally inside this
+
+0:02:01.530,0:02:06.030
+function that would update this main’s variable
+with the value.
+
+0:02:06.030,0:02:10.340
+So and I am just writing some non sense here
+but by doing out sum equals.
+
+0:02:10.340,0:02:12.420
+I am just making up eight.
+
+0:02:12.420,0:02:17.570
+That would update sum digs up here in the
+main to contain the value eight right.
+
+0:02:17.570,0:02:21.070
+Because it contains a reference to this variable.
+
+0:02:21.070,0:02:25.180
+So this variable would get its value by the
+assignment right.
+
+0:02:25.180,0:02:28.610
+The assignment would put the value into count
+digs.
+
+0:02:28.610,0:02:34.140
+And a local assignment inside the analyze
+digits function would update this value with
+
+0:02:34.140,0:02:35.140
+a return value.
+
+0:02:35.140,0:02:40.980
+So these or both of these variables would
+eventually have the right values in them.
+
+0:02:40.980,0:02:44.290
+By two different mechanisms for returning
+values.
+
+0:02:44.290,0:02:47.960
+So that would be the call for analyze digits.
+
+0:02:47.960,0:02:56.300
+After we do that we can just announce that
+cout num the value of num and then has and
+
+0:02:56.300,0:02:58.330
+then we have to say how many digits.
+
+0:02:58.330,0:03:08.830
+So count digs digits and their sum is and
+then let’s have the sum digs value and end
+
+0:03:08.830,0:03:09.830
+l.
+
+0:03:09.830,0:03:10.830
+That’s it right.
+
+0:03:10.830,0:03:11.830
+That’s basically it.
+
+0:03:11.830,0:03:17.290
+So when calling analyze digits we assign both
+count digs with a return value and sum digs
+
+0:03:17.290,0:03:18.970
+with a call by reference.
+
+0:03:18.970,0:03:24.390
+Then we can assume that both of these variables
+contain the whatever the function calculated.
+
+0:03:24.390,0:03:26.840
+Let’s declare the function right.
+
+0:03:26.840,0:03:29.860
+We have an error here let’s declare this
+function.
+
+0:03:29.860,0:03:32.130
+Semi colon at the end right don’t forget.
+
+0:03:32.130,0:03:37.030
+And the only thing we have left to do is implement
+the analyze digits function.
+
+0:03:37.030,0:03:40.100
+So for that that’s a very simple implementation.
+
+0:03:40.100,0:03:46.240
+We basically iterate over the digits of num
+counting each one accumulating the sum of
+
+0:03:46.240,0:03:47.240
+them.
+
+0:03:47.240,0:03:49.630
+So eventually we would have a total count
+and a total sum.
+
+0:03:49.630,0:03:51.230
+We’ve done that a few times already.
+
+0:03:51.230,0:03:55.440
+So let’s create a local count and sum variables.
+
+0:03:55.440,0:04:03.220
+We’ll initialize count to zero and sum to
+zero and then using a while loop.
+
+0:04:03.220,0:04:08.990
+While num is greater than zero each iteration
+would have our current digit.
+
+0:04:08.990,0:04:12.760
+So current dig would be num mod ten right.
+
+0:04:12.760,0:04:15.849
+Let’s also create current digit variable.
+
+0:04:15.849,0:04:22.210
+So we have current digit and then we count
+this digit so count plus plus.
+
+0:04:22.210,0:04:28.320
+And we accumulate this digit sum plus equals
+the value of current digit.
+
+0:04:28.320,0:04:34.490
+Then we need to remove this digit so let’s
+update num to be num div ten.
+
+0:04:34.490,0:04:36.750
+Basically removing the ones digit.
+
+0:04:36.750,0:04:42.320
+After we’ve done this calculation then these
+two local variables count and sum basically
+
+0:04:42.320,0:04:45.140
+contain the two values we want to return.
+
+0:04:45.140,0:04:48.030
+One of them should be returned.
+
+0:04:48.030,0:04:49.450
+Return count.
+
+0:04:49.450,0:04:53.490
+And one of them should be updated using this
+reference here.
+
+0:04:53.490,0:04:58.270
+So outsum would be evaluated or assigned with
+a value of sum.
+
+0:04:58.270,0:05:02.840
+Basically by this reference we are assigning
+sum digts with a current value of sum.
+
+0:05:02.840,0:05:07.150
+One very important thing actually a return
+statement I don’t know if I mentioned it
+
+0:05:07.150,0:05:11.760
+explicitly but a return statement basically
+pops out the current frame and jumps back
+
+0:05:11.760,0:05:12.990
+to where we came from.
+
+0:05:12.990,0:05:18.650
+So all the statements that appear after the
+return statement basically are not executed.
+
+0:05:18.650,0:05:23.760
+So the order that we return the values in
+is very crucial.
+
+0:05:23.760,0:05:29.300
+We cannot first return this thing here and
+only after that update the reference variable.
+
+0:05:29.300,0:05:36.070
+It is very important first to update the reference
+variable and only after that do the return
+
+0:05:36.070,0:05:37.070
+statement right.
+
+0:05:37.070,0:05:39.960
+Because otherwise this assignment wouldn’t
+be executed.
+
+0:05:39.960,0:05:47.070
+So after having both count and sum with right
+values we update using our reference the main’s
+
+0:05:47.070,0:05:53.120
+sum digits to be the sum and we return the
+count and this assignment here would update
+
+0:05:53.120,0:05:54.949
+the coutn digits with this value.
+
+0:05:54.949,0:05:59.120
+Let’s just execute it make sure we didn’t
+make any silly mistakes here.
+
+0:05:59.120,0:06:00.710
+So we succeeded.
+
+0:06:00.710,0:06:02.720
+Please enter a positive integer.
+
+0:06:02.720,0:06:08.620
+Three seventy five and then it says that three
+seventy five has three digits and their sum
+
+0:06:08.620,0:06:09.620
+is fifteen.
+
+0:06:09.620,0:06:11.540
+Seems to be working fine.
+
+0:06:11.540,0:06:16.669
+Just make sure you see how we used call by
+reference in order to work around the fact
+
+0:06:16.669,0:06:20.770
+that C allows return only one value out of
+a function.
+
+0:06:20.770,0:06:26.970
+We basically used call by reference in order
+to access our calling scope and update a value
+
+0:06:26.970,0:06:27.810
+using that reference.

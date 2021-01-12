@@ -1,0 +1,14 @@
+1
+00:00:01,319 --> 00:00:05,100
+The furthest memory from the CPU is the hard
+disk and it is the biggest size.
+
+2
+00:00:05,100 --> 00:00:10,360
+The closest memory to the CPU is the set of
+general-purpose registers and it is the smallest
+
+3
+00:00:10,360 --> 00:00:10,990
+size
+

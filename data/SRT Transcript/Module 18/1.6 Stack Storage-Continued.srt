@@ -1,0 +1,139 @@
+1
+00:00:00,820 --> 00:00:05,270
+So now we've seen how long each of the functions
+are going to take we can make a decision about
+
+2
+00:00:05,270 --> 00:00:11,309
+whether we would use a list or an array to
+do the actual storage underlying stack.
+
+3
+00:00:11,309 --> 00:00:15,980
+And it's pretty obvious at this point I think
+we would make the decision to do a linked
+
+4
+00:00:15,980 --> 00:00:21,539
+list because we're seeing that we're going
+to do a lot of pop operations a lot more pushes
+
+5
+00:00:21,539 --> 00:00:24,960
+a lot more pop operations than we would the
+clear operation.
+
+6
+00:00:24,960 --> 00:00:30,650
+So it's relatively unlikely to do a clear
+as compared to a pop operation.
+
+7
+00:00:30,650 --> 00:00:34,450
+Remember that the clear just completely dumps
+everything whereas the pop operation would
+
+8
+00:00:34,450 --> 00:00:36,010
+remove one element.
+
+9
+00:00:36,010 --> 00:00:41,579
+So to that end I think it makes considerably
+more sense to choose to use a linked list
+
+10
+00:00:41,579 --> 00:00:47,370
+as the underlying storage mechanism for the
+stack rather than to use the array.
+
+11
+00:00:47,370 --> 00:00:52,320
+And this is a great analysis that should be
+done for most of the data structures or for
+
+12
+00:00:52,320 --> 00:00:57,680
+most of your programs that you're going to
+do make the decision as to whether or not
+
+13
+00:00:57,680 --> 00:01:01,980
+you want to use A or B and play out the analysis.
+
+14
+00:01:01,980 --> 00:01:07,740
+So that's just one of the points that I want
+to make is is it's not clear immediately whether
+
+15
+00:01:07,740 --> 00:01:11,439
+we should use an array or list but once we
+flesh out what's actually going to happen
+
+16
+00:01:11,439 --> 00:01:16,430
+on the on the stack you're going to see that
+the linked list actually plays out a lot better.
+
+17
+00:01:16,430 --> 00:01:20,350
+So for this purposes we're going to use the
+STL list class we are not going to build it
+
+18
+00:01:20,350 --> 00:01:21,350
+ourselves.
+
+19
+00:01:21,350 --> 00:01:25,180
+So that's fine we know how to build a linked
+list we did that in a previous module so you
+
+20
+00:01:25,180 --> 00:01:26,990
+don't have to worry about that.
+
+21
+00:01:26,990 --> 00:01:32,479
+And the STL list includes all of the big three
+and includes all of the features of a linked
+
+22
+00:01:32,479 --> 00:01:37,659
+list class so we can deal with just the stack
+portion.
+
+23
+00:01:37,659 --> 00:01:42,320
+For our purposes the push function is going
+to call just simply push front on the STL
+
+24
+00:01:42,320 --> 00:01:44,960
+list the pop function will call pop front.
+
+25
+00:01:44,960 --> 00:01:49,299
+So we're going to push on to the front of
+the list and when it comes time to remove
+
+26
+00:01:49,299 --> 00:01:53,299
+we're going to pop off the front to the list
+so we're popping the most recently pushed
+
+27
+00:01:53,299 --> 00:01:54,310
+element.
+
+28
+00:01:54,310 --> 00:01:57,890
+The other functions we're just going to map
+to the equivalent STL functions.
+
+29
+00:01:57,890 --> 00:02:01,809
+So there shouldn't be very much code as far
+as we're concerned creating this.
+

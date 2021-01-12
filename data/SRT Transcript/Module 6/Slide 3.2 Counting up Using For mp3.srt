@@ -1,0 +1,100 @@
+0:00:00.049,0:00:05.040
+Ok then let’s try to count up now using
+the for loop.
+
+0:00:05.040,0:00:12.040
+So once again let’s first ask the user to
+please enter a positive integer let’s read
+
+0:00:12.040,0:00:20.029
+this input so we declared an n and read into
+that n and now we’re supposed to start counting
+
+0:00:20.029,0:00:21.220
+from one to n.
+
+0:00:21.220,0:00:27.390
+Once again we’ll create this counter variable
+but now that we have a for loop as we said
+
+0:00:27.390,0:00:34.470
+there are three parts of this for statement
+there is the initialization the condition
+
+0:00:34.470,0:00:36.219
+and the increment.
+
+0:00:36.219,0:00:43.280
+So we can initialize counter to one we want
+to keep repeating as long as counter is less
+
+0:00:43.280,0:00:45.449
+or equal to four.
+
+0:00:45.449,0:00:52.230
+And then we want to repeat two things we want
+to print the value of counter and we want
+
+0:00:52.230,0:00:54.030
+to increment counter.
+
+0:00:54.030,0:01:02.609
+Instead of incrementing counter here inside
+the for loop we can increment it in the increment
+
+0:01:02.609,0:01:05.790
+position so counter plus plus goes over here.
+
+0:01:05.790,0:01:11.860
+Let’s try to trace this execution so once
+again we have our two variables n and counter.
+
+0:01:11.860,0:01:14.890
+Let’s assume the user enters four for n.
+
+0:01:14.890,0:01:21.840
+And first we initialize counter to one we
+check whether the Boolean condition is true
+
+0:01:21.840,0:01:24.850
+or false if counter is less than four in this
+case it is.
+
+0:01:24.850,0:01:28.770
+So we are printing one the value of counter.
+
+0:01:28.770,0:01:35.840
+And after executing the body we execute the
+increment statement basically increasing counter
+
+0:01:35.840,0:01:36.840
+to two.
+
+0:01:36.840,0:01:43.790
+We then check whether the Boolean expression
+is still true it is so we print value of counter
+
+0:01:43.790,0:01:46.250
+and we increment counter to three.
+
+0:01:46.250,0:01:53.710
+The Boolean condition is still true so we
+print the value of counter and increment counter
+
+0:01:53.710,0:01:55.520
+basically turning it to four.
+
+0:01:55.520,0:02:00.750
+The Boolean expression is still true so we
+are printing the value of counter printing
+
+0:02:00.750,0:02:06.310
+four and incrementing the value of counter
+basically incrementing it to five.
+
+0:02:06.310,0:02:11.570
+Now the Boolean condition is false we are
+breaking out of the for loop we can once again
+
+0:02:11.570,0:02:13.159
+return zero and end this execution.

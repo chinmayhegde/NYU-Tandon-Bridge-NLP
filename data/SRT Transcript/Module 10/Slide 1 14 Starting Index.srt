@@ -1,0 +1,50 @@
+0:00:00.390,0:00:03.410
+So this is the syntax for the find method.
+
+0:00:03.410,0:00:08.640
+We have our calling object str dot find and
+then an additional string we are searching
+
+0:00:08.640,0:00:12.530
+for passed a parameter to the method.
+
+0:00:12.530,0:00:20.279
+I want to say or tell you about an extension
+of the find method that in addition to the
+
+0:00:20.279,0:00:24.119
+string we are searching for we also pass a
+starting index.
+
+0:00:24.119,0:00:25.630
+Let me show you how it works.
+
+0:00:25.630,0:00:28.640
+So let’s go back to the example we’ve
+talked before.
+
+0:00:28.640,0:00:34.840
+If we’ll search for CD and give a starting
+index of three.
+
+0:00:34.840,0:00:43.079
+In this case the first occurrence of CD after
+index three would be actually the second occurrence
+
+0:00:43.079,0:00:47.780
+of CD in the original string which is I think
+index five.
+
+0:00:47.780,0:00:49.969
+Yeah that’s what it basically prints.
+
+0:00:49.969,0:00:57.820
+So the extended version searches for s but
+starts not at the beginning but at whatever
+
+0:00:57.820,0:00:59.640
+starting index we give it.
+
+0:00:59.640,0:01:04.100
+And gives us the first occurrence of the s
+after that position.

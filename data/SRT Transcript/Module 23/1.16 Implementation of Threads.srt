@@ -1,0 +1,304 @@
+1
+00:00:00,640 --> 00:00:04,930
+So, there's a lot of ways to implement threads
+and a lot of these are leftovers from an older
+
+2
+00:00:04,930 --> 00:00:10,140
+era where the operating systems didn't actually
+support the threads, but programmers wanted
+
+3
+00:00:10,140 --> 00:00:13,470
+to use threaded concepts inside their programs.
+
+4
+00:00:13,470 --> 00:00:18,449
+So, the first way to implement a thread is
+what we know as a kernel level thread.
+
+5
+00:00:18,449 --> 00:00:24,050
+Now this is very different from a kernel thread,
+and this is very different from kernel mode.
+
+6
+00:00:24,050 --> 00:00:30,630
+This is the concept where the operating system
+recognizes that a thread has been created
+
+7
+00:00:30,630 --> 00:00:35,300
+and the operating system will create a TCB
+for that thread and the operating system can
+
+8
+00:00:35,300 --> 00:00:39,320
+choose to run that thread or can choose to
+block that thread and all the states that
+
+9
+00:00:39,320 --> 00:00:41,940
+go along with that thread.
+
+10
+00:00:41,940 --> 00:00:47,210
+The other main way of doing this is what we
+know is user level thread, and this is really
+
+11
+00:00:47,210 --> 00:00:52,269
+a leftover of a bygone era although that still
+very much in use today.
+
+12
+00:00:52,269 --> 00:00:56,860
+The biggest downside of a user level thread,
+actually the way that a user level thread
+
+13
+00:00:56,860 --> 00:01:01,489
+works is that the operating system doesn't
+recognize that the threads are in use.
+
+14
+00:01:01,489 --> 00:01:08,310
+So, it sees this thread as a process, let's
+say, so let's take for example an operating
+
+15
+00:01:08,310 --> 00:01:10,329
+system that doesn't support threads.
+
+16
+00:01:10,329 --> 00:01:12,090
+Well how can we run threads?
+
+17
+00:01:12,090 --> 00:01:19,579
+We can have a library of code inside of our
+program, which creates or simulates creating
+
+18
+00:01:19,579 --> 00:01:23,420
+of threads and switching between these threads.
+
+19
+00:01:23,420 --> 00:01:28,760
+So, what would be required would be some scheduling
+algorithms and some ability to create new
+
+20
+00:01:28,760 --> 00:01:33,600
+threads and destroy threads, inside a user's
+program.
+
+21
+00:01:33,600 --> 00:01:40,020
+But all of this is a simulation and the operating
+system doesn't really know that multiple threads,
+
+22
+00:01:40,020 --> 00:01:43,630
+if you want to call them that, are being created
+here.
+
+23
+00:01:43,630 --> 00:01:49,840
+Instead what it does is recognize that one
+process is being created.
+
+24
+00:01:49,840 --> 00:01:55,560
+And the biggest downside to that is that if
+any of those threads, and I use quotations,
+
+25
+00:01:55,560 --> 00:02:00,430
+those threads cause a blocking system call
+then all of those threads are going to be
+
+26
+00:02:00,430 --> 00:02:04,430
+blocked because the OP running system just
+sees it as a single process.
+
+27
+00:02:04,430 --> 00:02:07,420
+So, that's the idea behind a user level thread.
+
+28
+00:02:07,420 --> 00:02:13,260
+The advantage of a user level thread is that
+you can choose to do whatever scheduling algorithm
+
+29
+00:02:13,260 --> 00:02:17,180
+you want; you're not at the behest of the
+operating system.
+
+30
+00:02:17,180 --> 00:02:23,040
+in a kernel level thread the operating system
+decides when your threads are going to run,
+
+31
+00:02:23,040 --> 00:02:28,650
+but in a user level thread you, the programmer,
+decide when that thread is going to run and
+
+32
+00:02:28,650 --> 00:02:30,459
+how often it's going to be run.
+
+33
+00:02:30,459 --> 00:02:35,349
+So, you could have three threads and give
+priority to one of the three threads to run
+
+34
+00:02:35,349 --> 00:02:42,180
+more frequently than the other two, and you
+can't do that with kernel level threads easily.
+
+35
+00:02:42,180 --> 00:02:46,280
+The hybrid approach takes benefits from each.
+
+36
+00:02:46,280 --> 00:02:51,700
+So, the hybrid approach, which was first implemented
+by an operating system known as Solaris or
+
+37
+00:02:51,700 --> 00:02:56,180
+best implemented by an operating system the
+Solaris, what they did was they created both
+
+38
+00:02:56,180 --> 00:03:00,379
+kernel level threads and they created a user
+level thread.
+
+39
+00:03:00,379 --> 00:03:06,250
+And they tied the two together by means of
+what was known as a lightweight process, and
+
+40
+00:03:06,250 --> 00:03:08,770
+the lightweight process is simply a container.
+
+41
+00:03:08,770 --> 00:03:14,290
+So, we can put a number of user level threads
+inside of a lightweight process and we can
+
+42
+00:03:14,290 --> 00:03:17,909
+choose to run that lightweight process on
+one kernel level thread, so when a kernel
+
+43
+00:03:17,909 --> 00:03:22,200
+of a thread becomes available the lightweight
+process runs.
+
+44
+00:03:22,200 --> 00:03:27,010
+And all of the user level threads in that
+process are run according to the scheduling
+
+45
+00:03:27,010 --> 00:03:29,430
+library of that lightweight process.
+
+46
+00:03:29,430 --> 00:03:33,760
+So, you as the programmer would create a lightweight
+process; you’d creates a number of user
+
+47
+00:03:33,760 --> 00:03:34,790
+level threads.
+
+48
+00:03:34,790 --> 00:03:39,959
+You’d assign the user level threads that
+you wanted to run to the lightweight process,
+
+49
+00:03:39,959 --> 00:03:45,080
+but you can create any combination of user
+level threads and lightweight processes.
+
+50
+00:03:45,080 --> 00:03:49,790
+So, if you had a very important user level
+thread, you would create one lightweight process
+
+51
+00:03:49,790 --> 00:03:54,950
+for that one user level thread and any time
+that lightweight process ran that one user
+
+52
+00:03:54,950 --> 00:03:58,000
+level thread would be the only one running.
+
+53
+00:03:58,000 --> 00:04:02,370
+Then you could take three other user level
+threads, that are not critical, and put them
+
+54
+00:04:02,370 --> 00:04:04,260
+on one lightweight process.
+
+55
+00:04:04,260 --> 00:04:09,079
+So that when that lightweight process runs
+any of the user level threads inside could
+
+56
+00:04:09,079 --> 00:04:10,079
+run.
+
+57
+00:04:10,079 --> 00:04:14,879
+Of course, the same downside occurs as with
+user level threads, if one of the user level
+
+58
+00:04:14,879 --> 00:04:18,910
+threads in the lightweight process blocks;
+all of the threads in the lightweight process
+
+59
+00:04:18,910 --> 00:04:21,430
+will be blocked.
+
+60
+00:04:21,430 --> 00:04:25,830
+As far as thread scheduling is concerned,
+there's both a global scheduling algorithm
+
+61
+00:04:25,830 --> 00:04:30,890
+that chooses to run the kernel level threads
+and then there's a local scheduling algorithm,
+
+62
+00:04:30,890 --> 00:04:35,530
+which you can implement you can manage yourself
+as the programmer, that would choose which
+
+63
+00:04:35,530 --> 00:04:40,080
+of the user level threads associated with
+that lightweight process would be chosen to
+
+64
+00:04:40,080 --> 00:04:40,440
+run.
+

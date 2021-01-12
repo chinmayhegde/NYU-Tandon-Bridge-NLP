@@ -1,0 +1,13 @@
+1
+00:00:00,489 --> 00:00:04,180
+Remember, jump instructions are unconditional.
+
+2
+00:00:04,180 --> 00:00:06,629
+So there is no condition to check.
+
+3
+00:00:06,629 --> 00:00:11,539
+The CPU will ALWAYS go to the calculated target
+address.
+

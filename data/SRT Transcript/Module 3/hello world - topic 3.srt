@@ -1,0 +1,522 @@
+0:00:01.380,0:00:09.290
+Ok so here at the screen you can see the implementation
+of the program that reads two numbers and
+
+0:00:09.290,0:00:12.570
+prints what their sum is.
+
+0:00:12.570,0:00:20.329
+Let’s take a closer look at this implementation
+let’s first look at the file here.
+
+0:00:20.329,0:00:26.410
+We see that there is text in English plain
+English this program reads two integers from
+
+0:00:26.410,0:00:28.300
+the user and prints their sum.
+
+0:00:28.300,0:00:32.419
+Will hold the first input will hold the second
+input.
+
+0:00:32.419,0:00:40.830
+That’s English and that obviously is not
+C++ and you can see that we can write text
+
+0:00:40.830,0:00:44.620
+in English for documentation purposes.
+
+0:00:44.620,0:00:48.500
+So other programmers can understand what we
+are trying to say.
+
+0:00:48.500,0:00:55.230
+These are called comments the syntax for writing
+a comment basically saying for the compiler
+
+0:00:55.230,0:01:02.110
+to ignore that’s for only humans to read
+is starting the comment by slash star and
+
+0:01:02.110,0:01:05.979
+ending the comment by slash stair slash.
+
+0:01:05.979,0:01:10.520
+And then in between you can write whatever
+text you want the compiler would just ignore
+
+0:01:10.520,0:01:11.520
+it.
+
+0:01:11.520,0:01:17.080
+You can write in how many lines that you wish
+you can write your text.
+
+0:01:17.080,0:01:23.729
+For this kind of a comment that starts with
+slash star and ends with a star slash.
+
+0:01:23.729,0:01:30.090
+A different kind of a comment uses two slashes
+basically telling the compiler to ignore whatever
+
+0:01:30.090,0:01:35.109
+is written from this point to the end of the
+line.
+
+0:01:35.109,0:01:39.729
+You can’t break the lines for this type
+of comment.
+
+0:01:39.729,0:01:48.090
+So we typically write some information describing
+what the purpose of the program is what the
+
+0:01:48.090,0:01:56.810
+purpose of some lines of code if they have
+like a complicated goal that they are trying
+
+0:01:56.810,0:01:57.810
+to do.
+
+0:01:57.810,0:02:03.319
+So they are commenting it using one of these
+syntaxes.
+
+0:02:03.319,0:02:11.370
+So let’s ignore the comments they are not
+compiled they are not translated to machine
+
+0:02:11.370,0:02:17.310
+language they are not understood by compiler
+at all.
+
+0:02:17.310,0:02:25.490
+If you see we have int main with a empty parentheses
+and then you have an open curly brace and
+
+0:02:25.490,0:02:32.520
+the closed curly brace basically saying that
+a program is everything that is enclosed in
+
+0:02:32.520,0:02:34.810
+these two curly braces.
+
+0:02:34.810,0:02:42.560
+We always start our program with int main
+and empty parentheses and then inside a block
+
+0:02:42.560,0:02:46.810
+of curly braces we write our program.
+
+0:02:46.810,0:02:54.280
+We also have these two lines at the beginning
+include iostream using namespace std.
+
+0:02:54.280,0:03:02.120
+Make sure you write exactly as it appears
+here with that hashtag and the less than greater
+
+0:03:02.120,0:03:07.090
+than symbols and the semi colon over here.
+
+0:03:07.090,0:03:09.080
+It makes a lot of difference for the compiler.
+
+0:03:09.080,0:03:14.740
+I am not getting into the details of what
+these two lines are doing just now maybe I
+
+0:03:14.740,0:03:18.350
+will talk about it later or in later modules.
+
+0:03:18.350,0:03:26.480
+I am not also explaining too much of the int
+main basically does but each program would
+
+0:03:26.480,0:03:31.460
+start with these two lines for now that’s
+what we need to know and with a header of
+
+0:03:31.460,0:03:35.140
+the int main curly braces.
+
+0:03:35.140,0:03:39.290
+One more thing though and that with the return
+zero.
+
+0:03:39.290,0:03:43.130
+That is something that is common for each
+program.
+
+0:03:43.130,0:03:50.790
+Another important thing you can see here is
+that each line of code here ends with a semi
+
+0:03:50.790,0:03:51.790
+colon.
+
+0:03:51.790,0:04:00.870
+That basically says for the compiler that
+the statement the expression the instruction
+
+0:04:00.870,0:04:02.920
+ends here.
+
+0:04:02.920,0:04:11.730
+So you see that each line here ends with a
+semi colon you have one two three four five
+
+0:04:11.730,0:04:15.240
+six seven eight instructions.
+
+0:04:15.240,0:04:21.250
+We write them in eight separate lines but
+for the compiler all that matters are the
+
+0:04:21.250,0:04:22.530
+semi colons.
+
+0:04:22.530,0:04:28.680
+If it was up to the compiler we can write
+all our program in one single line just separating
+
+0:04:28.680,0:04:30.210
+with semi colons.
+
+0:04:30.210,0:04:36.720
+So for the compiler writing the code something
+like that in one long line is perfectly fine.
+
+0:04:36.720,0:04:41.930
+The compiler would know that the first instruction
+ends here the second instruction ends here
+
+0:04:41.930,0:04:43.960
+and the third instruction ends here.
+
+0:04:43.960,0:04:50.681
+We write it in a different lines in separate
+lines because it is easier for us humans to
+
+0:04:50.681,0:04:54.850
+understand and see the structure of the code.
+
+0:04:54.850,0:05:00.810
+But for the compiler the semi colon is what
+ends an instruction that’s why we have to
+
+0:05:00.810,0:05:07.890
+make sure we end each one of our instructions
+with a semi colon the compiler won’t tolerate
+
+0:05:07.890,0:05:13.530
+an instruction that doesn’t end with a semi
+colon.
+
+0:05:13.530,0:05:20.380
+Another thing I want to say before we start
+here is that in C++ we have to declare we
+
+0:05:20.380,0:05:25.650
+have to state ahead what are the variables
+we are going to use.
+
+0:05:25.650,0:05:30.790
+What are the datas that we need inside our
+memory.
+
+0:05:30.790,0:05:35.740
+So in this case we said we need num1 num2
+and sum.
+
+0:05:35.740,0:05:38.800
+We also have to say what is the type of each
+of them.
+
+0:05:38.800,0:05:48.080
+So basically we say num1 would be a variable
+that is an int instance for integer meaning
+
+0:05:48.080,0:05:51.490
+that num1 would hold an integer value.
+
+0:05:51.490,0:05:58.260
+Num2 is a variable of type int that would
+hold another integer value and sum is a third
+
+0:05:58.260,0:06:03.830
+variable again of type int that would hold
+another integer value.
+
+0:06:03.830,0:06:13.430
+We also said for other programmers that num1
+is used to hold the first input num2 is used
+
+0:06:13.430,0:06:17.600
+to hold the second input and sum would be
+used to hold the sum.
+
+0:06:17.600,0:06:21.699
+But that’s only for us to understand.
+
+0:06:21.699,0:06:28.830
+For the compiler we are saying that this program
+would use three variables num1 num2 and sum
+
+0:06:28.830,0:06:32.590
+all are type int.
+
+0:06:32.590,0:06:41.270
+You can see here we have cout leave the cout
+but you can see that we have out basically
+
+0:06:41.270,0:06:48.590
+saying we want to output it and we basically
+say we want to output we want to print out
+
+0:06:48.590,0:06:52.740
+the text please enter two numbers separated
+by a space.
+
+0:06:52.740,0:07:00.199
+We want to continue printing end l basically
+saying basically stands for end line.
+
+0:07:00.199,0:07:06.290
+We want to break the line so we want to print
+this text and break the line.
+
+0:07:06.290,0:07:15.690
+Then cin basically saying getting an input
+from the user into num1 and into num2.
+
+0:07:15.690,0:07:21.520
+So after printing the announcement please
+enter two numbers separated by space we are
+
+0:07:21.520,0:07:28.640
+reading whatever the user enter into these
+two variables num1 and num2.
+
+0:07:28.640,0:07:36.000
+After we have the user’s input inside our
+num1 and num2 we are saying put into the sum
+
+0:07:36.000,0:07:39.860
+variable the value of num1 plus num2.
+
+0:07:39.860,0:07:46.600
+This equal sign here stands for an assignment
+we want to assign this value here of num1
+
+0:07:46.600,0:07:50.930
+plus num2 into the variable sum.
+
+0:07:50.930,0:07:57.680
+So our program would first print the instruction
+for the user to enter two numbers separated
+
+0:07:57.680,0:07:58.830
+by a space.
+
+0:07:58.830,0:08:06.300
+Then it would read num1 and num2 it would
+read the two inputs into these two variables
+
+0:08:06.300,0:08:13.030
+and then sum would be assigned with the value
+of the sum of num1 and num2.
+
+0:08:13.030,0:08:19.020
+Eventually we will just cout we will print
+out to the screen once again.
+
+0:08:19.020,0:08:28.970
+Num1 the value of num1 the text plus the value
+of num2 the text equals and the value of sum
+
+0:08:28.970,0:08:32.260
+followed by a break line line break.
+
+0:08:32.260,0:08:38.330
+That’s basically what we are doing here
+in order to see that it really behaves as
+
+0:08:38.330,0:08:47.250
+we expected we need to compile it we need
+to build this program and then to run it.
+
+0:08:47.250,0:08:53.710
+So by now I hope you have your IDE already
+installed if you are using Windows you are
+
+0:08:53.710,0:08:58.940
+probably using Visual Studio if you are using
+MAC probably you are using Xcode but other
+
+0:08:58.940,0:09:02.760
+IDEs are also fine.
+
+0:09:02.760,0:09:08.390
+If you don’t have an IDE installed please
+do it right after this module.
+
+0:09:08.390,0:09:13.920
+For Xcode just press this play button it builds
+a program.
+
+0:09:13.920,0:09:19.890
+Here build succeeded and here we have our
+program starting to execute first it says
+
+0:09:19.890,0:09:27.490
+please enter two numbers separated by a space
+I will just type five space seven space five.
+
+0:09:27.490,0:09:34.260
+When I press enter I get the response seven
+plus five equals twelve and it also says that
+
+0:09:34.260,0:09:42.920
+program ended with exit code zero that’s
+what the return zero basically does.
+
+0:09:42.920,0:09:51.820
+So it works as we expected which is good I
+want us to note a few things here now that
+
+0:09:51.820,0:09:54.520
+we get the structure of the code.
+
+0:09:54.520,0:10:06.660
+For example I can do cin num1 semi colon cin
+num2 semi colon in two separate lines still
+
+0:10:06.660,0:10:11.110
+the execution would be the same.
+
+0:10:11.110,0:10:18.190
+So cin doesn’t really mind if we do it in
+two different lines or in one line it would
+
+0:10:18.190,0:10:20.500
+still behave the same.
+
+0:10:20.500,0:10:22.500
+I prefer doing it this way.
+
+0:10:22.500,0:10:31.700
+We’ll talk in more detail about the behavior
+of cin in one of the future module.
+
+0:10:31.700,0:10:41.520
+Another thing regarding cout I can have multiple
+cout for example please enter two numbers
+
+0:10:41.520,0:10:49.850
+let’s end it and cout separated by a space
+in a different line.
+
+0:10:49.850,0:10:57.400
+Try to guess if you think that the output
+would be in one line or in two lines here
+
+0:10:57.400,0:10:58.640
+in the execution.
+
+0:10:58.640,0:11:03.660
+Hope you are guessing it I am building it
+in the mean time.
+
+0:11:03.660,0:11:09.270
+And you can see that even though the cout
+is broken into two separate instructions it
+
+0:11:09.270,0:11:15.149
+is still printed in one line and that’s
+because we didn’t break the line we didn’t
+
+0:11:15.149,0:11:17.600
+say print kind of an enter.
+
+0:11:17.600,0:11:27.750
+If I would say please enter two numbers endl
+and then cout separated by a space then it
+
+0:11:27.750,0:11:30.900
+would be just one second.
+
+0:11:30.900,0:11:40.209
+Then it would be printed in two lines but
+if I am just splitting the cout into two lines
+
+0:11:40.209,0:11:49.590
+without breaking the line in the output it
+would still be in one single line of output.
+
+0:11:49.590,0:11:56.589
+Again let’s just bring it back to how it
+was before.
+
+0:11:56.589,0:12:00.210
+So that’s one more thing I wanted to point
+out here.
+
+0:12:00.210,0:12:06.040
+One last thing is that let’s take a look
+at this output statement here.
+
+0:12:06.040,0:12:17.990
+You see that we didn’t do something like
+cout num1 plus num2 equals sum.
+
+0:12:17.990,0:12:25.089
+If we would do that it would just send a text
+num1 plus num2 equals sum.
+
+0:12:25.089,0:12:32.470
+But we want to print the value inside num1
+variable and inside num2 variable and inside
+
+0:12:32.470,0:12:33.470
+the sum variable.
+
+0:12:33.470,0:12:40.050
+That’s why we are not printing num1 num2
+and sum as texts inside quotes we are printing
+
+0:12:40.050,0:12:47.700
+num1 on its own that would print the value
+of num1 and then we are printing the text
+
+0:12:47.700,0:12:54.370
+plus and then we are printing the value of
+the variable num2 followed by the text equal
+
+0:12:54.370,0:12:59.020
+and then we are printing the value of the
+variable sum.
+
+0:12:59.020,0:13:06.660
+One last thing to note here if we want to
+concatenate print outs we always use the double
+
+0:13:06.660,0:13:15.720
+less than symbols so cout start with num1
+continue printing this text continuing printing
+
+0:13:15.720,0:13:25.470
+num2 continuing printing the text equal continuing
+printing sum and continuing printing line
+
+0:13:25.470,0:13:26.529
+break line.
+
+0:13:26.529,0:13:38.200
+Yeah I think this gives us an idea how C++
+program is structured and the basics of interacting
+
+0:13:38.200,0:13:41.600
+with the user using cout and cin.

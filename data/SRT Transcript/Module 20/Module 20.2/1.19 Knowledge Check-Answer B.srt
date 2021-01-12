@@ -1,0 +1,20 @@
+1
+00:00:00,450 --> 00:00:03,930
+Pay close attention to the inverse formula
+of func2.
+
+2
+00:00:03,930 --> 00:00:06,720
+Note that that program counter is incremented
+by four.
+
+3
+00:00:06,720 --> 00:00:12,250
+Also remember, shift right by 2 is the same
+as divide by four.
+
+4
+00:00:12,250 --> 00:00:15,799
+And this division is the last operation of
+the inverse formula.
+

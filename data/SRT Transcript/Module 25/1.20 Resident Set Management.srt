@@ -1,0 +1,100 @@
+1
+00:00:01,000 --> 00:00:07,250
+Resident set management actually asks two
+different questions or two different problems.
+
+2
+00:00:07,250 --> 00:00:12,759
+One of the problems is now how much memory
+do we give to each process? How much main
+
+3
+00:00:12,759 --> 00:00:21,060
+memory does each process deserve? So, notepad
+for example, might only ask for one megabyte
+
+4
+00:00:21,060 --> 00:00:25,779
+of main memory and Chrome might be asking
+for one gigabyte of main memory; should they
+
+5
+00:00:25,779 --> 00:00:31,420
+get the same amount? And the answer probably
+is no, but how do we make the decision of
+
+6
+00:00:31,420 --> 00:00:40,050
+how much to give each process. Now if we use
+smaller allocations, if we minimize the allocations
+
+7
+00:00:40,050 --> 00:00:45,789
+then that means we have more processes but
+that also means we have more page faults because
+
+8
+00:00:45,789 --> 00:00:51,210
+each one has, each process, has a smaller
+allocation. If we choose larger allocations,
+
+9
+00:00:51,210 --> 00:00:57,910
+well that means we might have less page faults
+but less processes as well. So, it's sort
+
+10
+00:00:57,910 --> 00:01:03,350
+of a give and take that we're going to see
+in the next slide, where allocations that
+
+11
+00:01:03,350 --> 00:01:08,060
+are larger tend to mean less page faults and
+allocations that are smaller tend to mean
+
+12
+00:01:08,060 --> 00:01:12,880
+more page faults. But how do we make the decision
+of what, how much notepad gets and how much
+
+13
+00:01:12,880 --> 00:01:18,240
+chrome gets? So, that's one of the issues.
+And then the next issue is when a process
+
+14
+00:01:18,240 --> 00:01:22,280
+page faults, we're going to have to steal
+a page where, we’re going to have to make
+
+15
+00:01:22,280 --> 00:01:29,830
+room for the page. And are we going to choose
+this process, that it's page faulting to steal
+
+16
+00:01:29,830 --> 00:01:34,570
+out of in order to make room for the new page
+or are we going to say that the entire system
+
+17
+00:01:34,570 --> 00:01:40,380
+is open for stealing, and we can choose from
+any process? And obviously it means that that
+
+18
+00:01:40,380 --> 00:01:45,600
+has a a role in whether or not the allocation
+is a variable allocation, meaning can change
+
+19
+00:01:45,600 --> 00:01:50,299
+over time, or is a fixed allocation. Meaning
+that it's always going to be exactly the same.
+
+20
+00:01:50,299 --> 00:01:53,159
+So, resident set management tries to deal
+with these two problems.
+

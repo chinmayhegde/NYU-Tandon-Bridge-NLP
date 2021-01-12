@@ -1,0 +1,197 @@
+1
+00:00:00,700 --> 00:00:03,440
+Hi there, hope you're having a great day.
+
+2
+00:00:03,440 --> 00:00:08,900
+Today we're going to talk about recursions;
+recursions are basically a very powerful problem
+
+3
+00:00:08,900 --> 00:00:14,390
+solving technique that we're going to explore
+and see how it works.
+
+4
+00:00:14,390 --> 00:00:18,960
+But before we do that, let's talk a bit about
+mathematical induction.
+
+5
+00:00:18,960 --> 00:00:24,630
+I know the two are very related to one another;
+there is a very close relationship between
+
+6
+00:00:24,630 --> 00:00:26,900
+mathematical induction and recursion.
+
+7
+00:00:26,900 --> 00:00:31,910
+I’m not sure exactly how much you're familiar
+with mathematical induction so let me do a
+
+8
+00:00:31,910 --> 00:00:35,730
+short overview of mathematical induction.
+
+9
+00:00:35,730 --> 00:00:42,940
+First, so methodical Induction is a technique
+to prove statements; it's a mathematical technique
+
+10
+00:00:42,940 --> 00:00:44,330
+to prove statements.
+
+11
+00:00:44,330 --> 00:00:53,230
+Basically it's used to prove universal statements
+that are of the form P of N is true for any
+
+12
+00:00:53,230 --> 00:00:54,329
+natural number.
+
+13
+00:00:54,329 --> 00:00:57,370
+So, for all of the natural numbers P of N
+is true.
+
+14
+00:00:57,370 --> 00:01:05,019
+This is the form of statements we use mathematical
+induction proving technique.
+
+15
+00:01:05,019 --> 00:01:09,979
+When we prove using mathematical inductions
+or there are basically two steps in our proof:
+
+16
+00:01:09,979 --> 00:01:14,079
+there is the base case and there is the inductive
+step.
+
+17
+00:01:14,079 --> 00:01:20,900
+In the base case, we typically prove that
+P of one is true, that our statement is true
+
+18
+00:01:20,900 --> 00:01:26,000
+for the smallest natural number for one P
+of one is true, that's the thing we do in
+
+19
+00:01:26,000 --> 00:01:27,840
+our base case.
+
+20
+00:01:27,840 --> 00:01:33,630
+In the inductive step, we show that P of N
+minus one implies P of N.
+
+21
+00:01:33,630 --> 00:01:40,280
+So, if we know P of N minus one is true, we
+can also show that P of N is true too.
+
+22
+00:01:40,280 --> 00:01:47,079
+And we show this statement P of N minus one
+implies P of N for any natural number greater
+
+23
+00:01:47,079 --> 00:01:49,689
+than or equal to two.
+
+24
+00:01:49,689 --> 00:01:57,219
+When we use these two steps to prove a universal
+statement as we said, basically we're not
+
+25
+00:01:57,219 --> 00:02:03,709
+showing in a straightforward manner that P
+of N is true for all natural numbers but we
+
+26
+00:02:03,709 --> 00:02:11,830
+say that after proving the base case and the
+inductive step we can conclude that P of N
+
+27
+00:02:11,830 --> 00:02:14,780
+is true for all natural numbers.
+
+28
+00:02:14,780 --> 00:02:21,060
+And let's get convinced that these two steps
+basically imply that P of N is true for any
+
+29
+00:02:21,060 --> 00:02:22,379
+natural number.
+
+30
+00:02:22,379 --> 00:02:26,560
+So, let's see what we've proved and what conclusions
+can we make out of it.
+
+31
+00:02:26,560 --> 00:02:32,390
+So, obviously when we prove that P of one
+is true we can say that P of one is true.
+
+32
+00:02:32,390 --> 00:02:39,400
+But then we also prove that P of one implies
+P of two, now since we already know that one
+
+33
+00:02:39,400 --> 00:02:44,599
+is true, this implication would lead that
+P of two is also true.
+
+34
+00:02:44,599 --> 00:02:51,800
+And we've proved this P of N. minus one implies
+P of N, not only for one and two but for any
+
+35
+00:02:51,800 --> 00:02:56,969
+natural number so we also prove that P of
+two implies P of three given that we already
+
+36
+00:02:56,969 --> 00:02:59,870
+have concluded P of two is true.
+
+37
+00:02:59,870 --> 00:03:04,970
+These two together would lead us to say that
+P of three is true and once again P of three
+
+38
+00:03:04,970 --> 00:03:11,040
+implies P or four and P of three is true,
+so P of four is also true and this keeps on
+
+39
+00:03:11,040 --> 00:03:12,040
+going.
+
+40
+00:03:12,040 --> 00:03:17,159
+And that way we can just say that P of one,
+P of two, P of three, P of four, or basically
+
+41
+00:03:17,159 --> 00:03:20,870
+any P. of N for all natural numbers are true.
+
+42
+00:03:20,870 --> 00:03:23,849
+That's like the bases of mathematical induction.
+

@@ -1,0 +1,157 @@
+1
+00:00:00,960 --> 00:00:06,279
+The idea of object orientation came out in
+the early 1980’s because we had an enormous
+
+2
+00:00:06,279 --> 00:00:11,070
+number of functions and we had data not associated
+with the functions.
+
+3
+00:00:11,070 --> 00:00:16,080
+So programmers would have to pass a large
+amount of data to a function to perform a
+
+4
+00:00:16,080 --> 00:00:22,329
+specific task on that data and if the data
+got disconnected from each other, from the
+
+5
+00:00:22,329 --> 00:00:28,279
+different parts of the data, we would have
+a loss of information.
+
+6
+00:00:28,279 --> 00:00:36,109
+So what the concept came about was to put
+all of this data into one capsule, encapsulation,
+
+7
+00:00:36,109 --> 00:00:40,550
+and have functions that can work on that data
+as a single atomic entity.
+
+8
+00:00:40,550 --> 00:00:47,780
+So we can create in code something that exists
+in real life which contains enormous amount
+
+9
+00:00:47,780 --> 00:00:52,809
+of information, enormous number of pieces
+of data, and we can combine them and have
+
+10
+00:00:52,809 --> 00:00:57,329
+functions that operate on that data at the
+same time.
+
+11
+00:00:57,329 --> 00:01:04,339
+We use classes in C++ to protect the information
+so that it can’t be changed from the outside
+
+12
+00:01:04,339 --> 00:01:05,339
+world.
+
+13
+00:01:05,339 --> 00:01:11,119
+So from anything outside the class it wouldn’t
+have unrestricted access to the data inside
+
+14
+00:01:11,119 --> 00:01:15,000
+the class; we only have access from the functions
+inside the class.
+
+15
+00:01:15,000 --> 00:01:20,969
+It allows us to do multiple atomic operations
+inside a single function that has to change
+
+16
+00:01:20,969 --> 00:01:22,310
+lots of data.
+
+17
+00:01:22,310 --> 00:01:28,610
+So it’s not just asking a user or a programmer
+to make one change then a second change, because
+
+18
+00:01:28,610 --> 00:01:33,310
+we know that the programmer invariably will
+do the first change but forget to do the second
+
+19
+00:01:33,310 --> 00:01:34,310
+change.
+
+20
+00:01:34,310 --> 00:01:38,340
+Now we can create a function that solves the
+program to make both changes.
+
+21
+00:01:38,340 --> 00:01:46,020
+It enforces the idea that the designer of
+the class knows best about what to do, rather
+
+22
+00:01:46,020 --> 00:01:52,590
+than having a set of documentation which tells
+a programmer outside what to do.
+
+23
+00:01:52,590 --> 00:01:58,320
+So the model that I like to employ, the model
+that I like to use to visual this, is that
+
+24
+00:01:58,320 --> 00:02:02,810
+of a card shuffler inside a Vegas casino.
+
+25
+00:02:02,810 --> 00:02:06,619
+So if you’ve ever been to Las Vegas you’ve
+seen these card shufflers and what they do
+
+26
+00:02:06,619 --> 00:02:10,400
+is they continuously shuffle these cards,
+the deck of cards.
+
+27
+00:02:10,400 --> 00:02:14,940
+And when new cards come in, they get added
+to the shuffle so that nobody can count the
+
+28
+00:02:14,940 --> 00:02:17,900
+cards and know what’s gonna come out next.
+
+29
+00:02:17,900 --> 00:02:22,590
+But the point is that they’re a single contained
+item, and what happens inside is sor5t of
+
+30
+00:02:22,590 --> 00:02:23,590
+a black box.
+
+31
+00:02:23,590 --> 00:02:25,410
+We don’t know what happens inside.
+
+32
+00:02:25,410 --> 00:02:30,160
+But as the dealer puts more cards in and takes
+more cards out, what is happening inside is
+
+33
+00:02:30,160 --> 00:02:33,180
+controlled by the designers of the card shufflers.
+

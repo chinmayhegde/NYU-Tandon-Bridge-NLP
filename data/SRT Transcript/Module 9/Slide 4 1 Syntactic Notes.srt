@@ -1,0 +1,148 @@
+0:00:00.089,0:00:04.650
+Okay so I want to tell you two more little
+things before we end this model.
+
+0:00:04.650,0:00:08.700
+So first let's recap what we already know
+about static arrays.
+
+0:00:08.700,0:00:13.071
+So we know that the elements of the array
+are stored continuously in the memory, we
+
+0:00:13.071,0:00:17.880
+know that all of the elements are of the same
+type and we know that we can access them using
+
+0:00:17.880,0:00:24.050
+a zero based index system, meaning that the
+compiler basically can figure out the address
+
+0:00:24.050,0:00:29.110
+of a certain element just by knowing where
+the array starts, what index we're looking
+
+0:00:29.110,0:00:32.739
+for and what's the size of each element in
+the array.
+
+0:00:32.739,0:00:38.370
+By these the compiler can just figure out
+where each element is located.
+
+0:00:38.370,0:00:47.070
+We also said that when we declare our array,
+we must supply its physical size as a constant.
+
+0:00:47.070,0:00:52.940
+In this case int arr of size six, this six
+must be given at compile time.
+
+0:00:52.940,0:00:58.840
+I want to say two things, two more things
+about static arrays, two more syntactic issues
+
+0:00:58.840,0:01:01.020
+that I want you to be aware of.
+
+0:01:01.020,0:01:11.659
+First is that the arrays name is a legal C++
+expression.
+
+0:01:11.659,0:01:19.719
+Basically saying that if we create an array
+of, let's say, size six the name of the array
+
+0:01:19.719,0:01:22.369
+ARR is legal C++ expression.
+
+0:01:22.369,0:01:29.299
+We can even print the value of this expression
+we can do cout arr, not arr zero, one, two,
+
+0:01:29.299,0:01:33.179
+obviously, but we can cout the value of the
+arrays name.
+
+0:01:33.179,0:01:39.459
+The value of this expression, you can try
+to guess, but I just tell you that its value
+
+0:01:39.459,0:01:43.419
+is the address in the memory where the array
+starts.
+
+0:01:43.419,0:01:49.649
+So, if this array starts at address one thousand,
+this cout would just print one thousand.
+
+0:01:49.649,0:01:52.709
+So that's one thing I wanted to say.
+
+0:01:52.709,0:01:59.709
+Another thing, another syntactic feature that
+we have for arrays is way to initialize array.
+
+0:01:59.709,0:02:06.539
+So initialization of array and this thing
+is only at declaration.
+
+0:02:06.539,0:02:12.790
+So, typically we can create an array of size
+six if we want to assign it with values we
+
+0:02:12.790,0:02:21.000
+just go arr zero equals five, and arr one
+equals seven, and so on.
+
+0:02:21.000,0:02:25.280
+But I want to show you a different syntax
+for array initialization; we can do something
+
+0:02:25.280,0:02:33.069
+like that int arr six equals and then inside
+curly braces, I can just list the values so
+
+0:02:33.069,0:02:39.300
+I can have five, seven, six, two, I don't
+know, one, fifteen, whatever.
+
+0:02:39.300,0:02:46.329
+That would not only create our array of size
+six but it would also initialize the elements
+
+0:02:46.329,0:02:50.269
+of the array to be the ones we gave in this
+list here.
+
+0:02:50.269,0:02:56.989
+I just have to say again, that this is valid
+only at declaration; we can't create let's
+
+0:02:56.989,0:03:05.049
+say an array in arr six and later on do something
+like arr are equals, I don't know, some list
+
+0:03:05.049,0:03:06.049
+of values.
+
+0:03:06.049,0:03:07.640
+That is not legal.
+
+0:03:07.640,0:03:13.519
+Another thing I want to say here, you don't
+have to put a list of all of like, in this
+
+0:03:13.519,0:03:14.629
+case six values.
+
+0:03:14.629,0:03:20.030
+If you have less than six values, let's say
+if you give only three values in your list
+
+0:03:20.030,0:03:26.459
+then these three values would be the first
+three values of the array and the rest of
+
+0:03:26.459,0:03:28.419
+the array would just be filled with zeros.

@@ -1,0 +1,79 @@
+0:00:00.729,0:00:03.409
+Ok so let’s solve this problem.
+
+0:00:03.409,0:00:10.919
+Let’s implement a function isPrime that
+given a parameter num an integer or parameter
+
+0:00:10.919,0:00:14.389
+would determine whether our num is prime or
+not.
+
+0:00:14.389,0:00:19.550
+Basically would return a Boolean value true
+or false.
+
+0:00:19.550,0:00:26.300
+The most straightforward solution would say
+just iterate over the numbers 1 through num
+
+0:00:26.300,0:00:29.400
+count how many of them are factors of num.
+
+0:00:29.400,0:00:35.510
+And after you do all of that if the end you
+have only two factors one and num are obviously
+
+0:00:35.510,0:00:43.289
+factors of num then these are the only two
+factors basically stating that num is prime.
+
+0:00:43.289,0:00:48.769
+If you have more than two factors than you
+should return false and say that num is not
+
+0:00:48.769,0:00:49.769
+prime.
+
+0:00:49.769,0:00:57.079
+So we will iterate over the numbers and maintain
+some kind of divider counter something like
+
+0:00:57.079,0:00:58.079
+that.
+
+0:00:58.079,0:01:06.830
+So let’s declare count divs as an integer
+set it to zero and then we will iterate from
+
+0:01:06.830,0:01:08.900
+one to num.
+
+0:01:08.900,0:01:16.170
+Each time we will check whether I is a factor
+of num basically we will check if num mod
+
+0:01:16.170,0:01:17.610
+I equals zero.
+
+0:01:17.610,0:01:21.780
+If we divide them and we don’t have any
+remainder that means it is a factor.
+
+0:01:21.780,0:01:26.610
+In this case we will increment this count
+divs counter.
+
+0:01:26.610,0:01:31.770
+After we are done doing all of that for all
+the numbers we will just ask whether count
+
+0:01:31.770,0:01:34.860
+divs equals two in that case we will return
+true.
+
+0:01:34.860,0:01:36.830
+Otherwise we will return false.
+
+0:01:36.830,0:01:39.590
+Yes so that’s the straightforward solution.

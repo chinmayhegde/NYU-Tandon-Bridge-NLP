@@ -1,0 +1,311 @@
+0:00:00.520,0:00:05.730
+Ok so far we have two solutions two versions.
+
+0:00:05.730,0:00:09.600
+One iterating over the entire range from one
+through num.
+
+0:00:09.600,0:00:14.960
+The second iterating over half of the range
+from one through num by two.
+
+0:00:14.960,0:00:21.000
+I want to suggest another version a third
+version here.
+
+0:00:21.000,0:00:28.920
+In this case we will iterate not on the second
+half we will iterate only on the first square
+
+0:00:28.920,0:00:33.730
+root of num that first values.
+
+0:00:33.730,0:00:40.000
+So instead of going from one through num by
+two we will go from one to the square root
+
+0:00:40.000,0:00:43.440
+of num which is less than num by two.
+
+0:00:43.440,0:00:50.270
+Let’s take a look at 100 here as an example
+here these are the factors of 100.
+
+0:00:50.270,0:00:54.380
+Now 50 is 100 by two is num by two.
+
+0:00:54.380,0:00:58.170
+And the square root of 100 is less than 50
+is 10.
+
+0:00:58.170,0:01:05.609
+So actually when we are taking a look at these
+factors of 100 doesn’t seem like such a
+
+0:01:05.609,0:01:13.020
+great idea to go only on the first square
+root of num values.
+
+0:01:13.020,0:01:17.400
+And to test how many to count how many of
+them are dividers.
+
+0:01:17.400,0:01:23.549
+Because here in this case we have a few dividers
+that are less than the square root but not
+
+0:01:23.549,0:01:28.069
+like num by two that there aren’t any dividers
+greater than num by two.
+
+0:01:28.069,0:01:33.189
+It seems like there are a few dividers that
+are greater than square root of num right
+
+0:01:33.189,0:01:39.119
+20 25 50 they are all dividers of 100 that
+are greater than the square root.
+
+0:01:39.119,0:01:48.170
+So it makes me wonder whether it is a correct
+idea or a correct algorithm to count the dividers
+
+0:01:48.170,0:01:53.079
+only in the first square root of num values.
+
+0:01:53.079,0:01:59.600
+Maybe by going only in that small range we
+won’t find any dividers and all of them
+
+0:01:59.600,0:02:04.729
+are kind of in the other part or the other
+portion of the range.
+
+0:02:04.729,0:02:11.640
+From the square root to num maybe we are missing
+some dividers if we go only on this partial
+
+0:02:11.640,0:02:14.599
+range here.
+
+0:02:14.599,0:02:20.650
+But if we think about it a bit more deeply
+for example for 100 so 10 is the square root
+
+0:02:20.650,0:02:28.440
+we will see that each divider that is greater
+than the square root in this case 100 has
+
+0:02:28.440,0:02:32.670
+a complimentary divider that is less than
+100 in this case one.
+
+0:02:32.670,0:02:39.920
+Same thing 50 is a divider greater than the
+square root 2 is its complimentary divider
+
+0:02:39.920,0:02:42.160
+that is less than the square root.
+
+0:02:42.160,0:02:45.410
+And so 25 and 4 and 20 and 5.
+
+0:02:45.410,0:02:53.460
+So in some sense maybe we are skipping maybe
+we are not counting the entire number of dividers
+
+0:02:53.460,0:03:02.880
+but going over the first part the first portion
+up to the square root we will find at least
+
+0:03:02.880,0:03:08.040
+one divider in each complimentary pair of
+dividers.
+
+0:03:08.040,0:03:16.450
+So makes us think that maybe it is a good
+idea to go only on the first square root values
+
+0:03:16.450,0:03:18.820
+and count the number of dividers there.
+
+0:03:18.820,0:03:24.210
+We kind of believe that if there are none
+dividers in the first portion there there
+
+0:03:24.210,0:03:29.150
+won’t be any complimentary dividers in the
+second portion.
+
+0:03:29.150,0:03:34.910
+We would obviously need to prove that generally
+not only for 100.
+
+0:03:34.910,0:03:37.890
+And that’s exactly what we are going to
+do right now.
+
+0:03:37.890,0:03:45.420
+So the proofing technique we are going to
+use here is called proof by contradiction
+
+0:03:45.420,0:03:51.600
+where we want to show some property let’s
+say we want to show A. In this technique proof
+
+0:03:51.600,0:04:00.000
+by contradiction in order to show that A is
+true we assume that A is not true kind of
+
+0:04:00.000,0:04:08.440
+assume the contradiction the negation of A.
+We assume A is false and then we will just
+
+0:04:08.440,0:04:13.500
+do some arguments and get to some universal
+contradiction.
+
+0:04:13.500,0:04:19.669
+I don’t know that one equals zero or some
+other thing that cannot hold.
+
+0:04:19.669,0:04:28.889
+And by having a premise of A is false and
+getting a contradiction we will conclude that
+
+0:04:28.889,0:04:34.349
+this assumption that A is not true is false.
+
+0:04:34.349,0:04:38.930
+In other words that A must be true.
+
+0:04:38.930,0:04:45.330
+In this example let’s see how we use proof
+by contradiction as a proofing technique.
+
+0:04:45.330,0:04:54.340
+So let’s assume k and d are two complimentary
+dividers of num and the thing we cannot allow
+
+0:04:54.340,0:05:00.629
+since we want to show that at least one in
+each pair is less than the square root.
+
+0:05:00.629,0:05:08.050
+Our assumption would be that let’s assume
+that both of them are not less than a square
+
+0:05:08.050,0:05:09.050
+root.
+
+0:05:09.050,0:05:13.340
+Or in other words both of them are greater
+than the square root.
+
+0:05:13.340,0:05:18.659
+And we will show that that can hold we can’t
+have two dividers two complimentary dividers
+
+0:05:18.659,0:05:21.029
+that are both greater than the square root.
+
+0:05:21.029,0:05:27.539
+So let’s assume that it is the case here
+both are greater than the square root.
+
+0:05:27.539,0:05:33.960
+And since we know that they are complimentary
+dividers we know that when we multiply them
+
+0:05:33.960,0:05:35.650
+they would result to num.
+
+0:05:35.650,0:05:38.309
+So num equals k times d.
+
+0:05:38.309,0:05:41.389
+Now we assume that they are both greater than
+the square root.
+
+0:05:41.389,0:05:45.620
+Basically k is greater than the square root
+of num and d is greater than the square root
+
+0:05:45.620,0:05:46.620
+of num.
+
+0:05:46.620,0:05:51.999
+Therefore when we multiply k by d we get something
+that is greater than the square root of num
+
+0:05:51.999,0:05:53.960
+times square root of num right.
+
+0:05:53.960,0:05:58.830
+K is greater than the square root d is greater
+than square root k times d is greater than
+
+0:05:58.830,0:06:01.080
+square root times square root.
+
+0:06:01.080,0:06:02.569
+Which is equal to num.
+
+0:06:02.569,0:06:10.809
+Altogether when we take it we get that num
+is greater than num now that’s absurd right.
+
+0:06:10.809,0:06:13.319
+No number is greater than itself.
+
+0:06:13.319,0:06:15.159
+Seven is not greater than seven.
+
+0:06:15.159,0:06:16.819
+Five is not greater than five.
+
+0:06:16.819,0:06:20.780
+Num greater than num that’s an obvious contradiction.
+
+0:06:20.780,0:06:27.439
+Which implies that our initial assumption
+that both of our dividers are greater than
+
+0:06:27.439,0:06:28.789
+num is false.
+
+0:06:28.789,0:06:36.949
+Or in other words it implies that at least
+one on each pair of complimentary dividers
+
+0:06:36.949,0:06:40.470
+is less than the square root of num.
+
+0:06:40.470,0:06:48.949
+Ok so given that now that we know that it
+is good enough to go only on the first portion
+
+0:06:48.949,0:06:51.749
+of the range here from one to the square root.
+
+0:06:51.749,0:07:00.080
+Let’s see how we update our implementation
+so yea it is kind of straightforward.
+
+0:07:00.080,0:07:05.990
+Instead of just going from one to num or from
+one to the num by two we will go from num
+
+0:07:05.990,0:07:10.449
+to the from one to the square root of num.
+
+0:07:10.449,0:07:18.930
+And in order to say that our num is a prime
+we are expecting to have only one divider
+
+0:07:18.930,0:07:22.169
+in this range which is the number one itself.
+
+0:07:22.169,0:07:25.319
+So the implementation would look something
+like that.

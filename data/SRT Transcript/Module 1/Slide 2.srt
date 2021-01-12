@@ -1,0 +1,25 @@
+1
+00:00:01,829 --> 00:00:04,710
+So just an overview for what we're going to
+be covering in this module we’ll cover the
+
+2
+00:00:04,710 --> 00:00:09,090
+definition of a computer, types of computers,
+what's inside a computer (just an overview
+
+3
+00:00:09,090 --> 00:00:13,500
+of what's in what the components are), what
+each component does, the commonalities between
+
+4
+00:00:13,500 --> 00:00:19,050
+the components, how the components communicate
+with each other, how the CPU works, the idea
+
+5
+00:00:19,050 --> 00:00:22,980
+of a memory hierarchy, hard disks, and some
+computer networking concerns.
+

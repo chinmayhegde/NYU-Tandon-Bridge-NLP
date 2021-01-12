@@ -1,0 +1,62 @@
+1
+00:00:00,269 --> 00:00:04,240
+It's time to start talking about operating
+systems and in this module we're going to
+
+2
+00:00:04,240 --> 00:00:07,870
+cover a few things about operating systems
+and get you prepared for the future modules
+
+3
+00:00:07,870 --> 00:00:11,940
+which cover the rest of operating systems
+concerns or at least some of the basics of
+
+4
+00:00:11,940 --> 00:00:13,320
+operating systems.
+
+5
+00:00:13,320 --> 00:00:19,680
+What we want to take away from this is a fundamental
+understanding of how computer operating systems
+
+6
+00:00:19,680 --> 00:00:26,080
+first work and what they're expected to do,
+and then how we can understand them and utilize
+
+7
+00:00:26,080 --> 00:00:29,720
+them either as programmers or if you want
+operating systems designers.
+
+8
+00:00:29,720 --> 00:00:33,840
+So, in this module we're going to cover what
+is an operating system.
+
+9
+00:00:33,840 --> 00:00:36,460
+We're going to cover a little bit history
+of operating systems, so you can understand
+
+10
+00:00:36,460 --> 00:00:38,710
+how we got to this point today.
+
+11
+00:00:38,710 --> 00:00:42,520
+We're going to talk about preemption and how
+we do scheduling of different programs that
+
+12
+00:00:42,520 --> 00:00:43,520
+are running on the system.
+
+13
+00:00:43,520 --> 00:00:46,740
+And then I'm going to talk about a basic architecture
+of an operating system.
+

@@ -1,0 +1,204 @@
+1
+00:00:00,680 --> 00:00:05,190
+Okay, let's do another example working with
+Two’s Complement.
+
+2
+00:00:05,190 --> 00:00:12,580
+So let's take this number here, 00101101,
+represented in a 2-bit Two’s Complement,
+
+3
+00:00:12,580 --> 00:00:18,540
+that's the representation method for this
+number, and try to figure out what's its decimal
+
+4
+00:00:18,540 --> 00:00:22,190
+equivalent, what this number basically represents.
+
+5
+00:00:22,190 --> 00:00:29,210
+So, since it a starts with a zero, we know
+that it is a positive number.
+
+6
+00:00:29,210 --> 00:00:36,410
+Then, this representation method says that
+the first (k minus 1), seven bits, basically
+
+7
+00:00:36,410 --> 00:00:39,010
+represent its value.
+
+8
+00:00:39,010 --> 00:00:48,450
+So if we add 32 and 8 and 4 and 1, we get
+45 and this number is basically the decimal
+
+9
+00:00:48,450 --> 00:00:50,550
+45.
+
+10
+00:00:50,550 --> 00:00:57,579
+Let's take a look at this number here, 11101010,
+again in an 8-bit Two’s Complement representation
+
+11
+00:00:57,579 --> 00:01:01,329
+and try to figure out what its decimal representation.
+
+12
+00:01:01,329 --> 00:01:05,390
+In this case, since it starts with the one,
+it's not a positive number.
+
+13
+00:01:05,390 --> 00:01:09,890
+But this a presentation method is not ‘Sign
+and Magnitude’ that we can just figure out
+
+14
+00:01:09,890 --> 00:01:16,760
+the value of the lower seven bits and say
+that it is negative of this value.
+
+15
+00:01:16,760 --> 00:01:21,420
+Since it's a Two’s Complement representation
+method, we should figure out the absolute
+
+16
+00:01:21,420 --> 00:01:25,790
+value of this number in a different way.
+
+17
+00:01:25,790 --> 00:01:31,880
+So let's use the second property that the
+sum of a number and its additive value, additive
+
+18
+00:01:31,880 --> 00:01:35,110
+inverse, is 2 to the power of 8.
+
+19
+00:01:35,110 --> 00:01:43,670
+In this case, we know that, we don't know
+what these values are but we know that this
+
+20
+00:01:43,670 --> 00:01:46,310
+number here is some kind of a negative something.
+
+21
+00:01:46,310 --> 00:01:48,200
+Let’s say negative X.
+
+22
+00:01:48,200 --> 00:01:57,710
+So 11101010 is some negative X. and we’ll
+try to find what positive X. is, so we can
+
+23
+00:01:57,710 --> 00:01:59,820
+know what the absolute value of this number.
+
+24
+00:01:59,820 --> 00:02:04,950
+So once again, we're trying to figure out
+what number is missing there, to be the additive
+
+25
+00:02:04,950 --> 00:02:08,970
+inverse of the number that we have no idea
+what it is.
+
+26
+00:02:08,970 --> 00:02:13,389
+But since the additive inverse would be positive
+and positive numbers are much easier to figure
+
+27
+00:02:13,389 --> 00:02:18,090
+out their value, we can then figure out what
+the value of the negative number.
+
+28
+00:02:18,090 --> 00:02:27,599
+So once again, let's try to find what's the
+additive inverse of our input of this 11101010.
+
+29
+00:02:27,599 --> 00:02:32,611
+So 0 plus what, would give us a zero?
+
+30
+00:02:32,611 --> 00:02:33,611
+0 plus 0.
+
+31
+00:02:33,611 --> 00:02:35,169
+1 plus what, would give us a zero?
+
+32
+00:02:35,169 --> 00:02:36,840
+Plus 1 with a carry over.
+
+33
+00:02:36,840 --> 00:02:41,129
+1 plus 0 plus 1, and then another carry over.
+
+34
+00:02:41,129 --> 00:02:44,430
+1 plus 1 plus 0 with the carry over.
+
+35
+00:02:44,430 --> 00:02:49,370
+1 plus 0 plus 1, and 1 plus 1 plus 0.
+
+36
+00:02:49,370 --> 00:02:53,269
+And 1 plus 0 plus 0, and 1 plus 1 plus 0.
+
+37
+00:02:53,269 --> 00:03:04,139
+So, basically we got that our number is 11101010
+but its additive inverse, its absolute value,
+
+38
+00:03:04,139 --> 00:03:14,870
+it's positive corresponding value is 00010110.
+
+39
+00:03:14,870 --> 00:03:19,709
+And this number is very easy to figure out
+its value because we just have to add the
+
+40
+00:03:19,709 --> 00:03:21,109
+weights of each digit.
+
+41
+00:03:21,109 --> 00:03:28,930
+So we have a 2 plus a 4 plus 16, and that
+adds up to 22.
+
+42
+00:03:28,930 --> 00:03:35,319
+So this number here is positive 22, which
+implies that the negative number we had before
+
+43
+00:03:35,319 --> 00:03:37,079
+is negative 22.
+
+44
+00:03:37,079 --> 00:03:47,499
+So this number 11101010 in an 8-bit Two’s
+Complement representation, it represents the
+
+45
+00:03:47,499 --> 00:03:49,849
+number negative 22 decimal.
+

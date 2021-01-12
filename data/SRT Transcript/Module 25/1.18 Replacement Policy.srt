@@ -1,0 +1,293 @@
+1
+00:00:00,849 --> 00:00:03,580
+What happens when we run out of main memory?
+
+2
+00:00:03,580 --> 00:00:10,550
+I mean it can happen ultimately, since we're
+giving each process as much memory as it wants
+
+3
+00:00:10,550 --> 00:00:16,570
+affectively there's going to be a point in
+time when main memory runs out.
+
+4
+00:00:16,570 --> 00:00:19,960
+And of course we're still going to be using
+virtual memory, so the swap space is going
+
+5
+00:00:19,960 --> 00:00:24,910
+to start to be used, but what happens when
+we physically run out of main memory.
+
+6
+00:00:24,910 --> 00:00:29,940
+Well now we're going to have to make a decision
+on which pages to pull out of the main memory,
+
+7
+00:00:29,940 --> 00:00:33,899
+which pages no longer needed in main memory,
+and which we should load.
+
+8
+00:00:33,899 --> 00:00:40,210
+This is called stealing; the choice of pulling
+out a page, and pulling a page out of main
+
+9
+00:00:40,210 --> 00:00:42,379
+memory, it's called stealing.
+
+10
+00:00:42,379 --> 00:00:48,379
+And unfortunately if we choose poorly we can
+really cause a lot of performance issues because
+
+11
+00:00:48,379 --> 00:00:53,690
+if we remove a page which is going to be used,
+that's going to require an IO operation, it's
+
+12
+00:00:53,690 --> 00:00:58,760
+going to require us possibly writing that
+page to the secondary storage device if the
+
+13
+00:00:58,760 --> 00:01:02,969
+modified bit is set, we’re going to have
+to write it to the secondary storage device
+
+14
+00:01:02,969 --> 00:01:05,570
+then remarked the present bit to zero.
+
+15
+00:01:05,570 --> 00:01:09,700
+And when the process runs again and wants
+to use that page, We're going to have to have
+
+16
+00:01:09,700 --> 00:01:11,829
+a page fault and bring that back in.
+
+17
+00:01:11,829 --> 00:01:17,450
+So, one one way of looking at the performance
+of virtual memory is to count the total number
+
+18
+00:01:17,450 --> 00:01:22,530
+of page faults that are happening perception
+and if that number is is too high then one
+
+19
+00:01:22,530 --> 00:01:26,859
+of the problems might be, the first obvious
+problem is that we have an insufficient amount
+
+20
+00:01:26,859 --> 00:01:28,170
+of main memory.
+
+21
+00:01:28,170 --> 00:01:33,520
+But the second obvious problem might be that
+we're choosing the wrong pages to remove;
+
+22
+00:01:33,520 --> 00:01:37,840
+we’re choosing pages that the process will
+immediately will want.
+
+23
+00:01:37,840 --> 00:01:43,619
+We have a number of different algorithms that
+we can use for choosing which page the process
+
+24
+00:01:43,619 --> 00:01:45,250
+might want.
+
+25
+00:01:45,250 --> 00:01:46,630
+One of them that we call…
+
+26
+00:01:46,630 --> 00:01:51,939
+One of them we call the optimal algorithm
+or this might be called the crystal ball algorithm.
+
+27
+00:01:51,939 --> 00:01:56,579
+Because what it is is we look into our crystal
+ball, not literally of course, but we would
+
+28
+00:01:56,579 --> 00:02:01,369
+look into our crystal ball and decide which
+page is not needed for the longest period
+
+29
+00:02:01,369 --> 00:02:02,609
+of time.
+
+30
+00:02:02,609 --> 00:02:08,369
+Now of course without looking at the process
+and what it's going to do in the next execution
+
+31
+00:02:08,369 --> 00:02:12,310
+cycle, we can't know how long it's not going
+to need a page for.
+
+32
+00:02:12,310 --> 00:02:17,950
+So, this is more a comparison algorithm, we
+can look at the memory accesses that a process
+
+33
+00:02:17,950 --> 00:02:25,450
+did in its entire history and use that as
+a judge for deciding what would have been
+
+34
+00:02:25,450 --> 00:02:31,380
+the optimal choices for page replacement,
+but ultimately we can't do this in real life.
+
+35
+00:02:31,380 --> 00:02:36,150
+There's also the LRU algorithm, the least
+recently used, and in order to do this we
+
+36
+00:02:36,150 --> 00:02:42,100
+would need a timestamp on each page to tell
+us when the last time that page was accessed;
+
+37
+00:02:42,100 --> 00:02:44,760
+not modified, accessed.
+
+38
+00:02:44,760 --> 00:02:49,810
+And unfortunately, we don't have time stamps
+on every page and it's too much overhead inside
+
+39
+00:02:49,810 --> 00:02:51,680
+the CPU to timestamp every page.
+
+40
+00:02:51,680 --> 00:02:55,220
+So the LRU is not really feasible either.
+
+41
+00:02:55,220 --> 00:03:01,060
+The FIFO algorithm is really simple; we just
+throughout the oldest page that we've brought
+
+42
+00:03:01,060 --> 00:03:02,060
+in.
+
+43
+00:03:02,060 --> 00:03:06,090
+But that doesn't say anything as to whether
+or not we're actually still using that page,
+
+44
+00:03:06,090 --> 00:03:10,150
+and if we're still using that page and we
+throw it out it's going to immediately cause
+
+45
+00:03:10,150 --> 00:03:11,150
+a page fault.
+
+46
+00:03:11,150 --> 00:03:15,540
+In other words, it might be the oldest because
+the one that's needed the most.
+
+47
+00:03:15,540 --> 00:03:22,400
+The last algorithm is relatively easy to implement
+it does require use bits.
+
+48
+00:03:22,400 --> 00:03:27,930
+And thankfully, the hardware memory management
+units did recognize that, and what we have
+
+49
+00:03:27,930 --> 00:03:30,110
+is the clock page replacement algorithm.
+
+50
+00:03:30,110 --> 00:03:37,520
+So, we're using use bits to indicate when
+a page was used and what we do is…
+
+51
+00:03:37,520 --> 00:03:41,520
+The hardware memory management unit updates
+those used bits whenever a page is used.
+
+52
+00:03:41,520 --> 00:03:45,830
+In fact, it doesn't even have a problem with
+the translation look aside buffer, because
+
+53
+00:03:45,830 --> 00:03:53,390
+what the hardware memory management unit does
+is when it loads the physical page number,
+
+54
+00:03:53,390 --> 00:04:00,710
+sorry the frame number if you will, into the
+TLB it's going to update the use bit to be
+
+55
+00:04:00,710 --> 00:04:01,710
+a one.
+
+56
+00:04:01,710 --> 00:04:06,760
+So, the use bits just indicate whether or
+not the page was used recently and that's
+
+57
+00:04:06,760 --> 00:04:11,300
+going to allow us to do the clock paid for
+placement algorithm which we're going to see
+
+58
+00:04:11,300 --> 00:04:12,460
+in the next slide.
+
+59
+00:04:12,460 --> 00:04:19,579
+So, we have to choose a replacement algorithm
+in some way to choose which slide is going
+
+60
+00:04:19,579 --> 00:04:25,400
+to be, sorry to choose which page is going
+to be stolen, but if we make the decision
+
+61
+00:04:25,400 --> 00:04:31,120
+with some reasonable piece of information
+then we can make it an effective decision
+
+62
+00:04:31,120 --> 00:04:31,970
+making process.
+

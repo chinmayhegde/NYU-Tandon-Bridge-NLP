@@ -1,0 +1,169 @@
+1
+00:00:00,830 --> 00:00:06,140
+Well now unfortunately since nobody has access
+to day, month, and year; nobody can store
+
+2
+00:00:06,140 --> 00:00:07,910
+anything into day, month, and year.
+
+3
+00:00:07,910 --> 00:00:10,549
+Nobody can get out the day, month, and year.
+
+4
+00:00:10,549 --> 00:00:15,230
+So what we've done is create a fairly useless
+class, because day, month, and year are completely
+
+5
+00:00:15,230 --> 00:00:17,220
+inaccessible by anybody.
+
+6
+00:00:17,220 --> 00:00:22,220
+What we really need here are something called
+accessors and mutators, less formally known
+
+7
+00:00:22,220 --> 00:00:24,380
+as getters and setters.
+
+8
+00:00:24,380 --> 00:00:29,830
+So the accessors are used to get information
+out of the class and the mutator are used
+
+9
+00:00:29,830 --> 00:00:34,810
+to put information into the class, and that
+doesn't mean uncontrolled access, what it
+
+10
+00:00:34,810 --> 00:00:40,440
+means is that we can restrict the access so
+that the values stored in day, month, and
+
+11
+00:00:40,440 --> 00:00:42,760
+year are going to be reasonable.
+
+12
+00:00:42,760 --> 00:00:48,120
+So we create three functions here that will
+act as the mutators; so we've got the set
+
+13
+00:00:48,120 --> 00:00:53,780
+day, set month, and set year function, and
+what I've done is I've created set year as
+
+14
+00:00:53,780 --> 00:00:59,630
+a function inside the class defined inside
+the class, and set day and set months defined
+
+15
+00:00:59,630 --> 00:01:00,670
+outside of the class.
+
+16
+00:01:00,670 --> 00:01:03,340
+I'm only doing that for demonstration purposes.
+
+17
+00:01:03,340 --> 00:01:08,530
+There's really no difference in the code for
+creating it inside the class versus creating
+
+18
+00:01:08,530 --> 00:01:11,850
+it outside the class; they both work exactly
+the same.
+
+19
+00:01:11,850 --> 00:01:19,190
+But what I'm careful to do is not create a
+lot of code, not to write a lot of code, inside
+
+20
+00:01:19,190 --> 00:01:23,750
+the class because it tends to make things
+a little bit less easy to read.
+
+21
+00:01:23,750 --> 00:01:29,760
+So in this case, all three functions are members
+of the class which means that they have access
+
+22
+00:01:29,760 --> 00:01:32,380
+to all of the private information.
+
+23
+00:01:32,380 --> 00:01:37,409
+So this is the idea of encapsulation that
+members of the class will have access to the
+
+24
+00:01:37,409 --> 00:01:40,280
+private information inside the class.
+
+25
+00:01:40,280 --> 00:01:46,409
+And here what I can see from the set day function,
+if you take a close look at it is, it restricts
+
+26
+00:01:46,409 --> 00:01:53,780
+the setting of the day variable to make sure
+that the day does not go outside the range
+
+27
+00:01:53,780 --> 00:01:55,720
+of one to thirty one.
+
+28
+00:01:55,720 --> 00:02:01,420
+Now you'll notice that I have not passed in
+any other variable besides the new value that
+
+29
+00:02:01,420 --> 00:02:07,890
+I'm trying to set and I have access directly
+to the day variable inside the class.
+
+30
+00:02:07,890 --> 00:02:12,730
+As a member of the class, I have access to
+all the data members inside the class and
+
+31
+00:02:12,730 --> 00:02:18,280
+all of functions inside the class and I can
+do that directly without any extra definitions.
+
+32
+00:02:18,280 --> 00:02:22,530
+So the set day and the set month are just
+definitions that I've put outside the class
+
+33
+00:02:22,530 --> 00:02:25,970
+and to do so, I need the scope resolution
+operator.
+
+34
+00:02:25,970 --> 00:02:32,342
+But you can see that the code keeps track
+of making sure that the day and the month
+
+35
+00:02:32,342 --> 00:02:37,340
+are reasonable values, so that we can't set
+something that's completely outside what we
+
+36
+00:02:37,340 --> 00:02:37,370
+normally expect.
+

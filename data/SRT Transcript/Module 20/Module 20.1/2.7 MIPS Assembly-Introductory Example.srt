@@ -1,0 +1,143 @@
+1
+00:00:00,500 --> 00:00:04,880
+However, assembly code doesn’t fully represent
+machine-level instructions.
+
+2
+00:00:04,880 --> 00:00:09,330
+This is due to symbolic notations of the registers
+and the memory addresses.
+
+3
+00:00:09,330 --> 00:00:13,110
+The processor doesn’t understand a memory
+address labeled as B or a register labeled
+
+4
+00:00:13,110 --> 00:00:14,740
+as t1.
+
+5
+00:00:14,740 --> 00:00:18,970
+Let us consider the first Load doubleword
+instruction we had earlier and let’s compare
+
+6
+00:00:18,970 --> 00:00:21,199
+it to the real machine instruction.
+
+7
+00:00:21,199 --> 00:00:25,020
+Using this example, we will see that the assembly
+notation doesn’t have some of the fields
+
+8
+00:00:25,020 --> 00:00:26,590
+of machine-level code.
+
+9
+00:00:26,590 --> 00:00:32,689
+So in MIPS64 architecture, the most significant
+six bits of a machine-level instruction represent
+
+10
+00:00:32,689 --> 00:00:34,370
+its opcode.
+
+11
+00:00:34,370 --> 00:00:40,649
+The opcode is a simple mnemonic notation to
+encode the operation of the of the instruction.
+
+12
+00:00:40,649 --> 00:00:45,650
+In our example, the opcode 110111 means this
+is a load double word instruction.
+
+13
+00:00:45,650 --> 00:00:48,930
+The assembly instruction also has a load doubleword
+opcode.
+
+14
+00:00:48,930 --> 00:00:54,530
+The next 5 bits of the machine-level instruction
+represent the base field.
+
+15
+00:00:54,530 --> 00:00:58,829
+This is the number of a general purpose register
+number that holds the base address of the
+
+16
+00:00:58,829 --> 00:00:59,930
+data segment.
+
+17
+00:00:59,930 --> 00:01:04,350
+In our example, this register is register
+number 8, or R8.
+
+18
+00:01:04,350 --> 00:01:07,830
+Note that there is no such base register field
+in the assembly instruction.
+
+19
+00:01:07,830 --> 00:01:12,360
+Instead, it simply uses the label name of
+the data as it was declared in the high-level
+
+20
+00:01:12,360 --> 00:01:13,360
+code.
+
+21
+00:01:13,360 --> 00:01:16,250
+The CPU cannot understand such high-level
+label.
+
+22
+00:01:16,250 --> 00:01:21,112
+The next 5 bits of the machine-level instruction
+represent the Rt register field.
+
+23
+00:01:21,112 --> 00:01:26,390
+This field indicates the destination register
+where the double word will loaded.
+
+24
+00:01:26,390 --> 00:01:32,420
+In the machine-level instruction, this Rt
+register is register number 9 or R9 and is
+
+25
+00:01:32,420 --> 00:01:35,049
+labeled as t1 in the assembly code.
+
+26
+00:01:35,049 --> 00:01:39,560
+This is still similar to the assembly level
+code, though the labeling is different
+
+27
+00:01:39,560 --> 00:01:43,490
+The last 16 bits of the machine code is the
+offset field.
+
+28
+00:01:43,490 --> 00:01:48,009
+It indicates where within the data segment
+the requested value is located.
+
+29
+00:01:48,009 --> 00:01:52,520
+In our example, the offset is 0 because B
+is the first value in the data segment.
+
+30
+00:01:52,520 --> 00:01:55,890
+Note that the assembly-level instruction does
+not have such field.
+

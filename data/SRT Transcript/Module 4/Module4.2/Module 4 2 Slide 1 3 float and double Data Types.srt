@@ -1,0 +1,23 @@
+0:00:00.420,0:00:07.830
+For example if we have an integer x and a
+double y ints takes 4 bytes so x takes let’s
+
+0:00:07.830,0:00:19.670
+say from 100 to 104. And double y y is a double
+so y takes 8 bytes from 104 to 112. If we
+
+0:00:19.670,0:00:29.490
+assign x with 6 and y with let’s say 7.658
+so we are thinking that x would contain 6
+
+0:00:29.490,0:00:37.620
+and y would contain 7.658. But then we know
+that it is not we really write the number
+
+0:00:37.620,0:00:46.819
+6 and the number 7.658 in the memory. So how
+can we represent floating point numbers or
+
+0:00:46.819,0:00:50.679
+real numbers with fractional parts using zeroes
+and ones.

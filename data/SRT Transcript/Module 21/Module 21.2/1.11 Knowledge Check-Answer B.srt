@@ -1,0 +1,18 @@
+1
+00:00:00,440 --> 00:00:01,639
+That is correct.
+
+2
+00:00:01,639 --> 00:00:06,770
+In a fully associative cache, a DRAM block
+can go to any location in the cache.
+
+3
+00:00:06,770 --> 00:00:11,699
+Therefore, when searching the cache, we have
+to search all possible locations to find the
+
+4
+00:00:11,699 --> 00:00:11,979
+data.
+

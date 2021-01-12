@@ -1,0 +1,97 @@
+1
+00:00:00,659 --> 00:00:06,350
+Okay, let's see how we can convert a number
+in one number system representation into the
+
+2
+00:00:06,350 --> 00:00:10,730
+equivalent number but in a different number
+systems representation.
+
+3
+00:00:10,730 --> 00:00:16,160
+Actually, I'm not going to show you the general
+form of taking a number in base b1 and converting
+
+4
+00:00:16,160 --> 00:00:22,449
+it into an equivalent N in b2, I’m going
+to show you two techniques to do some other
+
+5
+00:00:22,449 --> 00:00:23,730
+kind of a translation.
+
+6
+00:00:23,730 --> 00:00:29,029
+So, first one would be taking a number “N”
+and in an arbitrary base B. and converting
+
+7
+00:00:29,029 --> 00:00:34,510
+it into decimal that would be a very important
+thing to be able to do.
+
+8
+00:00:34,510 --> 00:00:38,930
+Cause a lot of times you'll get numbers in
+binary hexadecimal and you want to understand
+
+9
+00:00:38,930 --> 00:00:44,240
+what they mean, basically, so you convert
+it into decimal.
+
+10
+00:00:44,240 --> 00:00:47,980
+And the other way around is also something
+important to be able to do.
+
+11
+00:00:47,980 --> 00:00:53,829
+Taking a number in decimal, your natural number
+system, and converting it into, I don't know,
+
+12
+00:00:53,829 --> 00:00:58,030
+the computer's number system, the binary,
+or the hexadecimal, or whatever.
+
+13
+00:00:58,030 --> 00:01:05,990
+If you think of it a bit deeper, you see that
+these two translations actually allow you
+
+14
+00:01:05,990 --> 00:01:09,830
+to convert from any number system to any other
+number system.
+
+15
+00:01:09,830 --> 00:01:16,630
+Just compose them pmrafter one of the others:
+start with N and b1, convert it into a decimal,
+
+16
+00:01:16,630 --> 00:01:19,380
+and then take the decimal and convert it into
+b2.
+
+17
+00:01:19,380 --> 00:01:29,570
+So, basically going from b1 to b2, stepping
+in the decimal somewhere in the two-step process.
+
+18
+00:01:29,570 --> 00:01:34,240
+But I'll describe each of them separately.
+
+19
+00:01:34,240 --> 00:01:39,210
+Let's start with how to take a number in an
+arbitrary number system and convert it into
+
+20
+00:01:39,210 --> 00:01:40,170
+decimal.
+

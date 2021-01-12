@@ -1,0 +1,187 @@
+1
+00:00:00,810 --> 00:00:05,200
+Well one of the problems that we get now is
+that memory management is always going to
+
+2
+00:00:05,200 --> 00:00:07,190
+require two look ups.
+
+3
+00:00:07,190 --> 00:00:13,960
+So when we're talking about accessing any
+memory space, any logical address, it Now
+
+4
+00:00:13,960 --> 00:00:17,660
+requires to look ups into main memory.
+
+5
+00:00:17,660 --> 00:00:22,869
+So the M.M.U. is going to have to first look
+up in the page map table where this is located,
+
+6
+00:00:22,869 --> 00:00:29,039
+and then translate that into a frame number,
+and then access that frame number.
+
+7
+00:00:29,039 --> 00:00:35,250
+So every main memory access now, by a process,
+is going to result in two main memory accesses.
+
+8
+00:00:35,250 --> 00:00:38,110
+Now main memory is fast; There’s no question
+it's that.
+
+9
+00:00:38,110 --> 00:00:43,420
+But when we're doubling the price of everything,
+It really starts to add up and it slows down
+
+10
+00:00:43,420 --> 00:00:44,470
+the C.P.U.
+
+11
+00:00:44,470 --> 00:00:48,600
+So with the C.P.U. implemented with C.P.U.
+designers implemented that we just have to
+
+12
+00:00:48,600 --> 00:00:53,280
+take into account, There’s not much as the
+operating system we need to do about it.
+
+13
+00:00:53,280 --> 00:00:57,580
+but what the C.P.U. designers implemented
+was what's called a translation look aside
+
+14
+00:00:57,580 --> 00:01:03,620
+buffer. and the translation look aside buffer
+is a type of content addressable memory, which
+
+15
+00:01:03,620 --> 00:01:09,009
+stores a cache. and I've got a picture here
+for you So that you can see it.
+
+16
+00:01:09,009 --> 00:01:14,530
+it stores a cache of those entries in the
+P.M.T. which have been retrieved recently,
+
+17
+00:01:14,530 --> 00:01:19,969
+and what it basically is is a table where
+we're looking up the virtual page number,
+
+18
+00:01:19,969 --> 00:01:25,119
+which on that image that you're seeing is
+the the V.P N in that table; the virtual page
+
+19
+00:01:25,119 --> 00:01:27,909
+number with a physical page number.
+
+20
+00:01:27,909 --> 00:01:32,930
+so that virtual page number to physical page
+number mapping is only temporary, It’s only
+
+21
+00:01:32,930 --> 00:01:35,939
+there for a short period of time.
+
+22
+00:01:35,939 --> 00:01:39,570
+in fact once we have a context switch, we
+basically have to dump the translation look
+
+23
+00:01:39,570 --> 00:01:41,060
+aside buffer.
+
+24
+00:01:41,060 --> 00:01:46,280
+But that virtual page number to physical page
+number mapping can be looked up because this
+
+25
+00:01:46,280 --> 00:01:51,119
+is content addressable memory, It can be looked
+up in a time a big O of one, constant time
+
+26
+00:01:51,119 --> 00:01:53,819
+search through the entire V.P.N. table.
+
+27
+00:01:53,819 --> 00:02:01,539
+So the V.P.N. table Can be looked at and if
+the the virtual page number entered is there,
+
+28
+00:02:01,539 --> 00:02:06,579
+then we'll get back the physical page number
+and we can use that immediately inside the
+
+29
+00:02:06,579 --> 00:02:08,340
+C.P.U. without accessing main memory.
+
+30
+00:02:08,340 --> 00:02:13,959
+So it's just for speeding things up, so that
+we can avoid one of those memory references
+
+31
+00:02:13,959 --> 00:02:17,440
+that we can avoid going to main memory and
+asking for that value.
+
+32
+00:02:17,440 --> 00:02:22,409
+if we don't have the value from the page map
+table already loaded in the T.L.
+
+33
+00:02:22,409 --> 00:02:27,180
+B, then we have to go look at the page map
+table and there's no way of to avoid that.
+
+34
+00:02:27,180 --> 00:02:32,400
+But the the the page map table is not going
+to change while the process is running, of
+
+35
+00:02:32,400 --> 00:02:35,620
+course because we can't do relocation while
+the process is running.
+
+36
+00:02:35,620 --> 00:02:40,909
+So the translation look aside buffer is a
+way to avoid that double memory access for
+
+37
+00:02:40,909 --> 00:02:44,890
+multiple accesses to the same virtual page
+number.
+
+38
+00:02:44,890 --> 00:02:51,080
+and it does work, It's not a huge savings
+but over the course of a run of the program,
+
+39
+00:02:51,080 --> 00:02:55,959
+It does cut the memory references not in half
+but certainly significantly less.
+

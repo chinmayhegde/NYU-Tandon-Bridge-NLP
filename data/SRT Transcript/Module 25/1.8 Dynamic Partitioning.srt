@@ -1,0 +1,257 @@
+1
+00:00:00,780 --> 00:00:02,880
+Alright, fixed partitioning didn't work out
+great.
+
+2
+00:00:02,880 --> 00:00:08,019
+What if we took an opposite end of the spectrum
+and said, okay let's make dynamic partitions.
+
+3
+00:00:08,019 --> 00:00:14,400
+Let's ask the process exactly how much memory
+it needs and let's give it exactly that much
+
+4
+00:00:14,400 --> 00:00:15,400
+memory.
+
+5
+00:00:15,400 --> 00:00:19,600
+So, if a process says it needs ten megabytes;
+we’ll give it ten megabytes.
+
+6
+00:00:19,600 --> 00:00:24,510
+Now that causes a problem with the process
+decides to grow to later on we don't have
+
+7
+00:00:24,510 --> 00:00:27,440
+an issue, we don't have a way of dealing with
+that.
+
+8
+00:00:27,440 --> 00:00:34,719
+But if a process is in a particular memory
+space, it can grow as much as it wants inside
+
+9
+00:00:34,719 --> 00:00:35,719
+that memory space.
+
+10
+00:00:35,719 --> 00:00:40,850
+So, once we allocate a memory space for that
+process, it really can't grow but it can use
+
+11
+00:00:40,850 --> 00:00:45,109
+up everything that that's inside that partition.
+
+12
+00:00:45,109 --> 00:00:51,090
+But what this causes is actually external
+fragmentation, extremal fragmentation is caused
+
+13
+00:00:51,090 --> 00:00:56,679
+by the dynamic partitioning and what this
+is is wasted memory between allocations.
+
+14
+00:00:56,679 --> 00:01:03,260
+Now what's happening here as you can see in
+the diagram, is that we created three different
+
+15
+00:01:03,260 --> 00:01:04,260
+processes.
+
+16
+00:01:04,260 --> 00:01:09,409
+We created three processes and the middle
+process sort of disappears, it ends.
+
+17
+00:01:09,409 --> 00:01:15,430
+Now we've got that little chunk of memory
+free, but what we would like to do is run
+
+18
+00:01:15,430 --> 00:01:20,549
+a program that's just slightly larger than
+the space that was allocated there.
+
+19
+00:01:20,549 --> 00:01:25,820
+And unfortunately because it was larger, I
+can't allocate that space; because the new
+
+20
+00:01:25,820 --> 00:01:30,590
+process is larger than the space that was
+allocated, I can't put that new process into
+
+21
+00:01:30,590 --> 00:01:31,590
+that memory space.
+
+22
+00:01:31,590 --> 00:01:36,500
+So, what I have to do is put it at the end
+and that means we're we're using up more and
+
+23
+00:01:36,500 --> 00:01:37,759
+more and more at the end.
+
+24
+00:01:37,759 --> 00:01:42,680
+And then of course what happens if all we
+have are these little slivers of memory left
+
+25
+00:01:42,680 --> 00:01:50,800
+over and I want to run a big process, which
+is not so large that it would that we don't
+
+26
+00:01:50,800 --> 00:01:55,630
+have enough memory free memory for it, we
+have enough free memory for it but we have
+
+27
+00:01:55,630 --> 00:01:59,409
+as these little segments of free memory.
+
+28
+00:01:59,409 --> 00:02:07,070
+And we have to compact all the running processes
+now into the beginning of main memory to make
+
+29
+00:02:07,070 --> 00:02:11,730
+a big space at the end, so that we can run
+the new process and that of course requires
+
+30
+00:02:11,730 --> 00:02:18,480
+a lot of copying of memory, a lot of CPU time
+and that's a big waste of time.
+
+31
+00:02:18,480 --> 00:02:22,480
+We have an issue with dynamic partitioning
+in that the data structures for the operating
+
+32
+00:02:22,480 --> 00:02:27,280
+system get rather complex because we have
+to record both the start and the ending location
+
+33
+00:02:27,280 --> 00:02:28,860
+of the process.
+
+34
+00:02:28,860 --> 00:02:35,400
+And then the last problem is where do we choose
+to put a process if we have enough space available,
+
+35
+00:02:35,400 --> 00:02:39,470
+assuming that we have enough space available,
+where to be choose to put a new process into
+
+36
+00:02:39,470 --> 00:02:41,470
+its into what partition.
+
+37
+00:02:41,470 --> 00:02:49,690
+So, we could have the best fit which is the
+area size closest, and of course larger, than
+
+38
+00:02:49,690 --> 00:02:51,769
+what the process is asking for.
+
+39
+00:02:51,769 --> 00:02:56,310
+If the process is asking for ten megabytes
+and we have an eleven megabyte sliver of available
+
+40
+00:02:56,310 --> 00:03:00,890
+then, we can put this ten megabyte process
+into the eleven megabyte sliver of available
+
+41
+00:03:00,890 --> 00:03:02,000
+space.
+
+42
+00:03:02,000 --> 00:03:06,650
+Well of course unfortunately that means that
+the last one megabyte is not inside of partition,
+
+43
+00:03:06,650 --> 00:03:10,930
+it's still available space we didn't know
+allocate it but it's never going to be used
+
+44
+00:03:10,930 --> 00:03:13,660
+because its so small; we’re never going
+to a process that so small it'll fit into
+
+45
+00:03:13,660 --> 00:03:18,720
+a one megabyte little sliver of space, and
+that's called external fragmentation because
+
+46
+00:03:18,720 --> 00:03:21,860
+it's outside of the area of an allocation.
+
+47
+00:03:21,860 --> 00:03:28,480
+We could use first fit, which just says the
+first spot that we becomes available when
+
+48
+00:03:28,480 --> 00:03:32,160
+we start looking, so once we start looking
+from the beginning of main memory.
+
+49
+00:03:32,160 --> 00:03:36,069
+If a spot is available that's larger than
+what the process is asking for we'll just
+
+50
+00:03:36,069 --> 00:03:37,379
+put it in there.
+
+51
+00:03:37,379 --> 00:03:42,120
+And the next bits as we begin looking from
+where we last left off.
+
+52
+00:03:42,120 --> 00:03:47,280
+Of all the options it actually turns out that
+next fit has the minimum CPU time with the
+
+53
+00:03:47,280 --> 00:03:53,849
+best average utilization of memory, but the
+point is moot because we don't do this anymore.
+
+54
+00:03:53,849 --> 00:03:58,299
+Dynamic partitioning has so much overhead,
+that we just can't do it in today's environment.
+

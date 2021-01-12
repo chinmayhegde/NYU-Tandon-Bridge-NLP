@@ -1,0 +1,33 @@
+1
+00:00:00,510 --> 00:00:05,319
+We have introduced MIPS assembly language
+and covered some fundamental instructions.
+
+2
+00:00:05,319 --> 00:00:09,920
+We have also seen that, although assembly
+has a one-to-one correlation to machine level
+
+3
+00:00:09,920 --> 00:00:14,059
+code, it doesn’t fully illustrate how the
+CPU executes the code.
+
+4
+00:00:14,059 --> 00:00:18,369
+We have then covered MIPS mnemonic notation,
+which gives a good middle ground between assembly
+
+5
+00:00:18,369 --> 00:00:19,830
+and machine-level code.
+
+6
+00:00:19,830 --> 00:00:27,039
+Next, we will use a tabular approach to illustrate
+how the CPU updates registers and memory when
+
+7
+00:00:27,039 --> 00:00:28,580
+it executes instructions
+

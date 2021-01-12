@@ -1,0 +1,297 @@
+1
+00:00:00,710 --> 00:00:04,410
+Let us now discuss the replacement policy
+of a cache.
+
+2
+00:00:04,410 --> 00:00:08,189
+The goal of replacement policy is to
+try to keep the block in the cache for as
+
+3
+00:00:08,189 --> 00:00:13,490
+long as possible based on the probability
+that it will be used again in the near future.
+
+4
+00:00:13,490 --> 00:00:16,880
+This is done to improve temporal locality.
+
+5
+00:00:16,880 --> 00:00:20,929
+If we have a direct-mapped, then there is
+not much of an option.
+
+6
+00:00:20,929 --> 00:00:26,319
+Since blue D RAM blocks can only go to only
+one cache block, if a new blue D RAM block
+
+7
+00:00:26,319 --> 00:00:30,960
+is being brought into the cache, then we have
+to remove the current content cache block
+
+8
+00:00:30,960 --> 00:00:31,960
+0.
+
+9
+00:00:31,960 --> 00:00:36,190
+So direct mapping doesn’t provide very good
+options for replacement.
+
+10
+00:00:36,190 --> 00:00:40,510
+This is another reason why it is not ideal
+for temporal locality.
+
+11
+00:00:40,510 --> 00:00:44,510
+If we have a fully-associative cache, things
+are a little bit different.
+
+12
+00:00:44,510 --> 00:00:47,460
+This is because in a fully-associative cache,
+we have options.
+
+13
+00:00:47,460 --> 00:00:52,760
+Remember, in a fully-associative cache, a
+D RAM block can move anywhere in the cache.
+
+14
+00:00:52,760 --> 00:00:57,750
+If a block is free in the cache, then we can
+always move the new D RAM block to that free
+
+15
+00:00:57,750 --> 00:00:59,010
+location.
+
+16
+00:00:59,010 --> 00:01:02,260
+So there is nothing to evict in that current
+case.
+
+17
+00:01:02,260 --> 00:01:05,810
+Let us consider the worst case that all the
+blocks of the fully-associative cache are
+
+18
+00:01:05,810 --> 00:01:09,180
+occupied, and we must evict something.
+
+19
+00:01:09,180 --> 00:01:16,130
+The most common replacement policy is called
+the least recently used policy, or LRU policy.
+
+20
+00:01:16,130 --> 00:01:20,880
+The idea behind the LRU policy is to evict
+the cache block that is the oldest to have
+
+21
+00:01:20,880 --> 00:01:22,690
+been accessed.
+
+22
+00:01:22,690 --> 00:01:27,790
+The intuition here is that if the content
+of a cache have not been accessed recently,
+
+23
+00:01:27,790 --> 00:01:30,700
+then they are unlikely to be accessed again
+in the near future.
+
+24
+00:01:30,700 --> 00:01:32,490
+So we can evict it.
+
+25
+00:01:32,490 --> 00:01:37,229
+On the other hand, if the contents of a cache
+block have been accessed recently, they will
+
+26
+00:01:37,229 --> 00:01:39,330
+likely be used again soon.
+
+27
+00:01:39,330 --> 00:01:43,530
+So it is best to keep it in the cache to maintain
+temporal locality.
+
+28
+00:01:43,530 --> 00:01:48,390
+To determine the recency of use, each cache
+block has what are called age bits.
+
+29
+00:01:48,390 --> 00:01:54,200
+The age bits of a cache block work as a time
+clock that indicates the last time a cache
+
+30
+00:01:54,200 --> 00:01:55,650
+block was accessed.
+
+31
+00:01:55,650 --> 00:02:00,090
+Whenever a cache block is accessed, its age
+bits are updated to represent the current
+
+32
+00:02:00,090 --> 00:02:01,230
+time of accessed.
+
+33
+00:02:01,230 --> 00:02:07,180
+So in our example, we have a fully associative
+cache and all cache blocks are occupied.
+
+34
+00:02:07,180 --> 00:02:12,840
+So the way the LRU policy works is that it
+first reads the age bits of all cache blocks
+
+35
+00:02:12,840 --> 00:02:16,670
+and find cache block with the lowest value
+age bits.
+
+36
+00:02:16,670 --> 00:02:22,750
+Remember, the least recently used block will
+have the smallest value in its age bits.
+
+37
+00:02:22,750 --> 00:02:25,580
+This oldest block is chosen for replacement.
+
+38
+00:02:25,580 --> 00:02:29,690
+This way, blocks that have been used recently
+can stay in the cache because they are more
+
+39
+00:02:29,690 --> 00:02:34,140
+likely to be used again soon according to
+temporal locality.
+
+40
+00:02:34,140 --> 00:02:39,270
+So in this example, the least recently used
+cache block is the last one because its age
+
+41
+00:02:39,270 --> 00:02:44,090
+bits are the smallest when we convert all
+the age bits to decimal values.
+
+42
+00:02:44,090 --> 00:02:46,900
+So that cache block would be selected for
+eviction.
+
+43
+00:02:46,900 --> 00:02:51,870
+During the eviction, the content of the new
+D RAM block is brought into the cache block
+
+44
+00:02:51,870 --> 00:02:57,200
+and the age bits of this block are updated
+to indicate that it was recently used.
+
+45
+00:02:57,200 --> 00:03:02,420
+As we see, now this cache block is the most
+recent one to have been accessed in the cache
+
+46
+00:03:02,420 --> 00:03:05,590
+because its age bits have the highest value.
+
+47
+00:03:05,590 --> 00:03:09,360
+The LRU policy also works for set associative
+caches.
+
+48
+00:03:09,360 --> 00:03:14,850
+But remember, in a set-associative cache,
+a D RAM block can only go to a specific set
+
+49
+00:03:14,850 --> 00:03:16,260
+within a cache.
+
+50
+00:03:16,260 --> 00:03:20,040
+So consider the example of a 2-way set associative
+cache.
+
+51
+00:03:20,040 --> 00:03:23,610
+A new D RAM block needs to be brought up to
+the cache.
+
+52
+00:03:23,610 --> 00:03:29,040
+Since this D RAM block is blue, it can only
+go to set 0 of the cache.
+
+53
+00:03:29,040 --> 00:03:34,670
+Since both blocks in that set are occupied,
+one of them must be evicted.
+
+54
+00:03:34,670 --> 00:03:40,530
+So using the LRU policy, the cache controller
+reads the age bits of the two cache blocks
+
+55
+00:03:40,530 --> 00:03:43,980
+and notices that the first one is the oldest
+used.
+
+56
+00:03:43,980 --> 00:03:49,790
+The content of that cache block is thus evicted,
+the new D RAM block is brought in, and the
+
+57
+00:03:49,790 --> 00:03:53,980
+age bits of the block are updated to reflect
+the current time.
+
+58
+00:03:53,980 --> 00:04:00,120
+Although we have only discussed LRU policy,
+there are other common approaches including
+
+59
+00:04:00,120 --> 00:04:07,210
+least frequently used, which uses counters
+to keep track how often caches are used, random
+
+60
+00:04:07,210 --> 00:04:12,870
+replacement, which randomly chooses a block
+to evict, and several hybrid methods that
+
+61
+00:04:12,870 --> 00:04:17,910
+dynamically adjust between least recently
+used and least frequently used based on the
+
+62
+00:04:17,910 --> 00:04:18,689
+performance of the cache.
+

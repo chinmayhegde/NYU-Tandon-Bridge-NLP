@@ -1,0 +1,72 @@
+1
+00:00:00,689 --> 00:00:06,640
+AVL trees are named for their creators and
+it's two guys named Adelson Belsky and Landis.
+
+2
+00:00:06,640 --> 00:00:11,660
+What they do is they record a height for each
+node of the tree and it's a balanced binary
+
+3
+00:00:11,660 --> 00:00:18,030
+search tree because the AVL tree puts in a
+stipulation that the height of the left and
+
+4
+00:00:18,030 --> 00:00:20,800
+right subtrees can differ by no more than
+one.
+
+5
+00:00:20,800 --> 00:00:25,500
+So the heights, by definition, can differ
+by no more than one and that means that we
+
+6
+00:00:25,500 --> 00:00:30,080
+never get to the point where we end up with
+a linked list where everything is always going
+
+7
+00:00:30,080 --> 00:00:34,679
+to the right or even worse everything's going
+to the left, but the point is that the heights
+
+8
+00:00:34,679 --> 00:00:35,699
+are restricted.
+
+9
+00:00:35,699 --> 00:00:41,989
+Now one thing that the AVL tree does, or actually
+the point of the AVL tree is that when we
+
+10
+00:00:41,989 --> 00:00:48,300
+determine that the heights differ by more
+than one then it's time for a rotation to
+
+11
+00:00:48,300 --> 00:00:49,600
+rebalance the subtree.
+
+12
+00:00:49,600 --> 00:00:54,729
+And we're going to talk about rotations in
+just a minute, but the heights of the trees
+
+13
+00:00:54,729 --> 00:00:56,980
+should cause a rotation to happen.
+
+14
+00:00:56,980 --> 00:01:01,999
+If they differ by more than one, we're going
+to have to do a rotation to reproach to choose
+
+15
+00:01:01,999 --> 00:01:07,840
+a better route of that subtree so that we
+can balance out the tree into.
+

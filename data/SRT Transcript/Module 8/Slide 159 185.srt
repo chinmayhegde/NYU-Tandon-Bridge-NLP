@@ -1,0 +1,172 @@
+0:00:00.630,0:00:03.860
+Ok let’s take a look at another example.
+
+0:00:03.860,0:00:11.320
+Let’s define a main that would have two
+local variables A and B. A would be initialized
+
+0:00:11.320,0:00:13.460
+to three B would be initialized to four.
+
+0:00:13.460,0:00:18.480
+Then we print the values of A and B basically
+before function calls.
+
+0:00:18.480,0:00:23.349
+So we say before A is probably three B is
+probably four.
+
+0:00:23.349,0:00:27.769
+Then we call the swap function with A and
+B and then we print the values of A and B
+
+0:00:27.769,0:00:29.279
+after this function call.
+
+0:00:29.279,0:00:37.040
+The swap function just as its name basically
+implies it would swap the values.
+
+0:00:37.040,0:00:43.270
+So given A and B as inputs it would swap these
+values.
+
+0:00:43.270,0:00:50.930
+So let’s see what would be printed here
+let’s trace the execution.
+
+0:00:50.930,0:00:59.860
+So initially the frame for main would include
+A and B the local variables that at line number
+
+0:00:59.860,0:01:02.450
+two would be assigned to three and four.
+
+0:01:02.450,0:01:08.939
+Then the cout at line number three would print
+that before A is three and B is four.
+
+0:01:08.939,0:01:13.020
+And then we have the call for the swap function.
+
+0:01:13.020,0:01:18.520
+Again note that the swap function doesn’t
+return any value it is a void function that
+
+0:01:18.520,0:01:21.090
+is given two integers.
+
+0:01:21.090,0:01:25.950
+Let’s follow the steps for a function call
+for the swap function.
+
+0:01:25.950,0:01:35.249
+Step one is create the frame for swap basically
+containing the parameters A and B. Same names
+
+0:01:35.249,0:01:39.429
+of variables for the main A and B and parameters
+of swap.
+
+0:01:39.429,0:01:44.049
+They can be the same they can be different
+anyway they are separate instances.
+
+0:01:44.049,0:01:53.009
+Local variable temp here that’s also included
+in the swap frame.
+
+0:01:53.009,0:01:58.150
+And return address so the step number one
+is create this frame.
+
+0:01:58.150,0:02:02.350
+Step number two is evaluating the argument
+up there in the main.
+
+0:02:02.350,0:02:09.070
+A and B are three and four that are in step
+number three associated to the parameter the
+
+0:02:09.070,0:02:16.170
+local parameters A and B. So the local A and
+B are also containing the same three and four
+
+0:02:16.170,0:02:20.120
+we had up in the main.
+
+0:02:20.120,0:02:23.760
+Return address would be to line number five
+right we are currently in line number four
+
+0:02:23.760,0:02:29.370
+so we’ll return back to line number five.
+
+0:02:29.370,0:02:34.780
+And then we just need to jump to the beginning
+of the swap function.
+
+0:02:34.780,0:02:42.070
+So in order to swap the values we would need
+to use this temporary variable to store the
+
+0:02:42.070,0:02:49.190
+original value of A which is three so we can
+override variable A with the new value the
+
+0:02:49.190,0:02:56.810
+swapped value of A. Then we say A equals B
+basically erasing the value the previous value
+
+0:02:56.810,0:03:00.520
+of A putting four in its place.
+
+0:03:00.520,0:03:07.240
+And then luckily for us we stored the previous
+value of A in temp so we can set B to be the
+
+0:03:07.240,0:03:09.870
+previous value of A basically temp.
+
+0:03:09.870,0:03:14.890
+Right so as you can see A and B did swap their
+values instead of three and four they are
+
+0:03:14.890,0:03:16.040
+now four and three.
+
+0:03:16.040,0:03:25.430
+But unfortunately the swap of values was locally
+in the swap function so when this function
+
+0:03:25.430,0:03:29.640
+ends and we pop out this frame and we jump
+back to where the main is.
+
+0:03:29.640,0:03:31.790
+To the main frame.
+
+0:03:31.790,0:03:40.930
+The swapped values are already gone and A
+and B the original A and B of the main have
+
+0:03:40.930,0:03:44.810
+their original values unchanged which are
+three and four.
+
+0:03:44.810,0:03:49.260
+So this thing here would print three and four.
+
+0:03:49.260,0:03:51.120
+And then the main ends and so on.
+
+0:03:51.120,0:03:56.660
+Not surprising basically very similar to what
+happened in our previous example.
+
+0:03:56.660,0:04:05.580
+But a bit concerning because we do want to
+be able to do some thing in a function and
+
+0:04:05.580,0:04:07.720
+affect other locations as well.

@@ -1,0 +1,68 @@
+1
+00:00:00,799 --> 00:00:07,250
+So if we know that each state takes one clock
+cycle, to find out how many states it takes
+
+2
+00:00:07,250 --> 00:00:10,850
+to execute a given instruction. Once can simply
+add up all the states it goes through. Consider
+
+3
+00:00:10,850 --> 00:00:17,470
+for example the load double instruction. Like
+all other instructions, Load double goes through
+
+4
+00:00:17,470 --> 00:00:23,239
+states 0 and 1 for fetch and decode. Then
+load double goes to state 2 of the diagram
+
+5
+00:00:23,239 --> 00:00:29,919
+for execute, state 3 for memory, and state
+4 for WriteBack. The instruction thus goes
+
+6
+00:00:29,919 --> 00:00:36,030
+to 5 states and thus takes 5 clock cycles.
+Using this approach, we can calculate how
+
+7
+00:00:36,030 --> 00:00:43,559
+long it would take for our CPU to execute
+a given code. For example, using this A = B
+
+8
+00:00:43,559 --> 00:00:50,649
+or C code, we use the high-level state diagram
+to calculate the number of cycles each instruction,
+
+9
+00:00:50,649 --> 00:00:56,219
+then add the number of cycles of the instructions
+together, and we estimate that our CPU takes
+
+10
+00:00:56,219 --> 00:00:59,449
+18 cycles to complete this code.
+
+11
+00:00:59,449 --> 00:01:07,430
+So, how fast is this CPU? Well, considering
+the fact that modern low-end CPUs such as
+
+12
+00:01:07,430 --> 00:01:13,510
+the ones used in smart phones can execute
+at least 4 instructions per cycle, our design
+
+13
+00:01:13,510 --> 00:01:19,750
+is not very fast. This is primarily because
+in our current design, the CPU can execute
+
+14
+00:01:19,750 --> 00:01:21,409
+only one instruction at a time.
+

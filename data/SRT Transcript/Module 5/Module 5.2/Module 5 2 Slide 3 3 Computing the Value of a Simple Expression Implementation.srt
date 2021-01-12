@@ -1,0 +1,194 @@
+0:00:00.120,0:00:04.910
+So let's implement this program first let's
+prompt the user to enter an expression, so
+
+0:00:04.910,0:00:10.950
+please enter an expression of the form of
+Arg one, arg 2.
+
+0:00:10.950,0:00:13.990
+Let's break the line and now let's read this
+expression.
+
+0:00:13.990,0:00:17.370
+So it can be five point two times four whatever.
+
+0:00:17.370,0:00:23.920
+So the format, basically, implies that we
+need two double variables, arg1 and arg2 and
+
+0:00:23.920,0:00:26.800
+we would also need a comma here obviously.
+
+0:00:26.800,0:00:32.669
+We would also need a character for the operator
+so let's have a char variable OP and now that
+
+0:00:32.669,0:00:39.289
+we have all of these variables we can c-in
+arg 1, OP and arg 2.
+
+0:00:39.289,0:00:45.469
+So if the user enters five point two times
+four ARG one would be five point two, OP would
+
+0:00:45.469,0:00:49.540
+be the star symbol, and ARG two would be four.
+
+0:00:49.540,0:00:53.489
+Now, we want to calculate the value of this
+expression.
+
+0:00:53.489,0:01:00.010
+So, basically we want to figure out or depending
+on the value of the operator, we want to apply
+
+0:01:00.010,0:01:01.489
+the corresponding operator.
+
+0:01:01.489,0:01:06.840
+So we need some sort of a multi- branching
+statement we said we're going to use a switch
+
+0:01:06.840,0:01:07.840
+for that.
+
+0:01:07.840,0:01:16.430
+So we're switching over the value of the OP
+variable, so switch OP and then we would have
+
+0:01:16.430,0:01:17.590
+a few cases.
+
+0:01:17.590,0:01:20.000
+So case it is plus.
+
+0:01:20.000,0:01:22.210
+We would do one thing.
+
+0:01:22.210,0:01:27.890
+Case and, just one second we need to take
+it one tab here, and then case it is minus
+
+0:01:27.890,0:01:30.450
+we would do another thing.
+
+0:01:30.450,0:01:40.160
+And case it is multiplication we would do
+some other stuff and case it is the dividing,
+
+0:01:40.160,0:01:42.160
+we would do another thing.
+
+0:01:42.160,0:01:45.870
+Default, we would, I don't know let's figure
+it out later.
+
+0:01:45.870,0:01:51.310
+Okay, so let's start with the case; the user
+entered Plus as an operator in this case.
+
+0:01:51.310,0:01:56.420
+Let's have another double variable result,
+res for short.
+
+0:01:56.420,0:02:04.160
+So let's set res to be ARG 1 plus ARG 2.
+
+0:02:04.160,0:02:11.569
+So in case we get a plus we add these values
+and then let's print res.
+
+0:02:11.569,0:02:18.690
+Same thing for subtracting and multiplying,
+so let's do for subtracting.
+
+0:02:18.690,0:02:24.930
+So in this case we want to subtract ARG 1
+and ARG 2.
+
+0:02:24.930,0:02:30.030
+In this case we want to multiply ARG one and
+ARG two.
+
+0:02:30.030,0:02:35.359
+And in this case we would want to divide ARG
+one and ARG two.
+
+0:02:35.359,0:02:43.840
+Default if it's not one of these operators,
+we would just want to say that it's an illegal
+
+0:02:43.840,0:02:46.749
+expression so let's write illegal expression
+and break.
+
+0:02:46.749,0:02:50.969
+Okay, so let's take a closer look here at
+what we have.
+
+0:02:50.969,0:02:57.230
+So we're switching over the operator: in case
+it's plus we're adding, in case it's minus
+
+0:02:57.230,0:03:03.340
+we're subtracting, in case it's a star we're
+multiplying, in case of the slash we're dividing.
+
+0:03:03.340,0:03:11.769
+Each time we're printing the result, and the
+body starts here and ends here for each one
+
+0:03:11.769,0:03:12.769
+of these branches.
+
+0:03:12.769,0:03:17.870
+Let's try to execute it to see that we don't
+have any unpleasant surprises here.
+
+0:03:17.870,0:03:24.069
+So please enter an expression five point two
+times four, and we would get twenty point
+
+0:03:24.069,0:03:25.069
+eight.
+
+0:03:25.069,0:03:29.400
+Maybe just one thing I would add here is,
+maybe this kind of thing.
+
+0:03:29.400,0:03:34.489
+Let's say I want to add five and zero, that
+would be fine.
+
+0:03:34.489,0:03:41.939
+But if I want to divide five by zero, I don't
+want to get this; it probably stands for infinite
+
+0:03:41.939,0:03:45.719
+in some other compilers it would create at
+runtime error.
+
+0:03:45.719,0:03:52.590
+I want to be more cautious here when I divide
+the ARG one by ARG two, and maybe ask if ARG
+
+0:03:52.590,0:04:02.319
+two is not zero then we want to do all of
+that, want to divide and print this value.
+
+0:04:02.319,0:04:08.819
+Otherwise, let's just, print that it’s an
+illegal expression again.
+
+0:04:08.819,0:04:16.669
+Once again let's take care of the indentation
+and in the case of dividing, we check if it
+
+0:04:16.669,0:04:24.250
+is legal to divide or not and break after
+that but see that now five divided by zero
+
+0:04:24.250,0:04:28.250
+would say illegal expressions so five divided
+by zero is an illegal expression.

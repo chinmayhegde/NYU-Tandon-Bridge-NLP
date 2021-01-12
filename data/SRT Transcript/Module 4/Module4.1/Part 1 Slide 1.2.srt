@@ -1,0 +1,37 @@
+1
+00:00:01,990 --> 00:00:08,930
+Hi there today we're going to talk about data
+types and expressions in quite a detail.
+
+2
+00:00:08,930 --> 00:00:15,679
+Before we do that I want to say that each
+programming language has three fundamental
+
+3
+00:00:15,679 --> 00:00:17,190
+constructs.
+
+4
+00:00:17,190 --> 00:00:22,240
+There are data expressions and a control flow.
+
+5
+00:00:22,240 --> 00:00:27,589
+In order to master in a programming language
+you have to know a lot in each one of them.
+
+6
+00:00:27,589 --> 00:00:33,770
+You have to know a lot in data a lot in expressions
+a lot about control flow and actually takes
+
+7
+00:00:33,770 --> 00:00:38,720
+some time in order to understand so much.
+
+8
+00:00:38,720 --> 00:00:43,290
+So we are going to take step by step and you
+have to be kind of patient.
+

@@ -1,0 +1,14 @@
+1
+00:00:00,560 --> 00:00:04,600
+Remember, here the immediate value is negative
+four.
+
+2
+00:00:04,600 --> 00:00:10,580
+So you must first convert the negative four
+value in its representative hexadecimal format,
+
+3
+00:00:10,580 --> 00:00:13,230
+sign-extend it, then do your addition.
+

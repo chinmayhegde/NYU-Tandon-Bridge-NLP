@@ -1,0 +1,124 @@
+1
+00:00:00,789 --> 00:00:04,220
+Here's the code for deleting a node if it
+has no children.
+
+2
+00:00:04,220 --> 00:00:08,149
+And what we're given is a pointer to this
+node, actually it's a reference to a pointer
+
+3
+00:00:08,149 --> 00:00:09,149
+to this node.
+
+4
+00:00:09,149 --> 00:00:12,860
+The reason for that is that we're going to
+be changing the pointer; we actually make
+
+5
+00:00:12,860 --> 00:00:14,839
+a change so that temp pointer.
+
+6
+00:00:14,839 --> 00:00:19,400
+So, what we do is to say if temps left is
+equal to the null pointer and temps right
+
+7
+00:00:19,400 --> 00:00:21,680
+is equal to the null pointer: it just it has
+no children.
+
+8
+00:00:21,680 --> 00:00:24,630
+So, there's no there's no work that really
+has to be done here.
+
+9
+00:00:24,630 --> 00:00:29,290
+We’ll find out if the parent is the null
+pointer, if it is then this is the root node
+
+10
+00:00:29,290 --> 00:00:33,130
+of the tree; it has no children if the last
+note on the tree were done.
+
+11
+00:00:33,130 --> 00:00:35,260
+So, we can just set root equal to null pointer.
+
+12
+00:00:35,260 --> 00:00:39,400
+So, if we’re removing the last node in the
+tree just remove the node.
+
+13
+00:00:39,400 --> 00:00:41,820
+And then of course will have to delete it
+later.
+
+14
+00:00:41,820 --> 00:00:46,570
+And then we'll check to see if the parents
+left is equal to this node.
+
+15
+00:00:46,570 --> 00:00:51,720
+So, if the parents left is equal to the node
+that we're looking at, so we go up a level
+
+16
+00:00:51,720 --> 00:00:56,140
+and then we go back to the left then we're
+going to have to set the parents left pointer
+
+17
+00:00:56,140 --> 00:00:57,480
+equal to the null pointer.
+
+18
+00:00:57,480 --> 00:01:02,380
+Remember this node has no children at all;
+so if the parents left is this node that we're
+
+19
+00:01:02,380 --> 00:01:05,920
+looking at then let's delete the parents left.
+
+20
+00:01:05,920 --> 00:01:10,330
+If the parent's right, obviously if the parent
+if it's not the parents left in the parent
+
+21
+00:01:10,330 --> 00:01:13,330
+exists then it's this must be the parent's
+right pointer.
+
+22
+00:01:13,330 --> 00:01:19,100
+So, if the parent's right pointer is this
+pointer, then we update that parent's right
+
+23
+00:01:19,100 --> 00:01:22,320
+pointer to get rid of this node and then we
+actually get rid of the node.
+
+24
+00:01:22,320 --> 00:01:25,190
+So, in the no children case this is actually
+pretty simple.
+
+25
+00:01:25,190 --> 00:01:30,549
+We basically just update the parent’s pointer
+so that it points to null and then delete
+
+26
+00:01:30,549 --> 00:01:30,829
+the node.
+

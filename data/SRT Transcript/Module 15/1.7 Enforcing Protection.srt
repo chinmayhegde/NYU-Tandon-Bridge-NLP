@@ -1,0 +1,73 @@
+1
+00:00:00,820 --> 00:00:03,719
+The previous code we looked at was a really
+simplistic view of a class.
+
+2
+00:00:03,719 --> 00:00:08,460
+And the problem with the simplistic view of
+a class is that it's storing three integers,
+
+3
+00:00:08,460 --> 00:00:13,259
+and integers, the domain of an integer is
+negative two point one billion to positive
+
+4
+00:00:13,259 --> 00:00:14,639
+two point one billion.
+
+5
+00:00:14,639 --> 00:00:18,670
+Now I don't know what it means if the day
+is negative two point one billion or the day
+
+6
+00:00:18,670 --> 00:00:23,849
+is positive three hundred thousand, it really
+doesn't make sense because in our model in
+
+7
+00:00:23,849 --> 00:00:29,830
+our world, the day can't be a number outside
+the range of one to thirty one.
+
+8
+00:00:29,830 --> 00:00:35,140
+So rather than allowing uncontrolled or what
+we call public access previously, we should
+
+9
+00:00:35,140 --> 00:00:40,530
+really protect that data and we should mark
+the data as being private.
+
+10
+00:00:40,530 --> 00:00:46,649
+Now one thing to note is that if we leave
+off the notation of private or public, then
+
+11
+00:00:46,649 --> 00:00:50,710
+by default C++ assumes that what we want is
+private.
+
+12
+00:00:50,710 --> 00:00:57,129
+So we can modify the class now to change that
+public keyword to be a private keyword.
+
+13
+00:00:57,129 --> 00:01:03,430
+And now nobody outside of the date class,
+can access day, month, or year.
+
+14
+00:01:03,430 --> 00:01:08,040
+And that means change it print it do anything
+with it; nobody has access to those three
+
+15
+00:01:08,040 --> 00:01:08,630
+variables.
+

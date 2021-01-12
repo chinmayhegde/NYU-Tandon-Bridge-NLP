@@ -1,0 +1,662 @@
+1
+00:00:00,060 --> 00:00:06,650
+Let's implement the sorted search function.
+So I have here a main program that I created,
+
+2
+00:00:06,650 --> 00:00:12,260
+a sorted array. Notice that the elements in
+this array are increasing order, one, three,
+
+3
+00:00:12,260 --> 00:00:18,750
+five, seven, nine, and so on. And I've made
+it call to the sorted search function, that
+
+4
+00:00:18,750 --> 00:00:24,660
+is given the array, sorted array and its logical
+size of ten. and for example we're searching
+
+5
+00:00:24,660 --> 00:00:30,439
+for thirteen here, and thirteen does appear
+over here so we're expecting to get the index
+
+6
+00:00:30,439 --> 00:00:34,980
+of thirteen, which is zero, one, two, three,
+four, five, six; so, we're expecting to get
+
+7
+00:00:34,980 --> 00:00:41,050
+a six out in this print statement. And let's
+just implement the sorted search function
+
+8
+00:00:41,050 --> 00:00:47,760
+so this program can execute. I have this prototype
+up here; let’s copy it and do our implementation,
+
+9
+00:00:47,760 --> 00:00:52,770
+so something like that. And okay. So, let's
+get started.
+
+10
+00:00:52,770 --> 00:00:59,620
+So, we have our sorted array, something like
+that, and each time we are limiting half of
+
+11
+00:00:59,620 --> 00:01:06,350
+the range. So, let's have two indexes to indicate
+the valid range we're searching initially;
+
+12
+00:01:06,350 --> 00:01:12,090
+let's name the low and high. So, initially
+they are set to the entire range of the array,
+
+13
+00:01:12,090 --> 00:01:19,259
+so let's create two variables low and high
+and set them initially low to zero and high
+
+14
+00:01:19,259 --> 00:01:25,789
+to the last index of the array, which is the
+sorted array size minus one. And then, we
+
+15
+00:01:25,789 --> 00:01:30,890
+should start iterating each time eliminating
+half of the valid range. For that we would
+
+16
+00:01:30,890 --> 00:01:34,979
+use a while loop, right. We don't know exactly
+how many iterations we're going to have so
+
+17
+00:01:34,979 --> 00:01:39,710
+let's use a while loop here. And I'll keep
+the Boolean condition here empty for now,
+
+18
+00:01:39,710 --> 00:01:44,530
+till we figure out exactly what's the body
+of the loop it would be easier for us to state
+
+19
+00:01:44,530 --> 00:01:45,630
+that really in condition.
+
+20
+00:01:45,630 --> 00:01:52,090
+Okay. Another thing I think it's good to set
+from the beginning would be a Boolean flag
+
+21
+00:01:52,090 --> 00:01:58,049
+that indicates if we found the value val we
+are searching for or still haven't done that.
+
+22
+00:01:58,049 --> 00:02:06,700
+So, let's have Boolean variable name found,
+that would be set initially found to false
+
+23
+00:02:06,700 --> 00:02:12,590
+and when we find our value we'll update it
+to true, but initially it would be false.
+
+24
+00:02:12,590 --> 00:02:19,040
+And then let's start iterating, so each iteration
+we are searching the range from low to high;
+
+25
+00:02:19,040 --> 00:02:24,459
+and we said we're not searching it linearly,
+we are taking the middle point and comparing
+
+26
+00:02:24,459 --> 00:02:30,189
+the value we have in here, to the value we're
+searching for. So, for example if our value
+
+27
+00:02:30,189 --> 00:02:35,010
+were searching is as we had before seventy
+nine, let's take the middle point and compare
+
+28
+00:02:35,010 --> 00:02:42,989
+it to seventy nine. So let's have a mid index;
+so we have mid. And let's set mid to the middle
+
+29
+00:02:42,989 --> 00:02:49,349
+between a low and high. So mid would be…
+how can we figure out what mid should be?
+
+30
+00:02:49,349 --> 00:02:54,510
+So mid, in order to be the middle between
+low and high is basically the average between
+
+31
+00:02:54,510 --> 00:03:02,040
+low and high. So low plus high over two; that's
+the value of mid, so let's set mid to low
+
+32
+00:03:02,040 --> 00:03:09,430
+plus high over two. Notice that since low
+and high are both integers, obviously, low
+
+33
+00:03:09,430 --> 00:03:15,620
+plus high is also an integer and since two
+is an integer literal then these two operands
+
+34
+00:03:15,620 --> 00:03:22,430
+of the dividing slash here are integers basically
+saying that C++ would interpret this slash
+
+35
+00:03:22,430 --> 00:03:27,819
+as a div not as a real division. Which is
+very good for us because we don't really want
+
+36
+00:03:27,819 --> 00:03:33,220
+mid to be the real average between low and
+high; it should be a valid index, an integer
+
+37
+00:03:33,220 --> 00:03:36,560
+value.
+So, div basically takes it floored down which
+
+38
+00:03:36,560 --> 00:03:42,440
+is an estimation of the point; it could be
+offsetted one index to the left. So, we have
+
+39
+00:03:42,440 --> 00:03:48,409
+the middle position and now we should compare
+val to the array in the middle position. So
+
+40
+00:03:48,409 --> 00:03:54,230
+let's see if, and in here there could be a
+few values, so for example if we're lucky
+
+41
+00:03:54,230 --> 00:04:02,290
+the value in sorted array at the middle position
+is val, exactly the value we're looking for,
+
+42
+00:04:02,290 --> 00:04:08,870
+in this case we should raise the flag basically
+say that found is true. Right? So if in here
+
+43
+00:04:08,870 --> 00:04:15,299
+we have, for example seventy nine, then basically
+we're done. We should just say that val, that
+
+44
+00:04:15,299 --> 00:04:20,739
+found is true, and break out of the function
+return the index we’re at. Actually, I don't
+
+45
+00:04:20,739 --> 00:04:27,479
+want to break the while loop by a return statement
+so I'll just save the position that val is
+
+46
+00:04:27,479 --> 00:04:33,300
+found so I'll create another integer named
+ind where I’ll store this index and I'll
+
+47
+00:04:33,300 --> 00:04:40,560
+set ind to be the mid point basically where
+value is right that is at the mid index. So
+
+48
+00:04:40,560 --> 00:04:47,600
+if we found val, we are storing the index
+and setting found to true. Hopefully that
+
+49
+00:04:47,600 --> 00:04:51,780
+would help us breakout of the while loop;
+we’ll take care of it in a few minutes when
+
+50
+00:04:51,780 --> 00:04:54,360
+we state the Boolean condition.
+
+51
+00:04:54,360 --> 00:05:01,330
+But most likely we won't be so lucky and we
+won't get seventy nine right here in the beginning.
+
+52
+00:05:01,330 --> 00:05:09,530
+So, let's see, else if we’re as we said
+not so lucky and value isn't exactly as sorted
+
+53
+00:05:09,530 --> 00:05:15,360
+array mid, we should compare it and see how
+what relational order they have. So, for example
+
+54
+00:05:15,360 --> 00:05:24,690
+if we have say ninety six, or in other words
+if our val is less then sorted A R R at the
+
+55
+00:05:24,690 --> 00:05:30,470
+middle position, right; like we have here
+where seventy nine is less than ninety six.
+
+56
+00:05:30,470 --> 00:05:36,880
+In this case, as we said, we can eliminate
+all of that range right. In order to do that,
+
+57
+00:05:36,880 --> 00:05:44,389
+we should then just said high over here right;
+so, we can basically create that as our valid
+
+58
+00:05:44,389 --> 00:05:50,599
+range. To do that let's say that high in this
+case should equal to mid minus one right.
+
+59
+00:05:50,599 --> 00:05:55,479
+We ruled out all the elements there are to
+the left, to the right, actually of ninety
+
+60
+00:05:55,479 --> 00:05:59,110
+six. Okay, so that takes care of that.
+
+61
+00:05:59,110 --> 00:06:04,310
+But another case could be if we have here
+a value instead of ninety six that is a value
+
+62
+00:06:04,310 --> 00:06:10,919
+that is less than seventy nine. So if we have
+instead of ninety six, let's say fifty one;
+
+63
+00:06:10,919 --> 00:06:17,050
+so we're in an else right. So sorted A R R
+mid is not seventy nine, sorted A R R mid
+
+64
+00:06:17,050 --> 00:06:22,270
+is not greater than seventy nine, not greater
+than val. In this case, that mid … maybe
+
+65
+00:06:22,270 --> 00:06:28,720
+comment and say that we are in the case where
+val is greater, seventy nine is greater, than
+
+66
+00:06:28,720 --> 00:06:31,419
+the sorted array in the middle position.
+
+67
+00:06:31,419 --> 00:06:38,509
+In this case, we can eliminate all of these
+elements and to do that we just set low to
+
+68
+00:06:38,509 --> 00:06:45,650
+here, right. So we should just say low equals
+mid plus one, right; setting the valid range
+
+69
+00:06:45,650 --> 00:06:50,870
+to this half of our searching range. Let's
+take a look at the body we have for the while
+
+70
+00:06:50,870 --> 00:06:57,069
+loop so each iteration we’re figuring out
+where the middle index is and then we’re
+
+71
+00:06:57,069 --> 00:07:02,039
+checking whether the middle element is exactly
+the value we're searching for, in this case
+
+72
+00:07:02,039 --> 00:07:07,410
+where saving this position and hopefully raising
+the flag that would lead us to break out of
+
+73
+00:07:07,410 --> 00:07:13,690
+the while. Otherwise if we are not so lucky
+we are comparing val to the element that is
+
+74
+00:07:13,690 --> 00:07:18,780
+in the middle position; if val is less than
+we are eliminating all the right values, the
+
+75
+00:07:18,780 --> 00:07:24,530
+values that are greater than the middle position
+basically setting high to mid minus one. Otherwise,
+
+76
+00:07:24,530 --> 00:07:28,949
+we're eliminating all the values to the left
+of the middle position, basically saying that
+
+77
+00:07:28,949 --> 00:07:35,330
+low is mid plus one and we do that over and
+over. While, so obviously, while found is
+
+78
+00:07:35,330 --> 00:07:41,030
+still false right. We initially set found
+to false, so we want to keep on iterating
+
+79
+00:07:41,030 --> 00:07:47,540
+while found is still false. But there are
+cases where found would never become true,
+
+80
+00:07:47,540 --> 00:07:53,919
+right. So, if the value val appears in sorted
+A R, eventually we'll close on it and find
+
+81
+00:07:53,919 --> 00:08:01,490
+its position, but in case value doesn't appear
+in sorted A R R at all found would never become
+
+82
+00:08:01,490 --> 00:08:06,909
+true, and we want to be able to break out
+of this while loop in that case as well.
+
+83
+00:08:06,909 --> 00:08:11,180
+So, in order to figure out what we need to
+do here. Let's take a closer look; I’ll
+
+84
+00:08:11,180 --> 00:08:17,389
+maybe try to demonstrate it on a small numerical
+example. So let's take a new array of three
+
+85
+00:08:17,389 --> 00:08:22,409
+elements, let’s have, I don't know, two,
+five, seven; these are our elements. There
+
+86
+00:08:22,409 --> 00:08:34,329
+are indexes: zero, one, two. So, initially
+we have low and high over here, right. And
+
+87
+00:08:34,329 --> 00:08:40,360
+let's try to execute this code and see what
+happens if we are searching for a value that
+
+88
+00:08:40,360 --> 00:08:45,290
+is not in this array, let's search for four,
+right. Obviously, we should figure out that
+
+89
+00:08:45,290 --> 00:08:50,630
+it doesn't appear there. Let's try to execute
+the code. So, initially mid would be low plus
+
+90
+00:08:50,630 --> 00:08:56,901
+high div two, basically zero plus two. That's
+two div two, two div two that’s one. So
+
+91
+00:08:56,901 --> 00:09:06,029
+mid would be here, right. And then we’re
+trying to compare if in index one element
+
+92
+00:09:06,029 --> 00:09:12,540
+equals val, equals four, that's not true right.
+Our value here, five, does not equal four.
+
+93
+00:09:12,540 --> 00:09:20,029
+In this case, we should then continue on.
+So if val four is less then what we have in
+
+94
+00:09:20,029 --> 00:09:25,260
+the middle position which is five, so four
+is less than five which is true, then we should
+
+95
+00:09:25,260 --> 00:09:28,990
+set high to be mid
+minus one, which makes a lot of sense right.
+
+96
+00:09:28,990 --> 00:09:34,220
+If four would appear here, it wouldn't be
+in the right half, it would be in the left
+
+97
+00:09:34,220 --> 00:09:35,220
+half.
+
+98
+00:09:35,220 --> 00:09:42,240
+So, let's set high to being mid minus one;
+so high would then be right here. So high
+
+99
+00:09:42,240 --> 00:09:48,850
+would be zero as well. Okay. So we have both
+low and high at zero position; another iteration
+
+100
+00:09:48,850 --> 00:09:55,630
+mid would be low plus high div two, zero plus
+zero div two that would be zero as well. So,
+
+101
+00:09:55,630 --> 00:10:01,550
+our mid would also be here. Once again we’re
+checking whether the element we’re searching
+
+102
+00:10:01,550 --> 00:10:06,000
+in, which is basically the only element in
+our valid range, the one and only element
+
+103
+00:10:06,000 --> 00:10:11,820
+in our range. So, two is it equal to val,
+to four? It is not, so or we should check
+
+104
+00:10:11,820 --> 00:10:18,510
+whether val four is less than the element
+we have in the middle; is four less than two,
+
+105
+00:10:18,510 --> 00:10:24,420
+that's not true as well. So it means that
+the val is greater than our middle element,
+
+106
+00:10:24,420 --> 00:10:29,540
+which is true four is greater than two, in
+this case we said that we should make low
+
+107
+00:10:29,540 --> 00:10:30,670
+mid plus one.
+
+108
+00:10:30,670 --> 00:10:39,630
+So our low would go over here. Okay. So as
+you can see, basically, low crossed over high;
+
+109
+00:10:39,630 --> 00:10:46,320
+always we have low to the left of high, right.
+Initially low is to the left of high then
+
+110
+00:10:46,320 --> 00:10:51,480
+we change high to that half and again, low
+is to the left of high and low would go over
+
+111
+00:10:51,480 --> 00:10:55,810
+here and it would be to the left of high and
+high would go over here and a low would be
+
+112
+00:10:55,810 --> 00:11:01,459
+to the left high. But if we have one single
+element here and it's not that element, low
+
+113
+00:11:01,459 --> 00:11:06,829
+would go over high and that basically means
+that our element is not found.
+
+114
+00:11:06,829 --> 00:11:14,120
+So, in addition to looking whether the flag
+is turned out to true or false. We should
+
+115
+00:11:14,120 --> 00:11:23,410
+always check whether our range is valid, basically
+if low is less or equal to high. So, if both
+
+116
+00:11:23,410 --> 00:11:29,459
+we still haven't found our element, found
+is still false, and our range is a still valid
+
+117
+00:11:29,459 --> 00:11:34,070
+range, low is still to the left of high, low
+is less or equal to high, we want to keep
+
+118
+00:11:34,070 --> 00:11:35,529
+on iterating.
+
+119
+00:11:35,529 --> 00:11:42,550
+But if found becomes true, we want to break
+out. If low crosses over high and low is not
+
+120
+00:11:42,550 --> 00:11:47,500
+less or equal to high, that means our val
+doesn't appear, we want to break out. Okay.
+
+121
+00:11:47,500 --> 00:11:53,660
+So after this while loop, we should basically
+check what's the reason we broke out; if we
+
+122
+00:11:53,660 --> 00:12:01,350
+found this element? So if found equals true
+that means that val appears in sorted array
+
+123
+00:12:01,350 --> 00:12:07,330
+so we should just return the index we saved
+earlier, this index here. But if found is
+
+124
+00:12:07,330 --> 00:12:13,930
+false, basically that means that we broke
+out of the loop not because we found the element
+
+125
+00:12:13,930 --> 00:12:20,279
+but because our range is invalid, low is not
+less or equal to high, in this case we should
+
+126
+00:12:20,279 --> 00:12:22,800
+just return negative one.
+
+127
+00:12:22,800 --> 00:12:27,579
+Okay, yeah. That seems to be the implementation
+for this function. Let's try to execute it
+
+128
+00:12:27,579 --> 00:12:33,780
+and see if we get a six if we’re searching
+for thirteen in this sorted array. Okay. We've
+
+129
+00:12:33,780 --> 00:12:39,760
+got a six here. Let's try to call it one more
+time with an element that does not appear.
+
+130
+00:12:39,760 --> 00:12:44,860
+For example, it's fourteen and see that we
+get a negative one here. Yeah. For fourteen
+
+131
+00:12:44,860 --> 00:12:51,140
+we got the negative one which seems to be
+right. Yeah. So, just you know maybe it would
+
+132
+00:12:51,140 --> 00:12:57,880
+be a good idea if you try on your own, to
+take an array with values and to trace it
+
+133
+00:12:57,880 --> 00:13:03,410
+on your own, but the idea here is just as
+we've talked earlier. Let's try to analyze
+
+134
+00:13:03,410 --> 00:13:04,550
+the running time of this algorithm, right
+now.
+

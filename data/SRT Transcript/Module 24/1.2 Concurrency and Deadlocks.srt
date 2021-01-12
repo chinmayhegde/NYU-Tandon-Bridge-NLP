@@ -1,0 +1,67 @@
+1
+00:00:00,799 --> 00:00:04,140
+In this model we're going to continue our
+discussion of threads and we're going to talk
+
+2
+00:00:04,140 --> 00:00:07,800
+about some of the features of having threads
+work together with one another.
+
+3
+00:00:07,800 --> 00:00:11,850
+So we're going to talk just simply a quick
+reminder about what threads are we're going
+
+4
+00:00:11,850 --> 00:00:16,430
+to talk about some features of having multiple
+threads accessing multiple resources.
+
+5
+00:00:16,430 --> 00:00:20,800
+We're going to have a discussion on ways that
+we can end up with a synchrony and what a
+
+6
+00:00:20,800 --> 00:00:22,170
+synchrony is.
+
+7
+00:00:22,170 --> 00:00:24,660
+We're going to talk about the idea of critical
+sections.
+
+8
+00:00:24,660 --> 00:00:27,019
+We're going to talk about concurrency issues.
+
+9
+00:00:27,019 --> 00:00:31,659
+We're going to explain mutual exclusion and
+talk about some software and hardware options
+
+10
+00:00:31,659 --> 00:00:34,000
+or solutions for mutual exclusion.
+
+11
+00:00:34,000 --> 00:00:38,030
+We're going to describe the operating system
+semaphores and how they work.
+
+12
+00:00:38,030 --> 00:00:42,800
+We're going to describe deadlocks and how
+we can resolve deadlocks and then we're going
+
+13
+00:00:42,800 --> 00:00:46,710
+to talk about the dining philosophers problem
+as a wrap up problem.
+
+14
+00:00:46,710 --> 00:00:49,899
+So there's a lot to go through in this module
+and we'll get started immediately.
+

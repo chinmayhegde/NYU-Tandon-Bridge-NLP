@@ -1,0 +1,71 @@
+1
+00:00:01,000 --> 00:00:06,220
+There's another function inside the stream
+object which is useful, called seekG.
+
+2
+00:00:06,220 --> 00:00:12,740
+And seekG allows us to move the file pointer
+around skipping over characters either forwards
+
+3
+00:00:12,740 --> 00:00:13,990
+or backwards.
+
+4
+00:00:13,990 --> 00:00:17,070
+We can also use seekG to move back to the
+beginning of the file.
+
+5
+00:00:17,070 --> 00:00:22,480
+So, if we specify a positive number that moves
+us that number of characters ahead in the
+
+6
+00:00:22,480 --> 00:00:23,480
+file.
+
+7
+00:00:23,480 --> 00:00:27,330
+If we specify a negative number that takes
+us back that number of characters, but if
+
+8
+00:00:27,330 --> 00:00:30,439
+we specify as zero takes us back to the beginning
+of the file.
+
+9
+00:00:30,439 --> 00:00:34,640
+Now one of the things to take care of here
+it with seekG is that if we've reached the
+
+10
+00:00:34,640 --> 00:00:39,580
+E.O.F. marker, if we’ve reached the end
+of file and the file is now what we consider
+
+11
+00:00:39,580 --> 00:00:44,680
+in a failed state because we read in the end
+of file marker, using seekG to send it back
+
+12
+00:00:44,680 --> 00:00:47,530
+to zero doesn't clear those flags.
+
+13
+00:00:47,530 --> 00:00:51,460
+So if what your point is, is get once you're
+at the end of the file is to move it back
+
+14
+00:00:51,460 --> 00:00:54,879
+to the beginning of the file, make sure you
+call it clear because it's going to clear
+
+15
+00:00:54,879 --> 00:00:56,260
+those flags also.
+

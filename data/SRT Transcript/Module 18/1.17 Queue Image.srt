@@ -1,0 +1,66 @@
+1
+00:00:00,669 --> 00:00:04,420
+So here we have just a simple sample of how
+we would use a queue.
+
+2
+00:00:04,420 --> 00:00:08,620
+We have a couple of calls to the enqueuer
+function; we have values of twenty, fifty,
+
+3
+00:00:08,620 --> 00:00:09,710
+and thirty.
+
+4
+00:00:09,710 --> 00:00:13,710
+And when we insert twenty, or when we enqueue
+twenty, it's going to be the only thing that's
+
+5
+00:00:13,710 --> 00:00:18,060
+on the list so it's pointers going to point
+to null.
+
+6
+00:00:18,060 --> 00:00:25,180
+But when we insert fifty, the next pointer
+of the twenty node is going to point to fifty,
+
+7
+00:00:25,180 --> 00:00:29,530
+meaning that twenty is still the head of the
+list or the head pointer still points to the
+
+8
+00:00:29,530 --> 00:00:31,449
+node that stores the twenty.
+
+9
+00:00:31,449 --> 00:00:36,199
+But the next pointer inside the twenty node
+is going to point to fifty, and so to the
+
+10
+00:00:36,199 --> 00:00:38,190
+same happens when we have the thirty.
+
+11
+00:00:38,190 --> 00:00:42,559
+When we start to dequeue these objects they
+come out in the exact same order as they went
+
+12
+00:00:42,559 --> 00:00:45,710
+in, which is of course different from the
+way that the stack works.
+
+13
+00:00:45,710 --> 00:00:49,379
+But that's because this is a first in, first
+out buffer, instead of the first in, last
+
+14
+00:00:49,379 --> 00:00:49,969
+out buffer.
+

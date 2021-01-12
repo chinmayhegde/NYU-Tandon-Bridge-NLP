@@ -1,0 +1,139 @@
+1
+00:00:00,690 --> 00:00:05,680
+So, if we take a look at the concept of a
+thread now, we recognize that the thread really
+
+2
+00:00:05,680 --> 00:00:07,940
+only has three states.
+
+3
+00:00:07,940 --> 00:00:13,820
+It has ready, it has running, and it has blocked,
+and all of those makes sense in the same concept
+
+4
+00:00:13,820 --> 00:00:17,250
+that we talked about them in the process level
+notion.
+
+5
+00:00:17,250 --> 00:00:21,190
+A thread can be ready, meaning it has everything
+it needs to in order to run it's just waiting
+
+6
+00:00:21,190 --> 00:00:22,520
+for a processor.
+
+7
+00:00:22,520 --> 00:00:26,539
+It has running, meaning it's actually on the
+processor and doing some work, and it has
+
+8
+00:00:26,539 --> 00:00:30,050
+block, meaning it's waiting for something
+to happen.
+
+9
+00:00:30,050 --> 00:00:34,030
+Threads don't really have a new and an exit
+state, because we don't need to load code.
+
+10
+00:00:34,030 --> 00:00:38,710
+For example, our old example of loading the
+code and that was why we needed the new state,
+
+11
+00:00:38,710 --> 00:00:42,949
+we don't have that anymore because the thread
+already has all of its code loaded in main
+
+12
+00:00:42,949 --> 00:00:43,989
+memory.
+
+13
+00:00:43,989 --> 00:00:47,859
+We're just creating a new thread and how does
+a new thread get created?
+
+14
+00:00:47,859 --> 00:00:53,350
+Well the operating system creates a TCB to
+recognize this thread, initializes the linkages
+
+15
+00:00:53,350 --> 00:00:56,479
+initializes the TCB, and then it starts to
+run.
+
+16
+00:00:56,479 --> 00:01:05,120
+So, it's really an atomic element creating
+a new thread can be done atomically, and the
+
+17
+00:01:05,120 --> 00:01:08,850
+thread just begins running inside the context
+of the process.
+
+18
+00:01:08,850 --> 00:01:12,900
+So, we don't need a new state and likewise,
+we don't even exit state because when a thread
+
+19
+00:01:12,900 --> 00:01:19,540
+completes there's nothing returned back to
+the running process; the thread just records
+
+20
+00:01:19,540 --> 00:01:20,710
+that it's done.
+
+21
+00:01:20,710 --> 00:01:25,630
+Now obviously, if it's the last thread or
+the main thread, if you would, then that needs
+
+22
+00:01:25,630 --> 00:01:31,480
+to be returned back so we still have the concept
+of new and exit state in the idea of a process,
+
+23
+00:01:31,480 --> 00:01:35,640
+but in the idea of a thread the new and the
+exit state aren't really there anymore.
+
+24
+00:01:35,640 --> 00:01:40,910
+Likewise, the idea of suspension is really
+a process level concept; if we've removed
+
+25
+00:01:40,910 --> 00:01:44,980
+all of the main memory the none of the threads
+are able to run.
+
+26
+00:01:44,980 --> 00:01:51,580
+So in suspension, we have to recognize that
+all of the threads have been blocked or all
+
+27
+00:01:51,580 --> 00:01:53,750
+the threads have been stopped altogether.
+
+28
+00:01:53,750 --> 00:01:59,659
+But at the same time, there's no real recognition
+of the suspended state inside of a thread;
+
+29
+00:01:59,659 --> 00:02:01,370
+that's more of a process level concept.
+

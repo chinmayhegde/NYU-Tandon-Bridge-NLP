@@ -1,0 +1,179 @@
+1
+00:00:00,729 --> 00:00:02,870
+So here we are in the else condition.
+
+2
+00:00:02,870 --> 00:00:07,970
+And in the else condition we've already checked
+to see if we have no children or if the left
+
+3
+00:00:07,970 --> 00:00:11,441
+child is equal to null, or if the right child
+is equal to null.
+
+4
+00:00:11,441 --> 00:00:15,669
+So, we've already decided that what we ended
+up with is that we have two children of the
+
+5
+00:00:15,669 --> 00:00:17,620
+Node that we're trying to delete.
+
+6
+00:00:17,620 --> 00:00:22,480
+And that's not going to be the easiest solution,
+again we're going to either have to decide
+
+7
+00:00:22,480 --> 00:00:28,269
+to find the minimum of the right subtree or
+the maximum of the left subtree.
+
+8
+00:00:28,269 --> 00:00:34,000
+So, we have to make a decision and this is
+just a programmer's decision; it's entirely
+
+9
+00:00:34,000 --> 00:00:35,090
+personal preference.
+
+10
+00:00:35,090 --> 00:00:41,829
+Now for me it's easiest to find the minimum
+value of the right subtree; so, to go right
+
+11
+00:00:41,829 --> 00:00:44,590
+and then go left, left, left, left.
+
+12
+00:00:44,590 --> 00:00:49,579
+And ultimately what I'm going to decide to
+do is do that, go right and then go left,
+
+13
+00:00:49,579 --> 00:00:55,780
+left, left, left, left, and take that last
+value that I find, when the left's left pointer,
+
+14
+00:00:55,780 --> 00:01:02,609
+when the the items left pointer is equal to
+null that's the minimum value of that right
+
+15
+00:01:02,609 --> 00:01:03,609
+subtree.
+
+16
+00:01:03,609 --> 00:01:09,290
+And what I’m gonna do is copy the data value
+up and then delete that node.
+
+17
+00:01:09,290 --> 00:01:15,640
+So this is recursion; this is a recursive
+algorithm that simply says once we found the
+
+18
+00:01:15,640 --> 00:01:20,140
+data value that we want to delete which is
+not the data value that somebody told us to
+
+19
+00:01:20,140 --> 00:01:21,140
+delete.
+
+20
+00:01:21,140 --> 00:01:25,310
+We are going to find the minimum value of
+the right subtree, we’re to go right, left,
+
+21
+00:01:25,310 --> 00:01:32,520
+left, left, left find value and promote that
+value but then we're going to have duplicates.
+
+22
+00:01:32,520 --> 00:01:37,080
+And so what we do is remove that value that's
+down further in the tree.
+
+23
+00:01:37,080 --> 00:01:41,060
+Now here, I've guaranteed that it's not infinite
+recursion.
+
+24
+00:01:41,060 --> 00:01:46,600
+And the way that I'm guaranteed that is by
+making sure that the minimum of the right
+
+25
+00:01:46,600 --> 00:01:48,750
+subtree is the one that I'm using.
+
+26
+00:01:48,750 --> 00:01:54,290
+And if I'm using the minimum of the right
+subtree it can't have a left child.
+
+27
+00:01:54,290 --> 00:02:00,540
+It cannot have a left child because if it
+did that would be the minimum of the the right
+
+28
+00:02:00,540 --> 00:02:01,700
+subtree.
+
+29
+00:02:01,700 --> 00:02:07,000
+So here we've proven that we can use recursion,
+but we're only going to go recursion on one
+
+30
+00:02:07,000 --> 00:02:08,509
+level further.
+
+31
+00:02:08,509 --> 00:02:12,879
+Because what we're actually going to be doing
+is removing the minimum of the right subtree,
+
+32
+00:02:12,879 --> 00:02:17,420
+which means that by definition it can only
+have it at most one child, hopefully it has
+
+33
+00:02:17,420 --> 00:02:18,420
+zero.
+
+34
+00:02:18,420 --> 00:02:21,920
+But even if it does have one we solve that
+in a previous example and we don't have to
+
+35
+00:02:21,920 --> 00:02:24,379
+worry about infinite recursion from that sense.
+
+36
+00:02:24,379 --> 00:02:29,500
+So, in fact what seemed to be a very complex
+problem of removal of the node given that
+
+37
+00:02:29,500 --> 00:02:34,930
+it has two children, actually turns out pretty
+easy because we're just going to deal with
+
+38
+00:02:34,930 --> 00:02:37,599
+deleting some other node and promoting its
+data value.
+

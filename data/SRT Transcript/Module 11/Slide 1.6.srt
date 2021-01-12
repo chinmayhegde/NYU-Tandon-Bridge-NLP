@@ -1,0 +1,119 @@
+0:00:00.940,0:00:03.640
+Of course it would be pretty useless if all
+they could do was point to something.
+
+0:00:03.640,0:00:08.790
+Really we want to be able to access the data
+that the pointer is pointing to and we can
+
+0:00:08.790,0:00:13.349
+do that thankfully we have another operator
+known as the dereference operator and that's
+
+0:00:13.349,0:00:14.349
+just the star.
+
+0:00:14.349,0:00:19.190
+It's a unary star operator we place it in
+front of the pointer and what that means is
+
+0:00:19.190,0:00:22.760
+we're going to follow the path that the pointer
+is pointing to.
+
+0:00:22.760,0:00:29.780
+If you sort of imagine that the pointer is
+a signpost if you will on a highway.
+
+0:00:29.780,0:00:34.630
+What we want to do is follow that sign to
+get to a destination and we can do that using
+
+0:00:34.630,0:00:36.640
+the star operator.
+
+0:00:36.640,0:00:40.350
+So here I have a little bit of code which
+I'm going to show you creates a variable x
+
+0:00:40.350,0:00:45.010
+sets its value equal to one hundred makes
+a point makes the pointer point to x and that's
+
+0:00:45.010,0:00:47.219
+the same as in the previous section.
+
+0:00:47.219,0:00:51.510
+But now we're going to go ahead and print
+out the value that the pointer is pointing
+
+0:00:51.510,0:00:52.510
+to.
+
+0:00:52.510,0:00:55.219
+Now this is not printing out the address of
+the pointer.
+
+0:00:55.219,0:01:01.639
+If we simply said cout arrow arrow or output
+operator or whatever we’re going to call
+
+0:01:01.639,0:01:02.639
+it.
+
+0:01:02.639,0:01:05.220
+Cout ptr we would get the address that ptr
+is pointing to.
+
+0:01:05.220,0:01:10.730
+And the easiest way to think about this is
+if we printed out x we would get the value
+
+0:01:10.730,0:01:15.120
+that x was pointed sorry the value in the
+x variable.
+
+0:01:15.120,0:01:20.560
+If we printed out ptr we get the value in
+ptr but unfortunately that value is a pointer
+
+0:01:20.560,0:01:23.140
+value which is just an address.
+
+0:01:23.140,0:01:28.780
+If we dereference ptr as we have here in the
+code we are going to see that the value that's
+
+0:01:28.780,0:01:31.890
+being printed out is actually the value that's
+in x.
+
+0:01:31.890,0:01:37.490
+Because what we did was follow the signpost
+that ptr is pointing to and that took us to
+
+0:01:37.490,0:01:43.610
+the variable x and now we're printing out
+the value in the variable x.
+
+0:01:43.610,0:01:48.450
+And of course this falls on both sides both
+an L value on an R value we could talk about
+
+0:01:48.450,0:01:54.850
+this being printed out or we can do an assignment
+statement where we actually change that value.
+
+0:01:54.850,0:02:00.640
+That last line of code on your screen is actually
+going to change the value of x as if it were
+
+0:02:00.640,0:02:02.600
+to say x equals twenty.
+
+0:02:02.600,0:02:05.980
+And now we're seeing star ptr are equals twenty.
+
+0:02:05.980,0:02:08.940
+It's the same thing because ptr is pointing
+to x.

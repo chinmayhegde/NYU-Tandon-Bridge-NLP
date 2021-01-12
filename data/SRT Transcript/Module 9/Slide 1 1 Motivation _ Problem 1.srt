@@ -1,0 +1,59 @@
+0:00:00.750,0:00:01.750
+Hi there.
+
+0:00:01.750,0:00:02.780
+I hope you're okay.
+
+0:00:02.780,0:00:08.410
+Today we're going to talk about our first
+data structure in simplest loss.
+
+0:00:08.410,0:00:13.790
+But before we start doing that, let's take
+a second look at one of our programs we've
+
+0:00:13.790,0:00:17.420
+implemented in one of the previous models.
+
+0:00:17.420,0:00:21.650
+If you want a more detailed review, you can
+just click on the link below.
+
+0:00:21.650,0:00:27.010
+But I hope you recall that we calculated an
+average of a sequence of elements.
+
+0:00:27.010,0:00:33.390
+Actually, we wrote a program that computes
+the average of student grades.
+
+0:00:33.390,0:00:38.440
+The program first asks the user to enter how
+many grades.
+
+0:00:38.440,0:00:43.860
+How many students are in the class of the
+student, the user responded; let’s say four.
+
+0:00:43.860,0:00:49.399
+And then he was asked to enter the grades
+one after the other, so seventy one, eighty
+
+0:00:49.399,0:00:54.830
+six, sixty nine, ninety four, and eventually
+the program just responded with the average
+
+0:00:54.830,0:00:59.000
+of these grades, which is seventy nine point
+twenty five.
+
+0:00:59.000,0:01:07.290
+So, if you recall when we implemented this
+program we basically summed up all the numbers
+
+0:01:07.290,0:01:12.170
+and divided it by the amount of the numbers,
+that's how we calculate the average.
+
+0:01:12.170,0:01:14.220
+Let's take a closer look at our implementation.

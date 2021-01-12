@@ -1,0 +1,228 @@
+1
+00:00:00,410 --> 00:00:02,970
+So, what do we keep in main memory and what
+do we throw out?
+
+2
+00:00:02,970 --> 00:00:06,990
+What is the process going to use and what
+is the process not going to use?
+
+3
+00:00:06,990 --> 00:00:11,339
+How do we is the operating system, a group
+of people who had never seen this program
+
+4
+00:00:11,339 --> 00:00:16,940
+before, decide what the process should be
+able, to be allowed to keep and what it should
+
+5
+00:00:16,940 --> 00:00:18,290
+throw out?
+
+6
+00:00:18,290 --> 00:00:21,920
+Well the first issue that comes up is that
+we have a resident set.
+
+7
+00:00:21,920 --> 00:00:26,320
+The resident said is that portion that's in
+main memory, and we have a working set and
+
+8
+00:00:26,320 --> 00:00:29,289
+that's the portion of the process wants to
+use.
+
+9
+00:00:29,289 --> 00:00:33,840
+Now in order to run, the working set has to
+be in the residence set.
+
+10
+00:00:33,840 --> 00:00:37,070
+So, the working set must contain the residence.
+
+11
+00:00:37,070 --> 00:00:42,310
+So, we have to have the stuff that we want
+loaded into main memory.
+
+12
+00:00:42,310 --> 00:00:47,070
+We're going to extend on that page map table
+that we talked about just a few slides ago
+
+13
+00:00:47,070 --> 00:00:51,579
+and we're going to say that it now has an
+a present bit, and of course that means we
+
+14
+00:00:51,579 --> 00:00:56,020
+have to update the hardware memory management
+unit and that's a much more involved process.
+
+15
+00:00:56,020 --> 00:00:59,680
+The memory management unit has to know about
+all the stuff that's going on with virtual
+
+16
+00:00:59,680 --> 00:01:02,890
+memory and it does, these days we know about
+it.
+
+17
+00:01:02,890 --> 00:01:08,200
+The page map table is going to contain what's
+called a present bit, a P bit and the present
+
+18
+00:01:08,200 --> 00:01:15,420
+bit tells the memory management unit whether
+or not that page is actually in main memory.
+
+19
+00:01:15,420 --> 00:01:21,010
+If the page is not in main memory, then the
+present bit will be unset and then we know
+
+20
+00:01:21,010 --> 00:01:26,290
+that we have to look for that page on a secondary
+storage device if the process wants it.
+
+21
+00:01:26,290 --> 00:01:30,770
+We also have something known as a modified
+bit, and the modified bit is useful because
+
+22
+00:01:30,770 --> 00:01:38,740
+we're going to make copies of pages in secondary
+storage before we realize that the the process
+
+23
+00:01:38,740 --> 00:01:40,470
+doesn't need them anymore.
+
+24
+00:01:40,470 --> 00:01:47,210
+So, what we would like to do is make duplications
+of the main memory into the secondary storage
+
+25
+00:01:47,210 --> 00:01:53,600
+device, so that when it's time to decide to
+remove a page from main memory we can look
+
+26
+00:01:53,600 --> 00:01:56,550
+for a page that has the modified bit unset.
+
+27
+00:01:56,550 --> 00:02:00,940
+And what that means is that the copy on the
+secondary storage device Is the exact same
+
+28
+00:02:00,940 --> 00:02:05,600
+as the copy in main memory, which means we
+don't have to go to IO to actually do the
+
+29
+00:02:05,600 --> 00:02:11,030
+write operation we can simply erase the page
+out of main memory and trust that the copy
+
+30
+00:02:11,030 --> 00:02:15,220
+on the secondary storage device is valid.
+
+31
+00:02:15,220 --> 00:02:20,230
+As I mentioned the hardware memory management
+unit has to know what happens when it finds
+
+32
+00:02:20,230 --> 00:02:26,380
+a present bit set to zero, and what it does
+is whenever it looks at the page map table
+
+33
+00:02:26,380 --> 00:02:30,590
+and finds the present bits at zero, it's what's
+called a page fault.
+
+34
+00:02:30,590 --> 00:02:35,180
+and the CPU stops running the process and
+instead switches to the operating system,
+
+35
+00:02:35,180 --> 00:02:39,600
+very much in the way that an interrupt would
+occur, it switches to the operating system
+
+36
+00:02:39,600 --> 00:02:43,040
+and begins running code to handle the page
+fault.
+
+37
+00:02:43,040 --> 00:02:46,730
+And then the operating system can make the
+decision on whether the page fault was caused
+
+38
+00:02:46,730 --> 00:02:52,010
+by a page which is no longer present, or perhaps
+was caused by a page which the process should
+
+39
+00:02:52,010 --> 00:02:54,370
+not have any access to to begin with.
+
+40
+00:02:54,370 --> 00:02:58,430
+And that's a page fault that's going to result
+in an exception error; that's going to shut
+
+41
+00:02:58,430 --> 00:03:00,090
+down the process.
+
+42
+00:03:00,090 --> 00:03:04,400
+That hardware memory management unit also
+has to recognize that the modified bit has
+
+43
+00:03:04,400 --> 00:03:09,620
+to be changed any time we make a change to
+that page in main memory, so any write operations
+
+44
+00:03:09,620 --> 00:03:14,340
+to a page in main memory would cause the modify
+bit to get set.
+
+45
+00:03:14,340 --> 00:03:18,400
+But now the hardware memory management unit
+knows all about that and as the operating
+
+46
+00:03:18,400 --> 00:03:23,280
+system we're just responsible for writing
+the code that brings in and out pages, and
+
+47
+00:03:23,280 --> 00:03:26,959
+updates and maintains the present bits, and
+works with the modified bits.
+

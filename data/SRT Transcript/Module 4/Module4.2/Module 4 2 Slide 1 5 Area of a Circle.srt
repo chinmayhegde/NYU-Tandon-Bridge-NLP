@@ -1,0 +1,44 @@
+0:00:01.180,0:00:06.339
+Ok let’s use these types in order to implement
+the following program.
+
+0:00:06.339,0:00:12.880
+Let’s write a program that reads from a
+user the radius of a circle and then the program
+
+0:00:12.880,0:00:16.309
+would calculate and print the area of this
+circle.
+
+0:00:16.309,0:00:22.210
+So for example we ask the user to enter radius
+the user would say I don’t know 2.6 and
+
+0:00:22.210,0:00:29.630
+then the program would respond the area of
+a circle with radius of 2.6 is in this case
+
+0:00:29.630,0:00:31.130
+21.2372.
+
+0:00:31.130,0:00:35.490
+Let’s take a minute and think how we would
+implement it.
+
+0:00:35.490,0:00:41.950
+So kind of straight forward we can just use
+the formula to calculate the area of a circle.
+
+0:00:41.950,0:00:48.860
+So if we have a circle with a radius of r
+the area of the circle is just pi times r
+
+0:00:48.860,0:00:49.860
+squared.
+
+0:00:49.860,0:00:52.820
+Let’s use this formula in order to make
+our calculation.
+
+0:00:52.820,0:00:55.230
+Let’s go ahead and implement it.

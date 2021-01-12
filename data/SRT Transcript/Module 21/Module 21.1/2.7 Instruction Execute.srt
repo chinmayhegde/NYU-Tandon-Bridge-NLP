@@ -1,0 +1,51 @@
+1
+00:00:00,710 --> 00:00:07,380
+For the arithmetic and logic R-format instructions,
+the ALU of the CPU simply performs the operation
+
+2
+00:00:07,380 --> 00:00:11,150
+using the values of the registers Rs and Rt.
+
+3
+00:00:11,150 --> 00:00:18,300
+Recall that during the decode step, the CPU
+already has Rs and Rt in A and B respectively.
+
+4
+00:00:18,300 --> 00:00:23,679
+The only thing that is an issue is how can
+the ALU determine what operation to perform
+
+5
+00:00:23,679 --> 00:00:25,970
+for that R-format instruction.
+
+6
+00:00:25,970 --> 00:00:29,929
+Recall the second opcode or function field
+of the R-format instruction.
+
+7
+00:00:29,929 --> 00:00:36,149
+The ALU has a lookup table that contains the
+arithmetic or logic operation to perform based
+
+8
+00:00:36,149 --> 00:00:38,199
+on the value of the function field.
+
+9
+00:00:38,199 --> 00:00:44,539
+So, the CPU simply sends the value of A and
+B registers and the value of the function
+
+10
+00:00:44,539 --> 00:00:48,629
+field of the R-format instruction to the ALU.
+
+11
+00:00:48,629 --> 00:00:54,229
+The latter used its table to perform the operation
+and stores the result in ALU Out 2.
+

@@ -1,0 +1,14 @@
+1
+00:00:00,580 --> 00:00:03,720
+The memory step is used to access data.
+
+2
+00:00:03,720 --> 00:00:07,720
+Memory accesses for instructions are done
+at the fetch instruction fetch step.
+
+3
+00:00:07,720 --> 00:00:11,950
+Moreover the BEQ instruction only updates
+the program counter.
+

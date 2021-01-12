@@ -1,0 +1,62 @@
+1
+00:00:00,870 --> 00:00:05,839
+In this module we saw how to open files for
+both reading in and writing out.
+
+2
+00:00:05,839 --> 00:00:10,700
+We saw how to write out information to a file;
+how to read in information from a file.
+
+3
+00:00:10,700 --> 00:00:16,200
+We talked about some of the pitfalls of opening
+files as well as reading in and writing out.
+
+4
+00:00:16,200 --> 00:00:21,480
+We saw how the input operator works, specifically
+the three-step process of skipping leading
+
+5
+00:00:21,480 --> 00:00:25,450
+whitespace and then reading invalid characters
+and then stopping when it reaches trailing
+
+6
+00:00:25,450 --> 00:00:26,450
+whitespace.
+
+7
+00:00:26,450 --> 00:00:31,640
+We saw the use of the getLine function, the
+ignore function, we saw a seekG, and we saw
+
+8
+00:00:31,640 --> 00:00:34,370
+how we can append onto the end of the file.
+
+9
+00:00:34,370 --> 00:00:40,329
+So at this point you should have the abilities
+to write into your code file processing routines
+
+10
+00:00:40,329 --> 00:00:43,929
+so that you can bring in information directly
+from a file.
+
+11
+00:00:43,929 --> 00:00:50,089
+And we can now you use very large datasets,
+which allow us to do quite a bit of information
+
+12
+00:00:50,089 --> 00:00:53,980
+processing, and we don't have to worry about
+a user sitting there for hours typing in on
+
+13
+00:00:53,980 --> 00:00:54,579
+the keyboard.
+

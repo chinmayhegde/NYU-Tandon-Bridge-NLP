@@ -1,0 +1,89 @@
+1
+00:00:00,799 --> 00:00:06,290
+The idea that we want to employ here is one
+of encapsulation: we don't want anybody outside
+
+2
+00:00:06,290 --> 00:00:12,600
+the class, outside the class creation, to
+be able to access data inside the class.
+
+3
+00:00:12,600 --> 00:00:18,659
+So the idea is that code written as part of
+the class has a greater access than code which
+
+4
+00:00:18,659 --> 00:00:20,449
+is not part of the class.
+
+5
+00:00:20,449 --> 00:00:25,349
+For example main, main shouldn't have access
+to some of the private information inside
+
+6
+00:00:25,349 --> 00:00:26,640
+the class.
+
+7
+00:00:26,640 --> 00:00:32,149
+And the idea of encapsulation allows us to
+set levels of protection so that programmers
+
+8
+00:00:32,149 --> 00:00:36,530
+that aren't involved in the creation of the
+class are not going to have access to certain
+
+9
+00:00:36,530 --> 00:00:37,530
+items.
+
+10
+00:00:37,530 --> 00:00:42,820
+We can give them controlled access to items
+that we want them to be allowed access to,
+
+11
+00:00:42,820 --> 00:00:47,269
+and then we can strip their access so they
+can't have access to the items that they shouldn't
+
+12
+00:00:47,269 --> 00:00:48,410
+have access to.
+
+13
+00:00:48,410 --> 00:00:52,600
+So, for example going back to our house and
+blueprint model.
+
+14
+00:00:52,600 --> 00:00:57,640
+The architect should be able to change anything
+on the blueprints of the house, the designer
+
+15
+00:00:57,640 --> 00:01:02,750
+of the class should be able to change anything
+inside the class, but the plumber who's installing
+
+16
+00:01:02,750 --> 00:01:06,550
+the toilet shouldn't be able to change where
+the location of the toilet is or else the
+
+17
+00:01:06,550 --> 00:01:09,440
+bathroom door might not close, for example.
+
+18
+00:01:09,440 --> 00:01:15,660
+So we want to create a model where we can
+protect certain parts of the class and allow
+
+19
+00:01:15,660 --> 00:01:18,140
+public access to other parts of the class.
+

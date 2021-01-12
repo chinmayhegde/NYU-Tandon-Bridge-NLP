@@ -1,0 +1,730 @@
+1
+00:00:00,099 --> 00:00:03,530
+So let's execute and implement the merge-sort
+algorithm.
+
+2
+00:00:03,530 --> 00:00:09,510
+So I have a min here that we have an array
+of eight elements, obviously not sorted: fourteen,
+
+3
+00:00:09,510 --> 00:00:11,070
+five, eight, and so on.
+
+4
+00:00:11,070 --> 00:00:12,770
+I’ve declared ARR size to be eight.
+
+5
+00:00:12,770 --> 00:00:17,250
+I did all hardcoded but you can see how we
+can make it in a general form.
+
+6
+00:00:17,250 --> 00:00:20,180
+And then we're calling merge-sort, in order
+to sort this array.
+
+7
+00:00:20,180 --> 00:00:26,780
+Initially, it will pass ARR in the entire
+range of elements as our low and high; basically
+
+8
+00:00:26,780 --> 00:00:32,659
+low is zero and high would be the last index
+ARR minus one and then we're calling print
+
+9
+00:00:32,659 --> 00:00:37,140
+array in order to print the array after merge-sort
+basically sorted the elements.
+
+10
+00:00:37,140 --> 00:00:41,089
+Merge-sort is a very simple function that
+just iterates over the elements, prints them
+
+11
+00:00:41,089 --> 00:00:46,409
+with a space and a new line at the end; so
+just prints the array one by one, element
+
+12
+00:00:46,409 --> 00:00:47,409
+by element.
+
+13
+00:00:47,409 --> 00:00:53,309
+And merge sort as we have seen before is a
+recursive algorithm it knows i don't equal
+
+14
+00:00:53,309 --> 00:01:00,409
+anything otherwise we set the min index to
+be low plus high div two, we call him merge-sort
+
+15
+00:01:00,409 --> 00:01:03,459
+with the first half from low to min index.
+
+16
+00:01:03,459 --> 00:01:09,250
+And then we call merge-sort just for the second
+half from an index plus one to high and then
+
+17
+00:01:09,250 --> 00:01:15,049
+we merge these two halves together, basically
+having the first half from low to mid-ind
+
+18
+00:01:15,049 --> 00:01:17,770
+and the second half ending at high.
+
+19
+00:01:17,770 --> 00:01:21,340
+We now only have to implement the merge algorithm.
+
+20
+00:01:21,340 --> 00:01:25,240
+We've described before but let's implement
+it in C++.
+
+21
+00:01:25,240 --> 00:01:30,049
+So we have the prototype; let’s take it
+over here and implement it.
+
+22
+00:01:30,049 --> 00:01:31,049
+Okay.
+
+23
+00:01:31,049 --> 00:01:37,909
+So first thing we have the low left, high
+left, and only right, so let’s declare low
+
+24
+00:01:37,909 --> 00:01:47,509
+right variable, just so we can set it to be
+high left plus one, right.
+
+25
+00:01:47,509 --> 00:01:53,390
+That's where the right side starts: one element
+after the left side ends, right.
+
+26
+00:01:53,390 --> 00:01:59,000
+So now we have low left, high left, low right,
+and high right.
+
+27
+00:01:59,000 --> 00:02:05,039
+Another thing, let's also figure out how many
+elements we're trying to merge together so
+
+28
+00:02:05,039 --> 00:02:07,320
+let's have a size variable.
+
+29
+00:02:07,320 --> 00:02:15,550
+Let's set size to be the high right minus
+low left; that's basically the entire range
+
+30
+00:02:15,550 --> 00:02:20,050
+we're sorting, we're merging plus one, so
+that's the size here.
+
+31
+00:02:20,050 --> 00:02:27,030
+And then we need to create an array for the
+result of the merge sequence; so let's have
+
+32
+00:02:27,030 --> 00:02:30,320
+pointer int star merged array.
+
+33
+00:02:30,320 --> 00:02:39,780
+And let’s allocate memory for that array:
+merge ARR equals new int of size elements.
+
+34
+00:02:39,780 --> 00:02:47,160
+Again, we cannot do the merge in place because
+we'd be stepping on values that we’re not
+
+35
+00:02:47,160 --> 00:02:48,650
+necessarily done working on.
+
+36
+00:02:48,650 --> 00:02:55,530
+You can try thinking why we can't implement
+this merge in place, basically on the same
+
+37
+00:02:55,530 --> 00:03:00,890
+array we are reading, we have the sequence
+on, so we're using an additional array.
+
+38
+00:03:00,890 --> 00:03:05,560
+And again, since we don't know how many elements
+we're going to have in this array; it would
+
+39
+00:03:05,560 --> 00:03:10,010
+kind of be a static array, has to be in a
+dynamic array, that's why we're using the
+
+40
+00:03:10,010 --> 00:03:14,460
+memory allocation here to allocate a new array
+of size elements.
+
+41
+00:03:14,460 --> 00:03:20,910
+Now that we have this array and we have the
+input arrays, the two halves, we can start
+
+42
+00:03:20,910 --> 00:03:23,720
+merging them into the merged array.
+
+43
+00:03:23,720 --> 00:03:28,660
+For that as we've seen we would need three
+indexes: one for the current element we're
+
+44
+00:03:28,660 --> 00:03:33,190
+looking in the first half, then for the first
+element we're looking in the second half,
+
+45
+00:03:33,190 --> 00:03:36,980
+and then the index where we are currently
+writing our result.
+
+46
+00:03:36,980 --> 00:03:43,560
+So, let's declare these three indexes here:
+we'll have the index of the right side, the
+
+47
+00:03:43,560 --> 00:03:48,540
+index of the left side, and let's also have
+the index of the results.
+
+48
+00:03:48,540 --> 00:03:52,050
+So I’ll have iRight, iLeft and iRes.
+
+49
+00:03:52,050 --> 00:03:58,050
+Let's start with iLeft; let’s set iLeft
+to be the low left, right; that's where the
+
+50
+00:03:58,050 --> 00:03:59,910
+left side starts.
+
+51
+00:03:59,910 --> 00:04:05,960
+iRight would be where the right side, starts
+basically high left plus one or we have low
+
+52
+00:04:05,960 --> 00:04:07,990
+right that we created.
+
+53
+00:04:07,990 --> 00:04:13,460
+So we have iLeft and iRight set to the beginning
+of the left and right side.
+
+54
+00:04:13,460 --> 00:04:18,920
+iRes would be set to zero, right, because
+that's where we want to start writing the
+
+55
+00:04:18,920 --> 00:04:20,850
+result into the merged array.
+
+56
+00:04:20,850 --> 00:04:27,110
+And then we should over and over repeatedly
+choose the element, the smaller element, between
+
+57
+00:04:27,110 --> 00:04:32,750
+the one at the iLeft position and the one
+in the iRight position; so we’ll use a while
+
+58
+00:04:32,750 --> 00:04:37,660
+loop here, again, let's keep the Boolean conditions
+for a later stage.
+
+59
+00:04:37,660 --> 00:04:43,970
+And then each iteration, let’s pick one
+from iLeft and iRight, so let's ask: if the
+
+60
+00:04:43,970 --> 00:04:53,390
+element at the iLeft position is less than
+the element at the iRight position that means
+
+61
+00:04:53,390 --> 00:04:57,550
+that this element should be taken, right,
+there the iLeft one is smaller so it should
+
+62
+00:04:57,550 --> 00:04:58,550
+become first.
+
+63
+00:04:58,550 --> 00:05:06,400
+So, let's put at merged array at the current
+position, at iRes, let’s put there the element
+
+64
+00:05:06,400 --> 00:05:08,790
+from iLeft, this element here, right.
+
+65
+00:05:08,790 --> 00:05:14,410
+So we are writing to the result array the
+element that is currently smaller between
+
+66
+00:05:14,410 --> 00:05:17,730
+iLeft and iRight, the left one in this case.
+
+67
+00:05:17,730 --> 00:05:24,420
+Then we need to increment iLeft and also obviously
+increment iRes, since we’ve written to that
+
+68
+00:05:24,420 --> 00:05:25,420
+position.
+
+69
+00:05:25,420 --> 00:05:31,870
+Otherwise, if basically ARR iLeft is not less
+than the iRight one, we should take one from
+
+70
+00:05:31,870 --> 00:05:32,870
+iRight.
+
+71
+00:05:32,870 --> 00:05:41,180
+So let's put it at the merged array at the
+iRes position, in this case the array element
+
+72
+00:05:41,180 --> 00:05:48,820
+from iRight, and now we should increment iRight
+in addition to incrementing iRes, right.
+
+73
+00:05:48,820 --> 00:05:55,010
+So each iteration we are choosing one from
+iLeft or iRight to write to the merged array,
+
+74
+00:05:55,010 --> 00:06:00,000
+depending on which one is smaller; either
+rewriting iLeft incrementing iLeft by one,
+
+75
+00:06:00,000 --> 00:06:04,920
+or writing the iRight elements to the array
+and incrementing iRight.
+
+76
+00:06:04,920 --> 00:06:11,260
+We do that over and over and over, as long
+as we have two candidates to choose from.
+
+77
+00:06:11,260 --> 00:06:16,440
+Eventually one of them would go over the entire
+range of the array and we would have to take
+
+78
+00:06:16,440 --> 00:06:23,900
+the tail of the other array.; so we can keep
+on going while they are still validly inside
+
+79
+00:06:23,900 --> 00:06:25,670
+the range of their halves.
+
+80
+00:06:25,670 --> 00:06:32,260
+So basically let's keep on going while the
+current index in the left is still less or
+
+81
+00:06:32,260 --> 00:06:41,290
+equal to the high left, right; that means
+that the letter iLeft is inside the left half.
+
+82
+00:06:41,290 --> 00:06:48,820
+And we also need the same for the right side,
+so the iRight is less or equal to the higher
+
+83
+00:06:48,820 --> 00:06:51,639
+end of the right side, high right, right.
+
+84
+00:06:51,639 --> 00:06:58,140
+So while they are both inside their arrays,
+we want to choose one of them.
+
+85
+00:06:58,140 --> 00:07:02,820
+Eventually one of the halves, we would end
+our work on it and then we would need to take
+
+86
+00:07:02,820 --> 00:07:04,920
+the tail from the other parts.
+
+87
+00:07:04,920 --> 00:07:09,800
+So we could either use an IF statement here
+to see which one ended and copy the rest,
+
+88
+00:07:09,800 --> 00:07:14,190
+or we can just use a while, actually two while
+loops here that…
+
+89
+00:07:14,190 --> 00:07:18,910
+So we'll have a while here and a while loop
+just after that.
+
+90
+00:07:18,910 --> 00:07:23,780
+This one would take care of the tail we have
+in the first array, and this one would take
+
+91
+00:07:23,780 --> 00:07:28,060
+care of the tail we have in the second array,
+we are certain that after the first while
+
+92
+00:07:28,060 --> 00:07:32,690
+loop, after this loop, there would be only
+one tail so currently only one of these two
+
+93
+00:07:32,690 --> 00:07:33,930
+whiles would be executed.
+
+94
+00:07:33,930 --> 00:07:39,820
+If there is a tail here it would be copied
+and then this while loop won’t even execute
+
+95
+00:07:39,820 --> 00:07:44,570
+once or if there is no tail here, so this
+while won't be executed and this while would
+
+96
+00:07:44,570 --> 00:07:46,229
+copy the data from the second half.
+
+97
+00:07:46,229 --> 00:07:49,710
+So, let's take care of the first array first
+half.
+
+98
+00:07:49,710 --> 00:07:56,370
+So while, again, iLeft it is less or equal
+to high left; that's basically saying there
+
+99
+00:07:56,370 --> 00:07:59,780
+is a tail in the left side that should be
+copied.
+
+100
+00:07:59,780 --> 00:08:05,010
+In this case, we should do what we've done
+here: basically taking two of the merged array
+
+101
+00:08:05,010 --> 00:08:14,290
+at the iRes position, the element at the iLeft
+position, right, incrementing iLeft and iRes.
+
+102
+00:08:14,290 --> 00:08:20,130
+So, that takes care of the tail left in the
+first half in the left half of our array.
+
+103
+00:08:20,130 --> 00:08:25,190
+And if there is no left half then this while
+won't be executed at all right.
+
+104
+00:08:25,190 --> 00:08:30,480
+If iLeft is not less or equal to high left,
+this body won't be executed.
+
+105
+00:08:30,480 --> 00:08:38,269
+And same thing for the right side, so if iRight
+is less or equal to high right then again
+
+106
+00:08:38,269 --> 00:08:46,260
+the merged array at our current position would
+just be the element from iRight and then let’s
+
+107
+00:08:46,260 --> 00:08:49,610
+increment this value and iRes.
+
+108
+00:08:49,610 --> 00:08:56,499
+So now that's basically it; now we've picked
+the right candidates between iLeft and iRight
+
+109
+00:08:56,499 --> 00:09:02,879
+over and over and over, when one of them ended
+we just copied the remaining tail to the merger
+
+110
+00:09:02,879 --> 00:09:03,879
+array.
+
+111
+00:09:03,879 --> 00:09:09,520
+After these three whiles, we are definite
+that all the elements are at the merged array.
+
+112
+00:09:09,520 --> 00:09:15,730
+Since we said that the merge function originally
+should reorder of the elements in the array
+
+113
+00:09:15,730 --> 00:09:20,680
+from lower left to high right, it's not good
+enough for us to have the merge sequence in
+
+114
+00:09:20,680 --> 00:09:22,100
+a totally new array, right.
+
+115
+00:09:22,100 --> 00:09:28,389
+So we would need to copy the elements from
+the merged array back to our array.
+
+116
+00:09:28,389 --> 00:09:34,070
+So for that we would have a for statement
+and let’s do something like, we would need
+
+117
+00:09:34,070 --> 00:09:40,720
+to copy from the merged array to the original
+array and the merged array basically ranges
+
+118
+00:09:40,720 --> 00:09:47,259
+from zero to the size, right size minus one,
+where the array we want to put the elements
+
+119
+00:09:47,259 --> 00:09:51,449
+not from the zero index but from the low left
+index.
+
+120
+00:09:51,449 --> 00:09:57,680
+So we would need to set two set of indexes
+here; we would need i for the merged array
+
+121
+00:09:57,680 --> 00:10:03,879
+and let’s do ARR that would be low left
+for the second array.
+
+122
+00:10:03,879 --> 00:10:05,309
+Okay, something like that.
+
+123
+00:10:05,309 --> 00:10:10,389
+Let's just declare i and iARR, so we have
+these two indexes.
+
+124
+00:10:10,389 --> 00:10:15,230
+And in the second you’ll help me figure
+out what we want to do here, but basically
+
+125
+00:10:15,230 --> 00:10:24,819
+the body would be copy to ARR at iARR position,
+the element from the merged array at i index.
+
+126
+00:10:24,819 --> 00:10:32,209
+So we'll have both indexes increasing or getting
+bigger simultaneously, so we need i plus plus
+
+127
+00:10:32,209 --> 00:10:34,559
+and i ARR plus plus.
+
+128
+00:10:34,559 --> 00:10:39,800
+But they start at different positions, so
+we want i to be an index in the merged array
+
+129
+00:10:39,800 --> 00:10:45,290
+starting at zero and want iARR to be an index
+if they are are a starting at low left.
+
+130
+00:10:45,290 --> 00:10:51,070
+So we just set them initially with different
+values, each time we’ll increment them,
+
+131
+00:10:51,070 --> 00:10:55,910
+we just need to do it the right amount of
+times; we can either use our iARR to control
+
+132
+00:10:55,910 --> 00:10:57,079
+it or i to control it.
+
+133
+00:10:57,079 --> 00:11:04,220
+Let’s just do less than size; size, if you
+recall, that’s number of elements we have
+
+134
+00:11:04,220 --> 00:11:09,350
+all together that we want to merge or in other
+words the size of the merged array.
+
+135
+00:11:09,350 --> 00:11:16,199
+So we can go from zero to size, each time
+incrementing by one copying this element to
+
+136
+00:11:16,199 --> 00:11:21,240
+the corresponding position in ARR, basically
+the iARR position.
+
+137
+00:11:21,240 --> 00:11:24,339
+After we've done doing that copy, basically
+we’re done, right.
+
+138
+00:11:24,339 --> 00:11:30,959
+So we have the merged sequence in our ARR
+array, what we need to do now is just delete
+
+139
+00:11:30,959 --> 00:11:34,300
+the memory, the location we had for the merged
+array.
+
+140
+00:11:34,300 --> 00:11:39,310
+So for that let’s use the deleted operator,
+which is an erase so I’m using empty brackets,
+
+141
+00:11:39,310 --> 00:11:41,569
+that seems to be this function here.
+
+142
+00:11:41,569 --> 00:11:46,149
+And now that we have merge-sort and everything,
+let's just try to execute it; see that it
+
+143
+00:11:46,149 --> 00:11:47,149
+really sorts.
+
+144
+00:11:47,149 --> 00:11:51,820
+We have the sequence sorted increasing order:
+one, three, five, eight, ten, thirteen, fourteen,
+
+145
+00:11:51,820 --> 00:11:56,899
+and eighteen, which is exactly the sorted
+sequence in the array.
+
+146
+00:11:56,899 --> 00:11:58,559
+So it seems to be working fine.
+
+147
+00:11:58,559 --> 00:12:02,929
+So merged is a fun function; we had a few
+details when we worked on it.
+
+148
+00:12:02,929 --> 00:12:10,050
+It's a cool function but I think more interesting,
+more surprising here, is the merge-sort algorithm,
+
+149
+00:12:10,050 --> 00:12:15,959
+where we surprisingly called merge-sort two
+times assuming it sorts the first two halves,
+
+150
+00:12:15,959 --> 00:12:17,069
+and apparently it does.
+
+151
+00:12:17,069 --> 00:12:22,000
+All we have left to do is just merge them
+together and we've implemented the merge function,
+
+152
+00:12:22,000 --> 00:12:25,019
+so that it is kind of surprising, you can
+think.
+
+153
+00:12:25,019 --> 00:12:29,149
+But let's go ahead and trace the execution
+and convince yourself how this basically works.
+

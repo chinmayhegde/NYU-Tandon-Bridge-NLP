@@ -1,0 +1,124 @@
+1
+00:00:00,669 --> 00:00:02,670
+Here what I've done is create a dog class.
+
+2
+00:00:02,670 --> 00:00:08,519
+And the dog class is defined as being having
+a class as the base class and it also creates
+
+3
+00:00:08,519 --> 00:00:10,200
+a speak function.
+
+4
+00:00:10,200 --> 00:00:14,230
+Dogs have ears but that's not important; we
+don’t care about the ear size.
+
+5
+00:00:14,230 --> 00:00:18,260
+The speak function here will woof instead
+of meow.
+
+6
+00:00:18,260 --> 00:00:22,869
+And now what I can do in main is create an
+array of three pet pointers.
+
+7
+00:00:22,869 --> 00:00:27,109
+Now it may be a little bit strange to see
+the pet star star there, but what I'm saying
+
+8
+00:00:27,109 --> 00:00:32,460
+is that the array is in array of three pet
+pointers.
+
+9
+00:00:32,460 --> 00:00:37,789
+If I created the array as three pet objects;
+I would not get any polymorphism.
+
+10
+00:00:37,789 --> 00:00:42,889
+Because polymorphism requires that we're using
+a pointer to access the object and it requires
+
+11
+00:00:42,889 --> 00:00:45,230
+that the function we're calling is virtual.
+
+12
+00:00:45,230 --> 00:00:51,679
+So here I need three pointers to pets not
+three pets: I set the first pointer equal
+
+13
+00:00:51,679 --> 00:00:56,079
+to a cat, I set the second pointer equal to
+a dog, and I set the third pointer equal to
+
+14
+00:00:56,079 --> 00:00:57,079
+a cat.
+
+15
+00:00:57,079 --> 00:01:01,260
+And then I can use a for loop to go through
+and make all those pets speak.
+
+16
+00:01:01,260 --> 00:01:06,340
+And what I think is great is that if you look
+at that last line of code, we're making a
+
+17
+00:01:06,340 --> 00:01:11,299
+function call to the speak function via a
+pet pointer.
+
+18
+00:01:11,299 --> 00:01:19,820
+And we have C++ deciding at run time, which
+version of the function is going to be called.
+
+19
+00:01:19,820 --> 00:01:24,149
+So it doesn't know which version of the function
+to call until we actually get to the point
+
+20
+00:01:24,149 --> 00:01:29,340
+in the code, the very nanosecond that C++
+is running, that the computer is running that
+
+21
+00:01:29,340 --> 00:01:35,210
+code and it says: oh I'm looking at a cat
+object so I will call them in the cat's function
+
+22
+00:01:35,210 --> 00:01:40,530
+for speak and I will meow, or I'm looking
+at a dog object and I'm going to print out
+
+23
+00:01:40,530 --> 00:01:41,530
+woof.
+
+24
+00:01:41,530 --> 00:01:48,569
+So I think that really kind of almost magical,
+the way that C++ can take the virtual function
+
+25
+00:01:48,569 --> 00:01:53,700
+and a pointer to the base class and decide
+which object it's actually looking at and
+
+26
+00:01:53,700 --> 00:01:54,579
+call the appropriate function.
+

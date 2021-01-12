@@ -1,0 +1,182 @@
+1
+00:00:00,590 --> 00:00:05,950
+What we need to do now is basically implement
+the merge algorithm.
+
+2
+00:00:05,950 --> 00:00:14,320
+Let me demonstrate how we should merge two
+sorted sequence into one big sorted sequence,
+
+3
+00:00:14,320 --> 00:00:18,430
+and after we do that let's go to the computer
+and just implement it all.
+
+4
+00:00:18,430 --> 00:00:22,260
+But let me first show you the idea so it would
+be easier for us.
+
+5
+00:00:22,260 --> 00:00:28,010
+So, assuming we have two sorted sequences:
+one, three, six, ten, and four, seven, eight,
+
+6
+00:00:28,010 --> 00:00:30,680
+thirteen, fifteen, twenty, so two sorted sequences.
+
+7
+00:00:30,680 --> 00:00:37,940
+We want to merge them together into one big
+sequence, to a new big sequence.
+
+8
+00:00:37,940 --> 00:00:43,520
+We can do it in a lot of ways but in order
+to take advantage of the fact that these two
+
+9
+00:00:43,520 --> 00:00:49,489
+sequences are already ordered in an increasing
+order, already sorted, we can do something
+
+10
+00:00:49,489 --> 00:00:50,489
+kind of cool.
+
+11
+00:00:50,489 --> 00:00:56,800
+If you think about it, obviously the first
+element can't be, I don't know six or ten
+
+12
+00:00:56,800 --> 00:01:02,199
+or thirteen or twenty one, it could either
+be the first element in the first one or the
+
+13
+00:01:02,199 --> 00:01:03,890
+first element in the second one.
+
+14
+00:01:03,890 --> 00:01:10,271
+So basically we should choose one of these
+two to come first in our resulted emerged
+
+15
+00:01:10,271 --> 00:01:11,271
+sequence.
+
+16
+00:01:11,271 --> 00:01:18,840
+So we have two candidates for the first element,
+in this case when we are comparing one and
+
+17
+00:01:18,840 --> 00:01:27,780
+four we would obviously want take one to be
+the first element and then we can pick another
+
+18
+00:01:27,780 --> 00:01:29,860
+candidate to be the next element.
+
+19
+00:01:29,860 --> 00:01:32,549
+It would either be three or four.
+
+20
+00:01:32,549 --> 00:01:37,770
+Now that we have taken care of the one, we
+have to pick between three and four to be
+
+21
+00:01:37,770 --> 00:01:38,909
+the next element.
+
+22
+00:01:38,909 --> 00:01:41,659
+In this case it would obviously be three.
+
+23
+00:01:41,659 --> 00:01:46,579
+Now we have two candidates for the next element,
+either six or four, right.
+
+24
+00:01:46,579 --> 00:01:51,719
+Obviously it can’t be ones that are greater
+than six and ones that are greater than four
+
+25
+00:01:51,719 --> 00:01:57,770
+before we put the six and four in their sorted
+merged output.
+
+26
+00:01:57,770 --> 00:02:04,709
+So then we’ll obviously pick four and then
+we'll have to pick between six and seven;
+
+27
+00:02:04,709 --> 00:02:07,009
+we’ll choose six.
+
+28
+00:02:07,009 --> 00:02:11,380
+And then we'd have to pick between seven and
+ten, and we pick seven.
+
+29
+00:02:11,380 --> 00:02:14,980
+And then we'll have to pick between eight
+and ten, and we’ll pick eight.
+
+30
+00:02:14,980 --> 00:02:22,209
+And then we need to pick between thirteen
+and ten, obviously we'll take ten.
+
+31
+00:02:22,209 --> 00:02:27,299
+And then basically we're done, adding all
+the elements from the first array but then
+
+32
+00:02:27,299 --> 00:02:30,519
+the second array still have a tail of elements.
+
+33
+00:02:30,519 --> 00:02:38,579
+So let's just take all this tail and copy
+it to the remaining positions in our result
+
+34
+00:02:38,579 --> 00:02:41,640
+merged array.
+
+35
+00:02:41,640 --> 00:02:48,470
+And that basically completes the merging of
+these two sorted sequences into one big sorted
+
+36
+00:02:48,470 --> 00:02:49,470
+sequence.
+
+37
+00:02:49,470 --> 00:02:57,400
+So let's take the merge-sort algorithm, the
+merge idea, implement them all on our computer
+
+38
+00:02:57,400 --> 00:02:59,739
+and make sure it works.
+
+39
+00:02:59,739 --> 00:03:04,040
+After that, we’ll also trace the execution
+of these runs.
+

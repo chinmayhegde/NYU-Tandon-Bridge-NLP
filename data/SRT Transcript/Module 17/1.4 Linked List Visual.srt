@@ -1,0 +1,96 @@
+1
+00:00:00,669 --> 00:00:04,450
+So what you can see here is a visual representation
+of the linked list.
+
+2
+00:00:04,450 --> 00:00:08,790
+We have a head pointer that points at the
+first note and inside the node there is an
+
+3
+00:00:08,790 --> 00:00:14,270
+object called a data section and the next
+pointer the next pointer points at the next
+
+4
+00:00:14,270 --> 00:00:15,270
+node.
+
+5
+00:00:15,270 --> 00:00:19,110
+So the pointers are all the same pointers;
+they’re list node pointers.
+
+6
+00:00:19,110 --> 00:00:22,230
+That's really what we're going to see later
+on in this and this module.
+
+7
+00:00:22,230 --> 00:00:26,630
+So the objects that are being stored are whatever
+data type you'd like, we'll see how to do
+
+8
+00:00:26,630 --> 00:00:29,369
+that later with templates, whatever data type
+you'd like.
+
+9
+00:00:29,369 --> 00:00:33,729
+And we have this head pointer that points
+at the first node, the next pointer points
+
+10
+00:00:33,729 --> 00:00:37,190
+the second node, the next pointer the second
+node points at the third node, and the next
+
+11
+00:00:37,190 --> 00:00:39,079
+pointer of the third node points at null.
+
+12
+00:00:39,079 --> 00:00:41,149
+So there's three nodes on this list.
+
+13
+00:00:41,149 --> 00:00:44,579
+There's three data items on this list you
+can call them: one, two, and three, if they
+
+14
+00:00:44,579 --> 00:00:48,670
+were integers, and you can store in them whatever
+integer you want.
+
+15
+00:00:48,670 --> 00:00:53,839
+Now this list might also have a tail pointer
+to point at the last node and that's functionally
+
+16
+00:00:53,839 --> 00:00:56,819
+dependent on what we decide to do with this
+linked list.
+
+17
+00:00:56,819 --> 00:01:00,929
+So, we may end up needing a tail pointer and
+if we do then we can have that as well to
+
+18
+00:01:00,929 --> 00:01:02,920
+point to the last node in the list.
+
+19
+00:01:02,920 --> 00:01:07,619
+And that's just for easy access if, for example,
+we want to expand on the list by adding a
+
+20
+00:01:07,619 --> 00:01:12,260
+node then we can do that easily through the
+tail pointer or through the head pointer.
+

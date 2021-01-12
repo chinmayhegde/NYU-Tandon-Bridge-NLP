@@ -1,0 +1,187 @@
+0:00:00.080,0:00:02.820
+First we need to read the number of students.
+
+0:00:02.820,0:00:07.970
+So let’s create a variable num of students.
+
+0:00:07.970,0:00:14.969
+And let’s ask the user please enter the
+number of students in class and end the line.
+
+0:00:14.969,0:00:19.180
+And just read it into this num of students.
+
+0:00:19.180,0:00:24.970
+Then we should announce to the user to start
+entering the sequence of grades.
+
+0:00:24.970,0:00:28.230
+So let’s say enter the students’ grades.
+
+0:00:28.230,0:00:33.770
+Let’s also ask the user to separate them
+by space.
+
+0:00:33.770,0:00:36.970
+Ok I think that’s good enough instructions
+here for the user.
+
+0:00:36.970,0:00:41.690
+Ok so now we should start reading the numbers
+and adding them up.
+
+0:00:41.690,0:00:45.410
+For that we would need some kind of iterative
+process.
+
+0:00:45.410,0:00:48.430
+Since we know exactly how many iterations
+we are going to have.
+
+0:00:48.430,0:00:50.820
+We are going to have num of students iterations.
+
+0:00:50.820,0:00:53.570
+A for loop here is a good choice.
+
+0:00:53.570,0:01:03.020
+So let’s create some counter variable initialize
+it to 1 and each iteration will just increment
+
+0:01:03.020,0:01:04.460
+this count.
+
+0:01:04.460,0:01:09.650
+And if we want to do num of students iteration
+starting a 1 incrementing it by 1 each time
+
+0:01:09.650,0:01:16.000
+we just need to make sure that count is less
+or equal to num of students in order to keep
+
+0:01:16.000,0:01:17.000
+on going.
+
+0:01:17.000,0:01:20.030
+Let’s just declare this count variable.
+
+0:01:20.030,0:01:28.550
+So this for loop header here basically controls
+process that does num of students iterations.
+
+0:01:28.550,0:01:32.930
+And then we said that each iteration we want
+to read an input.
+
+0:01:32.930,0:01:39.060
+Let’s read it into current variable and
+to add it to some accumulator.
+
+0:01:39.060,0:01:42.340
+So we should let’s first declare current.
+
+0:01:42.340,0:01:49.990
+We also need some variable that actually should
+be initialized before we start iterating.
+
+0:01:49.990,0:01:56.650
+So first it is initialized to zero and then
+each iteration we just add to sum the value
+
+0:01:56.650,0:01:59.120
+of the current element we read.
+
+0:01:59.120,0:02:05.560
+So if we take a second look at this piece
+of code here we first initialize sum to zero
+
+0:02:05.560,0:02:09.149
+and then we start iterating num of students
+times.
+
+0:02:09.149,0:02:13.980
+Each time we read an input and add it to sum
+over and over.
+
+0:02:13.980,0:02:15.920
+Read an input add it to sum.
+
+0:02:15.920,0:02:20.780
+At the end we would have the total sum of
+all the grades the user entered.
+
+0:02:20.780,0:02:25.380
+We can then calculate the average as divide
+sum by a number of students.
+
+0:02:25.380,0:02:28.140
+Let’s create a variable for the average.
+
+0:02:28.140,0:02:33.110
+Even though the grades are integers and number
+of students is integer.
+
+0:02:33.110,0:02:40.010
+The average could be a number with a fractional
+part so for that I would define the average
+
+0:02:40.010,0:02:41.670
+variable as a double.
+
+0:02:41.670,0:02:51.400
+And then I would just assign average to sum
+divided by num of students.
+
+0:02:51.400,0:02:57.849
+Then again a closer look here would suggest
+that the slash operator in the context of
+
+0:02:57.849,0:03:04.940
+dividing two integers won’t do a real division
+but would basically do integer division div.
+
+0:03:04.940,0:03:11.840
+So in order to make it a real division we
+would need to cast both sum and number of
+
+0:03:11.840,0:03:13.410
+students to double.
+
+0:03:13.410,0:03:19.380
+Now average is the result of really dividing
+a sum by number of students.
+
+0:03:19.380,0:03:26.739
+We should just now announce that the average
+is average is and then we will just print
+
+0:03:26.739,0:03:31.390
+the value of the variable average and end
+the line.
+
+0:03:31.390,0:03:33.129
+That basically should be the program.
+
+0:03:33.129,0:03:35.099
+Let’s test it out.
+
+0:03:35.099,0:03:37.120
+Compile it and execute it.
+
+0:03:37.120,0:03:39.360
+No bugs here which is good.
+
+0:03:39.360,0:03:42.780
+Enter the number of students so we have four
+students.
+
+0:03:42.780,0:03:53.660
+Enter the grades let’s just do I don’t
+know 89 75 93 and 78.
+
+0:03:53.660,0:03:58.599
+And then the average is 83.75 I believe that’s
+the average here.
+
+0:03:58.599,0:03:59.390
+Looks good.

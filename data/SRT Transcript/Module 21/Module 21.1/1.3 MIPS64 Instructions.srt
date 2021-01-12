@@ -1,0 +1,101 @@
+1
+00:00:00,789 --> 00:00:04,310
+Let us discuss how instructions are encoded
+and formatted in MIPS64.
+
+2
+00:00:04,310 --> 00:00:08,880
+First, let’s go through basic characteristics
+of the layout of an instruction.
+
+3
+00:00:08,880 --> 00:00:12,600
+Recall that each instruction in MIPS64 is
+32 bits.
+
+4
+00:00:12,600 --> 00:00:14,420
+Each instruction has an opcode.
+
+5
+00:00:14,420 --> 00:00:20,550
+The opcode is 6 bits long and it is the most
+significant bits of the instruction.
+
+6
+00:00:20,550 --> 00:00:24,480
+The role of the opcode is to indicate what
+operation the instruction performs.
+
+7
+00:00:24,480 --> 00:00:29,980
+For example, the load double instruction has
+its own opcode and the store double instruction
+
+8
+00:00:29,980 --> 00:00:31,710
+has its own opcode.
+
+9
+00:00:31,710 --> 00:00:35,030
+Some instructions have the same opcode for
+formatting purposes.
+
+10
+00:00:35,030 --> 00:00:39,890
+In such cases, the instructions have second
+opcodes also known as functions.
+
+11
+00:00:39,890 --> 00:00:44,640
+These second opcodes play the role of indicating
+the operations of the instructions.
+
+12
+00:00:44,640 --> 00:00:49,290
+In addition to an opcode, each instruction
+has one or many operands.
+
+13
+00:00:49,290 --> 00:00:55,250
+The goal of the operands is to indicate where
+the data needed by the instruction is located.
+
+14
+00:00:55,250 --> 00:01:00,790
+An operand can be a register number or an
+immediate value that is hardcoded in the instruction.
+
+15
+00:01:00,790 --> 00:01:07,920
+MIPS64 defines three formats for its instructions:
+register format, or R-format, Immediate format
+
+16
+00:01:07,920 --> 00:01:11,970
+or I-format, and Jump format or J-format.
+
+17
+00:01:11,970 --> 00:01:16,290
+The purpose of instruction formatting is to
+allow the processor to understand the role
+
+18
+00:01:16,290 --> 00:01:21,000
+of the instruction and what operands it needs.
+
+19
+00:01:21,000 --> 00:01:24,500
+This provides a compact method to design the
+processor.
+
+20
+00:01:24,500 --> 00:01:28,700
+If each instruction was allowed to have its
+own format, then the CPU would have to be
+
+21
+00:01:28,700 --> 00:01:31,490
+very complicated to handle any formatting
+approach.
+

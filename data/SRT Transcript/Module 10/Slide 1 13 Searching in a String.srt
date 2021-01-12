@@ -1,0 +1,138 @@
+0:00:00.570,0:00:05.290
+Ok so we know a lot of things about the string
+class.
+
+0:00:05.290,0:00:09.759
+One more thing I want to talk about now is
+searching in a string.
+
+0:00:09.759,0:00:16.230
+So assuming you have a string and you want
+to search if you have some substring contained
+
+0:00:16.230,0:00:17.230
+in it.
+
+0:00:17.230,0:00:21.529
+The syntax to do that is by using the find
+method.
+
+0:00:21.529,0:00:26.800
+You call the find method on an original str
+string so you do str dot find.
+
+0:00:26.800,0:00:32.540
+And then you pass as a parameter the string
+you are searching for in this case s.
+
+0:00:32.540,0:00:41.930
+Let me show you how it works for example if
+we have str the original string ABCDEFG whatever
+
+0:00:41.930,0:00:46.320
+you can call str dot find of DE.
+
+0:00:46.320,0:00:52.129
+Basically searching for DE inside the original
+string the original str.
+
+0:00:52.129,0:00:59.010
+In this case you can see that DE is a substring
+of the original string the find method would
+
+0:00:59.010,0:01:02.609
+just return the starting index of DE.
+
+0:01:02.609,0:01:13.030
+So A is zero B is one C and so on DE starts
+I think in index six so if we print whatever
+
+0:01:13.030,0:01:16.930
+str dot find returns in this case it would
+just print six.
+
+0:01:16.930,0:01:24.420
+Let’s take a look at another call for the
+find method for example if we’ll call str
+
+0:01:24.420,0:01:27.520
+dot find on a string XYZ.
+
+0:01:27.520,0:01:35.670
+In this case XYZ is not a substring of the
+real original str so find needs to tell us
+
+0:01:35.670,0:01:44.680
+needs to return some value that says that
+XYZ is not found in str.
+
+0:01:44.680,0:01:52.840
+Find returns in this case a constant named
+npos that is stored in the string namespace.
+
+0:01:52.840,0:01:59.610
+In order to access the string namespace basically
+we use the syntax string double colons and
+
+0:01:59.610,0:02:03.579
+then npos that’s the constant name.
+
+0:02:03.579,0:02:13.290
+So we can do something like if str dot find
+XYZ equals to the npos constant we can just
+
+0:02:13.290,0:02:18.540
+print not found otherwise if it doesn’t
+equal to npos basically it returns a valid
+
+0:02:18.540,0:02:20.640
+index it is found.
+
+0:02:20.640,0:02:26.460
+In this case when we are searching for XYZ
+obviously it would return that it didn’t
+
+0:02:26.460,0:02:31.690
+find the XYZ in the original str and therefore
+it would print not found.
+
+0:02:31.690,0:02:35.520
+Let’s take another look here.
+
+0:02:35.520,0:02:41.550
+What do you think it would happen if we’ll
+call the find method to search for CD in the
+
+0:02:41.550,0:02:43.250
+original str?
+
+0:02:43.250,0:02:50.270
+I believe you noticed that CD appears more
+than once in this original string.
+
+0:02:50.270,0:02:58.170
+It appears ABCD and then B and another CD
+so we have two occurrences of CD.
+
+0:02:58.170,0:03:04.510
+Any guesses on what find would return when
+we call it to search for CD?
+
+0:03:04.510,0:03:12.310
+So maybe it would return arbitrarily one of
+the positions maybe it would return a collection
+
+0:03:12.310,0:03:13.660
+of the entire indices.
+
+0:03:13.660,0:03:20.060
+I’ll just tell you that find the find method
+just returns where the first occurrence of
+
+0:03:20.060,0:03:24.460
+the string we are searching for appears in
+the original string.
+
+0:03:24.460,0:03:31.250
+In this case CD first appears at index two
+therefore it would print two.

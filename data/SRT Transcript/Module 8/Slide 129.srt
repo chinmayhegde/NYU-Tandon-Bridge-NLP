@@ -1,0 +1,10 @@
+0:00:00.590,0:00:07.620
+Let’s try to write this program on our computer
+and make it executable we need to do one more
+
+0:00:07.620,0:00:08.930
+tiny thing there.
+
+0:00:08.930,0:00:11.210
+So let’s go to the computer and make it
+work.

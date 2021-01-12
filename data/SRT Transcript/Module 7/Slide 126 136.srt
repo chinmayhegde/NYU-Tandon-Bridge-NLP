@@ -1,0 +1,124 @@
+0:00:00.520,0:00:05.080
+One more note I want to add here when we analyze
+the running time.
+
+0:00:05.080,0:00:11.610
+Now we as you can see we are not measuring
+the running time using seconds as units.
+
+0:00:11.610,0:00:14.879
+We are using them as number of primitive operations
+as units.
+
+0:00:14.879,0:00:17.770
+There this is what we are counting.
+
+0:00:17.770,0:00:30.960
+And we want to try to ignore the running time
+based on the computer we are running it on.
+
+0:00:30.960,0:00:37.040
+So we want to ignore the hardware technology
+that the algorithm is ran on.
+
+0:00:37.040,0:00:45.090
+Obviously if we take the a computer twice
+as fast our algorithm would run twice as fast.
+
+0:00:45.090,0:00:52.100
+And we want to as I said before we want to
+make some kind of quality kind of a criteria
+
+0:00:52.100,0:00:56.320
+that separates the algorithm by their quality.
+
+0:00:56.320,0:01:04.000
+And for that we would try to avoid and to
+move aside the hardware technology.
+
+0:01:04.000,0:01:10.049
+In order to do that we make what is called
+an asymptotic analysis that would look only
+
+0:01:10.049,0:01:12.630
+on the order of growth of T of N.
+
+0:01:12.630,0:01:17.429
+Not at the number of primitive operations
+but the number of growth of the number of
+
+0:01:17.429,0:01:18.979
+primitive operations.
+
+0:01:18.979,0:01:23.560
+So if informally we said that we compare the
+number of primitive operations executed by
+
+0:01:23.560,0:01:26.759
+the process of the function of the input size.
+
+0:01:26.759,0:01:35.289
+Using the asymptotic analysis we compare the
+asymptotic order of the number of primitive
+
+0:01:35.289,0:01:39.290
+operations executed by the process of the
+function of the input size.
+
+0:01:39.290,0:01:42.299
+Obviously you don’t know what are the asymptotic
+order.
+
+0:01:42.299,0:01:49.979
+Basically means I will talk about it in a
+much more formal way in a few minutes but
+
+0:01:49.979,0:01:52.329
+first let me give you as a rule of thumb.
+
+0:01:52.329,0:01:57.020
+T of N is three N squared plus six N minus
+fifteen.
+
+0:01:57.020,0:02:03.119
+In order to get the asymptotic order of T
+of N which is in this case theta of N squared.
+
+0:02:03.119,0:02:10.910
+We say asymptotic order is theta or sometimes
+you will hear big O of N squared.
+
+0:02:10.910,0:02:15.550
+But for our conversation let’s use the term
+theta.
+
+0:02:15.550,0:02:20.780
+In order to figure out the asymptotic order
+of three N squared plus six N minus fifteen
+
+0:02:20.780,0:02:24.780
+is theta of N squared we will do two things.
+
+0:02:24.780,0:02:30.200
+We will drop lower order terms the six N minus
+fifteen will be dropped off.
+
+0:02:30.200,0:02:36.750
+We will stick only with the high order term
+in this case three N squared.
+
+0:02:36.750,0:02:39.030
+And we will also ignore the leading constant.
+
+0:02:39.030,0:02:40.810
+The three would be ignored.
+
+0:02:40.810,0:02:44.340
+So we will be left with N squared.
+
+0:02:44.340,0:02:51.570
+So we say that T of N is three N squared plus
+six N minus fifteen but that is theta in asymptotic
+
+0:02:51.570,0:02:53.010
+order of N squared.

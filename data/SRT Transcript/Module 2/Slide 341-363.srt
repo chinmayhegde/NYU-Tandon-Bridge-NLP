@@ -1,0 +1,247 @@
+1
+00:00:00,560 --> 00:00:05,700
+Okay, let's see how the ‘Two’s Complement’
+representation method works to represent positive
+
+2
+00:00:05,700 --> 00:00:07,080
+and negative numbers.
+
+3
+00:00:07,080 --> 00:00:13,250
+So, when you want to represent the number,
+assigned number, in the Two’s Complement
+
+4
+00:00:13,250 --> 00:00:19,039
+representation method it kind of matters how
+long, how big you want, how many bits you
+
+5
+00:00:19,039 --> 00:00:20,660
+want in this representation.
+
+6
+00:00:20,660 --> 00:00:30,449
+So, let's let me give you a general definition
+here: so, for presenting a number in k-bits,
+
+7
+00:00:30,449 --> 00:00:35,380
+it has two major properties that you should
+know about.
+
+8
+00:00:35,380 --> 00:00:42,240
+The first is that if your number that you
+want to represent is positive, then the first
+
+9
+00:00:42,240 --> 00:00:49,180
+k1, (k. minus 1) bits are represented as the
+unsigned binary representation, basically
+
+10
+00:00:49,180 --> 00:00:54,550
+the regular base 2, and then the last bit
+would just be a 0.
+
+11
+00:00:54,550 --> 00:01:01,120
+So, in order to represent a positive number
+just take its base 2 representation in (k.
+
+12
+00:01:01,120 --> 00:01:07,759
+minus 1) bits, and the k-th bit would be a
+0, on its left.
+
+13
+00:01:07,759 --> 00:01:14,240
+And another important property for the Two’s
+Complement representation method is that if
+
+14
+00:01:14,240 --> 00:01:22,850
+you add a number and its additive inverse,
+its value with the sign flipped, then the
+
+15
+00:01:22,850 --> 00:01:25,350
+sum would be 2 to the power of k.
+
+16
+00:01:25,350 --> 00:01:31,229
+I suggest you write these two properties down
+when you look at the next example.
+
+17
+00:01:31,229 --> 00:01:38,640
+So for example, if we want to translate the
+decimal value 26 into Two’s Complement using
+
+18
+00:01:38,640 --> 00:01:41,880
+8-bits, okay so our k now is 8.
+
+19
+00:01:41,880 --> 00:01:44,770
+So it's 8-bit Two’s Complement representation.
+
+20
+00:01:44,770 --> 00:01:54,259
+Then, since it's a positive number we should
+look at 26 as in a binary representation,
+
+21
+00:01:54,259 --> 00:01:59,450
+basically in seven bits so the first seven
+bits would be the binary representation of
+
+22
+00:01:59,450 --> 00:02:01,539
+26, like that.
+
+23
+00:02:01,539 --> 00:02:04,990
+And then the left-most bit would be 0.
+
+24
+00:02:04,990 --> 00:02:08,929
+Very, actually, very straight forward.
+
+25
+00:02:08,929 --> 00:02:14,690
+Let's try to figure out how negative 26 would
+look like, in once again, an 8-bit Two’s
+
+26
+00:02:14,690 --> 00:02:15,849
+Complement representation.
+
+27
+00:02:15,849 --> 00:02:24,430
+So, we said that adding a number and its additive
+inverse should give us 2 to the k.
+
+28
+00:02:24,430 --> 00:02:32,100
+In this case, adding 26 to negative 26 should
+give us to 2 in this case, k is 8, 2 to the
+
+29
+00:02:32,100 --> 00:02:33,100
+8.
+
+30
+00:02:33,100 --> 00:02:35,629
+So 26, we know how it looks like, right?
+
+31
+00:02:35,629 --> 00:02:43,569
+2 to the 8, if you think about it, it is 1
+and eight 0s; just as 10 to the 8 decimal
+
+32
+00:02:43,569 --> 00:02:49,340
+is one and eight zeros, in binary 2 to the
+8 would be one and eight zeros.
+
+33
+00:02:49,340 --> 00:02:53,680
+You can figure out the weight of each digit
+and the ninth digit, basically, is 2 to the
+
+34
+00:02:53,680 --> 00:02:54,680
+8.
+
+35
+00:02:54,680 --> 00:02:59,060
+But now let's try to figure out what negative
+26, would, should look like.
+
+36
+00:02:59,060 --> 00:03:06,510
+So we know that if we add 26 to negative 26,
+they should add up to this 1 and eight 0s.
+
+37
+00:03:06,510 --> 00:03:10,870
+So let's try to figure out negative 26, digit
+by digit.
+
+38
+00:03:10,870 --> 00:03:14,829
+So zero plus what, would give us the zero?
+
+39
+00:03:14,829 --> 00:03:16,090
+Zero, obviously.
+
+40
+00:03:16,090 --> 00:03:21,140
+One plus what, would give us a zero?
+
+41
+00:03:21,140 --> 00:03:24,310
+It could either be zero or one, obviously,
+it's not a zero.
+
+42
+00:03:24,310 --> 00:03:30,670
+So it must be a one, but not only that it
+gives us a 0, it also carries another 2 to
+
+43
+00:03:30,670 --> 00:03:31,670
+the next position.
+
+44
+00:03:31,670 --> 00:03:35,790
+So 1 plus 0 plus what, would give us a zero?
+
+45
+00:03:35,790 --> 00:03:39,870
+That's 1 plus 1 would give us a 0 and another
+carry over of 1.
+
+46
+00:03:39,870 --> 00:03:42,420
+1 plus 1 plus what, would give us a zero?
+
+47
+00:03:42,420 --> 00:03:50,210
+1 plus 1 plus 0 would give us a 0, with the
+carry over; 1 plus 1 plus 0 with the carry
+
+48
+00:03:50,210 --> 00:03:51,210
+over.
+
+49
+00:03:51,210 --> 00:03:53,700
+1 plus 0 plus what, would give us a zero?
+
+50
+00:03:53,700 --> 00:03:57,569
+1 plus 0 plus 1 would give us a 0, right?
+
+51
+00:03:57,569 --> 00:04:04,769
+It's basically a ten so it's a 0 and the carryover
+of another 1; 1 plus 0 plus 1 and 1 plus 0
+
+52
+00:04:04,769 --> 00:04:05,999
+plus 1.
+
+53
+00:04:05,999 --> 00:04:17,500
+So, taking this number here of 11100110, this
+thing here, that's the 8-bits Two’s Complement
+
+54
+00:04:17,500 --> 00:04:19,859
+representation of negative 26.
+

@@ -1,0 +1,112 @@
+1
+00:00:00,770 --> 00:00:06,100
+Now let us now see the role of the block offset
+and the cache tag fields in the physical address.
+
+2
+00:00:06,100 --> 00:00:10,750
+Remember that each D RAM or cache block is
+at least 16 bytes.
+
+3
+00:00:10,750 --> 00:00:14,789
+In MIPS64, an instruction is four bytes and
+an instruction in.
+
+4
+00:00:14,789 --> 00:00:18,130
+So each block can have four instructions.
+
+5
+00:00:18,130 --> 00:00:22,430
+The role of the cache block offset field is
+to indicate which of the four instructions
+
+6
+00:00:22,430 --> 00:00:25,830
+in the block to access for a given address.
+
+7
+00:00:25,830 --> 00:00:32,570
+In case of a data access, each data can be
+at most 8 bytes in MIPS64.
+
+8
+00:00:32,570 --> 00:00:38,390
+So a cache block of 16 bytes can up to two
+double words.
+
+9
+00:00:38,390 --> 00:00:44,920
+So the goal of the offset is to indicate which
+of the two double words the address is requesting
+
+10
+00:00:44,920 --> 00:00:47,309
+Let us see the role of the cache tag.
+
+11
+00:00:47,309 --> 00:00:54,559
+Assume we have a 16 megabyte D RAM and a 16
+kilobyte cache with a 2-way set associative.
+
+12
+00:00:54,559 --> 00:01:00,450
+Now consider the following addresses: 001C
+and 004018.
+
+13
+00:01:00,450 --> 00:01:06,359
+When we break the addresses into the different
+fields, we see that they both have same cache
+
+14
+00:01:06,359 --> 00:01:07,990
+set 0.
+
+15
+00:01:07,990 --> 00:01:13,030
+This means, when accessing these addresses,
+the cache controller will go to same cache
+
+16
+00:01:13,030 --> 00:01:15,139
+set 1 to find.
+
+17
+00:01:15,139 --> 00:01:19,779
+However, they have different D RAM blocks,
+which makes sense because they are different
+
+18
+00:01:19,779 --> 00:01:20,779
+addresses.
+
+19
+00:01:20,779 --> 00:01:25,380
+So, the role of the cache tag is to determine
+which D RAM block that the content of a cache
+
+20
+00:01:25,380 --> 00:01:26,689
+block belongs to.
+
+21
+00:01:26,689 --> 00:01:32,029
+So, if we concatenate the cache tag and the
+cache set, we get the D RAM block.
+
+22
+00:01:32,029 --> 00:01:37,889
+So, when searching for a data in the cache,
+the cache controller has to also compare the
+
+23
+00:01:37,889 --> 00:01:42,249
+cache tags to see if it is getting the correct
+instruction or data.
+
+24
+00:01:42,249 --> 00:01:43,899
+We will see an illustration of this later.
+

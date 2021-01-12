@@ -1,0 +1,42 @@
+1
+00:00:00,310 --> 00:00:03,139
+CISC architecture does the reverse of RISC.
+
+2
+00:00:03,139 --> 00:00:07,850
+That is, it has very complex machine level
+instructions, where an instruction can perform
+
+3
+00:00:07,850 --> 00:00:10,210
+multiple high-level operations.
+
+4
+00:00:10,210 --> 00:00:15,980
+For example, an instruction can do both a
+memory access operation and an addition operation.
+
+5
+00:00:15,980 --> 00:00:20,019
+The main benefit of this is that it makes
+it easier to translate high-level code, such
+
+6
+00:00:20,019 --> 00:00:24,480
+as C or C++ into machine instructions, simplifying
+the compiler.
+
+7
+00:00:24,480 --> 00:00:30,100
+The downside is that the hardware of the CPU
+is more complex because of the multiple operations
+
+8
+00:00:30,100 --> 00:00:31,859
+that an instruction can perform.
+
+9
+00:00:31,859 --> 00:00:35,180
+The most popular CISC architecture is x86
+from Intel.
+

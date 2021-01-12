@@ -1,0 +1,28 @@
+1
+00:00:00,690 --> 00:00:05,730
+When we say a branch is taken, what we mean
+is that the comparison of the branch condition
+
+2
+00:00:05,730 --> 00:00:06,990
+is true.
+
+3
+00:00:06,990 --> 00:00:10,759
+We don’t necessarily mean that the registers
+are equal.
+
+4
+00:00:10,759 --> 00:00:15,759
+So if the branch checks that two registers
+are not equal, such as branch if not equal
+
+5
+00:00:15,759 --> 00:00:21,420
+does, and the registers are indeed not equal,
+then the comparison of the branch condition
+
+6
+00:00:21,420 --> 00:00:23,289
+is true and the branch is taken
+

@@ -1,0 +1,56 @@
+1
+00:00:01,130 --> 00:00:05,900
+The next cache associativity we will discuss
+is full associativity.
+
+2
+00:00:05,900 --> 00:00:10,930
+In a fully-associative cache, a D RAM block
+can go into any cache block that is unoccupied.
+
+3
+00:00:10,930 --> 00:00:16,510
+In the figure, the blue D RAM block can go
+to any cache block that currently doesn’t
+
+4
+00:00:16,510 --> 00:00:18,739
+have data or instruction.
+
+5
+00:00:18,739 --> 00:00:22,539
+So the fully-associative cache is the opposite
+of direct map.
+
+6
+00:00:22,539 --> 00:00:26,769
+It tries to keep the content in the cache
+for as long as possible by allowing it to
+
+7
+00:00:26,769 --> 00:00:29,140
+be put anywhere that is free.
+
+8
+00:00:29,140 --> 00:00:33,810
+Therefore, fully-associative cache has very
+good temporal locality.
+
+9
+00:00:33,810 --> 00:00:39,340
+However, since the data or instruction can
+be anywhere in the cache, we may have to look
+
+10
+00:00:39,340 --> 00:00:41,680
+to the whole cache to find it.
+
+11
+00:00:41,680 --> 00:00:46,480
+If we look at the cache as an array of blocks,
+it may take several cycles to get the data
+
+12
+00:00:46,480 --> 00:00:49,510
+or instructions, leading to more access delay.
+

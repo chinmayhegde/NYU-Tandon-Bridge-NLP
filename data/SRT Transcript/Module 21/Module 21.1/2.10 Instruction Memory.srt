@@ -1,0 +1,103 @@
+1
+00:00:00,830 --> 00:00:03,340
+Let us now look at the memory step.
+
+2
+00:00:03,340 --> 00:00:08,340
+This step is only used by load and store double
+instructions in our CPU.
+
+3
+00:00:08,340 --> 00:00:12,980
+For the load double instruction, the CPU sends
+the memory address to the memory controller
+
+4
+00:00:12,980 --> 00:00:16,450
+in order to obtain the read the data.
+
+5
+00:00:16,450 --> 00:00:21,230
+Since the address of the data was already
+calculated during the execute step, the CPU
+
+6
+00:00:21,230 --> 00:00:24,910
+can simply make the memory request using the
+address stored in ALUOut1.
+
+7
+00:00:24,910 --> 00:00:32,930
+When the data is returned from memory, the
+CPU puts it in the load memory double or LMD
+
+8
+00:00:32,930 --> 00:00:33,930
+register.
+
+9
+00:00:33,930 --> 00:00:40,360
+LMD is a special purpose register that temporarily
+holds the value of data obtained from memory
+
+10
+00:00:40,360 --> 00:00:41,360
+loads.
+
+11
+00:00:41,360 --> 00:00:46,570
+For the store double instruction, the CPU
+must write the data from the register Rt to
+
+12
+00:00:46,570 --> 00:00:50,100
+the memory using the address calculated in
+the execute step.
+
+13
+00:00:50,100 --> 00:00:55,980
+Since Rt is put in the B temporary register
+during decode stage, the memory step is fairly
+
+14
+00:00:55,980 --> 00:00:58,110
+straightforward for this instruction.
+
+15
+00:00:58,110 --> 00:01:02,610
+The WriteBack step is only useful for the
+Load double and the R-format arithmetic and
+
+16
+00:01:02,610 --> 00:01:04,729
+logic operations.
+
+17
+00:01:04,729 --> 00:01:10,620
+This is because only these instructions of
+our CPU need to write to general-purpose registers.
+
+18
+00:01:10,620 --> 00:01:17,330
+For load double, the CPU takes the content
+of LMD and writes it into the Rt register.
+
+19
+00:01:17,330 --> 00:01:22,920
+For the R-format instructions, the CPU needs
+to write the result of the ALU operation in
+
+20
+00:01:22,920 --> 00:01:24,860
+the Rd register.
+
+21
+00:01:24,860 --> 00:01:30,810
+Since the result of the ALU operation was
+put in ALUOut2 during execute step, the CPU
+
+22
+00:01:30,810 --> 00:01:34,740
+can simply use the content of ALUOut2 to put
+in Rd.
+

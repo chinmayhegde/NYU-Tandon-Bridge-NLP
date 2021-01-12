@@ -1,0 +1,94 @@
+1
+00:00:00,650 --> 00:00:04,040
+Let us take a look at structural hazards in
+more detail.
+
+2
+00:00:04,040 --> 00:00:05,750
+Consider the code here.
+
+3
+00:00:05,750 --> 00:00:09,370
+Remember that in our CPU, there is only one
+ALU.
+
+4
+00:00:09,370 --> 00:00:14,049
+That same ALU is used by the fetch stage of
+the pipeline to increment the program counter
+
+5
+00:00:14,049 --> 00:00:17,849
+by four and is used by the execute stage for
+operations.
+
+6
+00:00:17,849 --> 00:00:23,720
+In this example, at clock cycle 3, the first
+instruction is in the execute stage and the
+
+7
+00:00:23,720 --> 00:00:26,039
+third instruction is in the fetch stage.
+
+8
+00:00:26,039 --> 00:00:31,259
+Therefore, both instructions need to use the
+ALU at the same cycle.
+
+9
+00:00:31,259 --> 00:00:33,630
+Here is another example of structural hazard.
+
+10
+00:00:33,630 --> 00:00:37,540
+Let us assume our CPU has only one memory
+port.
+
+11
+00:00:37,540 --> 00:00:42,010
+The same port is used by the instruction fetch
+stage and by the memory stage.
+
+12
+00:00:42,010 --> 00:00:47,390
+In this example, the first instruction needs
+to use the memory port at cycle 4 in order
+
+13
+00:00:47,390 --> 00:00:52,390
+to load the data from memory and the fourth
+instruction needs to use the port at cycle
+
+14
+00:00:52,390 --> 00:00:54,980
+4 to fetch the instruction.
+
+15
+00:00:54,980 --> 00:01:00,280
+The main way to mitigate structural hazards
+is by replicating resources.
+
+16
+00:01:00,280 --> 00:01:06,210
+Therefore, we can add two ALUs in our CPU,
+one for the instruction fetch stage to increment
+
+17
+00:01:06,210 --> 00:01:08,570
+the counter, the program counter.
+
+18
+00:01:08,570 --> 00:01:13,060
+And another in the execute stage to perform
+the functionalities of the instructions.
+
+19
+00:01:13,060 --> 00:01:17,610
+Note that structural hazards rarely occur
+in modern processors because they have several
+
+20
+00:01:17,610 --> 00:01:20,690
+replications of resources for different stages.
+

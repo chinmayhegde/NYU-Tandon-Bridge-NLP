@@ -1,0 +1,188 @@
+0:00:00.840,0:00:05.280
+So now that we understand that we can create
+variables on the heap.
+
+0:00:05.280,0:00:08.599
+There's not really a whole lot of benefit
+in creating a single variable on the heap
+
+0:00:08.599,0:00:12.460
+but what there is a huge benefit is creating
+heap dynamic array.
+
+0:00:12.460,0:00:18.390
+If you remember back to our discussion on
+arrays we said that the size of a stack dynamic
+
+0:00:18.390,0:00:24.789
+array would have to be known at compile time
+and has to be static.
+
+0:00:24.789,0:00:29.560
+So when we created our arrays back in the
+previous modules you created them with a known
+
+0:00:29.560,0:00:35.690
+size like twenty five or fifty it was some
+constant values literal value.
+
+0:00:35.690,0:00:40.770
+But what if we didn't know what if we didn't
+know how many elements we needed to create
+
+0:00:40.770,0:00:44.290
+until we got to the point that it was time
+to actually create them.
+
+0:00:44.290,0:00:48.989
+So for example we might ask the user how many
+things are you going to tell us how many objects
+
+0:00:48.989,0:00:51.260
+do you need to store in this array?
+
+0:00:51.260,0:00:55.969
+Or we might pretest how many objects we're
+going to put into an array.
+
+0:00:55.969,0:01:00.600
+We might read in a file and see how many integers
+there are before we're even loading them into
+
+0:01:00.600,0:01:02.010
+the array.
+
+0:01:02.010,0:01:07.770
+And if we do that then we have to create a
+heap dynamic array because a stack dynamic
+
+0:01:07.770,0:01:11.679
+array does not allow us to create it with
+a dynamic size.
+
+0:01:11.679,0:01:13.929
+It has to be a static size.
+
+0:01:13.929,0:01:18.819
+So working with a heap dynamic array means
+that we are going to have this since it’s
+
+0:01:18.819,0:01:19.819
+created on the heap.
+
+0:01:19.819,0:01:23.889
+It means we're going to have to have a pointer
+to point to that array.
+
+0:01:23.889,0:01:29.479
+Since we're working with pointers another
+big benefit is that if later on we decide
+
+0:01:29.479,0:01:33.799
+that now we don't have enough space in this
+array and we need to make it bigger that's
+
+0:01:33.799,0:01:37.299
+not really possible by the nature of the way
+that arrays work.
+
+0:01:37.299,0:01:42.469
+But what we can do because this is just a
+pointer is we can temporarily create a new
+
+0:01:42.469,0:01:44.520
+array that's slightly larger.
+
+0:01:44.520,0:01:49.969
+Copy over our values into that new array we
+can delete our old array and make our old
+
+0:01:49.969,0:01:52.499
+pointer point to our new array.
+
+0:01:52.499,0:01:59.280
+And that effectively resizes our array because
+the pointer will still be the same pointer.
+
+0:01:59.280,0:02:04.590
+But now the size of the array will be significantly
+larger and that's an important factor we're
+
+0:02:04.590,0:02:06.189
+going to see this later on.
+
+0:02:06.189,0:02:13.780
+We're going to create objects which store
+information and they're going to expand on
+
+0:02:13.780,0:02:17.180
+how much information is stored based on the
+inputs.
+
+0:02:17.180,0:02:22.620
+But for now what we want to see is just a
+simple format for asking the user how big
+
+0:02:22.620,0:02:26.780
+the array should be remembering that number
+and then creating an array.
+
+0:02:26.780,0:02:32.120
+And we can create arrays on the heap just
+by specifying the data type we call new again
+
+0:02:32.120,0:02:36.730
+we specify the data type and then we use the
+array operator the square brackets operator
+
+0:02:36.730,0:02:38.219
+and tell it the size.
+
+0:02:38.219,0:02:43.170
+But now the big difference is the size doesn't
+have to be static the size can be decided
+
+0:02:43.170,0:02:45.970
+at run time.
+
+0:02:45.970,0:02:49.280
+When we create the array of course we have
+a new operation we're going to have to have
+
+0:02:49.280,0:02:55.500
+a delete operation and the delete operation
+is a little bit different just slightly different.
+
+0:02:55.500,0:02:59.969
+Because when we are working with arrays we’re
+going to have to tell C++ that we don't just
+
+0:02:59.969,0:03:03.129
+want to delete one element we want to delete
+the array.
+
+0:03:03.129,0:03:06.060
+And we do that with the square brackets operator
+after delete.
+
+0:03:06.060,0:03:08.859
+So this would be delete square brackets array.
+
+0:03:08.859,0:03:13.900
+Now don't get ahead of ourselves and start
+thinking that we can delete individual objects
+
+0:03:13.900,0:03:15.590
+inside of an array.
+
+0:03:15.590,0:03:18.879
+We really can't do that it's not really safe
+to do that.
+
+0:03:18.879,0:03:25.209
+What we want to keep in mind is that if we're
+deleting a single object we use delete ptr.
+
+0:03:25.209,0:03:30.639
+If we want to delete an array we use delete
+square brackets arr.

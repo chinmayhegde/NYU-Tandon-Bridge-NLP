@@ -1,0 +1,32 @@
+1
+00:00:00,770 --> 00:00:05,040
+Hi everyone, today we will cover the second
+part of the computer organization section
+
+2
+00:00:05,040 --> 00:00:06,040
+of this course.
+
+3
+00:00:06,040 --> 00:00:11,549
+We will focus on the memory hierarchy, which
+is one of the most important aspects of CPU
+
+4
+00:00:11,549 --> 00:00:12,549
+design.
+
+5
+00:00:12,549 --> 00:00:16,190
+We will discuss the need for caches, which
+are smaller memory components between the
+
+6
+00:00:16,190 --> 00:00:22,320
+CPU and the main memory, how they are organized
+and how they facilitate faster access to code
+
+7
+00:00:22,320 --> 00:00:23,609
+and data during execution
+

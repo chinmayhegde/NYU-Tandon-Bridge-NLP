@@ -1,0 +1,135 @@
+1
+00:00:00,750 --> 00:00:04,300
+The idea of segmentation makes sense and there's
+a lot of systems that do it today; it’s
+
+2
+00:00:04,300 --> 00:00:05,300
+very popular.
+
+3
+00:00:05,300 --> 00:00:08,910
+Fortunately, it's not substantially different
+than paging.
+
+4
+00:00:08,910 --> 00:00:15,320
+The only key difference here is that we’re
+now allowed to have unequal sized partitions.
+
+5
+00:00:15,320 --> 00:00:21,100
+So, in paging system, we're assuming that
+somebody came down and said that it's going
+
+6
+00:00:21,100 --> 00:00:26,380
+to be a four kilobyte page size and you might
+argue well what if I don't want a four kilobyte
+
+7
+00:00:26,380 --> 00:00:30,910
+page size, for some reason I want something
+larger or something smaller.
+
+8
+00:00:30,910 --> 00:00:35,830
+Segmentation says, in a simple segmentation
+system,you could use any segment size and
+
+9
+00:00:35,830 --> 00:00:40,079
+we don't call it a page anymore, we call it
+a segment; you can choose any segment size.
+
+10
+00:00:40,079 --> 00:00:43,440
+But now the logical addresses really have
+to change because we need to talk about not
+
+11
+00:00:43,440 --> 00:00:48,800
+just the the logical address, we need to break
+the logical address into two parts: a segment
+
+12
+00:00:48,800 --> 00:00:51,690
+number and an offset into that segment.
+
+13
+00:00:51,690 --> 00:00:55,690
+And then the operating system can keep different
+segments in different locations, of course,
+
+14
+00:00:55,690 --> 00:00:57,880
+we need space for different segments.
+
+15
+00:00:57,880 --> 00:01:04,820
+So, this is kind of leading to a more dynamic
+partitioning strategy, but the segments don't
+
+16
+00:01:04,820 --> 00:01:09,140
+necessarily have to be contiguous, so we can
+now divide them up.
+
+17
+00:01:09,140 --> 00:01:14,520
+This isn't as as universal as you might see
+a paging system.
+
+18
+00:01:14,520 --> 00:01:21,270
+What usually happens in a segmentation system
+is the CPU designer will give you a few options
+
+19
+00:01:21,270 --> 00:01:28,230
+of segment sizes to choose from and so you
+might not have just four kilobyte pages, You
+
+20
+00:01:28,230 --> 00:01:33,009
+might have four kilobyte pages, sixteen kilobyte
+pages and sixty-four kilobyte pages.
+
+21
+00:01:33,009 --> 00:01:37,390
+The reason for this is that the operating
+system if it knows it's going to need a lot
+
+22
+00:01:37,390 --> 00:01:42,950
+of main memory for this process, we can use
+all sixty-four pages and then we have less
+
+23
+00:01:42,950 --> 00:01:43,950
+of them.
+
+24
+00:01:43,950 --> 00:01:47,590
+So, the page map tables are smaller and simpler
+to maintain.
+
+25
+00:01:47,590 --> 00:01:53,750
+So, we don't really have the exact dynamic
+partitioning or the design of a simple segmentation
+
+26
+00:01:53,750 --> 00:01:58,680
+system, where we have an infinite number of
+segments sizes.
+
+27
+00:01:58,680 --> 00:02:05,549
+Instead we just have a few limiting segments
+sizes and the CPU designers decide what segment
+
+28
+00:02:05,549 --> 00:02:07,609
+sizes we have as options.
+

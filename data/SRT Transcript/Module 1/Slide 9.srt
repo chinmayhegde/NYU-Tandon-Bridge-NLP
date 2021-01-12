@@ -1,0 +1,61 @@
+1
+00:00:01,979 --> 00:00:06,600
+Computers only understand very basic commands
+and I've listed some of the commands here,
+
+2
+00:00:06,600 --> 00:00:12,089
+so you can see them: move, add, subtract,
+multiply, compare, and jump.
+
+3
+00:00:12,089 --> 00:00:17,930
+You're not seeing any of the higher level
+commands that you might see in a high level
+
+4
+00:00:17,930 --> 00:00:18,930
+language.
+
+5
+00:00:18,930 --> 00:00:23,410
+So there's really no function calls; there's
+not a lot of not a lot of commands that we
+
+6
+00:00:23,410 --> 00:00:27,289
+would see except for very basic math operations.
+
+7
+00:00:27,289 --> 00:00:33,430
+There are a lot of machine language instructions,
+but this set of machine language instructions
+
+8
+00:00:33,430 --> 00:00:37,070
+is limited and we can't really add to it.
+
+9
+00:00:37,070 --> 00:00:41,190
+The machine language instructions are designed
+physically into the chip.
+
+10
+00:00:41,190 --> 00:00:49,350
+So the chip is programmed by its manufacture
+and it's written in silicone in the chip.
+
+11
+00:00:49,350 --> 00:00:55,780
+So we can’t expand on that we have no capability
+to add instructions, but we have the capability
+
+12
+00:00:55,780 --> 00:01:02,679
+to build higher level languages and make the
+higher level languages convert to the machine
+
+13
+00:01:02,679 --> 00:01:03,850
+language instructions.
+

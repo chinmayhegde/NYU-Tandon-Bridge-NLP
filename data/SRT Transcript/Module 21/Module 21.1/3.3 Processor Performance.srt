@@ -1,0 +1,41 @@
+1
+00:00:00,610 --> 00:00:03,210
+Let us consider the following example.
+
+2
+00:00:03,210 --> 00:00:09,950
+Given two instructions load double and double
+word add, our CPU will do the following.
+
+3
+00:00:09,950 --> 00:00:12,639
+It will first execute the load double instruction.
+
+4
+00:00:12,639 --> 00:00:19,960
+That is, it will go to states 0, 1, 2 3, and
+4, requiring 5 cycles to complete.
+
+5
+00:00:19,960 --> 00:00:26,510
+Then the CPU transitions to state zero to
+start executing the double word add instruction.
+
+6
+00:00:26,510 --> 00:00:33,840
+Since doubleword add takes 4 clock cycles,
+the two instructions require 9 cycles to complete.
+
+7
+00:00:33,840 --> 00:00:39,980
+This type of CPU that can only execute one
+instruction at a time is called an unpipelined
+
+8
+00:00:39,980 --> 00:00:41,120
+CPU.
+
+9
+00:00:41,120 --> 00:00:43,239
+The opposite is called a pipelined CPU.
+

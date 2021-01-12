@@ -1,0 +1,329 @@
+1
+00:00:00,650 --> 00:00:03,980
+We'd like to talk about the five state process
+model, and we're going to be talking about
+
+2
+00:00:03,980 --> 00:00:05,270
+each individual state.
+
+3
+00:00:05,270 --> 00:00:06,580
+Now what is a state?
+
+4
+00:00:06,580 --> 00:00:11,349
+Well a state is one condition that a program
+might be in and the process is going to spend
+
+5
+00:00:11,349 --> 00:00:14,530
+quite a significant amount of time in each
+state.
+
+6
+00:00:14,530 --> 00:00:19,410
+So each state has to be recognized and has
+to be recorded by the operating system.
+
+7
+00:00:19,410 --> 00:00:23,050
+So let's go through the five different states
+that a process could be in, and you'll have
+
+8
+00:00:23,050 --> 00:00:26,869
+a better understanding of why the process
+is in each of these states.
+
+9
+00:00:26,869 --> 00:00:30,750
+So, the first state is the new state and all
+processes start out in a new state.
+
+10
+00:00:30,750 --> 00:00:34,570
+Now we have to recognize that the process
+is going to spend quite a significant amount
+
+11
+00:00:34,570 --> 00:00:36,660
+of time in each of these states.
+
+12
+00:00:36,660 --> 00:00:42,050
+So, why would a process spend a significant
+amount of time in the new state.
+
+13
+00:00:42,050 --> 00:00:47,340
+We have to think about the process being created
+and the procedure that we would go through
+
+14
+00:00:47,340 --> 00:00:51,340
+to create a process inside the operating system.
+
+15
+00:00:51,340 --> 00:00:57,470
+And the new state is when that process is
+being executed by the operating system.
+
+16
+00:00:57,470 --> 00:01:02,550
+Now one thing that we need to recognize is
+that a state is an atomic element.
+
+17
+00:01:02,550 --> 00:01:07,250
+And if the operating system can complete everything
+atomically, then there's really no reason
+
+18
+00:01:07,250 --> 00:01:08,550
+to have a state.
+
+19
+00:01:08,550 --> 00:01:18,070
+So, the new state happens because the process
+is being created and the code for that process,
+
+20
+00:01:18,070 --> 00:01:21,750
+one of the reasons is the code for that process
+will have to be loaded from a secondary storage
+
+21
+00:01:21,750 --> 00:01:23,600
+device into main memory.
+
+22
+00:01:23,600 --> 00:01:28,370
+And that's an IO operation and I operate generally
+take an enormous amount of time, and we'll
+
+23
+00:01:28,370 --> 00:01:33,690
+see this in a later model, but for now we
+just say that an IO operation takes a really
+
+24
+00:01:33,690 --> 00:01:34,990
+long time.
+
+25
+00:01:34,990 --> 00:01:40,490
+And the operating system doesn't want to sit
+in wait for the IO operation to complete;
+
+26
+00:01:40,490 --> 00:01:42,190
+it wants to go on to do other things.
+
+27
+00:01:42,190 --> 00:01:47,210
+But it needs to keep track of where this process
+is in the act of creation and the way to do
+
+28
+00:01:47,210 --> 00:01:48,790
+that is the new state.
+
+29
+00:01:48,790 --> 00:01:53,950
+So all processes in the new state are in the
+act of being created and their code being
+
+30
+00:01:53,950 --> 00:01:56,300
+loaded into main memory.
+
+31
+00:01:56,300 --> 00:02:01,970
+Once the process finishes loading and can
+be run, then the process moves not to the
+
+32
+00:02:01,970 --> 00:02:04,520
+running state, unfortunately, but to the ready
+state.
+
+33
+00:02:04,520 --> 00:02:09,999
+And the ready state is that point where the
+operating system has all the processes which
+
+34
+00:02:09,999 --> 00:02:14,249
+actually have all their parts ready to go.
+
+35
+00:02:14,249 --> 00:02:19,930
+These are only waiting for a processor to
+become available so that we can load the process
+
+36
+00:02:19,930 --> 00:02:23,010
+onto the processor and actually let it run.
+
+37
+00:02:23,010 --> 00:02:27,739
+Remember from our hardware discussion, that
+the processor is the only location where code
+
+38
+00:02:27,739 --> 00:02:30,180
+can actually be run in the system.
+
+39
+00:02:30,180 --> 00:02:34,060
+So, the processes that are on the ready state
+have everything that they need in order to
+
+40
+00:02:34,060 --> 00:02:39,769
+run but they're not quite running yet because
+there's no processor available.
+
+41
+00:02:39,769 --> 00:02:44,040
+Once the processor becomes available, the
+process is going to move from the ready state
+
+42
+00:02:44,040 --> 00:02:48,299
+into the running state and then it will actually
+be running on the processor and doing some
+
+43
+00:02:48,299 --> 00:02:49,469
+real work.
+
+44
+00:02:49,469 --> 00:02:52,170
+This is called a dispatch operation.
+
+45
+00:02:52,170 --> 00:02:59,349
+Once the processor either times out, or the
+process makes a blocking system call, or the
+
+46
+00:02:59,349 --> 00:03:03,340
+process ends altogether, the process is going
+to stay in the running state until one of
+
+47
+00:03:03,340 --> 00:03:06,840
+those three things happens and then it's going
+to move to the ready state, the block state,
+
+48
+00:03:06,840 --> 00:03:08,669
+or the exit state accordingly.
+
+49
+00:03:08,669 --> 00:03:11,950
+Now we already understand what the ready state
+is we've seen that just a second ago.
+
+50
+00:03:11,950 --> 00:03:13,499
+But what's the block state?
+
+51
+00:03:13,499 --> 00:03:19,120
+Well what happens if the process makes some
+sort of request which is going to take a really
+
+52
+00:03:19,120 --> 00:03:21,019
+significant amount of time.
+
+53
+00:03:21,019 --> 00:03:25,319
+The operating system doesn't want to stand
+and wait, waiting for that process to do what
+
+54
+00:03:25,319 --> 00:03:26,849
+it's asking to do.
+
+55
+00:03:26,849 --> 00:03:31,689
+And so it moves the process into the block
+state to indicate that this process is no
+
+56
+00:03:31,689 --> 00:03:36,829
+longer ready to run; it is not running but
+it's not quite done yet.
+
+57
+00:03:36,829 --> 00:03:42,319
+And the process is going to wait in the block
+state until whatever action it's requested
+
+58
+00:03:42,319 --> 00:03:47,049
+finishes, and then it's going to move from
+the block state instead back into the ready
+
+59
+00:03:47,049 --> 00:03:48,049
+state.
+
+60
+00:03:48,049 --> 00:03:51,170
+And then eventually from the ready state to
+the running state and from the running state
+
+61
+00:03:51,170 --> 00:03:53,450
+back to the ready state when it times out.
+
+62
+00:03:53,450 --> 00:03:57,980
+And this process will happen from ready to
+running to blocked, ready to running, to ready
+
+63
+00:03:57,980 --> 00:04:01,909
+to running, and so on and so forth until the
+process finally finishes.
+
+64
+00:04:01,909 --> 00:04:05,459
+And when it's done the process moves to the
+exit state.
+
+65
+00:04:05,459 --> 00:04:10,120
+And in the exit state the process is just
+waiting to be cleaned up and terminated.
+
+66
+00:04:10,120 --> 00:04:14,150
+And there's one key element that has to be
+returned back to the parent process, which
+
+67
+00:04:14,150 --> 00:04:18,359
+we'll talk about later and linkages, and that
+is the return value.
+
+68
+00:04:18,359 --> 00:04:24,820
+Remember return zero from int main, well that
+has to be given back to the parent process.
+
+69
+00:04:24,820 --> 00:04:29,979
+And a process that in the exit state has not
+yet returned back its element, its return
+
+70
+00:04:29,979 --> 00:04:34,389
+value, to the parent process and that's why
+we have the five states that we have.
+

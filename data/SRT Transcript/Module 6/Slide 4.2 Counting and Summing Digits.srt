@@ -1,0 +1,300 @@
+0:00:00.060,0:00:02.860
+Ok so let’s try to write this program.
+
+0:00:02.860,0:00:06.650
+So let’s have our main let’s keep some
+space for variables.
+
+0:00:06.650,0:00:12.040
+First we need to read the input from the user
+let’s ask the user to enter a positive integer
+
+0:00:12.040,0:00:16.040
+so enter a positive integer let’s also break
+the line.
+
+0:00:16.040,0:00:21.460
+And then let’s read the user’s input so
+let’s have a num integer variable let’s
+
+0:00:21.460,0:00:23.679
+cin into this num.
+
+0:00:23.679,0:00:29.390
+And now we should start iterating over the
+digits of num accumulating their sum and counting
+
+0:00:29.390,0:00:30.390
+each digit.
+
+0:00:30.390,0:00:35.730
+We said we were going to use two accumulating
+variables one for the amount of digits one
+
+0:00:35.730,0:00:37.210
+for the sum of the digits.
+
+0:00:37.210,0:00:43.110
+So let’s declare sum digits and count digits
+these would be our accumulating variables.
+
+0:00:43.110,0:00:49.670
+Before we start iterating we have to initialize
+them so let’s set sum digits to zero and
+
+0:00:49.670,0:00:54.020
+also count digits to zero and now we should
+start iterating.
+
+0:00:54.020,0:00:58.310
+We said since we don’t know how many iterations
+we are going to have we’ll use a while loop
+
+0:00:58.310,0:01:03.840
+here so while again let’s keep the put in
+condition that controls the while loop for
+
+0:01:03.840,0:01:05.089
+a later stage.
+
+0:01:05.089,0:01:09.140
+Let’s first figure out the statement there
+are going to be repeated each iteration.
+
+0:01:09.140,0:01:15.630
+So we said that each time we want to extract
+the ones digit add it to the sum digits and
+
+0:01:15.630,0:01:16.840
+count it over and over.
+
+0:01:16.840,0:01:21.869
+So let’s have a current digit variable that
+would hold the current digit we are dealing
+
+0:01:21.869,0:01:25.509
+with in this iteration so here is the current
+digit.
+
+0:01:25.509,0:01:28.299
+So first thing we want to do is take out the
+ones digit.
+
+0:01:28.299,0:01:35.979
+We said we were going to use mod 10 for doing
+exactly that so current digit gets num mod
+
+0:01:35.979,0:01:36.979
+10.
+
+0:01:36.979,0:01:41.310
+So now that we have the ones digit we should
+count it and add it to sum.
+
+0:01:41.310,0:01:47.329
+So we should increase count digits let’s
+increment it plus plus and let’s add a current
+
+0:01:47.329,0:01:49.639
+digit value into the sum digits variable.
+
+0:01:49.639,0:01:53.150
+Sum digits plus equals our current digit.
+
+0:01:53.150,0:01:57.999
+After doing that we need to remove the ones
+digit from num we said we’ll do that by
+
+0:01:57.999,0:01:59.670
+diving num by 10.
+
+0:01:59.670,0:02:04.360
+So let’s set num to the new value after
+removing the ones digit.
+
+0:02:04.360,0:02:07.740
+So let’s set nums digit equals num div 10.
+
+0:02:07.740,0:02:12.870
+So these are basically the four statement
+we want to repeat each we want to isolate
+
+0:02:12.870,0:02:18.459
+the ones digit we want to count it we want
+to add it and we want to remove it from them.
+
+0:02:18.459,0:02:23.069
+Over and over this way we are accumulating
+count the digits fro num.
+
+0:02:23.069,0:02:29.019
+So that basically seems to be the statements
+inside the body of the while in order to figure
+
+0:02:29.019,0:02:35.220
+out what is the Boolean condition that controls
+this while loop let’s try to trace this
+
+0:02:35.220,0:02:41.760
+execution and during this trace we’ll try
+to figure out how to phrase the Boolean condition.
+
+0:02:41.760,0:02:49.930
+So let’s have our memory we have a few variables
+we have num sum digits count digits and current
+
+0:02:49.930,0:02:50.930
+digit.
+
+0:02:50.930,0:02:57.230
+First we ask the user to enter a positive
+integer the user enters let’s say 375 then
+
+0:02:57.230,0:03:03.190
+we set some digits to zero and count digits
+to zero and now we start iterating.
+
+0:03:03.190,0:03:08.329
+So let’s assume the Boolean condition is
+true and start repeating these four statement
+
+0:03:08.329,0:03:09.329
+over and over.
+
+0:03:09.329,0:03:15.670
+So first iteration current digits gets num
+mod 10 375 mod 10 with a remainder when we
+
+0:03:15.670,0:03:17.870
+are dividing 375 by 10 would be five.
+
+0:03:17.870,0:03:22.329
+So our current digit would be five which makes
+sense that’s exactly what we wanted to do.
+
+0:03:22.329,0:03:27.750
+Then we are counting this digit basically
+incrementing count digits and we are adding
+
+0:03:27.750,0:03:32.719
+five to the value of sum digits basically
+turning sum digits to be five.
+
+0:03:32.719,0:03:39.650
+After we are doing that num becomes num div
+10 so first we evaluate num div 10 which is
+
+0:03:39.650,0:03:47.489
+37 and num then is assigned to 37 basically
+removing the ones digit from 375.
+
+0:03:47.489,0:03:49.849
+That ends the first iteration.
+
+0:03:49.849,0:03:56.470
+Second iteration once again current digit
+is 37 in this case mod 10 that would be 7
+
+0:03:56.470,0:03:59.719
+right the remainder when we are dividing 37
+by 10 is 7.
+
+0:03:59.719,0:04:05.120
+We are counting this digits basically incrementing
+count digits and we are adding seven to the
+
+0:04:05.120,0:04:08.690
+sum digits that would make sum digits be 12.
+
+0:04:08.690,0:04:17.359
+Last thing is num div 10 so when 37 is divided
+by 10 we get 3 and we still want to have one
+
+0:04:17.359,0:04:20.410
+more iteration for adding this 3.
+
+0:04:20.410,0:04:26.240
+So current digit would be num mod 10 just
+so we won’t make any mistakes when we divide
+
+0:04:26.240,0:04:34.330
+3 by 10 we get 3 so the mod would return 3
+and that’s exactly what we want current
+
+0:04:34.330,0:04:35.330
+digit to be.
+
+0:04:35.330,0:04:39.800
+That’s the digit we are going over this
+iteration we are counting it basically incrementing
+
+0:04:39.800,0:04:44.770
+count digits and we are adding it to sum digits
+making sum digits 15.
+
+0:04:44.770,0:04:54.080
+Finally we are assigning num to num div 10
+and num div 10 in this case is zero so that
+
+0:04:54.080,0:04:58.270
+completes the third and hopefully the last
+iteration of the while loop.
+
+0:04:58.270,0:05:03.400
+And I think at this point we should be able
+to say what the Boolean condition for the
+
+0:05:03.400,0:05:08.960
+while in order to control this statement to
+have only three iterations in case of 375.
+
+0:05:08.960,0:05:14.150
+So it was supposed to be true up to now and
+it is a Boolean condition should turn to false
+
+0:05:14.150,0:05:17.240
+exactly at this point because we don’t want
+anymore iterations.
+
+0:05:17.240,0:05:23.389
+So we see that when num turns to zero that’s
+where we want to stop we don’t want to have
+
+0:05:23.389,0:05:29.569
+more iterations basically when num is positive
+we want to repeat these three statements.
+
+0:05:29.569,0:05:34.630
+When it was 375 we want to make our first
+iterations when it was 37 we wanted to make
+
+0:05:34.630,0:05:38.550
+our second iterations and finally when it
+was 3 we wanted to make our last iteration.
+
+0:05:38.550,0:05:42.980
+When it turned zero we wanted to break out
+of this while loop so while num is positive
+
+0:05:42.980,0:05:48.700
+we want to repeat when we break out of this
+loop now we have the number of digits and
+
+0:05:48.700,0:05:53.080
+their sum at our possession so we just need
+to announce it to the user.
+
+0:05:53.080,0:05:58.870
+So let’s cout let’s say something like
+375 has three digits and their sum is 15.
+
+0:05:58.870,0:06:06.160
+So it would be num has count digits digits
+and their sum is now just let’s strain the
+
+0:06:06.160,0:06:12.580
+value of the sum digits variable sum digits
+let’s break the line here return zero and
+
+0:06:12.580,0:06:15.000
+that basically concludes this execution

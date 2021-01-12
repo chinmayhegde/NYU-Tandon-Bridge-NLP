@@ -1,0 +1,9 @@
+1
+00:00:00,539 --> 00:00:04,700
+The target address is given as 400400.
+
+2
+00:00:04,700 --> 00:00:08,590
+Use the inverse of the formula in func2 to
+find DoImm
+

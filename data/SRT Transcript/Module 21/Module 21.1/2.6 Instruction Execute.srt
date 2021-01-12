@@ -1,0 +1,82 @@
+1
+00:00:00,380 --> 00:00:04,500
+Regardless of the instruction, the processor
+goes through the same procedures for fetch
+
+2
+00:00:04,500 --> 00:00:06,190
+and decodes steps.
+
+3
+00:00:06,190 --> 00:00:08,980
+Things begin to change when we get to the
+execute step.
+
+4
+00:00:08,980 --> 00:00:12,300
+This is because each instruction has a different
+role.
+
+5
+00:00:12,300 --> 00:00:16,269
+As a result, we have to look at the execute
+step for each instruction.
+
+6
+00:00:16,269 --> 00:00:21,810
+Let us first look at the load double and store
+double instructions.
+
+7
+00:00:21,810 --> 00:00:27,099
+During the execute step, the CPU calculates
+the memory address that either the load or
+
+8
+00:00:27,099 --> 00:00:29,319
+the store instruction needs.
+
+9
+00:00:29,319 --> 00:00:34,580
+Recall that both load and store use the Rs
+register to hold the base address of the data
+
+10
+00:00:34,580 --> 00:00:40,900
+segment, and use the 16-bit do immediate as
+the offset within the data segment.
+
+11
+00:00:40,900 --> 00:00:46,990
+Also, remember that to calculate the address,
+the CPU needs to first sign extend the do
+
+12
+00:00:46,990 --> 00:00:51,370
+immediate, then add it to the base address
+of the data segment.
+
+13
+00:00:51,370 --> 00:00:56,870
+During the decode step, the CPU had already
+moved the value of Rs to A and had already
+
+14
+00:00:56,870 --> 00:01:01,040
+sign-extended the do immediate and had put
+into I MM.
+
+15
+00:01:01,040 --> 00:01:06,420
+Therefore, during the execute step for load
+double or store double instruction, the CPU
+
+16
+00:01:06,420 --> 00:01:12,200
+just adds A and I MM to get the address of
+the memory access.
+
+17
+00:01:12,200 --> 00:01:15,590
+The result of the addition is stored in ALUOut1.
+

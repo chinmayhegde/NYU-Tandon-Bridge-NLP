@@ -1,0 +1,52 @@
+1
+00:00:01,829 --> 00:00:07,130
+When the desires of the CPU create the instructions
+what they're doing is creating what's called
+
+2
+00:00:07,130 --> 00:00:12,809
+a set of instructions or an instruction set
+and these are the set of instructions that
+
+3
+00:00:12,809 --> 00:00:15,580
+the CPU can perform.
+
+4
+00:00:15,580 --> 00:00:21,180
+And it's usually a very small set just about
+one hundred instructions or so each one represented
+
+5
+00:00:21,180 --> 00:00:27,170
+by a numeric value and when the CPU receives
+a particular instruction it performs that
+
+6
+00:00:27,170 --> 00:00:29,750
+task that's associated with the instruction.
+
+7
+00:00:29,750 --> 00:00:35,540
+Now one instruction might actually have multiple
+codes associated with it if there are different
+
+8
+00:00:35,540 --> 00:00:41,470
+variables that are associated with that instruction
+but fundamentally we only have a very small
+
+9
+00:00:41,470 --> 00:00:45,460
+set of instructions and they do limited operations.
+
+10
+00:00:45,460 --> 00:00:51,280
+And we have to work with the higher level
+languages to bring the higher level languages
+
+11
+00:00:51,280 --> 00:00:55,480
+code down into the machine language code so
+that it can actually run on the CPU.
+

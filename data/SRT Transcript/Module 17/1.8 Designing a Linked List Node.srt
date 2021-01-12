@@ -1,0 +1,188 @@
+1
+00:00:00,729 --> 00:00:03,520
+First thing we have to do and we're really
+designed to classes here.
+
+2
+00:00:03,520 --> 00:00:07,640
+But the first class we're going to design
+is a link list node class and of course can
+
+3
+00:00:07,640 --> 00:00:10,900
+be templated because it's going to have to
+store the data item and we don't know what
+
+4
+00:00:10,900 --> 00:00:12,559
+the data type of the data item is.
+
+5
+00:00:12,559 --> 00:00:15,549
+So immediately we recognize that we have a
+templated class.
+
+6
+00:00:15,549 --> 00:00:17,800
+So the nodes are templated.
+
+7
+00:00:17,800 --> 00:00:22,900
+And what we're going to be storing here is
+the T data item and that is really the data
+
+8
+00:00:22,900 --> 00:00:27,929
+that's going to be stored inside each node,
+so this is the data storage that we've got.
+
+9
+00:00:27,929 --> 00:00:31,439
+The next thing that we've got is a pointer
+to the next node and if you pay attention
+
+10
+00:00:31,439 --> 00:00:36,180
+to that, if you look carefully, you're going
+to see that this is an eldest node T pointer.
+
+11
+00:00:36,180 --> 00:00:42,359
+So you're actually got a pointer to a node
+when we're creating the node.
+
+12
+00:00:42,359 --> 00:00:43,359
+So yeah.
+
+13
+00:00:43,359 --> 00:00:48,760
+This works because we can create a pointer
+to the class object that we don't have yet
+
+14
+00:00:48,760 --> 00:00:53,660
+created, so we've created the LS Node class
+and in the process of creating the LS node
+
+15
+00:00:53,660 --> 00:00:55,910
+class we need an Ellis node pointer.
+
+16
+00:00:55,910 --> 00:00:59,129
+But that does work; C++ was allowed us to
+do that.
+
+17
+00:00:59,129 --> 00:01:02,829
+The next thing that we have is just a simple
+constructor and the constructor I just made
+
+18
+00:01:02,829 --> 00:01:04,390
+to make life easier.
+
+19
+00:01:04,390 --> 00:01:09,800
+It's really it's not necessary, but it's yet
+very useful in certain circumstances that
+
+20
+00:01:09,800 --> 00:01:10,800
+you'll see.
+
+21
+00:01:10,800 --> 00:01:16,750
+For example in the recursive copy operation
+that we do later on, we use the LS node constructor
+
+22
+00:01:16,750 --> 00:01:22,680
+so that we can pass in either a data item
+or we can pass in a pointer to the next item
+
+23
+00:01:22,680 --> 00:01:24,810
+and then of course it constructs those appropriately.
+
+24
+00:01:24,810 --> 00:01:29,320
+So you have to look back to the object oriented
+lesson, if you need assistance on figuring
+
+25
+00:01:29,320 --> 00:01:30,860
+that one out.
+
+26
+00:01:30,860 --> 00:01:34,910
+Then we also have a friend class, which is
+the LS class.
+
+27
+00:01:34,910 --> 00:01:40,170
+The LS class should have access to everything
+inside the Ellis node.
+
+28
+00:01:40,170 --> 00:01:45,840
+So we'll make the whole class a friend of
+this class so that all the functions inside
+
+29
+00:01:45,840 --> 00:01:51,740
+the Ellis class do have access to all the
+private data here inside the illest Node class.
+
+30
+00:01:51,740 --> 00:01:57,050
+So it basically makes this a lot more accessible
+and makes it a little bit easier.
+
+31
+00:01:57,050 --> 00:01:58,130
+It's not necessary.
+
+32
+00:01:58,130 --> 00:02:02,260
+We could do getters and setters but there's
+not really a great reason to do getters and
+
+33
+00:02:02,260 --> 00:02:06,110
+setters especially because the Ellis class
+is going to need to manipulate those next
+
+34
+00:02:06,110 --> 00:02:08,290
+pointers; so it can get very complex.
+
+35
+00:02:08,290 --> 00:02:10,459
+So that's why I do the friend there.
+
+36
+00:02:10,459 --> 00:02:13,209
+There's not much to this class; it's a very
+simple class.
+
+37
+00:02:13,209 --> 00:02:17,939
+And in fact, in years past it was actually
+implemented as a struct with no functions
+
+38
+00:02:17,939 --> 00:02:21,140
+because the only function that we really have
+is the constructor.
+
+39
+00:02:21,140 --> 00:02:28,459
+So here we've got a very simple class to take
+care of the LS node and it does store data
+
+40
+00:02:28,459 --> 00:02:29,739
+item so we're going to have to template it.
+

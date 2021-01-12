@@ -1,0 +1,149 @@
+0:00:00.080,0:00:03.379
+Ok so let’s go ahead and implement this
+program.
+
+0:00:03.379,0:00:11.009
+First we need to ask the user for a character
+so cout please enter a character break the
+
+0:00:11.009,0:00:12.009
+line.
+
+0:00:12.009,0:00:16.200
+Then we should read this character for that
+let’s declare a char variable.
+
+0:00:16.200,0:00:23.570
+Input char and let’s cin into this character
+this variable.
+
+0:00:23.570,0:00:28.880
+Ok now we should basically convert this character
+to its ASCII value.
+
+0:00:28.880,0:00:34.750
+For that let’s have an integer to store
+this ASCII value and declare a variable name
+
+0:00:34.750,0:00:37.070
+ASCII value.
+
+0:00:37.070,0:00:42.840
+Basically I should assign this variable ASCII
+value with a ASCII of the input char.
+
+0:00:42.840,0:00:48.910
+But if we think about it the input char variable
+basically contains the ASCII value in the
+
+0:00:48.910,0:00:55.460
+memory so when the user enter a character
+in the keyboard it was translated by the compiler
+
+0:00:55.460,0:00:59.100
+from its letter representation to its ASCII
+value.
+
+0:00:59.100,0:01:04.970
+So basically we should say take the number
+stored in the character variable and copy
+
+0:01:04.970,0:01:08.110
+it and translate it into an int variable.
+
+0:01:08.110,0:01:13.220
+This way the since it will be inside an int
+variable it would be considered as a number
+
+0:01:13.220,0:01:14.750
+and not as a character.
+
+0:01:14.750,0:01:20.420
+So we should say something like ASCII value
+equals input char.
+
+0:01:20.420,0:01:28.350
+Basically saying take the data from this variable
+which physically is a number and store it
+
+0:01:28.350,0:01:31.670
+in this variable here which is an integer.
+
+0:01:31.670,0:01:38.210
+So we can make this assignment just as is
+this assignment would create an implicit cast
+
+0:01:38.210,0:01:44.950
+that would translate the char into an int
+and this cast is basically an implicit cast
+
+0:01:44.950,0:01:47.280
+because it doesn’t lose any accuracy.
+
+0:01:47.280,0:01:53.340
+In a char there is only 256 different values
+and all of them can be store with exactly
+
+0:01:53.340,0:01:55.770
+the same value in an int variable.
+
+0:01:55.770,0:02:00.150
+But just more formal we can say cast it into
+int.
+
+0:02:00.150,0:02:08.259
+So take this input char cast it to an int
+and this int value this entire int value is
+
+0:02:08.259,0:02:10.560
+stored in the ASCII value character.
+
+0:02:10.560,0:02:17.900
+After we do that what we have left to do is
+announce it to the user so cout the ASCII
+
+0:02:17.900,0:02:26.030
+value of and then let’s have the input char
+printed is and then let’s write the ASCII
+
+0:02:26.030,0:02:27.030
+value.
+
+0:02:27.030,0:02:29.080
+So when we print let’s break the line.
+
+0:02:29.080,0:02:34.560
+When we print character even though inside
+the memory there is a number the compiler
+
+0:02:34.560,0:02:39.250
+knows to print the textual representation
+of this number.
+
+0:02:39.250,0:02:44.380
+The letter that corresponds to this number
+by the ASCII table so this cout would print
+
+0:02:44.380,0:02:49.470
+the letter or the character that the user
+entered and here since ASCII value is int
+
+0:02:49.470,0:02:51.959
+cout would print the integer value.
+
+0:02:51.959,0:02:54.470
+It would print it as a number in this case.
+
+0:02:54.470,0:02:59.680
+So this should be fine let’s try to execute
+it and make sure it all works as we expect
+
+0:02:59.680,0:03:00.680
+it to.
+
+0:03:00.680,0:03:08.400
+So ok please enter a character let’s put
+upper case T and then it says the ASCII value
+
+0:03:08.400,0:03:11.299
+of upper case T is 84 just as we expected.

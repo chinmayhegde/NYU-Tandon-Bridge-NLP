@@ -1,0 +1,267 @@
+1
+00:00:00,560 --> 00:00:08,240
+Let's try to make a table that would help
+us estimate how many iterations this algorithm
+
+2
+00:00:08,240 --> 00:00:09,240
+does.
+
+3
+00:00:09,240 --> 00:00:17,099
+So let's try to find the relationship between
+the iteration number and the size of the searching
+
+4
+00:00:17,099 --> 00:00:18,099
+range.
+
+5
+00:00:18,099 --> 00:00:19,160
+We have each time, right.
+
+6
+00:00:19,160 --> 00:00:23,570
+We are basically cutting half of the range
+each time.
+
+7
+00:00:23,570 --> 00:00:29,320
+So, let's try to find the relationship between
+these two sizes.
+
+8
+00:00:29,320 --> 00:00:37,230
+So first iteration, the size of the searching
+range is the original size basically N right.
+
+9
+00:00:37,230 --> 00:00:44,710
+Second iteration, we cut the searching range
+by two, by half.
+
+10
+00:00:44,710 --> 00:00:49,830
+So, that gives us, leaves us a searching range
+of size N by two.
+
+11
+00:00:49,830 --> 00:00:57,400
+Next iteration the range is again cut by half,
+so we'll have a range of N by four and next
+
+12
+00:00:57,400 --> 00:01:03,190
+iteration the range would be N by eight and
+so on.
+
+13
+00:01:03,190 --> 00:01:09,780
+In a general iteration number for example
+K, let's try and figure out or formulate the
+
+14
+00:01:09,780 --> 00:01:12,990
+size of this searching range.
+
+15
+00:01:12,990 --> 00:01:21,200
+So if we take a closer look at the first four
+numbers will see that N by eight is also can
+
+16
+00:01:21,200 --> 00:01:29,939
+be written as N by two to the power of three
+and N by four can be written as N over two
+
+17
+00:01:29,939 --> 00:01:35,710
+square and N by two can be written as N over
+two the power of one.
+
+18
+00:01:35,710 --> 00:01:44,770
+They're all N over two to some power, even
+the first N can be thought as N over one or
+
+19
+00:01:44,770 --> 00:01:48,299
+in other words N over two the power of zero,
+which is one.
+
+20
+00:01:48,299 --> 00:01:54,909
+And we can see that each iteration we have
+N over two to the power of one less than the
+
+21
+00:01:54,909 --> 00:02:00,670
+iteration number, right; two to the three
+is two to the power of four minus one.
+
+22
+00:02:00,670 --> 00:02:08,209
+And two to the two is to to the power of three
+minus one or in general form we can say that
+
+23
+00:02:08,209 --> 00:02:15,650
+in a ration number K, the size of the searching
+range is N over two to the power of K minus
+
+24
+00:02:15,650 --> 00:02:17,099
+one, right.
+
+25
+00:02:17,099 --> 00:02:21,080
+It matches the pattern we've found before.
+
+26
+00:02:21,080 --> 00:02:26,349
+So the biggest question is: what's the number
+of the last iteration, right?
+
+27
+00:02:26,349 --> 00:02:33,530
+That's basically would tell us the worst case
+scenario right.
+
+28
+00:02:33,530 --> 00:02:38,519
+Obviously we can stop at the first iteration
+and find the value we're searching for, but
+
+29
+00:02:38,519 --> 00:02:44,470
+the worst case is we'll keep on reducing the
+sorting range more and more and more till
+
+30
+00:02:44,470 --> 00:02:49,310
+we have only one element in that certain range
+and then low and the high would cross over
+
+31
+00:02:49,310 --> 00:02:50,310
+one another.
+
+32
+00:02:50,310 --> 00:02:55,690
+So we should figure out what the iteration
+number where our searching range basically
+
+33
+00:02:55,690 --> 00:02:56,989
+equals one.
+
+34
+00:02:56,989 --> 00:03:02,850
+This question mark: what's the number of this
+iteration where the searching range is one?
+
+35
+00:03:02,850 --> 00:03:07,719
+If we figure that out that would be basically
+our running time; that would be the number
+
+36
+00:03:07,719 --> 00:03:08,719
+of iterations.
+
+37
+00:03:08,719 --> 00:03:16,310
+So let's do the math; let's ask ourselves
+for what value of K, N over two to the K minus
+
+38
+00:03:16,310 --> 00:03:19,739
+one equals one right.
+
+39
+00:03:19,739 --> 00:03:26,140
+If the general form of the size of the searching
+range is N over two to the power of K minus
+
+40
+00:03:26,140 --> 00:03:34,319
+one for which K this size equals the size
+of the last searching range, basically one.
+
+41
+00:03:34,319 --> 00:03:41,909
+So let's do some math tricks here; let’s
+multiply by two to the K minus one that says
+
+42
+00:03:41,909 --> 00:03:45,310
+that N equals two to the power of K minus
+one.
+
+43
+00:03:45,310 --> 00:03:51,019
+Let's apply log base to both sides of the
+equation, basically saying that Log two of
+
+44
+00:03:51,019 --> 00:03:54,489
+N equals log two of two to the power of K
+minus one.
+
+45
+00:03:54,489 --> 00:04:03,959
+I hope you are familiar with the log rules
+here; where you can say that log two of two
+
+46
+00:04:03,959 --> 00:04:09,930
+to the power of K minus one basically equals
+to K. minus one times log two of two.
+
+47
+00:04:09,930 --> 00:04:16,100
+So that means that look two of N. is then
+equal to K. minus one times Log two of two.
+
+48
+00:04:16,100 --> 00:04:23,660
+Again, Log two of two is one so that means
+that Log two of N basically equals to K minus
+
+49
+00:04:23,660 --> 00:04:24,660
+one.
+
+50
+00:04:24,660 --> 00:04:30,800
+Let's add one to both ends; that means that
+K, which is what we're looking for, equals
+
+51
+00:04:30,800 --> 00:04:42,080
+to one plus Log two of N. In order of growth
+means that is K. is theta of Log two of N,
+
+52
+00:04:42,080 --> 00:04:49,770
+saying that the number of iterations is theta
+of log two of N. And that concludes the worst
+
+53
+00:04:49,770 --> 00:04:53,630
+case running time of the sorted search here.
+
+54
+00:04:53,630 --> 00:04:59,389
+A lot of people also name it ‘Binary Search;’
+the running time of this binary search algorithm
+
+55
+00:04:59,389 --> 00:05:07,680
+is T of N equals theta of Log two of N. The
+next video we’ll talk about how great improvement
+
+56
+00:05:07,680 --> 00:05:11,139
+log two of N versus a linear algorithm is.
+

@@ -1,0 +1,210 @@
+1
+00:00:00,599 --> 00:00:07,359
+If we have one child, then what we want to
+do is promote that one child's data value
+
+2
+00:00:07,359 --> 00:00:09,480
+and delete the child node.
+
+3
+00:00:09,480 --> 00:00:14,230
+So, this assumes that we've already done the
+check that we did in the previous slide to
+
+4
+00:00:14,230 --> 00:00:16,040
+see if both children don't exist.
+
+5
+00:00:16,040 --> 00:00:20,530
+If we don't have any children then we're going
+to take care of it with the previous slide’s
+
+6
+00:00:20,530 --> 00:00:26,750
+code but now we recognize that there is one
+child in either; we have a left child or we
+
+7
+00:00:26,750 --> 00:00:28,500
+have a right child.
+
+8
+00:00:28,500 --> 00:00:33,219
+And what we're going to do is we're going
+to take a look and say if temps left is equal
+
+9
+00:00:33,219 --> 00:00:39,329
+to a null pointer, so we don't have a left
+child that means by default we must have a
+
+10
+00:00:39,329 --> 00:00:40,660
+right child.
+
+11
+00:00:40,660 --> 00:00:43,879
+And the reason for that is that if we didn't
+we would have gotten caught in the if statement
+
+12
+00:00:43,879 --> 00:00:45,890
+up above from the previous slide.
+
+13
+00:00:45,890 --> 00:00:50,559
+So, we're assuming now that we have this right
+child and we're going to want to do is we're
+
+14
+00:00:50,559 --> 00:00:52,670
+going to want to get it to delete pointer.
+
+15
+00:00:52,670 --> 00:00:57,190
+This is just another pointer to say that this
+is the node that we're going to delete.
+
+16
+00:00:57,190 --> 00:01:04,989
+And what we can do is promote the data value
+up to the to the parent so now we copy to
+
+17
+00:01:04,989 --> 00:01:10,369
+delete data up to temps’ data, so we’re
+copying the value from that right node up
+
+18
+00:01:10,369 --> 00:01:12,149
+into the parent node.
+
+19
+00:01:12,149 --> 00:01:18,590
+And then we'll copy the pointers up into the
+parent node, and then what we can do is make
+
+20
+00:01:18,590 --> 00:01:25,180
+the pointer from our parent point to the new
+node that we're going to delete.
+
+21
+00:01:25,180 --> 00:01:29,299
+And then we can delete the two delete values,
+so in other words we're going to copy the
+
+22
+00:01:29,299 --> 00:01:35,540
+value up and then we're going to delete the
+child node that does exist.
+
+23
+00:01:35,540 --> 00:01:40,179
+So that makes it a little bit easier that
+we don't necessarily have to update the parent
+
+24
+00:01:40,179 --> 00:01:46,700
+pointers; all we have to do is make the data
+values bring those pointers up to the to the
+
+25
+00:01:46,700 --> 00:01:49,200
+object that we're working in right now.
+
+26
+00:01:49,200 --> 00:01:55,039
+So the pointer for temp is actually going
+to remain exactly where it is; the node temp
+
+27
+00:01:55,039 --> 00:01:57,479
+is remain exactly where it is.
+
+28
+00:01:57,479 --> 00:02:02,020
+And what we're going to do is move all the
+pointers and the data values from the child
+
+29
+00:02:02,020 --> 00:02:04,560
+nodes up to the new temp.
+
+30
+00:02:04,560 --> 00:02:11,950
+We do have to take into account if the temps
+left pointer exists, that its parent now is
+
+31
+00:02:11,950 --> 00:02:13,190
+going to change.
+
+32
+00:02:13,190 --> 00:02:20,000
+So, if we have a node on the left of the to
+delete, we're going to have to change that
+
+33
+00:02:20,000 --> 00:02:27,410
+to deletes parent pointer to deletes left
+parent pointer to the appropriate new value.
+
+34
+00:02:27,410 --> 00:02:33,300
+So, keeping in mind that we're not actually
+going to delete the node that we are trying
+
+35
+00:02:33,300 --> 00:02:39,970
+to remove, we're actually just going to promote
+the value and delete the node that's to the
+
+36
+00:02:39,970 --> 00:02:43,080
+right, and this case is to the right.
+
+37
+00:02:43,080 --> 00:02:47,170
+We're going to delete the node to the right
+and promoted it’s data value.
+
+38
+00:02:47,170 --> 00:02:50,510
+If we're deciding that we're going to go to
+the left then it's the exact same thing just
+
+39
+00:02:50,510 --> 00:02:54,400
+dealing with the left pointers instead of
+the right pointers and keeping all that in
+
+40
+00:02:54,400 --> 00:02:55,400
+mind.
+
+41
+00:02:55,400 --> 00:03:01,560
+So it doesn't really require a lot of different
+code it's really just flipping of the left
+
+42
+00:03:01,560 --> 00:03:03,540
+versus the right.
+
+43
+00:03:03,540 --> 00:03:06,840
+So it's just almost a copy of the same thing.
+
+44
+00:03:06,840 --> 00:03:11,360
+So that's if we have one child as opposed
+to no children.
+
+45
+00:03:11,360 --> 00:03:15,230
+The problem with two children is well, bigger
+and we're going to see that in just a minute.
+

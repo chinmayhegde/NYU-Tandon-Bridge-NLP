@@ -1,0 +1,119 @@
+1
+00:00:00,630 --> 00:00:04,710
+The greatest example of this is the Unix FORK
+function; it’s been around for a while but
+
+2
+00:00:04,710 --> 00:00:07,410
+it really does work quite well.
+
+3
+00:00:07,410 --> 00:00:14,030
+The Unix FORK function when you call it, it
+actually returns two values.
+
+4
+00:00:14,030 --> 00:00:19,160
+The reason or returns two different values
+is because it's going to create an exact copy
+
+5
+00:00:19,160 --> 00:00:22,230
+of the entire current process.
+
+6
+00:00:22,230 --> 00:00:26,130
+Now this is useful if, for example I'm just
+using this as an example.
+
+7
+00:00:26,130 --> 00:00:30,319
+It's not actually how it works, but if for
+example in Chrome you click the button to
+
+8
+00:00:30,319 --> 00:00:37,230
+create a new tab, we wanted different version
+of, we want to a different process for example,
+
+9
+00:00:37,230 --> 00:00:39,340
+but it might be the exact same code.
+
+10
+00:00:39,340 --> 00:00:46,790
+You might have not just a brand new copy but
+a duplicate an exact duplicate of the existing
+
+11
+00:00:46,790 --> 00:00:48,100
+page.
+
+12
+00:00:48,100 --> 00:00:52,060
+And so what we can do is call the Unix FORK
+function.
+
+13
+00:00:52,060 --> 00:00:58,790
+FORK will return I believe it's a zero if
+the child, if the process is the child process
+
+14
+00:00:58,790 --> 00:01:03,900
+what's known as the child process which is
+the new process, or it return the process
+
+15
+00:01:03,900 --> 00:01:07,950
+identifier of the child process if this is
+the parent process.
+
+16
+00:01:07,950 --> 00:01:14,060
+So, we're creating two processes it's sort
+of like, the creation of a new amoeba out
+
+17
+00:01:14,060 --> 00:01:17,060
+of an existing amoeba, right.
+
+18
+00:01:17,060 --> 00:01:21,360
+That's an exact copy of the existing process;
+but how does it do this?
+
+19
+00:01:21,360 --> 00:01:28,569
+Well, with the operating system will do is
+create a new PCB a new process control block,
+
+20
+00:01:28,569 --> 00:01:33,659
+it creates all the new page tables, but the
+page tables are an exact copy of the original
+
+21
+00:01:33,659 --> 00:01:40,310
+page table and everything in both page tables
+is marked as COW, Copy-On-Write. if any of
+
+22
+00:01:40,310 --> 00:01:46,609
+the process in either process changes the
+page then that page alone is duplicated, but
+
+23
+00:01:46,609 --> 00:01:52,789
+it saves the operating system having to actually
+go into main memory and duplicate all of main
+
+24
+00:01:52,789 --> 00:01:55,869
+memory for this process into a new process.
+
+25
+00:01:55,869 --> 00:01:59,520
+All it does is duplicate the page when it
+changes.
+

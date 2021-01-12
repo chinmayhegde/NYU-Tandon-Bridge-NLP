@@ -1,0 +1,19 @@
+1
+00:00:00,450 --> 00:00:05,669
+To maximize the throughput of the pipelined
+CPU, it must always have a new instruction
+
+2
+00:00:05,669 --> 00:00:07,019
+in the fetch stage.
+
+3
+00:00:07,019 --> 00:00:11,809
+The only way that occurs is if the instructions
+in the other stages are moving along.
+
+4
+00:00:11,809 --> 00:00:15,970
+This way, there is an instruction at each
+stage of the pipeline at all times.
+

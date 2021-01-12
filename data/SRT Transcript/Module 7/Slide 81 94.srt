@@ -1,0 +1,210 @@
+0:00:00.620,0:00:08.050
+Ok so we suggested three different solutions
+to the primality testing problem.
+
+0:00:08.050,0:00:11.780
+First going on the over the entire range from
+one through num.
+
+0:00:11.780,0:00:16.800
+Second going over the half of the range from
+one through num by two.
+
+0:00:16.800,0:00:23.390
+And the third going first from one through
+square root of num that portion of the range.
+
+0:00:23.390,0:00:28.310
+We’ve shown the correctness of all three
+versions.
+
+0:00:28.310,0:00:34.719
+First one is obvious but the other two were
+needed a bit of an argument in order to be
+
+0:00:34.719,0:00:38.109
+certain that they all would work for all values
+of num.
+
+0:00:38.109,0:00:48.909
+Let’s try to estimate the resources these
+versions require which is better than which.
+
+0:00:48.909,0:00:56.770
+And let’s concentrate on the running time
+of these three versions these three implementations.
+
+0:00:56.770,0:01:02.479
+So let’s try and figure out what is the
+running time of the first version the second
+
+0:01:02.479,0:01:04.059
+version and the third version.
+
+0:01:04.059,0:01:06.500
+Let’s name them t1 t2 and t3.
+
+0:01:06.500,0:01:12.610
+The time for version one the time for version
+two and the time for version three.
+
+0:01:12.610,0:01:14.460
+So what can we say?
+
+0:01:14.460,0:01:18.220
+Is t1 equals 354.
+
+0:01:18.220,0:01:20.420
+Is t2 equals 1270?
+
+0:01:20.420,0:01:29.780
+Actually I don’t even think we can have
+a number for t1 and number for t2 and so on.
+
+0:01:29.780,0:01:36.620
+Let’s make a few observations of what we
+need to do when we are analyzing the runtime
+
+0:01:36.620,0:01:37.960
+of an algorithm.
+
+0:01:37.960,0:01:43.660
+So the first observation I want to note here
+is that the running time depends on the size
+
+0:01:43.660,0:01:44.660
+of the input.
+
+0:01:44.660,0:01:50.110
+So we can’t say t1 equals 250 because it
+depends.
+
+0:01:50.110,0:01:55.800
+If the input is 100 maybe it would take one
+amount of time.
+
+0:01:55.800,0:02:00.310
+If the input is one million maybe the running
+time would be different.
+
+0:02:00.310,0:02:04.130
+So the running time depends on the size of
+the input.
+
+0:02:04.130,0:02:11.180
+In order to make our analysis of runtime in
+general we would need to parameterized the
+
+0:02:11.180,0:02:13.890
+running time by the size of the input.
+
+0:02:13.890,0:02:20.760
+So for example in our case of the primality
+testing problem the size of the input we would
+
+0:02:20.760,0:02:24.920
+typically name it N. The size of the input
+is the input itself.
+
+0:02:24.920,0:02:28.579
+So in this case N equals num.
+
+0:02:28.579,0:02:35.270
+So t1 t2 and t3 are not just constants they
+are functions of N.
+
+0:02:35.270,0:02:41.950
+So when we want to analyze the running time
+of these three algorithm we would analyze
+
+0:02:41.950,0:02:50.790
+t1 of N how many what’s the time given a
+value of N. T2 of N and t3 of N.
+
+0:02:50.790,0:02:54.769
+Now when we want to let’s make another observation
+here.
+
+0:02:54.769,0:03:00.659
+When we want to analyze the run time of an
+algorithm obviously it is a function of N.
+
+0:03:00.659,0:03:08.779
+It is parameterized by N. Kind of depends
+what we do in the algorithm.
+
+0:03:08.779,0:03:14.969
+So if we add numbers that’s faster than
+I don’t know dividing numbers.
+
+0:03:14.969,0:03:23.349
+If we work with integers that’s faster than
+working with floating points and doubles.
+
+0:03:23.349,0:03:28.049
+And it is kind of a pain to take all of that
+things into consideration.
+
+0:03:28.049,0:03:36.829
+We want to create a model that would give
+us an estimation and more quality kind of
+
+0:03:36.829,0:03:37.829
+an estimation.
+
+0:03:37.829,0:03:43.889
+For that since the running time depends on
+the operators we use and the types of data
+
+0:03:43.889,0:03:45.859
+we are applying them on.
+
+0:03:45.859,0:03:53.189
+In order to avoid all of that what we do is
+we ignore the machine dependent constants
+
+0:03:53.189,0:03:58.040
+and basically count each primitive operation
+as one.
+
+0:03:58.040,0:04:01.510
+So plus is counted as one and division is
+counted as one.
+
+0:04:01.510,0:04:05.579
+We don’t care if we are adding integers
+or floating points.
+
+0:04:05.579,0:04:11.030
+Each primitive operator would be counted as
+one.
+
+0:04:11.030,0:04:18.949
+Informally if we take these two observations
+together what we want to compare the number
+
+0:04:18.949,0:04:23.740
+we want to give some kind of running time
+analysis.
+
+0:04:23.740,0:04:30.120
+We try to compare the number of primitive
+operations the process executes as a function
+
+0:04:30.120,0:04:32.000
+as its input size.
+
+0:04:32.000,0:04:39.560
+Let’s try to take that and use that criteria
+in order to analyze the running time of the
+
+0:04:39.560,0:04:44.620
+first second and third versions of our primality
+testing algorithms.
+
+0:04:44.620,0:04:50.830
+So let’s try to compare the number of primitive
+operations each one of them does as a function
+
+0:04:50.830,0:04:51.379
+of the input size.

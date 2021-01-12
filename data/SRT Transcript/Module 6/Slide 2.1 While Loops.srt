@@ -1,0 +1,104 @@
+0:00:00.530,0:00:04.760
+Ok so the syntax of the while statement goes
+like this.
+
+0:00:04.760,0:00:12.929
+So you have a few statements then comes the
+while keyword and then enclosed in parentheses
+
+0:00:12.929,0:00:16.000
+you have a condition.
+
+0:00:16.000,0:00:25.910
+And as a compound statement you can have a
+body of statements that are tabbed one tab
+
+0:00:25.910,0:00:27.130
+to the right.
+
+0:00:27.130,0:00:33.899
+After the while you have your program just
+continues at the original alignment.
+
+0:00:33.899,0:00:38.170
+But that’s basically the syntax of a while
+expression.
+
+0:00:38.170,0:00:43.680
+Let’s talk about the semantics how a while
+expression is basically a while statement
+
+0:00:43.680,0:00:46.820
+is basically executed.
+
+0:00:46.820,0:00:51.199
+So the program is executed up to the while
+statement.
+
+0:00:51.199,0:00:57.629
+When it reaches the while statement the first
+thing that happens is that condition is evaluated
+
+0:00:57.629,0:01:01.280
+and then actually there are two cases.
+
+0:01:01.280,0:01:03.070
+Either it is true or false.
+
+0:01:03.070,0:01:10.110
+If the condition is true the body is executed
+and the condition is reevaluated.
+
+0:01:10.110,0:01:13.060
+Again two options either true or false.
+
+0:01:13.060,0:01:18.390
+If it is true body is executed condition evaluated
+once more.
+
+0:01:18.390,0:01:20.890
+True body condition.
+
+0:01:20.890,0:01:23.259
+True body condition evaluated.
+
+0:01:23.259,0:01:30.719
+When the condition turns false the program
+just continues in its original path.
+
+0:01:30.719,0:01:36.729
+So basically while the condition is still
+true the body is executed over and over and
+
+0:01:36.729,0:01:37.729
+over.
+
+0:01:37.729,0:01:38.890
+That’s why it is called the while statement.
+
+0:01:38.890,0:01:43.869
+While the condition is true we keep repeating
+the execution of the body over and over.
+
+0:01:43.869,0:01:49.899
+When the condition turns false we break out
+and continue with the flow of our program.
+
+0:01:49.899,0:01:54.780
+So that’s basically the semantics of a while
+statement.
+
+0:01:54.780,0:01:59.280
+This is syntactically the extended version
+of a while.
+
+0:01:59.280,0:02:06.310
+The simpler version just as we had with the
+Ifs doesn’t require a compound statement.
+
+0:02:06.310,0:02:13.099
+You can have a single statement body then
+you don’t need the curly braces to enclose
+
+0:02:13.099,0:02:14.610
+this statement in it.

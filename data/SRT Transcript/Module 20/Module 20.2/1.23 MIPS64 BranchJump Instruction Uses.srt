@@ -1,0 +1,47 @@
+1
+00:00:00,390 --> 00:00:04,899
+We still need to determine what is the value
+of the do immediate parameter in our branch
+
+2
+00:00:04,899 --> 00:00:06,229
+if not equal instruction.
+
+3
+00:00:06,229 --> 00:00:12,750
+For that, we use the reverse of the func2
+formula to get Do Immediate sign extended.
+
+4
+00:00:12,750 --> 00:00:17,789
+We use the same approach as before the get
+the inverse of func2 and use the inverse to
+
+5
+00:00:17,789 --> 00:00:20,039
+get the value Do Immediate.
+
+6
+00:00:20,039 --> 00:00:23,500
+We observe that this Do Immediate is a negative
+value.
+
+7
+00:00:23,500 --> 00:00:28,130
+Looking back at the complete code, we can
+see why Do Immediate is negative.
+
+8
+00:00:28,130 --> 00:00:32,650
+This is because if the branch is taken, we
+go back up in the code.
+
+9
+00:00:32,650 --> 00:00:37,500
+When the value is positive, as it was in the
+previous example, the branch was taken; we
+
+10
+00:00:37,500 --> 00:00:38,570
+went down in the code.
+

@@ -1,0 +1,135 @@
+0:00:00.550,0:00:07.160
+Let’s go ahead and implement the main. Now
+that we’ve declared a function. Again in
+
+0:00:07.160,0:00:16.270
+terms of documentation I am just describing
+what this program is supposed to do what input
+
+0:00:16.270,0:00:21.039
+and output what kind of interaction this program
+would have with the user. So I am saying this
+
+0:00:21.039,0:00:27.149
+program solved the quadratic equation input
+from user would be three real numbers representing
+
+0:00:27.149,0:00:31.909
+coefficients of a quadratic equation. And
+the output to the user would be the solution
+
+0:00:31.909,0:00:38.789
+to the equation if there are any or an appropriate
+message. The implementation of main is quite
+
+0:00:38.789,0:00:44.780
+straight forward we’ll define A B and C
+as local variables. We’ll ask the user to
+
+0:00:44.780,0:00:52.010
+enter the coefficients of the quadratic equation
+read it into these A B and C. And then we
+
+0:00:52.010,0:01:02.199
+should call the quadratic function and figure
+out what type of equation we have here what
+
+0:01:02.199,0:01:11.840
+kind of solutions we have and this kind of
+thing here. In this case so yeah we should
+
+0:01:11.840,0:01:19.270
+start with announcing that the equation A
+x squared plus B x plus C equals zero has
+
+0:01:19.270,0:01:28.220
+and then in this case I think the control
+flow that would basically branch between or
+
+0:01:28.220,0:01:35.820
+choose between the different types of solutions
+is best implemented using a switch statement.
+
+0:01:35.820,0:01:46.080
+So we’ll do switch and the value we are
+switching over is basically whatever results
+
+0:01:46.080,0:01:51.790
+with the call of quadratic. Basically the
+return value of quadratic. We said if you
+
+0:01:51.790,0:01:58.030
+recall the return value that quadratic returns
+is one of the constants up there. The type
+
+0:01:58.030,0:02:04.480
+of the solution right. So when we are calling
+quadratic with A B C x one and x two which
+
+0:02:04.480,0:02:13.780
+are by the way two local variables that we
+defined here to store the optional solutions.
+
+0:02:13.780,0:02:19.590
+But when we are switching over the call of
+quadratic basically the value of this call
+
+0:02:19.590,0:02:25.950
+would be the return value. And that is the
+type of solutions. So we’ll have a case
+
+0:02:25.950,0:02:31.950
+for each type of solution. So we’ll have
+case two real solutions case one real solution
+
+0:02:31.950,0:02:37.940
+case no real solution case no solutions at
+all and case no reals. And we will also have
+
+0:02:37.940,0:02:42.400
+like a default clause saying that there is
+an error because we are expecting to get one
+
+0:02:42.400,0:02:49.620
+of them. So I hope you are convinced now that
+a switch makes it very readable. So we are
+
+0:02:49.620,0:02:56.980
+switching over the call of quadratic and the
+different cases are basically the different
+
+0:02:56.980,0:03:02.790
+kinds of solutions. Again the use of constants
+here makes our code very readable. We can
+
+0:03:02.790,0:03:08.760
+basically see switch quadratic and case two
+real solution one real solution the different
+
+0:03:08.760,0:03:14.320
+cases. And let’s see how we behave in each
+one of these cases. So in case of two real
+
+0:03:14.320,0:03:21.020
+solutions we just print the solutions are
+x one space x two right we said that in case
+
+0:03:21.020,0:03:26.680
+there are solutions we want them updated in
+the output parameters. In this case x one
+
+0:03:26.680,0:03:35.380
+and x two would contain these values. One
+real solution let’s print one solution and
+
+0:03:35.380,0:03:42.819
+then x one by the way how do we know that
+the solution is inside the x one? That’s
+
+0:03:42.819,0:03:49.430
+a thing we should maybe say a few words about
+it. No real solution by the way we just print
+
+0:03:49.430,0:03:54.930
+no real solution or no solution at all or
+that all the real numbers are solutions.

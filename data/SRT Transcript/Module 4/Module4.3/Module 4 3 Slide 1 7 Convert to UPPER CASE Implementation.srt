@@ -1,0 +1,133 @@
+0:00:00.220,0:00:02.050
+Ok so let’s implement this program.
+
+0:00:02.050,0:00:09.360
+First let’s ask the user for the lower case
+letter so cout please enter a lower case letter.
+
+0:00:09.360,0:00:11.150
+Let’s break the line.
+
+0:00:11.150,0:00:18.720
+Let’s read it into a variable let’s first
+declare it lower case letter and let’s read
+
+0:00:18.720,0:00:23.500
+it into this variable so cin into this variable
+here.
+
+0:00:23.500,0:00:27.599
+And now we should convert lower case letter
+to upper case letter.
+
+0:00:27.599,0:00:31.489
+So let’s have an upper case upper case letter.
+
+0:00:31.489,0:00:36.910
+Eventually the upper case letter variable
+would store the equivalent of the lower case
+
+0:00:36.910,0:00:37.920
+letter value.
+
+0:00:37.920,0:00:43.400
+But we said that we first have to calculate
+the offset of the lower case from lower case
+
+0:00:43.400,0:00:51.250
+A. So let’s have an integer variable named
+offset that would store this offset and offset
+
+0:00:51.250,0:01:00.490
+would then be whatever the value of lower
+case letter is from lower case A. So I have
+
+0:01:00.490,0:01:06.760
+lower case letter minutes lower case A. Now
+this is a character and this is a character
+
+0:01:06.760,0:01:11.420
+and I want the integer value of this expression
+here.
+
+0:01:11.420,0:01:18.090
+So subtract this two ASCII values the ASCII
+of let’s say lower case T and ASCII of lower
+
+0:01:18.090,0:01:21.670
+case A and then you would have your offset
+value.
+
+0:01:21.670,0:01:29.800
+So for example in lower case T the ASCII value
+is 116 and the ASCII value of A is 97 so you
+
+0:01:29.800,0:01:35.830
+subtract 116 from 97 and that value would
+be our offset.
+
+0:01:35.830,0:01:42.440
+Now we need to add this offset to upper case
+A and that would be our upper case letter.
+
+0:01:42.440,0:01:49.119
+So upper case letter would then just be upper
+case A plus this offset.
+
+0:01:49.119,0:01:56.409
+That would add whatever the offset was to
+65 and would get us to 84 to upper case T.
+
+0:01:56.409,0:02:02.420
+Again we don’t really have to do all the
+casting but let’s cast to char this expression
+
+0:02:02.420,0:02:04.520
+here which is of type int.
+
+0:02:04.520,0:02:11.009
+Once again when we add a char to an int it
+would cast the char to an int first and it
+
+0:02:11.009,0:02:12.430
+would add it as two integers.
+
+0:02:12.430,0:02:17.099
+So let’s cast it back into char and that
+would be our upper case letter.
+
+0:02:17.099,0:02:23.980
+Let’s now print the output message for some
+reason I spelled it uppet case letter so let’s
+
+0:02:23.980,0:02:27.120
+change both of the declaration and where we
+used it.
+
+0:02:27.120,0:02:35.350
+Now that it is consisted let’s cout upper
+case of and now we need to have the value
+
+0:02:35.350,0:02:38.819
+of the lower case letter since it is a char
+it would print it as a letter.
+
+0:02:38.819,0:02:45.400
+And then is and then the uppercase letter
+and break the line.
+
+0:02:45.400,0:02:49.580
+I can endl or back slash n that would both
+work.
+
+0:02:49.580,0:02:54.060
+Let’s try to execute it see if we don’t
+have any silly mistakes here.
+
+0:02:54.060,0:02:59.410
+Once again please enter the lower case letter
+we have lower case T and then it says that
+
+0:02:59.410,0:03:02.980
+the upper case of lower case T is upper case
+T. Very well then

@@ -1,0 +1,172 @@
+0:00:00.550,0:00:04.080
+So, let's take a look at some IF statement.
+
+0:00:04.080,0:00:09.641
+So, actually there are few kinds of IF statements,
+there would be: a one-way if statement, a
+
+0:00:09.641,0:00:13.740
+two-way if statement, and also a multi-way
+IF statement.
+
+0:00:13.740,0:00:16.690
+Let's start with a one-way if statement.
+
+0:00:16.690,0:00:23.119
+For each kind of control flow I'll show you
+two things: first, I'll talk about the syntax,
+
+0:00:23.119,0:00:31.159
+how we can create a legal kind of statement
+in C++ of that form, and then we'll talk about
+
+0:00:31.159,0:00:38.150
+the semantics, what does it mean or how the
+compiler or the C.P.U. would execute this
+
+0:00:38.150,0:00:40.980
+kind of statement.
+
+0:00:40.980,0:00:45.429
+Let's start with the syntax: the syntactic
+rules of creating such statements.
+
+0:00:45.429,0:00:53.140
+So, we have the program that goes up to the
+IF keyword.
+
+0:00:53.140,0:01:02.710
+Then, we have the if keyword followed by a
+condition and closed in parenthesis.
+
+0:01:02.710,0:01:09.710
+Now, it's very important that we put the condition
+inside parenthesis, the compiler won't allow
+
+0:01:09.710,0:01:11.110
+us to write it differently.
+
+0:01:11.110,0:01:14.270
+It is a very strict rule here.
+
+0:01:14.270,0:01:20.890
+The condition should be a Boolean expression,
+basically evaluating to True or false.
+
+0:01:20.890,0:01:29.280
+After we have the IF and the condition, next
+line comes the body of the IF statement.
+
+0:01:29.280,0:01:34.320
+It is taken one tab to the right.
+
+0:01:34.320,0:01:37.620
+And after that the program just continues.
+
+0:01:37.620,0:01:44.280
+So we have our program before the IF statement
+then the word if followed by a condition in
+
+0:01:44.280,0:01:56.230
+parenthesis and then pushed one tab to the
+right we have the body followed by the remaining
+
+0:01:56.230,0:02:00.340
+code of our program.
+
+0:02:00.340,0:02:06.410
+One thing syntactically I want us to note
+is each expression we know in C++ ends with
+
+0:02:06.410,0:02:07.410
+a semi-colon.
+
+0:02:07.410,0:02:12.350
+So the expressions before the IF statement
+obviously end with a semi-colon, the expressions
+
+0:02:12.350,0:02:15.890
+after the IF statement obviously end with
+the semi-colon.
+
+0:02:15.890,0:02:21.400
+Also the IF body, the statement inside the
+IF, also ends with a semi-colon.
+
+0:02:21.400,0:02:28.620
+But the first line where we have if and the
+condition in that line we don't have a semi-colon
+
+0:02:28.620,0:02:32.380
+and it's very important that we don't have
+this semi-colon over there.
+
+0:02:32.380,0:02:39.630
+So that's basically the syntax rules how we
+can create a legal one-way IF statement.
+
+0:02:39.630,0:02:44.790
+Let's talk about what happens when we write
+this kind of a statement: how the compiler
+
+0:02:44.790,0:02:49.740
+is going to understand and interpret this
+kind of a statement.
+
+0:02:49.740,0:02:53.740
+So the program would be executed up to the
+IF statement.
+
+0:02:53.740,0:02:58.880
+When we reach the IF statement, the first
+thing that happens is the condition would
+
+0:02:58.880,0:03:00.170
+be evaluated.
+
+0:03:00.170,0:03:07.400
+Then since the condition is a Boolean expression,
+there are two cases: in case one case is where
+
+0:03:07.400,0:03:12.030
+the condition evaluates to true, the other
+is when the condition evaluates to false.
+
+0:03:12.030,0:03:14.940
+Let's see what happens in each of these cases.
+
+0:03:14.940,0:03:22.650
+So, in the case of the condition is evaluated
+to true, the body would be executed and then
+
+0:03:22.650,0:03:24.360
+the program just continues.
+
+0:03:24.360,0:03:28.570
+In case the condition evaluates to false,
+the body would not be executed and the program
+
+0:03:28.570,0:03:31.910
+just continues with its original execution.
+
+0:03:31.910,0:03:40.250
+So, basically the body of the IF here is conditioned
+to be executed by the value of the Boolean
+
+0:03:40.250,0:03:43.180
+expression that comes in these parenthesis.
+
+0:03:43.180,0:03:48.599
+So, if the condition is true the body is executed,
+if the condition is not true the body is not
+
+0:03:48.599,0:03:49.599
+executed.
+
+0:03:49.599,0:03:55.480
+So, it is not a sequential flow were each
+of the expressions are anyway evaluated, the
+
+0:03:55.480,0:04:02.000
+body of the IF is conditioned to be evaluated
+depending on the value of the Boolean expression.

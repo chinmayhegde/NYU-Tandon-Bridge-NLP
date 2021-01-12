@@ -1,0 +1,39 @@
+0:00:00.550,0:00:08.300
+One last thing I want to say in this context
+here is to tell you about a new or another
+
+0:00:08.300,0:00:11.100
+method that is defined in the string class.
+
+0:00:11.100,0:00:14.090
+And that’s the length method.
+
+0:00:14.090,0:00:18.850
+The syntax is str dot length and then empty
+parenthesis.
+
+0:00:18.850,0:00:25.169
+Once again it is a method so in order to calculate
+the length of a string you need to give the
+
+0:00:25.169,0:00:26.770
+string as the calling object.
+
+0:00:26.770,0:00:33.289
+So it would be I don’t know str one or str
+two or whatever the variable name is dot length
+
+0:00:33.289,0:00:38.079
+and then empty parenthesis and that would
+result as the length of the string.
+
+0:00:38.079,0:00:41.510
+The number of characters in that string.
+
+0:00:41.510,0:00:47.600
+So that is also useful if we want to figure
+out how many characters are in a string.
+
+0:00:47.600,0:00:51.030
+If we want to iterate over the string or for
+any other reason.

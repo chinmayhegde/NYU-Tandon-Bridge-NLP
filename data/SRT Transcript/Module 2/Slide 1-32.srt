@@ -1,0 +1,255 @@
+1
+00:00:00,760 --> 00:00:03,610
+Hi there, hoping you're having a great day.
+
+2
+00:00:03,610 --> 00:00:07,760
+Today we're going to talk about position and
+number systems, and we're all used to working
+
+3
+00:00:07,760 --> 00:00:10,470
+with the decimal number system.
+
+4
+00:00:10,470 --> 00:00:14,970
+We're going to see some other number systems
+today and see how we can generalize the way
+
+5
+00:00:14,970 --> 00:00:20,340
+we work with a decimal number system to work
+with some other kinds of number systems.
+
+6
+00:00:20,340 --> 00:00:27,400
+But before we do that, let's talk, let's say
+a few words about a memory of a presentation.
+
+7
+00:00:27,400 --> 00:00:35,260
+So we know that our memory basically is made
+out of bits that are grouped into a bytes,
+
+8
+00:00:35,260 --> 00:00:43,980
+each one of these bits physically is made
+with electricity flow or a magnetic field.
+
+9
+00:00:43,980 --> 00:00:51,019
+But we like to think of it abstractly as zero
+and one because it only has two states.
+
+10
+00:00:51,019 --> 00:00:59,640
+We would need to figure out how to represent
+a lot of data using only this kind of a primitive
+
+11
+00:00:59,640 --> 00:01:00,640
+unit.
+
+12
+00:01:00,640 --> 00:01:07,940
+So we can think that for example numbers can
+be represented using the binary number system,
+
+13
+00:01:07,940 --> 00:01:10,640
+we'll talk about it in much more detail soon.
+
+14
+00:01:10,640 --> 00:01:17,050
+But the idea is to represent not only numbers,
+but other kinds of data is as well.
+
+15
+00:01:17,050 --> 00:01:20,960
+For example text, if we write a document or
+an email.
+
+16
+00:01:20,960 --> 00:01:26,690
+How is that represented using zeros and ones
+and not symbols as the alphabet symbols?
+
+17
+00:01:26,690 --> 00:01:33,680
+Images; how do were present images with all
+the colors and details with the zeros and
+
+18
+00:01:33,680 --> 00:01:34,680
+ones?
+
+19
+00:01:34,680 --> 00:01:36,730
+How do we represent videos, or how do we represent
+audio?
+
+20
+00:01:36,730 --> 00:01:40,960
+All of that should be represented using only
+zeros and ones.
+
+21
+00:01:40,960 --> 00:01:48,680
+So the key idea here is that everything would
+be represented as a number, and in a few minutes
+
+22
+00:01:48,680 --> 00:01:54,850
+we see how we represent numbers, but first
+let's see that all kinds of data can be transformed
+
+23
+00:01:54,850 --> 00:01:58,040
+into numbers, for example text.
+
+24
+00:01:58,040 --> 00:02:04,760
+We have a mapping for each letter, for each
+symbol in our alphabet into a number.
+
+25
+00:02:04,760 --> 00:02:11,670
+So if we want to take the text, for example
+“Hello world!” we can use this mapping.
+
+26
+00:02:11,670 --> 00:02:15,170
+For example, the upper case “H” would
+be 72.
+
+27
+00:02:15,170 --> 00:02:25,090
+So we start with 72 and then the lowercase,
+“e” is 101, so we have 101, and then lowercase
+
+28
+00:02:25,090 --> 00:02:27,379
+“l” is 108.
+
+29
+00:02:27,379 --> 00:02:30,799
+So we have two 108’s and so on.
+
+30
+00:02:30,799 --> 00:02:37,519
+Every character has its own mapped number,
+and we have a sequence of numbers to represent
+
+31
+00:02:37,519 --> 00:02:40,639
+basically a text or a sentence.
+
+32
+00:02:40,639 --> 00:02:44,700
+Not only letters, but also a symbol, such
+as space or a question mark.
+
+33
+00:02:44,700 --> 00:02:54,010
+Every symbol has its own a number that its
+mapped to, so text also is mapped into numbers.
+
+34
+00:02:54,010 --> 00:02:55,329
+Images are a bit more tricky.
+
+35
+00:02:55,329 --> 00:02:59,840
+Let's say we have a beautiful image that we
+want to represent with numbers.
+
+36
+00:02:59,840 --> 00:03:08,090
+So you know that images is a very dense matrix
+of pixels: each small pixel has its own unique
+
+37
+00:03:08,090 --> 00:03:14,040
+color and then a color can also be represented
+using numbers.
+
+38
+00:03:14,040 --> 00:03:21,099
+To represent a color, a common way to do that
+is using an R.G.B., a representation basically
+
+39
+00:03:21,099 --> 00:03:23,779
+the amount of red, green, and blue.
+
+40
+00:03:23,779 --> 00:03:26,359
+Each one ranges 0 to 255.
+
+41
+00:03:26,359 --> 00:03:36,230
+So for example, this purple here is 120 red,
+100 green, and 200 blue.
+
+42
+00:03:36,230 --> 00:03:40,299
+The Pink has other values of R G. and B. and
+so on.
+
+43
+00:03:40,299 --> 00:03:47,150
+So basically, each pixel has three numbers
+that represent its color and then the entire
+
+44
+00:03:47,150 --> 00:03:55,510
+picture would be a very, very long sequence
+of numbers that represent the level of each
+
+45
+00:03:55,510 --> 00:03:57,049
+color.
+
+46
+00:03:57,049 --> 00:04:01,010
+Videos are basically a sequence of images,
+so if we know how to represent images with
+
+47
+00:04:01,010 --> 00:04:04,129
+numbers, obviously we can represent videos
+with numbers.
+
+48
+00:04:04,129 --> 00:04:08,709
+Audio also can be represented with numbers.
+
+49
+00:04:08,709 --> 00:04:18,630
+If we sample the audio wave at a very high
+rate of times, we can see the voltage level
+
+50
+00:04:18,630 --> 00:04:22,510
+in each point of time that is also a number.
+
+51
+00:04:22,510 --> 00:04:28,160
+So basically, all our data is first transformed
+into numbers.
+
+52
+00:04:28,160 --> 00:04:31,810
+Numbers can be represented with the zeros
+and ones, we see that in a few minutes.
+
+53
+00:04:31,810 --> 00:04:37,880
+And therefore, all our data in our memory
+is then represented with the zeros and ones.
+
+54
+00:04:37,880 --> 00:04:41,201
+Let's go ahead and see how we can represent
+numbers with zeros and ones.
+

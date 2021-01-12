@@ -1,0 +1,138 @@
+1
+00:00:00,580 --> 00:00:06,169
+For the branch if equal to zero instruction,
+the CPU must perform several operations during
+
+2
+00:00:06,169 --> 00:00:07,540
+the execute step.
+
+3
+00:00:07,540 --> 00:00:13,460
+It must calculate the target address of the
+branch instruction, check the branch condition,
+
+4
+00:00:13,460 --> 00:00:15,969
+and update the program counter.
+
+5
+00:00:15,969 --> 00:00:20,480
+Let us first see how the CPU calculates the
+target address for the branch instruction
+
+6
+00:00:20,480 --> 00:00:26,270
+Remember the formula for func2 that is used
+to calculate the target address.
+
+7
+00:00:26,270 --> 00:00:31,949
+During the fetch step, the CPU already incremented
+the program counter by 4, and during the decode
+
+8
+00:00:31,949 --> 00:00:35,870
+step, the CPU sign-extends the 16-bit immediate
+value.
+
+9
+00:00:35,870 --> 00:00:41,220
+Those two calculations from fetch and decode
+steps are needed to calculate the target address.
+
+10
+00:00:41,220 --> 00:00:46,640
+Therefore, during the execute step, the CPU
+can simply shift the sign-extended immediate
+
+11
+00:00:46,640 --> 00:00:51,090
+value and add it to PC to calculate the target
+address.
+
+12
+00:00:51,090 --> 00:00:53,790
+This target address is put in ALUOut1.
+
+13
+00:00:53,790 --> 00:00:59,550
+The next operation is to check the condition
+of the branch if equal to zero.
+
+14
+00:00:59,550 --> 00:01:05,600
+To check if a value is equal to zero, the
+CPU used the ALU to subtract that value with
+
+15
+00:01:05,600 --> 00:01:06,830
+zero.
+
+16
+00:01:06,830 --> 00:01:10,260
+The ALU has what is called a zero flag.
+
+17
+00:01:10,260 --> 00:01:16,210
+That is a one-bit output that is set to one
+when the result of its operation is zero.
+
+18
+00:01:16,210 --> 00:01:23,100
+So, to check the condition, the ALU used the
+BranchOp operation, which is a subtraction
+
+19
+00:01:23,100 --> 00:01:27,260
+of the Rs, which is in the A, and R0, which
+holds 0.
+
+20
+00:01:27,260 --> 00:01:33,580
+If the subtraction is zero, then the zero
+flag of the ALU is set to one.
+
+21
+00:01:33,580 --> 00:01:38,980
+The last operation is to update the program
+counter if the branch condition is true.
+
+22
+00:01:38,980 --> 00:01:44,890
+For this, the CPU simply writes the target
+address to the program counter if the value
+
+23
+00:01:44,890 --> 00:01:46,700
+of the zero flag is one.
+
+24
+00:01:46,700 --> 00:01:52,251
+Otherwise, the program counter remains its
+original value from the fetch step where it
+
+25
+00:01:52,251 --> 00:01:54,840
+was incremented by 4.
+
+26
+00:01:54,840 --> 00:01:59,560
+It is important to realize that although the
+branch if equal to zero instruction writes
+
+27
+00:01:59,560 --> 00:02:04,330
+to the program counter register, this is not
+done at the WriteBack step.
+
+28
+00:02:04,330 --> 00:02:09,200
+This is because the WriteBack step is only
+for general purpose registers R0 through R31.
+
+29
+00:02:09,200 --> 00:02:13,440
+The program counter itself is not a general-purpose
+register.
+

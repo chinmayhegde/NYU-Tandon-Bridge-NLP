@@ -1,0 +1,98 @@
+0:00:00.669,0:00:05.430
+Hi there hope you are having a great day.
+Today we are going to talk about functions.
+
+0:00:05.430,0:00:12.870
+Let’s start by first calculating the k combinations.
+Now let’s start with the definition what
+
+0:00:12.870,0:00:21.000
+are k combinations. So let n and k be two
+integers non negative integers. And let’s
+
+0:00:21.000,0:00:29.830
+assume that k is not greater than n namely
+k is less or equal to n. So the k combinations
+
+0:00:29.830,0:00:38.179
+are the number of unsorted selections of distinct
+elements from a set of elements. So assuming
+
+0:00:38.179,0:00:46.249
+you have n elements in how many ways can you
+take k elements out of that. For example if
+
+0:00:46.249,0:00:55.569
+n is five and k is three what are three combinations
+that case. So assuming you have a set of n
+
+0:00:55.569,0:01:05.460
+elements in this case five balls a green one
+orange purple blue and red. Let’s see in
+
+0:01:05.460,0:01:13.189
+how many ways can we select three balls out
+of these five balls. So the first one can
+
+0:01:13.189,0:01:22.030
+be I don’t know take a blue purple and a
+green. So they aren’t ordered it means that
+
+0:01:22.030,0:01:26.541
+there is no difference between blue purple
+and green and green purple and blue. It is
+
+0:01:26.541,0:01:34.210
+the same it is choosing these three balls.
+And that’s another way. And there are no
+
+0:01:34.210,0:01:41.189
+duplicates here. So we can’t choose two
+purples or something like that. So we can
+
+0:01:41.189,0:01:48.020
+do it this way that way we can do it in a
+lot of ways. The number of ways we can choose
+
+0:01:48.020,0:01:56.289
+three balls out of these n out of these five
+are called three combinations. So we would
+
+0:01:56.289,0:02:04.369
+like to figure out what are three combinations
+from a set of five. Luckily for us by the
+
+0:02:04.369,0:02:12.900
+way it is also noted as n choose three that’s
+another way to call it. And we can write it
+
+0:02:12.900,0:02:21.819
+as like this big parentheses and then you
+have a n and a k under it. Luckily for us
+
+0:02:21.819,0:02:30.569
+there is a theorem that tells us the value
+of n choose k. So let n and k be two non negative
+
+0:02:30.569,0:02:38.590
+integers such that k is not greater than n.
+The number of k combinations of a set of n
+
+0:02:38.590,0:02:45.650
+elements equals to n choose k that equals
+to the factorial of n over the factorial of
+
+0:02:45.650,0:02:53.319
+k times the factorial of n minus k. In our
+example five choose three or three combinations
+
+0:02:53.319,0:02:59.000
+would be the factorial of five over the factorial
+of three times the factorial of two. Basically
+
+0:02:59.000,0:03:07.909
+the factorial of five is one twenty over factorial
+of three is six times two that is one twenty
+
+0:03:07.909,0:03:10.099
+over twelve and that is ten.

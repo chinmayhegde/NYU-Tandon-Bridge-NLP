@@ -1,0 +1,9 @@
+1
+00:00:00,650 --> 00:00:05,670
+Remember, the only operand of a J-format instruction
+is the 26-bit address.
+
+2
+00:00:05,670 --> 00:00:08,000
+Jump Register doesn’t have such operand.
+

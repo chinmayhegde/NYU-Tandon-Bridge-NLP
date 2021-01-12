@@ -1,0 +1,41 @@
+1
+00:00:00,420 --> 00:00:04,230
+So in this class, we will use the MIPS processor
+architecture as reference.
+
+2
+00:00:04,230 --> 00:00:09,010
+MIPS stands for Microprocessor Without Interlocked
+Pipeline Stages.
+
+3
+00:00:09,010 --> 00:00:13,769
+MIPS uses RISC architecture, is open-source
+and is commonly found in gaming systems such
+
+4
+00:00:13,769 --> 00:00:17,730
+as Playstation 1, 2, Playstation portable,
+and the like.
+
+5
+00:00:17,730 --> 00:00:20,730
+In this class, we will use MIPS64 architecture.
+
+6
+00:00:20,730 --> 00:00:23,830
+Each MIPS64 instruction is 32 bits long.
+
+7
+00:00:23,830 --> 00:00:26,810
+The default word size is 32 bits.
+
+8
+00:00:26,810 --> 00:00:31,300
+However, the 64 and MIPS64 indicates that
+the processor can do operations on data as
+
+9
+00:00:31,300 --> 00:00:33,979
+large as 64 bits, or double word.
+

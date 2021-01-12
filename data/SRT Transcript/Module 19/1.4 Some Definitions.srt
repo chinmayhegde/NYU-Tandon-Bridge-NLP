@@ -1,0 +1,229 @@
+1
+00:00:00,719 --> 00:00:03,129
+We need to get through some definitions first.
+
+2
+00:00:03,129 --> 00:00:06,660
+The first one that we want to talk about is
+a binary tree.
+
+3
+00:00:06,660 --> 00:00:11,410
+And a binary tree is a simple tree, remember
+has a parent, has some children, except the
+
+4
+00:00:11,410 --> 00:00:14,990
+binary tree has a maximum of two children.
+
+5
+00:00:14,990 --> 00:00:21,670
+What we usually refer to them as is the left
+and right child only for simplicity sake we
+
+6
+00:00:21,670 --> 00:00:26,999
+don't have any reason to call them left or
+right, but we do have a maximum of two children
+
+7
+00:00:26,999 --> 00:00:31,489
+in the binary tree; doesn't mean that we have
+always two children, of course some nodes
+
+8
+00:00:31,489 --> 00:00:35,020
+will have no children and some nodes will
+have one child and then some nodes will have
+
+9
+00:00:35,020 --> 00:00:38,120
+two children, but the maximum is two children.
+
+10
+00:00:38,120 --> 00:00:40,050
+We can talk about the size of a tree.
+
+11
+00:00:40,050 --> 00:00:43,620
+The size of a tree is the number of nodes
+that are in that tree.
+
+12
+00:00:43,620 --> 00:00:47,790
+So if we look at the size of the root node
+of the tree, we're looking at the size of
+
+13
+00:00:47,790 --> 00:00:49,200
+the entire tree.
+
+14
+00:00:49,200 --> 00:00:53,580
+If we're looking at the size of a node that
+has no children, that size is just one because
+
+15
+00:00:53,580 --> 00:00:55,340
+it's just that node.
+
+16
+00:00:55,340 --> 00:00:58,440
+And if we're looking at a size of a node with
+a couple of children well then we have to
+
+17
+00:00:58,440 --> 00:01:02,660
+do some calculations to try and figure out
+how many nodes are actually on this tree.
+
+18
+00:01:02,660 --> 00:01:04,890
+And we’ll see that in a later slide.
+
+19
+00:01:04,890 --> 00:01:08,930
+We could talk about the height of the tree
+which is the distance or the number of links
+
+20
+00:01:08,930 --> 00:01:11,510
+from the root to the farthest child.
+
+21
+00:01:11,510 --> 00:01:17,330
+Now we could say that the height of a null,
+for example the height of a null so no node
+
+22
+00:01:17,330 --> 00:01:20,750
+would be negative one, because it doesn't
+have any height it’s actually a negative
+
+23
+00:01:20,750 --> 00:01:21,750
+height.
+
+24
+00:01:21,750 --> 00:01:25,870
+If we're talking about the height of a node
+with no children at that height would be zero
+
+25
+00:01:25,870 --> 00:01:31,280
+because the distance from the node from the
+root to its far this child is actually itself,
+
+26
+00:01:31,280 --> 00:01:33,370
+so that's a distance of zero.
+
+27
+00:01:33,370 --> 00:01:38,310
+And if the root node has only one child and
+that no doesn't have any children, then the
+
+28
+00:01:38,310 --> 00:01:41,960
+root nodes height is one and the only child's
+height is zero.
+
+29
+00:01:41,960 --> 00:01:47,470
+So that's a simple way to look at height and
+give us an idea.
+
+30
+00:01:47,470 --> 00:01:52,409
+We'll use that in a later slide to talk about
+the balance binary search trees.
+
+31
+00:01:52,409 --> 00:01:56,670
+We can talk about depth which is the distance
+from the node to the root and that's actually
+
+32
+00:01:56,670 --> 00:01:58,990
+the inverse of the height.
+
+33
+00:01:58,990 --> 00:02:04,369
+So the root node, for example, has a depth
+always of zero the distance from the root
+
+34
+00:02:04,369 --> 00:02:08,060
+node to itself will always be zero, of course.
+
+35
+00:02:08,060 --> 00:02:12,150
+And if we're talking about the most sub-child
+than that's the actual depth that means the
+
+36
+00:02:12,150 --> 00:02:16,250
+depth would be equal to the height of the
+root node; so the farthest child from the
+
+37
+00:02:16,250 --> 00:02:20,280
+root depth is actually equal to the roots
+height.
+
+38
+00:02:20,280 --> 00:02:21,680
+So they are inverse to each other.
+
+39
+00:02:21,680 --> 00:02:25,220
+We could talk about a leaf node, which is
+a node that has no children.
+
+40
+00:02:25,220 --> 00:02:29,730
+So the left in the right pointers for example
+in a binary tree would be null.
+
+41
+00:02:29,730 --> 00:02:33,200
+And we can talk about a full node which is
+the maximum number of children.
+
+42
+00:02:33,200 --> 00:02:37,980
+Obviously, if we're talking about a generic
+tree, where there's no maximum number of children
+
+43
+00:02:37,980 --> 00:02:40,340
+then it's impossible to have a full node.
+
+44
+00:02:40,340 --> 00:02:45,040
+In a binary tree, any node that has two children
+would be considered a full note; it can't
+
+45
+00:02:45,040 --> 00:02:46,680
+have any additional children.
+
+46
+00:02:46,680 --> 00:02:50,780
+So we use these definitions throughout the
+discussion so that we have an idea of what
+
+47
+00:02:50,780 --> 00:02:52,860
+we're talking about.
+
+48
+00:02:52,860 --> 00:02:57,290
+The importance here is that you take away
+these definitions because they're used in
+
+49
+00:02:57,290 --> 00:03:01,120
+our language for talking about trees and binary
+search streets.
+

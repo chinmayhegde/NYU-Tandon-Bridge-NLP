@@ -1,0 +1,58 @@
+1
+00:00:00,410 --> 00:00:04,020
+So here we see the MIPS mnemonic version of
+our working assembly example.
+
+2
+00:00:04,020 --> 00:00:06,669
+We notice some clear differences from the
+offset.
+
+3
+00:00:06,669 --> 00:00:11,550
+The first thing we notice is that each instruction
+has an associated address.
+
+4
+00:00:11,550 --> 00:00:14,780
+This is the address of the instruction in
+the code segment.
+
+5
+00:00:14,780 --> 00:00:18,140
+Note that these addresses are given in hexadecimal
+format.
+
+6
+00:00:18,140 --> 00:00:23,360
+We also notice that the registers are given
+using numerical notations, as is done in machine
+
+7
+00:00:23,360 --> 00:00:24,240
+code.
+
+8
+00:00:24,240 --> 00:00:30,420
+There are 32 general-purpose registers in
+MIPS64, R0 to R31.
+
+9
+00:00:30,420 --> 00:00:34,800
+The last thing we notice is that the mnemonic
+notation has the same fields as the machine
+
+10
+00:00:34,800 --> 00:00:35,890
+code.
+
+11
+00:00:35,890 --> 00:00:40,950
+Using the first Load doubleword as an example, we'll
+see that the mnemonic notation has the base
+
+12
+00:00:40,950 --> 00:00:44,620
+and offset fields, just like the machine code
+discussed earlier.
+

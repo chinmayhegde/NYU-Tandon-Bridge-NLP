@@ -1,0 +1,137 @@
+0:00:00.810,0:00:04.310
+For every new there has to be a delete.
+
+0:00:04.310,0:00:09.750
+If memory is allocated it's going to have
+to be destroyed and once you destroy it you
+
+0:00:09.750,0:00:12.130
+can only destroy it one time.
+
+0:00:12.130,0:00:15.450
+So you can destroy it once and only once.
+
+0:00:15.450,0:00:19.019
+Now here's the double edge sword that we have
+the problem with.
+
+0:00:19.019,0:00:24.180
+We have to destroy it once and only once if
+we don't destroy it that's a memory leak and
+
+0:00:24.180,0:00:27.510
+if we try to destroy it twice that's double
+delete.
+
+0:00:27.510,0:00:32.050
+Memory leaks we know they're going to take
+a long time to show up as problems.
+
+0:00:32.050,0:00:34.130
+The program will continue to run.
+
+0:00:34.130,0:00:38.550
+It'll just take up more and more and more
+memory eventually running out of memory and
+
+0:00:38.550,0:00:40.310
+then it'll crash.
+
+0:00:40.310,0:00:43.870
+But double delete is much more critical.
+
+0:00:43.870,0:00:48.480
+As soon as you do a double delete the first
+time you delete the object the first time
+
+0:00:48.480,0:00:51.450
+you delete the integer or whatever it is you're
+doing.
+
+0:00:51.450,0:00:57.160
+The memory is returned to the operating system
+and the operating system says it can be reallocated
+
+0:00:57.160,0:01:01.620
+to someone else but that second double delete
+tells the operating system that it can take
+
+0:01:01.620,0:01:03.910
+back a memory that it already owns.
+
+0:01:03.910,0:01:08.479
+And the operating system has a real problem
+with this it says but I already own that memory
+
+0:01:08.479,0:01:12.710
+something's wrong with your program and your
+program will immediately crash.
+
+0:01:12.710,0:01:17.780
+Your program will end and on a Windows machine
+for example you'll get a pop up box that says
+
+0:01:17.780,0:01:22.619
+Microsoft is sorry but your program has performed
+and illegal operation and that's the end of
+
+0:01:22.619,0:01:23.869
+your program.
+
+0:01:23.869,0:01:29.639
+Now we can delete a memory location or we
+can delete a heap dynamic variable I should
+
+0:01:29.639,0:01:32.880
+be specific and say by just calling the delete
+operator.
+
+0:01:32.880,0:01:39.420
+So we say delete ptr that does not do anything
+to the pointer itself.
+
+0:01:39.420,0:01:45.429
+Delete ptr doesn't change the pointer all
+it does is return the memory that's being
+
+0:01:45.429,0:01:49.619
+referenced by that pointer returns it back
+to the operating system.
+
+0:01:49.619,0:01:54.240
+The pointer still points to the same location
+it's just you don't own that location anymore.
+
+0:01:54.240,0:02:00.979
+So again it's important to then take the pointer
+and make it point to NULL or null ptr right
+
+0:02:00.979,0:02:05.509
+after you do the deletion so you don't accidentally
+double delete.
+
+0:02:05.509,0:02:12.390
+If you accidentally do a delete on NULL or
+delete on null ptr It has absolutely no effect.
+
+0:02:12.390,0:02:14.599
+There's no crashing there's no problem.
+
+0:02:14.599,0:02:21.280
+The operating system and C++ just simply says
+that has nothing to do so I'm done.
+
+0:02:21.280,0:02:24.260
+And deleting null ptr is perfectly safe.
+
+0:02:24.260,0:02:28.379
+So there are certain circumstances that we're
+going to see over the course of the rest of
+
+0:02:28.379,0:02:34.550
+the semester that you'll see where we delete
+null ptr and that's perfectly ok.
+
+0:02:34.550,0:02:37.760
+What's not ok is deleting the same pointer
+twice.

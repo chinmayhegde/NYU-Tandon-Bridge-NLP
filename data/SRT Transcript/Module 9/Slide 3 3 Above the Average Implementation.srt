@@ -1,0 +1,133 @@
+0:00:00.110,0:00:01.110
+Okay.
+
+0:00:01.110,0:00:06.470
+So let's take a look at our run time stack;
+let’s assume it starts at address one thousand,
+
+0:00:06.470,0:00:12.700
+first variable we have is number of students
+and then we have our array which has sixty
+
+0:00:12.700,0:00:17.070
+elements in it, so we have sixty integers
+one after the other.
+
+0:00:17.070,0:00:21.230
+So, that goes up to here; it starts at a thousand
+and four.
+
+0:00:21.230,0:00:28.280
+First index would be zero then one, two, three,
+four, five, and so on up to, it's going to
+
+0:00:28.280,0:00:29.660
+be fifty nine, right?
+
+0:00:29.660,0:00:34.940
+Since it starts at zero, when it has sixty
+elements it would go up to fifty nine.
+
+0:00:34.940,0:00:42.080
+After this array we have our current grade
+variable and our ind variable; they're all
+
+0:00:42.080,0:00:44.950
+integers so each of them is four bytes.
+
+0:00:44.950,0:00:47.740
+And let's start executing the program.
+
+0:00:47.740,0:00:51.660
+So first we ask the user how any students
+are going to be in the class.
+
+0:00:51.660,0:00:57.640
+Let's assume the user entered four, so number
+of students would be four and then we start
+
+0:00:57.640,0:00:58.970
+reading the grades.
+
+0:00:58.970,0:01:04.000
+So let's start executing the for loop, ind
+would be initialized to zero.
+
+0:01:04.000,0:01:10.600
+We read the first grade, seventy one, and
+then we assign our grade lists.
+
+0:01:10.600,0:01:16.869
+This is grades list with sign index zero of
+this array to be seventy one.
+
+0:01:16.869,0:01:24.320
+Ind increases, we read the next grade, eighty
+six, and assign grades list one.
+
+0:01:24.320,0:01:28.780
+In this case, this element here to be eighty
+six.
+
+0:01:28.780,0:01:37.299
+Again ind the increases, we read the next
+element, sixty eight, and assign grades list
+
+0:01:37.299,0:01:40.390
+two in this case to be sixty eight.
+
+0:01:40.390,0:01:46.010
+Ind increases, by the way it is still, ind
+is still less the number of students; three
+
+0:01:46.010,0:01:47.600
+is still less than four.
+
+0:01:47.600,0:01:53.550
+We have one more iteration: we read another
+grade, in this case it's going to be ninety
+
+0:01:53.550,0:01:58.990
+four, and we set grades list three in this
+case to be ninety four.
+
+0:01:58.990,0:02:05.159
+Once more we increment our ind, this time
+when we check the boolean condition, ind that
+
+0:02:05.159,0:02:09.000
+is no longer less the number of students;
+four is not less than four.
+
+0:02:09.000,0:02:12.230
+So we break out of this reading step.
+
+0:02:12.230,0:02:18.830
+Basically, we read the entire sequence of
+four elements into our array data structure,
+
+0:02:18.830,0:02:19.830
+right?
+
+0:02:19.830,0:02:24.590
+All the rest of the elements in the array
+starting index four to fifty nine remain with
+
+0:02:24.590,0:02:27.940
+the same value they had before that, we didn't
+change it.
+
+0:02:27.940,0:02:32.300
+So, the logical size will name it is only
+four.
+
+0:02:32.300,0:02:38.730
+Physically, this array is of size sixty; logically,
+it has only four elements in it and these
+
+0:02:38.730,0:02:41.840
+elements are in indexes zero to three.
+
+0:02:41.840,0:02:44.609
+Okay, let's go on to the next step where we
+calculate the average.

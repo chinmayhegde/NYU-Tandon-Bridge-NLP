@@ -1,0 +1,108 @@
+1
+00:00:00,510 --> 00:00:04,500
+We know that in a binary search tree, best
+case scenario, the binary search tree is going
+
+2
+00:00:04,500 --> 00:00:07,590
+to result in big O of Log of N time for everything.
+
+3
+00:00:07,590 --> 00:00:12,200
+So insertion, searches, removals, all that's
+going to take a Log N time.
+
+4
+00:00:12,200 --> 00:00:19,200
+Unfortunately, where BST's fail is if the
+insertions that we're doing are already in
+
+5
+00:00:19,200 --> 00:00:20,200
+order.
+
+6
+00:00:20,200 --> 00:00:26,460
+And if they are, then all the insertions that
+we do are going to result in right hand side
+
+7
+00:00:26,460 --> 00:00:28,380
+operations only.
+
+8
+00:00:28,380 --> 00:00:32,730
+So we're going to insert five and then we're
+going to insert ten as the right sub child
+
+9
+00:00:32,730 --> 00:00:37,350
+of five, and then we're going to insert fifteen
+as the right sub child of ten, and then going
+
+10
+00:00:37,350 --> 00:00:41,079
+to insert twenty is the right sub child of
+fifteen and then we are insert twenty five
+
+11
+00:00:41,079 --> 00:00:43,389
+as the rights of child of twenty.
+
+12
+00:00:43,389 --> 00:00:48,889
+And what we end up with is all right children
+and nobody on the left; the left is all equal
+
+13
+00:00:48,889 --> 00:00:50,210
+to null.
+
+14
+00:00:50,210 --> 00:00:56,079
+And so what we end up with really is a linked
+list and we know that searching a linked list
+
+15
+00:00:56,079 --> 00:00:59,850
+is linear time, not Log N, linear.
+
+16
+00:00:59,850 --> 00:01:04,510
+So going back to our previous example of one
+million elements now we've got to search five
+
+17
+00:01:04,510 --> 00:01:09,700
+hundred thousand elements because there's
+no left elements at all; they're all right
+
+18
+00:01:09,700 --> 00:01:10,930
+elements.
+
+19
+00:01:10,930 --> 00:01:19,020
+And so this doesn't really work out very well
+in the, in the easy binary search tree solution
+
+20
+00:01:19,020 --> 00:01:24,240
+because the operations that we're doing are
+a little bit too simplistic.
+
+21
+00:01:24,240 --> 00:01:29,680
+What we really need to make sure is that we're
+not constantly using the right subtree.
+
+22
+00:01:29,680 --> 00:01:36,500
+That we actually end up using those left pointers
+to some extent and that we have a wider breadth
+
+23
+00:01:36,500 --> 00:01:39,890
+than we do depth, or at least equal breadth
+and depth.
+

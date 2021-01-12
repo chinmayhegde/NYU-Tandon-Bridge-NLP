@@ -1,0 +1,95 @@
+1
+00:00:00,539 --> 00:00:03,840
+So, now we have the code that handles the
+if condition.
+
+2
+00:00:03,840 --> 00:00:06,820
+How do we write the rest of the code to complete
+the function?
+
+3
+00:00:06,820 --> 00:00:11,150
+First, what instruction should be right after
+the branch instruction?
+
+4
+00:00:11,150 --> 00:00:15,420
+In the sequence of the code, the instruction
+following the branch must handle the case
+
+5
+00:00:15,420 --> 00:00:18,750
+where the branch condition is false and the
+branch is not taken.
+
+6
+00:00:18,750 --> 00:00:24,600
+So in our example, the branch instruction
+condition checks if X is positive.
+
+7
+00:00:24,600 --> 00:00:29,730
+Therefore, the next instruction in the sequence
+handles the case where X is negative.
+
+8
+00:00:29,730 --> 00:00:34,870
+For our absolute function, when X is negative,
+we need to negate it.
+
+9
+00:00:34,870 --> 00:00:42,350
+For that, we can simply use a doubleword sub
+or DSUB instruction to negate R4 and turn
+
+10
+00:00:42,350 --> 00:00:44,460
+it into a positive value.
+
+11
+00:00:44,460 --> 00:00:50,020
+To find out what the instruction after the
+subtraction should be, we again look at the
+
+12
+00:00:50,020 --> 00:00:54,030
+high-level code of the absolute value function.
+
+13
+00:00:54,030 --> 00:00:59,510
+We observe that once the subtraction is performed,
+the next operation is to return from the function
+
+14
+00:00:59,510 --> 00:01:00,870
+call.
+
+15
+00:01:00,870 --> 00:01:07,000
+And we already know that if the branch condition
+is true and X is already positive, we would
+
+16
+00:01:07,000 --> 00:01:09,420
+simply return from the function call.
+
+17
+00:01:09,420 --> 00:01:15,380
+In this respect, there is nothing left to
+do in this code but to return from the call.
+
+18
+00:01:15,380 --> 00:01:18,720
+For this return instruction, we use the jump
+register.
+
+19
+00:01:18,720 --> 00:01:23,940
+This jump register instruction is also where
+we would do the branching to in case our branch
+
+20
+00:01:23,940 --> 00:01:25,210
+if equal condition is true.
+

@@ -1,0 +1,168 @@
+1
+00:00:00,710 --> 00:00:04,560
+So like we see, if all the philosophers are
+allowed to take a fork, all will have one
+
+2
+00:00:04,560 --> 00:00:05,910
+fork and none will ever eat.
+
+3
+00:00:05,910 --> 00:00:07,460
+So, what's the solution to this?
+
+4
+00:00:07,460 --> 00:00:10,990
+Well Dijkstra proposed the solution of resource
+ordering, of course.
+
+5
+00:00:10,990 --> 00:00:12,250
+That's the easiest one.
+
+6
+00:00:12,250 --> 00:00:15,590
+And he said, let's order the forks zero through
+four.
+
+7
+00:00:15,590 --> 00:00:21,939
+Now, if you pick up fork zero, you're not
+allowed to pick up fork four, and that leaves
+
+8
+00:00:21,939 --> 00:00:27,399
+fork four for the philosopher on his right
+to pick up, and that means that the fourth
+
+9
+00:00:27,399 --> 00:00:32,390
+philosopher will be allowed to eat because
+he has his own fork plus the last fork.
+
+10
+00:00:32,390 --> 00:00:39,530
+We can't select a larger, we can't have a
+larger fork and a smaller number fork at the
+
+11
+00:00:39,530 --> 00:00:43,789
+same time unless you ask for the smaller fork
+first then the larger fork second.
+
+12
+00:00:43,789 --> 00:00:47,950
+So ultimately what this means is that one
+of the philosophers will get both forks, will
+
+13
+00:00:47,950 --> 00:00:52,850
+eat, and put both forks down, allowing more
+philosophers to eat and more philosophers
+
+14
+00:00:52,850 --> 00:00:55,839
+to eat and ultimately, everybody eats.
+
+15
+00:00:55,839 --> 00:00:57,730
+So that's the resource ordering solution.
+
+16
+00:00:57,730 --> 00:01:00,960
+But there's another solution in which we have
+a semaphore.
+
+17
+00:01:00,960 --> 00:01:04,759
+And obviously, we're going to have semaphores
+for each of the forks, you can see that already
+
+18
+00:01:04,759 --> 00:01:08,350
+cause we need mutual exclusion on each of
+the individual forks.
+
+19
+00:01:08,350 --> 00:01:12,689
+What we're talking about is adding yet another
+semaphore, and saying that there's a semaphore
+
+20
+00:01:12,689 --> 00:01:17,210
+that has to be met that has to hold mutual
+exclusion for the entire room.
+
+21
+00:01:17,210 --> 00:01:22,409
+So with the semaphore solution, we have four
+signals that go into the queue under semaphore;
+
+22
+00:01:22,409 --> 00:01:27,380
+the first four philosophers are allowed to
+enter the room, and they're allowed to eat.
+
+23
+00:01:27,380 --> 00:01:31,340
+The last philosopher, of course the fourth
+philosopher, will pick up the fork from the
+
+24
+00:01:31,340 --> 00:01:35,079
+fifth philosopher because he's not allowed
+in the room at all.
+
+25
+00:01:35,079 --> 00:01:39,149
+And that allows the fourth philosopher to
+eat, and then he'll put his fork down, allowing
+
+26
+00:01:39,149 --> 00:01:43,670
+the third philosopher to eat, and then he'll
+put his fork down, and so on and so forth.
+
+27
+00:01:43,670 --> 00:01:49,320
+Eventually, after the fourth philosopher leaves
+the room, the fifth philosopher will be allowed
+
+28
+00:01:49,320 --> 00:01:54,320
+in and he'll eventually be allowed both forks;
+everybody is allowed to eat and the problem
+
+29
+00:01:54,320 --> 00:01:55,320
+is resolved.
+
+30
+00:01:55,320 --> 00:01:59,300
+So, we've got two scenarios here and there's
+actually even more scenarios that get even
+
+31
+00:01:59,300 --> 00:02:01,810
+more complex; there are more solutions that
+get more complex.
+
+32
+00:02:01,810 --> 00:02:05,820
+There are solutions using a monitor, and there's
+even more complex ones.
+
+33
+00:02:05,820 --> 00:02:11,780
+But the fundamental, the easiest to understand,
+is that we either order the resources, and
+
+34
+00:02:11,780 --> 00:02:16,080
+order the forks, or we have a semaphore to
+prevent one of the philosophers from even
+
+35
+00:02:16,080 --> 00:02:16,550
+entering the room.
+

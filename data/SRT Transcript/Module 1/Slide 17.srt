@@ -1,0 +1,271 @@
+1
+00:00:01,810 --> 00:00:07,560
+So the secondary storage can be broken down
+into two types, and this is kind of representing
+
+2
+00:00:07,560 --> 00:00:14,059
+a change in the industry as we are today we're
+moving from hard disk drives to solid state
+
+3
+00:00:14,059 --> 00:00:15,609
+disk drives for a lot of computers.
+
+4
+00:00:15,609 --> 00:00:18,250
+Now hardest drives are not going away by any
+means.
+
+5
+00:00:18,250 --> 00:00:22,320
+Hard disk drives are also known as spinning
+drives and the reason for that is that they
+
+6
+00:00:22,320 --> 00:00:27,990
+contain magnetic material which is in the
+form of a disk and the disk rotates at a constant
+
+7
+00:00:27,990 --> 00:00:32,020
+velocity, and it's measured in a number of
+revolutions per minute.
+
+8
+00:00:32,020 --> 00:00:36,600
+And that's published by the manufacturer usually
+is fifty four hundred RPM or seventy two hundred
+
+9
+00:00:36,600 --> 00:00:39,740
+RPM or possibly even ten thousand RPM.
+
+10
+00:00:39,740 --> 00:00:45,440
+The disk rotates and we have a head that moves
+in and out along the disk for different radii
+
+11
+00:00:45,440 --> 00:00:53,580
+on the disk and this allows us to define,
+by polar coordinates, a particular radius
+
+12
+00:00:53,580 --> 00:01:02,990
+with a particular rotation angle and a height
+(the head) to indicate a specific point on
+
+13
+00:01:02,990 --> 00:01:05,829
+the disk where we want to either read or write.
+
+14
+00:01:05,829 --> 00:01:12,140
+So we can access the entire magnetic material
+which is where the real storage happens.
+
+15
+00:01:12,140 --> 00:01:18,789
+Unfortunately with this system if we move
+the head, which has some time that it takes
+
+16
+00:01:18,789 --> 00:01:23,999
+to move, if we move the head to the innermost
+radius and then do a read operation and then
+
+17
+00:01:23,999 --> 00:01:29,490
+try and move the head to the outermost radius,
+it really takes a significant amount of time
+
+18
+00:01:29,490 --> 00:01:33,229
+in comparison to move in the head to an adjacent
+radius.
+
+19
+00:01:33,229 --> 00:01:37,990
+So what we call the each radius is known as
+a track, and it looks like a track if you
+
+20
+00:01:37,990 --> 00:01:41,639
+were running around in a in a gym.
+
+21
+00:01:41,639 --> 00:01:48,109
+Each track can hold a certain amount of information
+and the tracks are all adjacent to one another
+
+22
+00:01:48,109 --> 00:01:52,929
+but moving from one track to the next adjacent
+track takes a very insignificant amount of
+
+23
+00:01:52,929 --> 00:01:57,600
+time, I shouldn’t say insignificant, it
+still takes an amount of time, but moving
+
+24
+00:01:57,600 --> 00:02:03,170
+from an inner most track to a very far distant
+track will take quite a significant amount
+
+25
+00:02:03,170 --> 00:02:04,170
+of time.
+
+26
+00:02:04,170 --> 00:02:08,960
+In addition to that we have this rotation
+that happens and on a drive with, for example
+
+27
+00:02:08,960 --> 00:02:15,420
+a fifty four hundred RPM, we can recognize
+that it takes eleven milliseconds to do one
+
+28
+00:02:15,420 --> 00:02:17,489
+full rotation of the disc.
+
+29
+00:02:17,489 --> 00:02:23,170
+So if we move the head to the appropriate
+location and happen to notice that the sector
+
+30
+00:02:23,170 --> 00:02:26,640
+that we want to read, the location where we
+wanted to read just went past, it's going
+
+31
+00:02:26,640 --> 00:02:30,090
+to take eleven milliseconds for that to come
+around again.
+
+32
+00:02:30,090 --> 00:02:33,670
+So that could take some significant time,
+also.
+
+33
+00:02:33,670 --> 00:02:39,010
+The benefit to having a hard disk drive is
+that the size can be enormous, sizes of four
+
+34
+00:02:39,010 --> 00:02:42,780
+terabytes six terabytes are not usual today.
+
+35
+00:02:42,780 --> 00:02:47,159
+So these sizes are really significant amount
+of storage space.
+
+36
+00:02:47,159 --> 00:02:51,810
+The unfortunate downside is that accessing
+that storage does take a little bit of extra
+
+37
+00:02:51,810 --> 00:02:56,739
+time with a solid state disk drive, which
+is where a lot of the industry is moving to
+
+38
+00:02:56,739 --> 00:02:59,400
+for most end user machines.
+
+39
+00:02:59,400 --> 00:03:04,890
+This solid state destroy don't have anything
+that moves, hence the term solid state.
+
+40
+00:03:04,890 --> 00:03:09,170
+They contain a number of chips which look
+just like your USB flash drives, if you ever
+
+41
+00:03:09,170 --> 00:03:12,349
+happen to accidentally crack one of those
+open.
+
+42
+00:03:12,349 --> 00:03:16,909
+All the data is stored electrically in the
+chips and it looks very much like RAM chips,
+
+43
+00:03:16,909 --> 00:03:21,970
+but the chips are in a very different design,
+the chips are designed very differently.
+
+44
+00:03:21,970 --> 00:03:28,049
+These are store data permanently, so that
+even if the power is removed from the chip
+
+45
+00:03:28,049 --> 00:03:32,530
+the data is still stored which is a great
+thing because this is secondary storage and
+
+46
+00:03:32,530 --> 00:03:36,310
+we don't want to lose the data if the power
+is removed.
+
+47
+00:03:36,310 --> 00:03:40,879
+Thankfully with solid state disk drives, all
+the data can be accessed in random time and
+
+48
+00:03:40,879 --> 00:03:43,349
+they can all be accessed in the same amount
+of time.
+
+49
+00:03:43,349 --> 00:03:47,900
+So accessing the first byte on the drive and
+then accessing the last byte on the drive
+
+50
+00:03:47,900 --> 00:03:53,730
+doesn't take any additional amount of time
+other than the first or the second bite.
+
+51
+00:03:53,730 --> 00:04:00,849
+Unfortunately due to the cost and design of
+these drives they're much smaller, so solid
+
+52
+00:04:00,849 --> 00:04:06,930
+state drive are significantly smaller, they're
+a little bit more expensive but hard drives
+
+53
+00:04:06,930 --> 00:04:10,599
+are larger, and they're cheaper but they perform
+slower.
+
+54
+00:04:10,599 --> 00:04:14,989
+So again we have the memory hierarchy working
+here just inside of the term of secondary
+
+55
+00:04:14,989 --> 00:04:15,989
+storage.
+
+56
+00:04:15,989 --> 00:04:20,340
+So even inside secondary storage we still
+have this concept of a memory hierarchy working.
+

@@ -1,0 +1,159 @@
+1
+00:00:02,060 --> 00:00:06,890
+When we used to make a call on the telephone,
+we'd have a physical connection.
+
+2
+00:00:06,890 --> 00:00:11,080
+A physical connection between your telephone
+and the destination telephone and you can
+
+3
+00:00:11,080 --> 00:00:16,359
+go back to the very, very old days, your parents
+and grandparents days, of making telephone
+
+4
+00:00:16,359 --> 00:00:17,359
+calls.
+
+5
+00:00:17,359 --> 00:00:21,070
+They used to call the local operator and ask
+for a connection to the national operator
+
+6
+00:00:21,070 --> 00:00:24,829
+and the national operator would connect to
+another local operator another local operator
+
+7
+00:00:24,829 --> 00:00:26,759
+would connect to the destination.
+
+8
+00:00:26,759 --> 00:00:32,780
+Along this line they would create a physical
+channel so one wire that went from the source
+
+9
+00:00:32,780 --> 00:00:36,550
+phone, your phone, to the destination phone.
+
+10
+00:00:36,550 --> 00:00:39,820
+That's absolutely not what happens at all
+today.
+
+11
+00:00:39,820 --> 00:00:41,850
+Now we're sending packets.
+
+12
+00:00:41,850 --> 00:00:47,640
+So today we send small amounts of information,
+very, very small amounts of information usually
+
+13
+00:00:47,640 --> 00:00:53,530
+of around a thousand bytes or fifteen hundred
+bytes and the data gets sent from one program
+
+14
+00:00:53,530 --> 00:00:58,831
+running on a machine to another program but
+unfortunately it can't be sent directly, it
+
+15
+00:00:58,831 --> 00:01:04,690
+has to be sent via protocols which each one
+will add a small amount of information to
+
+16
+00:01:04,690 --> 00:01:06,630
+this packet.
+
+17
+00:01:06,630 --> 00:01:15,979
+So the way that we send it is buying capsulated
+the packet and it's given to the lower level
+
+18
+00:01:15,979 --> 00:01:20,619
+protocols, so we take the data and we give
+it to the next lower level, and then the next
+
+19
+00:01:20,619 --> 00:01:24,329
+lower level gives it to another lower level,
+and the next lower level gives it's another
+
+20
+00:01:24,329 --> 00:01:29,109
+lower level, so we have a higher key that's
+created whereby the data stands at the top.
+
+21
+00:01:29,109 --> 00:01:34,710
+And then we have a small amount of information
+for application protocols added to the front
+
+22
+00:01:34,710 --> 00:01:42,109
+of that data, and then a network, for example,
+layer will add a small amount of data to the
+
+23
+00:01:42,109 --> 00:01:43,109
+front of that.
+
+24
+00:01:43,109 --> 00:01:48,179
+Now the purpose of all of this is so that
+when it's received on the destination the
+
+25
+00:01:48,179 --> 00:01:54,939
+destination can decide which for example application
+is supposed to receive this information so
+
+26
+00:01:54,939 --> 00:02:02,020
+we might have for just to use a good example
+we might have two tabs of chrome open, or
+
+27
+00:02:02,020 --> 00:02:06,659
+even we might have chrome and Internet Explorer
+open and if we have chrome an Internet Explorer
+
+28
+00:02:06,659 --> 00:02:12,150
+open and both are browsing the exact same
+website at the exact same time when we receive
+
+29
+00:02:12,150 --> 00:02:18,709
+data back, it's really important for the computer
+to be able to route appropriately the response
+
+30
+00:02:18,709 --> 00:02:25,720
+from the website either to chrome or to Internet
+Explorer and we do that via quite a few protocols
+
+31
+00:02:25,720 --> 00:02:30,560
+which will talk about in just a minute, but
+it's important to know that path back.
+
+32
+00:02:30,560 --> 00:02:35,030
+When the packet moves to the logical protocol
+we add a header and so on and so forth until
+
+33
+00:02:35,030 --> 00:02:37,879
+the data is actually sent on the physical
+network.
+

@@ -1,0 +1,66 @@
+1
+00:00:00,750 --> 00:00:04,390
+The same thing would work when we are counting
+in other number systems as well.
+
+2
+00:00:04,390 --> 00:00:09,800
+I'll talk about some of the more important
+ones.
+
+3
+00:00:09,800 --> 00:00:14,190
+One of them is the octal number system, short
+for base eight.
+
+4
+00:00:14,190 --> 00:00:19,071
+The digits here would be zero to seven; we're
+going to group eight objects together, so
+
+5
+00:00:19,071 --> 00:00:21,940
+we need symbols zero up to seven.
+
+6
+00:00:21,940 --> 00:00:25,730
+It would start zero, one, two, three, four,
+five, six, seven.
+
+7
+00:00:25,730 --> 00:00:33,320
+After this seven, we would have one group
+of octal ten and zero ones, eleven, twelve,
+
+8
+00:00:33,320 --> 00:00:36,140
+thirteen, fourteen, fifteen, sixteen, seventeen.
+
+9
+00:00:36,140 --> 00:00:40,930
+After seventeen, the next one would be grouped
+into another ten.
+
+10
+00:00:40,930 --> 00:00:44,890
+So we would have two tens, zero ones and so
+on.
+
+11
+00:00:44,890 --> 00:00:48,920
+Again, try to think what comes before a hundred.
+
+12
+00:00:48,920 --> 00:00:51,079
+Hope you got it right, it's 77 right?
+
+13
+00:00:51,079 --> 00:00:56,399
+After 77, the next object would be grouped
+into another ten, the next eight tens would
+
+14
+00:00:56,399 --> 00:01:03,100
+be grouped into one single object of 100 or
+100 things.
+

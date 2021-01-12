@@ -1,0 +1,182 @@
+1
+00:00:00,700 --> 00:00:04,420
+Data hazards are relevant for instructions
+that have dependency issues.
+
+2
+00:00:04,420 --> 00:00:08,570
+Let us use this example to illustrate such
+dependencies.
+
+3
+00:00:08,570 --> 00:00:13,910
+At clock cycle 5, the third instruction reads
+the value of R10 because it needs it for its
+
+4
+00:00:13,910 --> 00:00:16,049
+double word OR instruction.
+
+5
+00:00:16,049 --> 00:00:21,770
+However, the correct value of R10 is written
+at clock cycle 6 by the second instruction,
+
+6
+00:00:21,770 --> 00:00:27,010
+that correct data is not available when the
+OR instruction needs at cycle 5.
+
+7
+00:00:27,010 --> 00:00:30,970
+This is known as a read after write data hazard.
+
+8
+00:00:30,970 --> 00:00:35,950
+Note that although we use data in register
+to illustrate data hazards, they can also
+
+9
+00:00:35,950 --> 00:00:39,020
+use for data that is in memory.
+
+10
+00:00:39,020 --> 00:00:43,200
+One way to overcome data hazards is via data
+forwarding.
+
+11
+00:00:43,200 --> 00:00:48,950
+The basic idea of forwarding is to send data
+to the execute stage as soon it is available
+
+12
+00:00:48,950 --> 00:00:49,950
+in the CPU.
+
+13
+00:00:49,950 --> 00:00:56,610
+Using our example, the value of R10 is available
+in the CPU at clock cycle 5, because that
+
+14
+00:00:56,610 --> 00:01:02,420
+is when the memory accesses and puts it in
+the load memory data register.
+
+15
+00:01:02,420 --> 00:01:08,299
+Therefore, the CPU can forward the data from
+that load memory data register to the ALU
+
+16
+00:01:08,299 --> 00:01:13,590
+in the execute stage to guarantee that the
+correct value of R10 is used for the doubleword
+
+17
+00:01:13,590 --> 00:01:15,850
+OR operation.
+
+18
+00:01:15,850 --> 00:01:20,749
+Another approach to mitigate data hazards
+is by instruction re-ordering.
+
+19
+00:01:20,749 --> 00:01:26,530
+The basic idea here is for the compiler to
+find independent instructions to put between
+
+20
+00:01:26,530 --> 00:01:29,750
+dependent ones to avoid data hazards.
+
+21
+00:01:29,750 --> 00:01:35,619
+This can be done as long as the re-ordering
+does not modify the correctness of the code.
+
+22
+00:01:35,619 --> 00:01:37,880
+Consider the following example.
+
+23
+00:01:37,880 --> 00:01:44,350
+The instruction at address C8 depends on the
+instruction at address C4 because the instruction
+
+24
+00:01:44,350 --> 00:01:50,710
+at address C4 first writes to R10 then the
+one at C8 reads R10.
+
+25
+00:01:50,710 --> 00:01:57,090
+We also observe that the two instructions
+at addresses D0 and D4 did not depend on any
+
+26
+00:01:57,090 --> 00:02:00,779
+of the instructions between C4 and D0.
+
+27
+00:02:00,779 --> 00:02:06,859
+Therefore, the result of the previous instructions
+will not affect them if we move it up in the
+
+28
+00:02:06,859 --> 00:02:07,859
+code.
+
+29
+00:02:07,859 --> 00:02:14,720
+We can thus move the independent instructions
+at D0 and D4 in between the dependent ones.
+
+30
+00:02:14,720 --> 00:02:20,540
+This creates two clock cycles extra between
+the instruction that writes to R10 and the
+
+31
+00:02:20,540 --> 00:02:22,909
+one that reads from R10.
+
+32
+00:02:22,909 --> 00:02:28,810
+Therefore, when the instruction that reads
+R10 is doing so at the decode stage, R10 is
+
+33
+00:02:28,810 --> 00:02:32,239
+at least being written to at that same cycle.
+
+34
+00:02:32,239 --> 00:02:37,430
+We know that since the compiler is responsible
+for doing this re-ordering work, the addresses
+
+35
+00:02:37,430 --> 00:02:41,780
+of the instructions that are re-ordered are
+modified to reflect where they are in the
+
+36
+00:02:41,780 --> 00:02:43,230
+code.
+
+37
+00:02:43,230 --> 00:02:49,090
+We also note that this instruction re-ordering
+is not the same as out-of-order execution.
+
+38
+00:02:49,090 --> 00:02:53,470
+Out-of-order execution is an additional re-ordering
+that is done dynamically by the processor,
+
+39
+00:02:53,470 --> 00:02:54,579
+not by the compiler.
+

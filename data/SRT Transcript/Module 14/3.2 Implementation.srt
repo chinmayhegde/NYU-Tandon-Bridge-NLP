@@ -1,0 +1,382 @@
+1
+00:00:00,840 --> 00:00:06,820
+Let's implement this sorting algorithm, and
+it's a recursive algorithm, so let's do it
+
+2
+00:00:06,820 --> 00:00:07,860
+correctly.
+
+3
+00:00:07,860 --> 00:00:13,470
+So we’ll write a function merge-sort, it’s
+supposed to rearrange the elements so is doesn’t
+
+4
+00:00:13,470 --> 00:00:17,850
+need to return any value since it's a void
+function.
+
+5
+00:00:17,850 --> 00:00:26,779
+And the parameters are obviously the array
+and basically something to tell the range
+
+6
+00:00:26,779 --> 00:00:28,880
+of elements.
+
+7
+00:00:28,880 --> 00:00:35,870
+So we can do it in two ways, either pass the
+starting address of our current part of the
+
+8
+00:00:35,870 --> 00:00:46,180
+array we're trying to sort and the logical
+size, or we can always pass the starting location
+
+9
+00:00:46,180 --> 00:00:49,220
+of the entire collection.
+
+10
+00:00:49,220 --> 00:00:56,039
+And in order to indicate the range we're trying
+to sort, we'll have two indexes, low and high,
+
+11
+00:00:56,039 --> 00:00:58,489
+that kind of indicate the range.
+
+12
+00:00:58,489 --> 00:01:03,630
+Something similar to what we've done in the
+find index of min at selection-sort, where
+
+13
+00:01:03,630 --> 00:01:11,130
+we had the starting position sticked and the
+low and high indicated where we we’re searching
+
+14
+00:01:11,130 --> 00:01:12,999
+the index of min, same thing here.
+
+15
+00:01:12,999 --> 00:01:21,899
+We want to sort only in the range from low
+to high but it's located in a more bigger
+
+16
+00:01:21,899 --> 00:01:28,529
+sequence starting at address ARR, so merge
+sort would get the starting position of the
+
+17
+00:01:28,529 --> 00:01:35,500
+entire sequence and low and high to indicate
+the current range we're trying to sort.
+
+18
+00:01:35,500 --> 00:01:40,649
+Okay, so that the prototype of the merge-sort
+algorithm.
+
+19
+00:01:40,649 --> 00:01:44,649
+And then since it's a recursive algorithm,
+we need to start with the base case.
+
+20
+00:01:44,649 --> 00:01:51,659
+So if we're trying to sort the smallest sequence
+possible, basically the sequence of a single
+
+21
+00:01:51,659 --> 00:01:55,999
+element or in other words if low and high
+are equal to one another.
+
+22
+00:01:55,999 --> 00:02:01,490
+In this case, it is already sorted so we don’t
+need to do anything, just return an empty
+
+23
+00:02:01,490 --> 00:02:05,730
+return statement with no value because it's
+void we don’t need to return any value,
+
+24
+00:02:05,730 --> 00:02:08,259
+just break out of the function.
+
+25
+00:02:08,259 --> 00:02:16,930
+Otherwise, if it is not a single element,
+a collection, we have a real range of elements
+
+26
+00:02:16,930 --> 00:02:17,930
+we want to sort.
+
+27
+00:02:17,930 --> 00:02:25,489
+Let's do it with the three step algorithm
+we've just described.
+
+28
+00:02:25,489 --> 00:02:27,420
+So we have our array, right.
+
+29
+00:02:27,420 --> 00:02:33,849
+We have low and the high, indicating the range
+of elements we want to we want to sort.
+
+30
+00:02:33,849 --> 00:02:39,209
+And then first step is basically for the first
+half of the elements.
+
+31
+00:02:39,209 --> 00:02:45,060
+So we would need to figure out where this
+first half starts, yeah we know what starts
+
+32
+00:02:45,060 --> 00:02:46,849
+at low, but where it ends.
+
+33
+00:02:46,849 --> 00:02:53,950
+So we would need some kind of an index mid;
+let's define this mid.
+
+34
+00:02:53,950 --> 00:03:01,499
+And just as we had in the binary search algorithm
+in our previous model, mid would be the average
+
+35
+00:03:01,499 --> 00:03:05,239
+between the low and the high, basically low
+plus high div two.
+
+36
+00:03:05,239 --> 00:03:09,939
+Now that we have mid, let’s sort the first
+half, right.
+
+37
+00:03:09,939 --> 00:03:15,560
+Let's make it in increasing order, so let's
+call merge-sort; it's a recursive algorithm
+
+38
+00:03:15,560 --> 00:03:20,900
+so merge-sort would do the job, basically
+sort the first half of the numbers if we call
+
+39
+00:03:20,900 --> 00:03:21,900
+it correctly.
+
+40
+00:03:21,900 --> 00:03:27,829
+So in order to indicate the range of the first
+half, the starting address would be the same
+
+41
+00:03:27,829 --> 00:03:33,069
+array, but the low and the high, in this case
+would be low and mid.
+
+42
+00:03:33,069 --> 00:03:37,400
+We want to sort the elements starting at low
+ending at mid.
+
+43
+00:03:37,400 --> 00:03:43,489
+After we've done that, so this line here sorts
+the entire first half of the elements.
+
+44
+00:03:43,489 --> 00:03:46,230
+Then we need to sort the second half of the
+elements.
+
+45
+00:03:46,230 --> 00:03:51,999
+Once again, let's call merge-sort in order
+to recursively sort.
+
+46
+00:03:51,999 --> 00:03:55,799
+And then, let's pass the second half as a
+parameter.
+
+47
+00:03:55,799 --> 00:04:02,349
+So that, in order to create that half we need
+to know where it starts; so it starts one
+
+48
+00:04:02,349 --> 00:04:08,939
+after where the first act ended at mid plus
+one and where it ends, obviously at high.
+
+49
+00:04:08,939 --> 00:04:15,830
+So let’s call merge sort with the same starting
+address ARR but the range of elements we want
+
+50
+00:04:15,830 --> 00:04:20,359
+to sort now is starting at mid plus one ending
+at high.
+
+51
+00:04:20,359 --> 00:04:26,319
+So after these two calls, we have the first
+half of the number sorted and the second half
+
+52
+00:04:26,319 --> 00:04:33,419
+of the number sorted, we now just need to
+merge them together into one whole sequence.
+
+53
+00:04:33,419 --> 00:04:40,250
+For that we better create unique function,
+a designated function, to do that job.
+
+54
+00:04:40,250 --> 00:04:48,860
+We'll call it merge; and merge should take
+these two halves and combine them together.
+
+55
+00:04:48,860 --> 00:04:57,740
+So the parameters for merge would be the starting
+ARR, and some values to indicate where the
+
+56
+00:04:57,740 --> 00:05:02,120
+first half starts, where the first have ends,
+where the second half starts and where the
+
+57
+00:05:02,120 --> 00:05:03,320
+second half ends.
+
+58
+00:05:03,320 --> 00:05:10,300
+So we would have the low left and the high
+left, to indicate where the first or the low
+
+59
+00:05:10,300 --> 00:05:16,390
+left index is and where the index of the high
+element of the left side.
+
+60
+00:05:16,390 --> 00:05:22,800
+And instead of having low right and high right
+to indicate where the right side starts and
+
+61
+00:05:22,800 --> 00:05:29,919
+ends, we don't need both of them because the
+right side starts right after the left side
+
+62
+00:05:29,919 --> 00:05:30,919
+ends, right.
+
+63
+00:05:30,919 --> 00:05:33,160
+It should start one after high left.
+
+64
+00:05:33,160 --> 00:05:38,470
+So, we don't need to pass that as a parameter;
+let’s only have the high right.
+
+65
+00:05:38,470 --> 00:05:45,669
+So we have where the left side starts where
+the left side ends, and where the right side
+
+66
+00:05:45,669 --> 00:05:48,210
+ends, obviously we know where the right start
+starts.
+
+67
+00:05:48,210 --> 00:05:53,120
+So the prototype would be: ARR low left, high
+left, high right.
+
+68
+00:05:53,120 --> 00:05:57,340
+And it's a void function, it rearranges the
+elements, it doesn’t need to return any
+
+69
+00:05:57,340 --> 00:05:58,340
+value.
+
+70
+00:05:58,340 --> 00:06:03,030
+So assuming we have that, we’ll make and
+implement this function in a few minutes,
+
+71
+00:06:03,030 --> 00:06:08,400
+assuming we have the merge after calling the
+two recursive calls; after having the first
+
+72
+00:06:08,400 --> 00:06:14,470
+to have sorted, we just need to merge them
+by calling the merge function that just passed
+
+73
+00:06:14,470 --> 00:06:18,770
+the right values for the parameters of merge.
+
+74
+00:06:18,770 --> 00:06:29,930
+So, let's call merge with our ARR low and
+mid for the bounds of the left side, low is
+
+75
+00:06:29,930 --> 00:06:38,000
+the low left, mid is the high left, and mid
+plus one would be the low right, but obviously
+
+76
+00:06:38,000 --> 00:06:40,550
+high that’s the high right.
+
+77
+00:06:40,550 --> 00:06:48,750
+So, this call basically merges these two halves
+together and after sorting the first half,
+
+78
+00:06:48,750 --> 00:06:54,520
+sorting the second half, merging them, we
+have one long sequence from low to high that
+
+79
+00:06:54,520 --> 00:06:55,599
+is sorted.
+
+80
+00:06:55,599 --> 00:06:58,190
+That's basically the merge-sort algorithm.
+

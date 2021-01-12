@@ -1,0 +1,97 @@
+1
+00:00:00,299 --> 00:00:02,780
+Let's now go over branch instructions in MIPS64.
+
+2
+00:00:02,780 --> 00:00:09,550
+The two most fundamental branch instruction
+in MIPS64 are Branch if equal, or BEQ, and
+
+3
+00:00:09,550 --> 00:00:11,730
+Branch if not equal, BNE.
+
+4
+00:00:11,730 --> 00:00:17,220
+Both branch instructions use relative target
+calculation and have the same Function, labeled
+
+5
+00:00:17,220 --> 00:00:20,390
+func2, to calculate the address of the target
+instruction.
+
+6
+00:00:20,390 --> 00:00:25,359
+Both instructions compare the values of two
+registers to check their condition.
+
+7
+00:00:25,359 --> 00:00:29,339
+Branch if equal checks if the values of the
+two registers are the same.
+
+8
+00:00:29,339 --> 00:00:33,129
+If so, the CPU branches to the calculated
+target address.
+
+9
+00:00:33,129 --> 00:00:40,210
+Otherwise, the CPU goes to the next instruction
+in the sequential code which is PC+4.
+
+10
+00:00:40,210 --> 00:00:43,760
+Branch if not equal checks if the values are
+different.
+
+11
+00:00:43,760 --> 00:00:49,800
+If that is the case, the CPU branches to the
+calculated target address
+
+12
+00:00:49,800 --> 00:00:55,250
+Several other branch instructions derived
+from branch if equal and branch if not equal.
+
+13
+00:00:55,250 --> 00:01:01,539
+Such instructions are Branch if equal to zero,
+branch if not equal to zero, branch if less
+
+14
+00:01:01,539 --> 00:01:07,040
+than zero, branch if less than or equal to
+zero, any many more.
+
+15
+00:01:07,040 --> 00:01:14,640
+We focus primarily on branch if equal, branch
+if not equal, and branch if equal to zero.
+
+16
+00:01:14,640 --> 00:01:19,970
+There is one terminology that is commonly
+used when talking about conditional branches.
+
+17
+00:01:19,970 --> 00:01:24,750
+It is the “branch is taken/not taken”
+term.
+
+18
+00:01:24,750 --> 00:01:29,440
+When one says a branch is taken, it means
+that the condition that the branch checks
+
+19
+00:01:29,440 --> 00:01:34,990
+is true and the CPU branches to the target
+address calculated.
+
+20
+00:01:34,990 --> 00:01:37,070
+Branch not taken means the opposite.
+

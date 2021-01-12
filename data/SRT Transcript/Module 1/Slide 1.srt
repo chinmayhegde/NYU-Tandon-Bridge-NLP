@@ -1,0 +1,48 @@
+1
+00:00:01,780 --> 00:00:06,000
+In this first module we just want to give
+everybody a start off with a basis on what
+
+2
+00:00:06,000 --> 00:00:08,450
+a computer is and how it works.
+
+3
+00:00:08,450 --> 00:00:10,910
+In the future modules we're going to be doing
+a lot of programming.
+
+4
+00:00:10,910 --> 00:00:13,549
+We're going to be doing a lot of operating
+systems concerns.
+
+5
+00:00:13,549 --> 00:00:17,119
+We're going to be doing a lot of things that
+you need to know about what goes on inside
+
+6
+00:00:17,119 --> 00:00:21,930
+the computer and so in this module we just
+like to start you off with the very basis
+
+7
+00:00:21,930 --> 00:00:25,360
+of what's inside the computer and how things
+work.
+
+8
+00:00:25,360 --> 00:00:29,150
+We don't know what your background is we don't
+know where you come from or what your history
+
+9
+00:00:29,150 --> 00:00:34,539
+is so if some of this is a little bit basic,
+then we apologize but for everybody we'd
+
+10
+00:00:34,539 --> 00:00:36,050
+like to start off on the same foot.
+

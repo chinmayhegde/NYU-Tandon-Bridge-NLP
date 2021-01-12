@@ -1,0 +1,293 @@
+1
+00:00:00,750 --> 00:00:04,960
+Now that we have the software solutions figured
+out, we'd much rather take a look at hardware
+
+2
+00:00:04,960 --> 00:00:05,960
+solution.
+
+3
+00:00:05,960 --> 00:00:10,019
+So, this is what we're really going to do
+today, after a very short while the CPU designers
+
+4
+00:00:10,019 --> 00:00:14,309
+realize that the computer scientists were
+having this problem and they said: hey guys
+
+5
+00:00:14,309 --> 00:00:18,380
+we can deal with this much easier and give
+you some hardware solutions to take care of
+
+6
+00:00:18,380 --> 00:00:24,420
+your concurrency controllers, take care of
+dealing with your locks.
+
+7
+00:00:24,420 --> 00:00:30,320
+And so what they did was they created some
+hardware built into the CPU to take care of
+
+8
+00:00:30,320 --> 00:00:34,460
+this; most of these are instructions that
+are built directly into the CPU.
+
+9
+00:00:34,460 --> 00:00:38,160
+Now the first one is the disabling of interrupts.
+
+10
+00:00:38,160 --> 00:00:43,360
+I don't think this is a great idea because
+interrupts are really necessity; we want to
+
+11
+00:00:43,360 --> 00:00:44,890
+have interrupts in the system.
+
+12
+00:00:44,890 --> 00:00:48,680
+If an interrupt does occurs it means a piece
+of hardware needs immediate servicing and
+
+13
+00:00:48,680 --> 00:00:50,600
+we want to go ahead and do that.
+
+14
+00:00:50,600 --> 00:00:55,000
+But if we take away the possibility that an
+interrupt might occur then we effectively
+
+15
+00:00:55,000 --> 00:01:01,489
+take away the possibility of asynchrony; we
+guarantee that this thread will not be interrupted
+
+16
+00:01:01,489 --> 00:01:04,250
+until it decides to re-enable interrupts.
+
+17
+00:01:04,250 --> 00:01:10,229
+Now this would probably be limited to the
+operating systems control, so this would require
+
+18
+00:01:10,229 --> 00:01:15,420
+some intervention by the operating system
+to use this because imagine a situation where
+
+19
+00:01:15,420 --> 00:01:20,110
+a thread disables interrupts and then crashes;
+the whole system is stuck you can't get out
+
+20
+00:01:20,110 --> 00:01:21,940
+except with a big power switch.
+
+21
+00:01:21,940 --> 00:01:27,560
+So, disabling interrupts is something that
+we use very sparingly if it is in existence
+
+22
+00:01:27,560 --> 00:01:30,509
+and even then we try to avoid it.
+
+23
+00:01:30,509 --> 00:01:34,920
+The other options that we have our instructions
+that are built into the instruction set on
+
+24
+00:01:34,920 --> 00:01:35,920
+the processor.
+
+25
+00:01:35,920 --> 00:01:40,869
+So, the first one is called a test and set,
+and in the test and set function, test and
+
+26
+00:01:40,869 --> 00:01:47,170
+set instruction, what we do is check a memory
+location and if its value is of a particular
+
+27
+00:01:47,170 --> 00:01:48,170
+value.
+
+28
+00:01:48,170 --> 00:01:52,540
+So, for example zero if we find that there
+is a zero stored in that memory location we
+
+29
+00:01:52,540 --> 00:01:53,980
+will change it to a one.
+
+30
+00:01:53,980 --> 00:01:58,979
+So, this is perfect for a Boolean flag variable,
+for example, which says that maybe somebody
+
+31
+00:01:58,979 --> 00:02:00,810
+is in the critical section.
+
+32
+00:02:00,810 --> 00:02:04,640
+By having this test and set instruction, we
+can have that single variable that single
+
+33
+00:02:04,640 --> 00:02:09,619
+Boolean variable that says there's somebody
+in the critical section and we can set it
+
+34
+00:02:09,619 --> 00:02:12,879
+equal to one at the same time it’s testing
+it.
+
+35
+00:02:12,879 --> 00:02:15,900
+Now this is an atomic machine level instruction.
+
+36
+00:02:15,900 --> 00:02:21,170
+So, the CPU takes control of the system bus,
+goes and checks the location in memory, and
+
+37
+00:02:21,170 --> 00:02:27,720
+then if it is the zero, goes resets that value
+to one in one atomic instruction; nobody else
+
+38
+00:02:27,720 --> 00:02:30,690
+will be allowed to access that memory location.
+
+39
+00:02:30,690 --> 00:02:35,170
+So, even if we have another processor that
+processor will not be allowed access to the
+
+40
+00:02:35,170 --> 00:02:39,190
+memory location during a test and set because
+it has to happen atomically.
+
+41
+00:02:39,190 --> 00:02:44,780
+So, a result is returned back to the back
+to the operating system or back to the calling
+
+42
+00:02:44,780 --> 00:02:48,930
+program that asked for the test and set, and
+that indicates whether it was successful.
+
+43
+00:02:48,930 --> 00:02:52,959
+Meaning, we both tested this to make sure
+nobody's in their critical section and at
+
+44
+00:02:52,959 --> 00:02:58,170
+the same time we set it to go so indicate
+that you are in the critical section and that
+
+45
+00:02:58,170 --> 00:03:01,300
+means that the process is allowed to go into
+its critical section.
+
+46
+00:03:01,300 --> 00:03:06,209
+Or we have a failure in which case the thread
+or the process has to pause and delay and
+
+47
+00:03:06,209 --> 00:03:07,209
+try it again.
+
+48
+00:03:07,209 --> 00:03:10,260
+So, the test and set actually works fairly
+well.
+
+49
+00:03:10,260 --> 00:03:14,310
+The other option is very similar it's called
+exchange, and this is a very common one that
+
+50
+00:03:14,310 --> 00:03:20,099
+we use today, in which we have a swapping
+of a location in main memory with that of
+
+51
+00:03:20,099 --> 00:03:21,099
+a register.
+
+52
+00:03:21,099 --> 00:03:27,520
+So, we can again use, this is a Boolean flag
+variable, except now we can put a one in a
+
+53
+00:03:27,520 --> 00:03:33,299
+particular register, call exchange for the
+memory location and we literally get a swap
+
+54
+00:03:33,299 --> 00:03:38,320
+of the value in the register with the value
+in the memory location.
+
+55
+00:03:38,320 --> 00:03:44,220
+So, if the memory location had a zero, it
+will now be set to one and we can go back
+
+56
+00:03:44,220 --> 00:03:49,080
+afterwards and check to make sure that it
+was a zero, if it was a one then we'll know
+
+57
+00:03:49,080 --> 00:03:51,360
+that it was a one because we'll get it back.
+
+58
+00:03:51,360 --> 00:03:56,670
+But the nice feature is that when we do the
+exchange, even if we're interrupted immediately
+
+59
+00:03:56,670 --> 00:04:01,220
+after the exchange instruction, the indication
+that we're in the critical section has already
+
+60
+00:04:01,220 --> 00:04:05,120
+been set and now we just have to check to
+make sure whether it was successful or not.
+
+61
+00:04:05,120 --> 00:04:08,910
+So, the exchange instruction is a very common
+one that's in use today and it's relatively
+
+62
+00:04:08,910 --> 00:04:08,939
+easy to understand.
+

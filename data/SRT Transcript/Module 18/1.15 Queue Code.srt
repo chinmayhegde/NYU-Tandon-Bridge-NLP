@@ -1,0 +1,71 @@
+1
+00:00:00,940 --> 00:00:04,160
+So here we have the code for the queue class.
+
+2
+00:00:04,160 --> 00:00:08,090
+And again, you can see it looks very much
+similar to the stack class.
+
+3
+00:00:08,090 --> 00:00:13,579
+We have the data storage as our private data
+members, are only private data member.
+
+4
+00:00:13,579 --> 00:00:20,830
+It's a linked list of type T, so we have a
+templated and we have the enqueue and the
+
+5
+00:00:20,830 --> 00:00:26,660
+dequeue functions, where we push on to the
+back of the linked list and we pop from the
+
+6
+00:00:26,660 --> 00:00:28,380
+front of the linked list.
+
+7
+00:00:28,380 --> 00:00:34,780
+Ehe top element just returns again, the iterator,
+the dereference of the iterator.
+
+8
+00:00:34,780 --> 00:00:39,350
+And then the isEmpty, int size and the clear
+actually completely unchanged from the stack
+
+9
+00:00:39,350 --> 00:00:40,680
+versus the queue.
+
+10
+00:00:40,680 --> 00:00:45,989
+So the fundamental difference here is that
+the enqueue function is going to push on to
+
+11
+00:00:45,989 --> 00:00:51,039
+the back, whereas the dequeue function is
+going to pop from the front.
+
+12
+00:00:51,039 --> 00:00:57,059
+And by doing that we've changed the way that
+we're inserting and removing into this list
+
+13
+00:00:57,059 --> 00:01:00,799
+and that means we go from having a stack to
+having a queue.
+
+14
+00:01:00,799 --> 00:01:05,730
+First in, last out for the stack; first in,
+first out for the queue, and that makes all
+
+15
+00:01:05,730 --> 00:01:06,650
+the difference in the world.
+

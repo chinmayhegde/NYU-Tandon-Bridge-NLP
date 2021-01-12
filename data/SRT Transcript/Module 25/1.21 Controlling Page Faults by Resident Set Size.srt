@@ -1,0 +1,137 @@
+1
+00:00:00,470 --> 00:00:05,549
+So, I'm looking at this chart and what the
+chart is showing you is the page fault rate
+
+2
+00:00:05,549 --> 00:00:09,500
+as compared to the number of frames allocated
+to the process.
+
+3
+00:00:09,500 --> 00:00:16,480
+Now if we take a look, obviously if we only
+have one frame for the process it’s going
+
+4
+00:00:16,480 --> 00:00:21,960
+to create an almost infinite number of page
+faults; every memory access, almost, will
+
+5
+00:00:21,960 --> 00:00:23,999
+need a page fault.
+
+6
+00:00:23,999 --> 00:00:29,249
+And on the other side if we have an infinite
+number of frames, enough that it fits the
+
+7
+00:00:29,249 --> 00:00:33,250
+entire process into main memory, then we have
+no page fault.
+
+8
+00:00:33,250 --> 00:00:36,800
+But where it's interesting is that there's
+a non-linear progression between those two
+
+9
+00:00:36,800 --> 00:00:37,910
+points.
+
+10
+00:00:37,910 --> 00:00:43,330
+If we look at the process that has all the
+memory that it could possibly want and we
+
+11
+00:00:43,330 --> 00:00:49,850
+remove just one frame, we only cause a very
+small number of page faults. and on the flip
+
+12
+00:00:49,850 --> 00:00:54,890
+side if we look at a process which only has
+one Frame and we double the number of frames,
+
+13
+00:00:54,890 --> 00:00:59,480
+that’s going to result in a massive decrease
+in the number of page faults.
+
+14
+00:00:59,480 --> 00:01:03,250
+So, there's a non linear progression between
+the two.
+
+15
+00:01:03,250 --> 00:01:09,220
+And one of the things that we can extrapolate
+is that there is a sort of optimal location,
+
+16
+00:01:09,220 --> 00:01:15,860
+where the process is not faulting too much
+but also is not is faulting a little bit.
+
+17
+00:01:15,860 --> 00:01:20,790
+In other words, we’re saying that page faults
+are not necessarily a bad thing; that since
+
+18
+00:01:20,790 --> 00:01:27,050
+main memory is a quantity which is not infinite
+that we would like to have some number of
+
+19
+00:01:27,050 --> 00:01:34,520
+page faults to indicate that the process hasn't
+been given too many frames, in other words
+
+20
+00:01:34,520 --> 00:01:37,060
+that were starving other processes.
+
+21
+00:01:37,060 --> 00:01:43,280
+And we can use a couple of algorithms to try
+and cause the process to try, and manage the
+
+22
+00:01:43,280 --> 00:01:49,200
+resident set, to cause the process to fall
+in between the upper and lower bounds.
+
+23
+00:01:49,200 --> 00:01:54,030
+If it's above the upper bounds, we can increase
+the number of frames that are available to
+
+24
+00:01:54,030 --> 00:01:58,080
+that process thereby, effectively decreasing
+its page fault rate.
+
+25
+00:01:58,080 --> 00:02:02,650
+And if it’s below the lower bounds, then
+we can decrease the number of frames in the
+
+26
+00:02:02,650 --> 00:02:07,900
+process give them to somebody else to hopefully
+lower its fault rate.
+
+27
+00:02:07,900 --> 00:02:13,370
+And we can leave it in between this upper
+and lower bounds so that it has enough frames
+
+28
+00:02:13,370 --> 00:02:19,060
+to do the work that it needs to do, but not
+so many friends that it's starving other processes.
+

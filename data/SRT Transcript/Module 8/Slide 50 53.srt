@@ -1,0 +1,183 @@
+0:00:00.680,0:00:03.810
+Let’s take a closer look here at this program.
+
+0:00:03.810,0:00:08.980
+It seems like we are calling factorial over
+and over which is a great thing.
+
+0:00:08.980,0:00:13.300
+Each time passing a different value as our
+local num.
+
+0:00:13.300,0:00:17.690
+First time we are calling factorial for n
+second time factorial with k third time factorial
+
+0:00:17.690,0:00:18.740
+with n minus k.
+
+0:00:18.740,0:00:25.020
+So each time num our local variable and the
+factorial function gets a different value.
+
+0:00:25.020,0:00:29.820
+For example if n and k are five and three
+first time we will call factorial with num
+
+0:00:29.820,0:00:30.990
+equals five.
+
+0:00:30.990,0:00:35.050
+Second time we will call factorial with num
+equals three and next in the third time we
+
+0:00:35.050,0:00:38.820
+will call factorial with num equals five minus
+three which is two.
+
+0:00:38.820,0:00:48.310
+And the factorial would be executed the right
+amount of iterations and each time when factorial
+
+0:00:48.310,0:00:54.340
+is done it goes back to where we called it
+from and do the assignment.
+
+0:00:54.340,0:01:00.110
+So basically each time we call factorial we
+jump to the beginning of the factorial function
+
+0:01:00.110,0:01:01.350
+same position.
+
+0:01:01.350,0:01:05.080
+And each time we return from factorial we
+go back to where we came from.
+
+0:01:05.080,0:01:09.810
+So first time we called factorial we came
+back to the first assignment.
+
+0:01:09.810,0:01:12.980
+Second time we called factorial we went back
+to the second assignment.
+
+0:01:12.980,0:01:16.730
+And third time we called factorial we went
+back to the third assignment.
+
+0:01:16.730,0:01:27.920
+You can see that using functions calling functions
+is some other way of controlling the flow
+
+0:01:27.920,0:01:29.120
+of our program.
+
+0:01:29.120,0:01:34.479
+It is not sequential right so when we are
+calling factorial we are not going right back
+
+0:01:34.479,0:01:37.720
+or right to the next instructions.
+
+0:01:37.720,0:01:42.990
+We are jumping to a totally different position
+in our code doing some instructions over there
+
+0:01:42.990,0:01:45.890
+and then jumping back to where we came from.
+
+0:01:45.890,0:01:53.049
+That happens or in order to do that we would
+need to figure out a way to manage this kind
+
+0:01:53.049,0:01:54.280
+of control flow.
+
+0:01:54.280,0:01:56.979
+So jumping to the beginning of the function
+that’s easy.
+
+0:01:56.979,0:02:00.840
+We always each call jumps to the exact same
+position in the code to the beginning of the
+
+0:02:00.840,0:02:01.860
+function.
+
+0:02:01.860,0:02:08.459
+But in order to return to the right place
+we would need some kind of mechanism to save
+
+0:02:08.459,0:02:13.549
+and to store the position where we would need
+to jump back to.
+
+0:02:13.549,0:02:15.879
+In a few minutes we will see exactly how we
+do that.
+
+0:02:15.879,0:02:26.529
+So to put it in context you can see that functions
+are a new way of a control flow.
+
+0:02:26.529,0:02:31.750
+So if like we have the sequential flow that
+our instructions are executed one after the
+
+0:02:31.750,0:02:34.629
+other in a sequential order.
+
+0:02:34.629,0:02:42.060
+Then we introduced branching where we could
+some executions do one lines of code and another
+
+0:02:42.060,0:02:46.480
+execution jump to do a different set of instructions.
+
+0:02:46.480,0:02:51.169
+Iterative statements that allow us to repeat
+the same instructions over and over.
+
+0:02:51.169,0:02:56.060
+To jump back to a position we’ve already
+been in our code and execute the instructions
+
+0:02:56.060,0:02:57.230
+over and over.
+
+0:02:57.230,0:03:06.680
+Function calls are none of these control flows
+are a different order that we are executing
+
+0:03:06.680,0:03:07.680
+our instructions.
+
+0:03:07.680,0:03:12.339
+When we call a function we jump to a totally
+new position in our code.
+
+0:03:12.339,0:03:15.519
+Do or execute the instructions over there.
+
+0:03:15.519,0:03:20.900
+And when the function ends using a return
+statement we are jumping back to where we
+
+0:03:20.900,0:03:22.040
+came from.
+
+0:03:22.040,0:03:28.669
+So that is a totally new control flow and
+in order to get a bit deeper understanding
+
+0:03:28.669,0:03:33.199
+of what is going on inside the computer there.
+
+0:03:33.199,0:03:42.400
+Let me introduce you to an execution model
+named the run time stack.
+
+0:03:42.400,0:03:46.969
+And that is basically what happens inside
+of the computer during the execution time.

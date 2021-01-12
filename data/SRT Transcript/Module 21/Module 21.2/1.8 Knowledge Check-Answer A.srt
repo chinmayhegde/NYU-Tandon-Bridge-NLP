@@ -1,0 +1,9 @@
+1
+00:00:00,669 --> 00:00:07,040
+Since a DRAM block can be as large as 64 bytes,
+and each instruction is only 4 bytes, then
+
+2
+00:00:07,040 --> 00:00:10,090
+a DRAM block can have up to 16 instructions
+

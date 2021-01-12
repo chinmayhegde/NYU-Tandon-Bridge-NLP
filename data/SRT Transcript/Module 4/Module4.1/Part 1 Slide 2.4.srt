@@ -1,0 +1,78 @@
+1
+00:00:00,510 --> 00:00:05,260
+Let’s stop for a minute and roll back to
+I don’t know second grade.
+
+2
+00:00:05,260 --> 00:00:12,250
+And recall what our math teacher used to say
+when we divide 13 by 5.
+
+3
+00:00:12,250 --> 00:00:18,300
+So when we divide 13 by 5 we get something
+like 2 with a remainder of 3.
+
+4
+00:00:18,300 --> 00:00:27,050
+Basically means 5 fits into 13 two full times
+and there is still a remainder after these
+
+5
+00:00:27,050 --> 00:00:28,910
+two full times of 3.
+
+6
+00:00:28,910 --> 00:00:38,510
+There are two designated operators that give
+us these 2 and 3 they are called div and mod.
+
+7
+00:00:38,510 --> 00:00:44,499
+For example if we do 13 div 5 we get 2.
+
+8
+00:00:44,499 --> 00:00:50,889
+Which basically div means how many full times
+times 5 fits in 13.
+
+9
+00:00:50,889 --> 00:00:54,960
+So 13 div 5 results to 2.
+
+10
+00:00:54,960 --> 00:00:59,370
+And 13 mod 5 results to 3.
+
+11
+00:00:59,370 --> 00:01:03,909
+Basically meaning what’s the remainder when
+we are dividing 13 by 5.
+
+12
+00:01:03,909 --> 00:01:16,670
+In C++ we don’t use div and mod in the textual
+writing there are specific symbols to do div
+
+13
+00:01:16,670 --> 00:01:17,670
+and mod.
+
+14
+00:01:17,670 --> 00:01:27,440
+For div we have the slash operator so if we
+have int slash int that would do a div operator
+
+15
+00:01:27,440 --> 00:01:29,230
+in this case that would be 2.
+
+16
+00:01:29,230 --> 00:01:38,080
+And for mod we will use the percent symbol
+so 13 percent 5 would be 3 for the remainder
+
+17
+00:01:38,080 --> 00:01:39,920
+when we divide 13 by 5.
+

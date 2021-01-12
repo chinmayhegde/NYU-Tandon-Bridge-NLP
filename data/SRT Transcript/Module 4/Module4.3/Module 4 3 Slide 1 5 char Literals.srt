@@ -1,0 +1,337 @@
+0:00:00.590,0:00:06.620
+Ok so we have the char data type for representing
+a character.
+
+0:00:06.620,0:00:15.519
+Each character takes one byte of memory and
+we use the ASCII table in order to map letters
+
+0:00:15.519,0:00:17.039
+into numbers.
+
+0:00:17.039,0:00:24.410
+Let’s see what built in literals there are
+in C++ for characters.
+
+0:00:24.410,0:00:33.899
+So let’s say we have a char variable ch
+and we want to assign A into this character.
+
+0:00:33.899,0:00:39.980
+So obviously we cannot say something like
+ch equals A because the compiler would then
+
+0:00:39.980,0:00:46.820
+try to assign would consider A to be a variable
+name and to assign the value of the variable
+
+0:00:46.820,0:00:49.430
+A into the variable ch.
+
+0:00:49.430,0:00:55.050
+In this case there is no variable A and that
+would result with a compilation error but
+
+0:00:55.050,0:01:03.460
+there is another way to have a constant a
+literal of a value A in C++.
+
+0:01:03.460,0:01:11.850
+We don’t just write the letter A. For that
+we have the letter or each symbol enclose
+
+0:01:11.850,0:01:13.740
+in a single quote.
+
+0:01:13.740,0:01:20.819
+So we have single quote A single quote that
+is the constant or the literal for the letter
+
+0:01:20.819,0:01:28.139
+A. Single quote upper case B single quote
+that would be a constant for the letter upper
+
+0:01:28.139,0:01:31.869
+case B. And for the digits and for other symbols
+as well.
+
+0:01:31.869,0:01:41.169
+So if we want to assign ch with a letter A
+we have it by ch equals and then A inside
+
+0:01:41.169,0:01:42.529
+single quote.
+
+0:01:42.529,0:01:53.179
+We can then cout this A and we can cout the
+literal itself cout quote B.
+
+0:01:53.179,0:02:02.159
+We cannot by the way do ch equals double quotes
+A. The double quotes is for strings not for
+
+0:02:02.159,0:02:07.139
+characters and that kind of assignment is
+totally illegal.
+
+0:02:07.139,0:02:12.689
+So you can’t do ch equal double quote A.
+There is a very big difference between character
+
+0:02:12.689,0:02:18.640
+and string we will talk about the string data
+type in a few minutes.
+
+0:02:18.640,0:02:28.599
+Ok so we have these literals what should we
+do if we want to have a character contain
+
+0:02:28.599,0:02:35.040
+a value that cannot be printed or doesn’t
+have a key on the keyboard.
+
+0:02:35.040,0:02:39.290
+Or even if it does have a key on the keyboard
+we don’t want to type it because it is like
+
+0:02:39.290,0:02:40.569
+used for something else.
+
+0:02:40.569,0:02:47.260
+For example if I want the character to be
+new line obviously I cannot do quote press
+
+0:02:47.260,0:02:52.549
+enter and then another quote because pressing
+enter would just break the line in our code.
+
+0:02:52.549,0:03:00.520
+So there should be another way to say to the
+compiler we want to represent a new line character.
+
+0:03:00.520,0:03:07.280
+For that we use a special syntax named escape
+character which is back slash symbol.
+
+0:03:07.280,0:03:14.719
+So we do it like that we have a single quote
+and then in the these two single quotes write
+
+0:03:14.719,0:03:16.099
+back slash n.
+
+0:03:16.099,0:03:20.100
+Basically telling the compiler it is not the
+letter N we don’t want to represent the
+
+0:03:20.100,0:03:21.280
+letter N now.
+
+0:03:21.280,0:03:26.420
+The back slash and the n come together to
+represent a single character in the case of
+
+0:03:26.420,0:03:30.360
+back slash n it represents the new line character.
+
+0:03:30.360,0:03:38.389
+So we can have a character ch and then assign
+or in this case we can just print cout and
+
+0:03:38.389,0:03:41.560
+back slash N. That would break the line.
+
+0:03:41.560,0:03:46.469
+Equivalent by the way to cout endl same thing
+they both do.
+
+0:03:46.469,0:03:52.469
+So we can assign ch with back slash n and
+then print this ch.
+
+0:03:52.469,0:04:01.260
+We can also cout the string ABC and continue
+printing back slash n just like cout ABC and
+
+0:04:01.260,0:04:03.579
+breaking the line.
+
+0:04:03.579,0:04:10.609
+By the way a cool thing we can also do cout
+and then inside a string inside double quotes
+
+0:04:10.609,0:04:16.000
+we can have ABC back slash N that would also
+print ABC and break the line.
+
+0:04:16.000,0:04:21.680
+So the compiler knows that A is the first
+character in the string B is the second character
+
+0:04:21.680,0:04:26.650
+in the string C is the third character in
+the string and then back slash since it starts
+
+0:04:26.650,0:04:32.180
+with a back slash they come together and they
+represent new line character.
+
+0:04:32.180,0:04:36.710
+So that would also print ABC and break the
+line.
+
+0:04:36.710,0:04:44.479
+A few other back slashes a few other characters
+that have this escape character that uses
+
+0:04:44.479,0:04:46.139
+escape character syntax.
+
+0:04:46.139,0:04:52.360
+There is also a back slash T for tab and if
+we want to print or to use the back slash
+
+0:04:52.360,0:04:56.900
+symbol itself we just do back slash back slash.
+
+0:04:56.900,0:05:01.400
+There are a few more but I think that’s
+enough for the start.
+
+0:05:01.400,0:05:07.200
+Let’s talk about the arithmetic operators
+in context of char.
+
+0:05:07.200,0:05:13.740
+Now typically arithmetic operators are used
+for numeric types but then characters are
+
+0:05:13.740,0:05:17.430
+considered to be numeric types in this sense.
+
+0:05:17.430,0:05:21.380
+And there are arithmetic operators for characters
+as well.
+
+0:05:21.380,0:05:27.940
+For example we can add in context of characters.
+
+0:05:27.940,0:05:34.860
+If we think about it it doesn’t have a lot
+of sense to add I don’t know A and W or
+
+0:05:34.860,0:05:38.849
+to add C and the dollar sign.
+
+0:05:38.849,0:05:46.900
+But taking a look at the ASCII table we can
+see that the lower case letters are all sequential
+
+0:05:46.900,0:05:51.590
+and the upper case letters all come one after
+the other and the digit symbols also come
+
+0:05:51.590,0:05:52.660
+after the other.
+
+0:05:52.660,0:05:59.970
+So it would make sense to for example if we
+have a character A to add 1 to add an integer
+
+0:05:59.970,0:06:06.979
+to the character A. Probably trying to say
+give the next ASCII value that comes after
+
+0:06:06.979,0:06:14.610
+A so if we assign ch to be A plus 1 it would
+assign ch two in this case to be a B.
+
+0:06:14.610,0:06:24.990
+If we print ch too it would print a B. Actually
+and that is kind of surprising if we cout
+
+0:06:24.990,0:06:31.541
+A plus 1 I would expect it would also print
+a B but then if you try it out you will see
+
+0:06:31.541,0:06:37.190
+that it doesn’t print a B. It would print
+the ASCII value of B and this case it would
+
+0:06:37.190,0:06:39.009
+be 98.
+
+0:06:39.009,0:06:47.340
+And if we take a closer look here we will
+see that when we have A plus 1 A is a character
+
+0:06:47.340,0:06:56.400
+1 is an integer and when we add datas of different
+types if you recall in one of our previous
+
+0:06:56.400,0:07:04.509
+talk we said that when we have mixed types
+expression one of the types is then casted
+
+0:07:04.509,0:07:07.150
+to the other type in order to match the types.
+
+0:07:07.150,0:07:15.230
+In this case an integer cannot be casted to
+a character without losing accuracy but a
+
+0:07:15.230,0:07:19.819
+character can be casted to an int without
+losing accuracy.
+
+0:07:19.819,0:07:30.849
+So A is basically casted to an int to 97 and
+then this 97 is added 1 and it comes to be
+
+0:07:30.849,0:07:31.849
+98.
+
+0:07:31.849,0:07:39.260
+So A plus 1 is an int expression that’s
+why it prints 98.
+
+0:07:39.260,0:07:47.069
+You can take a look back at our assignment
+A plus 1 into ch two so A plus 1 is an int
+
+0:07:47.069,0:07:56.919
+ch is a char is a character so this assignment
+basically has an implicit cast in it.
+
+0:07:56.919,0:08:02.479
+Basically transforming translating casting
+the integer back to a character.
+
+0:08:02.479,0:08:10.509
+If we want to make it more explicit we can
+for the cout for example say cout char casting
+
+0:08:10.509,0:08:12.680
+of A plus 1.
+
+0:08:12.680,0:08:20.139
+Basically saying transform cast translate
+this A plus 1 integer 98 back to a character
+
+0:08:20.139,0:08:29.390
+that would print the character representation
+of 98 that would print a B. A few other arithmetical
+
+0:08:29.390,0:08:39.190
+operators since we can add integers to characters
+moving in our ASCII table we can also subtract
+
+0:08:39.190,0:08:42.010
+an integer from an ASCII value from a character.
+
+0:08:42.010,0:08:49.090
+Basically again moving inside our ASCII table
+we can assign obviously characters as we have
+
+0:08:49.090,0:08:49.590
+seen.

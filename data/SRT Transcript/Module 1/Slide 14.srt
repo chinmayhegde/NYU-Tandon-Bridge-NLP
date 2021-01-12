@@ -1,0 +1,255 @@
+1
+00:00:01,740 --> 00:00:06,340
+So at the top of the memory hierarchy you
+can see that we have registers and registers
+
+2
+00:00:06,340 --> 00:00:12,240
+a built regularly into the CPU; there's only
+a few of them, the size is measured in bytes.
+
+3
+00:00:12,240 --> 00:00:17,340
+But the time to access each of those bytes
+is measured in nanoseconds and registers are
+
+4
+00:00:17,340 --> 00:00:20,080
+the only place that instructions can be executed.
+
+5
+00:00:20,080 --> 00:00:22,900
+So we need to use the registers very sparingly.
+
+6
+00:00:22,900 --> 00:00:27,130
+We need to be very cautious about how we use
+the registers, and in fact in the higher level
+
+7
+00:00:27,130 --> 00:00:29,859
+languages we're not going to concern ourselves
+with how to use the registers.
+
+8
+00:00:29,859 --> 00:00:35,060
+But when we get down to machine level instructions
+we have to be cautious about that.
+
+9
+00:00:35,060 --> 00:00:39,960
+The next level of the hierarchy is cache,
+and in cache we can measure.
+
+10
+00:00:39,960 --> 00:00:44,290
+There's actually two layers of cache but we
+can measure the total in megabytes.
+
+11
+00:00:44,290 --> 00:00:47,410
+And each of them have nanosecond access times.
+
+12
+00:00:47,410 --> 00:00:54,381
+Although it is slower than a register it can
+help speed up the processing and the CPU does
+
+13
+00:00:54,381 --> 00:00:59,290
+this automatically in terms of things like
+pipelining and bringing in instructions before
+
+14
+00:00:59,290 --> 00:01:00,730
+they're really needed.
+
+15
+00:01:00,730 --> 00:01:05,850
+The processor designers take care of the cache
+and it's not terribly useful for programmers
+
+16
+00:01:05,850 --> 00:01:10,520
+there's not a lot that we can do inside the
+cache of a CPU.
+
+17
+00:01:10,520 --> 00:01:14,100
+The next level is probably one of the most
+important ones that we have to take care of
+
+18
+00:01:14,100 --> 00:01:15,530
+and that's RAM.
+
+19
+00:01:15,530 --> 00:01:21,290
+RAM is measured, of course, in gigabytes,
+but it does have a lot slower access time;
+
+20
+00:01:21,290 --> 00:01:24,119
+this is over ten nanoseconds access time.
+
+21
+00:01:24,119 --> 00:01:27,430
+So it's a factor of ten slower than the registers.
+
+22
+00:01:27,430 --> 00:01:31,100
+But it's the only place where we can really
+store code and store our data.
+
+23
+00:01:31,100 --> 00:01:35,950
+We do have to take into account, as I said
+before, that RAM is volatile memory.
+
+24
+00:01:35,950 --> 00:01:41,329
+So once the computer is shut down all the
+contents of RAM are erased completely and
+
+25
+00:01:41,329 --> 00:01:45,939
+that's automatic, it's just by design - the
+way the RAM is designed.
+
+26
+00:01:45,939 --> 00:01:50,609
+But RAM is incredibly useful because that's
+where the data is going to come from that's
+
+27
+00:01:50,609 --> 00:01:58,000
+where the code is going to come from to load
+the code into the registers one by one.
+
+28
+00:01:58,000 --> 00:02:01,509
+Of course if we have temporary storage, we're
+going to need some permanent storage because
+
+29
+00:02:01,509 --> 00:02:04,609
+we don't lose everything every time the computers
+shut down.
+
+30
+00:02:04,609 --> 00:02:10,440
+So the secondary storage devices which have
+sizes that may be measured in terabytes have
+
+31
+00:02:10,440 --> 00:02:16,540
+much slower access times on the order of ten
+milliseconds, which if you remember we talked
+
+32
+00:02:16,540 --> 00:02:21,560
+about RAM is ten nanoseconds that's one times
+ten to the negative nine, ten milliseconds
+
+33
+00:02:21,560 --> 00:02:26,260
+is one times ten to the negative third, so
+secondary storage is about a million times
+
+34
+00:02:26,260 --> 00:02:32,950
+slower than RAM but it's the only permanent
+storage device that we have inside the system.
+
+35
+00:02:32,950 --> 00:02:37,890
+So if we want to save something so that it's
+not erased when the power is lost on the computer,
+
+36
+00:02:37,890 --> 00:02:41,270
+the secondary storage is where we have to
+store.
+
+37
+00:02:41,270 --> 00:02:46,120
+Secondary storage is usually in the form of
+a hard drive or a more modern solid state
+
+38
+00:02:46,120 --> 00:02:51,120
+disk drive, but we use it for the permanent
+storage of the system.
+
+39
+00:02:51,120 --> 00:02:56,040
+Thankfully this is where the operating system
+comes from this is where your code comes from
+
+40
+00:02:56,040 --> 00:03:00,020
+when it starts off and then it's loaded into
+RAM, of course so that it can execute.
+
+41
+00:03:00,020 --> 00:03:03,120
+But this is where we store just about everything
+on the system.
+
+42
+00:03:03,120 --> 00:03:08,080
+Tertiary storage is a term that we use for
+offline storage and these are things like
+
+43
+00:03:08,080 --> 00:03:13,710
+your USB, flash drives, a CD-ROM drives, if
+anybody still uses those, possibly even tape
+
+44
+00:03:13,710 --> 00:03:16,740
+drives, if we're talking about a server.
+
+45
+00:03:16,740 --> 00:03:23,290
+These have sizes that can be left to your
+imagination and we can talk about offline
+
+46
+00:03:23,290 --> 00:03:27,740
+storage in the form of petabytes and possibly
+even exabytes.
+
+47
+00:03:27,740 --> 00:03:31,340
+This is used for backup and it's used for
+information that doesn't need to be immediately
+
+48
+00:03:31,340 --> 00:03:32,340
+accessible.
+
+49
+00:03:32,340 --> 00:03:37,800
+You can imagine that the time it takes to
+load a tape would certainly be significant
+
+50
+00:03:37,800 --> 00:03:42,510
+if we were talking about it in comparison
+to in ten millisecond access time but that's
+
+51
+00:03:42,510 --> 00:03:47,410
+the idea behind the memory hierarchy as we're
+working at the top things are faster but significantly
+
+52
+00:03:47,410 --> 00:03:52,620
+smaller and much more costly as we're working
+at the bottom things are much much slower
+
+53
+00:03:52,620 --> 00:03:57,670
+but more larger and much less cost much cheaper.
+

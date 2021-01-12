@@ -1,0 +1,137 @@
+0:00:00.760,0:00:01.950
+Hi there.
+
+0:00:01.950,0:00:04.550
+Today we're going to talk about the branching
+statements.
+
+0:00:04.550,0:00:08.590
+Let's start with a problem that we're going
+to try to solve.
+
+0:00:08.590,0:00:14.140
+So, let's write a program that reads from
+the user an integer and then prints its absolute
+
+0:00:14.140,0:00:15.140
+value.
+
+0:00:15.140,0:00:20.789
+So, for example, the program can prompt the
+user to enter an integer, the user can enter
+
+0:00:20.789,0:00:25.590
+let's say negative seven, and then the problem
+would respond by saying that absolute value
+
+0:00:25.590,0:00:29.760
+of negative seven equals seven.
+
+0:00:29.760,0:00:32.980
+Let's see how we can implement this behavior.
+
+0:00:32.980,0:00:40.090
+So, it actually depends, in case the user
+enters a positive integer then the absolute
+
+0:00:40.090,0:00:43.499
+value would remain the same as the input.
+
+0:00:43.499,0:00:49.539
+But in case the user enters a negative number
+then we need to calculate the additive inverse
+
+0:00:49.539,0:00:55.260
+of that negative number and that would be
+the absolute value.
+
+0:00:55.260,0:01:00.850
+Mathematically it is kind of easy to calculate
+the additive inverse of an integer: you just
+
+0:01:00.850,0:01:05.840
+multiply it by negative one so negative seven
+times negative one that would turn out to
+
+0:01:05.840,0:01:09.060
+be seven, the absolute value.
+
+0:01:09.060,0:01:13.180
+Let's take a closer look on how we can implement
+this kind of a behavior.
+
+0:01:13.180,0:01:18.350
+So up to now we have seen some features of
+a C++.
+
+0:01:18.350,0:01:24.040
+We've talked about a lot of data types and
+how they are represented; we've talked about
+
+0:01:24.040,0:01:29.900
+several kinds of expressions, such as arithmetic
+expressions, boolean expressions.
+
+0:01:29.900,0:01:36.370
+In terms of control flow, the only flow we
+are used to working with is a sequential flow,
+
+0:01:36.370,0:01:43.150
+which is the default by which programs are
+executed, basically meaning that instructions
+
+0:01:43.150,0:01:47.909
+are executed one after the other in a sequential
+order.
+
+0:01:47.909,0:01:52.780
+Let's see if we can use all that in order
+to implement the absolute value or calculate
+
+0:01:52.780,0:01:59.790
+the absolute value of an integer and then
+if we take a closer look here it seems that
+
+0:01:59.790,0:02:04.900
+we need some more power in order to do that.
+
+0:02:04.900,0:02:10.440
+Because it seems like that in some cases we
+want to keep the input as it is in case the
+
+0:02:10.440,0:02:15.909
+input is positive in other cases we want to
+multiply it by negative one in case the input
+
+0:02:15.909,0:02:20.499
+was negative and a sequential flow, that all
+instructions are kind of executed one after
+
+0:02:20.499,0:02:22.660
+the other, won't be good enough.
+
+0:02:22.660,0:02:27.230
+Because sometimes you want to do one thing
+in one and sometimes want to do another things.
+
+0:02:27.230,0:02:34.329
+For that, we will introduce a more complex
+kind of a control flow and that would be branching
+
+0:02:34.329,0:02:35.459
+flow.
+
+0:02:35.459,0:02:43.950
+That would allow us to execute some instructions
+on one execution and to execute other set
+
+0:02:43.950,0:02:53.680
+of instructions in another depending on the
+input or depending on some stuff.
+
+0:02:53.680,0:02:57.790
+Let's show you a few kind of branching statements.
+
+0:02:57.790,0:03:02.540
+The first one would be an IF and let's take
+a closer look on an IF statement.

@@ -1,0 +1,191 @@
+1
+00:00:00,410 --> 00:00:03,290
+Let's implement a selection-sort algorithm.
+
+2
+00:00:03,290 --> 00:00:09,170
+So we'll write a function, selection-sort,
+that is given an array, basically the starting
+
+3
+00:00:09,170 --> 00:00:16,430
+address int ARR brackets and logical size
+ARR size, and this function should reorder
+
+4
+00:00:16,430 --> 00:00:19,460
+the elements so they would be in an increasing
+order.
+
+5
+00:00:19,460 --> 00:00:26,689
+No return value here, so it would, it's a
+void function basically.
+
+6
+00:00:26,689 --> 00:00:31,929
+As we said it's an iterative algorithm, so
+we need to iterate over the elements one after
+
+7
+00:00:31,929 --> 00:00:36,770
+the other, over the indexes basically or the
+positions, one after the other each iteration
+
+8
+00:00:36,770 --> 00:00:43,719
+placing the correct element, i-th order element,
+in the i-th position.
+
+9
+00:00:43,719 --> 00:00:49,920
+So we’ll use a for loop to iterate over
+the indexes, and we'll use an index i ranging
+
+10
+00:00:49,920 --> 00:00:58,110
+from one up to ARR size minus one; so i goes
+from zero less than there ARR size plus plus.
+
+11
+00:00:58,110 --> 00:01:05,330
+Each iteration will search for the index where
+the minimum element is so we'll have min index
+
+12
+00:01:05,330 --> 00:01:12,760
+equals to the location where the minimum element
+is.
+
+13
+00:01:12,760 --> 00:01:18,050
+For that we would define a function: find
+index of min, right.
+
+14
+00:01:18,050 --> 00:01:24,900
+So each iteration min index would get whatever
+find index of min function returns and after
+
+15
+00:01:24,900 --> 00:01:27,320
+we do that we need to swap them.
+
+16
+00:01:27,320 --> 00:01:30,450
+But let's first define the prototype of find
+index of min.
+
+17
+00:01:30,450 --> 00:01:37,640
+So find index of min would get basically the
+array but it also should get the range where
+
+18
+00:01:37,640 --> 00:01:40,150
+we are looking for the minimum index.
+
+19
+00:01:40,150 --> 00:01:45,770
+So initially it would probably be the entire
+array, then it would be with one item less,
+
+20
+00:01:45,770 --> 00:01:48,700
+and another item less and so on and so on
+through.
+
+21
+00:01:48,700 --> 00:01:55,720
+So let's assume that find index of min would
+get the low index and the high index to represent
+
+22
+00:01:55,720 --> 00:01:59,420
+the range where we’re searching for the
+minimum index.
+
+23
+00:01:59,420 --> 00:02:05,840
+So find index of min is given the position
+where our array starts, low and high indexes
+
+24
+00:02:05,840 --> 00:02:12,990
+to indicate the range we’re searching the
+minimum in, and it should return an int, basically
+
+25
+00:02:12,990 --> 00:02:17,920
+the index of the minimum element in the positions
+between low and high.
+
+26
+00:02:17,920 --> 00:02:22,391
+So, assuming we have this function, in a minute
+or two we’ll implement that as well, but
+
+27
+00:02:22,391 --> 00:02:27,790
+assuming we have this function each iteration
+we need to find the index of min in the current
+
+28
+00:02:27,790 --> 00:02:29,010
+valid range.
+
+29
+00:02:29,010 --> 00:02:33,530
+So first iteration it should be from zero
+to the end, then it should be from one to
+
+30
+00:02:33,530 --> 00:02:37,670
+the end, then from two to the end, and then
+from three to the end, and so on.
+
+31
+00:02:37,670 --> 00:02:44,660
+So basically we are searching for the index
+of min on the array ARR starting at index
+
+32
+00:02:44,660 --> 00:02:49,650
+i, right; first iteration starting at index
+zero, second iteration the starting index
+
+33
+00:02:49,650 --> 00:02:53,570
+is one, the next iteration the starting in
+the two, and so on.
+
+34
+00:02:53,570 --> 00:02:58,790
+And every iteration we stop at the end of
+the array; so first edition it goes zero to
+
+35
+00:02:58,790 --> 00:03:03,900
+the end, then one to the end, then two to
+the end, and three to the end.
+
+36
+00:03:03,900 --> 00:03:07,310
+Each time we're searching for the minimum
+index in that range.
+
+37
+00:03:07,310 --> 00:03:13,380
+After we get that min ind for each iteration,
+we're just swapping the current element ARR
+
+38
+00:03:13,380 --> 00:03:18,560
+i with the element at the min index, ARR min
+Ind.
+
+39
+00:03:18,560 --> 00:03:21,939
+That's basically it; that’s the selection-sort
+algorithm.
+

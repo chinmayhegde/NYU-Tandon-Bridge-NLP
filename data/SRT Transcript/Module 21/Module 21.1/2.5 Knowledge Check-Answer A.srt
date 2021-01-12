@@ -1,0 +1,14 @@
+1
+00:00:00,700 --> 00:00:05,470
+Remember, during the fetch step, the CPU only
+increments the program counter.
+
+2
+00:00:05,470 --> 00:00:09,850
+It cannot perform anything of relevance for
+the instruction because it will known what
+
+3
+00:00:09,850 --> 00:00:12,070
+the instruction is until the decode step.
+

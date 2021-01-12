@@ -1,0 +1,109 @@
+0:00:00.599,0:00:03.560
+So the first question is why do we need pointers
+at all?
+
+0:00:03.560,0:00:08.510
+And a pointer is a way that we can store a
+reference to an object that's either created
+
+0:00:08.510,0:00:10.520
+on the heap or created on the stack.
+
+0:00:10.520,0:00:14.650
+Now the stack is what we've been using to
+create all of our variables since we started
+
+0:00:14.650,0:00:15.700
+programming.
+
+0:00:15.700,0:00:20.210
+When we say something like index that's a
+variable that's created on the stack and we're
+
+0:00:20.210,0:00:24.710
+going to talk a lot about what the heap is
+and how we can use it a little bit later on.
+
+0:00:24.710,0:00:30.360
+But for right now there's something else that
+we can create and that is a heap dynamic variable.
+
+0:00:30.360,0:00:35.989
+When we work with pointers we can have a pointer
+either point to a stack variable or a heap
+
+0:00:35.989,0:00:37.929
+dynamic variable.
+
+0:00:37.929,0:00:44.850
+And we can use the pointer as a way to store
+a large amount of information that's not associated
+
+0:00:44.850,0:00:45.850
+with the function.
+
+0:00:45.850,0:00:51.610
+One of the problems is when we start a function
+all of stack dynamic variables are allocated.
+
+0:00:51.610,0:00:55.440
+And when that function ends all those stack
+dynamic variables are deallocated.
+
+0:00:55.440,0:01:02.579
+But what if we wanted to have a variable that
+existed without having a function being called.
+
+0:01:02.579,0:01:08.480
+We want the variable to continue to exist
+even after the function ends.
+
+0:01:08.480,0:01:12.570
+We can create those variables on the heap
+but the heap doesn't have a name there's no
+
+0:01:12.570,0:01:14.950
+way to name a variable that's on the heap.
+
+0:01:14.950,0:01:18.969
+And the only way to do this the only way to
+have a reference to it is to have a pointer
+
+0:01:18.969,0:01:20.600
+to that variable that's on the heap.
+
+0:01:20.600,0:01:25.420
+So when we get into heap dynamic variables
+pointers are going to be really really critical.
+
+0:01:25.420,0:01:29.759
+Also we can use a pointer to link two objects
+together.
+
+0:01:29.759,0:01:34.850
+So the usual scenario that I like to use is
+imagine that we have some sort of object like
+
+0:01:34.850,0:01:39.439
+a person object and we'll talk a lot about
+object orientation in the next module.
+
+0:01:39.439,0:01:44.540
+But for now you understand that we can have
+some data structure that represents a person.
+
+0:01:44.540,0:01:48.250
+Well what happens if one person gets married
+to another person?
+
+0:01:48.250,0:01:54.030
+This means that we have to have an association
+relationship between two person objects and
+
+0:01:54.030,0:01:57.979
+in order to do that we have to have a pointer
+from one person to another person.
+
+0:01:57.979,0:02:00.469
+I would probably call that pointer a spouse
+pointer.

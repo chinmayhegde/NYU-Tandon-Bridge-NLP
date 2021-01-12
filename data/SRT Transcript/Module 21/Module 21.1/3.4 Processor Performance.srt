@@ -1,0 +1,18 @@
+1
+00:00:00,329 --> 00:00:05,530
+So here are several methods that CPU designers
+use to optimize the performance.
+
+2
+00:00:05,530 --> 00:00:08,420
+For this course, we’ll focus on pipelining.
+
+3
+00:00:08,420 --> 00:00:13,540
+If you want to find out more information about
+the other methods, click on the following
+
+4
+00:00:13,540 --> 00:00:14,100
+links.
+

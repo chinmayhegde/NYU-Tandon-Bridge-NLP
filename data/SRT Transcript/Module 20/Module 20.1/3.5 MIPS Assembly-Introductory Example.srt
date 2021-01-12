@@ -1,0 +1,41 @@
+1
+00:00:00,370 --> 00:00:07,759
+The double word add instruction adds two registers
+Rs and Rt and puts their result into Rd register.
+
+2
+00:00:07,759 --> 00:00:12,570
+The ALU may need to perform some sign extension
+to ensure that the content of both Rs and
+
+3
+00:00:12,570 --> 00:00:14,460
+Rt are 64 bits
+
+4
+00:00:14,460 --> 00:00:19,340
+The store doubleword instruction has a similar
+syntax as load double word but the semantics
+
+5
+00:00:19,340 --> 00:00:21,010
+are obviously different.
+
+6
+00:00:21,010 --> 00:00:26,090
+Store doubleword copies the content of register
+Rt to the memory location indicated by the
+
+7
+00:00:26,090 --> 00:00:28,110
+address calculated.
+
+8
+00:00:28,110 --> 00:00:31,850
+Similar to load doubleword, the calculation
+of the address requires the offset field to
+
+9
+00:00:31,850 --> 00:00:33,850
+be sign extended to 64 bits.
+

@@ -1,0 +1,116 @@
+1
+00:00:01,849 --> 00:00:03,919
+Let's take a look at selection sort.
+
+2
+00:00:03,919 --> 00:00:11,580
+As I said earlier it's very basic our sorting
+algorithm, maybe the most intuitive or naïve
+
+3
+00:00:11,580 --> 00:00:20,730
+algorithm we can think of; sort of how you
+would explain your kid how to sort using this
+
+4
+00:00:20,730 --> 00:00:21,830
+approach.
+
+5
+00:00:21,830 --> 00:00:25,090
+So, let me demonstrate the idea here.
+
+6
+00:00:25,090 --> 00:00:30,850
+So, assuming we have a collection of elements,
+obviously not sorted: five, fourteen, ten,
+
+7
+00:00:30,850 --> 00:00:33,580
+eight, thirteen and so on.
+
+8
+00:00:33,580 --> 00:00:41,409
+It would be an iterative process each time
+placing the minimum element at the next position;
+
+9
+00:00:41,409 --> 00:00:43,999
+so it's going to work something like that.
+
+10
+00:00:43,999 --> 00:00:52,569
+So let's take a look at the entire range we’re
+sorting and first iteration, we are looking
+
+11
+00:00:52,569 --> 00:00:58,399
+to place at the zero position, in the first
+position, the minimum element.
+
+12
+00:00:58,399 --> 00:01:04,559
+So we’ll search for the minimum element,
+we’ll get this one, index-five, and then
+
+13
+00:01:04,559 --> 00:01:06,880
+we'll just swap them.
+
+14
+00:01:06,880 --> 00:01:16,950
+So one would be at the beginning and five
+would be somewhere at the rest of the elements.
+
+15
+00:01:16,950 --> 00:01:21,799
+So our range would now be only the elements
+from the second on.
+
+16
+00:01:21,799 --> 00:01:27,799
+This iteration, second iteration, will place
+the second minimum at the second position;
+
+17
+00:01:27,799 --> 00:01:34,109
+we’ll search for the minimum in that varied
+range: that would be two and we'll swap the
+
+18
+00:01:34,109 --> 00:01:36,979
+two in fourteen placing two at that position.
+
+19
+00:01:36,979 --> 00:01:43,290
+The range is shorter now; we'll search for
+the minimum that would be three and we'll
+
+20
+00:01:43,290 --> 00:01:46,969
+swap them, three and a ten, so three would
+be in the right position.
+
+21
+00:01:46,969 --> 00:01:52,270
+So now we have one, two, and three already
+ordered, and next we find the minimum in the
+
+22
+00:01:52,270 --> 00:01:53,270
+valid range.
+
+23
+00:01:53,270 --> 00:01:57,640
+That would be three in the index-eleven and
+we'll swap them.
+
+24
+00:01:57,640 --> 00:02:02,119
+So, three would be at the right position and
+so on and so on.
+
+25
+00:02:02,119 --> 00:02:04,880
+Yeah, let’s try to implement this idea.
+

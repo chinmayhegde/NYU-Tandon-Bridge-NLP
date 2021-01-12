@@ -1,0 +1,32 @@
+1
+00:00:00,630 --> 00:00:01,800
+Remember.
+
+2
+00:00:01,800 --> 00:00:06,580
+Since only one instruction uses the CPU at
+a time, we don't get resource conflicts or
+
+3
+00:00:06,580 --> 00:00:09,870
+structural hazards in a unpipelined CPU.
+
+4
+00:00:09,870 --> 00:00:14,620
+Moreover, since each instruction completes
+before the next one is fetched, we don’t
+
+5
+00:00:14,620 --> 00:00:20,039
+get dependency issues or data hazards, as
+well as branch taken/not taken issues or branch
+
+6
+00:00:20,039 --> 00:00:21,310
+hazards.
+
+7
+00:00:21,310 --> 00:00:24,060
+So there are no branch hazards in an unpipelined
+CPU.
+

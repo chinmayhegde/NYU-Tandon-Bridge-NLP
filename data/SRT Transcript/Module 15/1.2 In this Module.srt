@@ -1,0 +1,48 @@
+1
+00:00:00,700 --> 00:00:04,430
+So now that we can talk about object oriented
+programming, let's get into what we can do
+
+2
+00:00:04,430 --> 00:00:06,370
+in this module.
+
+3
+00:00:06,370 --> 00:00:10,930
+We'll give a definition for an object and
+a class, we’ll talk about the concept of
+
+4
+00:00:10,930 --> 00:00:16,080
+encapsulation, we're talk about how to create
+a class, enforcing protections and access,
+
+5
+00:00:16,080 --> 00:00:21,580
+mechanisms for class accessors and mutators,
+and we'll talk about the constant modifier.
+
+6
+00:00:21,580 --> 00:00:26,640
+We're also going to talk about how to guarantee
+that an object is created properly.
+
+7
+00:00:26,640 --> 00:00:31,510
+We'll talk about using operators on classes
+and we'll talk about classes that contain
+
+8
+00:00:31,510 --> 00:00:32,990
+dynamic memory.
+
+9
+00:00:32,990 --> 00:00:35,870
+We're also going to get into concepts of inheritance
+and polymorphism.
+
+10
+00:00:35,870 --> 00:00:40,550
+And we'll talk about dynamic binding as well
+as pure virtual functions.
+

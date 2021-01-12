@@ -1,0 +1,28 @@
+1
+00:00:00,659 --> 00:00:01,659
+Hi everyone.
+
+2
+00:00:01,659 --> 00:00:06,180
+Today, we will cover the second half of the
+computer architecture section of this course.
+
+3
+00:00:06,180 --> 00:00:11,379
+We will focus on branch and jump instructions,
+which are fundamental in all instruction set
+
+4
+00:00:11,379 --> 00:00:12,570
+architectures.
+
+5
+00:00:12,570 --> 00:00:19,449
+We will discuss the purposes of these instructions,
+how they are mapped to high-level C and C++
+
+6
+00:00:19,449 --> 00:00:24,660
+codes that we write every day, and we'll go
+over two examples of their use cases.
+

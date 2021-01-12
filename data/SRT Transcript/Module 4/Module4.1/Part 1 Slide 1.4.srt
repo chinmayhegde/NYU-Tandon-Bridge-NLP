@@ -1,0 +1,50 @@
+1
+00:00:00,170 --> 00:00:07,050
+There is a sequential flow IO expressions
+arithmetic expressions and data of a type
+
+2
+00:00:07,050 --> 00:00:09,820
+int.
+
+3
+00:00:09,820 --> 00:00:17,520
+Today we are going to focus mostly on some
+data types there are several data types that
+
+4
+00:00:17,520 --> 00:00:20,460
+are used in C++.
+
+5
+00:00:20,460 --> 00:00:24,230
+There is the int we already talked about.
+
+6
+00:00:24,230 --> 00:00:32,379
+We are going to talk about float and double
+which are going to be used to represent real
+
+7
+00:00:32,379 --> 00:00:36,510
+numbers numbers with a fractional part.
+
+8
+00:00:36,510 --> 00:00:45,219
+There is a char that is used for characters
+there is string for textual information and
+
+9
+00:00:45,219 --> 00:00:48,600
+there bool for Boolean values True and False.
+
+10
+00:00:48,600 --> 00:00:55,620
+We are going to talk in much detail about
+each and every one of these data types.
+
+11
+00:00:55,620 --> 00:00:58,940
+We are going to start talking about int we
+are going to do it right away.
+

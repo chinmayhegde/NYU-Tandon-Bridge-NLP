@@ -1,0 +1,121 @@
+0:00:00.750,0:00:05.970
+For now we know how to initialize and concatenate
+strings using the assignment operator and
+
+0:00:05.970,0:00:06.970
+the plus operator.
+
+0:00:06.970,0:00:11.590
+Let’s see how we can read a string from
+the user.
+
+0:00:11.590,0:00:16.880
+So for example let’s take a look at these
+few lines of code.
+
+0:00:16.880,0:00:22.869
+If we print please enter your name ask the
+user prompt the user to enter their name we
+
+0:00:22.869,0:00:27.130
+can then cin into a string variable.
+
+0:00:27.130,0:00:31.980
+And afterwards we can cout this value this
+name this str.
+
+0:00:31.980,0:00:37.120
+So when we executed we ask the user please
+enter your name the user says for example
+
+0:00:37.120,0:00:38.790
+I don’t know Donald Duck.
+
+0:00:38.790,0:00:47.460
+And then kind of surprisingly when we print
+str we get only Donald back.
+
+0:00:47.460,0:00:54.370
+If we take a look what happened here basically
+when we used cin in order to read the string
+
+0:00:54.370,0:01:01.610
+it only read the first word out of the line
+that the user basically entered.
+
+0:01:01.610,0:01:04.440
+And that’s how cin works.
+
+0:01:04.440,0:01:07.930
+That’s the way cin was designed.
+
+0:01:07.930,0:01:18.229
+It is skipping leading white spaces then reads
+the word and stops at the next white space.
+
+0:01:18.229,0:01:23.040
+In this case cin read Donald into str.
+
+0:01:23.040,0:01:28.659
+If we want to read an entire line and that’s
+a thing we would like to do a lot of times
+
+0:01:28.659,0:01:35.180
+we would need to use some other way of reading
+a string and that would be by using the get
+
+0:01:35.180,0:01:38.870
+line the get line function.
+
+0:01:38.870,0:01:44.950
+It works something like that we just call
+get line and get line has two parameters that’s
+
+0:01:44.950,0:01:45.950
+kind of surprisingly.
+
+0:01:45.950,0:01:53.820
+The first parameter is cin itself and then
+the string we want to update the line with.
+
+0:01:53.820,0:02:02.110
+So get line cin str basically reads an entire
+line basically a sequence of characters until
+
+0:02:02.110,0:02:07.549
+the new line is pressed into the str variable.
+
+0:02:07.549,0:02:15.190
+You’ll see in later modules that get line
+can be given a different first parameter besides
+
+0:02:15.190,0:02:22.470
+cin and for now what I want you to know is
+that this cin basically tells get line to
+
+0:02:22.470,0:02:25.580
+read this line from the standard input.
+
+0:02:25.580,0:02:28.810
+From the basically the keyboard from whatever
+the user enters.
+
+0:02:28.810,0:02:34.590
+Later on you will see that there could be
+other inputs where or other streams that can
+
+0:02:34.590,0:02:40.489
+give us input besides cin or besides the standard
+input.
+
+0:02:40.489,0:02:47.709
+So if we execute this code here we would prompt
+the user to enter their name and then when
+
+0:02:47.709,0:02:55.950
+the user enters Donald Duck get line cin str
+would read the entire Donauld Duck into str.
+
+0:02:55.950,0:03:00.739
+Then when we print str we would get Donald
+Duck printed.

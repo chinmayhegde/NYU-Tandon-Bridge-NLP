@@ -1,0 +1,28 @@
+1
+00:00:00,440 --> 00:00:04,120
+So, let’s quickly go over two types of CPU
+architectures in the market.
+
+2
+00:00:04,120 --> 00:00:09,610
+One is called Reduced Instruction Set Computing
+or RISC, and the other is called Complex Instruction
+
+3
+00:00:09,610 --> 00:00:11,289
+Set Computing, or CISC.
+
+4
+00:00:11,289 --> 00:00:16,010
+The decision of which of those architectures
+to use impacts how the machine-level instructions
+
+5
+00:00:16,010 --> 00:00:19,960
+of the CPU work, how the hardware and data
+path of the CPU are implemented, and how the
+
+6
+00:00:19,960 --> 00:00:21,960
+compiler for that CPU works
+

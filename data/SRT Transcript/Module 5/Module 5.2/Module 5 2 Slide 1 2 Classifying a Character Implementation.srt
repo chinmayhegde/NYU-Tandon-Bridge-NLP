@@ -1,0 +1,232 @@
+0:00:00.110,0:00:06.450
+Okay. So, let's first prompt the user to enter
+a character, so C-out: please enter a character,
+
+0:00:06.450,0:00:11.719
+end-l and then let's read this character so
+let's have char variable, User-C-H think would
+
+0:00:11.719,0:00:18.740
+be good name here. So User-C-H is the input
+the user entered. And now, we should figure
+
+0:00:18.740,0:00:23.830
+out whether this character is an uppercase
+letter, a lower case letter, a digit, or a
+
+0:00:23.830,0:00:28.900
+character that is not alphanumeric. In order
+to do that, first let's decide in what control
+
+0:00:28.900,0:00:34.970
+flow we're going to use. It seems as if we
+have to choose one out of four cases here.
+
+0:00:34.970,0:00:41.470
+So a multi-way if seems very reasonable so
+if else if else something like that should
+
+0:00:41.470,0:00:46.390
+work, so I would definitely use a multi-way
+if here. So, that's one thing we needed to
+
+0:00:46.390,0:00:51.990
+figure out, the other thing is the how to
+determine whether our user C.H. or input is
+
+0:00:51.990,0:00:54.420
+an upper case or lower case or a digit.
+
+0:00:54.420,0:01:00.329
+So if you recall characters are represented
+using ASCII values; let's take a second look
+
+0:01:00.329,0:01:07.250
+here at our ASCII table. If you remember we
+said that all the lower case letters are continuous
+
+0:01:07.250,0:01:12.130
+in this table, all the upper case letters
+are continuous and even all the digits are
+
+0:01:12.130,0:01:17.170
+continuous. We know that we don't need to
+remember or to memorize the values of the
+
+0:01:17.170,0:01:21.220
+lower case letters in the upper case in the
+digits. The only thing we need to know is
+
+0:01:21.220,0:01:26.890
+that they are continuous and we can check
+whether our ASCII value is in the range of
+
+0:01:26.890,0:01:33.210
+the lower case A and lowercase Z, or in the
+range of the Upper Case A to the upper case
+
+0:01:33.210,0:01:39.380
+Z, or in the range of zero and nine and so
+on. Let's try to do that so. Let's do something
+
+0:01:39.380,0:01:45.080
+like if and now let's try to check if our
+user C.H. is in the range of the lower case
+
+0:01:45.080,0:01:46.080
+letters.
+
+0:01:46.080,0:01:54.280
+So, let's do something like user C-H. is greater
+or equal to, and now I don't want to use the
+
+0:01:54.280,0:02:02.040
+value of lowercase A I don't want to use ninety
+seven in this case. I can use the C++ literal
+
+0:02:02.040,0:02:06.770
+for lower case A and that would be something
+like that. So if user C H. is greater or equal
+
+0:02:06.770,0:02:16.371
+to lowercase A and user C H is less or equal
+to lowercase C that means that our ASCII value
+
+0:02:16.371,0:02:23.300
+is in the range of the lower case letters.
+In this case, let's print that the user CH
+
+0:02:23.300,0:02:30.280
+is a lower case letter and let's do the same
+or something similar, to the upper cases.
+
+0:02:30.280,0:02:35.310
+So else and then I won't break the line here
+I would continue that if in the same line
+
+0:02:35.310,0:02:40.740
+because I want to use the multi-way if and
+once again I'll check if user CH is greater
+
+0:02:40.740,0:02:50.420
+or equal to upper case A and user CH is less
+or equal to upper case Z, then let's c- out
+
+0:02:50.420,0:02:59.150
+that our user CH is an uppercase letter. And
+now let's also check if it is a digit. So,
+
+0:02:59.150,0:03:09.690
+else if our user CH is greater or equal to
+zero and the user CH is less or equal to nine
+
+0:03:09.690,0:03:20.269
+then we want to C-out that our user CH value
+is a digit. And, eventually if it is not either
+
+0:03:20.269,0:03:28.900
+one of these then we should just print that
+this character is not an alphanumeric character.
+
+0:03:28.900,0:03:35.580
+Okay, so let's try to test it out. Let's first
+enter a character, so let's do lowercase D.
+
+0:03:35.580,0:03:42.239
+seems to be working fine, these lowercase
+letters. Let's try uppercase D also seems
+
+0:03:42.239,0:03:49.120
+to be working fine let's try, I don't know
+4, it says four is not alphanumeric character.
+
+0:03:49.120,0:03:56.220
+I was expecting 4 to fall somewhere here and
+print that four is a digit. Try to think what's
+
+0:03:56.220,0:04:02.240
+wrong here. So here we checked whether user
+CH is greater equal to zero or and less or
+
+0:04:02.240,0:04:09.160
+equal to nine, User CH is basically the ASCII
+value of our character but then the ASCII
+
+0:04:09.160,0:04:13.760
+values zero is not zero is forty eight and
+the ASCII value of nine is not nine, it’s
+
+0:04:13.760,0:04:17.409
+fifty seven.
+So in all of these cases here up here this
+
+0:04:17.409,0:04:24.270
+case here in this case here, we compared a
+character to a character, once again a character
+
+0:04:24.270,0:04:29.990
+to a character. And it basically compared
+the ASCII value that is represented in here
+
+0:04:29.990,0:04:35.550
+to the ASCII value of a lowercase A and so
+on here we are comparing a character to an
+
+0:04:35.550,0:04:40.320
+integer. So that's fine with the compiler
+it would just implicitly cast this character
+
+0:04:40.320,0:04:45.599
+into an integer and it would compare the ASCII
+value of this character to the integer value
+
+0:04:45.599,0:04:50.720
+zero and the integer value for nine. So, in
+order for it to work we need to give here
+
+0:04:50.720,0:04:56.050
+the ASCII value of zero and the ASCII value
+of nine, basically forty eight and fifty something.
+
+0:04:56.050,0:05:02.439
+Again we say we don't want to memorize these
+values, so I can just use the character literal
+
+0:05:02.439,0:05:06.830
+for zero and the character literal for nine
+and it would look something like that. Once
+
+0:05:06.830,0:05:12.620
+again I want you to know that the integer
+zero and the character zero are two different
+
+0:05:12.620,0:05:19.059
+things. The integer zero is a 4 byte 2s compliment
+representing the value of zero, where the
+
+0:05:19.059,0:05:25.749
+character zero is a single byte representing
+the digits or the character zero that is represented
+
+0:05:25.749,0:05:31.779
+by the ASCII value. In this case zero is forty
+eight so the binary representation of forty
+
+0:05:31.779,0:05:37.379
+eight would be stored in this case. So let's
+try to execute it now. First let's see that
+
+0:05:37.379,0:05:43.969
+this change didn't affect all other cases
+of lower case works and uppercase also works
+
+0:05:43.969,0:05:49.379
+and now let's see what happens with digit
+four. Also works. And finally let's check
+
+0:05:49.379,0:05:53.699
+something that is not alphanumeric, let's
+do the dollar sign, and that also seems to
+
+0:05:53.699,0:05:54.199
+be fine. Okay.

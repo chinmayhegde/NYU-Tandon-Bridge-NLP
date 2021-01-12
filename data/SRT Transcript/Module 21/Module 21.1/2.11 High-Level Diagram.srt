@@ -1,0 +1,19 @@
+1
+00:00:00,900 --> 00:00:01,900
+Ok.
+
+2
+00:00:01,900 --> 00:00:05,660
+Now, let us design a high-level state diagram
+of our small CPU.
+
+3
+00:00:05,660 --> 00:00:12,169
+The high-level diagram will break down the
+steps to execute each instruction into states
+
+4
+00:00:12,169 --> 00:00:15,240
+and will show when to transition from one
+state to the other.
+

@@ -1,0 +1,124 @@
+1
+00:00:01,329 --> 00:00:07,839
+One more thing I want to talk about are our
+operators that can be applied on integers.
+
+2
+00:00:07,839 --> 00:00:12,710
+Using our arithmetical operators basically
+we create expressions so we have the literals
+
+3
+00:00:12,710 --> 00:00:20,010
+or the variables which are atomic expression
+but combining them using arithmetic operators
+
+4
+00:00:20,010 --> 00:00:27,070
+we create more compound expressions. For example
+plus we can add two integers and then create
+
+5
+00:00:27,070 --> 00:00:33,180
+a greater or a bigger expression. Expression
+basically is a thing that has a value in this
+
+6
+00:00:33,180 --> 00:00:41,250
+case for example if we have x and y and then
+x is set to 5 we create an expression x plus
+
+7
+00:00:41,250 --> 00:00:48,729
+5 basically 5 plus 2 or 7. If we cout x plus
+2 the value of this expression would be printed
+
+8
+00:00:48,729 --> 00:00:56,040
+in this case 7 would be printed. But plus
+is an arithmetical operator that can be applied
+
+9
+00:00:56,040 --> 00:01:03,689
+on integers x is an integer 2 is an integer
+it is a C++ literal of type int and plus can
+
+10
+00:01:03,689 --> 00:01:11,200
+come in between two integers and create a
+compound expression in this case x plus 2.
+
+11
+00:01:11,200 --> 00:01:16,350
+So we can print the value of an expression
+we can set a variable to have the value of
+
+12
+00:01:16,350 --> 00:01:22,880
+an expression. Y equals x plus 2 basically
+is an assignment when an assignment is evaluated
+
+13
+00:01:22,880 --> 00:01:28,480
+first the write inside is evaluated x plus
+2 and then this value which is in this case
+
+14
+00:01:28,480 --> 00:01:36,070
+7 is set into the variable y. So given an
+expression we can print it we can assign it
+
+15
+00:01:36,070 --> 00:01:43,330
+to a variable. Actually we can also just type
+it X plus 2 obviously it is a useless line
+
+16
+00:01:43,330 --> 00:01:50,270
+of code here because no one does nothing with
+the value x plus 2 but the x plus 2 on its
+
+17
+00:01:50,270 --> 00:01:58,100
+own is a legal expression in C++ and we can
+write just like that. So plus is arithmetic
+
+18
+00:01:58,100 --> 00:02:04,060
+expression arithmetic operator sorry but then
+we can have some more arithmetic operators.
+
+19
+00:02:04,060 --> 00:02:12,990
+For example minus and star for times so we
+can subtract integers x minus 2 we can print
+
+20
+00:02:12,990 --> 00:02:19,010
+it and it could print 3. We can multiply x
+times 2 5 times 2 which is 10 we can assign
+
+21
+00:02:19,010 --> 00:02:28,940
+it to y y would be 10. So we can apply different
+arithmetic operators on ints. Plus minus times.
+
+22
+00:02:28,940 --> 00:02:34,410
+We can also apply the divider operator but
+here it is a little bit tricky. What do you
+
+23
+00:02:34,410 --> 00:02:43,030
+think would happen if we for example cout
+x divided by 2 5 divided by 2. I would say
+
+24
+00:02:43,030 --> 00:02:49,190
+that it would probably print 2.5 because 5
+divided by 2 is two and a half. But then it
+
+25
+00:02:49,190 --> 00:02:50,510
+behaves a little bit differently.
+

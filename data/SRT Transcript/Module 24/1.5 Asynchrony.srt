@@ -1,0 +1,132 @@
+1
+00:00:00,659 --> 00:00:02,130
+So what is asynchrony?
+
+2
+00:00:02,130 --> 00:00:07,950
+Well asynchrony occurs when two threads are
+running seemingly at the same time.
+
+3
+00:00:07,950 --> 00:00:14,110
+So for example we might have a running thread
+that is interrupted due to some hardware considerations
+
+4
+00:00:14,110 --> 00:00:18,260
+maybe the network card needs processing it
+doesn't really matter and a different thread
+
+5
+00:00:18,260 --> 00:00:19,560
+is chosen to run.
+
+6
+00:00:19,560 --> 00:00:25,710
+So, we have one thread that's running on the
+CPU and it stops running.
+
+7
+00:00:25,710 --> 00:00:31,039
+It does some work and it stops running and
+then when we come back we're choosing a different
+
+8
+00:00:31,039 --> 00:00:33,170
+thread to run.
+
+9
+00:00:33,170 --> 00:00:36,309
+We could also have a thread that runs out
+of time.
+
+10
+00:00:36,309 --> 00:00:38,540
+Remember we're in a preemptive system.
+
+11
+00:00:38,540 --> 00:00:42,480
+So we're not allowing threads to run until
+they're finished we're not allowing processes
+
+12
+00:00:42,480 --> 00:00:43,910
+to run until they’re finished.
+
+13
+00:00:43,910 --> 00:00:48,399
+We're allowing them to run only for a certain
+period of time and when that period of time
+
+14
+00:00:48,399 --> 00:00:52,559
+runs out whether or not the thread is finished
+we have to pause the thread we have to bring
+
+15
+00:00:52,559 --> 00:00:56,750
+the thread out of the running state bring
+it back into the ready state and then we can
+
+16
+00:00:56,750 --> 00:01:00,770
+go on to running either this thread or we
+can choose a different thread to run.
+
+17
+00:01:00,770 --> 00:01:05,550
+So, there's a possibility of asynchrony there
+and the other possibilities if we have actually
+
+18
+00:01:05,550 --> 00:01:10,630
+multiple CPU’s multiple different CPU’s
+we can have two of these threads running on
+
+19
+00:01:10,630 --> 00:01:12,910
+the CPU all at the same time.
+
+20
+00:01:12,910 --> 00:01:18,910
+So, what's happening here is that these threads
+are doing some work and the work that they're
+
+21
+00:01:18,910 --> 00:01:25,740
+doing it is not a complete atomic instruction
+in other words we don't start it and know
+
+22
+00:01:25,740 --> 00:01:26,970
+when we finish it.
+
+23
+00:01:26,970 --> 00:01:31,370
+We don't do one function call and finish the
+function call and then pause to run another
+
+24
+00:01:31,370 --> 00:01:32,370
+thread.
+
+25
+00:01:32,370 --> 00:01:36,990
+We could be in the very middle of an instruction
+or in the very middle of a line of code and
+
+26
+00:01:36,990 --> 00:01:41,730
+we could stop and run a different thread altogether
+so we always have to keep that in the back
+
+27
+00:01:41,730 --> 00:01:47,200
+of our minds when working with threads that
+we never really know when the thread is going
+
+28
+00:01:47,200 --> 00:01:52,350
+to be stopped and when a different thread
+and possibly a conflict thread would be run.
+

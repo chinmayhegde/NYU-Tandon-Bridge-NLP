@@ -1,0 +1,153 @@
+1
+00:00:00,630 --> 00:00:07,180
+It's good to have an idea, at least a visual,
+of what we're talking about where the OS is
+
+2
+00:00:07,180 --> 00:00:08,180
+concerned.
+
+3
+00:00:08,180 --> 00:00:13,000
+So, the thing that you've probably experienced
+as users of computers and we've all been users
+
+4
+00:00:13,000 --> 00:00:17,560
+of computers basically our whole lives we
+interact with applications.
+
+5
+00:00:17,560 --> 00:00:23,109
+So, as a user, we are only interacting with
+the application side of the computer.
+
+6
+00:00:23,109 --> 00:00:28,310
+So, when we look at Visual Studio, or when
+we look at our Web browser, or when we watch
+
+7
+00:00:28,310 --> 00:00:31,429
+this video we're interacting with an application.
+
+8
+00:00:31,429 --> 00:00:35,630
+And we can control that application; we can
+choose which website we're viewing, we can
+
+9
+00:00:35,630 --> 00:00:39,820
+type code into Visual Studio, or you can pause
+and restart this video.
+
+10
+00:00:39,820 --> 00:00:42,090
+Don't pause and restart this video right now.
+
+11
+00:00:42,090 --> 00:00:46,540
+The thing that applications do is they'll
+interact with the operating system.
+
+12
+00:00:46,540 --> 00:00:51,580
+So, in order for the for the application to
+do what it needs to do, it needs to communicate
+
+13
+00:00:51,580 --> 00:00:53,160
+with the operating system.
+
+14
+00:00:53,160 --> 00:00:59,270
+For example, this video is going to need to
+accept from the operating system a stream
+
+15
+00:00:59,270 --> 00:01:06,590
+of data from the network, and then process
+that data and then display it on the screen.
+
+16
+00:01:06,590 --> 00:01:12,799
+So, we're using the operating system both
+to read the data in as well as produce an
+
+17
+00:01:12,799 --> 00:01:16,310
+image on the screen as well as produce the
+sound of my voice on the audio.
+
+18
+00:01:16,310 --> 00:01:21,609
+So, the application is going to use services
+that the operating system provides to get
+
+19
+00:01:21,609 --> 00:01:22,609
+that done.
+
+20
+00:01:22,609 --> 00:01:26,079
+In your ‘hello world’ programs that you've
+written before you've opened up files and
+
+21
+00:01:26,079 --> 00:01:31,229
+just the act of opening up a file is an operating
+system call; it’s what we call a system
+
+22
+00:01:31,229 --> 00:01:32,229
+call.
+
+23
+00:01:32,229 --> 00:01:34,219
+We're asking the operating system for some
+help.
+
+24
+00:01:34,219 --> 00:01:39,929
+So, as the application programmer, you've
+interacted with the operating system by calling
+
+25
+00:01:39,929 --> 00:01:46,789
+a function like open and when an open opens
+the file it was using the service of the operating
+
+26
+00:01:46,789 --> 00:01:48,119
+system.
+
+27
+00:01:48,119 --> 00:01:51,729
+The operating system of course is going to
+need to interact with system hardware.
+
+28
+00:01:51,729 --> 00:01:57,619
+So, in order to open that file, it's got to
+read from the hard drive and so the operating
+
+29
+00:01:57,619 --> 00:02:02,680
+system directly communicates with System hardware
+to get the job done.
+
+30
+00:02:02,680 --> 00:02:05,189
+These are the layers of interaction that you
+see.
+
+31
+00:02:05,189 --> 00:02:09,920
+So, the user is never directly interacting
+with the operating system and the operating
+
+32
+00:02:09,920 --> 00:02:14,530
+so the application is never directly interacting
+with system hardware; everything is insulated.
+

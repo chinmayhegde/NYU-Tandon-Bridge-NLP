@@ -1,0 +1,57 @@
+1
+00:00:00,690 --> 00:00:05,210
+So C++ has an internal representation object
+for the files.
+
+2
+00:00:05,210 --> 00:00:10,880
+So there's an object inside C++ which represents
+our connection to the file.
+
+3
+00:00:10,880 --> 00:00:14,530
+The data type of that is going to differ based
+on what we're going to do with it; whether
+
+4
+00:00:14,530 --> 00:00:17,540
+it's an input file or an output file.
+
+5
+00:00:17,540 --> 00:00:21,680
+And if we want to have an input file, then
+the object type that we have to create is
+
+6
+00:00:21,680 --> 00:00:23,400
+called an ifstream.
+
+7
+00:00:23,400 --> 00:00:28,180
+And if we want to have an output file, then
+the object type we have to create is an ofstream.
+
+8
+00:00:28,180 --> 00:00:34,949
+So it's fairly easy to remember these as fstream
+objects, and the i is an input file stream
+
+9
+00:00:34,949 --> 00:00:39,649
+and the o is an output file stream so ifstream
+or ofstream.
+
+10
+00:00:39,649 --> 00:00:43,239
+You have to create the appropriate type and
+you can't change what you're going to do with
+
+11
+00:00:43,239 --> 00:00:45,059
+that file once it's created.
+
+12
+00:00:45,059 --> 00:00:47,859
+But of course you could always close it and
+open it is a different type.
+

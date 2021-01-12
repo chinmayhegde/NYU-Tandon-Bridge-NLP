@@ -1,0 +1,154 @@
+1
+00:00:00,799 --> 00:00:09,950
+If we print or cout x divided by 2 since x
+and 2 are both integer the slash here is in
+
+2
+00:00:09,950 --> 00:00:11,810
+the context of div.
+
+3
+00:00:11,810 --> 00:00:20,560
+So it would print how many full times 2 fits
+into 5 which is 2 in this case and if we cout
+
+4
+00:00:20,560 --> 00:00:29,569
+x mod 2 that would print the remainder when
+we are dividing 13 by 5 or 5 by 2 sorry and
+
+5
+00:00:29,569 --> 00:00:30,599
+that is one.
+
+6
+00:00:30,599 --> 00:00:35,809
+Because this is the remainder when we are
+5 by 2.
+
+7
+00:00:35,809 --> 00:00:42,609
+So when we are speaking about arithmetic operators
+in the context of int we have the plus minus
+
+8
+00:00:42,609 --> 00:00:45,760
+multiplication div and mod.
+
+9
+00:00:45,760 --> 00:00:51,640
+One last operator I want to talk about here
+is the assignment.
+
+10
+00:00:51,640 --> 00:00:55,640
+Formally an assignment is considered to be
+an arithmetic operator.
+
+11
+00:00:55,640 --> 00:00:59,769
+Basically by using it we create an arithmetic
+expression.
+
+12
+00:00:59,769 --> 00:01:08,750
+And when we set x to 6 there is a side effect
+that basically sets the value of x to 6.
+
+13
+00:01:08,750 --> 00:01:12,220
+But this expression basically also has a value.
+
+14
+00:01:12,220 --> 00:01:16,250
+The value of this expression is the value
+that is assigned to the variable.
+
+15
+00:01:16,250 --> 00:01:26,810
+So for example if we cout x equals 7 so first
+the side effect of x getting the value of
+
+16
+00:01:26,810 --> 00:01:34,350
+7 happens but then the value of this expression
+7 is also in this case printed.
+
+17
+00:01:34,350 --> 00:01:44,200
+Later on if we assign y to be x equals 8 once
+again x equals 8 when it is evaluated sets
+
+18
+00:01:44,200 --> 00:01:50,110
+x to the value of 8 but the value of this
+expression 8 goes into y.
+
+19
+00:01:50,110 --> 00:01:58,650
+So using assignment as arithmetical operator
+we can for example create multiple assignments
+
+20
+00:01:58,650 --> 00:01:59,910
+in a single line of code.
+
+21
+00:01:59,910 --> 00:02:04,030
+So we can do y equals x equals 8.
+
+22
+00:02:04,030 --> 00:02:10,170
+Actually we don’t need the parentheses we
+can just do y equals x equals whatever in
+
+23
+00:02:10,170 --> 00:02:11,440
+this case 9.
+
+24
+00:02:11,440 --> 00:02:20,230
+So these are the major or the fundamental
+arithmetic operators when we are using integers.
+
+25
+00:02:20,230 --> 00:02:27,580
+And if we recap what we said about integers
+about the int data type so they are representing
+
+26
+00:02:27,580 --> 00:02:30,030
+they are used represent integer numbers.
+
+27
+00:02:30,030 --> 00:02:33,750
+Each one has a fixed size of 4 bytes.
+
+28
+00:02:33,750 --> 00:02:41,170
+The data in these 4 bytes is represented using
+a 32 bit 2’s complement method.
+
+29
+00:02:41,170 --> 00:02:51,230
+C++ has built in datas that are considered
+to be integers basically the C++ literals.
+
+30
+00:02:51,230 --> 00:02:57,510
+We programmers just write integer numbers
+in their decimal representation and C++ would
+
+31
+00:02:57,510 --> 00:03:00,670
+recognize them consider them to be integers.
+
+32
+00:03:00,670 --> 00:03:06,530
+And we can create arithmetic operators using
+integers with arithmetic operators in between
+
+33
+00:03:06,530 --> 00:03:06,550
+them.
+

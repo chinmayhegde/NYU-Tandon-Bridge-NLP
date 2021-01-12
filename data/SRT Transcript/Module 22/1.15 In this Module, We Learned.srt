@@ -1,0 +1,53 @@
+1
+00:00:00,420 --> 00:00:05,270
+So, we covered a real basic of operating systems;
+think just kind of the intro stuff.
+
+2
+00:00:05,270 --> 00:00:09,360
+We talked about what an operating system is,
+we looked at some history of operating system.
+
+3
+00:00:09,360 --> 00:00:13,740
+We did talk about preemption remember that's
+the stopping and restarting of a program,
+
+4
+00:00:13,740 --> 00:00:17,690
+even if it's not doesn't need to be stopped
+and restarted.
+
+5
+00:00:17,690 --> 00:00:20,520
+We talked about the architecture of an operating
+system.
+
+6
+00:00:20,520 --> 00:00:22,990
+We talked about a lot of things and we're
+going to keep going with that.
+
+7
+00:00:22,990 --> 00:00:27,840
+And more discussions in later modules with
+more of that we're going to cover on operating
+
+8
+00:00:27,840 --> 00:00:31,680
+systems, including further discussions on
+processes and scheduling.
+
+9
+00:00:31,680 --> 00:00:33,510
+We're going to talk about memory management.
+
+10
+00:00:33,510 --> 00:00:35,350
+We're going to talk about threads and concurrency
+issues.
+
+11
+00:00:35,350 --> 00:00:37,640
+So, we've got a lot to go over so keep going.
+

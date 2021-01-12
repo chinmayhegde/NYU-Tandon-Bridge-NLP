@@ -1,0 +1,84 @@
+1
+00:00:00,700 --> 00:00:04,170
+The first thing we have to understand is that
+there's so much data that has to be entered
+
+2
+00:00:04,170 --> 00:00:09,030
+into most programs that it's really unreasonable
+to ask the user to type it in at the keyboard
+
+3
+00:00:09,030 --> 00:00:11,179
+each time the program starts.
+
+4
+00:00:11,179 --> 00:00:15,209
+And of course we understand this from our
+past experiences with Word and Excel and PowerPoint
+
+5
+00:00:15,209 --> 00:00:19,400
+and all the other regular programs that we
+use generally store that information in a
+
+6
+00:00:19,400 --> 00:00:20,400
+file.
+
+7
+00:00:20,400 --> 00:00:25,220
+And a file is a nice compact way of keeping
+track of all the data that's needed for a
+
+8
+00:00:25,220 --> 00:00:27,850
+particular run of a program.
+
+9
+00:00:27,850 --> 00:00:33,050
+There needs to be a way to access data on
+the file system and in fact, we need to talk
+
+10
+00:00:33,050 --> 00:00:36,240
+about both the input and the output.
+
+11
+00:00:36,240 --> 00:00:42,770
+Input means bringing data from the file system
+into our programs and using it for processing
+
+12
+00:00:42,770 --> 00:00:44,990
+or whatever we want to do with it.
+
+13
+00:00:44,990 --> 00:00:49,260
+Output means taking the data from our program
+from main memory or from wherever we have
+
+14
+00:00:49,260 --> 00:00:54,290
+it stored in variables or vectors or arrays
+or wherever, and putting it out on the file
+
+15
+00:00:54,290 --> 00:00:55,290
+system.
+
+16
+00:00:55,290 --> 00:00:59,720
+And this is actually a two part process; there's
+actually two steps here.
+
+17
+00:00:59,720 --> 00:01:05,750
+So that when we're working on a file we would
+have read that file initially, we would work
+
+18
+00:01:05,750 --> 00:01:09,780
+on it in main memory, and then we would output
+that file back to the file system.
+

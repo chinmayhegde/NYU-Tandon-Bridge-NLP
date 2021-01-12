@@ -1,0 +1,61 @@
+1
+00:00:00,760 --> 00:00:02,870
+We talked about a lot during this module.
+
+2
+00:00:02,870 --> 00:00:06,810
+We talked about what threads are; we gave
+a little reminder about the threads.
+
+3
+00:00:06,810 --> 00:00:10,722
+We talked about features of having multiple
+threads accessing multiple resources and we
+
+4
+00:00:10,722 --> 00:00:15,000
+said that there was the possibility, of course,
+that we could have asynchrony.
+
+5
+00:00:15,000 --> 00:00:18,780
+And if we do have the possibility of a synchrony,
+we said that we need to identify critical
+
+6
+00:00:18,780 --> 00:00:24,770
+sections so that we can protect those critical
+sections using concurrency control mechanisms.
+
+7
+00:00:24,770 --> 00:00:29,170
+And those concurrency control mechanisms that
+we talked about are software and hardware
+
+8
+00:00:29,170 --> 00:00:30,170
+based.
+
+9
+00:00:30,170 --> 00:00:34,010
+We talked about the idea of mutual exclusion
+using semaphores.
+
+10
+00:00:34,010 --> 00:00:38,679
+We talked about the design of the semaphores,
+and how they work internally we also went
+
+11
+00:00:38,679 --> 00:00:43,469
+into how deadlocks occur and how we can prevent
+deadlocks. and then we talked about the dining
+
+12
+00:00:43,469 --> 00:00:44,510
+philosophers problem.
+
+13
+00:00:44,510 --> 00:00:47,319
+So, we really covered a lot during this module.
+

@@ -1,0 +1,188 @@
+1
+00:00:00,969 --> 00:00:05,130
+C++ allows us to do something that most of
+the languages have eliminated; they don't
+
+2
+00:00:05,130 --> 00:00:09,840
+like this anymore. Java has gotten rid of
+it, Python never had it to begin with, actually
+
+3
+00:00:09,840 --> 00:00:16,150
+Java never had to begin with, to be honest.
+What we can do with C++ is what we call operator
+
+4
+00:00:16,150 --> 00:00:24,019
+overloading, and operator overloading allows
+us to take two objects, and for example add
+
+5
+00:00:24,019 --> 00:00:30,060
+them together. We can operate on two objects
+or on an object, using what we would consider
+
+6
+00:00:30,060 --> 00:00:31,989
+a normal operator.
+
+7
+00:00:31,989 --> 00:00:36,340
+So there's three different types of operators:
+we have unary operators which only work on
+
+8
+00:00:36,340 --> 00:00:43,510
+one object one operand. A unary operator would
+be like plus plus, we would say A plus plus;
+
+9
+00:00:43,510 --> 00:00:49,810
+there is no other object that we're working
+with. A binary operator works on to operate
+
+10
+00:00:49,810 --> 00:00:56,670
+operands, so two objects, A plus B, for example.
+And the majority of the operators that we're
+
+11
+00:00:56,670 --> 00:01:02,000
+going to work with are in fact binary operators.
+So we have all the regular math operators,
+
+12
+00:01:02,000 --> 00:01:07,890
+plus, minus, multiplication, division, module,
+zero. We have the compound operators, which
+
+13
+00:01:07,890 --> 00:01:13,780
+are things like the plus equals, and the minus
+equals, and so on and so forth. We have the
+
+14
+00:01:13,780 --> 00:01:21,500
+comparison operators, which are the less than,
+the greater than, the output, the input operators,
+
+15
+00:01:21,500 --> 00:01:25,330
+and then we also have things like the square
+brackets operator or what we call the array
+
+16
+00:01:25,330 --> 00:01:27,780
+index of operator.
+
+17
+00:01:27,780 --> 00:01:32,470
+There's also a category of operators called
+the ternary operators, and in fact C++ only
+
+18
+00:01:32,470 --> 00:01:36,510
+has one of these. It's called the conditional
+operator and if you haven't come across it,
+
+19
+00:01:36,510 --> 00:01:40,970
+it's horribly confusing and we don't often
+like to use it; but it is there and some people
+
+20
+00:01:40,970 --> 00:01:48,230
+like it. So you can have the turnaround operator.
+Really when boils down to it operators are
+
+21
+00:01:48,230 --> 00:01:53,830
+nothing more than functions, and they're just
+a strange way to use functions. What C++ actually
+
+22
+00:01:53,830 --> 00:01:58,800
+does is it takes that A plus B and it says,
+I don't know how to do A plus B, but I know
+
+23
+00:01:58,800 --> 00:02:04,479
+how to make function calls. And it converts
+the function; it converts the operation, into
+
+24
+00:02:04,479 --> 00:02:10,899
+a function call. What it converts the function
+call to depends on how we as the programmer
+
+25
+00:02:10,899 --> 00:02:17,970
+decide to overload that operator. If we overload
+the operator as a nonmember, we’ll talk
+
+26
+00:02:17,970 --> 00:02:24,209
+about this, the operator the function call
+would look like operator plus A B. So the
+
+27
+00:02:24,209 --> 00:02:29,340
+A plus B function call would be operator plus
+A B; it would take two parameters. It's a
+
+28
+00:02:29,340 --> 00:02:35,730
+binary operator, it's overloaded as a nonmember,
+it takes two parameters. However if it's overloaded
+
+29
+00:02:35,730 --> 00:02:43,060
+as a member, then the this object becomes
+one of the operands and so we only need one
+
+30
+00:02:43,060 --> 00:02:48,370
+parameter. So, the equivalent function call
+if we're a member, is A dot operator plus
+
+31
+00:02:48,370 --> 00:02:53,780
+B. Here we only have one parameter because
+the this object, the calling object, is the
+
+32
+00:02:53,780 --> 00:03:00,290
+second, is actually the first operand. Operator
+functions can be either member or nonmember
+
+33
+00:03:00,290 --> 00:03:06,569
+and we're going to talk of a lot about how
+to choose which to use. And some operators
+
+34
+00:03:06,569 --> 00:03:13,170
+change the data inside the objects; some return
+a new object, so it's important to look at
+
+35
+00:03:13,170 --> 00:03:19,660
+what the operator is supposed to do. A compound
+operator like the plus equals operator should
+
+36
+00:03:19,660 --> 00:03:26,230
+actually change the calling object. Whereas
+the plus operator A plus B, doesn't change
+
+37
+00:03:26,230 --> 00:03:30,640
+A or B, it in fact return something entirely
+different. So you have to take into account
+
+38
+00:03:30,640 --> 00:03:34,740
+what the operator is supposed to do, and then
+you've got to figure out how to write it.
+

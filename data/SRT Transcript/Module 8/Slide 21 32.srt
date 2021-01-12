@@ -1,0 +1,235 @@
+0:00:00.590,0:00:02.050
+So let’s implement this program.
+
+0:00:02.050,0:00:05.320
+So let’s have our main.
+
+0:00:05.320,0:00:12.940
+We are going to calculate n choose k by the
+formula of factorial n over k factorial times
+
+0:00:12.940,0:00:15.620
+factorial of n minus k.
+
+0:00:15.620,0:00:19.030
+So let’s start first declaring n and k.
+
+0:00:19.030,0:00:27.250
+Let’s ask the user to enter n and k and
+read these variables n and k.
+
+0:00:27.250,0:00:32.250
+Now we will need to calculate the factorial
+of n the factorial of k factorial of n minus
+
+0:00:32.250,0:00:34.840
+k and do the calculation there.
+
+0:00:34.840,0:00:44.260
+So in order to calculate the factorial of
+n we will define an accumulating variable
+
+0:00:44.260,0:00:46.960
+n fact that would initially be one.
+
+0:00:46.960,0:00:51.430
+And then we’ll just multiply more and more
+values to it right.
+
+0:00:51.430,0:00:56.150
+So we want to do one times two times three
+times four so on up to n.
+
+0:00:56.150,0:01:03.039
+So we will use a for loop that would iterate
+one through n and each time it would multiply
+
+0:01:03.039,0:01:06.840
+our accumulator this n fact by i.
+
+0:01:06.840,0:01:13.009
+So first it would be n fact times one then
+n fact times two times three times four up
+
+0:01:13.009,0:01:14.009
+to n.
+
+0:01:14.009,0:01:20.240
+So eventually it would accumulate the entire
+multiplication of one through n.
+
+0:01:20.240,0:01:24.909
+So at the end of this execution n fact would
+hold the factorial of n.
+
+0:01:24.909,0:01:28.830
+Same thing we would do for k fact to calculate
+the factorial of k.
+
+0:01:28.830,0:01:34.459
+So again k fact is initialized to one and
+then we would iterate one through k this time
+
+0:01:34.459,0:01:38.759
+multiplying each value there.
+
+0:01:38.759,0:01:41.439
+And same thing we will do for n minus k.
+
+0:01:41.439,0:01:48.349
+So I named a variable n underscore k fact
+just because I can’t use a dash in the variable
+
+0:01:48.349,0:01:49.349
+name.
+
+0:01:49.349,0:01:55.419
+But same thing n underscore k fact is initialized
+to one and then we are multiplying one through
+
+0:01:55.419,0:01:58.459
+n minus k all the values in that range.
+
+0:01:58.459,0:02:07.840
+After doing that we are collecting we are
+calculating the n fact over k fact times n
+
+0:02:07.840,0:02:13.019
+minus k fact and we name that value as k combinations.
+
+0:02:13.019,0:02:22.110
+Now a point here is that I made k combinations
+be an integer but then I am dividing here
+
+0:02:22.110,0:02:26.530
+some values maybe it could be a double.
+
+0:02:26.530,0:02:32.140
+So if we think about it a bit more deeply
+we will see that it cannot be a double since
+
+0:02:32.140,0:02:38.019
+we are using the division of two integers
+it would be counted as div.
+
+0:02:38.019,0:02:46.549
+But then it would not be a double since mathematically
+we can prove that this value here represents
+
+0:02:46.549,0:02:52.520
+n choose k or in other words the number of
+ways to choose k elements out of a set of
+
+0:02:52.520,0:02:53.520
+n.
+
+0:02:53.520,0:03:01.180
+And that is always a whole value that is not
+can’t be 3.5 ways to choose k elements out
+
+0:03:01.180,0:03:02.180
+of n.
+
+0:03:02.180,0:03:09.060
+That is an integer value so we can feel safe
+to declare k comb as an integer and do the
+
+0:03:09.060,0:03:11.950
+math here using div in this case.
+
+0:03:11.950,0:03:22.860
+So after calculating k comb we can print that
+n choose k is k comb.
+
+0:03:22.860,0:03:31.090
+So we’ve got that all figured out now take
+a look at these three parts here when we calculated
+
+0:03:31.090,0:03:34.599
+the factorial of n the factorial of k and
+the factorial of n minus k.
+
+0:03:34.599,0:03:41.920
+They look very similar to one another in one
+way and they are doing the same kind of calculation
+
+0:03:41.920,0:03:43.790
+the same kind of process.
+
+0:03:43.790,0:03:49.909
+Basically initializing an accumulator and
+iterating over a range each time multiplying
+
+0:03:49.909,0:03:55.269
+the accumulator by the current value.
+
+0:03:55.269,0:04:01.560
+Not only that it is basically calculating
+the factorial so you know let’s that would
+
+0:04:01.560,0:04:02.560
+be cool.
+
+0:04:02.560,0:04:07.379
+Let’s include the math library let’s do
+something like include c math.
+
+0:04:07.379,0:04:13.379
+And then instead of having n fact equals one
+and all of the for loop let’s call the factorial
+
+0:04:13.379,0:04:15.590
+function of math.
+
+0:04:15.590,0:04:18.829
+Let’s do n fact equals factorial of n.
+
+0:04:18.829,0:04:20.530
+And same thing for k.
+
+0:04:20.530,0:04:22.900
+K fact equals factorial of k.
+
+0:04:22.900,0:04:25.020
+And same thing for n minus k.
+
+0:04:25.020,0:04:27.620
+N minus k equals factorial of n minus k.
+
+0:04:27.620,0:04:34.139
+And that would make our code first much more
+clear it basically speaks what we want to
+
+0:04:34.139,0:04:35.139
+say.
+
+0:04:35.139,0:04:41.169
+It says n fact equals the factorial of n we
+don’t need to analyze a for loop and an
+
+0:04:41.169,0:04:43.600
+accumulator to understand what they do.
+
+0:04:43.600,0:04:47.789
+Basically we just read the words there.
+
+0:04:47.789,0:04:54.940
+And yes so it makes it a lot clearer and we
+don’t need to get into the details of implementation
+
+0:04:54.940,0:04:57.640
+here.
+
+0:04:57.640,0:05:03.930
+Unfortunately the c math library doesn’t
+have a factorial function that’s kind of
+
+0:05:03.930,0:05:06.050
+unfortunate here.
+
+0:05:06.050,0:05:12.880
+Luckily for us we are going to define our
+own factorial function just now.
+
+0:05:12.880,0:05:15.200
+So yeah let’s see how we do that.

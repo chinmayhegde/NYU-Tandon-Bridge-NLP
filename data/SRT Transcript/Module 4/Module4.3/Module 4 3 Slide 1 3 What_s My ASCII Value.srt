@@ -1,0 +1,18 @@
+0:00:01.060,0:00:07.140
+Let’s try to write a program that reads
+from the user a single character and then
+
+0:00:07.140,0:00:12.570
+prints what’s the ASCII value that corresponds
+to that character.
+
+0:00:12.570,0:00:17.830
+For example the program would first ask the
+user please enter a character the user would
+
+0:00:17.830,0:00:24.359
+say upper case T and then the program would
+respond by saying the ASCII value of upper
+
+0:00:24.359,0:00:26.670
+case T is 84.

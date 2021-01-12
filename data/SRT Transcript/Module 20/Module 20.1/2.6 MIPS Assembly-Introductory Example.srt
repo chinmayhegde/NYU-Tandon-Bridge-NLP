@@ -1,0 +1,146 @@
+1
+00:00:00,340 --> 00:00:04,299
+Let’s illustrate this with the A = B+C example.
+
+2
+00:00:04,299 --> 00:00:09,670
+Recall that MIPS64 is a RISC architecture,
+so there must be four machine-level instructions
+
+3
+00:00:09,670 --> 00:00:17,020
+to perform A = B+C: two instruction to load
+B and C to registers, one to add the registers,
+
+4
+00:00:17,020 --> 00:00:21,610
+and one to store the result back to memory
+location of A. Since there is a one-to-one
+
+5
+00:00:21,610 --> 00:00:26,640
+mapping between machine code and assembly,
+we can convert this high-level code into four
+
+6
+00:00:26,640 --> 00:00:27,990
+assembly level instructions.
+
+7
+00:00:27,990 --> 00:00:32,279
+The first instruction copies the value of
+B from the data segment to a register; let
+
+8
+00:00:32,279 --> 00:00:35,430
+us assume the assembly labels the register
+using the symbol t1.
+
+9
+00:00:35,430 --> 00:00:39,851
+The second instruction copies the value of
+C from the data segment to another register,
+
+10
+00:00:39,851 --> 00:00:41,579
+say register t2.
+
+11
+00:00:41,579 --> 00:00:46,090
+At this point, the value of B and C are in
+t1 and t2 respectively.
+
+12
+00:00:46,090 --> 00:00:50,830
+The third instruction adds the the registers
+t1 and t2 and puts the result into register
+
+13
+00:00:50,830 --> 00:00:51,989
+t3.
+
+14
+00:00:51,989 --> 00:00:56,750
+The last instruction copies the value of t3
+into the data location that is allocated for
+
+15
+00:00:56,750 --> 00:00:59,210
+A.
+Here we see the more formal assembly language
+
+16
+00:00:59,210 --> 00:01:01,720
+code for this high-level operation.
+
+17
+00:01:01,720 --> 00:01:05,639
+The first two assembly-level instructions
+are load double word, or LD.
+
+18
+00:01:05,639 --> 00:01:08,619
+In this respect the double word indicates
+to the processor that the data to be loaded
+
+19
+00:01:08,619 --> 00:01:13,049
+from memory to register is of size double
+word, or 64 bits.
+
+20
+00:01:13,049 --> 00:01:18,159
+The third instruction is a double word add,
+or D--DD, where the ALU adds the two registers
+
+21
+00:01:18,159 --> 00:01:21,759
+t1 and t2 and puts the results in t3.
+
+22
+00:01:21,759 --> 00:01:27,130
+The final instruction is store doubleword,
+or SD, where the content of t3 is copied into
+
+23
+00:01:27,130 --> 00:01:31,590
+memory address of A. Note the syntax of the
+assembly-level instructions.
+
+24
+00:01:31,590 --> 00:01:35,539
+For load doubleword, we see the destination
+register is put first, followed by the label
+
+25
+00:01:35,539 --> 00:01:37,249
+of the memory address.
+
+26
+00:01:37,249 --> 00:01:41,979
+For the doubleword add, the destination register
+is put first, followed by the source register
+
+27
+00:01:41,979 --> 00:01:42,979
+operands.
+
+28
+00:01:42,979 --> 00:01:46,450
+For the Store Doubleword, the source register
+is put first, followed by the label of the
+
+29
+00:01:46,450 --> 00:01:48,439
+destination memory location.
+
+30
+00:01:48,439 --> 00:01:53,819
+So, since assembly language has a one to one
+correlation to machine code, we can map each
+
+31
+00:01:53,819 --> 00:01:58,979
+assembly instruction of the A = B+C operation
+to a machine-level instruction.
+

@@ -1,0 +1,264 @@
+0:00:00.459,0:00:10.040
+Ok let’s take a look at another example
+and see how our local scopes basically work.
+
+0:00:10.040,0:00:16.110
+So for example let’s have a main program
+that has a local variable n.
+
+0:00:16.110,0:00:21.500
+It prints the value of N and then it calls
+a function named func.
+
+0:00:21.500,0:00:24.539
+Passing n as an argument.
+
+0:00:24.539,0:00:28.019
+And then it prints the value of n after this
+function call.
+
+0:00:28.019,0:00:35.780
+And func let’s define a function here named
+func that gets an integer n as an argument.
+
+0:00:35.780,0:00:44.539
+By the way it returns void when we have void
+as a return value it means that there won’t
+
+0:00:44.539,0:00:46.620
+be any value returned.
+
+0:00:46.620,0:00:52.489
+Right you can see that when we call func we
+didn’t say some variable equals func right.
+
+0:00:52.489,0:00:58.899
+Because this function doesn’t return a value
+only does some calculations but not returning
+
+0:00:58.899,0:01:00.101
+any return value.
+
+0:01:00.101,0:01:02.739
+You can see that there is no return statement
+at the end.
+
+0:01:02.739,0:01:13.180
+So a function can return whatever type it
+wants it can return an int a float a double
+
+0:01:13.180,0:01:14.970
+just any type we want.
+
+0:01:14.970,0:01:19.150
+Or it could be a void basically saying there
+is no value to return.
+
+0:01:19.150,0:01:26.190
+Ok so we have this function this function
+sets n to be four and then prints the value
+
+0:01:26.190,0:01:27.190
+of n inside.
+
+0:01:27.190,0:01:29.210
+Let’s try to trace this execution.
+
+0:01:29.210,0:01:37.649
+So before the function N is three right n
+is set to three so just after that it would
+
+0:01:37.649,0:01:40.970
+print before func three.
+
+0:01:40.970,0:01:48.200
+Then we call func with three basically jumping
+to the function position setting n to be four.
+
+0:01:48.200,0:01:51.500
+So inside the function n would be four.
+
+0:01:51.500,0:01:58.450
+And just after the cout we jump back to where
+we came from and printing the value of n after
+
+0:01:58.450,0:01:59.450
+this function call.
+
+0:01:59.450,0:02:05.240
+So it would print after func but I am not
+sure whether the value that would be printed
+
+0:02:05.240,0:02:15.330
+is the updated value of n basically four or
+the value of n was before which is three.
+
+0:02:15.330,0:02:23.100
+So let’s in order to solve this issue let’s
+use the runtime stack model and trace this
+
+0:02:23.100,0:02:24.740
+execution in that model.
+
+0:02:24.740,0:02:29.630
+That would explain the behavior entirely.
+
+0:02:29.630,0:02:37.530
+Ok so we start with frame for the main containing
+the local variable n.
+
+0:02:37.530,0:02:43.850
+Initially n at line two is set to three so
+n gets the value of three.
+
+0:02:43.850,0:02:50.450
+Then we line three cout before func the value
+of n is three.
+
+0:02:50.450,0:02:55.240
+Then we call the function func.
+
+0:02:55.240,0:02:59.510
+So a function call we have a few steps we
+need to take.
+
+0:02:59.510,0:03:08.290
+So first we create a frame for this function
+containing the parameter n.
+
+0:03:08.290,0:03:11.310
+Local variables there aren’t any and the
+return address.
+
+0:03:11.310,0:03:18.090
+By the way it is not a coincidence but the
+parameter name for the function func and the
+
+0:03:18.090,0:03:21.900
+local variable up the main are both named
+n.
+
+0:03:21.900,0:03:28.830
+And you can see there are two separate instances
+of variables both named n.
+
+0:03:28.830,0:03:34.230
+One in the main frame and the other in the
+func frame.
+
+0:03:34.230,0:03:40.680
+So there are two different variables I believe
+you probably already can guess what would
+
+0:03:40.680,0:03:45.230
+be the value printed after func is evaluated.
+
+0:03:45.230,0:03:50.550
+Ok so step one was creating the frame so we
+have n in the return address.
+
+0:03:50.550,0:03:56.210
+Step two is evaluating the argument so up
+in the main the value of n in the argument
+
+0:03:56.210,0:03:57.210
+is three.
+
+0:03:57.210,0:04:04.290
+Step three would be assigning the parameter
+with the argument value basically assigning
+
+0:04:04.290,0:04:08.940
+the local func’s n to be three.
+
+0:04:08.940,0:04:13.310
+Returning address would be five right after
+this call.
+
+0:04:13.310,0:04:15.950
+And then we are jumping to the beginning of
+the function.
+
+0:04:15.950,0:04:18.750
+Now we set n to be four.
+
+0:04:18.750,0:04:21.440
+Which n would be set to four?
+
+0:04:21.440,0:04:28.250
+Obviously the local n that we are currently
+in the variable’s scope.
+
+0:04:28.250,0:04:35.909
+So our currently scope is the func frame so
+we are setting func’s n to be four.
+
+0:04:35.909,0:04:40.830
+And then obviously when we print inside func
+the value of n is four.
+
+0:04:40.830,0:04:46.949
+When this function ends there is no return
+value but we do figure out that we want to
+
+0:04:46.949,0:04:51.020
+return to address to line number five.
+
+0:04:51.020,0:04:58.129
+We pop out the current frame and at line number
+five we are back to the main’s frame.
+
+0:04:58.129,0:05:06.819
+So the original n didn’t change its value
+it was three then locally for the func the
+
+0:05:06.819,0:05:08.949
+local n changed from three to four.
+
+0:05:08.949,0:05:14.889
+So when we print after func the value of n
+it would print three.
+
+0:05:14.889,0:05:21.729
+Ok so then we return zero pop out this frame
+and end this execution.
+
+0:05:21.729,0:05:32.770
+So yeah so each function has its own local
+frame that when we are executing it the variables
+
+0:05:32.770,0:05:35.409
+we access are the local variable.
+
+0:05:35.409,0:05:40.270
+We have access only to these variables we
+don’t have access to frames that are out
+
+0:05:40.270,0:05:43.969
+of variables that are out of our local frame.
+
+0:05:43.969,0:05:49.610
+And we can have variables with the same name
+but there would be two separate instances
+
+0:05:49.610,0:05:51.930
+because each of them is in a different scope.
+
+0:05:51.930,0:05:57.310
+You can see that the runtime stack has dual
+role here.
+
+0:05:57.310,0:06:06.060
+It both manages the frames the local scopes
+of each function.
+
+0:06:06.060,0:06:13.099
+What are the variables that are accessible
+in that function and it also helps us to manage
+
+0:06:13.099,0:06:14.669
+the flow of the program.
+
+0:06:14.669,0:06:15.490
+To remember where to go back when the function
+ends.

@@ -1,0 +1,185 @@
+1
+00:00:00,729 --> 00:00:05,370
+Here's an example of a really bad AVL tree,
+or rather I should say one that doesn't meet
+
+2
+00:00:05,370 --> 00:00:06,430
+the AVL properties, right.
+
+3
+00:00:06,430 --> 00:00:09,469
+We call it a bad AVL tree but it just doesn't
+meet the AVL property.
+
+4
+00:00:09,469 --> 00:00:13,790
+So, what happened was we inserted ten, we
+inserted five, we inserted three, which sort
+
+5
+00:00:13,790 --> 00:00:20,380
+of looks like we had it before except the
+ten’s left child is five and five’s left
+
+6
+00:00:20,380 --> 00:00:22,279
+child is three.
+
+7
+00:00:22,279 --> 00:00:27,300
+Now the height of three is zero, which means
+the height of its left child is negative one,
+
+8
+00:00:27,300 --> 00:00:29,599
+the head of its right child is negative one;
+that's fine.
+
+9
+00:00:29,599 --> 00:00:31,429
+They differ by no more than one.
+
+10
+00:00:31,429 --> 00:00:37,120
+The height of the node at five is one; the
+height of its left sub child is zero, the
+
+11
+00:00:37,120 --> 00:00:39,780
+height of its right sub child is a negative
+one.
+
+12
+00:00:39,780 --> 00:00:41,559
+So that differs by no more than one.
+
+13
+00:00:41,559 --> 00:00:45,800
+Where the problem comes as at that root node
+ten there, which is a height of two.
+
+14
+00:00:45,800 --> 00:00:52,660
+And the height of two; the left sub child,
+five, has a height of one but the right sub
+
+15
+00:00:52,660 --> 00:00:54,379
+child has a height of negative one.
+
+16
+00:00:54,379 --> 00:00:57,590
+So the difference there is two and now we've
+got a problem.
+
+17
+00:00:57,590 --> 00:01:04,500
+And we can see this starting to form the same
+classic problem where we had the right, right,
+
+18
+00:01:04,500 --> 00:01:08,940
+right, right, right problem from the previous
+slide, where all the nodes are being inserted
+
+19
+00:01:08,940 --> 00:01:10,360
+as greater values.
+
+20
+00:01:10,360 --> 00:01:14,300
+Here the nodes are all being inserted lower
+values, lesser values, so it's all going to
+
+21
+00:01:14,300 --> 00:01:15,300
+the left.
+
+22
+00:01:15,300 --> 00:01:19,410
+Regardless, if we let this propagate this
+is going to end up as a linked list, we're
+
+23
+00:01:19,410 --> 00:01:25,640
+going to have the really poor insertion and
+searching times that we had with linked lists.
+
+24
+00:01:25,640 --> 00:01:28,900
+Another example of a bad AVL tree here.
+
+25
+00:01:28,900 --> 00:01:34,720
+We can see that we did, it looks like the
+insertion of ten, five, three, and twenty
+
+26
+00:01:34,720 --> 00:01:39,520
+and that all was fine; everything was okay
+from the same as the previous example.
+
+27
+00:01:39,520 --> 00:01:46,200
+Except now we take the added component of
+adding four, so here we added four onto the
+
+28
+00:01:46,200 --> 00:01:49,310
+right sub child of three.
+
+29
+00:01:49,310 --> 00:01:54,220
+And what happened was the node at four is
+balanced, left sub child is negative one,
+
+30
+00:01:54,220 --> 00:01:55,910
+right sub child is negative one.
+
+31
+00:01:55,910 --> 00:02:01,740
+The height at three is balanced; left sub
+child is negative one, right sub child zero.
+
+32
+00:02:01,740 --> 00:02:07,030
+The height at five, well that one we've got
+a bit of an issue here because the height
+
+33
+00:02:07,030 --> 00:02:13,079
+of the node five, the left sub child is one
+and the right sub child is a negative one.
+
+34
+00:02:13,079 --> 00:02:17,140
+So, that causes us a little bit of heartache
+we're going to have to deal with that.
+
+35
+00:02:17,140 --> 00:02:22,310
+Unfortunately, we have to deal with these
+as two different problems, because the solutions
+
+36
+00:02:22,310 --> 00:02:28,739
+that we use are different based on what whether
+or not, well we'll see them in a later slide,
+
+37
+00:02:28,739 --> 00:02:33,950
+but they're based on a little bit of difference
+in how we did the last insertion.
+
+38
+00:02:33,950 --> 00:02:37,870
+Either way these trees do not meet the AVL
+property.
+
+39
+00:02:37,870 --> 00:02:40,900
+So, we do have to do some work to get them
+to balance again.
+

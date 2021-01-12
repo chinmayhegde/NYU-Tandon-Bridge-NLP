@@ -1,0 +1,106 @@
+1
+00:00:00,750 --> 00:00:08,280
+I've been talking about using locks, or using
+a semaphore, but in reality we have two different
+
+2
+00:00:08,280 --> 00:00:11,019
+resource types that we can talk about when
+we get into deadlocks.
+
+3
+00:00:11,019 --> 00:00:15,250
+One is reusable resource types, and the other
+is consumable resource types.
+
+4
+00:00:15,250 --> 00:00:21,820
+Now a reusable resource type happens when
+we have a resource that we will temporarily
+
+5
+00:00:21,820 --> 00:00:27,880
+consume, for example, we will temporarily
+take action on the resource, we will temporarily
+
+6
+00:00:27,880 --> 00:00:29,820
+take over control of that, resource.
+
+7
+00:00:29,820 --> 00:00:34,210
+But then once we're done with it we'll return
+the resource back to the operating system
+
+8
+00:00:34,210 --> 00:00:38,460
+or back to the the whole so it can be reused
+again.
+
+9
+00:00:38,460 --> 00:00:44,470
+So, examples of this include things like memory,
+devices, data structures, even semaphores;
+
+10
+00:00:44,470 --> 00:00:48,719
+once we're done with these things we return
+them back to their original state and they're
+
+11
+00:00:48,719 --> 00:00:50,399
+allowed to be used again.
+
+12
+00:00:50,399 --> 00:00:54,680
+But there's consumable resources, which once
+we use it it's gone.
+
+13
+00:00:54,680 --> 00:00:58,460
+For example, if we have an interrupt and we
+deal with the interrupts, or we if you will
+
+14
+00:00:58,460 --> 00:01:02,399
+consume the interrupt, the interrupts can't
+be replaced.
+
+15
+00:01:02,399 --> 00:01:07,250
+If we get a signal then the signal can't be
+replaced; if we got a message then the message
+
+16
+00:01:07,250 --> 00:01:09,140
+cannot be replaced.
+
+17
+00:01:09,140 --> 00:01:14,700
+If we're for example, processing data in an
+IO buffer as you did in previous examples
+
+18
+00:01:14,700 --> 00:01:20,189
+where you read in from the keyboard, once
+you read in that data there's an easy way
+
+19
+00:01:20,189 --> 00:01:22,270
+to put it back into the buffer.
+
+20
+00:01:22,270 --> 00:01:27,220
+So, consumable resource types, once they're
+used they're gone, and the reason that we're
+
+21
+00:01:27,220 --> 00:01:32,290
+recognizing this is because how we deal with
+a deadlock on these different resources is
+
+22
+00:01:32,290 --> 00:01:35,310
+going to be different from one resource type
+to another.
+

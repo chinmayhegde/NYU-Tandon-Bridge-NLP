@@ -1,0 +1,110 @@
+1
+00:00:00,520 --> 00:00:03,610
+So now that we've got data that we can store
+inside the function inside the object and
+
+2
+00:00:03,610 --> 00:00:08,410
+we can get data out of the object, then perhaps
+we should have some other useful functions.
+
+3
+00:00:08,410 --> 00:00:13,860
+It's really common here in the U.S. that we
+might print a date in the term, in the form
+
+4
+00:00:13,860 --> 00:00:16,250
+of day slash month slash year.
+
+5
+00:00:16,250 --> 00:00:22,600
+So we could add a function inside our object
+inside our class where we can display the
+
+6
+00:00:22,600 --> 00:00:25,700
+date in the form of day slash month slash
+year.
+
+7
+00:00:25,700 --> 00:00:28,980
+So you can take a look at the code for that;
+it would be a very simple function to write.
+
+8
+00:00:28,980 --> 00:00:32,920
+Again it's const-ified because it's not changing
+any of the data.
+
+9
+00:00:32,920 --> 00:00:37,980
+We might also write a function to validate,
+to check to see if the date is valid, and
+
+10
+00:00:37,980 --> 00:00:40,210
+it will return true or false.
+
+11
+00:00:40,210 --> 00:00:45,110
+For example, if somebody puts in February
+thirty first of two thousand and sixteen,
+
+12
+00:00:45,110 --> 00:00:48,890
+that shouldn't be valid because there really
+is no February thirty first; so that might
+
+13
+00:00:48,890 --> 00:00:52,390
+return false if we were to have a validate
+function on that.
+
+14
+00:00:52,390 --> 00:00:56,649
+We could also check to make sure that the
+leap year is valid and if we need a leap year
+
+15
+00:00:56,649 --> 00:01:00,960
+calculation; we need to check which years
+are leap years and which years are not leap
+
+16
+00:01:00,960 --> 00:01:03,790
+years that may require another function.
+
+17
+00:01:03,790 --> 00:01:08,840
+And in that case the calculation of a leap
+year may not be a function that we want to
+
+18
+00:01:08,840 --> 00:01:14,389
+have allowed access to from the outside, which
+would make that function a private member
+
+19
+00:01:14,389 --> 00:01:15,600
+function.
+
+20
+00:01:15,600 --> 00:01:18,509
+Really what I'm getting at here is the possibilities
+are endless.
+
+21
+00:01:18,509 --> 00:01:22,719
+What you decide to do with a date class might
+be very different from what somebody else
+
+22
+00:01:22,719 --> 00:01:27,920
+decides to do with a date class, but you can
+do literally anything you want with it inside
+
+23
+00:01:27,920 --> 00:01:28,400
+C++.
+

@@ -1,0 +1,195 @@
+1
+00:00:00,989 --> 00:00:04,350
+The idea of deadlock prevention is that we
+eliminate one of the four requirements for
+
+2
+00:00:04,350 --> 00:00:05,350
+a deadlock.
+
+3
+00:00:05,350 --> 00:00:09,809
+The first one is mutual exclusion, and it's
+really hard to get rid of mutual exclusion
+
+4
+00:00:09,809 --> 00:00:11,530
+because it's usually a requirement.
+
+5
+00:00:11,530 --> 00:00:15,969
+Whenever we're working with threads, we recognize
+that these threads are going to have the possibility
+
+6
+00:00:15,969 --> 00:00:21,090
+for asynchrony and if they have the possibility
+for asynchrony, we have to provide a possibility
+
+7
+00:00:21,090 --> 00:00:22,519
+for mutual exclusion.
+
+8
+00:00:22,519 --> 00:00:27,539
+We have to provide the protection mechanisms
+for mutual exclusion; so getting rid of mutual
+
+9
+00:00:27,539 --> 00:00:30,300
+exclusion is usually not a possibility.
+
+10
+00:00:30,300 --> 00:00:36,680
+Hold-and-wait: we can say that all locks are
+required to be obtained at the same time and
+
+11
+00:00:36,680 --> 00:00:40,860
+either they're all approved or the thread
+is blocked.
+
+12
+00:00:40,860 --> 00:00:44,540
+Now if we do that then there's no additional
+lock that might occur.
+
+13
+00:00:44,540 --> 00:00:50,620
+If a thread holds a lock, it cant obtain another
+lock, which means that we can't get into a
+
+14
+00:00:50,620 --> 00:00:55,620
+situation where we're holding a lock and we're
+asking for a new lock and therefore, we're
+
+15
+00:00:55,620 --> 00:00:57,610
+blocked because we're asking for the new lock.
+
+16
+00:00:57,610 --> 00:01:03,470
+So, if we make the threads ask for all of
+its locks at the same time, then we've eliminated
+
+17
+00:01:03,470 --> 00:01:06,480
+the possibility of hold-and-wait.
+
+18
+00:01:06,480 --> 00:01:13,009
+No preemption: we can say that if a thread
+requests a new lock and the new lock is denied
+
+19
+00:01:13,009 --> 00:01:16,180
+then the thread has to release all of its
+existing locks.
+
+20
+00:01:16,180 --> 00:01:22,700
+So, that's a possibility, it's got to require
+a callback from the operating system to the
+
+21
+00:01:22,700 --> 00:01:29,229
+thread to say if the request for the lock
+is denied unlock everything else.
+
+22
+00:01:29,229 --> 00:01:34,130
+Put it back in a safe state; undo what you
+were doing and release those locks.
+
+23
+00:01:34,130 --> 00:01:40,869
+The operating system might also have the possibility
+the authority to remove existing locks individually
+
+24
+00:01:40,869 --> 00:01:42,969
+but that's a bit of a bad idea.
+
+25
+00:01:42,969 --> 00:01:47,869
+The last one is actually an easy one to deal
+with especially if we're talking about locks
+
+26
+00:01:47,869 --> 00:01:53,389
+on individual items that the programmer can
+control; one of the easiest solutions for
+
+27
+00:01:53,389 --> 00:01:57,039
+dealing with the circular wait is to order
+all the resources.
+
+28
+00:01:57,039 --> 00:02:02,889
+We can number them and order them so that
+there's never a possibility of holding a higher
+
+29
+00:02:02,889 --> 00:02:06,649
+level resource and requesting a lower level
+resource.
+
+30
+00:02:06,649 --> 00:02:11,760
+So, one of the problems of the circular weight
+is that the last thread is waiting on the
+
+31
+00:02:11,760 --> 00:02:13,110
+first thread.
+
+32
+00:02:13,110 --> 00:02:19,760
+What that means is that the first thread holds
+a lower lock and the last thread holds a higher
+
+33
+00:02:19,760 --> 00:02:26,260
+level lock and if we prevent the last thread
+from accessing its lower level lock, because
+
+34
+00:02:26,260 --> 00:02:31,920
+it holds the higher lock number then we've
+prevented the situation of the circular wait.
+
+35
+00:02:31,920 --> 00:02:37,080
+Either that higher level, that last thread
+will either release the higher level lock
+
+36
+00:02:37,080 --> 00:02:42,530
+and then request the lower level lock allowing
+other threads to continue or it won't be allowed
+
+37
+00:02:42,530 --> 00:02:43,530
+to do it.
+
+38
+00:02:43,530 --> 00:02:47,450
+So, the circular wait is actually an easy
+one and it's the one that's recommended by
+
+39
+00:02:47,450 --> 00:02:54,040
+a lot of computer scientists because the programmer
+can protect his own program internally, just
+
+40
+00:02:54,040 --> 00:02:57,540
+simply by ordering the locks, ordering resources.
+
+41
+00:02:57,540 --> 00:03:02,150
+So, that we never ask for a lower lock while
+we're holding a higher lock
+

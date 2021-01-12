@@ -1,0 +1,59 @@
+1
+00:00:00,659 --> 00:00:05,111
+When we're going to pass an ifstream or an
+ofstream an object to a function, or return
+
+2
+00:00:05,111 --> 00:00:07,319
+it from a function as we'll see later on.
+
+3
+00:00:07,319 --> 00:00:10,700
+Those have to be passed or returned by reference.
+
+4
+00:00:10,700 --> 00:00:12,880
+So the ampersand has to be there.
+
+5
+00:00:12,880 --> 00:00:19,910
+The reason for that is that the act of writing
+to or reading from a file, actually changes
+
+6
+00:00:19,910 --> 00:00:21,070
+the object.
+
+7
+00:00:21,070 --> 00:00:28,290
+Specifically, we have inside the file object,
+inside the representation, inside C++, we
+
+8
+00:00:28,290 --> 00:00:33,200
+have a pointer to how far into the file we've
+been working with.
+
+9
+00:00:33,200 --> 00:00:38,370
+So that when we read in, we're always reading
+in from where we left off on the last read
+
+10
+00:00:38,370 --> 00:00:39,600
+in operation.
+
+11
+00:00:39,600 --> 00:00:45,320
+Now obviously any read in or write out operation
+is going to change that file pointer, and
+
+12
+00:00:45,320 --> 00:00:49,910
+that's an act of changing the object which
+means it has to be passed in by reference
+
+13
+00:00:49,910 --> 00:00:51,950
+or returned by reference from a function.
+
