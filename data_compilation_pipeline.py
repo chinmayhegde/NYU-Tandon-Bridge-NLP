@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-    This pipeline compiles the Non-SRT transcripts and PPT text into two 
+    This pipeline compiles the Non-SRT transcripts and PPT text into two
     seperate JSON files. The schema for them is as follows:
 
 Transcript Schema:
-    
+
         [
             {
             "module_number": 0,
@@ -17,10 +17,10 @@ Transcript Schema:
                  }, ...
              ],
         ]
-        
-            
-PPT Schema: 
-    
+
+
+PPT Schema:
+
         [
             {
             "module_number": 0,
@@ -89,7 +89,7 @@ def if_title(doctext):
 # Extract transcript text
 for d in data_transcript:
     doc = Document(loc_transcript + d["file_name"])
-    #print(d["file_name"])
+    # print(d["file_name"])
 
     # Doc is a word document object. We can extract paragraphs from this obj.
     # Check out the "python-docx" library documentation
@@ -103,22 +103,23 @@ for d in data_transcript:
             continue
 
         resTitle = if_title(t.text)
-        #print(resTitle)
+        # print(resTitle)
 
         # Append transcript title and data
         if (resTitle) and (not transcript_data):
             title = t.text
 
-        elif (resTitle):
+        elif not(resTitle):
+            transcript_data.append(t.text)
+
+        else:
             d['transcript'].append({
                 "title": title,
                 "data": transcript_data
             })
             title = t.text
-            transcript_data.clear()
+            transcript_data = []
 
-        elif not(resTitle):
-            transcript_data.append(t.text)
 
 
 # --- PPT ---------------------------------------------------------------------
@@ -168,7 +169,7 @@ for d in data_ppt:
             "slide_title" : slide_title,
             "slide_text" : slide_text
         })
-        
+
 
 # --- Post-Processing ---------------------------------------------------------
 
@@ -179,8 +180,8 @@ for d in data_ppt:
 
 
 # Save JSON
-with open("data/preprocessed/transcripts.json", "w") as f:  
+with open("data/preprocessed/transcripts.json", "w") as f:
     json.dump(data_transcript, f, indent = 4)
 
-with open("data/preprocessed/ppts.json", "w") as f:  
-    json.dump(data_ppt, f, indent = 4) 
+with open("data/preprocessed/ppts.json", "w") as f:
+    json.dump(data_ppt, f, indent = 4)
