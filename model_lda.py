@@ -17,6 +17,7 @@ import pandas as pd
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+from gensim.models.ldamodel import LdaModel
 
 
 # Import raw json data
@@ -39,7 +40,7 @@ stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
 
 
-# Text preprocessing pipeline for the model   
+# Text preprocessing pipeline for the model
 def text_preprocessing(lines):
     # Join lines into a string
     line = " ".join(lines)
@@ -49,13 +50,13 @@ def text_preprocessing(lines):
     line = re.sub(r'[^a-zA-Z]+', ' ', line)
     # Normalizing whitespaces
     line = ' '.join(line.split())
-    
+
     # SpaCy noun chunk extraction
     line = nlp(line)
     noun_extract = textacy.extract.noun_chunks(line)
     line = [str(i) for i in noun_extract]
     # noun_extract = ' '.join([str(i) for i in noun_extract])
-    
+
     # Tokenize sentences
     # line = word_tokenize(noun_extract)
     # Remove Stop Words and single character words
@@ -96,18 +97,35 @@ dictionary = gensim.corpora.Dictionary(docs)
 docs_bow = [dictionary.doc2bow(doc) for doc in docs]
 
 # Train LDA model
-lda =  gensim.models.LdaMulticore(docs_bow,
-                                  num_topics =10 , 
-                                  id2word = dictionary,                                    
-                                  passes = 1,
-                                  workers = 4)
+# lda =  gensim.models.LdaMulticore(docs_bow,
+#                                   num_topics =10,
+#                                   id2word = dictionary,
+#                                   passes = 1,
+#                                   workers = 4)
+
+lda = LdaModel(corpus=docs_bow,
+               num_topics=10,
+               id2word=dictionary,
+               update_every=1,
+               chunksize=10000,
+               passes=1)
 
 # Print topics
-lda.print_topics()
+# lda.print_topics()
+for t in range(lda.num_topics-1):
+    print(lda.print_topic(t))
 
+# get the probablities of every topic for every row(para)
+prob = []
+docs_lda = lda[docs_bow]
+for p in docs_lda:
+    print(p)
+    prob.append(p)
 
-
-
-
-
-
+# export the probablities for every para to csv
+prob_res = pd.DataFrame(prob, columns=['Topic 1', 'Topic 2',
+                                       'Topic 3', 'Topic 4',
+                                       'Topic 5', 'Topic 6',
+                                       'Topic 7', 'Topic 8',
+                                       'Topic 9', 'Topic 10'])
+prob_res.to_csv('data/csv/prob_res.csv', index=True, header=True)
