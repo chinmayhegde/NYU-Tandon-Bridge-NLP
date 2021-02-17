@@ -1,0 +1,349 @@
+{
+    "nodes": [
+        {
+            "id": "TOPIC 1",
+            "group": 1
+        },
+        {
+            "id": "TOPIC 2",
+            "group": 2
+        },
+        {
+            "id": "TOPIC 3",
+            "group": 3
+        },
+        {
+            "id": "TOPIC 4",
+            "group": 4
+        },
+        {
+            "id": "TOPIC 5",
+            "group": 5
+        },
+        {
+            "id": "TOPIC 6",
+            "group": 6
+        },
+        {
+            "id": "TOPIC 7",
+            "group": 7
+        },
+        {
+            "id": "M 1 Fundamentals of System Hardware Script",
+            "group": 1
+        },
+        {
+            "id": "M 2 Positional Number Systems",
+            "group": 6
+        },
+        {
+            "id": "M 3 Hello World Script",
+            "group": 7
+        },
+        {
+            "id": "M 4 Data Types and Expressions Part 3",
+            "group": 6
+        },
+        {
+            "id": "M 5 Branching Part 2",
+            "group": 6
+        },
+        {
+            "id": "M 6 Loops",
+            "group": 4
+        },
+        {
+            "id": "M 7 Algorithm Analysis",
+            "group": 1
+        },
+        {
+            "id": "M 8 Functions Transcript",
+            "group": 2
+        },
+        {
+            "id": "M 9 Arrays",
+            "group": 2
+        },
+        {
+            "id": "M 10 Strings",
+            "group": 7
+        },
+        {
+            "id": "M 11 Pointers and Dynamic Storage Script",
+            "group": 4
+        },
+        {
+            "id": "M 12 Recursions and Mathematical Induction",
+            "group": 6
+        },
+        {
+            "id": "M 13 Searching",
+            "group": 6
+        },
+        {
+            "id": "M 14 Sorting",
+            "group": 7
+        },
+        {
+            "id": "M 15 Object Oriented Programming Concepts Script",
+            "group": 4
+        },
+        {
+            "id": "M 16 File Processing Script",
+            "group": 2
+        },
+        {
+            "id": "M 17 Linked Lists Script",
+            "group": 7
+        },
+        {
+            "id": "M 18 Stacks and Queues Script",
+            "group": 3
+        },
+        {
+            "id": "M 19 Trees and Binary Search Trees Script",
+            "group": 2
+        },
+        {
+            "id": "M 20 Computer Architecture Part 2",
+            "group": 5
+        },
+        {
+            "id": "M 21 Computer Organization Part 2",
+            "group": 5
+        },
+        {
+            "id": "M 22 Intro to OS Concepts",
+            "group": 1
+        },
+        {
+            "id": "M 23 Processes and Threads Script",
+            "group": 5
+        },
+        {
+            "id": "M 24 Thread Concurrency and Deadlocks Script",
+            "group": 5
+        },
+        {
+            "id": "M 25 Memory Management Script",
+            "group": 5
+        }
+    ],
+    "links": [
+        {
+            "source": "M 1 Fundamentals of System Hardware Script",
+            "target": "TOPIC 1",
+            "value": 3.129320196574554
+        },
+        {
+            "source": "M 1 Fundamentals of System Hardware Script",
+            "target": "TOPIC 4",
+            "value": 2.0430464933160692
+        },
+        {
+            "source": "M 2 Positional Number Systems",
+            "target": "TOPIC 6",
+            "value": 2.7394111754190655
+        },
+        {
+            "source": "M 3 Hello World Script",
+            "target": "TOPIC 7",
+            "value": 9.909440279006958
+        },
+        {
+            "source": "M 4 Data Types and Expressions Part 3",
+            "target": "TOPIC 6",
+            "value": 2.478084474849173
+        },
+        {
+            "source": "M 5 Branching Part 2",
+            "target": "TOPIC 6",
+            "value": 8.153359591960907
+        },
+        {
+            "source": "M 6 Loops",
+            "target": "TOPIC 1",
+            "value": 2.09077464179315
+        },
+        {
+            "source": "M 6 Loops",
+            "target": "TOPIC 4",
+            "value": 3.316069102416245
+        },
+        {
+            "source": "M 6 Loops",
+            "target": "TOPIC 6",
+            "value": 3.0261818046430844
+        },
+        {
+            "source": "M 7 Algorithm Analysis",
+            "target": "TOPIC 1",
+            "value": 4.901327716335159
+        },
+        {
+            "source": "M 8 Functions Transcript",
+            "target": "TOPIC 2",
+            "value": 3.361763818299069
+        },
+        {
+            "source": "M 8 Functions Transcript",
+            "target": "TOPIC 3",
+            "value": 2.7772027867681843
+        },
+        {
+            "source": "M 8 Functions Transcript",
+            "target": "TOPIC 6",
+            "value": 2.9022204174714927
+        },
+        {
+            "source": "M 9 Arrays",
+            "target": "TOPIC 2",
+            "value": 3.7345537718940984
+        },
+        {
+            "source": "M 9 Arrays",
+            "target": "TOPIC 7",
+            "value": 3.4885070179670787
+        },
+        {
+            "source": "M 10 Strings",
+            "target": "TOPIC 2",
+            "value": 2.214311989179502
+        },
+        {
+            "source": "M 10 Strings",
+            "target": "TOPIC 7",
+            "value": 5.944294293876737
+        },
+        {
+            "source": "M 11 Pointers and Dynamic Storage Script",
+            "target": "TOPIC 4",
+            "value": 2.9313249027666948
+        },
+        {
+            "source": "M 11 Pointers and Dynamic Storage Script",
+            "target": "TOPIC 7",
+            "value": 2.0193617888984994
+        },
+        {
+            "source": "M 12 Recursions and Mathematical Induction",
+            "target": "TOPIC 6",
+            "value": 3.9125490798464706
+        },
+        {
+            "source": "M 13 Searching",
+            "target": "TOPIC 6",
+            "value": 4.188126623630524
+        },
+        {
+            "source": "M 13 Searching",
+            "target": "TOPIC 7",
+            "value": 3.3565363713673184
+        },
+        {
+            "source": "M 14 Sorting",
+            "target": "TOPIC 7",
+            "value": 6.645941814550986
+        },
+        {
+            "source": "M 15 Object Oriented Programming Concepts Script",
+            "target": "TOPIC 2",
+            "value": 2.464752901217033
+        },
+        {
+            "source": "M 15 Object Oriented Programming Concepts Script",
+            "target": "TOPIC 4",
+            "value": 3.329305926273609
+        },
+        {
+            "source": "M 16 File Processing Script",
+            "target": "TOPIC 2",
+            "value": 7.0187551726734165
+        },
+        {
+            "source": "M 17 Linked Lists Script",
+            "target": "TOPIC 3",
+            "value": 2.530975158918988
+        },
+        {
+            "source": "M 17 Linked Lists Script",
+            "target": "TOPIC 7",
+            "value": 3.770513317801736
+        },
+        {
+            "source": "M 18 Stacks and Queues Script",
+            "target": "TOPIC 3",
+            "value": 3.190334378882791
+        },
+        {
+            "source": "M 18 Stacks and Queues Script",
+            "target": "TOPIC 4",
+            "value": 2.3189337881789966
+        },
+        {
+            "source": "M 18 Stacks and Queues Script",
+            "target": "TOPIC 7",
+            "value": 2.5801156418906017
+        },
+        {
+            "source": "M 19 Trees and Binary Search Trees Script",
+            "target": "TOPIC 2",
+            "value": 4.263372948765754
+        },
+        {
+            "source": "M 19 Trees and Binary Search Trees Script",
+            "target": "TOPIC 3",
+            "value": 2.5262004822492603
+        },
+        {
+            "source": "M 20 Computer Architecture Part 2",
+            "target": "TOPIC 2",
+            "value": 2.1806969004115317
+        },
+        {
+            "source": "M 20 Computer Architecture Part 2",
+            "target": "TOPIC 5",
+            "value": 4.640564396636696
+        },
+        {
+            "source": "M 21 Computer Organization Part 2",
+            "target": "TOPIC 1",
+            "value": 2.909792926220689
+        },
+        {
+            "source": "M 21 Computer Organization Part 2",
+            "target": "TOPIC 5",
+            "value": 3.061025764211081
+        },
+        {
+            "source": "M 22 Intro to OS Concepts",
+            "target": "TOPIC 1",
+            "value": 5.613244880850498
+        },
+        {
+            "source": "M 23 Processes and Threads Script",
+            "target": "TOPIC 5",
+            "value": 5.315792727314176
+        },
+        {
+            "source": "M 24 Thread Concurrency and Deadlocks Script",
+            "target": "TOPIC 4",
+            "value": 2.0172256420271983
+        },
+        {
+            "source": "M 24 Thread Concurrency and Deadlocks Script",
+            "target": "TOPIC 5",
+            "value": 2.849736742378361
+        },
+        {
+            "source": "M 25 Memory Management Script",
+            "target": "TOPIC 5",
+            "value": 3.3060903071115417
+        },
+        {
+            "source": "M 25 Memory Management Script",
+            "target": "TOPIC 7",
+            "value": 2.3444349163522324
+        }
+    ]
+}
