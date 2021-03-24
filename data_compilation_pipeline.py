@@ -35,18 +35,34 @@ PPT Schema:
              ],
         ]
 
+Homework Schema
+
+        [
+            {
+                "homework_no": 0,
+                "file_name": "",
+                "contents":[
+                    {
+                        "question_no": "",
+                        "data": ["", ...], ...
+                    }, ...
+                ],
+            },
+        ]
 """
 
 import os
 import json
 from docx import Document # pip install python-docx
 from pptx import Presentation # pip install python-pptx
+from tika import parser # pip install tika
+import re
 
 
 # Raw data location
 loc_transcript = "data/Non-SRT Transcript/"
 loc_ppt = "data/PPT/"
-
+loc_homeworks = "data/homework/"
 
 # --- Transcript --------------------------------------------------------------
 
@@ -170,6 +186,54 @@ for d in data_ppt:
             "slide_text" : slide_text
         })
 
+# ---- Homeworks --------------------------------------------------------------
+# Processed JSON dict
+data_homework = []
+
+
+# Create module level JSON structure for Homeworks
+for f in os.listdir(loc_homeworks):
+    file = f.split(".")
+    if file[1] == "pdf":
+        file = list(file[0])
+        # print(file)
+        data_homework.append({
+            "homework_no": int(file[-1]),
+            "file_name": f,
+            "contents": [],
+            })
+
+
+# Sort JSON for Homeworks
+data_homework.sort(key=lambda x: x['homework_no'])
+# print(data_homework)
+# Extract Homework text
+for d in data_homework:
+    hw = parser.from_file(loc_homeworks + d["file_name"])
+    # print(d)
+    contents = hw['content']
+    # split the contents depending on new line and slice all contents before Question1(i.e., slice all instructions)
+    contents_wout_instructn = contents.split("\n")
+    #contents_wout_instructn = contents_cleaned[contents_cleaned.index(re.compile('Question\t1:[\t]*')):]
+    # print(contents_wout_instructn)
+    questions = [contents_wout_instructn.index(x) for x in contents_wout_instructn if re.search('Question', x)]
+    question = [x for x in contents_wout_instructn if re.search('Question', x)]
+    # print(len(questions))
+    for i in range(len(questions)):
+        data_text = []
+        if i == (len(questions)-1):
+            data_text = contents_wout_instructn[questions[i]:]
+        else:
+            data_text = contents_wout_instructn[questions[i]: questions[i+1]]
+        # clean the data text
+        data_text = ''.join(data_text).split('\t')
+        data_text = [x for x in data_text if x != '']
+        # print(data_text)
+        d["contents"].append({
+            "question_no" : i+1,
+            "data" : data_text
+        })
+
 
 # --- Post-Processing ---------------------------------------------------------
 
@@ -177,6 +241,7 @@ for d in data_ppt:
 # Print data
 # print(data_transcript)
 # print(data_ppt)
+#print(data_homework)
 
 
 # Save JSON
@@ -185,3 +250,6 @@ with open("data/preprocessed/transcripts.json", "w") as f:
 
 with open("data/preprocessed/ppts.json", "w") as f:
     json.dump(data_ppt, f, indent = 4)
+
+with open("data/preprocessed/homeworks.json", "w") as f:
+    json.dump(data_homework, f, indent = 4)
