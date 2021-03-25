@@ -57,6 +57,8 @@ from docx import Document # pip install python-docx
 from pptx import Presentation # pip install python-pptx
 from tika import parser # pip install tika
 import re
+from piazza_api import Piazza # pip install piazza-api
+import time
 
 
 # Raw data location
@@ -233,6 +235,36 @@ for d in data_homework:
             "question_no" : i+1,
             "data" : data_text
         })
+
+
+# -------Piazza Posts----------------------------------------------------------
+
+p = Piazza()
+p.user_login() # enter username and password in the prompt
+CLASS_IDs = [] # class ids are https://piazza.com/class/[class_id]
+CLASS_OBJs = [] # objects created associated with the class ids j6mbq7px56n6s0
+
+sample_class_id = "j6mbq7px56n6s0" # class id of CPRE 310
+CLASS_IDs.append(sample_class_id)
+
+for id in CLASS_IDs:
+    CLASS_OBJs.append(p.network(id))
+
+for classes in CLASS_OBJs:
+    users_all = classes.get_all_users() # all users(including instructors and TAs)
+    # save all the users as json
+    with open("data/preprocessed/piazza_users_class_"+str(CLASS_OBJs.index(classes)+1)+".json", "w") as f:
+        json.dump(users_all, f, indent = 4)
+
+    all_posts  = classes.iter_all_posts() # limit upto 999999 posts on the piazza forum
+    #print("Users are:-")
+    #print(users_all)
+    #print("posts are:-")
+    count = 0
+    for post in all_posts:
+        #print(post)
+        count += 1
+        print(count)
 
 
 # --- Post-Processing ---------------------------------------------------------
