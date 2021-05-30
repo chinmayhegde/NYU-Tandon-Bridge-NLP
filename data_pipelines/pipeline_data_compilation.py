@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    This pipeline compiles the Non-SRT transcripts and PPT text into two
-    seperate JSON files. The schema for them is as follows:
+    This pipeline processes the Non-SRT transcripts, PPT text, and homework
+    data into individual JSON files. 
+    
+    The schemas are as follows:
 
 Transcript Schema:
 
@@ -60,9 +62,9 @@ import re
 
 
 # Raw data location
-loc_transcript = "data/Non-SRT Transcript/"
-loc_ppt = "data/PPT/"
-loc_homeworks = "data/homework/"
+loc_transcript = "data/raw/Non-SRT Transcript/"
+loc_ppt = "data/raw/PPT/"
+loc_homeworks = "data/raw/homework/"
 
 # --- Transcript --------------------------------------------------------------
 
@@ -186,7 +188,10 @@ for d in data_ppt:
             "slide_text" : slide_text
         })
 
-# ---- Homeworks --------------------------------------------------------------
+
+# ---- Homework ---------------------------------------------------------------
+
+
 # Processed JSON dict
 data_homework = []
 
@@ -214,7 +219,7 @@ for d in data_homework:
     contents = hw['content']
     # split the contents depending on new line and slice all contents before Question1(i.e., slice all instructions)
     contents_wout_instructn = contents.split("\n")
-    #contents_wout_instructn = contents_cleaned[contents_cleaned.index(re.compile('Question\t1:[\t]*')):]
+    # contents_wout_instructn = contents_cleaned[contents_cleaned.index(re.compile('Question\t1:[\t]*')):]
     # print(contents_wout_instructn)
     questions = [contents_wout_instructn.index(x) for x in contents_wout_instructn if re.search('Question', x)]
     question = [x for x in contents_wout_instructn if re.search('Question', x)]
@@ -238,10 +243,9 @@ for d in data_homework:
 # --- Post-Processing ---------------------------------------------------------
 
 
-# Print data
 # print(data_transcript)
 # print(data_ppt)
-#print(data_homework)
+# print(data_homework)
 
 
 # Save JSON
