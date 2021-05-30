@@ -1,0 +1,356 @@
+{
+    "nodes": [
+        {
+            "id": "1 Fundamentals of System Hardware Script",
+            "group": 5
+        },
+        {
+            "id": "2 Positional Number Systems",
+            "group": 1
+        },
+        {
+            "id": "3 Hello World Script",
+            "group": 6
+        },
+        {
+            "id": "4 Data Types and Expressions Part 3",
+            "group": 1
+        },
+        {
+            "id": "5 Branching Part 2",
+            "group": 1
+        },
+        {
+            "id": "6 Loops",
+            "group": 6
+        },
+        {
+            "id": "7 Algorithm Analysis",
+            "group": 1
+        },
+        {
+            "id": "8 Functions Transcript",
+            "group": 1
+        },
+        {
+            "id": "9 Arrays",
+            "group": 3
+        },
+        {
+            "id": "10 Strings",
+            "group": 1
+        },
+        {
+            "id": "11 Pointers and Dynamic Storage Script",
+            "group": 4
+        },
+        {
+            "id": "12 Recursions and Mathematical Induction",
+            "group": 1
+        },
+        {
+            "id": "13 Searching",
+            "group": 1
+        },
+        {
+            "id": "14 Sorting",
+            "group": 1
+        },
+        {
+            "id": "15 Object Oriented Programming Concepts Script",
+            "group": 4
+        },
+        {
+            "id": "16 File Processing Script",
+            "group": 5
+        },
+        {
+            "id": "17 Linked Lists Script",
+            "group": 5
+        },
+        {
+            "id": "18 Stacks and Queues Script",
+            "group": 5
+        },
+        {
+            "id": "19 Trees and Binary Search Trees Script",
+            "group": 4
+        },
+        {
+            "id": "20 Computer Architecture Part 2",
+            "group": 0
+        },
+        {
+            "id": "21 Computer Organization Part 2",
+            "group": 0
+        },
+        {
+            "id": "22 Intro to OS Concepts",
+            "group": 5
+        },
+        {
+            "id": "23 Processes and Threads Script",
+            "group": 5
+        },
+        {
+            "id": "24 Thread Concurrency and Deadlocks Script",
+            "group": 5
+        },
+        {
+            "id": "25 Memory Management Script",
+            "group": 4
+        }
+    ],
+    "links": [
+        {
+            "source": "1 Fundamentals of System Hardware Script",
+            "target": "20 Computer Architecture Part 2",
+            "value": 7.4093592002968816
+        },
+        {
+            "source": "2 Positional Number Systems",
+            "target": "4 Data Types and Expressions Part 3",
+            "value": 9.116116523516816
+        },
+        {
+            "source": "2 Positional Number Systems",
+            "target": "8 Functions Transcript",
+            "value": 7.572972434691323
+        },
+        {
+            "source": "2 Positional Number Systems",
+            "target": "10 Strings",
+            "value": 7.220486653307015
+        },
+        {
+            "source": "2 Positional Number Systems",
+            "target": "12 Recursions and Mathematical Induction",
+            "value": 7.423058983988962
+        },
+        {
+            "source": "2 Positional Number Systems",
+            "target": "13 Searching",
+            "value": 7.675139898876512
+        },
+        {
+            "source": "2 Positional Number Systems",
+            "target": "14 Sorting",
+            "value": 8.58193449963917
+        },
+        {
+            "source": "4 Data Types and Expressions Part 3",
+            "target": "8 Functions Transcript",
+            "value": 7.843694367850709
+        },
+        {
+            "source": "4 Data Types and Expressions Part 3",
+            "target": "10 Strings",
+            "value": 7.113248654051871
+        },
+        {
+            "source": "4 Data Types and Expressions Part 3",
+            "target": "13 Searching",
+            "value": 7.731838228183613
+        },
+        {
+            "source": "4 Data Types and Expressions Part 3",
+            "target": "14 Sorting",
+            "value": 8.50625894900884
+        },
+        {
+            "source": "5 Branching Part 2",
+            "target": "7 Algorithm Analysis",
+            "value": 10.0
+        },
+        {
+            "source": "5 Branching Part 2",
+            "target": "12 Recursions and Mathematical Induction",
+            "value": 8.469068910760512
+        },
+        {
+            "source": "6 Loops",
+            "target": "8 Functions Transcript",
+            "value": 7.287392875366559
+        },
+        {
+            "source": "7 Algorithm Analysis",
+            "target": "12 Recursions and Mathematical Induction",
+            "value": 8.469068910760512
+        },
+        {
+            "source": "8 Functions Transcript",
+            "target": "10 Strings",
+            "value": 8.335497368004937
+        },
+        {
+            "source": "8 Functions Transcript",
+            "target": "14 Sorting",
+            "value": 8.712194618030978
+        },
+        {
+            "source": "10 Strings",
+            "target": "12 Recursions and Mathematical Induction",
+            "value": 7.736920730999955
+        },
+        {
+            "source": "10 Strings",
+            "target": "14 Sorting",
+            "value": 8.337035670375275
+        },
+        {
+            "source": "11 Pointers and Dynamic Storage Script",
+            "target": "13 Searching",
+            "value": 7.050867041979689
+        },
+        {
+            "source": "11 Pointers and Dynamic Storage Script",
+            "target": "15 Object Oriented Programming Concepts Script",
+            "value": 8.331306350512987
+        },
+        {
+            "source": "11 Pointers and Dynamic Storage Script",
+            "target": "18 Stacks and Queues Script",
+            "value": 7.74422038606014
+        },
+        {
+            "source": "11 Pointers and Dynamic Storage Script",
+            "target": "19 Trees and Binary Search Trees Script",
+            "value": 7.591291840010501
+        },
+        {
+            "source": "11 Pointers and Dynamic Storage Script",
+            "target": "24 Thread Concurrency and Deadlocks Script",
+            "value": 7.948938220367726
+        },
+        {
+            "source": "11 Pointers and Dynamic Storage Script",
+            "target": "25 Memory Management Script",
+            "value": 8.034587264154874
+        },
+        {
+            "source": "12 Recursions and Mathematical Induction",
+            "target": "14 Sorting",
+            "value": 7.579862894489766
+        },
+        {
+            "source": "13 Searching",
+            "target": "14 Sorting",
+            "value": 7.292596704449467
+        },
+        {
+            "source": "13 Searching",
+            "target": "19 Trees and Binary Search Trees Script",
+            "value": 7.1819821700713256
+        },
+        {
+            "source": "15 Object Oriented Programming Concepts Script",
+            "target": "18 Stacks and Queues Script",
+            "value": 7.4889858161550595
+        },
+        {
+            "source": "15 Object Oriented Programming Concepts Script",
+            "target": "19 Trees and Binary Search Trees Script",
+            "value": 7.189691136257192
+        },
+        {
+            "source": "15 Object Oriented Programming Concepts Script",
+            "target": "24 Thread Concurrency and Deadlocks Script",
+            "value": 7.6408504232284375
+        },
+        {
+            "source": "15 Object Oriented Programming Concepts Script",
+            "target": "25 Memory Management Script",
+            "value": 7.5613621253704455
+        },
+        {
+            "source": "16 File Processing Script",
+            "target": "17 Linked Lists Script",
+            "value": 8.689678608600039
+        },
+        {
+            "source": "16 File Processing Script",
+            "target": "18 Stacks and Queues Script",
+            "value": 7.401923788646684
+        },
+        {
+            "source": "16 File Processing Script",
+            "target": "22 Intro to OS Concepts",
+            "value": 7.623151606849174
+        },
+        {
+            "source": "16 File Processing Script",
+            "target": "23 Processes and Threads Script",
+            "value": 8.744400297768076
+        },
+        {
+            "source": "16 File Processing Script",
+            "target": "24 Thread Concurrency and Deadlocks Script",
+            "value": 7.500411556509496
+        },
+        {
+            "source": "17 Linked Lists Script",
+            "target": "18 Stacks and Queues Script",
+            "value": 7.5448934423601095
+        },
+        {
+            "source": "17 Linked Lists Script",
+            "target": "22 Intro to OS Concepts",
+            "value": 7.931440635279855
+        },
+        {
+            "source": "17 Linked Lists Script",
+            "target": "23 Processes and Threads Script",
+            "value": 8.845689036712262
+        },
+        {
+            "source": "17 Linked Lists Script",
+            "target": "24 Thread Concurrency and Deadlocks Script",
+            "value": 7.336447078576955
+        },
+        {
+            "source": "18 Stacks and Queues Script",
+            "target": "23 Processes and Threads Script",
+            "value": 7.942989422242364
+        },
+        {
+            "source": "18 Stacks and Queues Script",
+            "target": "24 Thread Concurrency and Deadlocks Script",
+            "value": 9.074815111348386
+        },
+        {
+            "source": "18 Stacks and Queues Script",
+            "target": "25 Memory Management Script",
+            "value": 7.986159004400904
+        },
+        {
+            "source": "19 Trees and Binary Search Trees Script",
+            "target": "25 Memory Management Script",
+            "value": 7.010760037140619
+        },
+        {
+            "source": "20 Computer Architecture Part 2",
+            "target": "21 Computer Organization Part 2",
+            "value": 8.079713563032849
+        },
+        {
+            "source": "20 Computer Architecture Part 2",
+            "target": "25 Memory Management Script",
+            "value": 7.1838757918807
+        },
+        {
+            "source": "22 Intro to OS Concepts",
+            "target": "23 Processes and Threads Script",
+            "value": 7.45467366551638
+        },
+        {
+            "source": "23 Processes and Threads Script",
+            "target": "24 Thread Concurrency and Deadlocks Script",
+            "value": 8.012172762521777
+        },
+        {
+            "source": "24 Thread Concurrency and Deadlocks Script",
+            "target": "25 Memory Management Script",
+            "value": 8.65820585683431
+        }
+    ]
+}
