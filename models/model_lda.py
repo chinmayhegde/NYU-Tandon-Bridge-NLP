@@ -22,10 +22,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # Import raw json data
-with open("../data/preprocessed/transcripts.json", "r") as f:
+with open("data/preprocessed/transcripts.json", "r") as f:
     raw_transcript = json.load(f)
 
-with open("../data/preprocessed/ppts.json", "r") as f:
+with open("data/preprocessed/ppts.json", "r") as f:
     raw_ppt = json.load(f)
 
 
@@ -105,6 +105,8 @@ docs = df_ppt["slide_text"].to_list() + df_transcript["data"].to_list()
 
 # Gensim corpus dict
 dictionary = gensim.corpora.Dictionary(docs)
+# dictionary.save("dictionary.bin")
+# dictionary = gensim.corpora.Dictionary.load("dictionary.bin")
 
 # Convert each doc to BoW (with word counts)
 corpus = [dictionary.doc2bow(doc) for doc in docs]
@@ -233,10 +235,10 @@ for index, row in prob_mean_df.iterrows():
 
 
 # --- Save JSON ---
-# THE VISUALIZATION RESULTS ARE NOT REPRODUCIBLE. SAVE IT CAREFULY.
+# THE RESULTS ARE NOT REPRODUCIBLE. SAVE IT CAREFULY.
 
-# with open("../visualization/v1/viz_lda.json", "w") as f:
-#     json.dump(viz_data_1, f, indent = 4)
+with open("viz_lda.json", "w") as f:
+    json.dump(viz_data_1, f, indent = 4)
 
 
 # Command to run the D3.JS visualization from cmd/terminal
